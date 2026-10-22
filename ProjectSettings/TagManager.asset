@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
@@ -41,3 +41,27 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 1000001
+    locked: 0
+  - name: Obstacles
+    uniqueID: 1000002
+    locked: 0
+  - name: Actors
+    uniqueID: 1000003
+    locked: 0
+  - name: Projectiles
+    uniqueID: 1598228115
+    locked: 0
+  - name: Effects
+    uniqueID: 1000004
+    locked: 0
+  - name: Foliage
+    uniqueID: 1886189977
+    locked: 0
+  - name: HUD
+    uniqueID: 2094166710
+    locked: 0
+  m_RenderingLayers:
+  - Default
+  m_MigratedRenderPipelines: []

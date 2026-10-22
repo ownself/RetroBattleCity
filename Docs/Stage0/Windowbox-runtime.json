@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "return \"Screen=\"+UnityEngine.Screen.width+\"x\"+UnityEngine.Screen.height+\"; PixelRatio=\"+UnityEngine.Camera.main.GetComponent<UnityEngine.Rendering.Universal.PixelPerfectCamera>().pixelRatio+\"; Frame=\"+UnityEngine.Time.frameCount;"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "Screen=1000x700; PixelRatio=2; Frame=27445"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

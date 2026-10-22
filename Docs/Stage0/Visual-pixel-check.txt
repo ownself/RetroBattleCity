@@ -1,0 +1,3 @@
+M0 pixel comparison (RGBA byte-for-byte, live Game View screenshots)
+gallery-up-0.png: 768x720, scale=3, content=768x720, offset=0,0, mismatchedContentPixels=0, invalidBlackBarPixels=0
+baseline-1000x700.png: 1000x700, scale=2, content=512x480, offset=244,110, mismatchedContentPixels=0, invalidBlackBarPixels=0

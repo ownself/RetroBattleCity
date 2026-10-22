@@ -1,0 +1,653 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7ebeaff57d44747a72b97f89730b7d, type: 3}
+  m_Name: SpriteCatalog
+  m_EditorClassIdentifier: BattleCity.Runtime::BattleCity.SpriteCatalog
+  entries:
+  - id: base.alive
+    sprite: {fileID: 480941715, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: base.dead
+    sprite: {fileID: -1146908140, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: bullet.down
+    sprite: {fileID: 462967975, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: bullet.left
+    sprite: {fileID: 933336726, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: bullet.right
+    sprite: {fileID: 1878300436, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: bullet.up
+    sprite: {fileID: -786022664, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: effect.explosion.large.0
+    sprite: {fileID: 1647058849, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: effect.explosion.large.1
+    sprite: {fileID: 794202946, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: effect.explosion.small.0
+    sprite: {fileID: 2087395494, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: effect.explosion.small.1
+    sprite: {fileID: 1870421726, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: effect.explosion.small.2
+    sprite: {fileID: 499797224, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: effect.flame
+    sprite: {fileID: -1831120462, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: effect.shield.0
+    sprite: {fileID: -1284643253, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: effect.shield.1
+    sprite: {fileID: 1191780514, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: effect.spawn.0
+    sprite: {fileID: -341816018, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: effect.spawn.1
+    sprite: {fileID: 533503452, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: effect.spawn.2
+    sprite: {fileID: -2033926769, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: effect.spawn.3
+    sprite: {fileID: -1327161849, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.digit.0
+    sprite: {fileID: 551474074, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.digit.1
+    sprite: {fileID: 1181640072, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.digit.2
+    sprite: {fileID: -401496700, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.digit.3
+    sprite: {fileID: 1501299845, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.digit.4
+    sprite: {fileID: 535010240, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.digit.5
+    sprite: {fileID: -875701344, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.digit.6
+    sprite: {fileID: 1204818758, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.digit.7
+    sprite: {fileID: 839764996, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.digit.8
+    sprite: {fileID: 2093786, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.digit.9
+    sprite: {fileID: -1124884685, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.flag
+    sprite: {fileID: -1297430204, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.game
+    sprite: {fileID: 1119067389, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.lives1
+    sprite: {fileID: -1423388300, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.lives2
+    sprite: {fileID: -972388491, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.over
+    sprite: {fileID: -1054615530, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.pause
+    sprite: {fileID: -402854098, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.player1
+    sprite: {fileID: 1096148898, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.player2
+    sprite: {fileID: -422358749, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.score.100
+    sprite: {fileID: 753240256, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.score.200
+    sprite: {fileID: 1086634355, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.score.300
+    sprite: {fileID: 1835156033, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.score.400
+    sprite: {fileID: 177652188, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.score.500
+    sprite: {fileID: 1473737018, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: hud.stage
+    sprite: {fileID: -1486779871, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: pickup.clock
+    sprite: {fileID: 1042212010, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: pickup.grenade
+    sprite: {fileID: -2008920938, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: pickup.gun
+    sprite: {fileID: 1569831269, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: pickup.helmet
+    sprite: {fileID: 1437084635, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: pickup.shovel
+    sprite: {fileID: -1592115661, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: pickup.star
+    sprite: {fileID: 2013171818, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: pickup.tank
+    sprite: {fileID: 419537015, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.armor.down.0
+    sprite: {fileID: 1783863957, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.armor.down.1
+    sprite: {fileID: 562612875, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.armor.left.0
+    sprite: {fileID: -1487181981, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.armor.left.1
+    sprite: {fileID: 679105968, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.armor.right.0
+    sprite: {fileID: -342649720, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.armor.right.1
+    sprite: {fileID: 200630237, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.armor.up.0
+    sprite: {fileID: -1433383538, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.armor.up.1
+    sprite: {fileID: -629152285, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.basic.down.0
+    sprite: {fileID: -1381070968, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.basic.down.1
+    sprite: {fileID: -1421644510, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.basic.left.0
+    sprite: {fileID: -232551332, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.basic.left.1
+    sprite: {fileID: -1805171963, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.basic.right.0
+    sprite: {fileID: -2059698117, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.basic.right.1
+    sprite: {fileID: 1465943543, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.basic.up.0
+    sprite: {fileID: -1156616484, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.basic.up.1
+    sprite: {fileID: -1239069828, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.fast.down.0
+    sprite: {fileID: -728065970, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.fast.down.1
+    sprite: {fileID: -1948521047, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.fast.left.0
+    sprite: {fileID: 2070317877, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.fast.left.1
+    sprite: {fileID: 862991111, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.fast.right.0
+    sprite: {fileID: -358214099, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.fast.right.1
+    sprite: {fileID: 1404831519, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.fast.up.0
+    sprite: {fileID: 1499816802, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.fast.up.1
+    sprite: {fileID: 1440890421, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.power.down.0
+    sprite: {fileID: 1668038920, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.power.down.1
+    sprite: {fileID: -1649071319, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.power.left.0
+    sprite: {fileID: 1990136634, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.power.left.1
+    sprite: {fileID: -1923966599, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.power.right.0
+    sprite: {fileID: 598613086, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.power.right.1
+    sprite: {fileID: 789987002, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.power.up.0
+    sprite: {fileID: -2049510409, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.enemy.power.up.1
+    sprite: {fileID: -173353454, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level0.down.0
+    sprite: {fileID: -53420082, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level0.down.1
+    sprite: {fileID: 1450303725, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level0.left.0
+    sprite: {fileID: -474383892, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level0.left.1
+    sprite: {fileID: -531386647, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level0.right.0
+    sprite: {fileID: 743203116, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level0.right.1
+    sprite: {fileID: 1085877781, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level0.up.0
+    sprite: {fileID: 1576442891, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level0.up.1
+    sprite: {fileID: -1419964110, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level1.down.0
+    sprite: {fileID: -323198615, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level1.down.1
+    sprite: {fileID: -2086523160, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level1.left.0
+    sprite: {fileID: 1339062629, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level1.left.1
+    sprite: {fileID: -1266367679, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level1.right.0
+    sprite: {fileID: 199209562, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level1.right.1
+    sprite: {fileID: 227065016, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level1.up.0
+    sprite: {fileID: -916395581, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level1.up.1
+    sprite: {fileID: -1547011137, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level2.down.0
+    sprite: {fileID: -964482101, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level2.down.1
+    sprite: {fileID: -964823822, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level2.left.0
+    sprite: {fileID: 1496558110, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level2.left.1
+    sprite: {fileID: -1692473642, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level2.right.0
+    sprite: {fileID: -645417781, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level2.right.1
+    sprite: {fileID: 508586123, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level2.up.0
+    sprite: {fileID: -1705593563, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level2.up.1
+    sprite: {fileID: -568025339, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level3.down.0
+    sprite: {fileID: 794435768, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level3.down.1
+    sprite: {fileID: -1365998458, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level3.left.0
+    sprite: {fileID: -883799174, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level3.left.1
+    sprite: {fileID: -156799461, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level3.right.0
+    sprite: {fileID: -1374692227, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level3.right.1
+    sprite: {fileID: 1252472581, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level3.up.0
+    sprite: {fileID: -1149045533, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.green.player.level3.up.1
+    sprite: {fileID: -1342490382, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.armor.down.0
+    sprite: {fileID: -1179935634, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.armor.down.1
+    sprite: {fileID: -1146112986, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.armor.left.0
+    sprite: {fileID: -155072963, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.armor.left.1
+    sprite: {fileID: 1453190306, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.armor.right.0
+    sprite: {fileID: -497453218, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.armor.right.1
+    sprite: {fileID: -170810099, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.armor.up.0
+    sprite: {fileID: -297328575, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.armor.up.1
+    sprite: {fileID: 1517419148, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.basic.down.0
+    sprite: {fileID: -1151783616, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.basic.down.1
+    sprite: {fileID: 1668823642, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.basic.left.0
+    sprite: {fileID: 1888672424, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.basic.left.1
+    sprite: {fileID: 864383395, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.basic.right.0
+    sprite: {fileID: -1049499325, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.basic.right.1
+    sprite: {fileID: -1976155485, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.basic.up.0
+    sprite: {fileID: 113432958, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.basic.up.1
+    sprite: {fileID: -1451884037, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.fast.down.0
+    sprite: {fileID: -1585718619, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.fast.down.1
+    sprite: {fileID: 374029795, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.fast.left.0
+    sprite: {fileID: -1802799981, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.fast.left.1
+    sprite: {fileID: 2121354417, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.fast.right.0
+    sprite: {fileID: -1205421392, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.fast.right.1
+    sprite: {fileID: 1241128452, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.fast.up.0
+    sprite: {fileID: 1993065050, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.fast.up.1
+    sprite: {fileID: -1217683683, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.power.down.0
+    sprite: {fileID: 47837697, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.power.down.1
+    sprite: {fileID: -1609469300, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.power.left.0
+    sprite: {fileID: 1413660737, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.power.left.1
+    sprite: {fileID: 950343989, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.power.right.0
+    sprite: {fileID: 566100506, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.power.right.1
+    sprite: {fileID: 1679627505, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.power.up.0
+    sprite: {fileID: 1340030151, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.enemy.power.up.1
+    sprite: {fileID: -121048850, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level0.down.0
+    sprite: {fileID: -1309114464, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level0.down.1
+    sprite: {fileID: -1089811732, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level0.left.0
+    sprite: {fileID: -1982734117, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level0.left.1
+    sprite: {fileID: 879643719, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level0.right.0
+    sprite: {fileID: 1663264901, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level0.right.1
+    sprite: {fileID: -782356897, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level0.up.0
+    sprite: {fileID: 85491713, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level0.up.1
+    sprite: {fileID: 201439227, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level1.down.0
+    sprite: {fileID: -1673279875, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level1.down.1
+    sprite: {fileID: 1201747004, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level1.left.0
+    sprite: {fileID: -1351668569, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level1.left.1
+    sprite: {fileID: 1893593432, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level1.right.0
+    sprite: {fileID: 1216886548, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level1.right.1
+    sprite: {fileID: 1157034661, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level1.up.0
+    sprite: {fileID: -702568004, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level1.up.1
+    sprite: {fileID: 638116219, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level2.down.0
+    sprite: {fileID: 61985920, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level2.down.1
+    sprite: {fileID: -1998350768, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level2.left.0
+    sprite: {fileID: -683732338, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level2.left.1
+    sprite: {fileID: 2147190296, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level2.right.0
+    sprite: {fileID: 624629, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level2.right.1
+    sprite: {fileID: 122405879, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level2.up.0
+    sprite: {fileID: -2137010402, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level2.up.1
+    sprite: {fileID: 1815985576, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level3.down.0
+    sprite: {fileID: -1545115346, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level3.down.1
+    sprite: {fileID: 1745299847, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level3.left.0
+    sprite: {fileID: 1972116641, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level3.left.1
+    sprite: {fileID: 49834213, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level3.right.0
+    sprite: {fileID: 41849066, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level3.right.1
+    sprite: {fileID: 1644578131, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level3.up.0
+    sprite: {fileID: -377430538, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.red.player.level3.up.1
+    sprite: {fileID: 610146242, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.armor.down.0
+    sprite: {fileID: 1773891348, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.armor.down.1
+    sprite: {fileID: -1996794745, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.armor.left.0
+    sprite: {fileID: 1882081149, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.armor.left.1
+    sprite: {fileID: 1939420620, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.armor.right.0
+    sprite: {fileID: -1876314477, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.armor.right.1
+    sprite: {fileID: 1961140548, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.armor.up.0
+    sprite: {fileID: 48242115, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.armor.up.1
+    sprite: {fileID: -633324299, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.basic.down.0
+    sprite: {fileID: -1495520941, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.basic.down.1
+    sprite: {fileID: 1826772501, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.basic.left.0
+    sprite: {fileID: 2109802411, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.basic.left.1
+    sprite: {fileID: 29137004, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.basic.right.0
+    sprite: {fileID: 795994132, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.basic.right.1
+    sprite: {fileID: -2087989604, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.basic.up.0
+    sprite: {fileID: 1842247918, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.basic.up.1
+    sprite: {fileID: 1202481781, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.fast.down.0
+    sprite: {fileID: 1316359782, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.fast.down.1
+    sprite: {fileID: 596060774, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.fast.left.0
+    sprite: {fileID: 1288844382, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.fast.left.1
+    sprite: {fileID: 1316627305, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.fast.right.0
+    sprite: {fileID: 224237614, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.fast.right.1
+    sprite: {fileID: 155821960, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.fast.up.0
+    sprite: {fileID: -1204569239, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.fast.up.1
+    sprite: {fileID: 733634222, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.power.down.0
+    sprite: {fileID: 711368509, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.power.down.1
+    sprite: {fileID: -1322218357, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.power.left.0
+    sprite: {fileID: 781893268, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.power.left.1
+    sprite: {fileID: 1563077719, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.power.right.0
+    sprite: {fileID: 691142436, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.power.right.1
+    sprite: {fileID: -2074966649, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.power.up.0
+    sprite: {fileID: -726997461, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.enemy.power.up.1
+    sprite: {fileID: 1873514953, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level0.down.0
+    sprite: {fileID: -1074709947, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level0.down.1
+    sprite: {fileID: -136794732, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level0.left.0
+    sprite: {fileID: 1005324503, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level0.left.1
+    sprite: {fileID: 706308097, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level0.right.0
+    sprite: {fileID: -1310330509, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level0.right.1
+    sprite: {fileID: -327355117, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level0.up.0
+    sprite: {fileID: -1881204005, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level0.up.1
+    sprite: {fileID: 855582823, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level1.down.0
+    sprite: {fileID: -2008848955, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level1.down.1
+    sprite: {fileID: 73893481, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level1.left.0
+    sprite: {fileID: 1429273914, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level1.left.1
+    sprite: {fileID: 279875675, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level1.right.0
+    sprite: {fileID: 348334989, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level1.right.1
+    sprite: {fileID: 866621151, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level1.up.0
+    sprite: {fileID: -848955072, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level1.up.1
+    sprite: {fileID: 1659671630, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level2.down.0
+    sprite: {fileID: 403028870, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level2.down.1
+    sprite: {fileID: -1740483031, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level2.left.0
+    sprite: {fileID: -1208045475, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level2.left.1
+    sprite: {fileID: -154042078, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level2.right.0
+    sprite: {fileID: 2083143772, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level2.right.1
+    sprite: {fileID: -580663147, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level2.up.0
+    sprite: {fileID: 275999182, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level2.up.1
+    sprite: {fileID: -2084480082, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level3.down.0
+    sprite: {fileID: 591509152, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level3.down.1
+    sprite: {fileID: 1436271747, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level3.left.0
+    sprite: {fileID: -1506998079, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level3.left.1
+    sprite: {fileID: 492650965, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level3.right.0
+    sprite: {fileID: 710238476, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level3.right.1
+    sprite: {fileID: -1935959421, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level3.up.0
+    sprite: {fileID: -1371138374, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.white.player.level3.up.1
+    sprite: {fileID: -1491458711, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.armor.down.0
+    sprite: {fileID: -441496586, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.armor.down.1
+    sprite: {fileID: -389072943, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.armor.left.0
+    sprite: {fileID: 114499468, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.armor.left.1
+    sprite: {fileID: 309248492, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.armor.right.0
+    sprite: {fileID: 1004048848, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.armor.right.1
+    sprite: {fileID: -2129012140, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.armor.up.0
+    sprite: {fileID: 2045636337, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.armor.up.1
+    sprite: {fileID: 157738120, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.basic.down.0
+    sprite: {fileID: 645870197, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.basic.down.1
+    sprite: {fileID: -1644018728, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.basic.left.0
+    sprite: {fileID: -1324828922, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.basic.left.1
+    sprite: {fileID: -88921808, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.basic.right.0
+    sprite: {fileID: 405685266, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.basic.right.1
+    sprite: {fileID: 1824798900, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.basic.up.0
+    sprite: {fileID: -1324585703, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.basic.up.1
+    sprite: {fileID: -2128131230, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.fast.down.0
+    sprite: {fileID: 1650352096, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.fast.down.1
+    sprite: {fileID: 1424807728, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.fast.left.0
+    sprite: {fileID: 647008188, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.fast.left.1
+    sprite: {fileID: -100888003, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.fast.right.0
+    sprite: {fileID: 2065481657, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.fast.right.1
+    sprite: {fileID: -1980697551, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.fast.up.0
+    sprite: {fileID: 1449347575, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.fast.up.1
+    sprite: {fileID: -1081432446, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.power.down.0
+    sprite: {fileID: 1220171674, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.power.down.1
+    sprite: {fileID: 2115027396, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.power.left.0
+    sprite: {fileID: 818317014, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.power.left.1
+    sprite: {fileID: 1765128707, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.power.right.0
+    sprite: {fileID: -188157312, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.power.right.1
+    sprite: {fileID: 856681052, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.power.up.0
+    sprite: {fileID: 208108434, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.enemy.power.up.1
+    sprite: {fileID: 17346879, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level0.down.0
+    sprite: {fileID: -4695586, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level0.down.1
+    sprite: {fileID: 1017645615, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level0.left.0
+    sprite: {fileID: -192833116, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level0.left.1
+    sprite: {fileID: -1649229168, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level0.right.0
+    sprite: {fileID: 762858845, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level0.right.1
+    sprite: {fileID: -588310520, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level0.up.0
+    sprite: {fileID: -1205896970, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level0.up.1
+    sprite: {fileID: 1579275038, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level1.down.0
+    sprite: {fileID: 539506840, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level1.down.1
+    sprite: {fileID: 728731338, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level1.left.0
+    sprite: {fileID: -125675211, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level1.left.1
+    sprite: {fileID: -140460269, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level1.right.0
+    sprite: {fileID: 1185855413, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level1.right.1
+    sprite: {fileID: 1359149899, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level1.up.0
+    sprite: {fileID: 1289867844, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level1.up.1
+    sprite: {fileID: -1441260957, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level2.down.0
+    sprite: {fileID: 1406323953, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level2.down.1
+    sprite: {fileID: -770960598, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level2.left.0
+    sprite: {fileID: 1619044437, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level2.left.1
+    sprite: {fileID: 1973153894, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level2.right.0
+    sprite: {fileID: 1352765716, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level2.right.1
+    sprite: {fileID: 173837939, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level2.up.0
+    sprite: {fileID: -675633602, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level2.up.1
+    sprite: {fileID: -2009469562, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level3.down.0
+    sprite: {fileID: 305063257, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level3.down.1
+    sprite: {fileID: 1939227098, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level3.left.0
+    sprite: {fileID: -373449998, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level3.left.1
+    sprite: {fileID: -876588914, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level3.right.0
+    sprite: {fileID: -1160452097, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level3.right.1
+    sprite: {fileID: -1354371843, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level3.up.0
+    sprite: {fileID: -953496766, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: tank.yellow.player.level3.up.1
+    sprite: {fileID: -2133602914, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: terrain.brick16
+    sprite: {fileID: 671495965, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: terrain.brick8.0.0
+    sprite: {fileID: 1597266679, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: terrain.brick8.0.1
+    sprite: {fileID: -131937241, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: terrain.brick8.1.0
+    sprite: {fileID: 329343567, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: terrain.brick8.1.1
+    sprite: {fileID: 367353348, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: terrain.grass16
+    sprite: {fileID: -1608846518, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: terrain.ice16
+    sprite: {fileID: 1606664564, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: terrain.steel16
+    sprite: {fileID: 91190455, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: terrain.steel8.0.0
+    sprite: {fileID: 1714195466, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: terrain.steel8.0.1
+    sprite: {fileID: 2040114771, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: terrain.steel8.1.0
+    sprite: {fileID: 1977460329, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: terrain.steel8.1.1
+    sprite: {fileID: 964545209, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: terrain.water.0
+    sprite: {fileID: -573043344, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}
+  - id: terrain.water.1
+    sprite: {fileID: -1880368864, guid: 806542e2df5a7dc4d9216e8add5626ba, type: 3}

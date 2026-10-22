@@ -1,0 +1,8 @@
+{
+  "name": "BattleCity.EditModeTests",
+  "rootNamespace": "BattleCity.Tests",
+  "references": ["BattleCity.Runtime", "BattleCity.Editor", "Unity.RenderPipelines.Universal.Runtime", "Unity.RenderPipelines.Universal.2D.Runtime"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": false
+}

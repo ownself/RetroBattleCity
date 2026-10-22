@@ -1,0 +1,6 @@
+{
+  "name": "BattleCity.Runtime",
+  "rootNamespace": "BattleCity",
+  "references": [],
+  "autoReferenced": true
+}
