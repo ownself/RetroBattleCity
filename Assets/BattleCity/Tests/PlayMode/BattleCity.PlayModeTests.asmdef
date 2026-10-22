@@ -1,0 +1,7 @@
+{
+  "name": "BattleCity.PlayModeTests",
+  "rootNamespace": "BattleCity.Tests",
+  "references": ["BattleCity.Runtime", "Unity.InputSystem"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": false
+}

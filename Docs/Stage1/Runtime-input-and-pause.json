@@ -1,0 +1,57 @@
+{
+  "before": {
+    "frame": 31785,
+    "tick": 5025,
+    "paused": false,
+    "x": 24,
+    "y": 24,
+    "facing": "Up",
+    "track": 0,
+    "fireHeld": false,
+    "firePressed": false
+  },
+  "afterMove": {
+    "frame": 35256,
+    "tick": 5594,
+    "paused": false,
+    "x": 24,
+    "y": 160,
+    "facing": "Up",
+    "track": 1,
+    "fireHeld": false,
+    "firePressed": false
+  },
+  "paused": {
+    "frame": 38202,
+    "tick": 5779,
+    "paused": true,
+    "x": 24,
+    "y": 160,
+    "facing": "Up",
+    "track": 1,
+    "fireHeld": false,
+    "firePressed": false
+  },
+  "pausedLater": {
+    "frame": 38905,
+    "tick": 5779,
+    "paused": true,
+    "x": 24,
+    "y": 160,
+    "facing": "Up",
+    "track": 1,
+    "fireHeld": false,
+    "firePressed": false
+  },
+  "resumedWhileFireHeld": {
+    "frame": 41955,
+    "tick": 6074,
+    "paused": false,
+    "x": 24,
+    "y": 160,
+    "facing": "Up",
+    "track": 1,
+    "fireHeld": false,
+    "firePressed": false
+  }
+}
