@@ -97,7 +97,7 @@ namespace BattleCity.Tests
         }
 
         [UnityTest]
-        public IEnumerator Arena_BrickStopsBulletAndReleasesCapacityWithoutDestroyingWall()
+        public IEnumerator Arena_BrickHitRemovesFourPixelLayerAndDisplaysRemainingWall()
         {
             scene = EditorSceneManager.LoadSceneInPlayMode(ArenaPath, new LoadSceneParameters(LoadSceneMode.Additive));
             yield return null;
@@ -121,9 +121,49 @@ namespace BattleCity.Tests
             Assert.That(session.Bullets.Active, Is.Empty);
             Assert.That(session.PlayerWeapon.ActiveBullets, Is.Zero);
             Assert.That(session.Map.TerrainAt(3, 21), Is.EqualTo(TerrainKind.Brick));
+            Assert.That(session.Map.BrickMaskAt(3, 21), Is.EqualTo(12));
+            Assert.That(session.Map.IsSolid(6, 42), Is.False);
+            Assert.That(session.Map.IsSolid(6, 43), Is.True);
             yield return null;
             Assert.That(controller.BulletView.GetComponentsInChildren<SpriteRenderer>(), Is.Empty);
-            Assert.That(controller.mapView.obstacles.HasTile(new Vector3Int(3, 21, 0)), Is.True);
+            var cell = new Vector3Int(3, 21, 0);
+            var partial = controller.mapView.obstacles.GetSprite(cell);
+            Assert.That(partial, Is.Not.Null);
+            Assert.That(partial, Is.Not.SameAs(((UnityEngine.Tilemaps.Tile)controller.mapView.brickTiles[1]).sprite));
+            Assert.That(partial.vertices.All(v => v.y >= -.0001f), Is.True, "Only the upper 4px half remains visible");
+            Assert.That(controller.level.terrain[21 * 26 + 3], Is.EqualTo(TerrainKind.Brick));
+            LogAssert.NoUnexpectedReceived();
+        }
+
+        [UnityTest]
+        public IEnumerator Arena_FourBrickLayersOpenA16PixelTankPassage()
+        {
+            scene = EditorSceneManager.LoadSceneInPlayMode(ArenaPath, new LoadSceneParameters(LoadSceneMode.Additive));
+            yield return null;
+            var controller = scene.GetRootGameObjects().SelectMany(r => r.GetComponentsInChildren<ArenaController>()).Single();
+            var session = controller.Session;
+            session.SetFocus(true); session.SetPaused(false);
+            int impacts = 0;
+            for (int tick = 0; tick < 400 && impacts < 4; tick++)
+            {
+                session.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.Fire);
+                if (session.Bullets.Hits.Count > 0)
+                {
+                    Assert.That(session.Bullets.Hits[0].Terrain, Is.EqualTo(TerrainKind.Brick));
+                    impacts++;
+                }
+            }
+            session.SetPaused(true);
+            Assert.That(impacts, Is.EqualTo(4));
+            Assert.That(session.Map.MoveAxis(new Vector2(24, 160), new Vector2(0, 40)).y, Is.EqualTo(200));
+            Assert.That(session.Map.IsSolid(8, 42), Is.True, "Neighboring wall must survive");
+            yield return null;
+            for (int y = 21; y <= 22; y++) for (int x = 2; x <= 3; x++)
+            {
+                Assert.That(session.Map.TerrainAt(x, y), Is.EqualTo(TerrainKind.Empty));
+                Assert.That(controller.mapView.obstacles.HasTile(new Vector3Int(x, y, 0)), Is.False);
+                Assert.That(controller.level.terrain[y * 26 + x], Is.EqualTo(TerrainKind.Brick));
+            }
             LogAssert.NoUnexpectedReceived();
         }
 
@@ -140,7 +180,14 @@ namespace BattleCity.Tests
                 Assert.That(controller.Session.Bullets.Active, Is.Empty);
                 Assert.That(controller.Session.PlayerWeapon.ActiveBullets, Is.Zero);
                 Assert.That(controller.Session.PlayerWeapon.CooldownRemainingTicks, Is.Zero);
+                Assert.That(controller.Session.Map.BrickMaskAt(3, 21), Is.EqualTo(15));
                 controller.Session.SetFocus(true); controller.Session.SetPaused(false);
+                for (int tick = 0; tick < 100; tick++)
+                {
+                    controller.Session.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.Fire);
+                    if (controller.Session.Bullets.Hits.Count > 0) break;
+                }
+                Assert.That(controller.Session.Map.BrickMaskAt(3, 21), Is.EqualTo(12));
                 controller.Session.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.D);
                 Assert.That(controller.Session.Player.Position, Is.EqualTo(new Vector2(25, 24)));
                 Assert.That(controller.level.playerSpawnPixels, Is.EqualTo(new Vector2Int(24, 24)));

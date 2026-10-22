@@ -1,0 +1,96 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "if (UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode) return \"Skip: Editor is playing\"; var rows = new System.Collections.Generic.List<object>(); foreach (bool readable in new[] { true, false }) { var texture = new UnityEngine.Texture2D(16,16,UnityEngine.TextureFormat.RGBA32,false); var pixels = new UnityEngine.Color[256]; for(int p=0;p<pixels.Length;p++) pixels[p]=UnityEngine.Color.white; texture.SetPixels(pixels); texture.Apply(false,!readable); try { foreach (var mesh in new[] { UnityEngine.SpriteMeshType.FullRect, UnityEngine.SpriteMeshType.Tight }) foreach (var flags in new[] { UnityEngine.HideFlags.None, UnityEngine.HideFlags.HideAndDontSave }) { var sprite = UnityEngine.Sprite.Create(texture,new UnityEngine.Rect(0,0,8,8),UnityEngine.Vector2.one*.5f,16,0,mesh); var errors = new System.Collections.Generic.List<string>(); UnityEngine.Application.LogCallback handler = (message,stack,type) => { if(type==UnityEngine.LogType.Error) errors.Add(message); }; UnityEngine.Application.logMessageReceived += handler; try { sprite.hideFlags=flags; sprite.OverrideGeometry(new[] {new UnityEngine.Vector2(0,4),new UnityEngine.Vector2(0,8),new UnityEngine.Vector2(8,8),new UnityEngine.Vector2(8,4)},new ushort[]{0,1,2,0,2,3}); rows.Add(new {readable, mesh=mesh.ToString(),flags=flags.ToString(),errors=errors.ToArray(),bounds=sprite.bounds.ToString()}); } finally { UnityEngine.Application.logMessageReceived -= handler; UnityEngine.Object.DestroyImmediate(sprite); } } } finally { UnityEngine.Object.DestroyImmediate(texture); } } return rows;"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "readable": true,
+          "mesh": "FullRect",
+          "flags": "None",
+          "errors": [
+            "Not allowed to override geometry on sprite ''"
+          ],
+          "bounds": "Center: (0.00, 0.00, 0.00), Extents: (0.25, 0.25, 0.10)"
+        },
+        {
+          "readable": true,
+          "mesh": "FullRect",
+          "flags": "HideAndDontSave",
+          "errors": [
+            "Not allowed to override geometry on sprite ''"
+          ],
+          "bounds": "Center: (0.00, 0.00, 0.00), Extents: (0.25, 0.25, 0.10)"
+        },
+        {
+          "readable": true,
+          "mesh": "Tight",
+          "flags": "None",
+          "errors": [
+            "Not allowed to override geometry on sprite ''"
+          ],
+          "bounds": "Center: (0.00, 0.00, 0.00), Extents: (0.25, 0.25, 0.10)"
+        },
+        {
+          "readable": true,
+          "mesh": "Tight",
+          "flags": "HideAndDontSave",
+          "errors": [
+            "Not allowed to override geometry on sprite ''"
+          ],
+          "bounds": "Center: (0.00, 0.00, 0.00), Extents: (0.25, 0.25, 0.10)"
+        },
+        {
+          "readable": false,
+          "mesh": "FullRect",
+          "flags": "None",
+          "errors": [
+            "Not allowed to override geometry on sprite ''"
+          ],
+          "bounds": "Center: (0.00, 0.00, 0.00), Extents: (0.25, 0.25, 0.10)"
+        },
+        {
+          "readable": false,
+          "mesh": "FullRect",
+          "flags": "HideAndDontSave",
+          "errors": [
+            "Not allowed to override geometry on sprite ''"
+          ],
+          "bounds": "Center: (0.00, 0.00, 0.00), Extents: (0.25, 0.25, 0.10)"
+        },
+        {
+          "readable": false,
+          "mesh": "Tight",
+          "flags": "None",
+          "errors": [
+            "Not allowed to override geometry on sprite ''"
+          ],
+          "bounds": "Center: (0.00, 0.00, 0.00), Extents: (0.25, 0.25, 0.10)"
+        },
+        {
+          "readable": false,
+          "mesh": "Tight",
+          "flags": "HideAndDontSave",
+          "errors": [
+            "Not allowed to override geometry on sprite ''"
+          ],
+          "bounds": "Center: (0.00, 0.00, 0.00), Extents: (0.25, 0.25, 0.10)"
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

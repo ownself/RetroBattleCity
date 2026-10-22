@@ -31,6 +31,7 @@ namespace BattleCity
         private void Update()
         {
             Session.AdvanceFrame(Time.unscaledDeltaTime, KeyboardInputSource.Read());
+            mapView.Render(Session.Map); // No tile writes unless logical cell revisions changed.
             RenderPlayer();
             BulletView.Render();
         }

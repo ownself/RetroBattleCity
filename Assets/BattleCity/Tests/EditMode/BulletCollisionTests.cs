@@ -65,7 +65,7 @@ namespace BattleCity.Tests
         }
 
         [Test]
-        public void Terrain_NearestWinsAndBrickIsNotDestroyedYet()
+        public void Terrain_NearestWinsAndSweepPhaseDoesNotMutateMap()
         {
             Tile(64, 96, TerrainKind.Brick); Tile(96, 96, TerrainKind.Steel);
             var map = new MapState(level);
@@ -75,7 +75,7 @@ namespace BattleCity.Tests
             Assert.That(world.Hits[0].Terrain, Is.EqualTo(TerrainKind.Brick));
             AssertPoint(world.Hits[0].Position, new Vector2(62, 100));
             Assert.That(world.Hits[0].DamageCell, Is.EqualTo(new Vector2Int(16, 24)));
-            Assert.That(map.BlocksBullet(16, 24), Is.True, "BC-106 will consume the event to damage brick");
+            Assert.That(map.BlocksBullet(16, 24), Is.True, "Only the separate damage phase may mutate the map");
         }
 
         [TestCase(TerrainKind.Water)] [TestCase(TerrainKind.Grass)] [TestCase(TerrainKind.Ice)]

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace BattleCity
@@ -7,10 +8,13 @@ namespace BattleCity
     public sealed class MapState
     {
         public const float Epsilon = .0001f;
+        public const int BrickStripWidthPixels = 16; // Prototype, not a verified original-game value.
         public const int DamageCellsPerAxis = PixelGrid.MapSizePixels / PixelGrid.DestructionCellPixels;
         private readonly TerrainKind[] terrain;
         // Each 8px brick owns four 4px quadrants, bits x + y*2 (Y up).
         private readonly byte[] bricks;
+        private readonly int[] cellRevisions;
+        public int Revision { get; private set; }
 
         public MapState(LevelDefinition definition)
         {
@@ -18,6 +22,7 @@ namespace BattleCity
             definition.Validate();
             terrain = (TerrainKind[])definition.terrain.Clone();
             bricks = new byte[terrain.Length];
+            cellRevisions = new int[terrain.Length];
             for (int i = 0; i < terrain.Length; i++) if (terrain[i] == TerrainKind.Brick) bricks[i] = 15;
         }
 
@@ -26,6 +31,51 @@ namespace BattleCity
             if (x < 0 || y < 0 || x >= PixelGrid.TerrainCellsPerAxis || y >= PixelGrid.TerrainCellsPerAxis)
                 throw new ArgumentOutOfRangeException();
             return terrain[y * PixelGrid.TerrainCellsPerAxis + x];
+        }
+
+        public byte BrickMaskAt(int x, int y)
+        {
+            TerrainAt(x, y); // Shared bounds validation.
+            return bricks[y * PixelGrid.TerrainCellsPerAxis + x];
+        }
+
+        public int CellRevisionAt(int x, int y)
+        {
+            TerrainAt(x, y);
+            return cellRevisions[y * PixelGrid.TerrainCellsPerAxis + x];
+        }
+
+        /// <summary>Damage phase, AFTER all sweeps for this tick. Returns removed 4px cells.</summary>
+        public int ApplyBulletHits(IReadOnlyList<BulletHit> hits)
+        {
+            if (hits == null) throw new ArgumentNullException(nameof(hits));
+            int removed = 0;
+            for (int i = 0; i < hits.Count; i++)
+            {
+                var hit = hits[i];
+                if (hit.Kind != BulletHitKind.Terrain || hit.Terrain != TerrainKind.Brick) continue;
+                bool horizontal = hit.Direction == CardinalDirection.Left || hit.Direction == CardinalDirection.Right;
+                if (!horizontal && hit.Direction != CardinalDirection.Up && hit.Direction != CardinalDirection.Down) continue;
+                int along = horizontal ? hit.DamageCell.x : hit.DamageCell.y;
+                float across = horizontal ? hit.Position.y : hit.Position.x;
+                // Lower edge is floored to the 4px lattice; never shift an edge-clipped strip inward.
+                int first = Mathf.FloorToInt((across - BrickStripWidthPixels / 2 + Epsilon) / PixelGrid.DestructionCellPixels);
+                for (int offset = 0; offset < BrickStripWidthPixels / PixelGrid.DestructionCellPixels; offset++)
+                {
+                    int x = horizontal ? along : first + offset;
+                    int y = horizontal ? first + offset : along;
+                    if (x < 0 || y < 0 || x >= DamageCellsPerAxis || y >= DamageCellsPerAxis) continue;
+                    int index = y / 2 * PixelGrid.TerrainCellsPerAxis + x / 2;
+                    if (terrain[index] != TerrainKind.Brick) continue;
+                    int bit = 1 << (x % 2 + y % 2 * 2);
+                    if ((bricks[index] & bit) == 0) continue;
+                    bricks[index] = (byte)(bricks[index] & ~bit);
+                    if (bricks[index] == 0) terrain[index] = TerrainKind.Empty;
+                    cellRevisions[index] = ++Revision;
+                    removed++;
+                }
+            }
+            return removed;
         }
 
         public bool IsSolid(int damageX, int damageY)

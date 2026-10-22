@@ -60,6 +60,7 @@ namespace BattleCity
             targets[0] = new BulletTarget(PlayerEntityId, BulletHitKind.Tank, CombatTeam.Player,
                 new Rect(Player.Position - Vector2.one * 8, Vector2.one * 16));
             Bullets.Step(Map, targets);
+            Map.ApplyBulletHits(Bullets.Hits); // All sweeps see one pre-damage snapshot for this tick.
         }
     }
 }
