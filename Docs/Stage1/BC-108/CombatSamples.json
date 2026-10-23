@@ -1,0 +1,367 @@
+[
+  {
+    "seq": 278,
+    "timestampUtc": "2026-10-22T23:14:29.5263456Z",
+    "message": "BC108 simulatedDelta=30 tick=10 dropped=0 player=(24.00, 34.00) cooldown=6 ownerBullets=0 revision=4 brick2x8=12 bullets=[] effects=[id=1,pos=(24.00, 62.00),age=9,frame=2]"
+  },
+  {
+    "seq": 279,
+    "timestampUtc": "2026-10-22T23:14:29.5263456Z",
+    "message": "BC108 simulatedDelta=30 tick=20 dropped=0 player=(24.00, 44.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=2,pos=(24.00, 66.00),age=4,frame=1]"
+  },
+  {
+    "seq": 280,
+    "timestampUtc": "2026-10-22T23:14:29.5293546Z",
+    "message": "BC108 simulatedDelta=30 tick=30 dropped=0 player=(24.00, 54.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 281,
+    "timestampUtc": "2026-10-22T23:14:29.5293546Z",
+    "message": "BC108 simulatedDelta=30 tick=40 dropped=0 player=(24.00, 64.00) cooldown=6 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=3,pos=(24.00, 126.00),age=9,frame=2]"
+  },
+  {
+    "seq": 282,
+    "timestampUtc": "2026-10-22T23:14:29.5313663Z",
+    "message": "BC108 simulatedDelta=30 tick=50 dropped=0 player=(24.00, 74.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=4,pos=(24.00, 126.00),age=4,frame=1]"
+  },
+  {
+    "seq": 283,
+    "timestampUtc": "2026-10-22T23:14:29.5313663Z",
+    "message": "BC108 simulatedDelta=30 tick=60 dropped=0 player=(24.00, 84.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 284,
+    "timestampUtc": "2026-10-22T23:14:29.5364409Z",
+    "message": "BC108 simulatedDelta=60 tick=10 dropped=0 player=(24.00, 34.00) cooldown=6 ownerBullets=0 revision=4 brick2x8=12 bullets=[] effects=[id=1,pos=(24.00, 62.00),age=9,frame=2]"
+  },
+  {
+    "seq": 285,
+    "timestampUtc": "2026-10-22T23:14:29.5364409Z",
+    "message": "BC108 simulatedDelta=60 tick=20 dropped=0 player=(24.00, 44.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=2,pos=(24.00, 66.00),age=4,frame=1]"
+  },
+  {
+    "seq": 286,
+    "timestampUtc": "2026-10-22T23:14:29.5364409Z",
+    "message": "BC108 simulatedDelta=60 tick=30 dropped=0 player=(24.00, 54.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 287,
+    "timestampUtc": "2026-10-22T23:14:29.5364409Z",
+    "message": "BC108 simulatedDelta=60 tick=40 dropped=0 player=(24.00, 64.00) cooldown=6 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=3,pos=(24.00, 126.00),age=9,frame=2]"
+  },
+  {
+    "seq": 288,
+    "timestampUtc": "2026-10-22T23:14:29.5364409Z",
+    "message": "BC108 simulatedDelta=60 tick=50 dropped=0 player=(24.00, 74.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=4,pos=(24.00, 126.00),age=4,frame=1]"
+  },
+  {
+    "seq": 289,
+    "timestampUtc": "2026-10-22T23:14:29.540949Z",
+    "message": "BC108 simulatedDelta=60 tick=60 dropped=0 player=(24.00, 84.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 290,
+    "timestampUtc": "2026-10-22T23:14:29.540949Z",
+    "message": "BC108 simulatedDelta=144 tick=10 dropped=0 player=(24.00, 34.00) cooldown=6 ownerBullets=0 revision=4 brick2x8=12 bullets=[] effects=[id=1,pos=(24.00, 62.00),age=9,frame=2]"
+  },
+  {
+    "seq": 291,
+    "timestampUtc": "2026-10-22T23:14:29.540949Z",
+    "message": "BC108 simulatedDelta=144 tick=20 dropped=0 player=(24.00, 44.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=2,pos=(24.00, 66.00),age=4,frame=1]"
+  },
+  {
+    "seq": 292,
+    "timestampUtc": "2026-10-22T23:14:29.5449615Z",
+    "message": "BC108 simulatedDelta=144 tick=30 dropped=0 player=(24.00, 54.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 293,
+    "timestampUtc": "2026-10-22T23:14:29.5459706Z",
+    "message": "BC108 simulatedDelta=144 tick=40 dropped=0 player=(24.00, 64.00) cooldown=6 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=3,pos=(24.00, 126.00),age=9,frame=2]"
+  },
+  {
+    "seq": 294,
+    "timestampUtc": "2026-10-22T23:14:29.5459706Z",
+    "message": "BC108 simulatedDelta=144 tick=50 dropped=0 player=(24.00, 74.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=4,pos=(24.00, 126.00),age=4,frame=1]"
+  },
+  {
+    "seq": 295,
+    "timestampUtc": "2026-10-22T23:14:29.5459706Z",
+    "message": "BC108 simulatedDelta=144 tick=60 dropped=0 player=(24.00, 84.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 296,
+    "timestampUtc": "2026-10-22T23:14:29.5611892Z",
+    "message": "BC108 simulatedDelta=30 tick=30 dropped=0 player=(54.00, 24.00) cooldown=0 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=1,pos=(125.00, 24.00),age=30] effects=[]"
+  },
+  {
+    "seq": 297,
+    "timestampUtc": "2026-10-22T23:14:29.5652055Z",
+    "message": "BC108 simulatedDelta=60 tick=30 dropped=0 player=(54.00, 24.00) cooldown=0 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=1,pos=(125.00, 24.00),age=30] effects=[]"
+  },
+  {
+    "seq": 298,
+    "timestampUtc": "2026-10-22T23:14:29.5652055Z",
+    "message": "BC108 simulatedDelta=144 tick=30 dropped=0 player=(54.00, 24.00) cooldown=0 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=1,pos=(125.00, 24.00),age=30] effects=[]"
+  },
+  {
+    "seq": 307,
+    "timestampUtc": "2026-10-22T23:15:32.0455464Z",
+    "message": "BC108 simulatedDelta=30 tick=10 dropped=0 player=(24.00, 34.00) cooldown=6 ownerBullets=0 revision=4 brick2x8=12 bullets=[] effects=[id=1,pos=(24.00, 62.00),age=9,frame=2]"
+  },
+  {
+    "seq": 308,
+    "timestampUtc": "2026-10-22T23:15:32.0536573Z",
+    "message": "BC108 simulatedDelta=30 tick=20 dropped=0 player=(24.00, 44.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=2,pos=(24.00, 66.00),age=4,frame=1]"
+  },
+  {
+    "seq": 309,
+    "timestampUtc": "2026-10-22T23:15:32.055756Z",
+    "message": "BC108 simulatedDelta=30 tick=30 dropped=0 player=(24.00, 54.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 310,
+    "timestampUtc": "2026-10-22T23:15:32.055756Z",
+    "message": "BC108 simulatedDelta=30 tick=40 dropped=0 player=(24.00, 64.00) cooldown=6 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=3,pos=(24.00, 126.00),age=9,frame=2]"
+  },
+  {
+    "seq": 311,
+    "timestampUtc": "2026-10-22T23:15:32.0618963Z",
+    "message": "BC108 simulatedDelta=30 tick=50 dropped=0 player=(24.00, 74.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=4,pos=(24.00, 126.00),age=4,frame=1]"
+  },
+  {
+    "seq": 312,
+    "timestampUtc": "2026-10-22T23:15:32.0654713Z",
+    "message": "BC108 simulatedDelta=30 tick=60 dropped=0 player=(24.00, 84.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 313,
+    "timestampUtc": "2026-10-22T23:15:32.0755456Z",
+    "message": "BC108 simulatedDelta=60 tick=10 dropped=0 player=(24.00, 34.00) cooldown=6 ownerBullets=0 revision=4 brick2x8=12 bullets=[] effects=[id=1,pos=(24.00, 62.00),age=9,frame=2]"
+  },
+  {
+    "seq": 314,
+    "timestampUtc": "2026-10-22T23:15:32.0755456Z",
+    "message": "BC108 simulatedDelta=60 tick=20 dropped=0 player=(24.00, 44.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=2,pos=(24.00, 66.00),age=4,frame=1]"
+  },
+  {
+    "seq": 315,
+    "timestampUtc": "2026-10-22T23:15:32.0785643Z",
+    "message": "BC108 simulatedDelta=60 tick=30 dropped=0 player=(24.00, 54.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 316,
+    "timestampUtc": "2026-10-22T23:15:32.0785643Z",
+    "message": "BC108 simulatedDelta=60 tick=40 dropped=0 player=(24.00, 64.00) cooldown=6 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=3,pos=(24.00, 126.00),age=9,frame=2]"
+  },
+  {
+    "seq": 317,
+    "timestampUtc": "2026-10-22T23:15:32.0815934Z",
+    "message": "BC108 simulatedDelta=60 tick=50 dropped=0 player=(24.00, 74.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=4,pos=(24.00, 126.00),age=4,frame=1]"
+  },
+  {
+    "seq": 318,
+    "timestampUtc": "2026-10-22T23:15:32.0815934Z",
+    "message": "BC108 simulatedDelta=60 tick=60 dropped=0 player=(24.00, 84.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 319,
+    "timestampUtc": "2026-10-22T23:15:32.0856783Z",
+    "message": "BC108 simulatedDelta=144 tick=10 dropped=0 player=(24.00, 34.00) cooldown=6 ownerBullets=0 revision=4 brick2x8=12 bullets=[] effects=[id=1,pos=(24.00, 62.00),age=9,frame=2]"
+  },
+  {
+    "seq": 320,
+    "timestampUtc": "2026-10-22T23:15:32.0856783Z",
+    "message": "BC108 simulatedDelta=144 tick=20 dropped=0 player=(24.00, 44.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=2,pos=(24.00, 66.00),age=4,frame=1]"
+  },
+  {
+    "seq": 321,
+    "timestampUtc": "2026-10-22T23:15:32.0856783Z",
+    "message": "BC108 simulatedDelta=144 tick=30 dropped=0 player=(24.00, 54.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 322,
+    "timestampUtc": "2026-10-22T23:15:32.0901906Z",
+    "message": "BC108 simulatedDelta=144 tick=40 dropped=0 player=(24.00, 64.00) cooldown=6 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=3,pos=(24.00, 126.00),age=9,frame=2]"
+  },
+  {
+    "seq": 323,
+    "timestampUtc": "2026-10-22T23:15:32.0912273Z",
+    "message": "BC108 simulatedDelta=144 tick=50 dropped=0 player=(24.00, 74.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=4,pos=(24.00, 126.00),age=4,frame=1]"
+  },
+  {
+    "seq": 324,
+    "timestampUtc": "2026-10-22T23:15:32.0912273Z",
+    "message": "BC108 simulatedDelta=144 tick=60 dropped=0 player=(24.00, 84.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 325,
+    "timestampUtc": "2026-10-22T23:15:32.1047755Z",
+    "message": "BC108 simulatedDelta=30 tick=30 dropped=0 player=(54.00, 24.00) cooldown=0 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=1,pos=(125.00, 24.00),age=30] effects=[]"
+  },
+  {
+    "seq": 326,
+    "timestampUtc": "2026-10-22T23:15:32.1047755Z",
+    "message": "BC108 simulatedDelta=30 tick=60 dropped=0 player=(84.00, 24.00) cooldown=13 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=2,pos=(101.00, 24.00),age=3] effects=[id=1,pos=(206.00, 24.00),age=3,frame=0]"
+  },
+  {
+    "seq": 327,
+    "timestampUtc": "2026-10-22T23:15:32.1092992Z",
+    "message": "BC108 simulatedDelta=60 tick=30 dropped=0 player=(54.00, 24.00) cooldown=0 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=1,pos=(125.00, 24.00),age=30] effects=[]"
+  },
+  {
+    "seq": 328,
+    "timestampUtc": "2026-10-22T23:15:32.1092992Z",
+    "message": "BC108 simulatedDelta=60 tick=60 dropped=0 player=(84.00, 24.00) cooldown=13 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=2,pos=(101.00, 24.00),age=3] effects=[id=1,pos=(206.00, 24.00),age=3,frame=0]"
+  },
+  {
+    "seq": 329,
+    "timestampUtc": "2026-10-22T23:15:32.1143811Z",
+    "message": "BC108 simulatedDelta=144 tick=30 dropped=0 player=(54.00, 24.00) cooldown=0 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=1,pos=(125.00, 24.00),age=30] effects=[]"
+  },
+  {
+    "seq": 330,
+    "timestampUtc": "2026-10-22T23:15:32.1143811Z",
+    "message": "BC108 simulatedDelta=144 tick=60 dropped=0 player=(84.00, 24.00) cooldown=13 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=2,pos=(101.00, 24.00),age=3] effects=[id=1,pos=(206.00, 24.00),age=3,frame=0]"
+  },
+  {
+    "seq": 339,
+    "timestampUtc": "2026-10-22T23:15:48.0113266Z",
+    "message": "BC108 realResume frame=864 tick=65 pausedTick=64 delta=0.00204089424 dropped=0"
+  },
+  {
+    "seq": 340,
+    "timestampUtc": "2026-10-22T23:15:48.0811783Z",
+    "message": "BC108 realSteel frame=891 tick=69 dropped=0 player=(88.00, 28.00) revision=0 effectAge=0"
+  },
+  {
+    "seq": 359,
+    "timestampUtc": "2026-10-22T23:17:10.4050004Z",
+    "message": "BC108 simulatedDelta=30 tick=10 dropped=0 player=(24.00, 34.00) cooldown=6 ownerBullets=0 revision=4 brick2x8=12 bullets=[] effects=[id=1,pos=(24.00, 62.00),age=9,frame=2]"
+  },
+  {
+    "seq": 360,
+    "timestampUtc": "2026-10-22T23:17:10.4050004Z",
+    "message": "BC108 simulatedDelta=30 tick=20 dropped=0 player=(24.00, 44.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=2,pos=(24.00, 66.00),age=4,frame=1]"
+  },
+  {
+    "seq": 361,
+    "timestampUtc": "2026-10-22T23:17:10.4050004Z",
+    "message": "BC108 simulatedDelta=30 tick=30 dropped=0 player=(24.00, 54.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 362,
+    "timestampUtc": "2026-10-22T23:17:10.4050004Z",
+    "message": "BC108 simulatedDelta=30 tick=40 dropped=0 player=(24.00, 64.00) cooldown=6 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=3,pos=(24.00, 126.00),age=9,frame=2]"
+  },
+  {
+    "seq": 363,
+    "timestampUtc": "2026-10-22T23:17:10.4085143Z",
+    "message": "BC108 simulatedDelta=30 tick=50 dropped=0 player=(24.00, 74.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=4,pos=(24.00, 126.00),age=4,frame=1]"
+  },
+  {
+    "seq": 364,
+    "timestampUtc": "2026-10-22T23:17:10.4090452Z",
+    "message": "BC108 simulatedDelta=30 tick=60 dropped=0 player=(24.00, 84.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 365,
+    "timestampUtc": "2026-10-22T23:17:10.4145583Z",
+    "message": "BC108 simulatedDelta=60 tick=10 dropped=0 player=(24.00, 34.00) cooldown=6 ownerBullets=0 revision=4 brick2x8=12 bullets=[] effects=[id=1,pos=(24.00, 62.00),age=9,frame=2]"
+  },
+  {
+    "seq": 366,
+    "timestampUtc": "2026-10-22T23:17:10.4145583Z",
+    "message": "BC108 simulatedDelta=60 tick=20 dropped=0 player=(24.00, 44.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=2,pos=(24.00, 66.00),age=4,frame=1]"
+  },
+  {
+    "seq": 367,
+    "timestampUtc": "2026-10-22T23:17:10.4145583Z",
+    "message": "BC108 simulatedDelta=60 tick=30 dropped=0 player=(24.00, 54.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 368,
+    "timestampUtc": "2026-10-22T23:17:10.4145583Z",
+    "message": "BC108 simulatedDelta=60 tick=40 dropped=0 player=(24.00, 64.00) cooldown=6 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=3,pos=(24.00, 126.00),age=9,frame=2]"
+  },
+  {
+    "seq": 369,
+    "timestampUtc": "2026-10-22T23:17:10.417064Z",
+    "message": "BC108 simulatedDelta=60 tick=50 dropped=0 player=(24.00, 74.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=4,pos=(24.00, 126.00),age=4,frame=1]"
+  },
+  {
+    "seq": 370,
+    "timestampUtc": "2026-10-22T23:17:10.417064Z",
+    "message": "BC108 simulatedDelta=60 tick=60 dropped=0 player=(24.00, 84.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 371,
+    "timestampUtc": "2026-10-22T23:17:10.41861Z",
+    "message": "BC108 simulatedDelta=144 tick=10 dropped=0 player=(24.00, 34.00) cooldown=6 ownerBullets=0 revision=4 brick2x8=12 bullets=[] effects=[id=1,pos=(24.00, 62.00),age=9,frame=2]"
+  },
+  {
+    "seq": 372,
+    "timestampUtc": "2026-10-22T23:17:10.41861Z",
+    "message": "BC108 simulatedDelta=144 tick=20 dropped=0 player=(24.00, 44.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=2,pos=(24.00, 66.00),age=4,frame=1]"
+  },
+  {
+    "seq": 373,
+    "timestampUtc": "2026-10-22T23:17:10.4231192Z",
+    "message": "BC108 simulatedDelta=144 tick=30 dropped=0 player=(24.00, 54.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 374,
+    "timestampUtc": "2026-10-22T23:17:10.4231192Z",
+    "message": "BC108 simulatedDelta=144 tick=40 dropped=0 player=(24.00, 64.00) cooldown=6 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=3,pos=(24.00, 126.00),age=9,frame=2]"
+  },
+  {
+    "seq": 375,
+    "timestampUtc": "2026-10-22T23:17:10.4241259Z",
+    "message": "BC108 simulatedDelta=144 tick=50 dropped=0 player=(24.00, 74.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=4,pos=(24.00, 126.00),age=4,frame=1]"
+  },
+  {
+    "seq": 376,
+    "timestampUtc": "2026-10-22T23:17:10.4241259Z",
+    "message": "BC108 simulatedDelta=144 tick=60 dropped=0 player=(24.00, 84.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]"
+  },
+  {
+    "seq": 377,
+    "timestampUtc": "2026-10-22T23:17:10.4281971Z",
+    "message": "BC108 simulatedDelta=30 tick=30 dropped=0 player=(54.00, 24.00) cooldown=0 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=1,pos=(125.00, 24.00),age=30] effects=[]"
+  },
+  {
+    "seq": 378,
+    "timestampUtc": "2026-10-22T23:17:10.4281971Z",
+    "message": "BC108 simulatedDelta=30 tick=60 dropped=0 player=(84.00, 24.00) cooldown=13 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=2,pos=(101.00, 24.00),age=3] effects=[id=1,pos=(206.00, 24.00),age=3,frame=0]"
+  },
+  {
+    "seq": 379,
+    "timestampUtc": "2026-10-22T23:17:10.4281971Z",
+    "message": "BC108 simulatedDelta=60 tick=30 dropped=0 player=(54.00, 24.00) cooldown=0 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=1,pos=(125.00, 24.00),age=30] effects=[]"
+  },
+  {
+    "seq": 380,
+    "timestampUtc": "2026-10-22T23:17:10.4337159Z",
+    "message": "BC108 simulatedDelta=60 tick=60 dropped=0 player=(84.00, 24.00) cooldown=13 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=2,pos=(101.00, 24.00),age=3] effects=[id=1,pos=(206.00, 24.00),age=3,frame=0]"
+  },
+  {
+    "seq": 381,
+    "timestampUtc": "2026-10-22T23:17:10.4377393Z",
+    "message": "BC108 simulatedDelta=144 tick=30 dropped=0 player=(54.00, 24.00) cooldown=0 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=1,pos=(125.00, 24.00),age=30] effects=[]"
+  },
+  {
+    "seq": 382,
+    "timestampUtc": "2026-10-22T23:17:10.4377393Z",
+    "message": "BC108 simulatedDelta=144 tick=60 dropped=0 player=(84.00, 24.00) cooldown=13 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=2,pos=(101.00, 24.00),age=3] effects=[id=1,pos=(206.00, 24.00),age=3,frame=0]"
+  },
+  {
+    "seq": 389,
+    "timestampUtc": "2026-10-22T23:17:25.1165917Z",
+    "message": "BC108 realResume frame=849 tick=65 pausedTick=64 delta=0.00194969529 dropped=0"
+  },
+  {
+    "seq": 390,
+    "timestampUtc": "2026-10-22T23:17:25.1859008Z",
+    "message": "BC108 realSteel frame=882 tick=69 dropped=0 player=(88.00, 28.00) revision=0 effectAge=0"
+  }
+]

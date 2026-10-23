@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c = UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); c.ClearEffects(); c.EffectView.Render(); return new { active = c.Session.Effects.Active.Count, visible = c.EffectView.GetComponentsInChildren<UnityEngine.SpriteRenderer>().Length, deletedGeneratedCapture = UnityEditor.AssetDatabase.DeleteAsset(\"Assets/Docs\") };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "active": 0,
+        "visible": 0,
+        "deletedGeneratedCapture": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

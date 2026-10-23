@@ -1,0 +1,20 @@
+{
+  "success": true,
+  "command": "command editor set_auto_tick",
+  "data": {
+    "command": "editor set_auto_tick",
+    "parameters": {
+      "enable": "true",
+      "interval_ms": "16",
+      "persist": "true"
+    },
+    "result": "Auto-tick already enabled (interval updated to 16ms)",
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

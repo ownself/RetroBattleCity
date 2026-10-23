@@ -1,0 +1,10 @@
+{
+  "previousEvidence": "Idempotence-After.json (Unity in-memory JsonUtility snapshot)",
+  "currentGuid": "f6d6dc8b03b323d4887d49ced670c862",
+  "previousGuid": "f6d6dc8b03b323d4887d49ced670c862",
+  "guidMatchesPrevious": true,
+  "first5408HexDecodedMatchesPriorMemoryTerrain": true,
+  "previousStage01AssetFileHashAvailable": false,
+  "previousPreservedHashesExcludedStage01Asset": true,
+  "cause": "Unknown. Prior authoring success and in-memory JSON are not a raw-byte fingerprint of Stage01.asset. Current mtime and test passes cannot establish when/how the trailing i was introduced. No attribution made."
+}

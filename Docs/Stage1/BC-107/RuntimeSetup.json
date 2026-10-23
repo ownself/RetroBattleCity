@@ -1,0 +1,63 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var catalog = UnityEditor.AssetDatabase.LoadAssetAtPath<BattleCity.SpriteCatalog>(\"Assets/BattleCity/Data/SpriteCatalog.asset\"); return new { scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().path, background = UnityEngine.Application.runInBackground, sprites = catalog.Entries.Where(e => e.id.StartsWith(\"effect.explosion.\")).Select(e => new { e.id, sprite = e.sprite.name, width = e.sprite.rect.width, height = e.sprite.rect.height, ppu = e.sprite.pixelsPerUnit }).ToArray() };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "scene": "Assets/BattleCity/Scenes/CombatArena.unity",
+        "background": false,
+        "sprites": [
+          {
+            "id": "effect.explosion.large.0",
+            "sprite": "effect.explosion.large.0",
+            "width": 32,
+            "height": 32,
+            "ppu": 16
+          },
+          {
+            "id": "effect.explosion.large.1",
+            "sprite": "effect.explosion.large.1",
+            "width": 32,
+            "height": 32,
+            "ppu": 16
+          },
+          {
+            "id": "effect.explosion.small.0",
+            "sprite": "effect.explosion.small.0",
+            "width": 16,
+            "height": 16,
+            "ppu": 16
+          },
+          {
+            "id": "effect.explosion.small.1",
+            "sprite": "effect.explosion.small.1",
+            "width": 16,
+            "height": 16,
+            "ppu": 16
+          },
+          {
+            "id": "effect.explosion.small.2",
+            "sprite": "effect.explosion.small.2",
+            "width": 16,
+            "height": 16,
+            "ppu": 16
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "command": "command job wait",
+  "data": {
+    "command": "job wait",
+    "parameters": {
+      "condition": "{\"findType\":\"BattleCity.ArenaController\",\"member\":\"Session.Map.Revision\",\"op\":\"greaterThan\",\"value\":0}",
+      "timeout": "10",
+      "return_history": "true"
+    },
+    "result": {
+      "state": "met",
+      "met": true,
+      "timedOut": false,
+      "member": "Session.Map.Revision",
+      "op": "greaterThan",
+      "value": 16,
+      "initialValue": 16,
+      "elapsedMs": 33,
+      "framesObserved": 1,
+      "history": [
+        {
+          "value": 16,
+          "elapsedMs": 32
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

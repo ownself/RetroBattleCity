@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c = UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); c.Session.SetPaused(true); var k = UnityEngine.InputSystem.InputSystem.devices.FirstOrDefault(d => d.name == \"BC108VerificationKeyboard\"); if (k != null) UnityEngine.InputSystem.InputSystem.RemoveDevice(k); bool captureDeleted = UnityEditor.AssetDatabase.DeleteAsset(\"Assets/BC108VerificationCapture\"); return new { captureDeleted, tick = c.Session.Clock.Tick, paused = c.Session.Clock.Paused, remainingTestDevices = UnityEngine.InputSystem.InputSystem.devices.Count(d => d.name == \"BC108VerificationKeyboard\") };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "captureDeleted": true,
+        "tick": 2615,
+        "paused": true,
+        "remainingTestDevices": 0
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

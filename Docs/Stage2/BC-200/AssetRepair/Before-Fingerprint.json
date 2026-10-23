@@ -1,0 +1,15 @@
+{
+  "path": "Assets\\BattleCity\\Data\\Stage01.asset",
+  "bytes": 6092,
+  "sha256": "741813b2d9ac38e857d8494c71b4959bf8af9dd1dfe081afdcb167a55f43bbbf",
+  "mtimeNs": 1792716702583355600,
+  "mtimeUtc": "2026-10-23T00:51:42.583356+00:00",
+  "terrainCharacters": 5409,
+  "invalidTerrainCharacters": [
+    {
+      "index": 5408,
+      "character": "i"
+    }
+  ],
+  "metaSha256": "a0596a211efd967926e311e8c611bc7e4f0d4dd55040c279305650490ed65710"
+}

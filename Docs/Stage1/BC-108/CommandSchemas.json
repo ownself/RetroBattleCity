@@ -1,0 +1,815 @@
+[
+  {
+    "command": "script eval",
+    "name": "eval",
+    "group": "script",
+    "description": "Evaluate C# code dynamically using Roslyn compiler",
+    "tags": [
+      "scripts/eval"
+    ],
+    "package": "Unity.Pipeline",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "code",
+        "description": "C# code to evaluate",
+        "type": "String",
+        "required": true,
+        "defaultValue": null
+      },
+      {
+        "name": "timeout",
+        "description": "Timeout in seconds",
+        "type": "Double",
+        "required": false,
+        "defaultValue": 30
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "script eval",
+      "description": "Evaluate C# code dynamically using Roslyn compiler",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "C# code to evaluate"
+        },
+        "timeout": {
+          "type": "number",
+          "description": "Timeout in seconds",
+          "default": 30
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Runtime.Commands.CodeEvalCommand.Eval"
+      }
+    }
+  },
+  {
+    "command": "script recompile",
+    "name": "recompile",
+    "group": "script",
+    "description": "Force a script recompile (works while unfocused/minimized). Poll script recompile_status for completion.",
+    "tags": [
+      "scripts/compile"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "focus",
+        "description": "If true, bring the Editor to the foreground before compiling. Off by default.",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": false
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "script recompile",
+      "description": "Force a script recompile (works while unfocused/minimized). Poll script recompile_status for completion.",
+      "properties": {
+        "focus": {
+          "type": "boolean",
+          "description": "If true, bring the Editor to the foreground before compiling. Off by default.",
+          "default": false
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.RecompileCommand.Recompile"
+      }
+    }
+  },
+  {
+    "command": "script recompile_status",
+    "name": "recompile_status",
+    "group": "script",
+    "description": "Get the status of the last recompile: idle | triggered | compiling | completed | up_to_date.",
+    "tags": [
+      "scripts/compile"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": false,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "script recompile_status",
+      "description": "Get the status of the last recompile: idle | triggered | compiling | completed | up_to_date.",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": false,
+        "methodName": "Unity.Pipeline.Editor.Commands.RecompileCommand.RecompileStatus"
+      }
+    }
+  },
+  {
+    "command": "console get",
+    "name": "get",
+    "group": "console",
+    "description": "Get captured Unity console output (Editor or Player; supports tail, level filtering, and follow via a cursor)",
+    "tags": [
+      "observability/console"
+    ],
+    "package": "Unity.Pipeline",
+    "mainThreadRequired": false,
+    "parameters": [
+      {
+        "name": "tail",
+        "description": "Maximum number of most-recent entries to return",
+        "type": "Int32",
+        "required": false,
+        "defaultValue": 100
+      },
+      {
+        "name": "level",
+        "description": "Minimum severity to include: log | warn | error",
+        "type": "String",
+        "required": false,
+        "defaultValue": "log"
+      },
+      {
+        "name": "since",
+        "description": "Cursor: only return entries newer than this seq. Use the 'cursor' from a previous response to follow.",
+        "type": "Int64",
+        "required": false,
+        "defaultValue": -1
+      },
+      {
+        "name": "since_session",
+        "description": "Session the 'since' cursor came from: pass the 'session' from a previous response. A cursor from another session is refused and the tail returned with reset=true.",
+        "type": "String",
+        "required": false,
+        "defaultValue": null
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "console get",
+      "description": "Get captured Unity console output (Editor or Player; supports tail, level filtering, and follow via a cursor)",
+      "properties": {
+        "tail": {
+          "type": "integer",
+          "description": "Maximum number of most-recent entries to return",
+          "default": 100
+        },
+        "level": {
+          "type": "string",
+          "description": "Minimum severity to include: log | warn | error",
+          "default": "log"
+        },
+        "since": {
+          "type": "integer",
+          "description": "Cursor: only return entries newer than this seq. Use the 'cursor' from a previous response to follow.",
+          "default": -1
+        },
+        "since_session": {
+          "type": "string",
+          "description": "Session the 'since' cursor came from: pass the 'session' from a previous response. A cursor from another session is refused and the tail returned with reset=true."
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": false,
+        "methodName": "Unity.Pipeline.Runtime.Commands.ConsoleCommand.Get"
+      }
+    }
+  },
+  {
+    "command": "console status",
+    "name": "status",
+    "group": "console",
+    "description": "Console ground truth and buffer counters without pulling entries: compile-failure flag, Editor console counts, and the buffer's retained counts and cursor.",
+    "tags": [
+      "observability/console"
+    ],
+    "package": "Unity.Pipeline",
+    "mainThreadRequired": false,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "console status",
+      "description": "Console ground truth and buffer counters without pulling entries: compile-failure flag, Editor console counts, and the buffer's retained counts and cursor.",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": false,
+        "methodName": "Unity.Pipeline.Runtime.Commands.ConsoleCommand.Status"
+      }
+    }
+  },
+  {
+    "command": "editor.playmode set_run_in_background",
+    "name": "set_run_in_background",
+    "group": "editor.playmode",
+    "description": "Override the project's Run In Background Player Setting, recording enough state to restore it later and to keep it out of builds",
+    "tags": [
+      "editor/playmode"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "enable",
+        "description": "Turn the override on (true, default) or stop it (false) and restore the project's own value, unless the \"Ensure editor runs in background in PlayMode\" setting is still forcing it on right now",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": true
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor.playmode set_run_in_background",
+      "description": "Override the project's Run In Background Player Setting, recording enough state to restore it later and to keep it out of builds",
+      "properties": {
+        "enable": {
+          "type": "boolean",
+          "description": "Turn the override on (true, default) or stop it (false) and restore the project's own value, unless the \"Ensure editor runs in background in PlayMode\" setting is still forcing it on right now",
+          "default": true
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.PlayModeCommands.SetRunInBackground"
+      }
+    }
+  },
+  {
+    "command": "editor.playmode start",
+    "name": "start",
+    "group": "editor.playmode",
+    "description": "Enter Unity Editor play mode",
+    "tags": [
+      "editor/playmode"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor.playmode start",
+      "description": "Enter Unity Editor play mode",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.PlayModeCommands.Start"
+      }
+    }
+  },
+  {
+    "command": "editor.playmode stop",
+    "name": "stop",
+    "group": "editor.playmode",
+    "description": "Exit Unity Editor play mode",
+    "tags": [
+      "editor/playmode"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor.playmode stop",
+      "description": "Exit Unity Editor play mode",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.PlayModeCommands.Stop"
+      }
+    }
+  },
+  {
+    "command": "editor set_auto_tick",
+    "name": "set_auto_tick",
+    "group": "editor",
+    "description": "Keep the editor ticking while unfocused by forcing EditorApplication.SignalTick at a throttled rate",
+    "tags": [
+      "editor"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "enable",
+        "description": "Enable (true) or disable (false) auto-tick mode",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": true
+      },
+      {
+        "name": "interval_ms",
+        "description": "Minimum milliseconds between forced ticks. 0 = every update (max rate, pegs a CPU core). Default 16 (~60Hz).",
+        "type": "Int32",
+        "required": false,
+        "defaultValue": 16
+      },
+      {
+        "name": "persist",
+        "description": "Persist this choice to SessionState so it survives a domain reload. Set false for a one-off/expensive setting (e.g. interval_ms=0) that should revert to the last persisted choice (or the default) after the next recompile instead of sticking for the rest of the session.",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": true
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor set_auto_tick",
+      "description": "Keep the editor ticking while unfocused by forcing EditorApplication.SignalTick at a throttled rate",
+      "properties": {
+        "enable": {
+          "type": "boolean",
+          "description": "Enable (true) or disable (false) auto-tick mode",
+          "default": true
+        },
+        "interval_ms": {
+          "type": "integer",
+          "description": "Minimum milliseconds between forced ticks. 0 = every update (max rate, pegs a CPU core). Default 16 (~60Hz).",
+          "default": 16
+        },
+        "persist": {
+          "type": "boolean",
+          "description": "Persist this choice to SessionState so it survives a domain reload. Set false for a one-off/expensive setting (e.g. interval_ms=0) that should revert to the last persisted choice (or the default) after the next recompile instead of sticking for the rest of the session.",
+          "default": true
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.AutoTickCommand.SetAutoTick"
+      }
+    }
+  },
+  {
+    "command": "job wait",
+    "name": "wait",
+    "group": "job",
+    "description": "Wait server-side until a member condition holds, then optionally act in the same frame. Sync waits hold the exec queue (every other command waits behind them, including one the condition may depend on) \u2014 keep them short and self-contained; set async=true and poll job wait_status for anything else.",
+    "tags": [
+      "wait"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": false,
+    "parameters": [
+      {
+        "name": "condition",
+        "description": "Condition to wait for: { member, target?, findType?, op, value }. member is a dotted path (static, or instance under target/findType); op is equals|notEquals|greaterThan|lessThan|contains|changed.",
+        "type": "WaitConditionInput",
+        "required": true,
+        "defaultValue": null
+      },
+      {
+        "name": "timeout",
+        "description": "Maximum seconds to wait (default 30, clamped to 0-600). A sync wait reports timedOut slightly before it, so the reply lands first.",
+        "type": "Double",
+        "required": false,
+        "defaultValue": 30
+      },
+      {
+        "name": "poll_interval_ms",
+        "description": "How often to re-check the condition, in milliseconds (default 100, clamped to 16-5000; must be finite).",
+        "type": "Double",
+        "required": false,
+        "defaultValue": 100
+      },
+      {
+        "name": "on_met",
+        "description": "Follow-up run in the same editor frame the condition first holds: { capture: { view, source, save_path, width, height, include_image }, pause }.",
+        "type": "WaitOnMetInput",
+        "required": false,
+        "defaultValue": null
+      },
+      {
+        "name": "return_history",
+        "description": "Include the observed value/timestamp samples (a ring buffer of the last 200, so the tail near the transition is kept).",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": false
+      },
+      {
+        "name": "tolerate_missing",
+        "description": "Treat resolution failures (type/member/instance not found) as condition-not-met and retry until timeout, instead of failing fast. Enables waiting for something to exist (e.g. a spawned object via findType).",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": false
+      },
+      {
+        "name": "async",
+        "description": "Return a wait_id immediately and evaluate in the background; poll job wait_status and cancel with job wait_cancel. Use this for long waits and whenever the condition depends on a command you still need to issue \u2014 a sync wait blocks it.",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": false
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "job wait",
+      "description": "Wait server-side until a member condition holds, then optionally act in the same frame. Sync waits hold the exec queue (every other command waits behind them, including one the condition may depend on) \u2014 keep them short and self-contained; set async=true and poll job wait_status for anything else.",
+      "properties": {
+        "condition": {
+          "type": "object",
+          "properties": {
+            "member": {
+              "type": "string",
+              "description": "Dotted member path. With no target/findType it is a fully-qualified static path (e.g. \"UnityEditor.EditorApplication.isPlaying\"); with target/findType it walks instance members (e.g. \"State\" or \"Health.CurrentHealth\"). Read-only members only."
+            },
+            "target": {
+              "type": "string",
+              "description": "Object handle (instanceId / hierarchyPath / guid / path / globalId) to read instance members from. Omit for a static member path or to use findType."
+            },
+            "findType": {
+              "type": "string",
+              "description": "Fully-qualified UnityEngine.Object type name; the member walks from its first loaded instance. Alternative to target."
+            },
+            "op": {
+              "type": "string",
+              "description": "Comparison: equals (default) | notEquals | greaterThan | lessThan | contains (strings) | changed (met on first change from the initially observed value; needs no value). changed is for value-like members (primitives/enums/strings); content mutations inside a reference-typed member are not detected."
+            },
+            "value": {
+              "type": "string",
+              "description": "Comparison operand, coerced to the member's type (primitive, enum name, or string). Required for every op except 'changed'. equals/notEquals accept an EXPLICIT null (e.g. wait-until-destroyed: a destroyed leaf value observes as null); omitting the key entirely is rejected."
+            }
+          },
+          "required": [
+            "member"
+          ],
+          "additionalProperties": false,
+          "description": "Condition to wait for: { member, target?, findType?, op, value }. member is a dotted path (static, or instance under target/findType); op is equals|notEquals|greaterThan|lessThan|contains|changed."
+        },
+        "timeout": {
+          "type": "number",
+          "description": "Maximum seconds to wait (default 30, clamped to 0-600). A sync wait reports timedOut slightly before it, so the reply lands first.",
+          "default": 30
+        },
+        "poll_interval_ms": {
+          "type": "number",
+          "description": "How often to re-check the condition, in milliseconds (default 100, clamped to 16-5000; must be finite).",
+          "default": 100
+        },
+        "on_met": {
+          "type": "object",
+          "properties": {
+            "capture": {
+              "type": "object",
+              "properties": {
+                "view": {
+                  "type": "string",
+                  "description": "Which view to capture: game (default) or scene."
+                },
+                "source": {
+                  "type": "string",
+                  "description": "Game view only: 'camera' (default) renders a camera and misses Screen Space - Overlay UI; 'screen' captures the composited game view incl. overlay canvases (HUDs), Play Mode only."
+                },
+                "save_path": {
+                  "type": "string",
+                  "description": "Project-relative path to write the PNG (e.g. Screenshots/victory.png)."
+                },
+                "width": {
+                  "type": "integer",
+                  "description": "Output width in px (default 1280)."
+                },
+                "height": {
+                  "type": "integer",
+                  "description": "Output height in px (default 720)."
+                },
+                "include_image": {
+                  "type": "boolean",
+                  "description": "Also return the PNG inline as base64 (default false: path-only when save_path is set)."
+                }
+              },
+              "additionalProperties": false,
+              "description": "Capture the game or scene view the moment the condition holds (reuses the capture command internals)."
+            },
+            "pause": {
+              "type": "boolean",
+              "description": "Pause play mode on the frame the condition holds (no-op outside play mode)."
+            }
+          },
+          "additionalProperties": false,
+          "description": "Follow-up run in the same editor frame the condition first holds: { capture: { view, source, save_path, width, height, include_image }, pause }."
+        },
+        "return_history": {
+          "type": "boolean",
+          "description": "Include the observed value/timestamp samples (a ring buffer of the last 200, so the tail near the transition is kept).",
+          "default": false
+        },
+        "tolerate_missing": {
+          "type": "boolean",
+          "description": "Treat resolution failures (type/member/instance not found) as condition-not-met and retry until timeout, instead of failing fast. Enables waiting for something to exist (e.g. a spawned object via findType).",
+          "default": false
+        },
+        "async": {
+          "type": "boolean",
+          "description": "Return a wait_id immediately and evaluate in the background; poll job wait_status and cancel with job wait_cancel. Use this for long waits and whenever the condition depends on a command you still need to issue \u2014 a sync wait blocks it.",
+          "default": false
+        }
+      },
+      "required": [
+        "condition"
+      ],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": false,
+        "methodName": "Unity.Pipeline.Editor.Commands.WaitForCommands.Wait"
+      }
+    }
+  },
+  {
+    "command": "capture game_view",
+    "name": "game_view",
+    "group": "capture",
+    "description": "Capture the game view as a PNG. source=screen (default) captures what the Game window shows, incl. Screen Space - Overlay UI; source=camera renders a single camera instead and misses overlay UI. Returns it inline as base64, unless save_path is set (path-only result; pass include_inline_image=true to get both).",
+    "tags": [
+      "capture"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "width",
+        "description": "Output width in px (default 1280; capped 4096).",
+        "type": "Int32",
+        "required": false,
+        "defaultValue": 1280
+      },
+      {
+        "name": "height",
+        "description": "Output height in px (default 720; capped 4096).",
+        "type": "Int32",
+        "required": false,
+        "defaultValue": 720
+      },
+      {
+        "name": "camera",
+        "description": "Optional camera name (source=camera only); defaults to Camera.main, else the first enabled camera.",
+        "type": "String",
+        "required": false,
+        "defaultValue": null
+      },
+      {
+        "name": "save_path",
+        "description": "Optional project-relative path to write the PNG (e.g. Screenshots/foo.png). When set, the result omits the inline base64 image unless include_inline_image=true.",
+        "type": "String",
+        "required": false,
+        "defaultValue": null
+      },
+      {
+        "name": "include_inline_image",
+        "description": "Also return the image inline as base64 when save_path is set (default false: path-only result). Only meaningful together with save_path.",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": false
+      },
+      {
+        "name": "max_resolution",
+        "description": "Cap on the inline image's longest edge (e.g. 512). Only applies when an inline image is returned (no save_path, or save_path + include_inline_image=true); the save_path file keeps the requested resolution.",
+        "type": "Int32",
+        "required": false,
+        "defaultValue": 0
+      },
+      {
+        "name": "source",
+        "description": "What to capture: 'screen' (default) captures the game view's own render target \u2014 what the Game window shows, incl. Screen Space - Overlay UI (HUDs) in Play Mode; 'camera' renders a single camera off-screen instead and never sees overlay canvases. Defaults to 'camera' when a camera name is given.",
+        "type": "String",
+        "required": false,
+        "defaultValue": null
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "capture game_view",
+      "description": "Capture the game view as a PNG. source=screen (default) captures what the Game window shows, incl. Screen Space - Overlay UI; source=camera renders a single camera instead and misses overlay UI. Returns it inline as base64, unless save_path is set (path-only result; pass include_inline_image=true to get both).",
+      "properties": {
+        "width": {
+          "type": "integer",
+          "description": "Output width in px (default 1280; capped 4096).",
+          "default": 1280
+        },
+        "height": {
+          "type": "integer",
+          "description": "Output height in px (default 720; capped 4096).",
+          "default": 720
+        },
+        "camera": {
+          "type": "string",
+          "description": "Optional camera name (source=camera only); defaults to Camera.main, else the first enabled camera."
+        },
+        "save_path": {
+          "type": "string",
+          "description": "Optional project-relative path to write the PNG (e.g. Screenshots/foo.png). When set, the result omits the inline base64 image unless include_inline_image=true."
+        },
+        "include_inline_image": {
+          "type": "boolean",
+          "description": "Also return the image inline as base64 when save_path is set (default false: path-only result). Only meaningful together with save_path.",
+          "default": false
+        },
+        "max_resolution": {
+          "type": "integer",
+          "description": "Cap on the inline image's longest edge (e.g. 512). Only applies when an inline image is returned (no save_path, or save_path + include_inline_image=true); the save_path file keeps the requested resolution.",
+          "default": 0
+        },
+        "source": {
+          "type": "string",
+          "description": "What to capture: 'screen' (default) captures the game view's own render target \u2014 what the Game window shows, incl. Screen Space - Overlay UI (HUDs) in Play Mode; 'camera' renders a single camera off-screen instead and never sees overlay canvases. Defaults to 'camera' when a camera name is given."
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.Capture.CaptureCommands.GameView"
+      }
+    }
+  },
+  {
+    "command": "test list",
+    "name": "list",
+    "group": "test",
+    "description": "List all available tests (EditMode and/or PlayMode) without running them",
+    "tags": [
+      "tests"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "mode",
+        "description": "Test mode: all, editor, playmode (default: all)",
+        "type": "String",
+        "required": false,
+        "defaultValue": "all"
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "test list",
+      "description": "List all available tests (EditMode and/or PlayMode) without running them",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "description": "Test mode: all, editor, playmode (default: all)",
+          "default": "all"
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.TestCommands.List"
+      }
+    }
+  },
+  {
+    "command": "test run",
+    "name": "run",
+    "group": "test",
+    "description": "Execute Unity tests with filtering options",
+    "tags": [
+      "tests"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "mode",
+        "description": "Test mode: all, editor, playmode (default: all)",
+        "type": "String",
+        "required": false,
+        "defaultValue": "all"
+      },
+      {
+        "name": "filter",
+        "description": "Test name filter pattern (case-insensitive partial match)",
+        "type": "String",
+        "required": false,
+        "defaultValue": ""
+      },
+      {
+        "name": "filter_type",
+        "description": "Filter type: testName, assembly, category (default: testName)",
+        "type": "String",
+        "required": false,
+        "defaultValue": "testName"
+      },
+      {
+        "name": "include_explicit",
+        "description": "Include tests marked with [Explicit] attribute",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": false
+      },
+      {
+        "name": "async_tests",
+        "description": "Run asynchronously - return immediately, poll /test-status for results",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": false
+      },
+      {
+        "name": "timeout",
+        "description": "Test execution timeout in seconds (default: 600)",
+        "type": "Double",
+        "required": false,
+        "defaultValue": 600
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "test run",
+      "description": "Execute Unity tests with filtering options",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "description": "Test mode: all, editor, playmode (default: all)",
+          "default": "all"
+        },
+        "filter": {
+          "type": "string",
+          "description": "Test name filter pattern (case-insensitive partial match)",
+          "default": ""
+        },
+        "filter_type": {
+          "type": "string",
+          "description": "Filter type: testName, assembly, category (default: testName)",
+          "default": "testName"
+        },
+        "include_explicit": {
+          "type": "boolean",
+          "description": "Include tests marked with [Explicit] attribute",
+          "default": false
+        },
+        "async_tests": {
+          "type": "boolean",
+          "description": "Run asynchronously - return immediately, poll /test-status for results",
+          "default": false
+        },
+        "timeout": {
+          "type": "number",
+          "description": "Test execution timeout in seconds (default: 600)",
+          "default": 600
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.TestCommands.Run"
+      }
+    }
+  },
+  {
+    "command": "test status",
+    "name": "status",
+    "group": "test",
+    "description": "Get status of running async test execution",
+    "tags": [
+      "tests"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": false,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "test status",
+      "description": "Get status of running async test execution",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": false,
+        "methodName": "Unity.Pipeline.Editor.Commands.TestCommands.Status"
+      }
+    }
+  }
+]

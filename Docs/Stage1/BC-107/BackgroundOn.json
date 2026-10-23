@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "command": "command editor.playmode set_run_in_background",
+  "data": {
+    "command": "editor.playmode set_run_in_background",
+    "parameters": {
+      "enable": "true"
+    },
+    "result": "Run In Background is on (overriding the project's value, off; builds use the project's value)",
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

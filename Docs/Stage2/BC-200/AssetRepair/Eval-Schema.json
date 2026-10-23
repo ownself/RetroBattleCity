@@ -1,0 +1,436 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    },
+    "server": {
+      "version": "0.0.1",
+      "port": 7800
+    },
+    "commands": [
+      {
+        "command": "job batch",
+        "name": "batch",
+        "group": "job",
+        "description": "Run multiple registered commands in one transactional request. Later ops can reference earlier results with \"$<id-or-index>.<jsonPath>\" (e.g. \"$0.instanceId\"; \"$$\" escapes a literal '$'). transactional=true (default) groups every op into one Undo step and reverts all applied ops if any op fails; commands that mutate outside the Undo system (asset/file/settings writes) are rejected unless transactional=false. on_error=abort|continue (continue forces transactional=false); dry_run validates without mutating; timeout (seconds, default 60) bounds execution — when it is about to run out the remaining ops are skipped and a transactional batch rolls back (submit long batches with \"job\": true). Excludes build run, build.target switch, the package commands, editor.playmode start/stop/pause, script recompile, script eval, script eval_file, script run, editor invoke_menu, scene open/scene create, async commands (test run/test list), runtime-only commands, and nested job batch.",
+        "tags": [
+          "batch"
+        ],
+        "package": "Unity.Pipeline.Editor",
+        "mainThreadRequired": true,
+        "parameters": [
+          {
+            "name": "operations",
+            "description": "Ordered operations to run; each is { id?, command, params }, with command written as \"<group> <name>\" (e.g. \"gameobject create\"). Max 200.",
+            "type": "List`1",
+            "required": true,
+            "defaultValue": null
+          },
+          {
+            "name": "transactional",
+            "description": "Group all ops into one Undo step and revert every applied op if any op fails. Default true. Forced false when on_error=continue. Rejects commands whose mutations Undo cannot revert (asset/file/settings writes).",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": true
+          },
+          {
+            "name": "on_error",
+            "description": "abort (default): stop at the first failing op. continue: run every op, collecting per-op errors (forces transactional=false).",
+            "type": "String",
+            "required": false,
+            "defaultValue": "abort"
+          },
+          {
+            "name": "dry_run",
+            "description": "Validate command names, parameters, reference topology and excluded commands without mutating anything.",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          },
+          {
+            "name": "result_fields",
+            "description": "Optional per-op result projection: map of op id-or-index -> array of result field paths to keep (context economy).",
+            "type": "JObject",
+            "required": false,
+            "defaultValue": null
+          },
+          {
+            "name": "timeout",
+            "description": "Timeout for the whole batch in seconds (default 60). Checked before each op after the first; when it is about to run out the remaining ops are skipped and a transactional batch rolls back. Use \"job\": true for long batches.",
+            "type": "Double",
+            "required": false,
+            "defaultValue": 60
+          }
+        ],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "job batch",
+          "description": "Run multiple registered commands in one transactional request. Later ops can reference earlier results with \"$<id-or-index>.<jsonPath>\" (e.g. \"$0.instanceId\"; \"$$\" escapes a literal '$'). transactional=true (default) groups every op into one Undo step and reverts all applied ops if any op fails; commands that mutate outside the Undo system (asset/file/settings writes) are rejected unless transactional=false. on_error=abort|continue (continue forces transactional=false); dry_run validates without mutating; timeout (seconds, default 60) bounds execution — when it is about to run out the remaining ops are skipped and a transactional batch rolls back (submit long batches with \"job\": true). Excludes build run, build.target switch, the package commands, editor.playmode start/stop/pause, script recompile, script eval, script eval_file, script run, editor invoke_menu, scene open/scene create, async commands (test run/test list), runtime-only commands, and nested job batch.",
+          "properties": {
+            "operations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "Optional id for referencing this op's result from a later op (\"$<id>.<field>\"). Unique within the batch; must match ^[A-Za-z_][A-Za-z0-9_-]*$ (not purely numeric, no dots)."
+                  },
+                  "command": {
+                    "type": "string",
+                    "description": "The command to run, written as \"<group> <name>\" (e.g. \"gameobject create\")."
+                  },
+                  "params": {
+                    "type": "string",
+                    "description": "Parameters for the command. String values may reference a prior op's result: \"$<id-or-index>.<jsonPath>\"."
+                  }
+                },
+                "required": [
+                  "command"
+                ],
+                "additionalProperties": false
+              },
+              "description": "Ordered operations to run; each is { id?, command, params }, with command written as \"<group> <name>\" (e.g. \"gameobject create\"). Max 200."
+            },
+            "transactional": {
+              "type": "boolean",
+              "description": "Group all ops into one Undo step and revert every applied op if any op fails. Default true. Forced false when on_error=continue. Rejects commands whose mutations Undo cannot revert (asset/file/settings writes).",
+              "default": true
+            },
+            "on_error": {
+              "type": "string",
+              "description": "abort (default): stop at the first failing op. continue: run every op, collecting per-op errors (forces transactional=false).",
+              "default": "abort"
+            },
+            "dry_run": {
+              "type": "boolean",
+              "description": "Validate command names, parameters, reference topology and excluded commands without mutating anything.",
+              "default": false
+            },
+            "result_fields": {
+              "type": "string",
+              "description": "Optional per-op result projection: map of op id-or-index -> array of result field paths to keep (context economy)."
+            },
+            "timeout": {
+              "type": "number",
+              "description": "Timeout for the whole batch in seconds (default 60). Checked before each op after the first; when it is about to run out the remaining ops are skipped and a transactional batch rolls back. Use \"job\": true for long batches.",
+              "default": 60
+            }
+          },
+          "required": [
+            "operations"
+          ],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": true,
+            "methodName": "Unity.Pipeline.Editor.Commands.Batch.BatchCommand.Batch"
+          }
+        }
+      },
+      {
+        "command": "script eval",
+        "name": "eval",
+        "group": "script",
+        "description": "Evaluate C# code dynamically using Roslyn compiler",
+        "tags": [
+          "scripts/eval"
+        ],
+        "package": "Unity.Pipeline",
+        "mainThreadRequired": true,
+        "parameters": [
+          {
+            "name": "code",
+            "description": "C# code to evaluate",
+            "type": "String",
+            "required": true,
+            "defaultValue": null
+          },
+          {
+            "name": "timeout",
+            "description": "Timeout in seconds",
+            "type": "Double",
+            "required": false,
+            "defaultValue": 30
+          }
+        ],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "script eval",
+          "description": "Evaluate C# code dynamically using Roslyn compiler",
+          "properties": {
+            "code": {
+              "type": "string",
+              "description": "C# code to evaluate"
+            },
+            "timeout": {
+              "type": "number",
+              "description": "Timeout in seconds",
+              "default": 30
+            }
+          },
+          "required": [
+            "code"
+          ],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": true,
+            "methodName": "Unity.Pipeline.Runtime.Commands.CodeEvalCommand.Eval"
+          }
+        }
+      },
+      {
+        "command": "script eval_file",
+        "name": "eval_file",
+        "group": "script",
+        "description": "Evaluate C# code read from a .cs file on disk",
+        "tags": [
+          "scripts/eval"
+        ],
+        "package": "Unity.Pipeline",
+        "mainThreadRequired": true,
+        "parameters": [
+          {
+            "name": "file",
+            "description": "Path to a .cs file to evaluate",
+            "type": "String",
+            "required": true,
+            "defaultValue": null
+          },
+          {
+            "name": "timeout",
+            "description": "Timeout in seconds",
+            "type": "Double",
+            "required": false,
+            "defaultValue": 30
+          }
+        ],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "script eval_file",
+          "description": "Evaluate C# code read from a .cs file on disk",
+          "properties": {
+            "file": {
+              "type": "string",
+              "description": "Path to a .cs file to evaluate"
+            },
+            "timeout": {
+              "type": "number",
+              "description": "Timeout in seconds",
+              "default": 30
+            }
+          },
+          "required": [
+            "file"
+          ],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": true,
+            "methodName": "Unity.Pipeline.Runtime.Commands.CodeEvalCommand.EvalFile"
+          }
+        }
+      },
+      {
+        "command": "script run",
+        "name": "run",
+        "group": "script",
+        "description": "Compile a project C# file in memory (no domain reload) and execute a named static entry point. The builder-pattern path for bulk construction. Still arbitrary code execution — shares script eval's capability gate.",
+        "tags": [
+          "scripts/eval"
+        ],
+        "package": "Unity.Pipeline.Editor",
+        "mainThreadRequired": true,
+        "parameters": [
+          {
+            "name": "file",
+            "description": "Path to a .cs file to compile. Relative paths resolve against the PROJECT ROOT (the parent of Assets/), not the process working directory. May live OUTSIDE Assets/ (e.g. AgentScripts/) so writing it never triggers an asset import or domain reload.",
+            "type": "String",
+            "required": true,
+            "defaultValue": null
+          },
+          {
+            "name": "entry",
+            "description": "Entry point as Namespace.Type.Method (or Type.Method, or a bare Method name). Default: the single public static method if unambiguous, else a method named Main. Static methods only in v1. Ephemeral mode only (rejected with mode=hotpatch, which never invokes an entry point).",
+            "type": "String",
+            "required": false,
+            "defaultValue": null
+          },
+          {
+            "name": "args",
+            "description": "JSON array of arguments passed to the entry point, coerced to its parameter types: primitives, enum names, string[], and a string/object handle (ObjectRef) for UnityEngine.Object parameters. Ephemeral mode only (rejected with mode=hotpatch).",
+            "type": "JArray",
+            "required": false,
+            "defaultValue": null
+          },
+          {
+            "name": "mode",
+            "description": "ephemeral (default): compile to an in-memory assembly, run the entry, discard. hotpatch: apply [MethodReload] method replacements to already-loaded types (script.methodreload reload semantics).",
+            "type": "String",
+            "required": false,
+            "defaultValue": "ephemeral"
+          },
+          {
+            "name": "references",
+            "description": "Extra assembly name prefixes to reference beyond the auto-resolved set. In the Editor all loaded assemblies are already referenced, so this is effectively a no-op there. Ephemeral mode only; not applied by hotpatch (which delegates to script.methodreload reload's own compile).",
+            "type": "String[]",
+            "required": false,
+            "defaultValue": null
+          },
+          {
+            "name": "defines",
+            "description": "Extra scripting define symbols APPENDED to the project's active editor defines (UNITY_EDITOR etc. are already set) for the compilation's #if directives. Ephemeral mode only; not applied by hotpatch.",
+            "type": "String[]",
+            "required": false,
+            "defaultValue": null
+          },
+          {
+            "name": "pdb",
+            "description": "Emit a portable PDB mapped to the source file so breakpoints bind and exception stack traces map to file:line. Compiles unoptimized.",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          },
+          {
+            "name": "timeout",
+            "description": "Timeout in seconds. Bounds the whole run, including how long an async entry point's Task is awaited (on expiry the task keeps running detached).",
+            "type": "Double",
+            "required": false,
+            "defaultValue": 60
+          },
+          {
+            "name": "dry_run",
+            "description": "Compile only: return diagnostics; the emitted assembly is NOT loaded into the domain and nothing executes. Ephemeral mode only (rejected with mode=hotpatch, which would apply live method replacements).",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "script run",
+          "description": "Compile a project C# file in memory (no domain reload) and execute a named static entry point. The builder-pattern path for bulk construction. Still arbitrary code execution — shares script eval's capability gate.",
+          "properties": {
+            "file": {
+              "type": "string",
+              "description": "Path to a .cs file to compile. Relative paths resolve against the PROJECT ROOT (the parent of Assets/), not the process working directory. May live OUTSIDE Assets/ (e.g. AgentScripts/) so writing it never triggers an asset import or domain reload."
+            },
+            "entry": {
+              "type": "string",
+              "description": "Entry point as Namespace.Type.Method (or Type.Method, or a bare Method name). Default: the single public static method if unambiguous, else a method named Main. Static methods only in v1. Ephemeral mode only (rejected with mode=hotpatch, which never invokes an entry point)."
+            },
+            "args": {
+              "type": "string",
+              "description": "JSON array of arguments passed to the entry point, coerced to its parameter types: primitives, enum names, string[], and a string/object handle (ObjectRef) for UnityEngine.Object parameters. Ephemeral mode only (rejected with mode=hotpatch)."
+            },
+            "mode": {
+              "type": "string",
+              "description": "ephemeral (default): compile to an in-memory assembly, run the entry, discard. hotpatch: apply [MethodReload] method replacements to already-loaded types (script.methodreload reload semantics).",
+              "default": "ephemeral"
+            },
+            "references": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Extra assembly name prefixes to reference beyond the auto-resolved set. In the Editor all loaded assemblies are already referenced, so this is effectively a no-op there. Ephemeral mode only; not applied by hotpatch (which delegates to script.methodreload reload's own compile)."
+            },
+            "defines": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Extra scripting define symbols APPENDED to the project's active editor defines (UNITY_EDITOR etc. are already set) for the compilation's #if directives. Ephemeral mode only; not applied by hotpatch."
+            },
+            "pdb": {
+              "type": "boolean",
+              "description": "Emit a portable PDB mapped to the source file so breakpoints bind and exception stack traces map to file:line. Compiles unoptimized.",
+              "default": false
+            },
+            "timeout": {
+              "type": "number",
+              "description": "Timeout in seconds. Bounds the whole run, including how long an async entry point's Task is awaited (on expiry the task keeps running detached).",
+              "default": 60
+            },
+            "dry_run": {
+              "type": "boolean",
+              "description": "Compile only: return diagnostics; the emitted assembly is NOT loaded into the domain and nothing executes. Ephemeral mode only (rejected with mode=hotpatch, which would apply live method replacements).",
+              "default": false
+            }
+          },
+          "required": [
+            "file"
+          ],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": true,
+            "methodName": "Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand.Run"
+          }
+        }
+      }
+    ],
+    "count": 4,
+    "total": 4,
+    "offset": 0,
+    "limit": null,
+    "search": {
+      "pattern": "script eval",
+      "count": 4,
+      "matches": [
+        {
+          "kind": "pipeline",
+          "name": "script eval",
+          "path": "script eval",
+          "description": "Evaluate C# code dynamically using Roslyn compiler",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command script eval --project-path H:/Projects/Unities/BattleCity"
+        },
+        {
+          "kind": "pipeline",
+          "name": "script eval_file",
+          "path": "script eval_file",
+          "description": "Evaluate C# code read from a .cs file on disk",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command script eval_file --project-path H:/Projects/Unities/BattleCity"
+        },
+        {
+          "kind": "pipeline",
+          "name": "script run",
+          "path": "script run",
+          "description": "Compile a project C# file in memory (no domain reload) and execute a named static entry point. The builder-pattern path for bulk construction. Still arbitrary code execution — shares script eval's capability gate.",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command script run --project-path H:/Projects/Unities/BattleCity"
+        },
+        {
+          "kind": "pipeline",
+          "name": "job batch",
+          "path": "job batch",
+          "description": "Run multiple registered commands in one transactional request. Later ops can reference earlier results with \"$<id-or-index>.<jsonPath>\" (e.g. \"$0.instanceId\"; \"$$\" escapes a literal '$'). transactional=true (default) groups every op into one Undo step and reverts all applied ops if any op fails; commands that mutate outside the Undo system (asset/file/settings writes) are rejected unless transactional=false. on_error=abort|continue (continue forces transactional=false); dry_run validates without mutating; timeout (seconds, default 60) bounds execution — when it is about to run out the remaining ops are skipped and a transactional batch rolls back (submit long batches with \"job\": true). Excludes build run, build.target switch, the package commands, editor.playmode start/stop/pause, script recompile, script eval, script eval_file, script run, editor invoke_menu, scene open/scene create, async commands (test run/test list), runtime-only commands, and nested job batch.",
+          "matchedOn": "description",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command job batch --project-path H:/Projects/Unities/BattleCity"
+        }
+      ],
+      "hint": ""
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

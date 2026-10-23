@@ -62,9 +62,12 @@ namespace BattleCity.Tests
                 InputSystem.QueueStateEvent(keyboard, new KeyboardState(Key.D, Key.Space));
                 InputSystem.Update();
                 int frame = Time.frameCount;
-                yield return null;
-                yield return null;
+                long tick = session.Clock.Tick;
+                float deadline = Time.realtimeSinceStartup + 1;
+                // Two render frames need not contain a 60Hz logic tick (e.g. an uncapped Editor).
+                while (session.Clock.Tick == tick && Time.realtimeSinceStartup < deadline) yield return null;
                 Assert.That(Time.frameCount, Is.GreaterThan(frame));
+                Assert.That(session.Clock.Tick, Is.GreaterThan(tick));
                 Assert.That(session.Bullets.Active.Count, Is.EqualTo(1));
                 var bullet = session.Bullets.Active[0]; long id = bullet.Id;
                 Assert.That(bullet.Direction, Is.EqualTo(CardinalDirection.Right));

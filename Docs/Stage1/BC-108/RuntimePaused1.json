@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c = UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); c.Session.SetPaused(true); UnityEngine.InputSystem.InputSystem.QueueStateEvent(UnityEngine.InputSystem.Keyboard.current, new UnityEngine.InputSystem.LowLevel.KeyboardState()); UnityEngine.InputSystem.InputSystem.Update(); return new { frame = UnityEngine.Time.frameCount, tick = c.Session.Clock.Tick, dropped = c.Session.Clock.DroppedTicks, position = c.Session.Player.Position, revision = c.Session.Map.Revision, brick = c.Session.Map.BrickMaskAt(3,21), cooldown = c.Session.PlayerWeapon.CooldownRemainingTicks, bullets = c.Session.Bullets.Active.Count, effects = c.Session.Effects.Active.Count, realtime = UnityEngine.Time.realtimeSinceStartupAsDouble };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "{ frame = 13148, tick = 1750, dropped = 0, position = (24.00, 200.00), revision = 16, brick = 0, cooldown = 9, bullets = 0, effects = 1, realtime = 30.3805143052668 }"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

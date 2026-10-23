@@ -1,0 +1,50 @@
+{
+  "discoveryCount": 218,
+  "explicitCount": 0,
+  "byAssembly": {
+    "BattleCity.EditModeTests": 185,
+    "BattleCity.PlayModeTests": 33
+  },
+  "byFixture": {
+    "BrickDestructionTests": 21,
+    "BulletCollisionTests": 38,
+    "CombatEffectsTests": 9,
+    "Phase0Tests": 7,
+    "Phase1Tests": 24,
+    "RenderDeltaCombatTests": 6,
+    "TurnAlignmentTests": 65,
+    "WeaponTests": 15,
+    "ArenaPlayModeTests": 5,
+    "BrickMapViewTests": 22,
+    "CombatEffectViewTests": 5,
+    "RenderLoopRegressionTests": 1
+  },
+  "runs": {
+    "EditMode": {
+      "summary": {
+        "total": 185,
+        "passed": 185,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "duration": 1.19,
+      "discoveredEqualsExecuted": true,
+      "missing": [],
+      "unexpected": []
+    },
+    "PlayMode": {
+      "summary": {
+        "total": 33,
+        "passed": 33,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "duration": 2.1,
+      "discoveredEqualsExecuted": true,
+      "missing": [],
+      "unexpected": []
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c = UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); return new { frame = UnityEngine.Time.frameCount, tick = c.Session.Clock.Tick, dropped = c.Session.Clock.DroppedTicks, cooldown = c.Session.PlayerWeapon.CooldownRemainingTicks, bullets = c.Session.Bullets.Active.Count, effects = c.Session.Effects.Active.Count, realtime = UnityEngine.Time.realtimeSinceStartupAsDouble };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "frame": 25902,
+        "tick": 1808,
+        "dropped": 0,
+        "cooldown": 0,
+        "bullets": 0,
+        "effects": 0,
+        "realtime": 58.11132750527031
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

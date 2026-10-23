@@ -1,0 +1,13 @@
+ Assets/BattleCity/Scripts/Core/ArenaController.cs  | 16 +++++++++++++
+ Assets/BattleCity/Scripts/Core/ArenaSession.cs     |  2 ++
+ .../Tests/PlayMode/ArenaPlayModeTests.cs           |  7 ++++--
+ Docs/BattleCity-Implementation-Plan.md             | 28 +++++++++++++---------
+ UserSettings/EditorUserSettings.asset              |  9 +++++++
+ UserSettings/HierarchyWindow.settings              |  2 +-
+ 6 files changed, 50 insertions(+), 14 deletions(-)
+warning: in the working copy of 'Assets/BattleCity/Scripts/Core/ArenaController.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Scripts/Core/ArenaSession.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Tests/PlayMode/ArenaPlayModeTests.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Docs/BattleCity-Implementation-Plan.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'UserSettings/EditorUserSettings.asset', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'UserSettings/HierarchyWindow.settings', LF will be replaced by CRLF the next time Git touches it

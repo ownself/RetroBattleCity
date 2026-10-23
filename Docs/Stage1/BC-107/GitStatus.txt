@@ -1,0 +1,27 @@
+HEAD
+8e91090
+BRANCH
+master
+STATUS
+ M Assets/BattleCity/Scripts/Core/ArenaController.cs
+ M Assets/BattleCity/Scripts/Core/ArenaSession.cs
+ M Docs/BattleCity-Implementation-Plan.md
+?? .vsconfig
+?? Assets/BattleCity/Scripts/Combat/CombatEffectView.cs
+?? Assets/BattleCity/Scripts/Combat/CombatEffectView.cs.meta
+?? Assets/BattleCity/Scripts/Combat/CombatEffects.cs
+?? Assets/BattleCity/Scripts/Combat/CombatEffects.cs.meta
+?? Assets/BattleCity/Tests/EditMode/CombatEffectsTests.cs
+?? Assets/BattleCity/Tests/EditMode/CombatEffectsTests.cs.meta
+?? Assets/BattleCity/Tests/PlayMode/CombatEffectViewTests.cs
+?? Assets/BattleCity/Tests/PlayMode/CombatEffectViewTests.cs.meta
+?? Docs/Stage1/BC-107/
+?? Docs/Subagent-Execution-Board.md
+DIFF STAT (tracked only; new C#/evidence listed by status)
+ Assets/BattleCity/Scripts/Core/ArenaController.cs | 16 ++++++++++++++++
+ Assets/BattleCity/Scripts/Core/ArenaSession.cs    |  2 ++
+ Docs/BattleCity-Implementation-Plan.md            |  6 +++---
+ 3 files changed, 21 insertions(+), 3 deletions(-)
+DIFF CHECK
+diff-check-exit=0
+STAGED FILES (must be empty)

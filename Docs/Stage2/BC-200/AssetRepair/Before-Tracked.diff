@@ -1,0 +1,192 @@
+diff --git a/Assets/BattleCity/Scripts/Core/ArenaController.cs b/Assets/BattleCity/Scripts/Core/ArenaController.cs
+index 934a88b..daf344d 100644
+--- a/Assets/BattleCity/Scripts/Core/ArenaController.cs
++++ b/Assets/BattleCity/Scripts/Core/ArenaController.cs
+@@ -13,6 +13,7 @@ namespace BattleCity
+         private readonly Sprite[,] playerFrames = new Sprite[4, 2];
+         public ArenaSession Session { get; private set; }
+         public BulletView BulletView { get; private set; }
++        public CombatEffectView EffectView { get; private set; }
+ 
+         private void Awake()
+         {
+@@ -23,6 +24,9 @@ namespace BattleCity
+             BulletView = new GameObject("Bullets - display only").AddComponent<BulletView>();
+             BulletView.transform.SetParent(transform, false);
+             BulletView.Initialize(Session.Bullets, sprites, playerRenderer.sharedMaterial);
++            EffectView = new GameObject("Combat effects - display only").AddComponent<CombatEffectView>();
++            EffectView.transform.SetParent(transform, false);
++            EffectView.Initialize(Session.Effects, sprites, playerRenderer.sharedMaterial);
+             mapView.Render(Session.Map);
+             Session.SetFocus(Application.isFocused);
+             RenderPlayer();
+@@ -34,6 +38,7 @@ namespace BattleCity
+             mapView.Render(Session.Map); // No tile writes unless logical cell revisions changed.
+             RenderPlayer();
+             BulletView.Render();
++            EffectView.Render();
+         }
+ 
+         private void OnApplicationFocus(bool hasFocus)
+@@ -44,6 +49,17 @@ namespace BattleCity
+         private void OnDisable()
+         {
+             if (Session != null) Session.SetPaused(true);
++            ClearEffects();
++        }
++
++        private void OnDestroy() => ClearEffects();
++
++        /// <summary>Lifecycle seam for reset/reload; does not implement a full session restart.
++        /// Re-enabling remains paused and never replays the previous tick's hits.</summary>
++        public void ClearEffects()
++        {
++            if (Session != null) Session.Effects.Clear();
++            if (EffectView != null) EffectView.Clear();
+         }
+ 
+         private void RenderPlayer()
+diff --git a/Assets/BattleCity/Scripts/Core/ArenaSession.cs b/Assets/BattleCity/Scripts/Core/ArenaSession.cs
+index b64ebb2..d9a000d 100644
+--- a/Assets/BattleCity/Scripts/Core/ArenaSession.cs
++++ b/Assets/BattleCity/Scripts/Core/ArenaSession.cs
+@@ -15,6 +15,7 @@ namespace BattleCity
+         public MapState Map { get; }
+         public TankMotor Player { get; }
+         public BulletWorld Bullets { get; } = new BulletWorld();
++        public CombatEffects Effects { get; } = new CombatEffects();
+         public WeaponState PlayerWeapon { get; }
+         public TankCommand LastCommand { get; private set; } = new TankCommand(CardinalDirection.None);
+ 
+@@ -61,6 +62,7 @@ namespace BattleCity
+                 new Rect(Player.Position - Vector2.one * 8, Vector2.one * 16));
+             Bullets.Step(Map, targets);
+             Map.ApplyBulletHits(Bullets.Hits); // All sweeps see one pre-damage snapshot for this tick.
++            Effects.Step(Bullets.Hits); // Consume every tick, never from a potentially slower render frame.
+         }
+     }
+ }
+diff --git a/Assets/BattleCity/Tests/PlayMode/ArenaPlayModeTests.cs b/Assets/BattleCity/Tests/PlayMode/ArenaPlayModeTests.cs
+index 29995c2..5ff8a97 100644
+--- a/Assets/BattleCity/Tests/PlayMode/ArenaPlayModeTests.cs
++++ b/Assets/BattleCity/Tests/PlayMode/ArenaPlayModeTests.cs
+@@ -62,9 +62,12 @@ namespace BattleCity.Tests
+                 InputSystem.QueueStateEvent(keyboard, new KeyboardState(Key.D, Key.Space));
+                 InputSystem.Update();
+                 int frame = Time.frameCount;
+-                yield return null;
+-                yield return null;
++                long tick = session.Clock.Tick;
++                float deadline = Time.realtimeSinceStartup + 1;
++                // Two render frames need not contain a 60Hz logic tick (e.g. an uncapped Editor).
++                while (session.Clock.Tick == tick && Time.realtimeSinceStartup < deadline) yield return null;
+                 Assert.That(Time.frameCount, Is.GreaterThan(frame));
++                Assert.That(session.Clock.Tick, Is.GreaterThan(tick));
+                 Assert.That(session.Bullets.Active.Count, Is.EqualTo(1));
+                 var bullet = session.Bullets.Active[0]; long id = bullet.Id;
+                 Assert.That(bullet.Direction, Is.EqualTo(CardinalDirection.Right));
+diff --git a/Docs/BattleCity-Implementation-Plan.md b/Docs/BattleCity-Implementation-Plan.md
+index eefeb15..50b88f9 100644
+--- a/Docs/BattleCity-Implementation-Plan.md
++++ b/Docs/BattleCity-Implementation-Plan.md
+@@ -1,6 +1,6 @@
+ # Battle City（坦克大战）复刻实施计划
+ 
+-> 文档状态：阶段 0 已通过 M0；阶段 1 已完成 BC-100～BC-106（含扫掠碰撞、砖墙局部破坏与显示同步），M1 尚未通过。
++> 文档状态：阶段 0 已通过 M0；阶段 1 已完成 BC-100～BC-108，自动回归与当前版本人工检查通过，M1 已通过；阶段 2 从 BC-200 开始逐项实施，M2 尚未通过。
+ > 目标工程：Unity 6000.6.7f1 / 2D URP。
+ > 第一交付目标：单人第一关完整可玩，而不是一次性复刻全部内容。
+ 
+@@ -100,12 +100,12 @@
+ 
+ | 字段 | 当前值 |
+ | --- | --- |
+-| 当前阶段 | 阶段 1：玩家与战斗试验场（M1 进行中，必选任务 7/9） |
+-| 当前执行任务 | BC-106用户确认两组专项通过（EditMode 21项、PlayMode 22项），任务完成；见 Docs/Stage1/BC-106/Verification.md |
+-| 下一任务 | BC-107：命中与爆炸特效生命周期 |
+-| 进行中任务 | 无；BC-107、BC-108尚待实施；全部EditMode/PlayMode回归仍留BC-108 |
+-| 阻塞任务及原因 | 无新增阻塞；人工手感与完整战斗回归在 BC-108 验证；原版参数、素材授权等原有待确认项仍保留 |
+-| 最近通过的里程碑 | M0（保持通过）；BC-104 批次 EditMode 111/111、PlayMode 3/3，包含65项转向回归与实际键盘射击/显示/复用；不代表 M1 完成 |
++| 当前阶段 | 阶段 2：第一关完整可玩闭环（M2 实施开始，必选任务 0/10）；阶段1为9/9，M1已通过 |
++| 当前执行任务 | BC-200：地图实现及226/226回归已完成，但最终只读审查发现Stage01.asset地形序列非法尾字符，正在安排最小修复/重导入专项验证 |
++| 下一任务 | 按用户要求：BC-200验收后暂停，不启动BC-201或任何后续任务；等待用户明确恢复指令 |
++| 进行中任务 | BC-200落盘资产修复验收；用户已给出Stage01 PlayMode正面反馈，但不能替代当前磁盘文件有效性检查 |
++| 阻塞任务及原因 | Stage01.asset地形序列为5409字符，预期5408个hex字符，末尾多出i；须通过Unity API重新保存并验证重导入后才能验收；原版参数/授权等待确认项保留 |
++| 最近通过的里程碑 | M1：EditMode185/185、PlayMode33/33；模拟30/60/144渲染delta一致；实际运行/暂停恢复及新增Console错误0；用户完成本轮人工检查并反馈“感觉非常不错”，见Docs/Stage1/BC-108/Verification.md |
+ 
+ 实施期间更新本表，并在文末追加记录。遇到依赖未完成、规则未决或验收失败时，不跳过问题宣称阶段完成。
+ 
+@@ -114,8 +114,8 @@
+ | 里程碑 | 对应阶段 | 完成条件 | 状态 |
+ | --- | --- | --- | --- |
+ | M0 像素基线 | 阶段 0 | 图集可用，显示、坐标和规则基线确定 | 已通过，见 Docs/Stage0/Acceptance.md |
+-| M1 战斗试验场 | 阶段 1 | 移动、射击、碰撞、砖墙破坏稳定 | 进行中：BC-100～BC-106 已验收；BC-107、BC-108待办 |
+-| M2 第一关可玩 | 阶段 2 | 从开始到胜负、复活、重开闭环可玩 | 待开始 |
++| M1 战斗试验场 | 阶段 1 | 移动、射击、碰撞、砖墙破坏稳定 | 已通过，见 Docs/Stage1/BC-108/Verification.md |
++| M2 第一关可玩 | 阶段 2 | 从开始到胜负、复活、重开闭环可玩 | 实施开始：BC-200 委派准备，0/10已验收 |
+ | M3 经典玩法 | 阶段 3 | 敌人、升级、道具与特殊地形通过验证 | 待开始 |
+ | M4 单人发布候选 | 阶段 4 | 多关流程、音频、保存与独立构建通过验证 | 待开始 |
+ | M5 可选扩展 | 阶段 5 | 按选择的扩展分别验收 | 未纳入必选范围 |
+@@ -152,8 +152,8 @@
+ | [x] | BC-104 | 实现武器、子弹与发射限制 | BC-102 | 炮口位置正确；冷却与在场子弹上限有效；子弹生命周期结束后释放计数；重用对象时重置状态 |
+ | [x] | BC-105 | 实现子弹扫掠碰撞和命中顺序 | BC-104 | 对边界、钢墙和目标按最早命中处理；高速不穿透；同一步重复命中与敌我过滤有明确处理 |
+ | [x] | BC-106 | 实现砖墙局部破坏与显示同步 | BC-101、BC-105 | 从各方向攻击均能按规定范围破墙；残墙仍可阻挡；打通后坦克可通过；不得整块误删 |
+-| [ ] | BC-107 | 实现命中与爆炸特效生命周期 | BC-105、BC-106 | 特效不产生重复伤害；播放结束释放；暂停和重开不留下残留对象或过期回调 |
+-| [ ] | BC-108 | 完成移动与战斗回归 | BC-103、BC-107 | 自动验证边界、扫掠和破坏；人工验证贴墙转向及手感；30/60/144 渲染帧率下速度一致；无新增 Console 错误，更新 M1 |
++| [x] | BC-107 | 实现命中与爆炸特效生命周期 | BC-105、BC-106 | 特效不产生重复伤害；播放结束释放；暂停和重开不留下残留对象或过期回调 |
++| [x] | BC-108 | 完成移动与战斗回归 | BC-103、BC-107 | 自动验证边界、扫掠和破坏；人工验证贴墙转向及手感；30/60/144 渲染帧率下速度一致；无新增 Console 错误，更新 M1 |
+ 
+ ### 阶段 2：第一关完整可玩闭环（M2）
+ 
+@@ -334,6 +334,12 @@ Docs/
+ | PH1-010 | BC-106 专项失败修补 | 用户报告窄通道预期2格却为0，以及几何覆盖大量报错；修正弹位于砖钢接缝的错误布局；8组编辑器API对照确认EditMode均不允许OverrideGeometry，将22项几何测试连同meta迁到PlayMode并等待异步销毁 | 补丁静态编译无代码错误、同一条CS1701引用警告；保留全部断言，不改生产碰撞/显示、不改纹理可读性、不屏蔽日志；未代跑Test Runner，21项EditMode+22项PlayMode待用户重跑 | BC-106继续未勾选；原始对照与修补说明见Docs/Stage1/BC-106/Verification.md；M1仍6/9 |
+ | PH1-011 | BC-106 专项复测通过 | 用户在修补后反馈“两个测试都正确了”，确认21项EditMode逻辑及22项PlayMode显示专项通过；结合此前人工破墙与钢墙挡弹确认，关闭BC-106 | 用户报告21/21、22/22，未导入测试报告；全套回归与Console计数不扩展为通过 | 阶段1为7/9；下一任务BC-107，完整回归留BC-108，M1尚未完成 |
+ 
++| PH1-012 | BC-107 | subagent 实现纯表现特效状态池与 Sprite 显示复用，每 tick 消费命中，增加显式爆炸及幂等清理接口；暂停冻结、禁用/销毁/重载清理，不提前实现死亡系统 | 新专项 EditMode 9/9、PlayMode 5/5；紧邻回归碰撞38/38、破砖21/21、砖显示22/22、Arena5/5，共100/100；独立只读审查无具体缺陷，主代理核查源码与保存证据后验收；实际帧/tick推进和暂停冻结，cursor200→273新增错误0；用户初步确认爆炸表现正常；见 Docs/Stage1/BC-107/Verification.md | 一次域重载连接中断经批准同协议恢复；无提交；M1仍未通过，下一步BC-108全量回归、帧率矩阵及当前版本人工手感确认 |
++
++| PH1-013 | BC-108 自动回归 | subagent 新增6项跨渲染delta战斗用例及1项真实Update暂停恢复/键盘钢墙用例；既有键盘用例改为等待实际逻辑tick并新增断言，未改生产逻辑 | 主代理核对源码、执行/发现集合及最终结果：EditMode185/185、PlayMode33/33，共218/218；模拟30/60/144下移动/冷却/弹数/回收/破砖/特效一致；实际推进、暂停冻结与恢复无补算；cursor273→394新增错误0；首轮测试失败及修正过程保留，见Docs/Stage1/BC-108/Verification.md | 只接受自动部分，不勾选BC-108/M1；等待用户5项当前版本人工检查；三档硬件fps基准、构建及长期压力未做；未提交Git，未进入阶段二 |
++
++| PH1-014 | BC-108 / M1 | 用户在收到当前版本5项人工检查清单后反馈“经过了一轮人工检查，感觉非常不错”；结合已复核自动结果关闭人工验收门禁，BC-108完成、M1通过 | EditMode185/185、PlayMode33/33为本轮已保存结果；本次新增证据为用户整体人工检查确认，无逐项量化报告；不扩展为三档硬件fps性能实测或独立构建通过 | 阶段1为9/9；沿既定授权开始BC-200，阶段二尚无已验收任务；保留所有未提交改动与既存用户文件 |
++
+ ### 实施记录填写模板
+ 
+ ```text
+diff --git a/UserSettings/EditorUserSettings.asset b/UserSettings/EditorUserSettings.asset
+index 2a33351..d4f6113 100644
+--- a/UserSettings/EditorUserSettings.asset
++++ b/UserSettings/EditorUserSettings.asset
+@@ -20,6 +20,15 @@ EditorUserSettings:
+     RecentlyUsedSceneGuid-0:
+       value: 5b520d0503545b0d0c0c0a2715770748154f4d2c7d7d7e627a7d4a35b4e1646a
+       flags: 0
++    RecentlyUsedSceneGuid-1:
++      value: 
++      flags: 0
++    RecentlyUsedSceneGuid-2:
++      value: 
++      flags: 0
++    RecentlyUsedSceneGuid-3:
++      value: 
++      flags: 0
+     vcSharedLogLevel:
+       value: 0d5e400f0650
+       flags: 0
+diff --git a/UserSettings/HierarchyWindow.settings b/UserSettings/HierarchyWindow.settings
+index ea8d38b..d065dd3 100644
+--- a/UserSettings/HierarchyWindow.settings
++++ b/UserSettings/HierarchyWindow.settings
+@@ -18,7 +18,7 @@
+         {
+             "ColumnId": "HierarchyViewColumn Name",
+             "Visible": true,
+-            "Width": 443.0,
++            "Width": 442.0,
+             "Index": 2
+         },
+         {
+warning: in the working copy of 'Assets/BattleCity/Scripts/Core/ArenaController.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Scripts/Core/ArenaSession.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Tests/PlayMode/ArenaPlayModeTests.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Docs/BattleCity-Implementation-Plan.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'UserSettings/EditorUserSettings.asset', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'UserSettings/HierarchyWindow.settings', LF will be replaced by CRLF the next time Git touches it

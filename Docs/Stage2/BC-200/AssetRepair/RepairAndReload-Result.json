@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command script",
+  "data": null,
+  "errors": [
+    {
+      "code": "COMMAND_FAILED",
+      "message": "Compilation Failed\n  'Object.GetInstanceID()' is obsolete: 'Use GetEntityId instead.'（第 13 行，第 20 列）\n  'Object.GetInstanceID()' is obsolete: 'Use GetEntityId instead.'（第 54 行，第 62 列）\n  'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'（第 71 行，第 22 列）\n  Unreachable code detected（第 77 行，第 12 列）"
+    }
+  ],
+  "warnings": []
+}

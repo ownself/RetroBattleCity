@@ -1,0 +1,18 @@
+{
+  "EditMode": {
+    "discovered": 190,
+    "executed": 190,
+    "missing": [],
+    "unexpected": [],
+    "passed": 190,
+    "failed": 0
+  },
+  "PlayMode": {
+    "discovered": 36,
+    "executed": 36,
+    "missing": [],
+    "unexpected": [],
+    "passed": 36,
+    "failed": 0
+  }
+}

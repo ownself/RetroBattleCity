@@ -1,0 +1,12 @@
+UserSettings/EditorUserSettings.asset:24: trailing whitespace.
++      value: 
+UserSettings/EditorUserSettings.asset:27: trailing whitespace.
++      value: 
+UserSettings/EditorUserSettings.asset:30: trailing whitespace.
++      value: 
+warning: in the working copy of 'Assets/BattleCity/Scripts/Core/ArenaController.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Scripts/Core/ArenaSession.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Tests/PlayMode/ArenaPlayModeTests.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Docs/BattleCity-Implementation-Plan.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'UserSettings/EditorUserSettings.asset', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'UserSettings/HierarchyWindow.settings', LF will be replaced by CRLF the next time Git touches it

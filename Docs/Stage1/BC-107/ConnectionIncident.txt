@@ -1,0 +1,22 @@
+BC-107 单次连接事件（人工从真实工具返回保存，不是重新执行）
+
+命令：
+unity command script eval --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json -- --code 'return new { compiling = UnityEditor.EditorApplication.isCompiling, updating = UnityEditor.EditorApplication.isUpdating, playing = UnityEditor.EditorApplication.isPlaying };'
+
+原始返回：
+{
+  "success": false,
+  "command": "unity command script",
+  "data": null,
+  "errors": [
+    {
+      "code": "COMMAND_FAILED",
+      "message": "Failed to execute command 'script': Network error: socket hang up"
+    }
+  ],
+  "warnings": []
+}
+
+前置：script recompile_status尚为compiling，console groundTruth编译中，无当前Console错误。
+主代理批准一次同协议恢复：不重启编辑器、不重复recompile、不切换工具/模式；先保存diff/stat，然后status --until-ready --timeout 60，ready后核查编译、Console及无运行测试任务。
+恢复：ReconnectStatus.json ready；CompileResult.json completed/errors=[]；ConsoleAfterCompile.json compilationFailed=false；TestStatusBefore.json completed（此前旧任务报告，不作本轮通过数）。随后才启动本轮专项测试。后续连接未复发失败。

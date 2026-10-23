@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command capture game_view",
+  "data": {
+    "command": "capture game_view",
+    "parameters": {
+      "source": "screen",
+      "save_path": "Docs/Stage1/BC-107/PausedExplosion.png"
+    },
+    "result": {
+      "width": 1280,
+      "height": 720,
+      "encoding": "png",
+      "bytes": 20732,
+      "source": "screen",
+      "savedPath": "Assets/Docs/Stage1/BC-107/PausedExplosion.png"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

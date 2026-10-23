@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var t=System.AppDomain.CurrentDomain.GetAssemblies().Select(a=>a.GetType(\"Unity.Pipeline.Editor.Commands.AutoTickCommand\")).First(t=>t!=null); return new {enabled=t.GetProperty(\"IsEnabled\",System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic).GetValue(null), interval=t.GetProperty(\"CurrentIntervalMs\",System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic).GetValue(null), storedInterval=UnityEditor.SessionState.GetInt(\"Unity.Pipeline.AutoTick.IntervalMs\",-1),storedEnabled=UnityEditor.SessionState.GetBool(\"Unity.Pipeline.AutoTick.Enabled\",false),background=UnityEngine.Application.runInBackground};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "enabled": true,
+        "interval": 16,
+        "storedInterval": 16,
+        "storedEnabled": true,
+        "background": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

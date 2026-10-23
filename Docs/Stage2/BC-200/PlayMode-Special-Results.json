@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.53,
+      "summary": {
+        "total": 3,
+        "passed": 2,
+        "failed": 1,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.Stage01PlayModeTests.Stage01_RealKeyboardMovesAndBrickDamageProjectsWithoutAssetMutation",
+          "Status": "Passed",
+          "Duration": 0.4329526,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01PlayModeTests.Stage01_RealKeyboardShotAndMovementAreBlockedByCentralSteel",
+          "Status": "Failed",
+          "Duration": 0.0243115,
+          "Message": "System.InvalidOperationException : Cannot queue state event for device 'Keyboard:/Keyboard1' because device has not been added to system",
+          "StackTrace": "  at UnityEngine.InputSystem.InputSystem.QueueStateEvent[TState] (UnityEngine.InputSystem.InputDevice device, TState state, System.Double time) [0x00108] in .\\Library\\PackageCache\\com.unity.inputsystem@2436e68c60c4\\InputSystem\\Runtime\\InputSystem.cs:2622 \r\n  at BattleCity.Tests.Stage01PlayModeTests.Keys (UnityEngine.InputSystem.Key[] keys) [0x0001f] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\Stage01PlayModeTests.cs:33 \r\n  at BattleCity.Tests.Stage01PlayModeTests+<Stage01_RealKeyboardShotAndMovementAreBlockedByCentralSteel>d__8.MoveNext () [0x00107] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\Stage01PlayModeTests.cs:82 \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@ee3fe9477490\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52 "
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01PlayModeTests.Stage01_ReloadRestoresBricksAndReservedIntactBase",
+          "Status": "Passed",
+          "Duration": 0.0327791,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -13,6 +13,7 @@ namespace BattleCity
         private readonly Sprite[,] playerFrames = new Sprite[4, 2];
         public ArenaSession Session { get; private set; }
         public BulletView BulletView { get; private set; }
+        public CombatEffectView EffectView { get; private set; }
 
         private void Awake()
         {
@@ -23,6 +24,9 @@ namespace BattleCity
             BulletView = new GameObject("Bullets - display only").AddComponent<BulletView>();
             BulletView.transform.SetParent(transform, false);
             BulletView.Initialize(Session.Bullets, sprites, playerRenderer.sharedMaterial);
+            EffectView = new GameObject("Combat effects - display only").AddComponent<CombatEffectView>();
+            EffectView.transform.SetParent(transform, false);
+            EffectView.Initialize(Session.Effects, sprites, playerRenderer.sharedMaterial);
             mapView.Render(Session.Map);
             Session.SetFocus(Application.isFocused);
             RenderPlayer();
@@ -34,6 +38,7 @@ namespace BattleCity
             mapView.Render(Session.Map); // No tile writes unless logical cell revisions changed.
             RenderPlayer();
             BulletView.Render();
+            EffectView.Render();
         }
 
         private void OnApplicationFocus(bool hasFocus)
@@ -44,6 +49,17 @@ namespace BattleCity
         private void OnDisable()
         {
             if (Session != null) Session.SetPaused(true);
+            ClearEffects();
+        }
+
+        private void OnDestroy() => ClearEffects();
+
+        /// <summary>Lifecycle seam for reset/reload; does not implement a full session restart.
+        /// Re-enabling remains paused and never replays the previous tick's hits.</summary>
+        public void ClearEffects()
+        {
+            if (Session != null) Session.Effects.Clear();
+            if (EffectView != null) EffectView.Clear();
         }
 
         private void RenderPlayer()

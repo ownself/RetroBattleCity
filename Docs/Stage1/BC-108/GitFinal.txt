@@ -1,0 +1,29 @@
+8e91090
+ M Assets/BattleCity/Scripts/Core/ArenaController.cs
+ M Assets/BattleCity/Scripts/Core/ArenaSession.cs
+ M Assets/BattleCity/Tests/PlayMode/ArenaPlayModeTests.cs
+ M Docs/BattleCity-Implementation-Plan.md
+ M UserSettings/HierarchyWindow.settings
+?? .vsconfig
+?? Assets/BattleCity/Scripts/Combat/CombatEffectView.cs
+?? Assets/BattleCity/Scripts/Combat/CombatEffectView.cs.meta
+?? Assets/BattleCity/Scripts/Combat/CombatEffects.cs
+?? Assets/BattleCity/Scripts/Combat/CombatEffects.cs.meta
+?? Assets/BattleCity/Tests/EditMode/CombatEffectsTests.cs
+?? Assets/BattleCity/Tests/EditMode/CombatEffectsTests.cs.meta
+?? Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs
+?? Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs.meta
+?? Assets/BattleCity/Tests/PlayMode/CombatEffectViewTests.cs
+?? Assets/BattleCity/Tests/PlayMode/CombatEffectViewTests.cs.meta
+?? Assets/BattleCity/Tests/PlayMode/RenderLoopRegressionTests.cs
+?? Assets/BattleCity/Tests/PlayMode/RenderLoopRegressionTests.cs.meta
+?? Docs/Stage1/BC-107/
+?? Docs/Stage1/BC-108/
+?? Docs/Subagent-Execution-Board.md
+ Assets/BattleCity/Scripts/Core/ArenaController.cs      | 16 ++++++++++++++++
+ Assets/BattleCity/Scripts/Core/ArenaSession.cs         |  2 ++
+ Assets/BattleCity/Tests/PlayMode/ArenaPlayModeTests.cs |  7 +++++--
+ Docs/BattleCity-Implementation-Plan.md                 | 16 +++++++++-------
+ 4 files changed, 32 insertions(+), 9 deletions(-)
+--- staged names (must be empty) ---
+--- hierarchy normalized content equals HEAD ---

@@ -1,0 +1,91 @@
+{
+  "source": "Assets\\Sprites\\NES - Battle City (JPN) - Backgrounds - Stage 01.png",
+  "sha256": "0ad647c8af338e6c34bcad3e467cd5cf64607597f8a1dd1d5a2ef6e3f1111b7f",
+  "dimensions": [
+    208,
+    208
+  ],
+  "counts8px": {
+    ".": 444,
+    "B": 220,
+    "S": 8,
+    "H": 4
+  },
+  "baseSourceRect": [
+    96,
+    192,
+    16,
+    16
+  ],
+  "baseRuntimeCenter": [
+    104,
+    8
+  ],
+  "matrixMatchesIndependentSamples": true,
+  "rowsTopDown": [
+    "..........................",
+    "..........................",
+    "..BB..BB..BB..BB..BB..BB..",
+    "..BB..BB..BB..BB..BB..BB..",
+    "..BB..BB..BB..BB..BB..BB..",
+    "..BB..BB..BB..BB..BB..BB..",
+    "..BB..BB..BBSSBB..BB..BB..",
+    "..BB..BB..BBSSBB..BB..BB..",
+    "..BB..BB..BB..BB..BB..BB..",
+    "..BB..BB..........BB..BB..",
+    "..BB..BB..........BB..BB..",
+    "..........BB..BB..........",
+    "..........BB..BB..........",
+    "BB..BBBB..........BBBB..BB",
+    "SS..BBBB..........BBBB..SS",
+    "..........BB..BB..........",
+    "..........BBBBBB..........",
+    "..BB..BB..BBBBBB..BB..BB..",
+    "..BB..BB..BB..BB..BB..BB..",
+    "..BB..BB..BB..BB..BB..BB..",
+    "..BB..BB..BB..BB..BB..BB..",
+    "..BB..BB..........BB..BB..",
+    "..BB..BB..........BB..BB..",
+    "..BB..BB...BBBB...BB..BB..",
+    "...........BHHB...........",
+    "...........BHHB..........."
+  ],
+  "paletteRGBA": [
+    [
+      0,
+      0,
+      0,
+      255
+    ],
+    [
+      102,
+      102,
+      102,
+      255
+    ],
+    [
+      153,
+      79,
+      0,
+      255
+    ],
+    [
+      108,
+      7,
+      0,
+      255
+    ],
+    [
+      174,
+      174,
+      174,
+      255
+    ],
+    [
+      254,
+      254,
+      254,
+      255
+    ]
+  ]
+}

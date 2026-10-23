@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "UnityEditor.PlayerSettings.runInBackground=false; UnityEngine.Application.runInBackground=false; UnityEditor.AssetDatabase.SaveAssets(); foreach(var key in new[]{\"RecentlyUsedSceneGuid-1\",\"RecentlyUsedSceneGuid-2\",\"RecentlyUsedSceneGuid-3\"}) UnityEditor.EditorUserSettings.SetConfigValue(key,null); var path=\"ProjectSettings/Packages/com.unity.pipeline/EditorPipelineConfig.json\"; var content=System.IO.File.ReadAllText(path); if(!content.Contains(\"\\\"m_RunInBackgroundCommandOverride\\\": false\") || !content.Contains(\"\\\"m_RunInBackgroundOverridden\\\": false\")) throw new System.Exception(\"Background override not restored\"); System.IO.File.Delete(path); if(System.IO.Directory.GetFileSystemEntries(\"ProjectSettings/Packages/com.unity.pipeline\").Length==0) System.IO.Directory.Delete(\"ProjectSettings/Packages/com.unity.pipeline\"); return new {playerSetting=UnityEditor.PlayerSettings.runInBackground, application=UnityEngine.Application.runInBackground};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playerSetting": false,
+        "application": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

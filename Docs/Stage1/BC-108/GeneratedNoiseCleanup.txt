@@ -1,0 +1,34 @@
+GitBefore.txt has no config or hierarchy modification; sole writer.
+AutoTick reported already enabled, so remains enabled at 16ms. BackgroundOn/BackgroundRestored created and restored config override.
+Config before deletion:
+{
+    "m_Port": 0,
+    "m_AutoStart": true,
+    "m_WatchdogEnabled": true,
+    "m_WatchdogIntervalSeconds": 5,
+    "m_LogRequestsResponses": false,
+    "m_EvalTelemetryEnabled": true,
+    "m_StoreEvalSource": false,
+    "m_AllowBrowserClients": false,
+    "m_MethodReloadRepushOnConnect": true,
+    "m_RunInBackgroundInPlayMode": false,
+    "m_RunInBackgroundOverridden": false,
+    "m_RunInBackgroundOriginal": false,
+    "m_RunInBackgroundCommandOverride": false
+}
+Hierarchy before targeted restoration (HEAD/starting 443, generated 442):
+diff --git a/UserSettings/HierarchyWindow.settings b/UserSettings/HierarchyWindow.settings
+index ea8d38b..d065dd3 100644
+--- a/UserSettings/HierarchyWindow.settings
++++ b/UserSettings/HierarchyWindow.settings
+@@ -18,7 +18,7 @@
+         {
+             "ColumnId": "HierarchyViewColumn Name",
+             "Visible": true,
+-            "Width": 443.0,
++            "Width": 442.0,
+             "Index": 2
+         },
+         {
+
+Removed only EditorPipelineConfig.json; empty parent directories left alone. Restored Name Width 442 -> 443 only.

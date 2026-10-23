@@ -15,6 +15,7 @@ namespace BattleCity
         public MapState Map { get; }
         public TankMotor Player { get; }
         public BulletWorld Bullets { get; } = new BulletWorld();
+        public CombatEffects Effects { get; } = new CombatEffects();
         public WeaponState PlayerWeapon { get; }
         public TankCommand LastCommand { get; private set; } = new TankCommand(CardinalDirection.None);
 
@@ -61,6 +62,7 @@ namespace BattleCity
                 new Rect(Player.Position - Vector2.one * 8, Vector2.one * 16));
             Bullets.Step(Map, targets);
             Map.ApplyBulletHits(Bullets.Hits); // All sweeps see one pre-damage snapshot for this tick.
+            Effects.Step(Bullets.Hits); // Consume every tick, never from a potentially slower render frame.
         }
     }
 }

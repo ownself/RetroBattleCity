@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command capture game_view",
+  "data": {
+    "command": "capture game_view",
+    "parameters": {
+      "source": "camera",
+      "width": "768",
+      "height": "720",
+      "save_path": "Docs/Stage2/BC-200/Stage01-Live.png"
+    },
+    "result": {
+      "width": 768,
+      "height": 720,
+      "encoding": "png",
+      "bytes": 15918,
+      "source": "camera:Main Camera",
+      "savedPath": "Assets/Docs/Stage2/BC-200/Stage01-Live.png"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var p=BattleCity.Editor.Stage01Authoring.LevelPath;var lines=System.IO.File.ReadAllLines(p);var s=lines.Single(l=>l.StartsWith(\"  terrain: \")).Substring(\"  terrain: \".Length);return new {cwd=System.Environment.CurrentDirectory,dataPath=UnityEngine.Application.dataPath,fullPath=System.IO.Path.GetFullPath(p),length=s.Length,last=s.Substring(s.Length-20),invalid=s.Where(c=>!System.Uri.IsHexDigit(c)).Select(c=>(int)c).ToArray(),regex=System.Text.RegularExpressions.Regex.IsMatch(s,@\"\\A[0-9a-fA-F]{5408}\\z\"),assetGuid=UnityEditor.AssetDatabase.AssetPathToGUID(p),asset=UnityEngine.JsonUtility.ToJson(UnityEditor.AssetDatabase.LoadAssetAtPath<BattleCity.LevelDefinition>(p))};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "cwd": "H:\\Projects\\Unities\\BattleCity",
+        "dataPath": "H:/Projects/Unities/BattleCity/Assets",
+        "fullPath": "H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Data\\Stage01.asset",
+        "length": 5409,
+        "last": "0000000000000000000i",
+        "invalid": [
+          105
+        ],
+        "regex": false,
+        "assetGuid": "f6d6dc8b03b323d4887d49ced670c862",
+        "asset": "{\"schemaVersion\":1,\"stageNumber\":1,\"terrain\":[0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,0,1,1,1,1,1,1,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,2,2,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,2,2,1,1,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,0,1,1,2,2,1,1,0,0,1,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,0,1,1,2,2,1,1,0,0,1,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"playerSpawnPixels\":{\"x\":72,\"y\":8},\"baseCenterPixels\":{\"x\":104,\"y\":8},\"enemySpawnPixels\":[{\"x\":8,\"y\":200},{\"x\":104,\"y\":200},{\"x\":200,\"y\":200}],\"enemySequence\":[],\"maxActiveEnemies\":4}"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}
