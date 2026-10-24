@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var sc=UnityEngine.SceneManagement.SceneManager.GetActiveScene(); return new {playing=UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode,paused=UnityEditor.EditorApplication.isPaused,dirty=sc.isDirty,compiling=UnityEditor.EditorApplication.isCompiling,background=UnityEngine.Application.runInBackground,settingsBackground=UnityEditor.PlayerSettings.runInBackground};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playing": false,
+        "paused": false,
+        "dirty": false,
+        "compiling": false,
+        "background": false,
+        "settingsBackground": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

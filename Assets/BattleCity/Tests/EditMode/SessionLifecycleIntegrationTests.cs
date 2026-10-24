@@ -118,6 +118,30 @@ namespace BattleCity.Tests
             Assert.That(s.Phase, Is.EqualTo(SessionPhase.Playing));
         }
 
+        [TestCase(false)]
+        [TestCase(true)]
+        public void FocusLossInsideStateNotification_PausesBeforeAnyTickWithoutRecursiveNotification(bool returnFocus)
+        {
+            var s = Session(); int notifications = 0, depth = 0, maxDepth = 0;
+            s.StateChanged += () =>
+            {
+                depth++; maxDepth = System.Math.Max(maxDepth, depth); notifications++;
+                s.SetFocus(false);
+                if (returnFocus) s.SetFocus(true);
+                Assert.That(Tick(s, 8), Is.Zero);
+                depth--;
+            };
+            Assert.That(s.StartBattle(), Is.True);
+            Assert.That(s.Phase, Is.EqualTo(SessionPhase.Paused));
+            Assert.That(s.Clock.Paused, Is.True);
+            Assert.That(notifications, Is.EqualTo(2));
+            Assert.That(maxDepth, Is.EqualTo(1));
+            Tick(s); Tick(s, 8);
+            Assert.That(s.Clock.Tick, Is.Zero);
+            Assert.That(s.EnemyWave.ReservedCount, Is.Zero);
+            Assert.That(notifications, Is.EqualTo(2));
+        }
+
         [Test] public void StateNotificationCannotReenterStartPauseOrAdvance()
         {
             var s = Session(); int notifications = 0;

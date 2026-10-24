@@ -1,6 +1,14 @@
 # 阶段二续接记录
 
-## 最新覆盖状态：BC206审查完成，有效P2待修，先不改变用户截图版本
+## 最新覆盖状态：BC206已验收（7/10），不自动开展207
+
+- 用户明确Editor退出Play并要求收尾，随后确认没有持续Reloading异常；主代理现场ready后直接完成P2修补与聚焦验证。ArenaSession通知内失焦立即冻结Clock/清命令，通知退出再处理暂停；新增2例覆盖失焦与同回调返回焦点。
+- P2-Edit-Current.json真实10/10、P2-Play-Fixture-Status.json3/3、P2-Life-Status.json1/1全Passed；P2-Followup-Review.md独立fresh复审OK，无新问题，原P2解决。无需恢复任何旧child或重新跑整套。
+- P2-Final-Audit.json有效并集472唯一（409Edit/63Play），不是一次472全量全绿；68最终源码hash记录、只有Session/Edit测试相对recheck改动。原失败/旧程序集8项/0用例组合filter与域重载临时状态保留披露。
+- Acceptance.md已写，总计划BC206勾选、阶段二7/10/M2未通过。独立截图未留档明确记录，不再要求用户为206补图或阻塞功能收口，留后续BC209/M2画面。当前请求仅206，不自动开展207。
+- 最后P2-Final-State.json：stopped/clean/未暂停编译、背景false；Console632之后32条全log，dropped/resetfalse，ProjectSettings diff空、git diff --check通过。未暂存/提交/推送；main/e2383ba基线及既存.vsconfig保留。无活跃writer。
+
+## 前一审查待修检查点（历史）
 
 - fresh review workflow368ac00d-ba3b-4413-956e-6f49c2dfc68b、child1e934775-5c98-4a82-9df3-d910d3db99c6已completed，原文BC-206/FinalReview.md；OK with notes，无P0/P1，一条P2。
 - P2：ArenaSession.SetFocus(false)在StateChanged回调内把focused设false，但ChangePaused被notifying guard拒绝，外层通知后仍Playing并继续tick。父代理判VALID，拟最小修补+聚焦Edit回归/复审，不能用OK with notes掩盖。详见Review-Disposition.md。

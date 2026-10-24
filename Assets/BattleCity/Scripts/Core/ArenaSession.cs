@@ -19,7 +19,7 @@ namespace BattleCity
         private long nextEntityId;
         private bool focused = true;
         private readonly SessionFlowState flow;
-        private bool advancing, notifying, retired, transitionPending;
+        private bool advancing, notifying, retired, transitionPending, focusPausePending;
         private PlayerButtons previousButtons;
         public bool EnableSessionLifecycle => flow != null;
         public SessionPhase Phase => flow?.Phase ?? (Clock.Paused ? SessionPhase.Paused : SessionPhase.Playing);
@@ -233,13 +233,29 @@ namespace BattleCity
         {
             notifying = true;
             try { StateChanged?.Invoke(); }
-            finally { notifying = false; }
+            finally { FinishNotification(); }
+        }
+
+        private void FinishNotification()
+        {
+            notifying = false;
+            if (!focusPausePending) return;
+            focusPausePending = false;
+            ChangePaused(true);
         }
 
         public void SetFocus(bool hasFocus)
         {
             focused = hasFocus;
-            if (!hasFocus) SetPaused(true); // Focus return is deliberately not resume.
+            if (hasFocus) return; // Focus return is deliberately not resume.
+            if (notifying)
+            {
+                // Stop time immediately, but defer the state transition until callbacks have returned.
+                focusPausePending = true;
+                Clock.SetPaused(true);
+                ClearCommands();
+            }
+            else SetPaused(true);
         }
 
         private bool TryRespawnPlayer()
@@ -326,7 +342,7 @@ namespace BattleCity
                 if (baseDestroyed) BaseDestroyed?.Invoke();
                 if (ended) { StateChanged?.Invoke(); SessionEnded?.Invoke(); }
             }
-            finally { notifying = false; }
+            finally { FinishNotification(); }
         }
     }
 }

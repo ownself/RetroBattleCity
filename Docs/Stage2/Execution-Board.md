@@ -22,6 +22,8 @@
 
 ## 当前 lane
 
+**最终覆盖：BC206已验收，阶段二7/10，M2未通过。** 用户确认Editor无持续异常后主代理直接完成P2修补：10/10生命周期Edit（新增2例）、3/3生命周期Play、1/1复活Play通过，独立聚焦复审OK。有效证据并集472唯一用例，不是单次472全量；截图未留档如实记录，不再阻塞206。最终Editor stopped/clean/backgroundfalse、增量32Console全log；见BC-206/Acceptance.md、P2-Final-Audit.json。无活跃writer，不自动开展207。以下状态为历史。
+
 **最新覆盖：fresh审查已完成OK with notes，无P0/P1，发现一条有效P2（通知回调内失焦暂停请求被丢弃）。** 主代理拟在本项最小修补/聚焦验证/复审；用户可能正在补两张Game图，按AGENTS.md当前不改源码或Unity现场、无活跃writer，等图或用户明确结束检查再动。见BC-206/FinalReview.md、Review-Disposition.md。
 
 **前一技术核对：470个唯一用例已有有效通过证据，主代理对账完成。** 原407/407Edit、62/63Play，唯一失败旧测试等待真实开始转换帧后1/1复测通过；不冒称一次470全绿。主代理原始集合、68源码、4模型、985保护文件hash均核对，见BC-206/Parent-Audit.json。独立画面eval误用Session.Flow已停止，不恢复或继续自动截图。用户仅需提供Ready/Playing两图，无需读内部属性/执行代码或重复测试。见Closeout-Decision.md。6/10/M2未通过，BC207不开展。
@@ -128,7 +130,7 @@ BC-201 可包含坦克通用血量/幂等命中/死亡能力以及可测试的�
 | BC-203 | 已验收 | 299/299 EditMode、55/55 PlayMode；fresh审查OK with notes，主代理354集合/15文件当前SHA256/源码/截图复核；详见Acceptance.md |
 | BC-204 | 已验收，用户四项初步人工检查通过 | 320/320 EditMode、58/58 PlayMode；fresh审查OK with notes；主代理378集合/12实现+67保护文件当前SHA256/源码/截图复核，见Acceptance.md；无活跃worker |
 | BC-205 | 已验收，用户人工确认通过 | 359 Edit+60 Play=419唯一Passed；独立Update/三截图/清理齐全，fresh审查OK with notes；主代理64源码+259保护文件+5recipe/截图hash与原始集合/运行端点核对通过；用户确认总3次出场及复活护盾有效，见Acceptance.md/Manual-Check.md；无活跃worker |
-| BC-206 | fresh审查完成；待人工两图/结束当前检查后修有效P2 | 470有效唯一通过证据及hash核对保留；审查OK with notes，通知内失焦P2拟最小修补/聚焦验证复审。为不改变用户截图版本当前无writer/Unity操作，不重跑整套/不自动再截图，不开展207 |
+| BC-206 | 已验收 | P2已修，10Edit+4Play聚焦通过，fresh复审OK；有效证据472唯一用例、原失败保留；截图不再阻塞，详见Acceptance.md；不开展207 |
 | BC-207 | 待办 | 先读ui→ui-ugui skill，接入像素HUD |
 | BC-208 | 待办 | 完整闭环与边界自动回归 |
 | BC-209 / M2 | 待办 | 运行、截图、Console及流程验收；列明人工体验未覆盖项 |
