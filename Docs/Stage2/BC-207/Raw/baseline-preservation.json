@@ -1,0 +1,32 @@
+[
+  {
+    "path": "Assets/BattleCity/Data/Stage01.asset",
+    "baselineSha256": "2e79c4870ddeb065b23be053bfc501352016608852b1daca08a6917b5b6fcfc3",
+    "currentSha256": "2e79c4870ddeb065b23be053bfc501352016608852b1daca08a6917b5b6fcfc3",
+    "normalizedTextEqual": true
+  },
+  {
+    "path": "Assets/BattleCity/Data/Stage01EnemyWave.asset",
+    "baselineSha256": "07e98a02c7fa569480875a4d8b69550c5974a2ae8a4bee3e2236d530e88edb4e",
+    "currentSha256": "07e98a02c7fa569480875a4d8b69550c5974a2ae8a4bee3e2236d530e88edb4e",
+    "normalizedTextEqual": true
+  },
+  {
+    "path": "Assets/BattleCity/Data/EnemyBasicPrototype.asset",
+    "baselineSha256": "9eea749f6370d047d4c073218b72ef428f098076aece1f41d6149209442741ef",
+    "currentSha256": "9eea749f6370d047d4c073218b72ef428f098076aece1f41d6149209442741ef",
+    "normalizedTextEqual": true
+  },
+  {
+    "path": "Assets/BattleCity/Scenes/CombatArena.unity",
+    "baselineSha256": "0c55e43b775211bb110a3fdba61035dd834ddcb62e6aae2335da25f2095229c2",
+    "currentSha256": "0c55e43b775211bb110a3fdba61035dd834ddcb62e6aae2335da25f2095229c2",
+    "normalizedTextEqual": true
+  },
+  {
+    "path": "Assets/BattleCity/Scenes/PixelBaseline.unity",
+    "baselineSha256": "1292a53868fb9981467ceac391b2fa8a72796b55c485d86317b1b90aa475a906",
+    "currentSha256": "1292a53868fb9981467ceac391b2fa8a72796b55c485d86317b1b90aa475a906",
+    "normalizedTextEqual": true
+  }
+]

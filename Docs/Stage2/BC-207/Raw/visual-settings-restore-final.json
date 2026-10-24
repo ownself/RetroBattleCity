@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var a = typeof(UnityEditor.Editor).Assembly; var t = a.GetType(\"UnityEditor.GameViewSizes\"); var sizes = typeof(UnityEditor.ScriptableSingleton<>).MakeGenericType(t).GetProperty(\"instance\").GetValue(null); var group = t.GetMethod(\"GetGroup\").Invoke(sizes, new object[] { System.Enum.Parse(a.GetType(\"UnityEditor.GameViewSizeGroupType\"), \"Standalone\") }); var gvType = a.GetType(\"UnityEditor.GameView\"); var gv = UnityEditor.EditorWindow.GetWindow(gvType); gvType.GetProperty(\"selectedSizeIndex\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).SetValue(gv, 0); int first = UnityEditor.SessionState.GetInt(\"BC207.FirstTemporarySize\", -1); if (first >= 0) { group.GetType().GetMethod(\"RemoveCustomSize\").Invoke(group, new object[] { first + 1 }); group.GetType().GetMethod(\"RemoveCustomSize\").Invoke(group, new object[] { first }); UnityEditor.SessionState.EraseInt(\"BC207.FirstTemporarySize\"); } return new { restored = 0, removed = 2 };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "restored": 0,
+        "removed": 2
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

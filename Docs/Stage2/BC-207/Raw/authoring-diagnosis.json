@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c = UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); return new { wave = c.enemyWaveDefinition == null, wavePath = UnityEditor.AssetDatabase.LoadAssetAtPath<BattleCity.EnemyWaveDefinition>(BattleCity.Editor.Stage01Authoring.WavePath) == null, hud = c.hud != null, dirty = c.gameObject.scene.isDirty, play = UnityEditor.EditorApplication.isPlaying };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "wave": true,
+        "wavePath": false,
+        "hud": true,
+        "dirty": false,
+        "play": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

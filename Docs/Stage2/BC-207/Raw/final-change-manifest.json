@@ -1,0 +1,70 @@
+[
+  {
+    "path": "Assets/BattleCity/Editor/BattleCity.Editor.asmdef",
+    "sha256": "9cd0bd9d6072eb499d1f72a4902f841a439833263772a7504fc097e52ae0a7f3"
+  },
+  {
+    "path": "Assets/BattleCity/Editor/Stage01Authoring.cs",
+    "sha256": "bc07e32bae46764ff7d38377f754f262d883229281f80234ca88504eda597f23"
+  },
+  {
+    "path": "Assets/BattleCity/Editor/Stage01HudAuthoring.cs",
+    "sha256": "0e2df14f84f36aded3ced4c234b368fc21234de7c14966c3e1bd70b150a890cf"
+  },
+  {
+    "path": "Assets/BattleCity/Editor/Stage01HudAuthoring.cs.meta",
+    "sha256": "c7a2e81f2f9ff813696eba5bb8170792ff9e0524e19ae00f2a2d963af9dfb90c"
+  },
+  {
+    "path": "Assets/BattleCity/Scenes/Stage01.unity",
+    "sha256": "09907c747ca0440e8ea14075bec00dd8b9399bbb443e7042a6c10e469dfa05e6"
+  },
+  {
+    "path": "Assets/BattleCity/Scripts/BattleCity.Runtime.asmdef",
+    "sha256": "ed553b4070ce44c76c2ebdd2226c7aad2f4121a46f4c378ee6408d43d07b5eec"
+  },
+  {
+    "path": "Assets/BattleCity/Scripts/Core/ArenaController.cs",
+    "sha256": "235b2d1884addf7da0e4b1b685dc9a7bfca6f38c4d071fcab7683bf227ccb288"
+  },
+  {
+    "path": "Assets/BattleCity/Scripts/UI/ArenaHud.cs",
+    "sha256": "97f94a8ed515cfe91e2bee4a94a9ab28bc2f50f307e433f111a3361358b76368"
+  },
+  {
+    "path": "Assets/BattleCity/Scripts/UI/ArenaHud.cs.meta",
+    "sha256": "f4bb9414b43e459892ab4f146b0db0eb4fbfe94079fc5dd18d53c77f588b70e0"
+  },
+  {
+    "path": "Assets/BattleCity/Scripts/UI/PixelHudText.cs",
+    "sha256": "3804d3423dde4f59f9dc0027ffd73ea00b9c2f307ce376ebb2721529be3184a6"
+  },
+  {
+    "path": "Assets/BattleCity/Scripts/UI/PixelHudText.cs.meta",
+    "sha256": "f368913dafed585de056545d767552cafcac47f2ddf0defa9520238d0a524430"
+  },
+  {
+    "path": "Assets/BattleCity/Tests/EditMode/ArenaHudTests.cs",
+    "sha256": "93ca70f6ad55cc97f2d436a494c6348e6544038a76e4d7736346eee1297b2dad"
+  },
+  {
+    "path": "Assets/BattleCity/Tests/EditMode/ArenaHudTests.cs.meta",
+    "sha256": "b4e4565c0b3fa1f6c08519060b926d53e77147c91e6fab13ee1634dc8d0bb79a"
+  },
+  {
+    "path": "Assets/BattleCity/Tests/EditMode/BattleCity.EditModeTests.asmdef",
+    "sha256": "7b2840411bb8ebe73852107f89034c2343ddafb5078e6130f045d3f4d6184608"
+  },
+  {
+    "path": "Assets/BattleCity/Tests/PlayMode/ArenaHudPlayModeTests.cs",
+    "sha256": "1fa4ec05b9d4fdc549fd02641fd793b2a724d79fa7a2d4426288191e717ff6e2"
+  },
+  {
+    "path": "Assets/BattleCity/Tests/PlayMode/ArenaHudPlayModeTests.cs.meta",
+    "sha256": "36ef0213d47106d396256008127c661fdab76ef05e5feadca8e6ae6802d8a299"
+  },
+  {
+    "path": "Assets/BattleCity/Tests/PlayMode/BattleCity.PlayModeTests.asmdef",
+    "sha256": "2e219dc5821d5fae56164d198936bfc1c565412e8b76d0fd976d1b90a7c27444"
+  }
+]

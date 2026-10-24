@@ -1,0 +1,57 @@
+warning: in the working copy of 'Assets/BattleCity/Data/EnemyBasicPrototype.asset', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Data/Stage01.asset', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Data/Stage01EnemyWave.asset', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Scenes/Stage01.unity', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'UserSettings/EditorUserSettings.asset', LF will be replaced by CRLF the next time Git touches it
+Assets/BattleCity/Scenes/Stage01.unity:169: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:270: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:437: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:512: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:587: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:723: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:770: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:998: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:1064: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:1158: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:1233: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:1308: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:1383: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:1439: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:1533: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:1589: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:1683: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:1758: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:1805: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:1880: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:1955: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:2030: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:4785: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:4832: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:4926: trailing whitespace.
++  m_Name: 
+Assets/BattleCity/Scenes/Stage01.unity:5051: trailing whitespace.
++  m_Name: 

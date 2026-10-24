@@ -1,0 +1,186 @@
+{
+  "at": "2026-10-24T19:55:43.305940+08:00",
+  "head": "b2b14b9da04ed483c5265986b221172b6207a96d",
+  "manifest": [
+    {
+      "path": "Assets/BattleCity/Editor/BattleCity.Editor.asmdef",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Stage01Authoring.cs",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Stage01HudAuthoring.cs",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Stage01HudAuthoring.cs.meta",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Scenes/Stage01.unity",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/BattleCity.Runtime.asmdef",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/ArenaController.cs",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/UI/ArenaHud.cs",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/UI/ArenaHud.cs.meta",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/UI/PixelHudText.cs",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/UI/PixelHudText.cs.meta",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/ArenaHudTests.cs",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/ArenaHudTests.cs.meta",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/BattleCity.EditModeTests.asmdef",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/ArenaHudPlayModeTests.cs",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/ArenaHudPlayModeTests.cs.meta",
+      "matches": true
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/BattleCity.PlayModeTests.asmdef",
+      "matches": true
+    }
+  ],
+  "tests": [
+    {
+      "file": "hud-edit-final-result.json",
+      "summary": {
+        "total": 10,
+        "passed": 10,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "duration": 0.14
+    },
+    {
+      "file": "hud-play-final-result.json",
+      "summary": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "duration": 0.24
+    },
+    {
+      "file": "stage-edit-result.json",
+      "summary": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "duration": 0.15
+    },
+    {
+      "file": "lifecycle-edit-result.json",
+      "summary": {
+        "total": 10,
+        "passed": 10,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "duration": 0.05
+    },
+    {
+      "file": "lifecycle-play-result.json",
+      "summary": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "duration": 0.73
+    },
+    {
+      "file": "stage-play-result.json",
+      "summary": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "duration": 0.66
+    },
+    {
+      "file": "arena-play-result.json",
+      "summary": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "duration": 0.5
+    }
+  ],
+  "uniquePassed": 40,
+  "sumIndividualRunnerSeconds": 2.2803295,
+  "protected": [
+    {
+      "path": "Assets/BattleCity/Data/Stage01.asset",
+      "exactBytesMatchHEAD": true,
+      "normalizedMatchHEAD": true
+    },
+    {
+      "path": "Assets/BattleCity/Data/Stage01EnemyWave.asset",
+      "exactBytesMatchHEAD": true,
+      "normalizedMatchHEAD": true
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBasicPrototype.asset",
+      "exactBytesMatchHEAD": true,
+      "normalizedMatchHEAD": true
+    },
+    {
+      "path": "Assets/BattleCity/Scenes/CombatArena.unity",
+      "exactBytesMatchHEAD": true,
+      "normalizedMatchHEAD": true
+    },
+    {
+      "path": "Assets/BattleCity/Scenes/PixelBaseline.unity",
+      "exactBytesMatchHEAD": true,
+      "normalizedMatchHEAD": true
+    }
+  ],
+  "pixels": {
+    "independentlyRecomputed": false,
+    "reason": "PIL unavailable; raw script/result and visual inspected"
+  }
+}

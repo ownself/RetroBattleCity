@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var t = System.AppDomain.CurrentDomain.GetAssemblies().Select(a => a.GetType(\"Unity.Pipeline.Editor.Commands.AutoTickCommand\")).FirstOrDefault(t => t != null); return new { autoEnabled = t?.GetProperty(\"IsEnabled\", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)?.GetValue(null), autoInterval = t?.GetProperty(\"CurrentIntervalMs\", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)?.GetValue(null), background = UnityEngine.Application.runInBackground, scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().path, dirty = UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "autoEnabled": true,
+        "autoInterval": 16,
+        "background": false,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

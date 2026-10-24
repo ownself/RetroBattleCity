@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command capture game_view",
+  "data": {
+    "command": "capture game_view",
+    "parameters": {
+      "width": "512",
+      "height": "480",
+      "source": "screen",
+      "save_path": "BC207-Evidence/Ready-512x480.png"
+    },
+    "result": {
+      "width": 512,
+      "height": 480,
+      "encoding": "png",
+      "bytes": 11287,
+      "source": "screen",
+      "savedPath": "Assets/BC207-Evidence/Ready-512x480.png"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

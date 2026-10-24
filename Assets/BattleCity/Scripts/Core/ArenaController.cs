@@ -35,6 +35,7 @@ namespace BattleCity
         public ArenaSession Session { get; private set; }
         public BulletView BulletView { get; private set; }
         public CombatEffectView EffectView { get; private set; }
+        public ArenaHud hud;
 
         private void Awake()
         {
@@ -69,6 +70,7 @@ namespace BattleCity
             RenderBase();
             RenderPlayer();
             RenderEnemies();
+            RenderHud();
         }
 
         private T Snapshot<T>(T source) where T : UnityEngine.Object
@@ -159,6 +161,12 @@ namespace BattleCity
             RenderEnemies();
             BulletView.Render();
             EffectView.Render();
+            RenderHud();
+        }
+
+        private void RenderHud()
+        {
+            if (hud != null) hud.Render(Session, initialLevel.stageNumber);
         }
 
         private void OnApplicationFocus(bool hasFocus)
@@ -169,6 +177,7 @@ namespace BattleCity
 
         private void OnDisable()
         {
+            if (hud != null) hud.Clear();
             if (Session != null)
             {
                 Session.SetPaused(true);
@@ -182,6 +191,7 @@ namespace BattleCity
 
         private void OnDestroy()
         {
+            if (hud != null) hud.Clear();
             ClearEnemyDisplays();
             ClearEffects();
             // Destroying just the host component must not strand children referencing its old session.
@@ -308,6 +318,7 @@ namespace BattleCity
             if (level == null || playerDefinition == null || sprites == null || mapView == null || playerRenderer == null)
                 throw new InvalidOperationException("Missing arena reference.");
             level.Validate(); playerDefinition.Validate(); sprites.Validate(); mapView.ValidateBindings();
+            if (hud != null) hud.ValidateBindings();
             if (enableSessionLifecycle && enemyWaveDefinition == null)
                 throw new InvalidOperationException("Session lifecycle requires an enemy wave definition.");
             if (baseRenderer != null)

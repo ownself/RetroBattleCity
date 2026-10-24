@@ -50,6 +50,8 @@ namespace BattleCity.Editor
             var source = EditorSceneManager.OpenScene(Phase1Arena.ScenePath, OpenSceneMode.Single);
             if (!EditorSceneManager.SaveScene(source, ScenePath, true)) throw new InvalidOperationException("Could not copy arena harness.");
             var scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
+            // Opening another scene may unload the wave asset held only by the previous scene.
+            wave = AssetDatabase.LoadAssetAtPath<EnemyWaveDefinition>(WavePath);
             var controller = scene.GetRootGameObjects().SelectMany(r => r.GetComponentsInChildren<ArenaController>()).Single();
             controller.name = "Stage 01 - Enter starts; R restarts; WASD or arrows; Space fires; Esc pauses";
             controller.level = AssetDatabase.LoadAssetAtPath<LevelDefinition>(LevelPath);
@@ -64,9 +66,12 @@ namespace BattleCity.Editor
             baseRenderer.sortingLayerName = "Actors";
             baseRenderer.transform.position = PixelGrid.ToWorld(controller.level.baseCenterPixels);
             controller.baseRenderer = baseRenderer;
+            var hud = Stage01HudAuthoring.Create(controller);
+            hud.Render(new ArenaSession(controller.level, controller.playerDefinition, wave, true,
+                PlayerLifeParameters.Prototype, true), controller.level.stageNumber);
             controller.ValidateBindings();
             if (!EditorSceneManager.SaveScene(scene, ScenePath)) throw new InvalidOperationException("Could not save Stage 01.");
-            return "BC-206 Stage 01 saved Ready with session/player lifecycle, real base and 20 prototype basic enemies: " + ScenePath;
+            return "BC-207 Stage 01 saved Ready with pixel HUD, session/player lifecycle, real base and 20 prototype basic enemies: " + ScenePath;
         }
 
         public static void Populate(LevelDefinition level)

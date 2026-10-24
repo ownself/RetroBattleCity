@@ -1,0 +1,20 @@
+ M Assets/BattleCity/Data/EnemyBasicPrototype.asset
+ M Assets/BattleCity/Data/Stage01.asset
+ M Assets/BattleCity/Data/Stage01EnemyWave.asset
+ M Assets/BattleCity/Editor/BattleCity.Editor.asmdef
+ M Assets/BattleCity/Editor/Stage01Authoring.cs
+ M Assets/BattleCity/Scenes/Stage01.unity
+ M Assets/BattleCity/Scripts/BattleCity.Runtime.asmdef
+ M Assets/BattleCity/Scripts/Core/ArenaController.cs
+ M Assets/BattleCity/Tests/EditMode/BattleCity.EditModeTests.asmdef
+ M Assets/BattleCity/Tests/PlayMode/BattleCity.PlayModeTests.asmdef
+ M Docs/Stage2/Execution-Board.md
+?? .vsconfig
+?? Assets/BattleCity/Editor/Stage01HudAuthoring.cs
+?? Assets/BattleCity/Editor/Stage01HudAuthoring.cs.meta
+?? Assets/BattleCity/Scripts/UI/
+?? Assets/BattleCity/Tests/EditMode/ArenaHudTests.cs
+?? Assets/BattleCity/Tests/EditMode/ArenaHudTests.cs.meta
+?? Assets/BattleCity/Tests/PlayMode/ArenaHudPlayModeTests.cs
+?? Assets/BattleCity/Tests/PlayMode/ArenaHudPlayModeTests.cs.meta
+?? Docs/Stage2/BC-207/

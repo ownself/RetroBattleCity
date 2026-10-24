@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var t = typeof(UnityEditor.Editor).Assembly.GetType(\"UnityEditor.GameView\"); var g = UnityEditor.EditorWindow.GetWindow(t); return new { play = UnityEditor.EditorApplication.isPlaying, paused = UnityEditor.EditorApplication.isPaused, scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().path, dirty = UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty, selectedSize = t.GetProperty(\"selectedSizeIndex\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(g), background = UnityEngine.Application.runInBackground, temporarySizeKey = UnityEditor.SessionState.GetInt(\"BC207.FirstTemporarySize\", -1), hudCount = UnityEngine.Object.FindObjectsByType<BattleCity.ArenaHud>(UnityEngine.FindObjectsSortMode.None).Length };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "play": false,
+        "paused": false,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false,
+        "selectedSize": 0,
+        "background": false,
+        "temporarySizeKey": -1,
+        "hudCount": 1
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

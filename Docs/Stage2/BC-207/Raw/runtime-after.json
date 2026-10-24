@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c = UnityEngine.Object.FindAnyObjectByType<BattleCity.ArenaController>(); var s = c.Session; var observed = new { frame = UnityEngine.Time.frameCount, tick = s.Clock.Tick, phase = s.Phase.ToString(), pending = s.EnemyWave.PendingCount, alive = s.AliveEnemyCount, reserved = s.EnemyWave.ReservedCount, hudEnemies = c.hud.DisplayedEnemies, hudLives = c.hud.DisplayedLives }; s.SetPaused(true); return observed;"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "frame": 27271,
+        "tick": 623,
+        "phase": "Playing",
+        "pending": 16,
+        "alive": 4,
+        "reserved": 0,
+        "hudEnemies": 20,
+        "hudLives": 3
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "System.IO.File.Copy(\"Assets/Docs/Stage2/BC-207/Ready-512x480.png\", \"Docs/Stage2/BC-207/Raw/Invalid-default-resized-no-captions.png\", true); UnityEditor.AssetDatabase.DeleteAsset(\"Assets/Docs\"); return BattleCity.Editor.Stage01Authoring.Build();"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "BC-207 Stage 01 saved Ready with pixel HUD, session/player lifecycle, real base and 20 prototype basic enemies: Assets/BattleCity/Scenes/Stage01.unity"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,53 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var a = new UnityEngine.Texture2D(2,2); var b = new UnityEngine.Texture2D(2,2); UnityEngine.ImageConversion.LoadImage(a, System.IO.File.ReadAllBytes(\"Assets/BC207-Evidence/Ready-512x480.png\")); UnityEngine.ImageConversion.LoadImage(b, System.IO.File.ReadAllBytes(\"Assets/BC207-Evidence/Ready-1000x700.png\")); var p = a.GetPixels32(); var q = b.GetPixels32(); int mismatch = 0, blockMismatch = 0, nonBlackBarPixels = 0; for (int y=0;y<700;y++) for(int x=0;x<1000;x++) { var c = q[y*1000+x]; if(x>=244 && x<756 && y>=110 && y<590) { if(!c.Equals(p[(y-110)*512+x-244])) mismatch++; } else if(c.r!=0 || c.g!=0 || c.b!=0) nonBlackBarPixels++; } for(int y=0;y<480;y++) for(int x=0;x<512;x++) if(!p[y*512+x].Equals(p[(y/2*2)*512+x/2*2])) blockMismatch++; UnityEngine.Object.Destroy(a); UnityEngine.Object.Destroy(b); return new { integerSize = new int[] {512,480}, nonIntegerSize = new int[] {1000,700}, contentRect = new int[] {244,110,512,480}, contentMismatchPixels = mismatch, twoByTwoBlockMismatchPixels = blockMismatch, nonBlackBarPixels, mapRect = new int[] {276,142,416,416}, rightHudRect = new int[] {692,110,64,480} };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "integerSize": [
+          512,
+          480
+        ],
+        "nonIntegerSize": [
+          1000,
+          700
+        ],
+        "contentRect": [
+          244,
+          110,
+          512,
+          480
+        ],
+        "contentMismatchPixels": 0,
+        "twoByTwoBlockMismatchPixels": 0,
+        "nonBlackBarPixels": 0,
+        "mapRect": [
+          276,
+          142,
+          416,
+          416
+        ],
+        "rightHudRect": [
+          692,
+          110,
+          64,
+          480
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

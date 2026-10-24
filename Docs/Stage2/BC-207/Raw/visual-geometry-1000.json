@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c = UnityEngine.Object.FindAnyObjectByType<BattleCity.ArenaController>(); var cam = UnityEngine.Camera.main; var pp = cam.GetComponent<UnityEngine.Rendering.Universal.PixelPerfectCamera>(); return new { screen = new int[] {UnityEngine.Screen.width, UnityEngine.Screen.height}, pixelRatio = pp.pixelRatio, crop = pp.cropFrame.ToString(), snapping = pp.gridSnapping.ToString(), frame = UnityEngine.Time.frameCount, tick = c.Session.Clock.Tick, phase = c.Session.Phase.ToString(), vertices = c.hud.phaseCaption.canvasRenderer.GetMesh().vertexCount, hud = new int[] {c.hud.DisplayedStage, c.hud.DisplayedEnemies, c.hud.DisplayedLives} };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "screen": [
+          1000,
+          700
+        ],
+        "pixelRatio": 2,
+        "crop": "Windowbox",
+        "snapping": "UpscaleRenderTexture",
+        "frame": 12404,
+        "tick": 0,
+        "phase": "Ready",
+        "vertices": 568,
+        "hud": [
+          1,
+          20,
+          3
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

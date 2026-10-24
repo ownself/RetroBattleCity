@@ -1,6 +1,6 @@
 {
   "name": "BattleCity.Runtime",
   "rootNamespace": "BattleCity",
-  "references": ["Unity.InputSystem"],
+  "references": ["Unity.InputSystem", "Unity.ugui"],
   "autoReferenced": true
 }

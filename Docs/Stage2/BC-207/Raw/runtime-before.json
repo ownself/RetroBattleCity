@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c = UnityEngine.Object.FindAnyObjectByType<BattleCity.ArenaController>(); c.SendMessage(\"OnApplicationFocus\", true); c.StartBattle(); return new { frame = UnityEngine.Time.frameCount, tick = c.Session.Clock.Tick, phase = c.Session.Phase.ToString() };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "frame": 22590,
+        "tick": 0,
+        "phase": "Playing"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

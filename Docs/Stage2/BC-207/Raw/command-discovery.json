@@ -1,0 +1,415 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    },
+    "server": {
+      "version": "0.0.1",
+      "port": 7800
+    },
+    "commands": [],
+    "count": 0,
+    "total": 0,
+    "offset": 0,
+    "limit": null,
+    "hint": "没有与“eval|run_tests|test|recompile|set_autotick|capture_game_view|console_status|editor_play|editor_stop|wait_for”匹配的 Pipeline 命令。 要搜索 CLI 命令和插件，请运行 unity commands --grep <pattern>。",
+    "search": {
+      "pattern": "eval|run_tests|test|recompile|set_autotick|capture_game_view|console_status|editor_play|editor_stop|wait_for",
+      "count": 35,
+      "matches": [
+        {
+          "kind": "command",
+          "name": "ci init",
+          "path": "ci init",
+          "description": "Write a CI workflow that installs the CLI, restores the caches, installs the editor, activates a license, tests, and builds",
+          "matchedOn": "description",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity ci init"
+        },
+        {
+          "kind": "command",
+          "name": "collaboration annotations list",
+          "path": "collaboration annotations list",
+          "description": "List annotations in a project, filtered by query clauses",
+          "matchedOn": "option",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity collaboration annotations list"
+        },
+        {
+          "kind": "command",
+          "name": "collaboration jira server test",
+          "path": "collaboration jira server test",
+          "description": "Test connection to a Jira server",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity collaboration jira server test"
+        },
+        {
+          "kind": "command",
+          "name": "config resolve",
+          "path": "config resolve",
+          "description": "Show a build/test default's resolved value and which layer supplied it",
+          "matchedOn": "description",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity config resolve"
+        },
+        {
+          "kind": "command",
+          "name": "doctor",
+          "path": "doctor",
+          "description": "Print diagnostic info about your Unity CLI environment",
+          "matchedOn": "option",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity doctor"
+        },
+        {
+          "kind": "command",
+          "name": "editors path",
+          "path": "editors path",
+          "description": "Print the install directory of an installed Unity editor version",
+          "matchedOn": "option",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity editors path"
+        },
+        {
+          "kind": "command",
+          "name": "editors upgrade",
+          "path": "editors upgrade",
+          "description": "Upgrade an installed editor to the newest patch in its release line",
+          "matchedOn": "option",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity editors upgrade"
+        },
+        {
+          "kind": "command",
+          "name": "hub install",
+          "path": "hub install",
+          "description": "Install the Unity Hub",
+          "matchedOn": "option",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity hub install"
+        },
+        {
+          "kind": "command",
+          "name": "pipeline install",
+          "path": "pipeline install",
+          "description": "Install the Unity Pipeline package to a Unity project",
+          "matchedOn": "option",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity pipeline install"
+        },
+        {
+          "kind": "command",
+          "name": "pipeline upgrade",
+          "path": "pipeline upgrade",
+          "description": "Upgrade the Unity Pipeline package to the latest version if a newer one is available",
+          "matchedOn": "description",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity pipeline upgrade"
+        },
+        {
+          "kind": "command",
+          "name": "projects create",
+          "path": "projects create",
+          "description": "Create a new Unity project and register it in the Hub",
+          "matchedOn": "option",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity projects create"
+        },
+        {
+          "kind": "command",
+          "name": "projects new",
+          "path": "projects new",
+          "description": "Create a new Unity project (non-interactive, CI-friendly, never links to Unity Cloud)",
+          "matchedOn": "option",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity projects new"
+        },
+        {
+          "kind": "command",
+          "name": "terms accept",
+          "path": "terms accept",
+          "description": "Accept the Unity Editor Software Terms for an installed Editor, so it opens without the terms dialog",
+          "matchedOn": "option",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity terms accept"
+        },
+        {
+          "kind": "command",
+          "name": "test",
+          "path": "test",
+          "description": "Run a project's EditMode/PlayMode tests in the editor and write a results report",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity test"
+        },
+        {
+          "kind": "command",
+          "name": "recompile",
+          "path": "recompile",
+          "description": "Recompile a running Editor's scripts and report compile errors",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity recompile"
+        },
+        {
+          "kind": "command",
+          "name": "self-update",
+          "path": "self-update",
+          "description": "Update the unity CLI to the latest version",
+          "matchedOn": "description",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity self-update"
+        },
+        {
+          "kind": "command",
+          "name": "vcs merge-setup",
+          "path": "vcs merge-setup",
+          "description": "Make Unity scene and prefab merges work in this repository, using the editor's UnityYAMLMerge tool",
+          "matchedOn": "option",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity vcs merge-setup"
+        },
+        {
+          "kind": "command",
+          "name": "vcs affected",
+          "path": "vcs affected",
+          "description": "Report which assets, assemblies, and tests a change affects",
+          "matchedOn": "description",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity vcs affected"
+        },
+        {
+          "kind": "command",
+          "name": "watch test",
+          "path": "watch test",
+          "description": "Re-run unity test --affected each time a project file changes",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity watch test"
+        },
+        {
+          "kind": "pipeline",
+          "name": "diagnostics report_evals",
+          "path": "diagnostics report_evals",
+          "description": "Aggregate local eval-usage telemetry into a ranked report: API fingerprint frequency, one-liner percentage, error rate, and command-coverage suggestions.",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command diagnostics report_evals"
+        },
+        {
+          "kind": "pipeline",
+          "name": "job batch",
+          "path": "job batch",
+          "description": "Run multiple registered commands in one transactional request. Later ops can reference earlier results with \"$<id-or-index>.<jsonPath>\" (e.g. \"$0.instanceId\"; \"$$\" escapes a literal '$'). transactional=true (default) groups every op into one Undo step and reverts all applied ops if any op fails; commands that mutate outside the Undo system (asset/file/settings writes) are rejected unless transactional=false. on_error=abort|continue (continue forces transactional=false); dry_run validates without mutating; timeout (seconds, default 60) bounds execution — when it is about to run out the remaining ops are skipped and a transactional batch rolls back (submit long batches with \"job\": true). Excludes build run, build.target switch, the package commands, editor.playmode start/stop/pause, script recompile, script eval, script eval_file, script run, editor invoke_menu, scene open/scene create, async commands (test run/test list), runtime-only commands, and nested job batch.",
+          "matchedOn": "description",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command job batch"
+        },
+        {
+          "kind": "pipeline",
+          "name": "package add",
+          "path": "package add",
+          "description": "Add a UPM package by name@version, git URL, or 'file:' local path. Async by default (returns in_progress; poll package status); pass wait=true to block until added. A recompile/domain reload follows — poll script recompile_status. Requires confirm=true; use dry_run to preview.",
+          "matchedOn": "description",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command package add"
+        },
+        {
+          "kind": "pipeline",
+          "name": "package remove",
+          "path": "package remove",
+          "description": "Remove a UPM package by name. Async by default (returns in_progress; poll package status); pass wait=true to block until removed. A recompile/domain reload follows — poll script recompile_status. Requires confirm=true; use dry_run to preview.",
+          "matchedOn": "description",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command package remove"
+        },
+        {
+          "kind": "pipeline",
+          "name": "package resolve",
+          "path": "package resolve",
+          "description": "Resolve/refresh packages from the manifest (re-fetch and re-link). May trigger a recompile/domain reload — poll script recompile_status. Its outcome is recorded for package status.",
+          "matchedOn": "description",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command package resolve"
+        },
+        {
+          "kind": "pipeline",
+          "name": "script attach",
+          "path": "script attach",
+          "description": "Add a MonoBehaviour to a GameObject by its (compiled) type name OR by its script asset path. Provide exactly one of 'type' or 'script'. If the type isn't compiled yet, returns a recoverable error: script recompile, poll script recompile_status, then retry.",
+          "matchedOn": "description",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command script attach"
+        },
+        {
+          "kind": "pipeline",
+          "name": "script create",
+          "path": "script create",
+          "description": "Create a new C# script (default base class MonoBehaviour) from a template under the authoring root. NOTE: the type does not exist until a recompile completes — to attach it, call script recompile, poll script recompile_status, then script attach.",
+          "matchedOn": "description",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command script create"
+        },
+        {
+          "kind": "pipeline",
+          "name": "script eval",
+          "path": "script eval",
+          "description": "Evaluate C# code dynamically using Roslyn compiler",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command script eval"
+        },
+        {
+          "kind": "pipeline",
+          "name": "script eval_file",
+          "path": "script eval_file",
+          "description": "Evaluate C# code read from a .cs file on disk",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command script eval_file"
+        },
+        {
+          "kind": "pipeline",
+          "name": "script recompile",
+          "path": "script recompile",
+          "description": "Force a script recompile (works while unfocused/minimized). Poll script recompile_status for completion.",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command script recompile"
+        },
+        {
+          "kind": "pipeline",
+          "name": "script recompile_status",
+          "path": "script recompile_status",
+          "description": "Get the status of the last recompile: idle | triggered | compiling | completed | up_to_date.",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command script recompile_status"
+        },
+        {
+          "kind": "pipeline",
+          "name": "script run",
+          "path": "script run",
+          "description": "Compile a project C# file in memory (no domain reload) and execute a named static entry point. The builder-pattern path for bulk construction. Still arbitrary code execution — shares script eval's capability gate.",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command script run"
+        },
+        {
+          "kind": "pipeline",
+          "name": "test cancel",
+          "path": "test cancel",
+          "description": "Cancel running test execution",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command test cancel"
+        },
+        {
+          "kind": "pipeline",
+          "name": "test list",
+          "path": "test list",
+          "description": "List all available tests (EditMode and/or PlayMode) without running them",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command test list"
+        },
+        {
+          "kind": "pipeline",
+          "name": "test run",
+          "path": "test run",
+          "description": "Execute Unity tests with filtering options",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command test run"
+        },
+        {
+          "kind": "pipeline",
+          "name": "test status",
+          "path": "test status",
+          "description": "Get status of running async test execution",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command test status"
+        }
+      ],
+      "hint": ""
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

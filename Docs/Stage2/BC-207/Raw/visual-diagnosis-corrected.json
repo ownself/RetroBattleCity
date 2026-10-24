@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command script",
+  "data": null,
+  "errors": [
+    {
+      "code": "COMMAND_FAILED",
+      "message": "Runtime Error\n  There is no 'CanvasRenderer' attached to the \"Phase and start or resume prompt\" game object, but a script is trying to access it.\nYou probably need to add a CanvasRenderer to the game object \"Phase and start or resume prompt\". Or your script needs to check if the component is attached before using it."
+    }
+  ],
+  "warnings": []
+}

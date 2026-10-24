@@ -1,0 +1,21 @@
+{
+  "start": "2026-10-24T19:34:04+08:00",
+  "acceptanceRecordedAt": "2026-10-24T19:58:32.537153+08:00",
+  "elapsedSeconds": 1468.537153,
+  "worker": {
+    "runId": "08e53265-c4bd-4b5f-9974-ea524527b65c",
+    "startedAt": 1792841727602,
+    "durationMs": 1119681,
+    "turnCount": 94
+  },
+  "review": {
+    "runId": "721bb141-3b89-4304-8f90-98bb59cf1fef",
+    "startedAt": 1792842847303,
+    "durationMs": 179342,
+    "turnCount": 12
+  },
+  "reviewEnd": "2026-10-24T19:57:06.645000+08:00",
+  "postReviewCloseoutSeconds": 85.892153,
+  "parentAudit": "19:55:00–19:55:51+08:00 within Review; not added twice",
+  "measurement": "wall-clock windows, not pure coding or CPU duration"
+}

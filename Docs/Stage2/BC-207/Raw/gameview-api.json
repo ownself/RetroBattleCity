@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var a = typeof(UnityEditor.Editor).Assembly; var t = a.GetType(\"UnityEditor.GameViewSizes\"); var st = typeof(UnityEditor.ScriptableSingleton<>).MakeGenericType(t); var sizes = st.GetProperty(\"instance\").GetValue(null); var gt = a.GetType(\"UnityEditor.GameViewSizeGroupType\"); var group = t.GetMethod(\"GetGroup\").Invoke(sizes, new object[] { System.Enum.Parse(gt, \"Standalone\") }); var flags = System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance; return new { groupMethods = group.GetType().GetMethods(flags).Where(m => m.Name.Contains(\"Size\") || m.Name.Contains(\"Count\")).Select(m => m.ToString()).ToArray(), constructors = a.GetType(\"UnityEditor.GameViewSize\").GetConstructors(flags).Select(m => m.ToString()).ToArray(), autoEnabled = UnityEditor.SessionState.GetBool(\"Unity.Pipeline.AutoTick.Enabled\", false), autoInterval = UnityEditor.SessionState.GetInt(\"Unity.Pipeline.AutoTick.IntervalMs\", -1) };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "groupMethods": [
+          "UnityEditor.GameViewSize GetGameViewSize(Int32)",
+          "Int32 GetTotalCount()",
+          "Int32 GetBuiltinCount()",
+          "Int32 GetCustomCount()",
+          "Void AddBuiltinSizes(UnityEditor.GameViewSize[])",
+          "Void AddBuiltinSize(UnityEditor.GameViewSize)",
+          "Void AddCustomSizes(UnityEditor.GameViewSize[])",
+          "Void AddCustomSize(UnityEditor.GameViewSize)",
+          "Void RemoveCustomSize(Int32)",
+          "Boolean IsCustomSize(Int32)"
+        ],
+        "constructors": [
+          "Void .ctor(UnityEditor.GameViewSizeType, Int32, Int32, System.String)",
+          "Void .ctor(UnityEditor.GameViewSize)"
+        ],
+        "autoEnabled": false,
+        "autoInterval": -1
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

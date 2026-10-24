@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var a = typeof(UnityEditor.Editor).Assembly; var t = a.GetType(\"UnityEditor.GameViewSizes\"); var sizes = typeof(UnityEditor.ScriptableSingleton<>).MakeGenericType(t).GetProperty(\"instance\").GetValue(null); var group = t.GetMethod(\"GetGroup\").Invoke(sizes, new object[] { System.Enum.Parse(a.GetType(\"UnityEditor.GameViewSizeGroupType\"), \"Standalone\") }); var gt = group.GetType(); int first = (int)gt.GetMethod(\"GetTotalCount\").Invoke(group, null); var type = System.Enum.Parse(a.GetType(\"UnityEditor.GameViewSizeType\"), \"FixedResolution\"); foreach (var d in new[] { new int[] {512,480}, new int[] {1000,700} }) { var size = System.Activator.CreateInstance(a.GetType(\"UnityEditor.GameViewSize\"), new object[] { type, d[0], d[1], \"BC207 temporary \" + d[0] }); gt.GetMethod(\"AddCustomSize\").Invoke(group, new object[] { size }); } UnityEditor.SessionState.SetInt(\"BC207.FirstTemporarySize\", first); var gvType = a.GetType(\"UnityEditor.GameView\"); var gv = UnityEditor.EditorWindow.GetWindow(gvType); gvType.GetProperty(\"selectedSizeIndex\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).SetValue(gv, first); gv.Repaint(); return new { first, selected = first, sizesAdded = 2 };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "first": 7,
+        "selected": 7,
+        "sizesAdded": 2
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

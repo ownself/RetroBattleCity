@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "foreach(var name in new[] {\"Ready-512x480.png\", \"Ready-1000x700.png\", \"Paused-1000x700.png\"}) System.IO.File.Copy(\"Assets/BC207-Evidence/\" + name, \"Docs/Stage2/BC-207/\" + name, true); return UnityEditor.AssetDatabase.DeleteAsset(\"Assets/BC207-Evidence\");"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": true
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

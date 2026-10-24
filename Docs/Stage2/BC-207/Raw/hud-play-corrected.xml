@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-24 11:43:00Z" end-time="2026-10-24 11:43:00Z" duration="0.2336703">
+  <test-suite type="TestSuite" id="1090" name="BattleCity" fullname="BattleCity" runstate="Runnable" testcasecount="66" result="Passed" start-time="2026-10-24 11:43:00Z" end-time="2026-10-24 11:43:00Z" duration="0.233670" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1173" name="BattleCity.PlayModeTests.dll" fullname="H:/Projects/Unities/BattleCity/Library/ScriptAssemblies/BattleCity.PlayModeTests.dll" runstate="Runnable" testcasecount="66" result="Passed" start-time="2026-10-24 11:43:00Z" end-time="2026-10-24 11:43:00Z" duration="0.220636" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="26924" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1174" name="BattleCity" fullname="BattleCity" runstate="Runnable" testcasecount="66" result="Passed" start-time="2026-10-24 11:43:00Z" end-time="2026-10-24 11:43:00Z" duration="0.216987" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1175" name="Tests" fullname="BattleCity.Tests" runstate="Runnable" testcasecount="66" result="Passed" start-time="2026-10-24 11:43:00Z" end-time="2026-10-24 11:43:00Z" duration="0.214509" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1091" name="ArenaHudPlayModeTests" fullname="BattleCity.Tests.ArenaHudPlayModeTests" classname="BattleCity.Tests.ArenaHudPlayModeTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-24 11:43:00Z" end-time="2026-10-24 11:43:00Z" duration="0.211466" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1092" name="RealUpdate_PhasesCountsTerminalAndPhysicalRestartRebindImmediately" fullname="BattleCity.Tests.ArenaHudPlayModeTests.RealUpdate_PhasesCountsTerminalAndPhysicalRestartRebindImmediately" methodname="RealUpdate_PhasesCountsTerminalAndPhysicalRestartRebindImmediately" classname="BattleCity.Tests.ArenaHudPlayModeTests" runstate="Runnable" seed="1032815185" result="Passed" start-time="2026-10-24 11:43:00Z" end-time="2026-10-24 11:43:00Z" duration="0.191858" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[BC207 realUpdate frame=31 oldTick=2 newTick=0 HUD=1/20/3
+Saving results to: C:/Users/Jimmy/AppData/LocalLow/DefaultCompany/BattleCity\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

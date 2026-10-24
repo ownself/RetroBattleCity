@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var t = typeof(UnityEditor.Editor).Assembly.GetType(\"UnityEditor.GameView\"); var g = UnityEditor.EditorWindow.GetWindow(t); return new { pipeline = UnityEngine.Rendering.GraphicsSettings.currentRenderPipeline.GetType().FullName, selectedSize = t.GetProperty(\"selectedSizeIndex\", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic).GetValue(g), window = g.position, targetSize = t.GetProperty(\"targetSize\", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic)?.GetValue(g), background = UnityEngine.Application.runInBackground };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "{ pipeline = UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset, selectedSize = 0, window = (x:3072.00, y:98.00, width:1523.00, height:773.00), targetSize = (1523.00, 752.00), background = False }"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

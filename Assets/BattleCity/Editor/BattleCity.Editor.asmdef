@@ -1,7 +1,7 @@
 {
   "name": "BattleCity.Editor",
   "rootNamespace": "BattleCity.Editor",
-  "references": ["BattleCity.Runtime", "Unity.2D.Sprite.Editor", "Unity.RenderPipelines.Universal.Runtime", "Unity.RenderPipelines.Universal.2D.Runtime"],
+  "references": ["BattleCity.Runtime", "Unity.2D.Sprite.Editor", "Unity.RenderPipelines.Universal.Runtime", "Unity.RenderPipelines.Universal.2D.Runtime", "Unity.ugui"],
   "includePlatforms": ["Editor"],
   "autoReferenced": true
 }

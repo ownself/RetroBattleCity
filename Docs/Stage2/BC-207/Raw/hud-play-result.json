@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 3.72,
+      "summary": {
+        "total": 3,
+        "passed": 2,
+        "failed": 1,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.ArenaHudPlayModeTests.DisableDestroy_ClearsSessionReferenceAndCanvasWithoutSubscriptions",
+          "Status": "Passed",
+          "Duration": 0.1652406,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaHudPlayModeTests.Projection_DeathWaitRespawnAndWonShowSettledNumbersWithoutAdvancingClock",
+          "Status": "Passed",
+          "Duration": 0.4708885,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaHudPlayModeTests.RealUpdate_PhasesCountsTerminalAndPhysicalRestartRebindImmediately",
+          "Status": "Failed",
+          "Duration": 3.0667904,
+          "Message": "  bounded production Update observation\r\n  Expected: True\r\n  But was:  False\r\n",
+          "StackTrace": "at BattleCity.Tests.ArenaHudPlayModeTests+<Until>d__7.MoveNext () [0x0005b] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\ArenaHudPlayModeTests.cs:35\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@ee3fe9477490\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

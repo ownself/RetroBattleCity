@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var a = typeof(UnityEditor.Editor).Assembly; var t = a.GetType(\"UnityEditor.GameView\"); var g = UnityEditor.EditorWindow.GetWindow(t); int first = UnityEditor.SessionState.GetInt(\"BC207.FirstTemporarySize\", -1); t.GetProperty(\"selectedSizeIndex\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).SetValue(g, first + 1); g.Repaint(); return new { selected = first + 1 };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "selected": 8
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}
