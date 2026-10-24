@@ -59,6 +59,66 @@ namespace BattleCity.Tests
             Assert.That(map.Revision, Is.EqualTo(4));
         }
 
+        [TestCase(CardinalDirection.Up, 0)]
+        [TestCase(CardinalDirection.Down, 0)]
+        [TestCase(CardinalDirection.Right, 0)]
+        [TestCase(CardinalDirection.Left, 0)]
+        [TestCase(CardinalDirection.Up, 8)]
+        [TestCase(CardinalDirection.Down, 8)]
+        [TestCase(CardinalDirection.Right, 8)]
+        [TestCase(CardinalDirection.Left, 8)]
+        public void WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(CardinalDirection direction, int gap)
+        {
+            Fill(96, 96, 16, 16);
+            tank.fireCooldownTicks = 1;
+            var map = new MapState(level);
+            var axis = direction.Vector();
+            var center = new Vector2(104, 104) - axis * (16 + gap);
+            Assert.That(map.CanOccupy(center), Is.True);
+            var weapon = new WeaponState(tank, bullets);
+            bool horizontal = axis.x != 0;
+            int outer = axis.x + axis.y > 0 ? 24 : 27;
+            int inner = axis.x + axis.y > 0 ? 25 : 26;
+            for (int shot = 0; shot < 2; shot++)
+            {
+                Assert.That(weapon.Step(new TankCommand(CardinalDirection.None, true), center, direction), Is.True);
+                Assert.That(bullets.Active[0].Position, Is.EqualTo(center + axis * WeaponState.MuzzleOffsetPixels));
+                bullets.Step(map);
+                Assert.That(bullets.Hits.Count, Is.EqualTo(1));
+                var hit = bullets.Hits[0];
+                Assert.That(horizontal ? hit.DamageCell.x : hit.DamageCell.y, Is.EqualTo(shot == 0 ? outer : inner));
+                Assert.That(map.ApplyBulletHits(bullets.Hits), Is.EqualTo(4));
+                for (int cross = 24; cross < 28; cross++)
+                {
+                    Assert.That(horizontal ? map.IsSolid(outer, cross) : map.IsSolid(cross, outer), Is.False);
+                    Assert.That(horizontal ? map.IsSolid(inner, cross) : map.IsSolid(cross, inner), Is.EqualTo(shot == 0));
+                }
+            }
+        }
+
+        [TestCase(CardinalDirection.Up)]
+        [TestCase(CardinalDirection.Down)]
+        [TestCase(CardinalDirection.Right)]
+        [TestCase(CardinalDirection.Left)]
+        public void TouchingWall_SameTimeWeaponsSelectSameOuterLayerInStableOrder(CardinalDirection direction)
+        {
+            Fill(96, 96, 16, 16);
+            var map = new MapState(level);
+            var center = new Vector2(104, 104) - direction.Vector() * 16;
+            for (int i = 0; i < 2; i++)
+                Assert.That(new WeaponState(tank, bullets).Step(new TankCommand(CardinalDirection.None, true), center, direction), Is.True);
+            long firstId = bullets.Active[0].Id, secondId = bullets.Active[1].Id;
+            bullets.Step(map);
+            Assert.That(bullets.Hits.Count, Is.EqualTo(2));
+            Assert.That(bullets.Hits[0].BulletId, Is.EqualTo(firstId));
+            Assert.That(bullets.Hits[1].BulletId, Is.EqualTo(secondId));
+            Assert.That(bullets.Hits[0].TickFraction, Is.Zero);
+            Assert.That(bullets.Hits[1].DamageCell, Is.EqualTo(bullets.Hits[0].DamageCell));
+            int along = direction.Vector().x + direction.Vector().y > 0 ? 24 : 27;
+            Assert.That(direction.Vector().x != 0 ? bullets.Hits[0].DamageCell.x : bullets.Hits[0].DamageCell.y, Is.EqualTo(along));
+            Assert.That(map.ApplyBulletHits(bullets.Hits), Is.EqualTo(4), "Same tick must not drill the next layer");
+        }
+
         [TestCase(104f, 24)] [TestCase(107.5f, 24)] [TestCase(108f, 25)]
         public void AcrossStrip_FloorsLowerEdgeToFourPixelGrid(float cross, int first)
         {

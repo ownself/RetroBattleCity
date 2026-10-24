@@ -157,6 +157,16 @@ namespace BattleCity
         {
             int order = a.Time.CompareTo(b.Time);
             if (order == 0) order = a.Kind.CompareTo(b.Kind);
+            // A muzzle touching a wall can overlap the outer 4px layer and touch the next
+            // at t=0. Prefer the incoming face, not the lowest row-major terrain id.
+            if (order == 0 && a.Kind == BulletHitKind.Terrain)
+            {
+                var directionA = active[a.A].Direction.Vector();
+                var directionB = active[b.A].Direction.Vector();
+                float depthA = a.Cell.x * directionA.x + a.Cell.y * directionA.y;
+                float depthB = b.Cell.x * directionB.x + b.Cell.y * directionB.y;
+                order = depthA.CompareTo(depthB);
+            }
             if (order == 0) order = a.TargetId.CompareTo(b.TargetId);
             if (order == 0) order = active[a.A].Id.CompareTo(active[b.A].Id);
             return order;

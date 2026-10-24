@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var p=\"Assets/BattleCity/Data/Stage01-Probe-\"+System.Guid.NewGuid().ToString(\"N\")+\".asset\"; var o=UnityEngine.ScriptableObject.CreateInstance<BattleCity.LevelDefinition>(); try { BattleCity.Editor.Stage01Authoring.Populate(o); o.name=\"Stage01\"; UnityEditor.AssetDatabase.CreateAsset(o,p); UnityEditor.AssetDatabase.SaveAssetIfDirty(o); var bytes=System.IO.File.ReadAllBytes(p); System.IO.File.WriteAllBytes(\"Docs/Stage2/BC-200/AssetRepair/Final-GeneratedProbe.rawbytes\",bytes); var line=System.IO.File.ReadAllLines(p).Single(l=>l.StartsWith(\"  terrain: \")); return new {length=line.Substring(11).Length,tail=line.Substring(line.Length-30),path=p}; } finally { if(System.IO.File.Exists(p)) UnityEditor.AssetDatabase.DeleteAsset(p); else if(o!=null) UnityEngine.Object.DestroyImmediate(o); }"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "length": 5409,
+        "tail": "00000000000000000000000000000i",
+        "path": "Assets/BattleCity/Data/Stage01-Probe-b2c982414c644bf1a4c4de72fc404eba.asset"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

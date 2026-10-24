@@ -1,0 +1,6 @@
+{
+  "source": "git show HEAD:Assets/BattleCity/Data/CombatArena.asset",
+  "terrainCharacters": 5409,
+  "suffix": "i",
+  "stage01Sha256": "741813b2d9ac38e857d8494c71b4959bf8af9dd1dfe081afdcb167a55f43bbbf"
+}

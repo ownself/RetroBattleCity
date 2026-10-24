@@ -19,12 +19,18 @@ namespace BattleCity.Tests
         [Test]
         public void Stage01_SerializedTerrainOnDiskHasExactly676ValidCellsMatchingLayout()
         {
-            // Unity's enum[] scalar is little-endian 32-bit hex. A cached asset can hide malformed disk bytes.
+            // Unity 6000.6 emits an 'i' suffix for this enum[] scalar, confirmed in both
+            // the committed CombatArena and a fresh CreateAsset. Reject other suffixes.
             var lines = File.ReadAllLines(Stage01Authoring.LevelPath);
             var fields = lines.Where(line => line.StartsWith("  terrain: ", StringComparison.Ordinal)).ToArray();
             Assert.That(fields.Length, Is.EqualTo(1));
-            var hex = fields[0].Substring("  terrain: ".Length);
-            Assert.That(hex, Does.Match(@"\A[0-9a-fA-F]{5408}\z"), "Disk terrain must be exactly 676 complete 32-bit enum values, without an ignored suffix");
+            var scalar = fields[0].Substring("  terrain: ".Length);
+            Assert.That(scalar, Does.Match(@"\A[0-9a-fA-F]{5408}i\z"), "Expected 676 complete 32-bit enum values and Unity's verified integer-array suffix");
+            var hex = scalar.Substring(0, 5408);
+            AssetDatabase.ImportAsset(Stage01Authoring.LevelPath, ImportAssetOptions.ForceUpdate | ImportAssetOptions.ForceSynchronousImport);
+            var imported = AssetDatabase.LoadAssetAtPath<LevelDefinition>(Stage01Authoring.LevelPath);
+            Assert.That(imported, Is.Not.Null);
+            Assert.That(imported.terrain.Length, Is.EqualTo(676));
             var rows = File.ReadAllLines(Stage01Authoring.LayoutPath);
             Assert.That(rows.Length, Is.EqualTo(26));
             Assert.That(rows.All(row => row.Length == 26), Is.True);
@@ -37,7 +43,7 @@ namespace BattleCity.Tests
                 Assert.That(".BSH", Does.Contain(symbol.ToString()), "Unknown layout symbol");
                 var expected = symbol == 'B' ? TerrainKind.Brick : symbol == 'S' ? TerrainKind.Steel : TerrainKind.Empty;
                 Assert.That((TerrainKind)value, Is.EqualTo(expected), "Disk layout cell " + i);
-                Assert.That(Level.terrain[i], Is.EqualTo((TerrainKind)value), "Imported asset must match disk cell " + i);
+                Assert.That(imported.terrain[i], Is.EqualTo((TerrainKind)value), "Imported asset must match disk cell " + i);
             }
         }
 

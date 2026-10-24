@@ -1,14 +1,49 @@
 # BC-200 第一关可交互地图专项验证
 
-## 当前状态：已暂停，未最终验收
+## 当前状态：BC-200已验收，贴墙破砖Bug已修复；按用户要求暂停
 
-用户反馈处理耗时过长后，主代理已中断资产修复子任务，修复工作流随之终止，后续定向审查未启动；不再自动重试，也不开始BC-201。原地图实现、用户PlayMode正面反馈及226/226结果保留，但这些是异常磁盘文件被指出前的验证，不能代表当前落盘修复通过。
+主代理已读取实现交接与最终只读审查，检查BulletWorld最小diff、地图磁盘测试及六组原始结果，接受本轮117/117定向验证。最终审查为**OK with notes，无具体缺陷**，原资产尾i的P1/BLOCK判定撤销。主代理另独立重算当前Stage01.asset的SHA256，确认与记录一致：`741813b2d9ac38e857d8494c71b4959bf8af9dd1dfe081afdcb167a55f43bbbf`，补齐reviewer未独立重算hash的备注。源码/测试定向空白检查通过；无关UserSettings噪声未清理。
 
-最终只读审查发现Stage01.asset地形序列末尾多出i；主代理中断后再核对仍为5409字符（期望5408hex），问题未解决。同值API保存/重序列化没有改写异常字段；最新修复命令报Value cannot be null / definition。修复尝试与异常原始文件备份保留在AssetRepair/，原因未确定，不归责于用户或原实现。BC-200未勾选，等待用户明确指令。下文为原实现阶段记录，以本节当前状态为准。
+结合已核实第一关布局、原全量226/226、用户对Stage01 PlayMode的正面反馈、本轮Bug失败→通过证据与定向审查，**BC-200验收通过，阶段二1/10，M2尚未通过**。贴墙修复版尚未收到新的人工复测反馈，不伪称用户已复测。新入口仍为`Assets/BattleCity/Scenes/Stage01.unity`。
+
+所有子任务已结束，不再自动重试/审查，不启动BC-201；等待用户明确恢复指令。最终审查持久副本见`FinalReview.md`。当前Git HEAD为`b5e2460`（与启动基线不同，用户期间新增的提交不改写）；本轮代理无提交/推送/暂存，所有现有改动保留。下文为各阶段证据与过程记录，其中“待审查/交主代理”等措辞为当时状态，以本节最终裁定为准。
+
+### 资产格式纠正与专项证据
+
+主代理新证据已只读确认：已提交基线`git show HEAD:Assets/BattleCity/Data/CombatArena.asset`的terrain同为5409字符、尾`i`（`ContactFix/Baseline-CombatArena.txt`和`Suffix-Correction.json`）。结合上一阶段全新SO经Unity CreateAsset生成同样尾`i`，此前“5408纯hex才合法”属于错误假设，**撤销据此提出的资产BLOCKED结论**。不得删除Unity自身生成的后缀。旧失败及备份全部保留，格式结论交最终reviewer独立复核。
+
+仅纠正本轮新增Stage01Tests磁盘校验：明确校验5408hex加单个`i`，拒绝其他后缀/长度；仍逐格解码676个合法枚举，与独立26×26矩阵比对，通过Unity API强制同步导入/加载并核对676格。未改asset/meta，未扩大资产调查。
+
+- `ContactFix/StageTest-Results.json`：Stage01Tests **6/6通过**；`StageTest-CompileStatus.json`：completed、failed=false、errors=[]。
+- Stage01.asset SHA256未变：`741813b2d9ac38e857d8494c71b4959bf8af9dd1dfe081afdcb167a55f43bbbf`；GUID仍`f6d6dc8b03b323d4887d49ced670c862`。`Editor-Final-Corrected.json`确认非Play、未编译、Stage01 clean且level绑定有效。
+- `Console-Final-Corrected.json`：本阶段新增72条，error=1（下节已修正CS1061）、warn=0、log=71；最终groundTruth当前consoleErrors/Warnings=0、compilationFailed=false。
+- 下节战斗专项111项加地图6项，共117项定向验证通过，不是新全量226回归。无staged文件，不自行勾选BC-200/M2，停止并等待主代理与定向只读审查，不进入BC-201。
+
+## 贴墙破砖Bug专项：已修复且定向审查通过
+
+症状已用真实WeaponState炮口出生→BulletWorld.Step→MapState.ApplyBulletHits复现：紧贴墙从右向左/从上向下首发误删内层。炮口距中心10px、弹丸半径2px，导致外层重叠与内层接触都返回TOI=0；旧排序按地形row-major TargetId升序，错误优先小坐标内层。仅修改`BulletWorld.CompareCandidates`：同TOI且同为地形时先比较沿各自来弹方向的格深度，优先来弹侧外层，然后保留TargetId/BulletId稳定fallback。跨类型优先级、全局Sweep、炮口、伤害宽度和同tick快照不变。
+
+新增`BrickDestructionTests` 12个参数用例：四方向紧贴/间距8px对照各连续两发（首发外层、次发残墙内层），以及四方向双弹同TOI稳定ID和同tick不钻两层。旧实现33项中29通过/4失败，失败精确为Down/Left贴墙两发用例及双弹用例，期望外层27、实际内层26；修复后33/33通过。未放宽旧断言。
+
+证据目录`ContactFix/`，各过滤均为完整`BattleCity.Tests.<夹具名>`、async_tests=true，test status结果独立保存：
+
+| 模式/过滤 | 修复后通过 | 结果文件 |
+| --- | --- | --- |
+| EditMode / BrickDestructionTests | 33/33（含新增12） | Fix-BrickResults.json |
+| EditMode / BulletCollisionTests（扫掠、类型优先级及稳定平局） | 38/38 | Fix-CollisionResults.json |
+| EditMode / WeaponTests | 15/15 | Fix-WeaponResults.json |
+| PlayMode / Stage01PlayModeTests（实际场景/键盘） | 3/3 | Fix-StagePlayResults.json |
+| PlayMode / BrickMapViewTests | 22/22 | Fix-MapViewResults.json |
+
+本次专项合计111项通过，不是新一轮全量226回归，资产尾i误判及纠正后6项地图验证见上一节。`Old-TestResults.json`保留旧失败，`Fix-CompileStatus.json`确认completed/failed=false/errors=[]。
+
+过程异常未隐藏：新增测试首次将TickFraction误写为Time，产生1条CS1061，已更正且之后编译/测试通过；未清Console。编译中一次`status --until-ready`报STATUS_BLOCKED_BY_DIALOG（Hold on...），随后同串行命令的编译状态completed、测试启动成功；主代理明确批准按已恢复的同协议瞬时状态继续，未重启/点击对话框/切换协议。初次管道符组合过滤匹配0项（Fix-EditResults.json），未计入通过，改用上述单夹具精确过滤。`Console-Since5.json`保存本阶段67条新增记录：error=1（上述已修正编译错误）、warn=0、log=66；最终groundTruth compilationFailed=false、compiling=false、consoleErrors=0、consoleWarnings=0。`Editor-FinalState.json`确认非Play、Stage01 clean。
+
+本阶段未处理资产或UserSettings，无暂存/提交/推送，不勾选BC-200/M2，不进入BC-201；交主代理和一次定向只读审查后暂停。
 
 ## 结论与范围
 
-**实现和本轮自动验证已完成，交主代理/独立 reviewer 最终验收；BC-200、M2均未勾选。** 不开始BC-201及后续任务。仅新增第一关地图输入、编辑器配方、关卡资源/场景和专项测试；未修改共享运行脚本、既有测试断言、原始PNG或BuildSettings。工程基线为`master@8e91090`加已验收未提交BC-107/108改动，本轮全部保留，没有提交、暂存或推送。
+**原实现阶段范围（历史记录）：** 第一关地图输入、编辑器配方、关卡资源/场景和专项测试。原阶段未修改共享运行脚本、既有测试断言、原始PNG或BuildSettings；随后本次贴墙Bug专项仅最小修改BulletWorld并补充回归，详见上节。最终BC-200已验收、M2未通过，不开始BC-201及后续任务。工程基线为`master@8e91090`加已验收未提交BC-107/108改动，本轮全部保留，没有提交、暂存或推送。
 
 - 新入口：`Assets/BattleCity/Scenes/Stage01.unity`，可用WASD/方向键、Space、Esc；失焦自动暂停，重新聚焦后Esc恢复。
 - 地图资产：`Assets/BattleCity/Data/Stage01.asset`，逻辑26×26、8px格、左下起行主序。运行时ArenaSession/MapState复制资产后交互，不读PNG决定碰撞。
