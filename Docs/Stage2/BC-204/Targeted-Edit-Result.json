@@ -1,0 +1,175 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.44,
+      "summary": {
+        "total": 21,
+        "passed": 21,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EarlierTerrainConsumesShotBeforeBase(Brick)",
+          "Status": "Passed",
+          "Duration": 0.0727161,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EarlierTerrainConsumesShotBeforeBase(Steel)",
+          "Status": "Passed",
+          "Duration": 0.0013811,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Up)",
+          "Status": "Passed",
+          "Duration": 0.0028136,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Left)",
+          "Status": "Passed",
+          "Duration": 0.0013082,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Down)",
+          "Status": "Passed",
+          "Duration": 0.001366,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Right)",
+          "Status": "Passed",
+          "Duration": 0.0012566,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Up)",
+          "Status": "Passed",
+          "Duration": 0.0009647,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Left)",
+          "Status": "Passed",
+          "Duration": 0.0013092,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Down)",
+          "Status": "Passed",
+          "Duration": 0.0049412,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Right)",
+          "Status": "Passed",
+          "Duration": 0.0037257,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.HighSpeedSweepCannotTunnel_OneHitDestroys",
+          "Status": "Passed",
+          "Duration": 0.0060782,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.IntactAndRuinedBaseBlockNaturalBirths(False)",
+          "Status": "Passed",
+          "Duration": 0.0158828,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.IntactAndRuinedBaseBlockNaturalBirths(True)",
+          "Status": "Passed",
+          "Duration": 0.0015136,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.IntactAndRuinedFootprintsBlockMovementAndExplicitSpawns(False)",
+          "Status": "Passed",
+          "Duration": 0.0038476,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.IntactAndRuinedFootprintsBlockMovementAndExplicitSpawns(True)",
+          "Status": "Passed",
+          "Duration": 0.0006476,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.LegacySessionHasNoInvisibleBase_EnabledSessionsOwnIndependentSnapshot",
+          "Status": "Passed",
+          "Duration": 0.0025335,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.PauseFreezesIncomingShotAndFailure_ResumeSettlesOnce",
+          "Status": "Passed",
+          "Duration": 0.0016198,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.SameTickMultipleShotsConsumeOldBase_OneExplosionAndNotification_AllTankDamageStillSettles",
+          "Status": "Passed",
+          "Duration": 0.0031979,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.TankBeforeBaseWinsDistance_BaseWinsSameDistancePriority(64,Tank)",
+          "Status": "Passed",
+          "Duration": 0.0011946,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.TankBeforeBaseWinsDistance_BaseWinsSameDistancePriority(104,Base)",
+          "Status": "Passed",
+          "Duration": 0.0006583,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.TankBeforeBaseWinsDistance_BaseWinsSameDistancePriority(144,Base)",
+          "Status": "Passed",
+          "Duration": 0.0005584,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

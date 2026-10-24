@@ -1,0 +1,28 @@
+{
+  "discovered": 294,
+  "executed": 294,
+  "uniqueExecuted": 294,
+  "missing": [],
+  "extra": [],
+  "nonPassed": [],
+  "byFixture": {
+    "ArenaPlayModeTests": 5,
+    "BrickDestructionTests": 33,
+    "BrickMapViewTests": 22,
+    "BulletCollisionTests": 38,
+    "CombatEffectViewTests": 5,
+    "CombatEffectsTests": 9,
+    "EnemyBrainPlayModeTests": 1,
+    "EnemyBrainTests": 29,
+    "Phase0Tests": 7,
+    "Phase1Tests": 24,
+    "RenderDeltaCombatTests": 6,
+    "RenderLoopRegressionTests": 1,
+    "Stage01PlayModeTests": 3,
+    "Stage01Tests": 6,
+    "TankStatePlayModeTests": 1,
+    "TankStateTests": 24,
+    "TurnAlignmentTests": 65,
+    "WeaponTests": 15
+  }
+}

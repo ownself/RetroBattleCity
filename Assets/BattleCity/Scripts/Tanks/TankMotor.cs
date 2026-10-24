@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace BattleCity
@@ -6,6 +7,7 @@ namespace BattleCity
     /// <summary>Reusable tank movement; the control source is just a direction, not a player component.</summary>
     public sealed class TankMotor
     {
+        public const float HalfSizePixels = 8;
         public const int AlignmentPixels = 8;
         public const float MaxTurnCorrectionPixels = 2;
         public const int TrackFrameTicks = 8;
@@ -17,40 +19,55 @@ namespace BattleCity
 
         public TankMotor(Vector2 spawn, MapState map)
         {
-            if (!map.CanOccupy(spawn)) throw new ArgumentException("Tank spawn is obstructed.", nameof(spawn));
+            if (float.IsNaN(spawn.x) || float.IsInfinity(spawn.x) || float.IsNaN(spawn.y) || float.IsInfinity(spawn.y) ||
+                !map.CanOccupy(spawn)) throw new ArgumentException("Tank spawn is invalid or obstructed.", nameof(spawn));
             Position = spawn;
         }
 
-        public void Step(CardinalDirection requested, float speedPixelsPerSecond, MapState map)
+        public void Step(CardinalDirection requested, float speedPixelsPerSecond, MapState map,
+            IReadOnlyList<Rect> blockers = null)
         {
-            IsMoving = false;
-            if (requested == CardinalDirection.None) return;
+            var before = Position;
+            Position = CalculateStep(requested, speedPixelsPerSecond, map, blockers, out var facing);
+            Facing = facing;
+            UpdateMovement(before);
+        }
+
+        // Decision query uses exactly the movement/alignment rules, without advancing pose or animation.
+        internal Vector2 PreviewStep(CardinalDirection requested, float speedPixelsPerSecond, MapState map,
+            IReadOnlyList<Rect> blockers) => CalculateStep(requested, speedPixelsPerSecond, map, blockers, out _);
+
+        private Vector2 CalculateStep(CardinalDirection requested, float speedPixelsPerSecond, MapState map,
+            IReadOnlyList<Rect> blockers, out CardinalDirection facing)
+        {
+            facing = Facing;
+            if (requested == CardinalDirection.None) return Position;
             var direction = requested.Vector(); // validates before changing state
             if (speedPixelsPerSecond <= 0 || float.IsNaN(speedPixelsPerSecond) || float.IsInfinity(speedPixelsPerSecond))
                 throw new ArgumentOutOfRangeException(nameof(speedPixelsPerSecond));
-            var before = Position;
+            var position = Position;
             if (requested.IsVertical() != Facing.IsVertical())
             {
                 float axis = requested.IsVertical() ? Position.x : Position.y;
                 float snapped = Mathf.Round(axis / AlignmentPixels) * AlignmentPixels;
                 var aligned = requested.IsVertical() ? new Vector2(snapped, Position.y) : new Vector2(Position.x, snapped);
                 // Both endpoint and whole correction path must be clear. Never jump over a wall.
-                if (!map.CanOccupy(aligned) || (map.MoveAxis(Position, aligned - Position) - aligned).sqrMagnitude > MapState.Epsilon * MapState.Epsilon) return;
+                if (!map.CanOccupy(aligned, HalfSizePixels, blockers) ||
+                    (map.MoveAxis(Position, aligned - Position, HalfSizePixels, blockers) - aligned).sqrMagnitude > MapState.Epsilon * MapState.Epsilon) return Position;
                 if (Mathf.Abs(snapped - axis) > MaxTurnCorrectionPixels + MapState.Epsilon)
                 {
                     // A held side-turn must make progress even after the old movement key is released.
                     // Approach the alignment line at normal speed instead of rejecting this request forever.
-                    Position = map.MoveAxis(Position, Vector2.MoveTowards(Position, aligned,
-                        speedPixelsPerSecond * PixelGrid.LogicStep) - Position);
-                    UpdateMovement(before);
-                    return;
+                    return map.MoveAxis(Position, Vector2.MoveTowards(Position, aligned,
+                        speedPixelsPerSecond * PixelGrid.LogicStep) - Position, HalfSizePixels, blockers);
                 }
-                Position = aligned;
+                position = aligned;
             }
-            Facing = requested;
-            Position = map.MoveAxis(Position, direction * (speedPixelsPerSecond * PixelGrid.LogicStep));
-            UpdateMovement(before);
+            facing = requested;
+            return map.MoveAxis(position, direction * (speedPixelsPerSecond * PixelGrid.LogicStep), HalfSizePixels, blockers);
         }
+
+        internal void Stop() => IsMoving = false;
 
         private void UpdateMovement(Vector2 before)
         {

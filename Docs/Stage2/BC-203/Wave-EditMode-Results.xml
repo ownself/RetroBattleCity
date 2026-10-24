@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="30" result="Passed" total="30" passed="30" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-24 04:37:25Z" end-time="2026-10-24 04:37:26Z" duration="0.5281803">
+  <test-suite type="TestSuite" id="1348" name="BattleCity" fullname="BattleCity" runstate="Runnable" testcasecount="286" result="Passed" start-time="2026-10-24 04:37:25Z" end-time="2026-10-24 04:37:26Z" duration="0.528180" total="30" passed="30" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1336" name="BattleCity.EditModeTests.dll" fullname="H:/Projects/Unities/BattleCity/Library/ScriptAssemblies/BattleCity.EditModeTests.dll" runstate="Runnable" testcasecount="286" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.408968" total="30" passed="30" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="26924" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1337" name="BattleCity" fullname="BattleCity" runstate="Runnable" testcasecount="286" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.399721" total="30" passed="30" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1338" name="Tests" fullname="BattleCity.Tests" runstate="Runnable" testcasecount="286" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.394131" total="30" passed="30" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1133" name="EnemyWaveStateTests" fullname="BattleCity.Tests.EnemyWaveStateTests" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" testcasecount="30" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.297164" total="30" passed="30" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1138" name="AllPointsBlocked_WaitsWithoutConsumingRandomSequenceOrReservation_ThenUsesOnlyClearPoint" fullname="BattleCity.Tests.EnemyWaveStateTests.AllPointsBlocked_WaitsWithoutConsumingRandomSequenceOrReservation_ThenUsesOnlyClearPoint" methodname="AllPointsBlocked_WaitsWithoutConsumingRandomSequenceOrReservation_ThenUsesOnlyClearPoint" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="1031998298" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.049250" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1149" name="AuthorArraysAndTiming_AreSnapshotted_AndRuntimeNeverMutatesThem" fullname="BattleCity.Tests.EnemyWaveStateTests.AuthorArraysAndTiming_AreSnapshotted_AndRuntimeNeverMutatesThem" methodname="AuthorArraysAndTiming_AreSnapshotted_AndRuntimeNeverMutatesThem" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="622143067" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.003786" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1137" name="Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications" fullname="BattleCity.Tests.EnemyWaveStateTests.Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.004519" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1135" name="Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications(1)" fullname="BattleCity.Tests.EnemyWaveStateTests.Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications(1)" methodname="Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="184089076" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001319" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1136" name="Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications(4)" fullname="BattleCity.Tests.EnemyWaveStateTests.Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications(4)" methodname="Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="48464675" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.000713" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1134" name="DefaultTiming_FirstCreationCall61_Second241_DeathBeforeStepAndNextTickControlAreHostContract" fullname="BattleCity.Tests.EnemyWaveStateTests.DefaultTiming_FirstCreationCall61_Second241_DeathBeforeStepAndNextTickControlAreHostContract" methodname="DefaultTiming_FirstCreationCall61_Second241_DeathBeforeStepAndNextTickControlAreHostContract" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="233336665" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.003847" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1148" name="EmptySequence_IsExhaustedWithoutReservationOrCallbacks" fullname="BattleCity.Tests.EnemyWaveStateTests.EmptySequence_IsExhaustedWithoutReservationOrCallbacks" methodname="EmptySequence_IsExhaustedWithoutReservationOrCallbacks" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="1324824972" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.000842" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1146" name="ExactSeedOne_FirstPointAndBrainSeedAreStable" fullname="BattleCity.Tests.EnemyWaveStateTests.ExactSeedOne_FirstPointAndBrainSeedAreStable" methodname="ExactSeedOne_FirstPointAndBrainSeedAreStable" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="839846704" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.000833" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1140" name="FailedCreation_IsNotCommitted_AndCanRetryWithIdenticalRequest" fullname="BattleCity.Tests.EnemyWaveStateTests.FailedCreation_IsNotCommitted_AndCanRetryWithIdenticalRequest" methodname="FailedCreation_IsNotCommitted_AndCanRetryWithIdenticalRequest" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="446018353" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001879" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1145" name="FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries" fullname="BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.011114" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1142" name="FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(1)" fullname="BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(1)" methodname="FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="1664411697" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.007957" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1143" name="FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(7)" fullname="BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(7)" methodname="FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="724558754" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001138" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1144" name="FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(uint.MaxValue)" fullname="BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(uint.MaxValue)" methodname="FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="1871460979" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001045" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="ParameterizedMethod" id="1165" name="InvalidConfiguration_FailsEarlyWithClearMessage" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.143253" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1151" name="InvalidConfiguration_FailsEarlyWithClearMessage(&quot;unknown&quot;)" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(&quot;unknown&quot;)" methodname="InvalidConfiguration_FailsEarlyWithClearMessage" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="1415180761" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.024440" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1152" name="InvalidConfiguration_FailsEarlyWithClearMessage(&quot;duplicate&quot;)" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(&quot;duplicate&quot;)" methodname="InvalidConfiguration_FailsEarlyWithClearMessage" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="1684568277" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.003076" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1153" name="InvalidConfiguration_FailsEarlyWithClearMessage(&quot;nullMapping&quot;)" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(&quot;nullMapping&quot;)" methodname="InvalidConfiguration_FailsEarlyWithClearMessage" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="1709834210" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001178" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1154" name="InvalidConfiguration_FailsEarlyWithClearMessage(&quot;nullDefinition&quot;)" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(&quot;nullDefinition&quot;)" methodname="InvalidConfiguration_FailsEarlyWithClearMessage" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="2001310636" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001124" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1155" name="InvalidConfiguration_FailsEarlyWithClearMessage(&quot;zeroSeed&quot;)" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(&quot;zeroSeed&quot;)" methodname="InvalidConfiguration_FailsEarlyWithClearMessage" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="2108337417" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001138" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1156" name="InvalidConfiguration_FailsEarlyWithClearMessage(&quot;zeroPreparation&quot;)" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(&quot;zeroPreparation&quot;)" methodname="InvalidConfiguration_FailsEarlyWithClearMessage" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="584924695" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001177" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1157" name="InvalidConfiguration_FailsEarlyWithClearMessage(&quot;negativePreparation&quot;)" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(&quot;negativePreparation&quot;)" methodname="InvalidConfiguration_FailsEarlyWithClearMessage" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="865866779" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001114" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1158" name="InvalidConfiguration_FailsEarlyWithClearMessage(&quot;zeroInterval&quot;)" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(&quot;zeroInterval&quot;)" methodname="InvalidConfiguration_FailsEarlyWithClearMessage" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="327243507" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001124" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1159" name="InvalidConfiguration_FailsEarlyWithClearMessage(&quot;negativeInterval&quot;)" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(&quot;negativeInterval&quot;)" methodname="InvalidConfiguration_FailsEarlyWithClearMessage" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="2018506161" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001276" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1160" name="InvalidConfiguration_FailsEarlyWithClearMessage(&quot;invalidTank&quot;)" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(&quot;invalidTank&quot;)" methodname="InvalidConfiguration_FailsEarlyWithClearMessage" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="1781218299" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.004641" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1161" name="InvalidConfiguration_FailsEarlyWithClearMessage(&quot;nullSequence&quot;)" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(&quot;nullSequence&quot;)" methodname="InvalidConfiguration_FailsEarlyWithClearMessage" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="1861753407" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001536" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1162" name="InvalidConfiguration_FailsEarlyWithClearMessage(&quot;emptyId&quot;)" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(&quot;emptyId&quot;)" methodname="InvalidConfiguration_FailsEarlyWithClearMessage" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="2146605605" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001532" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1163" name="InvalidConfiguration_FailsEarlyWithClearMessage(&quot;zeroCap&quot;)" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(&quot;zeroCap&quot;)" methodname="InvalidConfiguration_FailsEarlyWithClearMessage" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="2019707290" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001369" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1164" name="InvalidConfiguration_FailsEarlyWithClearMessage(&quot;noSpawns&quot;)" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(&quot;noSpawns&quot;)" methodname="InvalidConfiguration_FailsEarlyWithClearMessage" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="402030167" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001759" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1166" name="InvalidStepInput_RejectsCapacityIncludingExistingReservationWithoutMutation" fullname="BattleCity.Tests.EnemyWaveStateTests.InvalidStepInput_RejectsCapacityIncludingExistingReservationWithoutMutation" methodname="InvalidStepInput_RejectsCapacityIncludingExistingReservationWithoutMutation" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="1983640011" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.004698" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1150" name="NoStep_PauseFreezesReservationIntervalCountersAndRandom" fullname="BattleCity.Tests.EnemyWaveStateTests.NoStep_PauseFreezesReservationIntervalCountersAndRandom" methodname="NoStep_PauseFreezesReservationIntervalCountersAndRandom" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="1525006221" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.007945" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1139" name="PreparationFinishedThenOccupied_RetriesSameReservationWithoutResetOrLostCountOrSeed" fullname="BattleCity.Tests.EnemyWaveStateTests.PreparationFinishedThenOccupied_RetriesSameReservationWithoutResetOrLostCountOrSeed" methodname="PreparationFinishedThenOccupied_RetriesSameReservationWithoutResetOrLostCountOrSeed" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="1076865921" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.010724" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1141" name="ReentrantOrThrowingCallback_CannotDoubleCommit_ReservationIsRetryable" fullname="BattleCity.Tests.EnemyWaveStateTests.ReentrantOrThrowingCallback_CannotDoubleCommit_ReservationIsRetryable" methodname="ReentrantOrThrowingCallback_CannotDoubleCommit_ReservationIsRetryable" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="1326376447" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001159" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1147" name="SequenceExhausted_IsNotVictory_AliveSnapshotAndConservationRemainAvailable" fullname="BattleCity.Tests.EnemyWaveStateTests.SequenceExhausted_IsNotVictory_AliveSnapshotAndConservationRemainAvailable" methodname="SequenceExhausted_IsNotVictory_AliveSnapshotAndConservationRemainAvailable" classname="BattleCity.Tests.EnemyWaveStateTests" runstate="Runnable" seed="2023625971" result="Passed" start-time="2026-10-24 04:37:26Z" end-time="2026-10-24 04:37:26Z" duration="0.001189" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Jimmy/AppData/LocalLow/DefaultCompany/BattleCity\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

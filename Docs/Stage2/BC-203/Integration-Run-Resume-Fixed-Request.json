@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var s = UnityEngine.Object.FindAnyObjectByType<BattleCity.ArenaController>().Session; long tick = s.Clock.Tick, dropped = s.Clock.DroppedTicks; int frame = UnityEngine.Time.frameCount; UnityEditor.EditorApplication.CallbackFunction probe = null; probe = () => { if (s.Clock.Tick == tick) return; s.SetPaused(true); UnityEditor.SessionState.SetString(\"BC203.Integration.Resume\", Newtonsoft.Json.JsonConvert.SerializeObject(new { firstFrame = frame, observedFrame = UnityEngine.Time.frameCount, firstTick = tick, observedTick = s.Clock.Tick, resumedTicks = s.Clock.Tick - tick, droppedBefore = dropped, droppedAfter = s.Clock.DroppedTicks })); UnityEditor.EditorApplication.update -= probe; }; UnityEditor.EditorApplication.update += probe; s.SetPaused(false); return new { armedFrame = frame, armedTick = tick };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "armedFrame": 136102,
+        "armedTick": 4522
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

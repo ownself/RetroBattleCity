@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command editor",
+  "data": null,
+  "errors": [
+    {
+      "code": "REMOTE_COMMAND_NOT_FOUND",
+      "message": "Pipeline server returned 400 Bad Request: Command Not Found. No command named 'editor playmode' is available. Commands starting with 'editor playmode': editor.playmode list_instances, editor.playmode pause, editor.playmode set_run_in_background, editor.playmode start, editor.playmode stop."
+    }
+  ],
+  "warnings": []
+}

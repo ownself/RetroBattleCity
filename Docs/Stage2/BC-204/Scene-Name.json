@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c=UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); if(c.gameObject.scene.path!=BattleCity.Editor.Stage01Authoring.ScenePath) throw new System.Exception(\"Unexpected scene\"); c.baseRenderer.name=\"Base - session state projection\"; UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(c.gameObject.scene); UnityEditor.SceneManagement.EditorSceneManager.SaveScene(c.gameObject.scene); return c.baseRenderer.name;"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "Base - session state projection"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

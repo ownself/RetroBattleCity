@@ -1,0 +1,170 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c = UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>();\nvar s = c.Session; var w = s.EnemyWave;\nreturn new {\n    frame = UnityEngine.Time.frameCount, tick = s.Clock.Tick, paused = s.Clock.Paused, dropped = s.Clock.DroppedTicks,\n    scene = c.gameObject.scene.path, spawned = w.SpawnedCount, pending = w.PendingCount,\n    alive = s.AliveEnemyCount, reserved = w.ReservedCount, preparationRemaining = w.PreparationRemainingTicks,\n    intervalRemaining = w.IntervalRemainingTicks, random = w.RandomState, playerAlive = s.PlayerTank.IsAlive,\n    tanks = s.Tanks.Select(t => new { id = t.EntityId, team = t.Team.ToString(), alive = t.IsAlive,\n        x = t.Motor.Position.x, y = t.Motor.Position.y, facing = t.Motor.Facing.ToString(), track = t.Motor.TrackFrame,\n        cooldown = t.Weapon.CooldownRemainingTicks, activeBullets = t.Weapon.ActiveBullets }).ToArray(),\n    displays = c.GetComponentsInChildren<BattleCity.EnemyTankView>().Select(v => new { name = v.name,\n        renderers = v.GetComponentsInChildren<UnityEngine.SpriteRenderer>().Select(r => new {\n            enabled = r.enabled, sprite = r.sprite == null ? null : r.sprite.name,\n            x = r.transform.position.x, y = r.transform.position.y, layer = r.sortingLayerName }).ToArray() }).ToArray(),\n    hints = c.GetComponentsInChildren<UnityEngine.SpriteRenderer>().Where(r => r.name == \"Enemy preparation - display only\")\n        .Select(r => new { enabled = r.enabled, sprite = r.sprite == null ? null : r.sprite.name }).ToArray(),\n    bullets = s.Bullets.Active.Select(b => new { owner = b.OwnerId, team = b.Team.ToString(), x = b.Position.x, y = b.Position.y }).ToArray()\n};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "frame": 36309,
+        "tick": 4522,
+        "paused": true,
+        "dropped": 3,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "spawned": 4,
+        "pending": 16,
+        "alive": 4,
+        "reserved": 0,
+        "preparationRemaining": 0,
+        "intervalRemaining": 0,
+        "random": 307599695,
+        "playerAlive": false,
+        "tanks": [
+          {
+            "id": 1,
+            "team": "Player",
+            "alive": false,
+            "x": 72,
+            "y": 8,
+            "facing": "Up",
+            "track": 0,
+            "cooldown": 0,
+            "activeBullets": 0
+          },
+          {
+            "id": 2,
+            "team": "Enemy",
+            "alive": true,
+            "x": 58,
+            "y": 24,
+            "facing": "Right",
+            "track": 1,
+            "cooldown": 7,
+            "activeBullets": 0
+          },
+          {
+            "id": 3,
+            "team": "Enemy",
+            "alive": true,
+            "x": 168,
+            "y": 108,
+            "facing": "Down",
+            "track": 1,
+            "cooldown": 0,
+            "activeBullets": 1
+          },
+          {
+            "id": 4,
+            "team": "Enemy",
+            "alive": true,
+            "x": 121,
+            "y": 8,
+            "facing": "Right",
+            "track": 0,
+            "cooldown": 5,
+            "activeBullets": 1
+          },
+          {
+            "id": 5,
+            "team": "Enemy",
+            "alive": true,
+            "x": 8,
+            "y": 19,
+            "facing": "Down",
+            "track": 1,
+            "cooldown": 14,
+            "activeBullets": 1
+          }
+        ],
+        "displays": [
+          {
+            "name": "Enemy 2 - display only",
+            "renderers": [
+              {
+                "enabled": true,
+                "sprite": "tank.white.enemy.basic.right.1",
+                "x": 3.625,
+                "y": 1.5,
+                "layer": "Actors"
+              }
+            ]
+          },
+          {
+            "name": "Enemy 3 - display only",
+            "renderers": [
+              {
+                "enabled": true,
+                "sprite": "tank.white.enemy.basic.down.1",
+                "x": 10.5,
+                "y": 6.75,
+                "layer": "Actors"
+              }
+            ]
+          },
+          {
+            "name": "Enemy 4 - display only",
+            "renderers": [
+              {
+                "enabled": true,
+                "sprite": "tank.white.enemy.basic.right.0",
+                "x": 7.5625,
+                "y": 0.5,
+                "layer": "Actors"
+              }
+            ]
+          },
+          {
+            "name": "Enemy 5 - display only",
+            "renderers": [
+              {
+                "enabled": true,
+                "sprite": "tank.white.enemy.basic.down.1",
+                "x": 0.5,
+                "y": 1.1875,
+                "layer": "Actors"
+              }
+            ]
+          }
+        ],
+        "hints": [
+          {
+            "enabled": false,
+            "sprite": null
+          }
+        ],
+        "bullets": [
+          {
+            "owner": 3,
+            "team": "Enemy",
+            "x": 168,
+            "y": 55
+          },
+          {
+            "owner": 4,
+            "team": "Enemy",
+            "x": 154,
+            "y": 8
+          },
+          {
+            "owner": 5,
+            "team": "Enemy",
+            "x": 8,
+            "y": 3.99999976
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

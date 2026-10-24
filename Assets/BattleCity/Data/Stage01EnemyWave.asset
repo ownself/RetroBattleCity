@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea0ee79095eb51c41b878c534d2beeb0, type: 3}
+  m_Name: Stage01EnemyWave
+  m_EditorClassIdentifier: BattleCity.Runtime::BattleCity.EnemyWaveDefinition
+  tankDefinitions:
+  - {fileID: 11400000, guid: 24bbfcc23a39f5047b3ec4c4a7d77970, type: 2}
+  seed: 1
+  preparationTicks: 60
+  spawnIntervalTicks: 120
+  requiresCalibration: 1

@@ -1,0 +1,27 @@
+{
+  "changedStartingFiles": [],
+  "missingStartingFiles": [],
+  "addedFiles": [
+    "Assets/BattleCity/Scripts/Tanks/EnemyTankView.cs",
+    "Assets/BattleCity/Scripts/Tanks/EnemyTankView.cs.meta",
+    "Assets/BattleCity/Tests/PlayMode/EnemyTankViewTests.cs",
+    "Assets/BattleCity/Tests/PlayMode/EnemyTankViewTests.cs.meta",
+    "Docs/Stage2/BC-203/View-Compile-Recovered-Result.json",
+    "Docs/Stage2/BC-203/View-Compile-Request.json",
+    "Docs/Stage2/BC-203/View-Compile-Result.json",
+    "Docs/Stage2/BC-203/View-Console-Baseline.json",
+    "Docs/Stage2/BC-203/View-Console-Final-Since294.json",
+    "Docs/Stage2/BC-203/View-Editor-Final-State.json",
+    "Docs/Stage2/BC-203/View-File-Integrity.json",
+    "Docs/Stage2/BC-203/View-Handoff.md",
+    "Docs/Stage2/BC-203/View-PlayMode-Results.xml",
+    "Docs/Stage2/BC-203/View-Recovery-Pipeline.json",
+    "Docs/Stage2/BC-203/View-Recovery-Status.json",
+    "Docs/Stage2/BC-203/View-Run-Settings-Probe-Failed.json",
+    "Docs/Stage2/BC-203/View-Starting-State.json",
+    "Docs/Stage2/BC-203/View-Tests-Request.json",
+    "Docs/Stage2/BC-203/View-Tests-Result.json",
+    "Docs/Stage2/BC-203/View-Unity-Starting-Status.json"
+  ],
+  "staged": ""
+}

@@ -70,11 +70,15 @@ namespace BattleCity.Tests
         }
 
         [UnityTest]
-        public IEnumerator Stage01_RealKeyboardShotAndMovementAreBlockedByCentralSteel()
+        public IEnumerator Stage01_IsolatedTerrainKeyboardShotAndMovementAreBlockedByCentralSteel()
         {
             scene = EditorSceneManager.LoadSceneInPlayMode(ScenePath, new LoadSceneParameters(LoadSceneMode.Additive));
             yield return null;
-            var controller = Controller; var session = controller.Session;
+            var controller = Controller;
+            // This BC-200 terrain oracle is deliberately wave-free. Default-scene waves have their own integration suite.
+            controller.enabled = false;
+            var session = new ArenaSession(controller.level, controller.playerDefinition);
+            Assert.That(session.EnemyWave, Is.Null);
             session.SetFocus(true); session.SetPaused(false);
             for (int i = 0; i < 192; i++) session.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.W);
             for (int i = 0; i < 32; i++) session.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.D);
@@ -82,7 +86,11 @@ namespace BattleCity.Tests
             Keys(Key.S, Key.Space);
             long tick = session.Clock.Tick; int frame = Time.frameCount;
             float deadline = Time.realtimeSinceStartup + 2;
-            while (session.Effects.Active.Count == 0 && Time.realtimeSinceStartup < deadline) yield return null;
+            while (session.Effects.Active.Count == 0 && Time.realtimeSinceStartup < deadline)
+            {
+                yield return null;
+                session.AdvanceFrame(Time.unscaledDeltaTime, KeyboardInputSource.Read());
+            }
             session.SetPaused(true); Keys();
             Assert.That(Time.frameCount, Is.GreaterThan(frame)); Assert.That(session.Clock.Tick, Is.GreaterThan(tick));
             Assert.That(session.Effects.Active.Count, Is.EqualTo(1));

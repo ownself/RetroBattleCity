@@ -1,0 +1,28 @@
+{
+  "baselineChangedOnly": [
+    "Assets\\BattleCity\\Scripts\\Core\\ArenaSession.cs",
+    "Assets\\BattleCity\\Scripts\\Tanks\\TankMotor.cs",
+    "Assets\\BattleCity\\Scripts\\Tanks\\TankState.cs"
+  ],
+  "newAssetsOnly": [
+    "Assets\\BattleCity\\Tests\\EditMode\\EnemyBrainTests.cs",
+    "Assets\\BattleCity\\Tests\\EditMode\\EnemyBrainTests.cs.meta",
+    "Assets\\BattleCity\\Tests\\PlayMode\\EnemyBrainPlayModeTests.cs",
+    "Assets\\BattleCity\\Tests\\PlayMode\\EnemyBrainPlayModeTests.cs.meta",
+    "Assets\\BattleCity\\Scripts\\AI\\EnemyBrain.cs",
+    "Assets\\BattleCity\\Scripts\\AI\\EnemyBrain.cs.meta",
+    "Assets\\BattleCity\\Scripts\\AI\\EnemyBrainParameters.cs",
+    "Assets\\BattleCity\\Scripts\\AI\\EnemyBrainParameters.cs.meta"
+  ],
+  "allOtherRecordedBaselineHashesUnchanged": true,
+  "editMode": "256/256 passed",
+  "playMode": "38/38 passed",
+  "discoveredEqualsExecuted": 294,
+  "consoleIncrement": {
+    "log": 69
+  },
+  "consoleCursor": 286,
+  "newSourceWhitespaceCheck": "passed",
+  "noStagedFiles": true,
+  "noProjectOrUserSettingsGitDiff": true
+}

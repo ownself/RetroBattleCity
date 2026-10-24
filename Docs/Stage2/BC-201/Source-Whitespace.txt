@@ -1,0 +1,1 @@
+PASS: all changed/new C# files have no trailing whitespace.

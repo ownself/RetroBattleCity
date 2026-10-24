@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "command": "command script run",
+  "data": {
+    "command": "script run",
+    "parameters": {
+      "file": "Docs/Stage2/BC-204/RuntimeProbe.cs",
+      "entry": "BC204RuntimeProbe.Main"
+    },
+    "result": {
+      "diagnostics": [
+        {
+          "severity": "warning",
+          "message": "'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'",
+          "line": 16,
+          "column": 16,
+          "id": "CS0618",
+          "source": "var c = UnityEngine.Object.FindFirstObjectByType<ArenaController>();"
+        }
+      ],
+      "compileMs": 299,
+      "executeMs": 1,
+      "assemblyName": "PipelineRunScript_RuntimeProbe_37d03f5870214055b9830d08a9ae0bfb",
+      "success": true,
+      "result": "Observer armed; real Controller.Update and keyboard/shared weapon only, no manual Step/AdvanceFrame"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

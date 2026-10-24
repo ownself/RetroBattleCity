@@ -99,7 +99,8 @@ namespace BattleCity
             return kind == TerrainKind.Steel || (kind == TerrainKind.Brick && IsSolid(damageX, damageY));
         }
 
-        public bool CanOccupy(Vector2 center, float halfSize = 8)
+        public bool CanOccupy(Vector2 center, float halfSize = TankMotor.HalfSizePixels,
+            IReadOnlyList<Rect> blockers = null)
         {
             var min = center - Vector2.one * halfSize; var max = center + Vector2.one * halfSize;
             if (min.x < -Epsilon || min.y < -Epsilon || max.x > PixelGrid.MapSizePixels + Epsilon || max.y > PixelGrid.MapSizePixels + Epsilon) return false;
@@ -108,11 +109,18 @@ namespace BattleCity
             int x1 = Mathf.Min(DamageCellsPerAxis - 1, Mathf.FloorToInt((max.x - Epsilon) / 4));
             int y1 = Mathf.Min(DamageCellsPerAxis - 1, Mathf.FloorToInt((max.y - Epsilon) / 4));
             for (int y = y0; y <= y1; y++) for (int x = x0; x <= x1; x++) if (IsSolid(x, y)) return false;
+            if (blockers != null) for (int i = 0; i < blockers.Count; i++)
+            {
+                var bounds = blockers[i];
+                if (max.x > bounds.xMin + Epsilon && min.x < bounds.xMax - Epsilon &&
+                    max.y > bounds.yMin + Epsilon && min.y < bounds.yMax - Epsilon) return false;
+            }
             return true;
         }
 
         /// <summary>Axis-aligned swept AABB, clamps exactly to the first face, even across many cells.</summary>
-        public Vector2 MoveAxis(Vector2 center, Vector2 delta, float halfSize = 8)
+        public Vector2 MoveAxis(Vector2 center, Vector2 delta, float halfSize = TankMotor.HalfSizePixels,
+            IReadOnlyList<Rect> blockers = null)
         {
             if (delta.x != 0 && delta.y != 0) throw new ArgumentException("Movement must be cardinal.");
             if (delta == Vector2.zero) return center;
@@ -130,6 +138,17 @@ namespace BattleCity
                 if (!IsSolid(horizontal ? a : b, horizontal ? b : a)) continue;
                 if (amount > 0 && a * 4 >= start + halfSize - Epsilon) end = Mathf.Min(end, a * 4 - halfSize);
                 else if (amount < 0 && (a + 1) * 4 <= start - halfSize + Epsilon) end = Mathf.Max(end, (a + 1) * 4 + halfSize);
+            }
+            if (blockers != null) for (int i = 0; i < blockers.Count; i++)
+            {
+                var bounds = blockers[i];
+                float acrossLow = horizontal ? bounds.yMin : bounds.xMin;
+                float acrossHigh = horizontal ? bounds.yMax : bounds.xMax;
+                if (perpendicular + halfSize <= acrossLow + Epsilon || perpendicular - halfSize >= acrossHigh - Epsilon) continue;
+                float low = horizontal ? bounds.xMin : bounds.yMin;
+                float high = horizontal ? bounds.xMax : bounds.yMax;
+                if (amount > 0 && low >= start + halfSize - Epsilon) end = Mathf.Min(end, low - halfSize);
+                else if (amount < 0 && high <= start - halfSize + Epsilon) end = Mathf.Max(end, high + halfSize);
             }
             return horizontal ? new Vector2(end, center.y) : new Vector2(center.x, end);
         }

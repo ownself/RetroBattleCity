@@ -8,7 +8,7 @@ namespace BattleCity
     {
         // Tank half-size 8 + bullet half-size 2: the logical boxes touch without overlapping.
         // Prototype muzzle value, not a verified original-game parameter.
-        public const float MuzzleOffsetPixels = 8 + BulletState.HalfSizePixels;
+        public const float MuzzleOffsetPixels = TankMotor.HalfSizePixels + BulletState.HalfSizePixels;
         private readonly BulletWorld bullets;
         private readonly float bulletSpeed;
         private readonly int cooldownTicks, maxActiveBullets;

@@ -1,0 +1,98 @@
+[
+  {
+    "path": "Assets/BattleCity/Data/CombatArena.asset",
+    "startingSha256": "1020912cef2378c0162225ff62a3f935c9e62e9bdfda3d0d8ff5d1f71272321a",
+    "finalSha256": "1020912cef2378c0162225ff62a3f935c9e62e9bdfda3d0d8ff5d1f71272321a",
+    "unchanged": true
+  },
+  {
+    "path": "Assets/BattleCity/Scenes/CombatArena.unity",
+    "startingSha256": "0c55e43b775211bb110a3fdba61035dd834ddcb62e6aae2335da25f2095229c2",
+    "finalSha256": "0c55e43b775211bb110a3fdba61035dd834ddcb62e6aae2335da25f2095229c2",
+    "unchanged": true
+  },
+  {
+    "path": "Assets/BattleCity/Data/PlayerPrototype.asset",
+    "startingSha256": "4e0a1ab9d84fe7ec16a5866a0a7d53a5f2e18cf615d2b545a4d00382c4683c37",
+    "finalSha256": "4e0a1ab9d84fe7ec16a5866a0a7d53a5f2e18cf615d2b545a4d00382c4683c37",
+    "unchanged": true
+  },
+  {
+    "path": "Assets/BattleCity/Data/SpriteCatalog.asset",
+    "startingSha256": "cf24275543633817e568d5ce1de061012fecdad37a015fb49d82a701399905b9",
+    "finalSha256": "cf24275543633817e568d5ce1de061012fecdad37a015fb49d82a701399905b9",
+    "unchanged": true
+  },
+  {
+    "path": "Assets/BattleCity/Art/GeneralSprites.png",
+    "startingSha256": "2562110378d395a1286f9048ac321147b85470aecc5057ae8c548fce780c80f0",
+    "finalSha256": "2562110378d395a1286f9048ac321147b85470aecc5057ae8c548fce780c80f0",
+    "unchanged": true
+  },
+  {
+    "path": "Assets/BattleCity/Art/GeneralSprites.png.meta",
+    "startingSha256": "5a94b496e489d2285532ef799a983e52c4365e4c1f38455dee3eb744e566f9c9",
+    "finalSha256": "5a94b496e489d2285532ef799a983e52c4365e4c1f38455dee3eb744e566f9c9",
+    "unchanged": true
+  },
+  {
+    "path": "Assets/Sprites/NES - Battle City (JPN) - Backgrounds - Stage 01.png",
+    "startingSha256": "0ad647c8af338e6c34bcad3e467cd5cf64607597f8a1dd1d5a2ef6e3f1111b7f",
+    "finalSha256": "0ad647c8af338e6c34bcad3e467cd5cf64607597f8a1dd1d5a2ef6e3f1111b7f",
+    "unchanged": true
+  },
+  {
+    "path": "Assets/Sprites/NES - Battle City (JPN) - Miscellaneous - General Sprites.png",
+    "startingSha256": "5b16e0c80144c8ed71dce2adfae51b962d8f103cc6db47db4bffe46e4584e88d",
+    "finalSha256": "5b16e0c80144c8ed71dce2adfae51b962d8f103cc6db47db4bffe46e4584e88d",
+    "unchanged": true
+  },
+  {
+    "path": "Assets/BattleCity/Editor/Stage01Layout.txt",
+    "startingSha256": "0a3953c9303367ef0abb06c77ed42405b90bc0baea10db4d001b10f7139da13a",
+    "finalSha256": "0a3953c9303367ef0abb06c77ed42405b90bc0baea10db4d001b10f7139da13a",
+    "unchanged": true
+  },
+  {
+    "path": "Assets/BattleCity/Scripts/AI/EnemyWaveDefinition.cs",
+    "startingSha256": "bae6a82b4b923b12e57af746baf51cc7bb3922e11eb9997f4798f52084e794b3",
+    "finalSha256": "bae6a82b4b923b12e57af746baf51cc7bb3922e11eb9997f4798f52084e794b3",
+    "unchanged": true
+  },
+  {
+    "path": "Assets/BattleCity/Scripts/AI/EnemyWaveState.cs",
+    "startingSha256": "af04c87f45fa00e24e07be0639b52c8becd3ea5dda440641fb77f382ac7e4c52",
+    "finalSha256": "af04c87f45fa00e24e07be0639b52c8becd3ea5dda440641fb77f382ac7e4c52",
+    "unchanged": true
+  },
+  {
+    "path": "Assets/BattleCity/Scripts/Tanks/EnemyTankView.cs",
+    "startingSha256": "c39ac4c4e6030df9203e38755775cc3066c0b92f51d7f3247621e65e3917f792",
+    "finalSha256": "c39ac4c4e6030df9203e38755775cc3066c0b92f51d7f3247621e65e3917f792",
+    "unchanged": true
+  },
+  {
+    "path": ".vsconfig",
+    "startingSha256": "f24445f4481f74f7653a375e2f618e50d608b14fdacee794fcab51b8d447351c",
+    "finalSha256": "f24445f4481f74f7653a375e2f618e50d608b14fdacee794fcab51b8d447351c",
+    "unchanged": true
+  },
+  {
+    "path": "Docs/BattleCity-Implementation-Plan.md",
+    "startingSha256": "7ba7c8bbe8e6ac14308146ff689ed32a562906ad7d72e51184223542ed2f84da",
+    "finalSha256": "7ba7c8bbe8e6ac14308146ff689ed32a562906ad7d72e51184223542ed2f84da",
+    "unchanged": true
+  },
+  {
+    "path": "Docs/Stage2/Execution-Board.md",
+    "startingSha256": "4b7d16f369d7832cc99d4f237a3ea8d682bab56259c81988331edde0bee31789",
+    "finalSha256": "4b7d16f369d7832cc99d4f237a3ea8d682bab56259c81988331edde0bee31789",
+    "unchanged": true
+  },
+  {
+    "path": "UserSettings/EditorUserSettings.asset",
+    "startingSha256": "f2a6e0ff493e925bd417c7d97496009726fcde34ab909029cc73b697b401dec4",
+    "finalSha256": "f2a6e0ff493e925bd417c7d97496009726fcde34ab909029cc73b697b401dec4",
+    "unchanged": true
+  }
+]

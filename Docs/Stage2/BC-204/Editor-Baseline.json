@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "return new { playing=UnityEditor.EditorApplication.isPlaying, background=UnityEngine.Application.runInBackground, scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene().path, dirty=UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty, recent=UnityEditor.EditorPrefs.GetString(\"RecentlyUsedSceneGuid-0\"), config=System.IO.File.Exists(\"ProjectSettings/Packages/com.unity.pipeline/EditorPipelineConfig.json\") };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playing": false,
+        "background": false,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false,
+        "recent": "",
+        "config": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

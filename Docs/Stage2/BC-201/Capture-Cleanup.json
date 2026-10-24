@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "System.IO.File.Copy(\"Assets/Docs/Stage2/BC-201/Stage01-Live.png\", \"Docs/Stage2/BC-201/Stage01-Live.png\", true); bool deleted=UnityEditor.AssetDatabase.DeleteAsset(\"Assets/Docs/Stage2/BC-201/Stage01-Live.png\"); foreach(var path in new [] {\"Assets/Docs/Stage2/BC-201\", \"Assets/Docs/Stage2\", \"Assets/Docs\"}) { if(System.IO.Directory.Exists(path) && System.IO.Directory.GetFileSystemEntries(path).Length==0) UnityEditor.AssetDatabase.DeleteAsset(path); } return new { copied=System.IO.File.Exists(\"Docs/Stage2/BC-201/Stage01-Live.png\"), deleted, background=UnityEngine.Application.runInBackground, playerBackground=UnityEditor.PlayerSettings.runInBackground };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "copied": true,
+        "deleted": true,
+        "background": false,
+        "playerBackground": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

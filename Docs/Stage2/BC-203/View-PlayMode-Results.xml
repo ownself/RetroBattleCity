@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="12" result="Passed" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.2843434">
+  <test-suite type="TestSuite" id="1069" name="BattleCity" fullname="BattleCity" runstate="Runnable" testcasecount="50" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.284343" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1131" name="BattleCity.PlayModeTests.dll" fullname="H:/Projects/Unities/BattleCity/Library/ScriptAssemblies/BattleCity.PlayModeTests.dll" runstate="Runnable" testcasecount="50" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.273330" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="26924" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1132" name="BattleCity" fullname="BattleCity" runstate="Runnable" testcasecount="50" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.270739" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1133" name="Tests" fullname="BattleCity.Tests" runstate="Runnable" testcasecount="50" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.267950" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1109" name="EnemyTankViewTests" fullname="BattleCity.Tests.EnemyTankViewTests" classname="BattleCity.Tests.EnemyTankViewTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.265066" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1118" name="ClearAndRepeatedBinding_ReuseOneRendererAndDoNotRetainOldTank" fullname="BattleCity.Tests.EnemyTankViewTests.ClearAndRepeatedBinding_ReuseOneRendererAndDoNotRetainOldTank" methodname="ClearAndRepeatedBinding_ReuseOneRendererAndDoNotRetainOldTank" classname="BattleCity.Tests.EnemyTankViewTests" runstate="Runnable" seed="927913026" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.049287" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1120" name="DestroyOwner_RemovesOwnedChildAndLeavesSharedInstanceUsable" fullname="BattleCity.Tests.EnemyTankViewTests.DestroyOwner_RemovesOwnedChildAndLeavesSharedInstanceUsable" methodname="DestroyOwner_RemovesOwnedChildAndLeavesSharedInstanceUsable" classname="BattleCity.Tests.EnemyTankViewTests" runstate="Runnable" seed="590698404" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.047128" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1119" name="DisableAndDestroyComponent_ClearDisplayButNeverDestroyOrStopSharedTank" fullname="BattleCity.Tests.EnemyTankViewTests.DisableAndDestroyComponent_ClearDisplayButNeverDestroyOrStopSharedTank" methodname="DisableAndDestroyComponent_ClearDisplayButNeverDestroyOrStopSharedTank" classname="BattleCity.Tests.EnemyTankViewTests" runstate="Runnable" seed="1282428106" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.070027" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1115" name="FractionalSharedMotion_RoundsDisplayWithoutWritingLogic_UsesExistingSpritesAndSharedMaterial" fullname="BattleCity.Tests.EnemyTankViewTests.FractionalSharedMotion_RoundsDisplayWithoutWritingLogic_UsesExistingSpritesAndSharedMaterial" methodname="FractionalSharedMotion_RoundsDisplayWithoutWritingLogic_UsesExistingSpritesAndSharedMaterial" classname="BattleCity.Tests.EnemyTankViewTests" runstate="Runnable" seed="1220399124" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.008520" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1121" name="Initialize_SnapshotsAllEightFrames_WithoutRetainingCatalogOrDefinition" fullname="BattleCity.Tests.EnemyTankViewTests.Initialize_SnapshotsAllEightFrames_WithoutRetainingCatalogOrDefinition" methodname="Initialize_SnapshotsAllEightFrames_WithoutRetainingCatalogOrDefinition" classname="BattleCity.Tests.EnemyTankViewTests" runstate="Runnable" seed="1461726373" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.005998" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1122" name="InvalidRebind_ClearsPreviousDisplayAndFailsClearly_WithoutExtraRenderer" fullname="BattleCity.Tests.EnemyTankViewTests.InvalidRebind_ClearsPreviousDisplayAndFailsClearly_WithoutExtraRenderer" methodname="InvalidRebind_ClearsPreviousDisplayAndFailsClearly_WithoutExtraRenderer" classname="BattleCity.Tests.EnemyTankViewTests" runstate="Runnable" seed="487533110" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.008140" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1116" name="Pause_RealFramesAndRepeatedRenderCannotAdvanceSharedPose_ResumeUsesNextTick" fullname="BattleCity.Tests.EnemyTankViewTests.Pause_RealFramesAndRepeatedRenderCannotAdvanceSharedPose_ResumeUsesNextTick" methodname="Pause_RealFramesAndRepeatedRenderCannotAdvanceSharedPose_ResumeUsesNextTick" classname="BattleCity.Tests.EnemyTankViewTests" runstate="Runnable" seed="1100064067" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.021628" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1117" name="RealSharedProjectileDeath_HidesImmediatelyAndRepeatedRenderDoesNotResurrectOrDamage" fullname="BattleCity.Tests.EnemyTankViewTests.RealSharedProjectileDeath_HidesImmediatelyAndRepeatedRenderDoesNotResurrectOrDamage" methodname="RealSharedProjectileDeath_HidesImmediatelyAndRepeatedRenderDoesNotResurrectOrDamage" classname="BattleCity.Tests.EnemyTankViewTests" runstate="Runnable" seed="1804936583" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.010651" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1114" name="SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation" fullname="BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation" classname="BattleCity.Tests.EnemyTankViewTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.024642" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1110" name="SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Up)" fullname="BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Up)" methodname="SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation" classname="BattleCity.Tests.EnemyTankViewTests" runstate="Runnable" seed="767335252" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.004915" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1111" name="SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Left)" fullname="BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Left)" methodname="SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation" classname="BattleCity.Tests.EnemyTankViewTests" runstate="Runnable" seed="305836435" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.004771" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1112" name="SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Down)" fullname="BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Down)" methodname="SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation" classname="BattleCity.Tests.EnemyTankViewTests" runstate="Runnable" seed="1733450374" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.004772" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1113" name="SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Right)" fullname="BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Right)" methodname="SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation" classname="BattleCity.Tests.EnemyTankViewTests" runstate="Runnable" seed="551925202" result="Passed" start-time="2026-10-24 04:48:38Z" end-time="2026-10-24 04:48:38Z" duration="0.004796" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: C:/Users/Jimmy/AppData/LocalLow/DefaultCompany/BattleCity\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

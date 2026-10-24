@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "UnityEditor.SessionState.EraseString(\"BC203.Integration.Resume\"); return new { frame = UnityEngine.Time.frameCount, playing = UnityEditor.EditorApplication.isPlaying, paused = UnityEngine.Object.FindAnyObjectByType<BattleCity.ArenaController>().Session.Clock.Paused };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "frame": 178362,
+        "playing": true,
+        "paused": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

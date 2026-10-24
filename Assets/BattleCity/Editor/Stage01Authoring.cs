@@ -12,6 +12,9 @@ namespace BattleCity.Editor
     public static class Stage01Authoring
     {
         public const string LevelPath = Phase0Baseline.Root + "/Data/Stage01.asset";
+        public const string EnemyPath = Phase0Baseline.Root + "/Data/EnemyBasicPrototype.asset";
+        public const string WavePath = Phase0Baseline.Root + "/Data/Stage01EnemyWave.asset";
+        public const string EnemyDefinitionId = "enemy.basic.prototype";
         public const string ScenePath = Phase0Baseline.Root + "/Scenes/Stage01.unity";
         public const string LayoutPath = Phase0Baseline.Root + "/Editor/Stage01Layout.txt";
         public const string ReferencePath = "Assets/Sprites/NES - Battle City (JPN) - Backgrounds - Stage 01.png";
@@ -42,6 +45,7 @@ namespace BattleCity.Editor
             }
             finally { UnityEngine.Object.DestroyImmediate(input); }
 
+            var wave = BuildWaveAssets();
             // Save a COPY of the proven arena harness; never rebuild or save its source scene/data.
             var source = EditorSceneManager.OpenScene(Phase1Arena.ScenePath, OpenSceneMode.Single);
             if (!EditorSceneManager.SaveScene(source, ScenePath, true)) throw new InvalidOperationException("Could not copy arena harness.");
@@ -49,16 +53,18 @@ namespace BattleCity.Editor
             var controller = scene.GetRootGameObjects().SelectMany(r => r.GetComponentsInChildren<ArenaController>()).Single();
             controller.name = "Stage 01 - WASD or arrows; Space fires; Esc pauses";
             controller.level = AssetDatabase.LoadAssetAtPath<LevelDefinition>(LevelPath);
+            controller.enemyWaveDefinition = wave;
             controller.playerRenderer.transform.position = PixelGrid.ToWorld(controller.level.playerSpawnPixels);
             controller.mapView.Render(new MapState(controller.level));
-            controller.ValidateBindings();
-            var baseRenderer = new GameObject("Base - intact display only (BC-204 pending)", typeof(SpriteRenderer)).GetComponent<SpriteRenderer>();
+            var baseRenderer = new GameObject("Base - session state projection", typeof(SpriteRenderer)).GetComponent<SpriteRenderer>();
             baseRenderer.sprite = controller.sprites.Get("base.alive");
             baseRenderer.sharedMaterial = controller.playerRenderer.sharedMaterial;
             baseRenderer.sortingLayerName = "Actors";
             baseRenderer.transform.position = PixelGrid.ToWorld(controller.level.baseCenterPixels);
+            controller.baseRenderer = baseRenderer;
+            controller.ValidateBindings();
             if (!EditorSceneManager.SaveScene(scene, ScenePath)) throw new InvalidOperationException("Could not save Stage 01.");
-            return "BC-200 Stage 01 saved: " + ScenePath;
+            return "BC-204 Stage 01 saved with real base and 20 prototype basic enemies: " + ScenePath;
         }
 
         public static void Populate(LevelDefinition level)
@@ -92,9 +98,47 @@ namespace BattleCity.Editor
             // Frozen LevelDefinition defaults, NOT pixel-verified: no tanks/spawn markers exist in the PNG.
             level.playerSpawnPixels = new Vector2Int(72, 8);
             level.enemySpawnPixels = new[] { new Vector2Int(8, 200), new Vector2Int(104, 200), new Vector2Int(200, 200) };
-            level.enemySequence = Array.Empty<string>(); // BC-203 owns wave content; do not invent an original sequence.
+            // Project prototype sequence, NOT a claim about the original game's first wave.
+            level.enemySequence = Enumerable.Repeat(EnemyDefinitionId, 20).ToArray();
             level.maxActiveEnemies = 4;
             level.Validate();
+        }
+
+        private static EnemyWaveDefinition BuildWaveAssets()
+        {
+            var enemy = AssetDatabase.LoadAssetAtPath<TankDefinition>(EnemyPath);
+            if (enemy == null)
+            {
+                enemy = ScriptableObject.CreateInstance<TankDefinition>();
+                AssetDatabase.CreateAsset(enemy, EnemyPath);
+            }
+            enemy.definitionId = EnemyDefinitionId;
+            enemy.spritePrefix = "tank.white.enemy.basic";
+            enemy.requiresCalibration = true;
+            enemy.moveSpeedPixelsPerSecond = 60;
+            enemy.bulletSpeedPixelsPerSecond = 180;
+            enemy.fireCooldownTicks = 15;
+            enemy.maxActiveBullets = 1;
+            enemy.hitPoints = 1;
+            enemy.score = 0; // Scoring is not part of BC-203.
+            enemy.Validate();
+            EditorUtility.SetDirty(enemy);
+            AssetDatabase.SaveAssetIfDirty(enemy);
+            var wave = AssetDatabase.LoadAssetAtPath<EnemyWaveDefinition>(WavePath);
+            if (wave == null)
+            {
+                wave = ScriptableObject.CreateInstance<EnemyWaveDefinition>();
+                AssetDatabase.CreateAsset(wave, WavePath);
+            }
+            wave.tankDefinitions = new[] { enemy };
+            wave.seed = 1;
+            wave.preparationTicks = 60;
+            wave.spawnIntervalTicks = 120;
+            wave.requiresCalibration = true;
+            wave.Validate();
+            EditorUtility.SetDirty(wave);
+            AssetDatabase.SaveAssetIfDirty(wave);
+            return wave;
         }
 
         public static void ValidatePlacement(LevelDefinition level)

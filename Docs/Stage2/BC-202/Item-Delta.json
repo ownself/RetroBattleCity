@@ -1,0 +1,18 @@
+{
+  "changedFromItemStart": [
+    "Assets\\BattleCity\\Scripts\\Core\\ArenaSession.cs",
+    "Assets\\BattleCity\\Scripts\\Tanks\\TankMotor.cs",
+    "Assets\\BattleCity\\Scripts\\Tanks\\TankState.cs"
+  ],
+  "addedAssets": [
+    "Assets\\BattleCity\\Tests\\EditMode\\EnemyBrainTests.cs",
+    "Assets\\BattleCity\\Tests\\EditMode\\EnemyBrainTests.cs.meta",
+    "Assets\\BattleCity\\Tests\\PlayMode\\EnemyBrainPlayModeTests.cs",
+    "Assets\\BattleCity\\Tests\\PlayMode\\EnemyBrainPlayModeTests.cs.meta",
+    "Assets\\BattleCity\\Scripts\\AI\\EnemyBrain.cs",
+    "Assets\\BattleCity\\Scripts\\AI\\EnemyBrain.cs.meta",
+    "Assets\\BattleCity\\Scripts\\AI\\EnemyBrainParameters.cs",
+    "Assets\\BattleCity\\Scripts\\AI\\EnemyBrainParameters.cs.meta"
+  ],
+  "missing": []
+}

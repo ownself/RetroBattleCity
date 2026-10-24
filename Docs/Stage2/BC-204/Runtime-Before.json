@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "return new { scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene().path, playing=UnityEditor.EditorApplication.isPlaying, dirty=UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty, background=UnityEngine.Application.runInBackground, autoEnabled=UnityEditor.SessionState.GetBool(\"Unity.Pipeline.AutoTick.Enabled\",false), autoInterval=UnityEditor.SessionState.GetInt(\"Unity.Pipeline.AutoTick.IntervalMs\",-1), recent=UnityEditor.EditorPrefs.GetString(\"RecentlyUsedSceneGuid-0\") };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "playing": false,
+        "dirty": false,
+        "background": false,
+        "autoEnabled": false,
+        "autoInterval": -1,
+        "recent": ""
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

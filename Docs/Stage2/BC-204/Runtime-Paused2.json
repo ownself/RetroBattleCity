@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c=UnityEngine.Object.FindAnyObjectByType<BattleCity.ArenaController>(); return new {frame=UnityEngine.Time.frameCount,tick=c.Session.Clock.Tick, sprite=c.baseRenderer.sprite.name, alive=c.Session.Base.IsAlive, failure=c.Session.BaseFailureRequested,paused=c.Session.Clock.Paused, observer=UnityEditor.SessionState.GetBool(\"BC204.ObserverActive\",false)};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "frame": 35649,
+        "tick": 355,
+        "sprite": "base.dead",
+        "alive": false,
+        "failure": true,
+        "paused": true,
+        "observer": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

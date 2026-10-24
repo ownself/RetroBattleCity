@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 1.43,
+      "summary": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.BaseStatePlayModeTests.CombatArenaUnboundRendererMeansNoBaseOrFailureTarget",
+          "Status": "Passed",
+          "Duration": 0.064058,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStatePlayModeTests.Stage01_RealUpdateKeyboardWeaponBreachesBrickAndDestroysBase_DeadProjectionAndOneNotification",
+          "Status": "Passed",
+          "Duration": 1.2953354,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStatePlayModeTests.Stage01_ReloadCreatesIndependentIntactBaseAndNoFailureRequest",
+          "Status": "Passed",
+          "Duration": 0.0311389,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

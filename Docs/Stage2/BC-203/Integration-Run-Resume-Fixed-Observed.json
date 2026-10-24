@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "return UnityEditor.SessionState.GetString(\"BC203.Integration.Resume\", \"pending\");"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "{\"firstFrame\":136102,\"observedFrame\":136103,\"firstTick\":4522,\"observedTick\":4526,\"resumedTicks\":4,\"droppedBefore\":3,\"droppedAfter\":3}"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

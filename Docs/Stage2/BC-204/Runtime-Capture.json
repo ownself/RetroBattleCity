@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command capture game_view",
+  "data": {
+    "command": "capture game_view",
+    "parameters": {
+      "source": "screen",
+      "width": "1523",
+      "height": "752",
+      "save_path": "Docs/Stage2/BC-204/Base-Destroyed.png"
+    },
+    "result": {
+      "width": 1523,
+      "height": 752,
+      "encoding": "png",
+      "bytes": 25501,
+      "source": "screen",
+      "savedPath": "Assets/Docs/Stage2/BC-204/Base-Destroyed.png"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var t=System.AppDomain.CurrentDomain.GetAssemblies().Select(a=>a.GetType(\"Unity.Pipeline.Editor.Commands.AutoTickCommand\")).First(x=>x!=null); var flags=System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic; return new {enabled=t.GetProperty(\"IsEnabled\",flags).GetValue(null), interval=t.GetProperty(\"CurrentIntervalMs\",flags).GetValue(null), width=UnityEngine.Screen.width,height=UnityEngine.Screen.height};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "enabled": true,
+        "interval": 16,
+        "width": 1523,
+        "height": 752
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

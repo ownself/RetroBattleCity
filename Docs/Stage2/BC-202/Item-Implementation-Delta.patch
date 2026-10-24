@@ -1,0 +1,131 @@
+--- item-start/Assets/BattleCity/Scripts/Core/ArenaSession.cs
++++ current/Assets/BattleCity/Scripts/Core/ArenaSession.cs
+@@ -12,6 +12,8 @@
+         private readonly List<TankState> tanks = new List<TankState>();
+         private readonly List<BulletTarget> targets = new List<BulletTarget>();
+         private readonly List<Rect> blockers = new List<Rect>();
++        private readonly Dictionary<long, EnemyBrain> enemyBrains = new Dictionary<long, EnemyBrain>();
++        private readonly List<int> decisionMasks = new List<int>();
+         private long nextEntityId;
+         private bool focused = true;
+         public LogicClock Clock { get; } = new LogicClock();
+@@ -45,10 +47,26 @@
+             return state;
+         }
+ 
++        /// <summary>Opt-in control for an existing shared enemy. No spawning, waves, or implicit AI ownership.</summary>
++        public EnemyBrain RegisterEnemyAI(long entityId, uint seed, EnemyBrainParameters parameters = null,
++            CardinalDirection initialDirection = CardinalDirection.Down)
++        {
++            for (int i = 0; i < tanks.Count; i++) if (tanks[i].EntityId == entityId)
++            {
++                if (tanks[i].Team != CombatTeam.Enemy || !tanks[i].IsAlive || enemyBrains.ContainsKey(entityId))
++                    throw new ArgumentException("AI requires a living, unregistered enemy tank.", nameof(entityId));
++                var brain = new EnemyBrain(seed, parameters ?? EnemyBrainParameters.Prototype, initialDirection);
++                enemyBrains.Add(entityId, brain);
++                return brain;
++            }
++            throw new ArgumentOutOfRangeException(nameof(entityId));
++        }
++
+         /// <summary>Non-player control seam. A held command persists, a fire edge is consumed once.</summary>
+         public void SetTankCommand(long entityId, TankCommand command)
+         {
+             if (entityId == PlayerEntityId) throw new ArgumentException("Player commands come from the input buffer.", nameof(entityId));
++            if (enemyBrains.ContainsKey(entityId)) throw new ArgumentException("Registered AI owns this tank's commands.", nameof(entityId));
+             if (command.Direction != CardinalDirection.None) command.Direction.Vector();
+             for (int i = 0; i < tanks.Count; i++) if (tanks[i].EntityId == entityId)
+             {
+@@ -94,6 +112,24 @@
+         {
+             LastCommand = input.ConsumeTick();
+             PlayerTank.Command = LastCommand;
++            // Capture ALL local options before any decision or movement. Later IDs cannot observe this tick's moves.
++            decisionMasks.Clear();
++            for (int i = 0; i < tanks.Count; i++)
++            {
++                var tank = tanks[i];
++                int mask = 0;
++                if (tank.IsAlive && enemyBrains.ContainsKey(tank.EntityId))
++                {
++                    CollectBlockers(tank);
++                    for (int direction = 0; direction < 4; direction++)
++                        if ((tank.Motor.PreviewStep((CardinalDirection)direction, tank.MoveSpeedPixelsPerSecond, Map, blockers)
++                            - tank.Motor.Position).sqrMagnitude > MapState.Epsilon * MapState.Epsilon) mask |= 1 << direction;
++                }
++                decisionMasks.Add(mask);
++            }
++            for (int i = 0; i < tanks.Count; i++)
++                if (enemyBrains.TryGetValue(tanks[i].EntityId, out var brain))
++                    tanks[i].Command = brain.Decide(tanks[i].IsAlive, decisionMasks[i]);
+             for (int i = 0; i < tanks.Count; i++)
+             {
+                 CollectBlockers(tanks[i]); // Later IDs see earlier movement; no mutual crossing.
+--- item-start/Assets/BattleCity/Scripts/Tanks/TankState.cs
++++ current/Assets/BattleCity/Scripts/Tanks/TankState.cs
+@@ -8,6 +8,7 @@
+     public sealed class TankState
+     {
+         private readonly float moveSpeed;
++        internal float MoveSpeedPixelsPerSecond => moveSpeed;
+         public long EntityId { get; }
+         public CombatTeam Team { get; }
+         public TankMotor Motor { get; }
+--- item-start/Assets/BattleCity/Scripts/Tanks/TankMotor.cs
++++ current/Assets/BattleCity/Scripts/Tanks/TankMotor.cs
+@@ -27,12 +27,25 @@
+         public void Step(CardinalDirection requested, float speedPixelsPerSecond, MapState map,
+             IReadOnlyList<Rect> blockers = null)
+         {
+-            IsMoving = false;
+-            if (requested == CardinalDirection.None) return;
++            var before = Position;
++            Position = CalculateStep(requested, speedPixelsPerSecond, map, blockers, out var facing);
++            Facing = facing;
++            UpdateMovement(before);
++        }
++
++        // Decision query uses exactly the movement/alignment rules, without advancing pose or animation.
++        internal Vector2 PreviewStep(CardinalDirection requested, float speedPixelsPerSecond, MapState map,
++            IReadOnlyList<Rect> blockers) => CalculateStep(requested, speedPixelsPerSecond, map, blockers, out _);
++
++        private Vector2 CalculateStep(CardinalDirection requested, float speedPixelsPerSecond, MapState map,
++            IReadOnlyList<Rect> blockers, out CardinalDirection facing)
++        {
++            facing = Facing;
++            if (requested == CardinalDirection.None) return Position;
+             var direction = requested.Vector(); // validates before changing state
+             if (speedPixelsPerSecond <= 0 || float.IsNaN(speedPixelsPerSecond) || float.IsInfinity(speedPixelsPerSecond))
+                 throw new ArgumentOutOfRangeException(nameof(speedPixelsPerSecond));
+-            var before = Position;
++            var position = Position;
+             if (requested.IsVertical() != Facing.IsVertical())
+             {
+                 float axis = requested.IsVertical() ? Position.x : Position.y;
+@@ -40,21 +53,18 @@
+                 var aligned = requested.IsVertical() ? new Vector2(snapped, Position.y) : new Vector2(Position.x, snapped);
+                 // Both endpoint and whole correction path must be clear. Never jump over a wall.
+                 if (!map.CanOccupy(aligned, HalfSizePixels, blockers) ||
+-                    (map.MoveAxis(Position, aligned - Position, HalfSizePixels, blockers) - aligned).sqrMagnitude > MapState.Epsilon * MapState.Epsilon) return;
++                    (map.MoveAxis(Position, aligned - Position, HalfSizePixels, blockers) - aligned).sqrMagnitude > MapState.Epsilon * MapState.Epsilon) return Position;
+                 if (Mathf.Abs(snapped - axis) > MaxTurnCorrectionPixels + MapState.Epsilon)
+                 {
+                     // A held side-turn must make progress even after the old movement key is released.
+                     // Approach the alignment line at normal speed instead of rejecting this request forever.
+-                    Position = map.MoveAxis(Position, Vector2.MoveTowards(Position, aligned,
++                    return map.MoveAxis(Position, Vector2.MoveTowards(Position, aligned,
+                         speedPixelsPerSecond * PixelGrid.LogicStep) - Position, HalfSizePixels, blockers);
+-                    UpdateMovement(before);
+-                    return;
+                 }
+-                Position = aligned;
++                position = aligned;
+             }
+-            Facing = requested;
+-            Position = map.MoveAxis(Position, direction * (speedPixelsPerSecond * PixelGrid.LogicStep), HalfSizePixels, blockers);
+-            UpdateMovement(before);
++            facing = requested;
++            return map.MoveAxis(position, direction * (speedPixelsPerSecond * PixelGrid.LogicStep), HalfSizePixels, blockers);
+         }
+ 
+         internal void Stop() => IsMoving = false;

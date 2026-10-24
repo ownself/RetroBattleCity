@@ -1,0 +1,10 @@
+warning: in the working copy of 'Assets/BattleCity/Scripts/Combat/BulletHit.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Scripts/Combat/BulletWorld.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Scripts/Combat/WeaponState.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Scripts/Core/ArenaController.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Scripts/Core/ArenaSession.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Scripts/Map/MapState.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Scripts/Tanks/TankMotor.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/BattleCity/Tests/EditMode/CombatEffectsTests.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Docs/BattleCity-Implementation-Plan.md', LF will be replaced by CRLF the next time Git touches it
+exit=0

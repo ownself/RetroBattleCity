@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "UnityEditor.FileUtil.ReplaceFile(\"Temp/BC-203-integration/EditorUserSettings-original.asset\", \"UserSettings/EditorUserSettings.asset\"); return new { recent1 = UnityEditor.EditorUserSettings.GetConfigValue(\"RecentlyUsedSceneGuid-1\"), recent2 = UnityEditor.EditorUserSettings.GetConfigValue(\"RecentlyUsedSceneGuid-2\") };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "recent1": "",
+        "recent2": ""
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

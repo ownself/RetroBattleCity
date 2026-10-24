@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace BattleCity
@@ -7,10 +8,18 @@ namespace BattleCity
     {
         public LevelDefinition level;
         public TankDefinition playerDefinition;
+        public EnemyWaveDefinition enemyWaveDefinition;
         public SpriteCatalog sprites;
         public ArenaMapView mapView;
         public SpriteRenderer playerRenderer;
+        // Explicit binding enables the base; unbound combat harnesses remain base-free.
+        public SpriteRenderer baseRenderer;
+        private Sprite baseAlive, baseDead;
         private readonly Sprite[,] playerFrames = new Sprite[4, 2];
+        private readonly Sprite[] spawnFrames = new Sprite[4];
+        private readonly Dictionary<long, EnemyTankView> enemyViews = new Dictionary<long, EnemyTankView>();
+        private readonly List<long> retiredViews = new List<long>();
+        private SpriteRenderer spawnHint;
         public ArenaSession Session { get; private set; }
         public BulletView BulletView { get; private set; }
         public CombatEffectView EffectView { get; private set; }
@@ -20,7 +29,13 @@ namespace BattleCity
             ValidateBindings();
             for (int direction = 0; direction < 4; direction++) for (int frame = 0; frame < 2; frame++)
                 playerFrames[direction, frame] = sprites.Get(playerDefinition.spritePrefix + "." + ((CardinalDirection)direction).SpriteKey() + "." + frame);
-            Session = new ArenaSession(level, playerDefinition);
+            if (enemyWaveDefinition != null)
+                for (int i = 0; i < spawnFrames.Length; i++) spawnFrames[i] = sprites.Get("effect.spawn." + i);
+            if (baseRenderer != null)
+            {
+                baseAlive = sprites.Get("base.alive"); baseDead = sprites.Get("base.dead");
+            }
+            Session = new ArenaSession(level, playerDefinition, enemyWaveDefinition, baseRenderer != null);
             BulletView = new GameObject("Bullets - display only").AddComponent<BulletView>();
             BulletView.transform.SetParent(transform, false);
             BulletView.Initialize(Session.Bullets, sprites, playerRenderer.sharedMaterial);
@@ -29,14 +44,18 @@ namespace BattleCity
             EffectView.Initialize(Session.Effects, sprites, playerRenderer.sharedMaterial);
             mapView.Render(Session.Map);
             Session.SetFocus(Application.isFocused);
+            RenderBase();
             RenderPlayer();
+            RenderEnemies();
         }
 
         private void Update()
         {
             Session.AdvanceFrame(Time.unscaledDeltaTime, KeyboardInputSource.Read());
             mapView.Render(Session.Map); // No tile writes unless logical cell revisions changed.
+            RenderBase();
             RenderPlayer();
+            RenderEnemies();
             BulletView.Render();
             EffectView.Render();
         }
@@ -48,11 +67,25 @@ namespace BattleCity
 
         private void OnDisable()
         {
-            if (Session != null) Session.SetPaused(true);
+            if (Session != null)
+            {
+                Session.SetPaused(true);
+                Session.Bullets.Clear(); // Release owner leases, not just their display.
+                if (BulletView != null) BulletView.Render();
+            }
+            ClearEnemyDisplays();
             ClearEffects();
         }
 
-        private void OnDestroy() => ClearEffects();
+        private void OnDestroy()
+        {
+            ClearEnemyDisplays();
+            ClearEffects();
+            // Destroying just the host component must not strand children referencing its old session.
+            if (BulletView != null) Destroy(BulletView.gameObject);
+            if (EffectView != null) Destroy(EffectView.gameObject);
+            Session = null;
+        }
 
         /// <summary>Lifecycle seam for reset/reload; does not implement a full session restart.
         /// Re-enabling remains paused and never replays the previous tick's hits.</summary>
@@ -62,8 +95,78 @@ namespace BattleCity
             if (EffectView != null) EffectView.Clear();
         }
 
+        private void RenderEnemies()
+        {
+            retiredViews.Clear();
+            foreach (var pair in enemyViews)
+            {
+                TankState tank = null;
+                for (int i = 0; i < Session.Tanks.Count; i++)
+                    if (Session.Tanks[i].EntityId == pair.Key) { tank = Session.Tanks[i]; break; }
+                if (tank == null || !tank.IsAlive) retiredViews.Add(pair.Key);
+            }
+            foreach (long id in retiredViews)
+            {
+                var view = enemyViews[id];
+                view.Clear();
+                Destroy(view.gameObject);
+                enemyViews.Remove(id);
+            }
+            foreach (var tank in Session.Tanks)
+            {
+                var definition = Session.GetWaveEnemyDefinition(tank.EntityId);
+                if (!tank.IsAlive || definition == null) continue;
+                if (!enemyViews.TryGetValue(tank.EntityId, out var view))
+                {
+                    view = new GameObject("Enemy " + tank.EntityId + " - display only").AddComponent<EnemyTankView>();
+                    view.transform.SetParent(transform, false);
+                    view.Initialize(tank, definition, sprites, playerRenderer.sharedMaterial);
+                    enemyViews.Add(tank.EntityId, view);
+                }
+                view.Render();
+            }
+            var wave = Session.EnemyWave;
+            if (wave?.Reservation is EnemySpawnRequest reservation)
+            {
+                if (spawnHint == null)
+                {
+                    spawnHint = new GameObject("Enemy preparation - display only", typeof(SpriteRenderer)).GetComponent<SpriteRenderer>();
+                    spawnHint.transform.SetParent(transform, false);
+                    spawnHint.sharedMaterial = playerRenderer.sharedMaterial;
+                    spawnHint.sortingLayerName = "Effects";
+                }
+                int age = wave.PreparationTicks - wave.PreparationRemainingTicks;
+                int frame = (int)Math.Min(3L, (long)age * spawnFrames.Length / wave.PreparationTicks);
+                spawnHint.sprite = spawnFrames[frame];
+                spawnHint.transform.position = PixelGrid.ToWorld(reservation.PositionPixels);
+                spawnHint.enabled = true;
+            }
+            else if (spawnHint != null) { spawnHint.enabled = false; spawnHint.sprite = null; }
+        }
+
+        private void ClearEnemyDisplays()
+        {
+            foreach (var view in enemyViews.Values)
+                if (view != null) { view.Clear(); Destroy(view.gameObject); }
+            enemyViews.Clear();
+            retiredViews.Clear();
+            if (spawnHint != null)
+            {
+                spawnHint.enabled = false; spawnHint.sprite = null;
+                Destroy(spawnHint.gameObject); spawnHint = null;
+            }
+        }
+
+        private void RenderBase()
+        {
+            if (baseRenderer == null) return;
+            baseRenderer.transform.position = PixelGrid.ToWorld(Session.Base.Position);
+            baseRenderer.sprite = Session.Base.IsAlive ? baseAlive : baseDead;
+        }
+
         private void RenderPlayer()
         {
+            playerRenderer.enabled = Session.PlayerTank.IsAlive;
             var position = Session.Player.Position;
             // Display rounding is never written back to the motor.
             position = new Vector2(Mathf.Round(position.x), Mathf.Round(position.y));
@@ -76,6 +179,21 @@ namespace BattleCity
             if (level == null || playerDefinition == null || sprites == null || mapView == null || playerRenderer == null)
                 throw new InvalidOperationException("Missing arena reference.");
             level.Validate(); playerDefinition.Validate(); sprites.Validate(); mapView.ValidateBindings();
+            if (baseRenderer != null)
+            {
+                if (baseRenderer == playerRenderer) throw new InvalidOperationException("Base and player require distinct renderers.");
+                sprites.Get("base.alive"); sprites.Get("base.dead");
+            }
+            if (enemyWaveDefinition != null)
+            {
+                // Resolve every sequence ID now, not halfway through a future spawn callback.
+                _ = new EnemyWaveState(level, enemyWaveDefinition);
+                if (playerRenderer.sharedMaterial == null) throw new InvalidOperationException("Missing enemy display material.");
+                foreach (var definition in enemyWaveDefinition.tankDefinitions)
+                    for (int direction = 0; direction < 4; direction++) for (int frame = 0; frame < 2; frame++)
+                        sprites.Get(definition.spritePrefix + "." + ((CardinalDirection)direction).SpriteKey() + "." + frame);
+                for (int frame = 0; frame < 4; frame++) sprites.Get("effect.spawn." + frame);
+            }
         }
     }
 }

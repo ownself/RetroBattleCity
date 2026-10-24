@@ -1,0 +1,443 @@
+[
+  {
+    "command": "console get",
+    "name": "get",
+    "group": "console",
+    "description": "Get captured Unity console output (Editor or Player; supports tail, level filtering, and follow via a cursor)",
+    "tags": [
+      "observability/console"
+    ],
+    "package": "Unity.Pipeline",
+    "mainThreadRequired": false,
+    "parameters": [
+      {
+        "name": "tail",
+        "description": "Maximum number of most-recent entries to return",
+        "type": "Int32",
+        "required": false,
+        "defaultValue": 100
+      },
+      {
+        "name": "level",
+        "description": "Minimum severity to include: log | warn | error",
+        "type": "String",
+        "required": false,
+        "defaultValue": "log"
+      },
+      {
+        "name": "since",
+        "description": "Cursor: only return entries newer than this seq. Use the 'cursor' from a previous response to follow.",
+        "type": "Int64",
+        "required": false,
+        "defaultValue": -1
+      },
+      {
+        "name": "since_session",
+        "description": "Session the 'since' cursor came from: pass the 'session' from a previous response. A cursor from another session is refused and the tail returned with reset=true.",
+        "type": "String",
+        "required": false,
+        "defaultValue": null
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "console get",
+      "description": "Get captured Unity console output (Editor or Player; supports tail, level filtering, and follow via a cursor)",
+      "properties": {
+        "tail": {
+          "type": "integer",
+          "description": "Maximum number of most-recent entries to return",
+          "default": 100
+        },
+        "level": {
+          "type": "string",
+          "description": "Minimum severity to include: log | warn | error",
+          "default": "log"
+        },
+        "since": {
+          "type": "integer",
+          "description": "Cursor: only return entries newer than this seq. Use the 'cursor' from a previous response to follow.",
+          "default": -1
+        },
+        "since_session": {
+          "type": "string",
+          "description": "Session the 'since' cursor came from: pass the 'session' from a previous response. A cursor from another session is refused and the tail returned with reset=true."
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": false,
+        "methodName": "Unity.Pipeline.Runtime.Commands.ConsoleCommand.Get"
+      }
+    }
+  },
+  {
+    "command": "console status",
+    "name": "status",
+    "group": "console",
+    "description": "Console ground truth and buffer counters without pulling entries: compile-failure flag, Editor console counts, and the buffer's retained counts and cursor.",
+    "tags": [
+      "observability/console"
+    ],
+    "package": "Unity.Pipeline",
+    "mainThreadRequired": false,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "console status",
+      "description": "Console ground truth and buffer counters without pulling entries: compile-failure flag, Editor console counts, and the buffer's retained counts and cursor.",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": false,
+        "methodName": "Unity.Pipeline.Runtime.Commands.ConsoleCommand.Status"
+      }
+    }
+  },
+  {
+    "command": "editor set_auto_tick",
+    "name": "set_auto_tick",
+    "group": "editor",
+    "description": "Keep the editor ticking while unfocused by forcing EditorApplication.SignalTick at a throttled rate",
+    "tags": [
+      "editor"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "enable",
+        "description": "Enable (true) or disable (false) auto-tick mode",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": true
+      },
+      {
+        "name": "interval_ms",
+        "description": "Minimum milliseconds between forced ticks. 0 = every update (max rate, pegs a CPU core). Default 16 (~60Hz).",
+        "type": "Int32",
+        "required": false,
+        "defaultValue": 16
+      },
+      {
+        "name": "persist",
+        "description": "Persist this choice to SessionState so it survives a domain reload. Set false for a one-off/expensive setting (e.g. interval_ms=0) that should revert to the last persisted choice (or the default) after the next recompile instead of sticking for the rest of the session.",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": true
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor set_auto_tick",
+      "description": "Keep the editor ticking while unfocused by forcing EditorApplication.SignalTick at a throttled rate",
+      "properties": {
+        "enable": {
+          "type": "boolean",
+          "description": "Enable (true) or disable (false) auto-tick mode",
+          "default": true
+        },
+        "interval_ms": {
+          "type": "integer",
+          "description": "Minimum milliseconds between forced ticks. 0 = every update (max rate, pegs a CPU core). Default 16 (~60Hz).",
+          "default": 16
+        },
+        "persist": {
+          "type": "boolean",
+          "description": "Persist this choice to SessionState so it survives a domain reload. Set false for a one-off/expensive setting (e.g. interval_ms=0) that should revert to the last persisted choice (or the default) after the next recompile instead of sticking for the rest of the session.",
+          "default": true
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.AutoTickCommand.SetAutoTick"
+      }
+    }
+  },
+  {
+    "command": "script eval",
+    "name": "eval",
+    "group": "script",
+    "description": "Evaluate C# code dynamically using Roslyn compiler",
+    "tags": [
+      "scripts/eval"
+    ],
+    "package": "Unity.Pipeline",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "code",
+        "description": "C# code to evaluate",
+        "type": "String",
+        "required": true,
+        "defaultValue": null
+      },
+      {
+        "name": "timeout",
+        "description": "Timeout in seconds",
+        "type": "Double",
+        "required": false,
+        "defaultValue": 30
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "script eval",
+      "description": "Evaluate C# code dynamically using Roslyn compiler",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "C# code to evaluate"
+        },
+        "timeout": {
+          "type": "number",
+          "description": "Timeout in seconds",
+          "default": 30
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Runtime.Commands.CodeEvalCommand.Eval"
+      }
+    }
+  },
+  {
+    "command": "script recompile",
+    "name": "recompile",
+    "group": "script",
+    "description": "Force a script recompile (works while unfocused/minimized). Poll script recompile_status for completion.",
+    "tags": [
+      "scripts/compile"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "focus",
+        "description": "If true, bring the Editor to the foreground before compiling. Off by default.",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": false
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "script recompile",
+      "description": "Force a script recompile (works while unfocused/minimized). Poll script recompile_status for completion.",
+      "properties": {
+        "focus": {
+          "type": "boolean",
+          "description": "If true, bring the Editor to the foreground before compiling. Off by default.",
+          "default": false
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.RecompileCommand.Recompile"
+      }
+    }
+  },
+  {
+    "command": "script recompile_status",
+    "name": "recompile_status",
+    "group": "script",
+    "description": "Get the status of the last recompile: idle | triggered | compiling | completed | up_to_date.",
+    "tags": [
+      "scripts/compile"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": false,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "script recompile_status",
+      "description": "Get the status of the last recompile: idle | triggered | compiling | completed | up_to_date.",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": false,
+        "methodName": "Unity.Pipeline.Editor.Commands.RecompileCommand.RecompileStatus"
+      }
+    }
+  },
+  {
+    "command": "test list",
+    "name": "list",
+    "group": "test",
+    "description": "List all available tests (EditMode and/or PlayMode) without running them",
+    "tags": [
+      "tests"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "mode",
+        "description": "Test mode: all, editor, playmode (default: all)",
+        "type": "String",
+        "required": false,
+        "defaultValue": "all"
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "test list",
+      "description": "List all available tests (EditMode and/or PlayMode) without running them",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "description": "Test mode: all, editor, playmode (default: all)",
+          "default": "all"
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.TestCommands.List"
+      }
+    }
+  },
+  {
+    "command": "test run",
+    "name": "run",
+    "group": "test",
+    "description": "Execute Unity tests with filtering options",
+    "tags": [
+      "tests"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "mode",
+        "description": "Test mode: all, editor, playmode (default: all)",
+        "type": "String",
+        "required": false,
+        "defaultValue": "all"
+      },
+      {
+        "name": "filter",
+        "description": "Test name filter pattern (case-insensitive partial match)",
+        "type": "String",
+        "required": false,
+        "defaultValue": ""
+      },
+      {
+        "name": "filter_type",
+        "description": "Filter type: testName, assembly, category (default: testName)",
+        "type": "String",
+        "required": false,
+        "defaultValue": "testName"
+      },
+      {
+        "name": "include_explicit",
+        "description": "Include tests marked with [Explicit] attribute",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": false
+      },
+      {
+        "name": "async_tests",
+        "description": "Run asynchronously - return immediately, poll /test-status for results",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": false
+      },
+      {
+        "name": "timeout",
+        "description": "Test execution timeout in seconds (default: 600)",
+        "type": "Double",
+        "required": false,
+        "defaultValue": 600
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "test run",
+      "description": "Execute Unity tests with filtering options",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "description": "Test mode: all, editor, playmode (default: all)",
+          "default": "all"
+        },
+        "filter": {
+          "type": "string",
+          "description": "Test name filter pattern (case-insensitive partial match)",
+          "default": ""
+        },
+        "filter_type": {
+          "type": "string",
+          "description": "Filter type: testName, assembly, category (default: testName)",
+          "default": "testName"
+        },
+        "include_explicit": {
+          "type": "boolean",
+          "description": "Include tests marked with [Explicit] attribute",
+          "default": false
+        },
+        "async_tests": {
+          "type": "boolean",
+          "description": "Run asynchronously - return immediately, poll /test-status for results",
+          "default": false
+        },
+        "timeout": {
+          "type": "number",
+          "description": "Test execution timeout in seconds (default: 600)",
+          "default": 600
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.TestCommands.Run"
+      }
+    }
+  },
+  {
+    "command": "test status",
+    "name": "status",
+    "group": "test",
+    "description": "Get status of running async test execution",
+    "tags": [
+      "tests"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": false,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "test status",
+      "description": "Get status of running async test execution",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": false,
+        "methodName": "Unity.Pipeline.Editor.Commands.TestCommands.Status"
+      }
+    }
+  }
+]

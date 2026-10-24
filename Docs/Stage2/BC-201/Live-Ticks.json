@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "command": "command job wait",
+  "data": {
+    "command": "job wait",
+    "parameters": {
+      "condition": "{\"findType\":\"BattleCity.ArenaController\",\"member\":\"Session.Clock.Tick\",\"op\":\"changed\"}",
+      "timeout": "10",
+      "return_history": "true"
+    },
+    "result": {
+      "state": "met",
+      "met": true,
+      "timedOut": false,
+      "member": "Session.Clock.Tick",
+      "op": "changed",
+      "value": 517,
+      "initialValue": 511,
+      "elapsedMs": 105,
+      "framesObserved": 2,
+      "history": [
+        {
+          "value": 511,
+          "elapsedMs": 2
+        },
+        {
+          "value": 517,
+          "elapsedMs": 105
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

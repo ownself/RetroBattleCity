@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "if(UnityEditor.EditorApplication.isPlaying || UnityEditor.EditorApplication.isCompiling) throw new System.Exception(\"Editor not idle\"); var image=\"Assets/Docs/Stage2/BC-204/Base-Destroyed.png\"; if(System.IO.File.Exists(image)) UnityEditor.AssetDatabase.DeleteAsset(image); foreach(var dir in new[]{\"Assets/Docs/Stage2/BC-204\",\"Assets/Docs/Stage2\",\"Assets/Docs\"}) if(System.IO.Directory.Exists(dir) && System.IO.Directory.GetFileSystemEntries(dir).Length==0) UnityEditor.AssetDatabase.DeleteAsset(dir); var path=\"ProjectSettings/Packages/com.unity.pipeline/EditorPipelineConfig.json\"; if(System.IO.File.Exists(path)) {var cfg=Newtonsoft.Json.Linq.JObject.Parse(System.IO.File.ReadAllText(path)); foreach(var key in new[]{\"m_RunInBackgroundInPlayMode\",\"m_RunInBackgroundOverridden\",\"m_RunInBackgroundOriginal\",\"m_RunInBackgroundCommandOverride\"}) if((bool)cfg[key]) throw new System.Exception(\"Background override active\"); UnityEditor.FileUtil.DeleteFileOrDirectory(path); var dir=System.IO.Path.GetDirectoryName(path); if(System.IO.Directory.GetFileSystemEntries(dir).Length==0) UnityEditor.FileUtil.DeleteFileOrDirectory(dir); } return new {temporaryAssets=System.IO.Directory.Exists(\"Assets/Docs\"),configExists=System.IO.File.Exists(path),background=UnityEngine.Application.runInBackground,userSibling=System.IO.Directory.Exists(\"ProjectSettings/Packages/com.unity.learn.iet-framework\")};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "temporaryAssets": false,
+        "configExists": false,
+        "background": false,
+        "userSibling": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

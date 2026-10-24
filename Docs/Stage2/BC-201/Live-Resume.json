@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c=UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); c.Session.SetFocus(true); c.Session.SetPaused(false); return new { frame=UnityEngine.Time.frameCount, tick=c.Session.Clock.Tick, playerId=c.Session.PlayerTank.EntityId, alive=c.Session.PlayerTank.IsAlive };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "frame": 1796,
+        "tick": 241,
+        "playerId": 1,
+        "alive": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

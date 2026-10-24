@@ -1,0 +1,19 @@
+{
+  "preexistingFileHashDifferences": {
+    "Docs/Stage2/Execution-Board.md": {
+      "before": "2818cdf3345536b739945eee66ff525d154419e1c8cb3c86898489628e882fc4",
+      "after": "4b7d16f369d7832cc99d4f237a3ea8d682bab56259c81988331edde0bee31789"
+    }
+  },
+  "workerDidNotEditExecutionBoard": true,
+  "newComponentFileHashes": {
+    "Assets/BattleCity/Scripts/AI/EnemyWaveDefinition.cs": "bae6a82b4b923b12e57af746baf51cc7bb3922e11eb9997f4798f52084e794b3",
+    "Assets/BattleCity/Scripts/AI/EnemyWaveDefinition.cs.meta": "d344dee9f1f33a1754ade92792086857b3f5c4490a099457bc46f207a32f2b90",
+    "Assets/BattleCity/Scripts/AI/EnemyWaveState.cs": "af04c87f45fa00e24e07be0639b52c8becd3ea5dda440641fb77f382ac7e4c52",
+    "Assets/BattleCity/Scripts/AI/EnemyWaveState.cs.meta": "7af3d052466e96cc10ba84609e413d1624092cc5df101c8ed39c1cd12032ef8c",
+    "Assets/BattleCity/Tests/EditMode/EnemyWaveStateTests.cs": "7ccdb3369125f4a5ca053f43f6f0cadfcf2a65c37a8eaf933d647ef42e4e6874",
+    "Assets/BattleCity/Tests/EditMode/EnemyWaveStateTests.cs.meta": "f70e3ebe8b9fa0c772e7a6484d22926050b4f3c202abeff87ff8e080ab86afc1"
+  },
+  "stagedFiles": [],
+  "diffCheckPassed": true
+}

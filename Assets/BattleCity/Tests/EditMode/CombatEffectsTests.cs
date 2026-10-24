@@ -145,13 +145,16 @@ namespace BattleCity.Tests
         }
 
         [Test]
-        public void TankHit_IsNotAutomaticallyADeathExplosion()
+        public void NonlethalTankHit_IsNotAutomaticallyADeathExplosion()
         {
+            tank.hitPoints = 2;
             session = new ArenaSession(level, tank);
             var enemy = new WeaponState(tank, session.Bullets, CombatTeam.Enemy, 2);
             enemy.Step(new TankCommand(CardinalDirection.None, true), new Vector2(24, 100), CardinalDirection.Down);
             Tick();
             Assert.That(session.Bullets.Hits[0].Kind, Is.EqualTo(BulletHitKind.Tank));
+            Assert.That(session.PlayerTank.HitPoints, Is.EqualTo(1));
+            Assert.That(session.PlayerTank.IsAlive, Is.True);
             Assert.That(session.Effects.Active.Count, Is.EqualTo(1));
             Assert.That(session.Effects.Active[0].Kind, Is.EqualTo(CombatEffectKind.Hit));
             Tick(12);

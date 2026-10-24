@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "command": "pipeline list",
+  "data": {
+    "instances": [
+      {
+        "projectName": "BattleCity",
+        "projectPath": "H:\\Projects\\Unities\\BattleCity",
+        "pid": 26924,
+        "isRunning": true,
+        "role": "main",
+        "instanceName": "Main Editor",
+        "hasPipelinePackage": true,
+        "pipelineVersion": "0.9.0-exp.1",
+        "updateAvailable": true,
+        "pipelineServer": {
+          "port": 7800,
+          "isReachable": true,
+          "apiUrl": "http://127.0.0.1:7800/api/editor_status"
+        },
+        "safeMode": null
+      }
+    ],
+    "latestVersion": "0.9.1-exp.1",
+    "summary": {
+      "totalInstances": 1,
+      "runningInstances": 1,
+      "instancesWithPipeline": 1,
+      "reachableServers": 1,
+      "instancesInSafeMode": 0,
+      "instancesWithUpdateAvailable": 1
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

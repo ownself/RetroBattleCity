@@ -1,0 +1,22 @@
+{
+  "firstFrame": 2165,
+  "deathFrame": 2346,
+  "finalFrame": 2614,
+  "firstTick": 289,
+  "deathTick": 320,
+  "finalTick": 355,
+  "notifications": 1,
+  "explosionsAtDeath": 1,
+  "baseAlive": false,
+  "failureRequested": true,
+  "sprite": "base.dead",
+  "player": "(88.00, 8.00)",
+  "revision": 42,
+  "waveTotal": 20,
+  "spawned": 2,
+  "droppedTicks": 10,
+  "paused": true,
+  "observerRemoved": true,
+  "keyboardRemoved": true,
+  "passed": true
+}

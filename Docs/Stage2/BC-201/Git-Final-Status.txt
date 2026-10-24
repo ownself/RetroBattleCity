@@ -1,0 +1,20 @@
+main
+7de290635ca8b097022b379e911fbef1234baefc
+ M Assets/BattleCity/Scripts/Combat/BulletHit.cs
+ M Assets/BattleCity/Scripts/Combat/BulletWorld.cs
+ M Assets/BattleCity/Scripts/Combat/WeaponState.cs
+ M Assets/BattleCity/Scripts/Core/ArenaController.cs
+ M Assets/BattleCity/Scripts/Core/ArenaSession.cs
+ M Assets/BattleCity/Scripts/Map/MapState.cs
+ M Assets/BattleCity/Scripts/Tanks/TankMotor.cs
+ M Assets/BattleCity/Tests/EditMode/CombatEffectsTests.cs
+ M Docs/BattleCity-Implementation-Plan.md
+?? .vsconfig
+?? Assets/BattleCity/Scripts/Tanks/TankState.cs
+?? Assets/BattleCity/Scripts/Tanks/TankState.cs.meta
+?? Assets/BattleCity/Tests/EditMode/TankStateTests.cs
+?? Assets/BattleCity/Tests/EditMode/TankStateTests.cs.meta
+?? Assets/BattleCity/Tests/PlayMode/TankStatePlayModeTests.cs
+?? Assets/BattleCity/Tests/PlayMode/TankStatePlayModeTests.cs.meta
+?? Docs/Stage2/BC-201/
+?? Docs/Stage2/Execution-Board.md

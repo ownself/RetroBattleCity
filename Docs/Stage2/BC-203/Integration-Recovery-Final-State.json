@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var t = System.AppDomain.CurrentDomain.GetAssemblies().Select(a => a.GetType(\"Unity.Pipeline.Editor.Commands.AutoTickCommand\")).First(x => x != null); return new { playing = UnityEditor.EditorApplication.isPlaying, compiling = UnityEditor.EditorApplication.isCompiling, compilationFailed = UnityEditor.EditorUtility.scriptCompilationFailed, background = UnityEngine.Application.runInBackground, autoTick = t.GetProperty(\"IsEnabled\", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static).GetValue(null), interval = t.GetProperty(\"CurrentIntervalMs\", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static).GetValue(null), scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().path, dirty = UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty, observerKey = UnityEditor.SessionState.GetString(\"BC203.Integration.Resume\", \"absent\"), temporaryAssets = UnityEditor.AssetDatabase.IsValidFolder(\"Assets/Docs\"), configExists = System.IO.File.Exists(\"ProjectSettings/Packages/com.unity.pipeline/EditorPipelineConfig.json\") };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playing": false,
+        "compiling": false,
+        "compilationFailed": false,
+        "background": false,
+        "autoTick": true,
+        "interval": 16,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false,
+        "observerKey": "absent",
+        "temporaryAssets": false,
+        "configExists": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

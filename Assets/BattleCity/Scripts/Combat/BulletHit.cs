@@ -4,6 +4,12 @@ using UnityEngine;
 namespace BattleCity
 {
     public enum CombatTeam { Player, Enemy }
+
+    public static class CombatRules
+    {
+        public static bool CanHitTank(CombatTeam attackerTeam, long ownerId, CombatTeam targetTeam, long targetId)
+            => attackerTeam != targetTeam && (ownerId == 0 || ownerId != targetId);
+    }
     // Numeric order is the frozen same-time hit priority.
     public enum BulletHitKind { Boundary, Terrain, Base, Tank, Bullet }
 

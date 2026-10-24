@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var path = \"ProjectSettings/Packages/com.unity.pipeline/EditorPipelineConfig.json\"; var before = Newtonsoft.Json.Linq.JObject.Parse(System.IO.File.ReadAllText(path)); foreach (var name in new[] { \"m_RunInBackgroundInPlayMode\", \"m_RunInBackgroundOverridden\", \"m_RunInBackgroundOriginal\", \"m_RunInBackgroundCommandOverride\" }) if ((bool)before[name]) throw new System.InvalidOperationException(\"Unexpected active background override; leave config untouched.\"); if (UnityEditor.EditorApplication.isPlaying || UnityEditor.EditorApplication.isCompiling) throw new System.InvalidOperationException(\"Editor must remain idle.\"); UnityEditor.FileUtil.DeleteFileOrDirectory(path); var directory = System.IO.Path.GetDirectoryName(path); if (System.IO.Directory.Exists(directory) && System.IO.Directory.GetFileSystemEntries(directory).Length == 0) UnityEditor.FileUtil.DeleteFileOrDirectory(directory); return new { configExists = System.IO.File.Exists(path), ownDirectoryExists = System.IO.Directory.Exists(directory), userPackageSettingsPreserved = System.IO.Directory.Exists(\"ProjectSettings/Packages/com.unity.learn.iet-framework\"), background = UnityEngine.Application.runInBackground };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "configExists": false,
+        "ownDirectoryExists": false,
+        "userPackageSettingsPreserved": true,
+        "background": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

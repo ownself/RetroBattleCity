@@ -1,0 +1,57 @@
+{
+  "discovered": 264,
+  "executed": 264,
+  "missing": [],
+  "extra": [],
+  "failedOrSkipped": [],
+  "fixtures": {
+    "BrickDestructionTests": {
+      "Passed": 33
+    },
+    "BulletCollisionTests": {
+      "Passed": 38
+    },
+    "CombatEffectsTests": {
+      "Passed": 9
+    },
+    "Phase0Tests": {
+      "Passed": 7
+    },
+    "Phase1Tests": {
+      "Passed": 24
+    },
+    "RenderDeltaCombatTests": {
+      "Passed": 6
+    },
+    "Stage01Tests": {
+      "Passed": 6
+    },
+    "TankStateTests": {
+      "Passed": 24
+    },
+    "TurnAlignmentTests": {
+      "Passed": 65
+    },
+    "WeaponTests": {
+      "Passed": 15
+    },
+    "ArenaPlayModeTests": {
+      "Passed": 5
+    },
+    "BrickMapViewTests": {
+      "Passed": 22
+    },
+    "CombatEffectViewTests": {
+      "Passed": 5
+    },
+    "RenderLoopRegressionTests": {
+      "Passed": 1
+    },
+    "Stage01PlayModeTests": {
+      "Passed": 3
+    },
+    "TankStatePlayModeTests": {
+      "Passed": 1
+    }
+  }
+}

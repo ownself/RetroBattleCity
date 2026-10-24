@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command script",
+  "data": null,
+  "errors": [
+    {
+      "code": "COMMAND_FAILED",
+      "message": "Compilation Failed\n  'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'（第 1 行，第 20 列）\n  Cannot implicitly convert type 'System.Action' to 'UnityEditor.EditorApplication.CallbackFunction'（第 1 行，第 663 列）\n  Cannot implicitly convert type 'System.Action' to 'UnityEditor.EditorApplication.CallbackFunction'（第 1 行，第 713 列）\n  Unreachable code detected（第 2 行，第 12 列）"
+    }
+  ],
+  "warnings": []
+}

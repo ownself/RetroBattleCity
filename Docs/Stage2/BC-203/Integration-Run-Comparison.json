@@ -1,0 +1,29 @@
+{
+  "pausedFrames": [
+    36309,
+    38060
+  ],
+  "pausedTicks": [
+    4522,
+    4522
+  ],
+  "allPausedStateIdenticalExceptFrame": true,
+  "advancingFrames": [
+    29349,
+    34726
+  ],
+  "advancingTicks": [
+    3764,
+    4447
+  ],
+  "advancingTankPosesChanged": true,
+  "resume": {
+    "firstFrame": 136102,
+    "observedFrame": 136103,
+    "firstTick": 4522,
+    "observedTick": 4526,
+    "resumedTicks": 4,
+    "droppedBefore": 3,
+    "droppedAfter": 3
+  }
+}

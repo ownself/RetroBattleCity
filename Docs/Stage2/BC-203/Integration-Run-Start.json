@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c = UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); c.Session.SetFocus(true); c.Session.SetPaused(false); return new { frame = UnityEngine.Time.frameCount, tick = c.Session.Clock.Tick, scene = c.gameObject.scene.path, total = c.Session.EnemyWave.TotalCount, background = UnityEngine.Application.runInBackground };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "frame": 27340,
+        "tick": 3501,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "total": 20,
+        "background": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

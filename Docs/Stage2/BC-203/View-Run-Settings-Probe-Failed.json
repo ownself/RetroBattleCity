@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command script",
+  "data": null,
+  "errors": [
+    {
+      "code": "COMMAND_FAILED",
+      "message": "Compilation Failed\n  'AutoTickCommand' is inaccessible due to its protection level（第 1 行，第 58 列）\n  Unreachable code detected（第 2 行，第 12 列）"
+    }
+  ],
+  "warnings": []
+}

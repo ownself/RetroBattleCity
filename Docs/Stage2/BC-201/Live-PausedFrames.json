@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "command": "command job wait",
+  "data": {
+    "command": "job wait",
+    "parameters": {
+      "condition": "{\"member\":\"UnityEngine.Time.frameCount\",\"op\":\"changed\"}",
+      "timeout": "10",
+      "return_history": "true"
+    },
+    "result": {
+      "state": "met",
+      "met": true,
+      "timedOut": false,
+      "member": "UnityEngine.Time.frameCount",
+      "op": "changed",
+      "value": 18295,
+      "initialValue": 18252,
+      "elapsedMs": 104,
+      "framesObserved": 2,
+      "history": [
+        {
+          "value": 18252,
+          "elapsedMs": 0
+        },
+        {
+          "value": 18295,
+          "elapsedMs": 104
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

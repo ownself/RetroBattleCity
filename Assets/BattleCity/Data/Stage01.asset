@@ -21,5 +21,25 @@ MonoBehaviour:
   - {x: 8, y: 200}
   - {x: 104, y: 200}
   - {x: 200, y: 200}
-  enemySequence: []
+  enemySequence:
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
+  - enemy.basic.prototype
   maxActiveEnemies: 4

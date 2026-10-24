@@ -107,7 +107,20 @@ namespace BattleCity.Tests
         {
             Assert.That(Level.playerSpawnPixels, Is.EqualTo(new Vector2Int(72, 8)));
             Assert.That(Level.enemySpawnPixels, Is.EqualTo(new[] { new Vector2Int(8, 200), new Vector2Int(104, 200), new Vector2Int(200, 200) }));
-            Assert.That(Level.enemySequence, Is.Empty, "Wave content is deferred, not claimed as verified from PNG");
+            Assert.That(Level.enemySequence, Has.Length.EqualTo(20));
+            Assert.That(Level.enemySequence.All(id => id == Stage01Authoring.EnemyDefinitionId), Is.True);
+            Assert.That(Level.maxActiveEnemies, Is.EqualTo(4));
+            var enemy = AssetDatabase.LoadAssetAtPath<TankDefinition>(Stage01Authoring.EnemyPath);
+            var wave = AssetDatabase.LoadAssetAtPath<EnemyWaveDefinition>(Stage01Authoring.WavePath);
+            Assert.That(enemy, Is.Not.Null); Assert.That(wave, Is.Not.Null);
+            Assert.DoesNotThrow(enemy.Validate); Assert.DoesNotThrow(wave.Validate);
+            Assert.That(enemy.definitionId, Is.EqualTo(Stage01Authoring.EnemyDefinitionId));
+            Assert.That(enemy.spritePrefix, Is.EqualTo("tank.white.enemy.basic"));
+            Assert.That(enemy.requiresCalibration && wave.requiresCalibration, Is.True);
+            Assert.That(wave.tankDefinitions, Is.EqualTo(new[] { enemy }));
+            Assert.That(wave.seed, Is.EqualTo(1u));
+            Assert.That(wave.preparationTicks, Is.EqualTo(60)); Assert.That(wave.spawnIntervalTicks, Is.EqualTo(120));
+            Assert.DoesNotThrow(() => new EnemyWaveState(Level, wave));
             Assert.DoesNotThrow(() => Stage01Authoring.ValidatePlacement(Level));
             var copy = UnityEngine.Object.Instantiate(Level);
             try
@@ -143,7 +156,7 @@ namespace BattleCity.Tests
         }
 
         [Test]
-        public void Stage01_SavedSceneBindsInteractiveTilesCameraAndIntactBaseOnly()
+        public void Stage01_SavedSceneBindsInteractiveTilesCameraAndSessionBase()
         {
             var previous = SceneManager.GetActiveScene();
             var scene = SceneManager.GetSceneByPath(Stage01Authoring.ScenePath);
@@ -154,10 +167,13 @@ namespace BattleCity.Tests
                 var roots = scene.GetRootGameObjects();
                 var controller = roots.SelectMany(r => r.GetComponentsInChildren<ArenaController>()).Single();
                 Assert.That(controller.level, Is.SameAs(Level)); Assert.DoesNotThrow(controller.ValidateBindings);
+                Assert.That(controller.enemyWaveDefinition, Is.SameAs(AssetDatabase.LoadAssetAtPath<EnemyWaveDefinition>(Stage01Authoring.WavePath)));
                 Assert.That(PixelGrid.ToMapPixels(controller.playerRenderer.transform.position), Is.EqualTo((Vector2)Level.playerSpawnPixels));
                 var baseRenderer = roots.SelectMany(r => r.GetComponentsInChildren<SpriteRenderer>()).Single(r => r.sprite.name == "base.alive");
                 Assert.That(PixelGrid.ToMapPixels(baseRenderer.transform.position), Is.EqualTo((Vector2)Level.baseCenterPixels));
-                Assert.That(baseRenderer.GetComponents<Component>().Length, Is.EqualTo(2), "Base is display only, no damage/death behaviour");
+                Assert.That(controller.baseRenderer, Is.SameAs(baseRenderer));
+                Assert.That(new ArenaSession(Level, controller.playerDefinition, enableBase: true).Base.IsAlive, Is.True);
+                Assert.That(baseRenderer.GetComponents<Component>().Length, Is.EqualTo(2), "Projection has no independent damage/physics behaviour");
                 Assert.That(roots.SelectMany(r => r.GetComponentsInChildren<SpriteRenderer>()).Count(r => r.sprite.name.StartsWith("tank.")), Is.EqualTo(1), "No fake runtime enemy tanks");
                 var map = new MapState(Level);
                 for (int y = 0; y < 26; y++) for (int x = 0; x < 26; x++)

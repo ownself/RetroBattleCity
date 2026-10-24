@@ -1,0 +1,391 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    },
+    "server": {
+      "version": "0.0.1",
+      "port": 7800
+    },
+    "commands": [
+      {
+        "command": "editor focus",
+        "name": "focus",
+        "group": "editor",
+        "description": "Bring the Unity Editor window to the foreground",
+        "tags": [
+          "editor"
+        ],
+        "package": "Unity.Pipeline.Editor",
+        "mainThreadRequired": true,
+        "parameters": [],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "editor focus",
+          "description": "Bring the Unity Editor window to the foreground",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": true,
+            "methodName": "Unity.Pipeline.Editor.Commands.FocusEditorCommand.Focus"
+          }
+        }
+      },
+      {
+        "command": "editor invoke_menu",
+        "name": "invoke_menu",
+        "group": "editor",
+        "description": "Execute an Editor menu item by path, or list available items when no path is given",
+        "tags": [
+          "editor"
+        ],
+        "package": "Unity.Pipeline.Editor",
+        "mainThreadRequired": true,
+        "parameters": [
+          {
+            "name": "path",
+            "description": "Menu item path to execute, e.g. \"Assets/Reimport All\". Omit to list available menu items.",
+            "type": "String",
+            "required": false,
+            "defaultValue": ""
+          }
+        ],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "editor invoke_menu",
+          "description": "Execute an Editor menu item by path, or list available items when no path is given",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Menu item path to execute, e.g. \"Assets/Reimport All\". Omit to list available menu items.",
+              "default": ""
+            }
+          },
+          "required": [],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": true,
+            "methodName": "Unity.Pipeline.Editor.Commands.MenuItemCommand.InvokeMenu"
+          }
+        }
+      },
+      {
+        "command": "editor save_all",
+        "name": "save_all",
+        "group": "editor",
+        "description": "Save all open scenes that have unsaved changes.",
+        "tags": [
+          "scenes"
+        ],
+        "package": "Unity.Pipeline.Editor",
+        "mainThreadRequired": true,
+        "parameters": [],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "editor save_all",
+          "description": "Save all open scenes that have unsaved changes.",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": true,
+            "methodName": "Unity.Pipeline.Editor.Commands.Scenes.SceneCommands.SaveAll"
+          }
+        }
+      },
+      {
+        "command": "editor search",
+        "name": "search",
+        "group": "editor",
+        "description": "Run a Unity Search query and return structured results.",
+        "tags": [
+          "navigation"
+        ],
+        "package": "Unity.Pipeline.Editor",
+        "mainThreadRequired": true,
+        "parameters": [
+          {
+            "name": "query",
+            "description": "Unity Search query string, e.g. 't:Material', 'p: my asset', 'h: Main Camera'.",
+            "type": "String",
+            "required": true,
+            "defaultValue": null
+          },
+          {
+            "name": "limit",
+            "description": "Max results to return (capped 200).",
+            "type": "Int32",
+            "required": false,
+            "defaultValue": 50
+          }
+        ],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "editor search",
+          "description": "Run a Unity Search query and return structured results.",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Unity Search query string, e.g. 't:Material', 'p: my asset', 'h: Main Camera'."
+            },
+            "limit": {
+              "type": "integer",
+              "description": "Max results to return (capped 200).",
+              "default": 50
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": true,
+            "methodName": "Unity.Pipeline.Editor.Commands.Navigation.NavigationCommands.Search"
+          }
+        }
+      },
+      {
+        "command": "editor set_auto_tick",
+        "name": "set_auto_tick",
+        "group": "editor",
+        "description": "Keep the editor ticking while unfocused by forcing EditorApplication.SignalTick at a throttled rate",
+        "tags": [
+          "editor"
+        ],
+        "package": "Unity.Pipeline.Editor",
+        "mainThreadRequired": true,
+        "parameters": [
+          {
+            "name": "enable",
+            "description": "Enable (true) or disable (false) auto-tick mode",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": true
+          },
+          {
+            "name": "interval_ms",
+            "description": "Minimum milliseconds between forced ticks. 0 = every update (max rate, pegs a CPU core). Default 16 (~60Hz).",
+            "type": "Int32",
+            "required": false,
+            "defaultValue": 16
+          },
+          {
+            "name": "persist",
+            "description": "Persist this choice to SessionState so it survives a domain reload. Set false for a one-off/expensive setting (e.g. interval_ms=0) that should revert to the last persisted choice (or the default) after the next recompile instead of sticking for the rest of the session.",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": true
+          }
+        ],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "editor set_auto_tick",
+          "description": "Keep the editor ticking while unfocused by forcing EditorApplication.SignalTick at a throttled rate",
+          "properties": {
+            "enable": {
+              "type": "boolean",
+              "description": "Enable (true) or disable (false) auto-tick mode",
+              "default": true
+            },
+            "interval_ms": {
+              "type": "integer",
+              "description": "Minimum milliseconds between forced ticks. 0 = every update (max rate, pegs a CPU core). Default 16 (~60Hz).",
+              "default": 16
+            },
+            "persist": {
+              "type": "boolean",
+              "description": "Persist this choice to SessionState so it survives a domain reload. Set false for a one-off/expensive setting (e.g. interval_ms=0) that should revert to the last persisted choice (or the default) after the next recompile instead of sticking for the rest of the session.",
+              "default": true
+            }
+          },
+          "required": [],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": true,
+            "methodName": "Unity.Pipeline.Editor.Commands.AutoTickCommand.SetAutoTick"
+          }
+        }
+      },
+      {
+        "command": "editor status",
+        "name": "status",
+        "group": "editor",
+        "description": "Get detailed Unity Editor status and state information",
+        "tags": [
+          "editor"
+        ],
+        "package": "Unity.Pipeline.Editor",
+        "mainThreadRequired": true,
+        "parameters": [],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "editor status",
+          "description": "Get detailed Unity Editor status and state information",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": true,
+            "methodName": "Unity.Pipeline.Editor.Commands.EditorStatusCommand.Status"
+          }
+        }
+      },
+      {
+        "command": "editor.playmode list_instances",
+        "name": "list_instances",
+        "group": "editor.playmode",
+        "description": "List running Editor instances reachable over Pipeline (this Editor + its MPPM virtual player clones). Connect to one with 'unity command --project-path <its projectPath>'.",
+        "tags": [
+          "editor/instances"
+        ],
+        "package": "Unity.Pipeline.Editor",
+        "mainThreadRequired": false,
+        "parameters": [],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "editor.playmode list_instances",
+          "description": "List running Editor instances reachable over Pipeline (this Editor + its MPPM virtual player clones). Connect to one with 'unity command --project-path <its projectPath>'.",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": false,
+            "methodName": "Unity.Pipeline.Editor.Commands.InstanceCommands.ListInstances"
+          }
+        }
+      },
+      {
+        "command": "editor.playmode pause",
+        "name": "pause",
+        "group": "editor.playmode",
+        "description": "Toggle pause state of Unity Editor play mode",
+        "tags": [
+          "editor/playmode"
+        ],
+        "package": "Unity.Pipeline.Editor",
+        "mainThreadRequired": true,
+        "parameters": [],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "editor.playmode pause",
+          "description": "Toggle pause state of Unity Editor play mode",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": true,
+            "methodName": "Unity.Pipeline.Editor.Commands.PlayModeCommands.Pause"
+          }
+        }
+      },
+      {
+        "command": "editor.playmode set_run_in_background",
+        "name": "set_run_in_background",
+        "group": "editor.playmode",
+        "description": "Override the project's Run In Background Player Setting, recording enough state to restore it later and to keep it out of builds",
+        "tags": [
+          "editor/playmode"
+        ],
+        "package": "Unity.Pipeline.Editor",
+        "mainThreadRequired": true,
+        "parameters": [
+          {
+            "name": "enable",
+            "description": "Turn the override on (true, default) or stop it (false) and restore the project's own value, unless the \"Ensure editor runs in background in PlayMode\" setting is still forcing it on right now",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": true
+          }
+        ],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "editor.playmode set_run_in_background",
+          "description": "Override the project's Run In Background Player Setting, recording enough state to restore it later and to keep it out of builds",
+          "properties": {
+            "enable": {
+              "type": "boolean",
+              "description": "Turn the override on (true, default) or stop it (false) and restore the project's own value, unless the \"Ensure editor runs in background in PlayMode\" setting is still forcing it on right now",
+              "default": true
+            }
+          },
+          "required": [],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": true,
+            "methodName": "Unity.Pipeline.Editor.Commands.PlayModeCommands.SetRunInBackground"
+          }
+        }
+      },
+      {
+        "command": "editor.playmode start",
+        "name": "start",
+        "group": "editor.playmode",
+        "description": "Enter Unity Editor play mode",
+        "tags": [
+          "editor/playmode"
+        ],
+        "package": "Unity.Pipeline.Editor",
+        "mainThreadRequired": true,
+        "parameters": [],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "editor.playmode start",
+          "description": "Enter Unity Editor play mode",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": true,
+            "methodName": "Unity.Pipeline.Editor.Commands.PlayModeCommands.Start"
+          }
+        }
+      },
+      {
+        "command": "editor.playmode stop",
+        "name": "stop",
+        "group": "editor.playmode",
+        "description": "Exit Unity Editor play mode",
+        "tags": [
+          "editor/playmode"
+        ],
+        "package": "Unity.Pipeline.Editor",
+        "mainThreadRequired": true,
+        "parameters": [],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "editor.playmode stop",
+          "description": "Exit Unity Editor play mode",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": true,
+            "methodName": "Unity.Pipeline.Editor.Commands.PlayModeCommands.Stop"
+          }
+        }
+      }
+    ],
+    "count": 11,
+    "total": 11,
+    "offset": 0,
+    "limit": null
+  },
+  "errors": [],
+  "warnings": []
+}

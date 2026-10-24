@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var t = System.AppDomain.CurrentDomain.GetAssemblies().Select(a => a.GetType(\"Unity.Pipeline.Editor.Commands.Capture.CaptureCommands\")).First(x => x != null); var m = t.GetMethod(\"GetGameViewTargetSize\", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static); return new { nativeSize = m.Invoke(null, null), screen = new UnityEngine.Vector2Int(UnityEngine.Screen.width, UnityEngine.Screen.height) };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "nativeSize": {
+          "Item1": 1523,
+          "Item2": 752
+        },
+        "screen": {
+          "x": 1523,
+          "y": 752,
+          "magnitude": 1698.53845,
+          "sqrMagnitude": 2885033
+        }
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,85 @@
+{
+  "utc": "2026-10-24T05:32:42.097684+00:00",
+  "recoveryAuthorization": "Parent-approved same-subagent/same-model finite closeout after original 1800000ms timeout; no new test execution or source/asset edits in recovery.",
+  "head": "7de290635ca8b097022b379e911fbef1234baefc",
+  "testEvidenceAssetHashCount": 15,
+  "mismatchesSinceFinalTestEvidence": [],
+  "assetSnapshotCount": 45,
+  "mismatchesSinceRecoverySnapshot": [],
+  "preservedOriginalFiles": {
+    ".vsconfig": {
+      "sha256": "f24445f4481f74f7653a375e2f618e50d608b14fdacee794fcab51b8d447351c",
+      "matchesStartingHash": true
+    },
+    "UserSettings/EditorUserSettings.asset": {
+      "sha256": "f2a6e0ff493e925bd417c7d97496009726fcde34ab909029cc73b697b401dec4",
+      "matchesStartingHash": true
+    },
+    "UserSettings/HierarchyWindow.settings": {
+      "sha256": "3dc4fa94a7ff4d52cb531322fd0921c00e7fba297e44661ea2083ef43c184fc4",
+      "matchesStartingHash": true
+    },
+    "Assets/BattleCity/Art/SpriteUnlit.mat": {
+      "sha256": "3b1e22f9b7de1925ce02ad5a120ea3f611c3ae34d7bfbbcda538417f3e1c2f8b",
+      "matchesStartingHash": true
+    },
+    "Assets/BattleCity/Data/PixelBaselineURP.asset": {
+      "sha256": "4eea2396697939d278ed2caf0cc13c82140cf279260acf38e1a85cb81219681b",
+      "matchesStartingHash": true
+    },
+    "Assets/BattleCity/Scenes/CombatArena.unity": {
+      "sha256": "0c55e43b775211bb110a3fdba61035dd834ddcb62e6aae2335da25f2095229c2",
+      "matchesStartingHash": true
+    },
+    "Assets/BattleCity/Editor/Stage01Layout.txt": {
+      "sha256": "0a3953c9303367ef0abb06c77ed42405b90bc0baea10db4d001b10f7139da13a",
+      "matchesStartingHash": true
+    },
+    "Assets/Sprites/NES - Battle City (JPN) - Backgrounds - Stage 01.png": {
+      "sha256": "0ad647c8af338e6c34bcad3e467cd5cf64607597f8a1dd1d5a2ef6e3f1111b7f",
+      "matchesStartingHash": true
+    },
+    "Assets/Sprites/NES - Battle City (JPN) - Miscellaneous - General Sprites.png": {
+      "sha256": "5b16e0c80144c8ed71dce2adfae51b962d8f103cc6db47db4bffe46e4584e88d",
+      "matchesStartingHash": true
+    },
+    "Assets/BattleCity/Scripts/AI/EnemyWaveState.cs": {
+      "sha256": "af04c87f45fa00e24e07be0639b52c8becd3ea5dda440641fb77f382ac7e4c52",
+      "matchesStartingHash": true
+    },
+    "Assets/BattleCity/Scripts/AI/EnemyWaveDefinition.cs": {
+      "sha256": "bae6a82b4b923b12e57af746baf51cc7bb3922e11eb9997f4798f52084e794b3",
+      "matchesStartingHash": true
+    },
+    "Assets/BattleCity/Scripts/Tanks/EnemyTankView.cs": {
+      "sha256": "c39ac4c4e6030df9203e38755775cc3066c0b92f51d7f3247621e65e3917f792",
+      "matchesStartingHash": true
+    }
+  },
+  "temporaryConfigAbsentAtStartingSnapshot": true,
+  "temporaryConfigNowExists": false,
+  "cleanupAPI": "UnityEditor.FileUtil.DeleteFileOrDirectory on this run-created config only, then its empty com.unity.pipeline directory; existing sibling com.unity.learn.iet-framework retained.",
+  "finalEditorState": {
+    "playing": false,
+    "compiling": false,
+    "compilationFailed": false,
+    "background": false,
+    "autoTick": true,
+    "interval": 16,
+    "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+    "dirty": false,
+    "observerKey": "absent",
+    "temporaryAssets": false,
+    "configExists": false
+  },
+  "testSetComparison": {
+    "discovered": 354,
+    "executed": 354,
+    "uniqueExecuted": 354,
+    "notExecuted": [],
+    "undiscoveredExecuted": [],
+    "duplicates": [],
+    "nonPassed": []
+  },
+  "noStagedFiles": true
+}

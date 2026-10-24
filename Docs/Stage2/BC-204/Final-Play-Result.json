@@ -1,0 +1,434 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 15.69,
+      "summary": {
+        "total": 58,
+        "passed": 58,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.ArenaPlayModeTests.Arena_BrickHitRemovesFourPixelLayerAndDisplaysRemainingWall",
+          "Status": "Passed",
+          "Duration": 0.0274817,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaPlayModeTests.Arena_FourBrickLayersOpenA16PixelTankPassage",
+          "Status": "Passed",
+          "Duration": 0.0249722,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaPlayModeTests.Arena_KeyboardFiresAndRendererIsReusedAfterRelease",
+          "Status": "Passed",
+          "Duration": 0.0490474,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaPlayModeTests.Arena_ReloadRecreatesRuntimeStateWithoutMutatingAsset",
+          "Status": "Passed",
+          "Duration": 0.0284503,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaPlayModeTests.Arena_RuntimeUpdatesRenderStateAndPauseFreezesClock",
+          "Status": "Passed",
+          "Duration": 0.3191578,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStatePlayModeTests.CombatArenaUnboundRendererMeansNoBaseOrFailureTarget",
+          "Status": "Passed",
+          "Duration": 0.0139845,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStatePlayModeTests.Stage01_RealUpdateKeyboardWeaponBreachesBrickAndDestroysBase_DeadProjectionAndOneNotification",
+          "Status": "Passed",
+          "Duration": 1.276972,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStatePlayModeTests.Stage01_ReloadCreatesIndependentIntactBaseAndNoFailureRequest",
+          "Status": "Passed",
+          "Duration": 0.0349823,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(12,12,Up,12)",
+          "Status": "Passed",
+          "Duration": 0.0111677,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(13,12,Up,12)",
+          "Status": "Passed",
+          "Duration": 0.0062075,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(12,13,Up,12)",
+          "Status": "Passed",
+          "Duration": 0.006436,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(13,13,Up,12)",
+          "Status": "Passed",
+          "Duration": 0.0162174,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(12,12,Down,3)",
+          "Status": "Passed",
+          "Duration": 0.0220166,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(13,12,Down,3)",
+          "Status": "Passed",
+          "Duration": 0.0110995,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(12,13,Down,3)",
+          "Status": "Passed",
+          "Duration": 0.0072716,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(13,13,Down,3)",
+          "Status": "Passed",
+          "Duration": 0.0074901,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(12,12,Right,10)",
+          "Status": "Passed",
+          "Duration": 0.0070419,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(13,12,Right,10)",
+          "Status": "Passed",
+          "Duration": 0.0087583,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(12,13,Right,10)",
+          "Status": "Passed",
+          "Duration": 0.0064881,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(13,13,Right,10)",
+          "Status": "Passed",
+          "Duration": 0.0060802,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(12,12,Left,5)",
+          "Status": "Passed",
+          "Duration": 0.0064908,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(13,12,Left,5)",
+          "Status": "Passed",
+          "Duration": 0.0060143,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(12,13,Left,5)",
+          "Status": "Passed",
+          "Duration": 0.0059952,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.AllSourceQuadrantsAndDirections_RenderOnlySurvivingHalf(13,13,Left,5)",
+          "Status": "Passed",
+          "Duration": 0.0062804,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.MultipleDamageTicksBeforeRender_ClearTilesAndResetRestoresOriginals",
+          "Status": "Passed",
+          "Duration": 0.0067376,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.OrthogonalHits_KeepTheCorrectSingleFourPixelCorner(False,False,1)",
+          "Status": "Passed",
+          "Duration": 0.0066703,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.OrthogonalHits_KeepTheCorrectSingleFourPixelCorner(True,False,2)",
+          "Status": "Passed",
+          "Duration": 0.0059544,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.OrthogonalHits_KeepTheCorrectSingleFourPixelCorner(False,True,4)",
+          "Status": "Passed",
+          "Duration": 0.0067023,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.OrthogonalHits_KeepTheCorrectSingleFourPixelCorner(True,True,8)",
+          "Status": "Passed",
+          "Duration": 0.005724,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickMapViewTests.PartialTilesAreCachedAcrossMapsAndDestroyedWithoutDestroyingSourceAssets",
+          "Status": "Passed",
+          "Duration": 0.0199668,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectViewTests.ClearAndDisable_RemovePoolAndReenableCannotReplayOldHits",
+          "Status": "Passed",
+          "Duration": 0.0340395,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectViewTests.Hit_RealUpdateProjectsFramesRecyclesAndReusesRendererWithoutDamage",
+          "Status": "Passed",
+          "Duration": 0.0392009,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectViewTests.Pause_FreezesEffectWhileFramesAdvanceAndResumeDoesNotCatchUp",
+          "Status": "Passed",
+          "Duration": 0.1715325,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectViewTests.ReloadAndDestroy_ClearOldSessionAndDisplaysWithoutCallbacks",
+          "Status": "Passed",
+          "Duration": 0.242448,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectViewTests.RuntimeClock_ActuallyExpiresExplosionWithoutManualStepping",
+          "Status": "Passed",
+          "Duration": 0.5159424,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainPlayModeTests.RealUpdate_RegisteredEnemyMovesTurnsFires_PauseFreezes_ResumeAdvancesWithoutBacklog",
+          "Status": "Passed",
+          "Duration": 0.6684472,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.ClearAndRepeatedBinding_ReuseOneRendererAndDoNotRetainOldTank",
+          "Status": "Passed",
+          "Duration": 0.0074918,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.DestroyOwner_RemovesOwnedChildAndLeavesSharedInstanceUsable",
+          "Status": "Passed",
+          "Duration": 0.0153308,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.DisableAndDestroyComponent_ClearDisplayButNeverDestroyOrStopSharedTank",
+          "Status": "Passed",
+          "Duration": 0.0176977,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.FractionalSharedMotion_RoundsDisplayWithoutWritingLogic_UsesExistingSpritesAndSharedMaterial",
+          "Status": "Passed",
+          "Duration": 0.006639,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.Initialize_SnapshotsAllEightFrames_WithoutRetainingCatalogOrDefinition",
+          "Status": "Passed",
+          "Duration": 0.0051364,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.InvalidRebind_ClearsPreviousDisplayAndFailsClearly_WithoutExtraRenderer",
+          "Status": "Passed",
+          "Duration": 0.004887,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.Pause_RealFramesAndRepeatedRenderCannotAdvanceSharedPose_ResumeUsesNextTick",
+          "Status": "Passed",
+          "Duration": 0.0196729,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.RealSharedProjectileDeath_HidesImmediatelyAndRepeatedRenderDoesNotResurrectOrDamage",
+          "Status": "Passed",
+          "Duration": 0.0067271,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Up)",
+          "Status": "Passed",
+          "Duration": 0.0048214,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Left)",
+          "Status": "Passed",
+          "Duration": 0.0047937,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Down)",
+          "Status": "Passed",
+          "Duration": 0.0046695,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Right)",
+          "Status": "Passed",
+          "Duration": 0.0068538,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationPlayModeTests.CombatArena_RemainsWaveFreeWithNoEnemyOrPreparationDisplay",
+          "Status": "Passed",
+          "Duration": 0.0183093,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationPlayModeTests.DefaultStage01_ActualSharedProjectileDeathClearsOnlyItsViewAndAllowsReplacement",
+          "Status": "Passed",
+          "Duration": 0.0344076,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationPlayModeTests.DefaultStage01_RealUpdatesSpawnMoveFireAndRenderUpToCap_PauseFreezesPreparationAndInterval",
+          "Status": "Passed",
+          "Duration": 10.4502364,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationPlayModeTests.DestroyHostComponent_DoesNotStrandSessionBoundDisplayChildrenOrLeases",
+          "Status": "Passed",
+          "Duration": 0.0303545,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationPlayModeTests.DisableReenableAndDestroy_ClearViewsHintsAndBulletLeases_OnlyRebindCurrentLivingTanks",
+          "Status": "Passed",
+          "Duration": 0.0415324,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.RenderLoopRegressionTests.RealUpdate_PauseResumeDoesNotAccumulateTimeAndKeyboardShotHitsSteel",
+          "Status": "Passed",
+          "Duration": 0.40629,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01PlayModeTests.Stage01_IsolatedTerrainKeyboardShotAndMovementAreBlockedByCentralSteel",
+          "Status": "Passed",
+          "Duration": 0.1661682,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01PlayModeTests.Stage01_RealKeyboardMovesAndBrickDamageProjectsWithoutAssetMutation",
+          "Status": "Passed",
+          "Duration": 0.4068259,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01PlayModeTests.Stage01_ReloadRestoresBricksAndReservedIntactBase",
+          "Status": "Passed",
+          "Duration": 0.03234,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStatePlayModeTests.RealUpdate_EnemyCommandKillsSharedPlayerOnce_ThenPauseFreezesCombat",
+          "Status": "Passed",
+          "Duration": 0.2854298,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

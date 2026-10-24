@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.07,
+      "summary": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainPlayModeTests.RealUpdate_RegisteredEnemyMovesTurnsFires_PauseFreezes_ResumeAdvancesWithoutBacklog",
+          "Status": "Failed",
+          "Duration": 0.0569985,
+          "Message": "System.ArgumentException : Tank spawn is invalid or obstructed.\r\nParameter name: spawn",
+          "StackTrace": "  at BattleCity.TankMotor..ctor (UnityEngine.Vector2 spawn, BattleCity.MapState map) [0x00060] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Scripts\\Tanks\\TankMotor.cs:25 \r\n  at BattleCity.TankState..ctor (System.Int64 entityId, BattleCity.CombatTeam team, UnityEngine.Vector2 spawn, BattleCity.TankDefinition definition, BattleCity.MapState map, BattleCity.BulletWorld bullets) [0x0004e] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Scripts\\Tanks\\TankState.cs:31 \r\n  at BattleCity.ArenaSession.AddTank (BattleCity.TankDefinition definition, BattleCity.CombatTeam team, UnityEngine.Vector2 spawn) [0x00007] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Scripts\\Core\\ArenaSession.cs:42 \r\n  at BattleCity.Tests.EnemyBrainPlayModeTests+<RealUpdate_RegisteredEnemyMovesTurnsFires_PauseFreezes_ResumeAdvancesWithoutBacklog>d__4.MoveNext () [0x0010d] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyBrainPlayModeTests.cs:44 \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@ee3fe9477490\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52 "
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

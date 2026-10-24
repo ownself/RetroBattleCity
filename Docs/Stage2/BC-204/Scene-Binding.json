@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene(); if(scene.path != BattleCity.Editor.Stage01Authoring.ScenePath || scene.isDirty) throw new System.Exception(\"Unexpected scene\"); var c=UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); var r=UnityEngine.Object.FindObjectsByType<UnityEngine.SpriteRenderer>(UnityEngine.FindObjectsSortMode.None).Single(x=>x.sprite!=null && x.sprite.name==\"base.alive\"); c.baseRenderer=r; c.ValidateBindings(); UnityEditor.EditorUtility.SetDirty(c); UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene); UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene); return new {scene=scene.path, binding=c.baseRenderer.name, dirty=scene.isDirty};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "binding": "Base - intact display only (BC-204 pending)",
+        "dirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

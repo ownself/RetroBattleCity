@@ -136,7 +136,7 @@ namespace BattleCity
             {
                 var target = targets[i];
                 if (target.Kind == BulletHitKind.Tank &&
-                    (target.Team == bullet.Team || (bullet.OwnerId != 0 && target.EntityId == bullet.OwnerId))) continue;
+                    !CombatRules.CanHitTank(bullet.Team, bullet.OwnerId, target.Team, target.EntityId)) continue;
                 if (BulletSweep.TryHit(bullet.Position, deltas[index], target.Bounds, BulletState.HalfSizePixels, out double time))
                     candidates.Add(new Candidate(index, -1, time, target.Kind, target.EntityId));
             }

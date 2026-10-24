@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "UnityEngine.Application.runInBackground=false; UnityEditor.PlayerSettings.runInBackground=false; UnityEditor.AssetDatabase.SaveAssets(); var path=\"ProjectSettings/Packages/com.unity.pipeline/EditorPipelineConfig.json\"; var text=System.IO.File.ReadAllText(path); if(!text.Contains(\"\\\"m_RunInBackgroundCommandOverride\\\": false\") || !text.Contains(\"\\\"m_RunInBackgroundOverridden\\\": false\")) throw new System.InvalidOperationException(\"Background override still enabled\"); System.IO.File.Delete(path); if(System.IO.Directory.GetFileSystemEntries(\"ProjectSettings/Packages/com.unity.pipeline\").Length==0) System.IO.Directory.Delete(\"ProjectSettings/Packages/com.unity.pipeline\"); return new { background=UnityEngine.Application.runInBackground, playerBackground=UnityEditor.PlayerSettings.runInBackground, temporaryConfigExists=System.IO.File.Exists(path), playing=UnityEditor.EditorApplication.isPlaying, paused=UnityEditor.EditorApplication.isPaused, scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene().path, dirty=UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "background": false,
+        "playerBackground": false,
+        "temporaryConfigExists": false,
+        "playing": false,
+        "paused": false,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}
