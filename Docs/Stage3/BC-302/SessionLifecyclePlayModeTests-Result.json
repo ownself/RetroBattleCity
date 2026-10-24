@@ -1,0 +1,38 @@
+{
+  "data": {
+    "result": {
+      "status": "completed",
+      "duration": 0.68,
+      "summary": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.SessionLifecyclePlayModeTests.OutcomeNotificationRestart_ReplacesOnlyAfterSettledTickAndOldSessionNeverAdvancesAgain",
+          "Status": "Passed",
+          "Duration": 0.0574814,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecyclePlayModeTests.RealControllerUpdate_ReadyStartHeldInputFocusTerminalAndRestartEdges",
+          "Status": "Passed",
+          "Duration": 0.5296896,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecyclePlayModeTests.ThreeRestarts_RestoreSnapshotsNaturalFirstSpawnLeasesAndPresentationWithoutHostAccumulation",
+          "Status": "Passed",
+          "Duration": 0.0768754,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    }
+  }
+}

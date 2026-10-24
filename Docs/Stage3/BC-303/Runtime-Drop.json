@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c=UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); var s=c.Session; var carrier=System.Linq.Enumerable.Single(s.Tanks,t=>t.CarriesPickup); s.SetPaused(false);s.AdvanceFrame(0,BattleCity.PlayerButtons.None);s.Bullets.Clear();var d=carrier.Motor.Position.x<=104?BattleCity.CardinalDirection.Left:BattleCity.CardinalDirection.Right;new BattleCity.WeaponState(c.playerDefinition,s.Bullets,BattleCity.CombatTeam.Player,999).Step(new BattleCity.TankCommand(d,false,true),carrier.Motor.Position-BattleCity.CardinalDirections.Vector(d)*18,d);s.AdvanceFrame(BattleCity.LogicClock.StepSeconds,BattleCity.PlayerButtons.None);s.SetPaused(true); c.PickupView.Render();return new { hp=carrier.HitPoints, active=s.Pickups.Active.HasValue, kind=s.Pickups.Active.HasValue?s.Pickups.Active.Value.Kind.ToString():\"none\", attempts=s.Pickups.DropAttemptCount, score=s.Score };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "hp": 3,
+        "active": true,
+        "kind": "Tank",
+        "attempts": 1,
+        "score": 0
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

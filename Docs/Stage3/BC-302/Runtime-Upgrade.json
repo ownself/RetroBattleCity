@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c = UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); c.Session.SetPaused(false); for (int i=0;i<3;i++) if (!c.Session.TryUpgradePlayer()) throw new System.InvalidOperationException(\"Upgrade refused\"); c.Session.SetPaused(true); return new { level = c.Session.PlayerUpgrades.Level, speed = c.Session.PlayerWeapon.Parameters.BulletSpeedPixelsPerSecond, limit = c.Session.PlayerWeapon.Parameters.MaxActiveBullets, steel = c.Session.PlayerWeapon.Parameters.CanDestroySteel };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "level": 3,
+        "speed": 300,
+        "limit": 2,
+        "steel": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,238 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.49,
+      "summary": {
+        "total": 30,
+        "passed": 30,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.AllPointsBlocked_WaitsWithoutConsumingRandomSequenceOrReservation_ThenUsesOnlyClearPoint",
+          "Status": "Passed",
+          "Duration": 0.0409569,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.AuthorArraysAndTiming_AreSnapshotted_AndRuntimeNeverMutatesThem",
+          "Status": "Passed",
+          "Duration": 0.0140386,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications(1)",
+          "Status": "Passed",
+          "Duration": 0.0016383,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications(4)",
+          "Status": "Passed",
+          "Duration": 0.0008665,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.DefaultTiming_FirstCreationCall61_Second241_DeathBeforeStepAndNextTickControlAreHostContract",
+          "Status": "Passed",
+          "Duration": 0.0051137,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.EmptySequence_IsExhaustedWithoutReservationOrCallbacks",
+          "Status": "Passed",
+          "Duration": 0.0010197,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.ExactSeedOne_FirstPointAndBrainSeedAreStable",
+          "Status": "Passed",
+          "Duration": 0.0009801,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.FailedCreation_IsNotCommitted_AndCanRetryWithIdenticalRequest",
+          "Status": "Passed",
+          "Duration": 0.0021543,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(1)",
+          "Status": "Passed",
+          "Duration": 0.0087383,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(7)",
+          "Status": "Passed",
+          "Duration": 0.0013141,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(uint.MaxValue)",
+          "Status": "Passed",
+          "Duration": 0.0012553,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"unknown\")",
+          "Status": "Passed",
+          "Duration": 0.0114191,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"duplicate\")",
+          "Status": "Passed",
+          "Duration": 0.0017798,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"nullMapping\")",
+          "Status": "Passed",
+          "Duration": 0.001996,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"nullDefinition\")",
+          "Status": "Passed",
+          "Duration": 0.001987,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroSeed\")",
+          "Status": "Passed",
+          "Duration": 0.0019729,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroPreparation\")",
+          "Status": "Passed",
+          "Duration": 0.0019803,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"negativePreparation\")",
+          "Status": "Passed",
+          "Duration": 0.0019641,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroInterval\")",
+          "Status": "Passed",
+          "Duration": 0.0014695,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"negativeInterval\")",
+          "Status": "Passed",
+          "Duration": 0.0009396,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"invalidTank\")",
+          "Status": "Passed",
+          "Duration": 0.0008665,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"nullSequence\")",
+          "Status": "Passed",
+          "Duration": 0.0007753,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"emptyId\")",
+          "Status": "Passed",
+          "Duration": 0.0007645,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroCap\")",
+          "Status": "Passed",
+          "Duration": 0.0007483,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"noSpawns\")",
+          "Status": "Passed",
+          "Duration": 0.000853,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidStepInput_RejectsCapacityIncludingExistingReservationWithoutMutation",
+          "Status": "Passed",
+          "Duration": 0.0029336,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.NoStep_PauseFreezesReservationIntervalCountersAndRandom",
+          "Status": "Passed",
+          "Duration": 0.0018996,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.PreparationFinishedThenOccupied_RetriesSameReservationWithoutResetOrLostCountOrSeed",
+          "Status": "Passed",
+          "Duration": 0.0017814,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.ReentrantOrThrowingCallback_CannotDoubleCommit_ReservationIsRetryable",
+          "Status": "Passed",
+          "Duration": 0.0012223,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.SequenceExhausted_IsNotVictory_AliveSnapshotAndConservationRemainAvailable",
+          "Status": "Passed",
+          "Duration": 0.0012814,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

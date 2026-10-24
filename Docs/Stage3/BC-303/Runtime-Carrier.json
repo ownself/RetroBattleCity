@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c=UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); var s=c.Session; s.SetPaused(false); s.AdvanceFrame(0,BattleCity.PlayerButtons.None); while(s.Clock.Tick<601){s.Bullets.Clear();s.AdvanceFrame(BattleCity.LogicClock.StepSeconds,BattleCity.PlayerButtons.None);} s.SetPaused(true); var carrier=System.Linq.Enumerable.Single(s.Tanks,t=>t.CarriesPickup); return new { tick=s.Clock.Tick, carrier=carrier.DefinitionId, hp=carrier.HitPoints, alive=s.PlayerTank.IsAlive, spawned=s.EnemyWave.SpawnedCount };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "tick": 601,
+        "carrier": "enemy.armor",
+        "hp": 4,
+        "alive": true,
+        "spawned": 4
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

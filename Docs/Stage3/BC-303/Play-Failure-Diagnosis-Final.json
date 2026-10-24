@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var l=UnityEditor.AssetDatabase.LoadAssetAtPath<BattleCity.LevelDefinition>(\"Assets/BattleCity/Data/Stage01.asset\"); var p=UnityEditor.AssetDatabase.LoadAssetAtPath<BattleCity.TankDefinition>(\"Assets/BattleCity/Data/PlayerPrototype.asset\"); var w=UnityEditor.AssetDatabase.LoadAssetAtPath<BattleCity.EnemyWaveDefinition>(\"Assets/BattleCity/Data/Stage01EnemyWave.asset\"); var r=UnityEditor.AssetDatabase.LoadAssetAtPath<BattleCity.PickupDefinition>(\"Assets/BattleCity/Data/Pickups.asset\"); var s=new BattleCity.ArenaSession(l,p,w,true,BattleCity.PlayerLifeParameters.Prototype,true,pickups:r); s.StartBattle();s.AdvanceFrame(0,BattleCity.PlayerButtons.None);for(int i=0;i<601;i++){s.Bullets.Clear();s.AdvanceFrame(BattleCity.LogicClock.StepSeconds,BattleCity.PlayerButtons.None);} var c=System.Linq.Enumerable.Single(s.Tanks,t=>t.CarriesPickup);var bs=System.Linq.Enumerable.ToList(System.Linq.Enumerable.Select(System.Linq.Enumerable.Where(s.Tanks,t=>t.IsAlive),t=>t.Bounds));bs.Add(s.Base.Bounds);var probe=new BattleCity.PickupState(r,l);bool reachable=probe.TryDrop(s.Map,s.Player.Position,s.PlayerTank.IsAlive,bs,s.Base.Bounds);bool aliveBefore=s.PlayerTank.IsAlive;s.Bullets.Clear();var d=c.Motor.Position.x<=104?BattleCity.CardinalDirection.Left:BattleCity.CardinalDirection.Right;new BattleCity.WeaponState(p,s.Bullets,BattleCity.CombatTeam.Player,999).Step(new BattleCity.TankCommand(d,false,true),c.Motor.Position-BattleCity.CardinalDirections.Vector(d)*18,d);s.AdvanceFrame(BattleCity.LogicClock.StepSeconds,BattleCity.PlayerButtons.None);return new {aliveBefore,aliveAfter=s.PlayerTank.IsAlive,reachable,player=s.Player.Position.ToString(),hp=c.HitPoints,phase=s.Phase.ToString(),attempts=s.Pickups.DropAttemptCount,rejected=s.Pickups.RejectedDropCount,spawned=s.Pickups.SpawnedCount,collected=s.Pickups.CollectedCount,active=s.Pickups.Active.HasValue};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "aliveBefore": true,
+        "aliveAfter": false,
+        "reachable": true,
+        "player": "(72.00, 8.00)",
+        "hp": 3,
+        "phase": "Playing",
+        "attempts": 1,
+        "rejected": 1,
+        "spawned": 0,
+        "collected": 0,
+        "active": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.04,
+      "summary": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Up)",
+          "Status": "Passed",
+          "Duration": 0.0057634,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Left)",
+          "Status": "Passed",
+          "Duration": 0.0066434,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Down)",
+          "Status": "Passed",
+          "Duration": 0.0047731,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Right)",
+          "Status": "Passed",
+          "Duration": 0.0052072,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

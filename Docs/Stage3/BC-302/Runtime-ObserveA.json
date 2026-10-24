@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c = UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); c.Session.SetFocus(true); bool started = c.StartBattle(); return new { started, frame = UnityEngine.Time.frameCount, tick = c.Session.Clock.Tick, phase = c.Session.Phase.ToString(), level = c.Session.PlayerUpgrades.Level };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "started": true,
+        "frame": 1454,
+        "tick": 0,
+        "phase": "Playing",
+        "level": 0
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

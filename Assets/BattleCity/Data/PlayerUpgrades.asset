@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf40447c0ae8be4d8d818734f0cac8a, type: 3}
+  m_Name: PlayerUpgrades
+  m_EditorClassIdentifier: BattleCity.Runtime::BattleCity.PlayerUpgradeDefinition
+  levels:
+  - {fileID: 11400000, guid: 09ec8dcb8bf142c4087182defbce2524, type: 2}
+  - {fileID: 11400000, guid: 8e0d5f5f2851e824c97e9677efb01b32, type: 2}
+  - {fileID: 11400000, guid: e911f95ad4c6f9846b194571bcf54457, type: 2}
+  - {fileID: 11400000, guid: b97d3d71adeaf7e48812fd754f71abb3, type: 2}

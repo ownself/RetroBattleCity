@@ -53,7 +53,21 @@ namespace BattleCity
             for (int i = 0; i < hits.Count; i++)
             {
                 var hit = hits[i];
-                if (hit.Kind != BulletHitKind.Terrain || hit.Terrain != TerrainKind.Brick) continue;
+                if (hit.Kind != BulletHitKind.Terrain) continue;
+                if (hit.Terrain == TerrainKind.Steel && hit.CanDestroySteel)
+                {
+                    // Project default: consume the projectile and remove only the contacted 8px steel tile.
+                    // All bullets still sweep the pre-damage map; no same-tick piercing through a new hole.
+                    int steelIndex = hit.DamageCell.y / 2 * PixelGrid.TerrainCellsPerAxis + hit.DamageCell.x / 2;
+                    if (terrain[steelIndex] == TerrainKind.Steel)
+                    {
+                        terrain[steelIndex] = TerrainKind.Empty;
+                        cellRevisions[steelIndex] = ++Revision;
+                        removed += 4;
+                    }
+                    continue;
+                }
+                if (hit.Terrain != TerrainKind.Brick) continue;
                 bool horizontal = hit.Direction == CardinalDirection.Left || hit.Direction == CardinalDirection.Right;
                 if (!horizontal && hit.Direction != CardinalDirection.Up && hit.Direction != CardinalDirection.Down) continue;
                 int along = horizontal ? hit.DamageCell.x : hit.DamageCell.y;

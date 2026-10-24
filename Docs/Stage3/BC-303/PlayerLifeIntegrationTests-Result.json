@@ -1,0 +1,133 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.07,
+      "summary": {
+        "total": 15,
+        "passed": 15,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.BirthAllowsExactBaseEdgeTouch_RegistrationStillRejectsIntactOrRuinedBase(False)",
+          "Status": "Passed",
+          "Duration": 0.0026348,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.BirthAllowsExactBaseEdgeTouch_RegistrationStillRejectsIntactOrRuinedBase(True)",
+          "Status": "Passed",
+          "Duration": 0.0006199,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.DeadInputAndMultiTickFrameCannotReplayHeldMoveOrFire_ReleaseThenPressRearms_EscapeStillWorks",
+          "Status": "Passed",
+          "Duration": 0.0013082,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.EnemyReservationAndThenLivingEnemyBlockReadyPlayer_UntilDamageReleasesSpace",
+          "Status": "Passed",
+          "Duration": 0.0019876,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.FinalDeathRetainsPlayerProjectileUntilItsNormalRelease",
+          "Status": "Passed",
+          "Duration": 0.001236,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.LegacyTwoThreeFourArgumentSessionsRemainDeathOnly",
+          "Status": "Passed",
+          "Duration": 0.007097,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.MultiHitDeathDoesNotTruncateOtherDamage_ExhaustionEventOnce_NoWorldFreeze",
+          "Status": "Passed",
+          "Duration": 0.002562,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.NewPressDuringDeadRenderFramesIsNotCachedAcrossRespawn",
+          "Status": "Passed",
+          "Duration": 0.0015831,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.PauseAndFocusFreezeBothTimers_NoCatchupAndManualResume",
+          "Status": "Passed",
+          "Duration": 0.001647,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.PlayerBirthPrecedesNewEnemyReservationWhenDamageFreesWaveCapacity",
+          "Status": "Passed",
+          "Duration": 0.0021367,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.ReadyBirthUsesFullSixteenPixelLivingTankFootprint_DeadPositionNotReserved(39,False)",
+          "Status": "Passed",
+          "Duration": 0.0022518,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.ReadyBirthUsesFullSixteenPixelLivingTankFootprint_DeadPositionNotReserved(40,True)",
+          "Status": "Passed",
+          "Duration": 0.0015351,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.RespawnPreservesReferencesIdsAndSnapshots_ResetsPoseHealthWeaponAndOnlyPlayerLeases",
+          "Status": "Passed",
+          "Duration": 0.0031576,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.SharedEnemyWeaponDeath_AbsoluteDelayAndProtectionEndpoints_ConsumesProtectedHits",
+          "Status": "Passed",
+          "Duration": 0.0078914,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.ThreeActualGenerationsSpendExactlyThreeLives_ThenNeverRespawn",
+          "Status": "Passed",
+          "Duration": 0.0033929,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

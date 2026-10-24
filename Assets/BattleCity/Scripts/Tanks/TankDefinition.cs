@@ -14,8 +14,11 @@ namespace BattleCity
         public float bulletSpeedPixelsPerSecond = 180f;
         public int fireCooldownTicks = 15;
         public int maxActiveBullets = 1;
+        public bool canDestroySteel;
         public int hitPoints = 1;
         public int score = 0;
+        [Tooltip("Optional HP damage stages, starting at full health. Empty keeps spritePrefix for all HP; otherwise one prefix per hit point, first equal to spritePrefix.")]
+        public string[] damageSpritePrefixes = Array.Empty<string>();
 
         public void Validate()
         {
@@ -24,6 +27,23 @@ namespace BattleCity
                 float.IsNaN(bulletSpeedPixelsPerSecond) || float.IsInfinity(bulletSpeedPixelsPerSecond) || bulletSpeedPixelsPerSecond <= 0 ||
                 fireCooldownTicks < 1 || maxActiveBullets < 1 || hitPoints < 1 || score < 0)
                 throw new InvalidOperationException("Invalid tank definition: " + name);
+            if (damageSpritePrefixes == null || (damageSpritePrefixes.Length != 0 &&
+                (damageSpritePrefixes.Length != hitPoints || damageSpritePrefixes[0] != spritePrefix)))
+                throw new InvalidOperationException("Invalid tank damage sprite stages: " + name);
+            foreach (var prefix in damageSpritePrefixes)
+                if (string.IsNullOrWhiteSpace(prefix)) throw new InvalidOperationException("Empty tank damage sprite prefix: " + name);
+        }
+
+        public void ValidateSprites(SpriteCatalog sprites)
+        {
+            Validate();
+            if (sprites == null) throw new ArgumentNullException(nameof(sprites));
+            int stages = Math.Max(1, damageSpritePrefixes.Length);
+            for (int stage = 0; stage < stages; stage++)
+                for (int direction = 0; direction < 4; direction++)
+                    for (int frame = 0; frame < 2; frame++)
+                        sprites.Get((damageSpritePrefixes.Length == 0 ? spritePrefix : damageSpritePrefixes[stage]) + "." +
+                            ((CardinalDirection)direction).SpriteKey() + "." + frame);
         }
     }
 }

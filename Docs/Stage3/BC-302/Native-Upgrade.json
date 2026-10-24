@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var s = UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>().Session; s.SetPaused(false); for(int i=0;i<3;i++) if(!s.TryUpgradePlayer()) throw new System.InvalidOperationException(\"Upgrade refused\"); s.SetPaused(true); return s.PlayerUpgrades.Level;"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": 3
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

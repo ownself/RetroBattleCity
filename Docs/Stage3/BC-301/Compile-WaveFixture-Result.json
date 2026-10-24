@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "command": "command script recompile_status",
+  "data": {
+    "command": "script recompile_status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "failed": true,
+      "errors": [
+        "Assets\\BattleCity\\Tests\\PlayMode\\EnemyWaveIntegrationPlayModeTests.cs(79,25): error CS0619: 'Object.GetInstanceID()' is obsolete: 'Use GetEntityId instead.'",
+        "Assets\\BattleCity\\Tests\\PlayMode\\EnemyWaveIntegrationPlayModeTests.cs(79,69): error CS0619: 'Object.GetInstanceID()' is obsolete: 'Use GetEntityId instead.'"
+      ],
+      "compilationFailed": true
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

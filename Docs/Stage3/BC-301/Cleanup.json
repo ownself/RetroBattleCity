@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "if (UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode) throw new System.InvalidOperationException(\"Cannot clean while playing\"); for (int i=0; i<UnityEngine.SceneManagement.SceneManager.sceneCount; i++) if (UnityEngine.SceneManagement.SceneManager.GetSceneAt(i).isDirty) throw new System.InvalidOperationException(\"Dirty scene; preserve for handoff\"); UnityEditor.SceneManagement.EditorSceneManager.OpenScene(\"Assets/BattleCity/Scenes/Stage01.unity\"); bool removed = UnityEditor.AssetDatabase.DeleteAsset(\"Assets/InitTestScene6e0f2366-0137-4224-b59d-fb8c49c878c9.unity\"); UnityEditor.PlayerSettings.runInBackground = false; return new { removedTestScene = removed, background = UnityEngine.Application.runInBackground, configuredBackground = UnityEditor.PlayerSettings.runInBackground, playing = UnityEditor.EditorApplication.isPlaying, paused = UnityEditor.EditorApplication.isPaused, scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().path, dirty = UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "removedTestScene": false,
+        "background": false,
+        "configuredBackground": false,
+        "playing": false,
+        "paused": false,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

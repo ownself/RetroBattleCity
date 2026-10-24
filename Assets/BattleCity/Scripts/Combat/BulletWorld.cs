@@ -17,6 +17,7 @@ namespace BattleCity
         public CardinalDirection Direction { get; internal set; }
         public float SpeedPixelsPerSecond { get; internal set; }
         public int AgeTicks { get; internal set; }
+        public bool CanDestroySteel { get; internal set; }
     }
 
     /// <summary>Unique projectile simulation: collect continuous contacts, resolve globally, then recycle.</summary>
@@ -43,6 +44,7 @@ namespace BattleCity
             bullet.Owner = owner; bullet.OwnerId = owner.OwnerId; bullet.Team = owner.Team;
             bullet.Position = bullet.PreviousPosition = position;
             bullet.Direction = direction; bullet.SpeedPixelsPerSecond = speed; bullet.AgeTicks = 0;
+            bullet.CanDestroySteel = owner.Parameters.CanDestroySteel;
             active.Add(bullet);
         }
 
@@ -199,6 +201,7 @@ namespace BattleCity
             bullet.Id = 0; bullet.Owner = null; bullet.OwnerId = 0; bullet.Team = default;
             bullet.Position = bullet.PreviousPosition = Vector2.zero;
             bullet.Direction = CardinalDirection.None; bullet.SpeedPixelsPerSecond = 0; bullet.AgeTicks = 0;
+            bullet.CanDestroySteel = false;
             free.Push(bullet);
         }
 

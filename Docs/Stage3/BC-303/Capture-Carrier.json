@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command capture game_view",
+  "data": {
+    "command": "capture game_view",
+    "parameters": {
+      "width": "1523",
+      "height": "752",
+      "source": "screen",
+      "save_path": "BC303-Captures/Carrier.png"
+    },
+    "result": {
+      "width": 1523,
+      "height": 752,
+      "encoding": "png",
+      "bytes": 28127,
+      "source": "screen",
+      "savedPath": "Assets/BC303-Captures/Carrier.png"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

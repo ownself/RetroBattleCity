@@ -1,0 +1,11 @@
+{
+  "verifiedBy": "primary agent, read-only disk hash observation",
+  "recordedUtc": "2026-10-24T15:09:54.206932+00:00",
+  "path": "ProjectSettings/ProjectSettings.asset",
+  "expectedSHA256": "b0ec2beeaa0139891bbd46899d712c1f1be8425a113c702eaf506c3cacdb4300",
+  "actualSHA256": "b0ec2beeaa0139891bbd46899d712c1f1be8425a113c702eaf506c3cacdb4300",
+  "matchesTaskStart": true,
+  "additionalAutomaticSaveAttempts": 0,
+  "manualFeedbackReceived": false,
+  "cause": "Not established: deferred Unity persistence or user operation; do not attribute. Original manual request withdrawn, no repeated action needed."
+}

@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command capture game_view",
+  "data": {
+    "command": "capture game_view",
+    "parameters": {
+      "width": "1523",
+      "height": "752",
+      "source": "screen",
+      "save_path": "Docs/Stage3/BC-302/Player-Level0-Native.png"
+    },
+    "result": {
+      "width": 1523,
+      "height": 752,
+      "encoding": "png",
+      "bytes": 26699,
+      "source": "screen",
+      "savedPath": "Assets/Docs/Stage3/BC-302/Player-Level0-Native.png"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

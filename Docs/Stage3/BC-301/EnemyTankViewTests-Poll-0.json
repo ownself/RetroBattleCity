@@ -1,0 +1,112 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.14,
+      "summary": {
+        "total": 12,
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.ClearAndRepeatedBinding_ReuseOneRendererAndDoNotRetainOldTank",
+          "Status": "Passed",
+          "Duration": 0.0142265,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.DestroyOwner_RemovesOwnedChildAndLeavesSharedInstanceUsable",
+          "Status": "Passed",
+          "Duration": 0.0188095,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.DisableAndDestroyComponent_ClearDisplayButNeverDestroyOrStopSharedTank",
+          "Status": "Passed",
+          "Duration": 0.0223094,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.FractionalSharedMotion_RoundsDisplayWithoutWritingLogic_UsesExistingSpritesAndSharedMaterial",
+          "Status": "Passed",
+          "Duration": 0.0074038,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.Initialize_SnapshotsAllEightFrames_WithoutRetainingCatalogOrDefinition",
+          "Status": "Passed",
+          "Duration": 0.0059582,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.InvalidRebind_ClearsPreviousDisplayAndFailsClearly_WithoutExtraRenderer",
+          "Status": "Passed",
+          "Duration": 0.005416,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.Pause_RealFramesAndRepeatedRenderCannotAdvanceSharedPose_ResumeUsesNextTick",
+          "Status": "Passed",
+          "Duration": 0.0213522,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.RealSharedProjectileDeath_HidesImmediatelyAndRepeatedRenderDoesNotResurrectOrDamage",
+          "Status": "Passed",
+          "Duration": 0.0062562,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Up)",
+          "Status": "Passed",
+          "Duration": 0.0048594,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Left)",
+          "Status": "Passed",
+          "Duration": 0.0047276,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Down)",
+          "Status": "Passed",
+          "Duration": 0.0048599,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Right)",
+          "Status": "Passed",
+          "Duration": 0.0047153,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

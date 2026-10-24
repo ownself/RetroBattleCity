@@ -1,0 +1,397 @@
+{
+  "task": "BC-303",
+  "status": "accepted; 169 unique final Passed; all protected resources match task start",
+  "implementationBy": "primary agent; no subagent/independent reviewer",
+  "baseHEAD": "a8daced9ef7f71708cd642deaf873dd21497eeb5",
+  "uniqueFinalTests": 169,
+  "uniquePassed": 169,
+  "newSpecialistTests": {
+    "EditMode": 20,
+    "PlayMode": 3
+  },
+  "rawResultsInMergeOrder": [
+    "Edit-Result.json",
+    "Edit-Retest.json",
+    "Edit-Additional.json",
+    "Play-Result.json",
+    "Play-Retest.json",
+    "SessionLifecycleIntegrationTests-Result.json",
+    "PlayerLifeIntegrationTests-Result.json",
+    "EnemyTypesTests-Result.json",
+    "EnemyWaveStateTests-Result.json",
+    "TankStateTests-Result.json",
+    "PlayerUpgradeTests-Result.json",
+    "Stage01Tests-Result.json",
+    "EnemyTypesPlayModeTests-Result.json",
+    "EnemyTankViewTests-Progress0.json",
+    "View-Retest-0-Result.json",
+    "View-Retest-1-Result.json",
+    "View-Retest-2-Result.json",
+    "View-Retest-3-Result.json",
+    "View-Retest-4-Result.json",
+    "PlayerUpgradePlayModeTests-Result.json",
+    "PlayerLifeIntegrationPlayModeTests-Result.json",
+    "SessionLifecyclePlayModeTests-Result.json"
+  ],
+  "rawSummaries": {
+    "Edit-Result.json": {
+      "total": 19,
+      "passed": 18,
+      "failed": 1,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "Edit-Retest.json": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "Edit-Additional.json": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "Play-Result.json": {
+      "total": 3,
+      "passed": 2,
+      "failed": 1,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "Play-Retest.json": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "SessionLifecycleIntegrationTests-Result.json": {
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "PlayerLifeIntegrationTests-Result.json": {
+      "total": 15,
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "EnemyTypesTests-Result.json": {
+      "total": 16,
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "EnemyWaveStateTests-Result.json": {
+      "total": 30,
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "TankStateTests-Result.json": {
+      "total": 24,
+      "passed": 24,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "PlayerUpgradeTests-Result.json": {
+      "total": 23,
+      "passed": 23,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "Stage01Tests-Result.json": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "EnemyTypesPlayModeTests-Result.json": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "EnemyTankViewTests-Progress0.json": {
+      "total": 12,
+      "passed": 4,
+      "failed": 8,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "View-Retest-0-Result.json": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "View-Retest-1-Result.json": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "View-Retest-2-Result.json": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "View-Retest-3-Result.json": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "View-Retest-4-Result.json": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "PlayerUpgradePlayModeTests-Result.json": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "PlayerLifeIntegrationPlayModeTests-Result.json": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "SessionLifecyclePlayModeTests-Result.json": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    }
+  },
+  "failuresAndCorrections": "See Verification.md: one water fixture, one same-tick player-death fixture, eight Sprite managed identity assertions, one eval extension-method compile error. Originals retained; only failed/new cases retested. One background persistence correction did not succeed; stopped and handed to user.",
+  "runtimeProof": [
+    "BC303 Stage01 natural carrier hp4->3, drop/replace, keyboard collection=1 frame=15->21 tick=602->603"
+  ],
+  "screenshots": [
+    "Carrier-Native.png",
+    "Pickup-Native.png"
+  ],
+  "captureLimits": "native1523x752 paused; temporary player protection; controlled arrival601 with prior bullets cleared; real Update independently frame12592->13615 tick0->147. Tank icon is framework only, no life effect.",
+  "consoleAtRecordedCutoff": {
+    "session": "316dee6ba1864c7dab134a9af37d8ce3",
+    "beforeCursor": 1226,
+    "afterCursor": 1503,
+    "newLogs": 277,
+    "newWarnings": 0,
+    "newErrors": 0,
+    "historicalErrors": 8,
+    "historicalWarnings": 1
+  },
+  "protectedUnchanged": [
+    "ProjectSettings/AudioManager.asset",
+    "ProjectSettings/ClusterInputManager.asset",
+    "ProjectSettings/DynamicsManager.asset",
+    "ProjectSettings/EditorBuildSettings.asset",
+    "ProjectSettings/EditorSettings.asset",
+    "ProjectSettings/GraphicsSettings.asset",
+    "ProjectSettings/InputManager.asset",
+    "ProjectSettings/MemorySettings.asset",
+    "ProjectSettings/MultiplayerManager.asset",
+    "ProjectSettings/NavMeshAreas.asset",
+    "ProjectSettings/NetworkManager.asset",
+    "ProjectSettings/PackageManagerSettings.asset",
+    "ProjectSettings/Physics2DSettings.asset",
+    "ProjectSettings/PhysicsCoreProjectSettings2D.asset",
+    "ProjectSettings/PresetManager.asset",
+    "ProjectSettings/ProjectAuditorSettings.asset",
+    "ProjectSettings/ProjectSettings.asset",
+    "ProjectSettings/ProjectVersion.txt",
+    "ProjectSettings/QualitySettings.asset",
+    "ProjectSettings/SceneTemplateSettings.json",
+    "ProjectSettings/ShaderGraphSettings.asset",
+    "ProjectSettings/TagManager.asset",
+    "ProjectSettings/TimeManager.asset",
+    "ProjectSettings/UnityConnectSettings.asset",
+    "ProjectSettings/URPProjectSettings.asset",
+    "ProjectSettings/VersionControlSettings.asset",
+    "ProjectSettings/VFXManager.asset",
+    "ProjectSettings/XRSettings.asset",
+    "ProjectSettings/Packages/com.unity.learn.iet-framework/Settings.json",
+    "Assets/BattleCity/Data/CombatArena.asset",
+    "Assets/BattleCity/Data/EnemyArmor.asset",
+    "Assets/BattleCity/Data/EnemyBalance.asset",
+    "Assets/BattleCity/Data/EnemyBasic.asset",
+    "Assets/BattleCity/Data/EnemyBasicPrototype.asset",
+    "Assets/BattleCity/Data/EnemyFast.asset",
+    "Assets/BattleCity/Data/EnemyFastBullet.asset",
+    "Assets/BattleCity/Data/PixelBaselineURP.asset",
+    "Assets/BattleCity/Data/PlayerLevel1.asset",
+    "Assets/BattleCity/Data/PlayerLevel2.asset",
+    "Assets/BattleCity/Data/PlayerLevel3.asset",
+    "Assets/BattleCity/Data/PlayerPrototype.asset",
+    "Assets/BattleCity/Data/PlayerUpgrades.asset",
+    "Assets/BattleCity/Data/SpriteCatalog.asset",
+    "Assets/BattleCity/Data/Stage01.asset",
+    "Assets/BattleCity/Data/Stage01EnemyWave.asset",
+    "Assets/BattleCity/Data/terrain.brick8.0.0.asset",
+    "Assets/BattleCity/Data/terrain.brick8.0.1.asset",
+    "Assets/BattleCity/Data/terrain.brick8.1.0.asset",
+    "Assets/BattleCity/Data/terrain.brick8.1.1.asset",
+    "Assets/BattleCity/Data/terrain.steel8.0.0.asset",
+    "Assets/BattleCity/Data/terrain.steel8.0.1.asset",
+    "Assets/BattleCity/Data/terrain.steel8.1.0.asset",
+    "Assets/BattleCity/Data/terrain.steel8.1.1.asset",
+    "Assets/BattleCity/Scenes/CombatArena.unity"
+  ],
+  "protectedMismatchesPendingManual": [],
+  "stage01SceneOnlyAddedPickupBinding": true,
+  "authoringIdempotentHashAssertionPassed": true,
+  "editorFinalBeforePersistenceAttempt": {
+    "removedCaptureImports": true,
+    "playing": false,
+    "paused": false,
+    "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+    "dirty": false,
+    "background": false,
+    "configuredBackground": false,
+    "temporaryTestScenes": []
+  },
+  "sourceAndAssetHashes": [
+    {
+      "path": "Assets/BattleCity/Data/Pickups.asset",
+      "sha256": "2bb7b00843ef920e6ca19f2a388c0ed59891f7f20ee40afdd73d42252ab6c289"
+    },
+    {
+      "path": "Assets/BattleCity/Data/Pickups.asset.meta",
+      "sha256": "6bef8db99d769ddcec7303cef738cf5316ac52fec709b9c8ac4515b18d0ffbe3"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/PickupAuthoring.cs",
+      "sha256": "b168bb4061ff80c1a51162dee378afb58f8de3e4a7017079f60b6160d63916ff"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/PickupAuthoring.cs.meta",
+      "sha256": "8f7ec8e25238c6c2bb2c0130d4a7588021c41252d8c241a3d4d766e4ac3cb6e7"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Stage01Authoring.cs",
+      "sha256": "a554f341a61d75186d6756159fd8622e97392c7c02aa9f968f484ca3d39c99db"
+    },
+    {
+      "path": "Assets/BattleCity/Scenes/Stage01.unity",
+      "sha256": "8d88c771da99c75a2f33abf5271f47b2cd5ece533bdbd681d0e65b5bdfda3571"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/ArenaController.cs",
+      "sha256": "97059a56aaeaf07958496ba799fdadb280cb3281dba02e15c81deafea4dab824"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/ArenaSession.cs",
+      "sha256": "71131c9426b4ba40d4e8b38bdd7b7df7c77b1d106a1975297e3f34552bd1681c"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Pickups.meta",
+      "sha256": "bf5b19e6a3c3fa92248c0a60ce815c8844cab6ce5fbcd3b1b9544dea35c5719e"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Pickups/PickupDefinition.cs",
+      "sha256": "2cf497a5ecee7c4b374f9619ca8140bfc37e4d7e1843b2fbfb1f7315aef1c937"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Pickups/PickupDefinition.cs.meta",
+      "sha256": "f81a2d463ebe338f278bb41c1a109f6d0c5ccd966d956f8edcd30d0f99651cff"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Pickups/PickupState.cs",
+      "sha256": "44644c6da67f90d978826094bdcaae4fdc5c4ea5f812970a6b97572569dd6058"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Pickups/PickupState.cs.meta",
+      "sha256": "6f3f1cee82da1d543e89e106508c04f36884325199a6fbfaea4fcdcd27eaa92c"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Pickups/PickupView.cs",
+      "sha256": "7681c7dda8bc949b470bab98f5c105089109951706956a1392c74ff2d36a5861"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Pickups/PickupView.cs.meta",
+      "sha256": "ff1efa0ec684f6f807ab13ace4fc9827e6d4d29744a76533fc31a97728467269"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/EnemyTankView.cs",
+      "sha256": "fe122415857d98cbbdda82c5d27ab06914a810faea06eb680ee41484e9e14519"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/TankState.cs",
+      "sha256": "8f3c8e9f90fefcf4cbd76b44b9cdd7a49d1e67d717c1a46827c0390013f98223"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PickupTests.cs",
+      "sha256": "17e9f4bec6f07ebdf1f7f0620806109d7b1ea6107fd32ebd15ec7703aaa73d86"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PickupTests.cs.meta",
+      "sha256": "4fda87c9e73932b42d0a1ba409ddbcee8de7e0ffdba18116f8f985cde596d71b"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/EnemyTankViewTests.cs",
+      "sha256": "8b1c4ed8b3a1ad6130ee5ac00d71ee96ac32896e766d6395d224879ccb238984"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/EnemyTypesPlayModeTests.cs",
+      "sha256": "ca34c2f5507dacfde724f8281234a4b18c6c6655db019df7a937a26b783ee754"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/PickupPlayModeTests.cs",
+      "sha256": "6bdb025f8ca9d9b3e68b6521b3b23e90e09b7098e913d005e74d6061af659842"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/PickupPlayModeTests.cs.meta",
+      "sha256": "15084540bceea1912c72ce738f46ebd47dd3ab10e6c203614098ca88c8f7c332"
+    }
+  ],
+  "manualHandoff": "Closed: read-only disk SHA256 matches task start; no user response or second automatic save claimed. No repeat tests/operations needed.",
+  "limits": [
+    "No BC304..309 effects/rewards",
+    "No full-suite/build/performance/independent review",
+    "No BC301 user test/play replayed",
+    "No commit/push; preserve worktree"
+  ],
+  "backgroundPersistenceResolution": {
+    "verifiedBy": "primary agent, read-only disk hash observation",
+    "recordedUtc": "2026-10-24T15:09:54.206932+00:00",
+    "path": "ProjectSettings/ProjectSettings.asset",
+    "expectedSHA256": "b0ec2beeaa0139891bbd46899d712c1f1be8425a113c702eaf506c3cacdb4300",
+    "actualSHA256": "b0ec2beeaa0139891bbd46899d712c1f1be8425a113c702eaf506c3cacdb4300",
+    "matchesTaskStart": true,
+    "additionalAutomaticSaveAttempts": 0,
+    "manualFeedbackReceived": false,
+    "cause": "Not established: deferred Unity persistence or user operation; do not attribute. Original manual request withdrawn, no repeated action needed."
+  },
+  "retainedPersonalSettingsDiff": {
+    "path": "UserSettings/EditorUserSettings.asset",
+    "kind": "Inspector preferences and recently used scene GUIDs; observed at final git status, not part of protected game/ProjectSettings resources",
+    "handling": "Preserved; no forced revert of personal settings. Actor not attributed."
+  }
+}

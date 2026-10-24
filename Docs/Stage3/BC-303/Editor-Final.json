@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "bool removed=UnityEditor.AssetDatabase.DeleteAsset(\"Assets/BC303-Captures\"); return new { removedCaptureImports=removed, playing=UnityEditor.EditorApplication.isPlaying, paused=UnityEditor.EditorApplication.isPaused, scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene().path, dirty=UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty, background=UnityEngine.Application.runInBackground, configuredBackground=UnityEditor.PlayerSettings.runInBackground, temporaryTestScenes=UnityEditor.AssetDatabase.FindAssets(\"InitTestScene t:Scene\") };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "removedCaptureImports": true,
+        "playing": false,
+        "paused": false,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false,
+        "background": false,
+        "configuredBackground": false,
+        "temporaryTestScenes": []
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

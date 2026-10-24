@@ -1,0 +1,112 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.13,
+      "summary": {
+        "total": 12,
+        "passed": 4,
+        "failed": 8,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.ClearAndRepeatedBinding_ReuseOneRendererAndDoNotRetainOldTank",
+          "Status": "Failed",
+          "Duration": 0.0099602,
+          "Message": "  Expected: same as <tank.white.enemy.basic.up.0 (UnityEngine.Sprite)>\r\n  But was:  <tank.white.enemy.basic.up.0 (UnityEngine.Sprite)>\r\n",
+          "StackTrace": "at BattleCity.Tests.EnemyTankViewTests.AssertProjection (BattleCity.TankState state) [0x00022] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTankViewTests.cs:65\r\nat BattleCity.Tests.EnemyTankViewTests.ClearAndRepeatedBinding_ReuseOneRendererAndDoNotRetainOldTank () [0x000d4] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTankViewTests.cs:196\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.DestroyOwner_RemovesOwnedChildAndLeavesSharedInstanceUsable",
+          "Status": "Passed",
+          "Duration": 0.0154321,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.DisableAndDestroyComponent_ClearDisplayButNeverDestroyOrStopSharedTank",
+          "Status": "Passed",
+          "Duration": 0.0188194,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.FractionalSharedMotion_RoundsDisplayWithoutWritingLogic_UsesExistingSpritesAndSharedMaterial",
+          "Status": "Failed",
+          "Duration": 0.0075457,
+          "Message": "  Expected: same as <tank.white.enemy.basic.up.0 (UnityEngine.Sprite)>\r\n  But was:  <tank.white.enemy.basic.up.0 (UnityEngine.Sprite)>\r\n",
+          "StackTrace": "at BattleCity.Tests.EnemyTankViewTests.AssertProjection (BattleCity.TankState state) [0x00022] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTankViewTests.cs:65\r\nat BattleCity.Tests.EnemyTankViewTests.FractionalSharedMotion_RoundsDisplayWithoutWritingLogic_UsesExistingSpritesAndSharedMaterial () [0x000c7] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTankViewTests.cs:109\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.Initialize_SnapshotsAllEightFrames_WithoutRetainingCatalogOrDefinition",
+          "Status": "Failed",
+          "Duration": 0.0121215,
+          "Message": "  Expected: same as <tank.white.enemy.basic.up.0 (UnityEngine.Sprite)>\r\n  But was:  <tank.white.enemy.basic.up.0 (UnityEngine.Sprite)>\r\n",
+          "StackTrace": "at BattleCity.Tests.EnemyTankViewTests.Initialize_SnapshotsAllEightFrames_WithoutRetainingCatalogOrDefinition () [0x00077] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTankViewTests.cs:258\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.InvalidRebind_ClearsPreviousDisplayAndFailsClearly_WithoutExtraRenderer",
+          "Status": "Passed",
+          "Duration": 0.0058118,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.Pause_RealFramesAndRepeatedRenderCannotAdvanceSharedPose_ResumeUsesNextTick",
+          "Status": "Failed",
+          "Duration": 0.0211832,
+          "Message": "  Expected: same as <tank.white.enemy.basic.down.1 (UnityEngine.Sprite)>\r\n  But was:  <tank.white.enemy.basic.down.1 (UnityEngine.Sprite)>\r\n",
+          "StackTrace": "at BattleCity.Tests.EnemyTankViewTests.AssertProjection (BattleCity.TankState state) [0x00022] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTankViewTests.cs:65\r\nat BattleCity.Tests.EnemyTankViewTests+<Pause_RealFramesAndRepeatedRenderCannotAdvanceSharedPose_ResumeUsesNextTick>d__16.MoveNext () [0x001aa] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTankViewTests.cs:146\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@ee3fe9477490\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.RealSharedProjectileDeath_HidesImmediatelyAndRepeatedRenderDoesNotResurrectOrDamage",
+          "Status": "Passed",
+          "Duration": 0.0064785,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Up)",
+          "Status": "Failed",
+          "Duration": 0.0043759,
+          "Message": "  Expected: same as <tank.white.enemy.basic.up.0 (UnityEngine.Sprite)>\r\n  But was:  <tank.white.enemy.basic.up.0 (UnityEngine.Sprite)>\r\n",
+          "StackTrace": "at BattleCity.Tests.EnemyTankViewTests.AssertProjection (BattleCity.TankState state) [0x00022] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTankViewTests.cs:65\r\nat BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation (BattleCity.CardinalDirection direction) [0x000a3] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTankViewTests.cs:86\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Left)",
+          "Status": "Failed",
+          "Duration": 0.0042316,
+          "Message": "  Expected: same as <tank.white.enemy.basic.left.0 (UnityEngine.Sprite)>\r\n  But was:  <tank.white.enemy.basic.left.0 (UnityEngine.Sprite)>\r\n",
+          "StackTrace": "at BattleCity.Tests.EnemyTankViewTests.AssertProjection (BattleCity.TankState state) [0x00022] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTankViewTests.cs:65\r\nat BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation (BattleCity.CardinalDirection direction) [0x000a3] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTankViewTests.cs:86\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Down)",
+          "Status": "Failed",
+          "Duration": 0.0042464,
+          "Message": "  Expected: same as <tank.white.enemy.basic.down.0 (UnityEngine.Sprite)>\r\n  But was:  <tank.white.enemy.basic.down.0 (UnityEngine.Sprite)>\r\n",
+          "StackTrace": "at BattleCity.Tests.EnemyTankViewTests.AssertProjection (BattleCity.TankState state) [0x00022] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTankViewTests.cs:65\r\nat BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation (BattleCity.CardinalDirection direction) [0x000a3] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTankViewTests.cs:86\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation(Right)",
+          "Status": "Failed",
+          "Duration": 0.0044196,
+          "Message": "  Expected: same as <tank.white.enemy.basic.right.0 (UnityEngine.Sprite)>\r\n  But was:  <tank.white.enemy.basic.right.0 (UnityEngine.Sprite)>\r\n",
+          "StackTrace": "at BattleCity.Tests.EnemyTankViewTests.AssertProjection (BattleCity.TankState state) [0x00022] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTankViewTests.cs:65\r\nat BattleCity.Tests.EnemyTankViewTests.SharedCommands_FourDirectionsAndTwoTrackFrames_StopHasNoIndependentAnimation (BattleCity.CardinalDirection direction) [0x000a3] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTankViewTests.cs:86\r\n"
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

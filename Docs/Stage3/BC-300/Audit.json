@@ -1,0 +1,186 @@
+{
+  "baseline": "a8daced9ef7f71708cd642deaf873dd21497eeb5",
+  "verifiedBy": "primary coding agent; no independent reviewer",
+  "uniqueTests": 70,
+  "latestStatusCounts": {
+    "Passed": 70
+  },
+  "evidenceOrder": [
+    "Tests-Result.json",
+    "Retest-Result.json",
+    "WaveRegression-Result.json",
+    "StageRegression-Result.json"
+  ],
+  "retainedFirstRunFailure": "MissingSpriteCatalogOrFrame_IsRejected; fixture used existing default prefix; corrected only this fixture and retested 1/1",
+  "modifiedPreExistingAssetsSettingsPackages": [],
+  "protectedFiles": [
+    {
+      "path": "Assets/BattleCity/Scenes/Stage01.unity",
+      "workingSha256": "09907c747ca0440e8ea14075bec00dd8b9399bbb443e7042a6c10e469dfa05e6",
+      "matchesHEADIgnoringCRLF": true
+    },
+    {
+      "path": "Assets/BattleCity/Data/Stage01.asset",
+      "workingSha256": "2e79c4870ddeb065b23be053bfc501352016608852b1daca08a6917b5b6fcfc3",
+      "matchesHEADIgnoringCRLF": true
+    },
+    {
+      "path": "Assets/BattleCity/Data/Stage01EnemyWave.asset",
+      "workingSha256": "07e98a02c7fa569480875a4d8b69550c5974a2ae8a4bee3e2236d530e88edb4e",
+      "matchesHEADIgnoringCRLF": true
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBasicPrototype.asset",
+      "workingSha256": "9eea749f6370d047d4c073218b72ef428f098076aece1f41d6149209442741ef",
+      "matchesHEADIgnoringCRLF": true
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Stage01Authoring.cs",
+      "workingSha256": "bc07e32bae46764ff7d38377f754f262d883229281f80234ca88504eda597f23",
+      "matchesHEADIgnoringCRLF": true
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/TankDefinition.cs",
+      "workingSha256": "377b4f17f12f8d0785f927f5cf8c54a5ebae1f8e827eb85372ac026fcc566b89",
+      "matchesHEADIgnoringCRLF": true
+    }
+  ],
+  "newAssetsAndSources": [
+    {
+      "path": "Assets/BattleCity/Data/EnemyArmor.asset",
+      "sha256": "d6989d0e1c94c5599537cdb0cc9694f19a6bc70d65f90a0161ca1e82cfeb0f06"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyArmor.asset.meta",
+      "sha256": "071e4c6585c7dd81ec4be9dddd8a9e0cbbb4e7b4462861bac3096ff4dc9703b3"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBalance.asset",
+      "sha256": "afbfe66fb5c8049dd8fce99f2324910c0c3f8209d97228ef9591d5253f7f4614"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBalance.asset.meta",
+      "sha256": "15398f5c72356b643ac604195280895d39de0209724bf752457cadbf48802e48"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBasic.asset",
+      "sha256": "c8791208bb8d698886abc837c1e5dee41044cabfdc525da88583a145bffbd8da"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBasic.asset.meta",
+      "sha256": "c2b97fb3944d555432eb0d76f27f9cf28f6ceb557d83f9a1ef3be1da3dd0569c"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyFast.asset",
+      "sha256": "a9fa904fa1d52dea4c8dd95c767e209158b62c8c2275f84bb24b62db81a1a82b"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyFast.asset.meta",
+      "sha256": "4ee5c86aefd9e6994d4098c776692f70eb9b722449af69da8b1ea4ebe845d1c9"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyFastBullet.asset",
+      "sha256": "4d1c6313b921e313d47ab1e455302ca2940d73012c08fd192010b4a9b18d6a1c"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyFastBullet.asset.meta",
+      "sha256": "9903d3750b76582e9e43aa2ae99133d1094dc1a7abcd714ab4662626fdb76cfc"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/EnemyBalanceAuthoring.cs",
+      "sha256": "f2bd1a307276325eb03e152b1f8d343c6b429e2b61132f02c41ba7565f3b9ee8"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/EnemyBalanceAuthoring.cs.meta",
+      "sha256": "7dfca4a0f157dd6488d58a38a0b6b406be9cf34a496ff25b0cd3c9fdb5ebacfb"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/AI/EnemyBalanceDefinition.cs",
+      "sha256": "aec1a102ab7d0e8560ada555bab97d6161571b994ad25e8f1ceb9f8c00968167"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/AI/EnemyBalanceDefinition.cs.meta",
+      "sha256": "ff6d95982521fe0591cb758ab7bddc725fc78138fda2bdfb54cfff79e42060ba"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyBalanceDefinitionTests.cs",
+      "sha256": "de33bb7df26b00b3767896e00b62b0a445eec6128109d960c5e6a85b2a3c91a0"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyBalanceDefinitionTests.cs.meta",
+      "sha256": "c84b89548ea3f8820fd8ec2ab7daad2d41c6e65f216bda380d60390598e06e01"
+    }
+  ],
+  "testNames": [
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"bulletInfinity\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"bulletLimit\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"bulletNaN\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"bulletNegative\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"bulletZero\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"cooldown\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"hp\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"id\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"moveInfinity\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"moveNaN\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"moveNegative\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"moveZero\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"score\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"sprite\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"duplicateId\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"duplicateKind\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"extra\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"missing\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"null\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"nullTank\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"sharedTank\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"unknownKind\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.MissingSpriteCatalogOrFrame_IsRejected",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.NewDefinitions_AreCompatibleWithExistingWaveMappingWithoutChangingStage01",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.Provenance_DefaultsRemainUnverified_ExplicitVerificationCanCiteEvidence",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.RepeatedAuthoring_RetainsAssetsAndDoesNotTouchActiveSceneOrLegacyBindings",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.ShippedAssets_HaveDocumentedDefaultsAndEightValidSpriteFrames(Armor,\"armor\",45,180,4,400)",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.ShippedAssets_HaveDocumentedDefaultsAndEightValidSpriteFrames(Basic,\"basic\",60,180,1,100)",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.ShippedAssets_HaveDocumentedDefaultsAndEightValidSpriteFrames(Fast,\"fast\",90,180,1,200)",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.ShippedAssets_HaveDocumentedDefaultsAndEightValidSpriteFrames(FastBullet,\"power\",60,300,1,300)",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.ValidRoster_ResolvesTypedDefinitionsWithoutDependingOnArrayOrder",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.VerifiedOriginalValues_RequireEvidence(\" \")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.VerifiedOriginalValues_RequireEvidence(\"\")",
+    "BattleCity.Tests.EnemyBalanceDefinitionTests.VerifiedOriginalValues_RequireEvidence(null)",
+    "BattleCity.Tests.EnemyWaveStateTests.AllPointsBlocked_WaitsWithoutConsumingRandomSequenceOrReservation_ThenUsesOnlyClearPoint",
+    "BattleCity.Tests.EnemyWaveStateTests.AuthorArraysAndTiming_AreSnapshotted_AndRuntimeNeverMutatesThem",
+    "BattleCity.Tests.EnemyWaveStateTests.Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications(1)",
+    "BattleCity.Tests.EnemyWaveStateTests.Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications(4)",
+    "BattleCity.Tests.EnemyWaveStateTests.DefaultTiming_FirstCreationCall61_Second241_DeathBeforeStepAndNextTickControlAreHostContract",
+    "BattleCity.Tests.EnemyWaveStateTests.EmptySequence_IsExhaustedWithoutReservationOrCallbacks",
+    "BattleCity.Tests.EnemyWaveStateTests.ExactSeedOne_FirstPointAndBrainSeedAreStable",
+    "BattleCity.Tests.EnemyWaveStateTests.FailedCreation_IsNotCommitted_AndCanRetryWithIdenticalRequest",
+    "BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(1)",
+    "BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(7)",
+    "BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(uint.MaxValue)",
+    "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"duplicate\")",
+    "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"emptyId\")",
+    "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"invalidTank\")",
+    "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"negativeInterval\")",
+    "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"negativePreparation\")",
+    "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"noSpawns\")",
+    "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"nullDefinition\")",
+    "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"nullMapping\")",
+    "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"nullSequence\")",
+    "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"unknown\")",
+    "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroCap\")",
+    "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroInterval\")",
+    "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroPreparation\")",
+    "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroSeed\")",
+    "BattleCity.Tests.EnemyWaveStateTests.InvalidStepInput_RejectsCapacityIncludingExistingReservationWithoutMutation",
+    "BattleCity.Tests.EnemyWaveStateTests.NoStep_PauseFreezesReservationIntervalCountersAndRandom",
+    "BattleCity.Tests.EnemyWaveStateTests.PreparationFinishedThenOccupied_RetriesSameReservationWithoutResetOrLostCountOrSeed",
+    "BattleCity.Tests.EnemyWaveStateTests.ReentrantOrThrowingCallback_CannotDoubleCommit_ReservationIsRetryable",
+    "BattleCity.Tests.EnemyWaveStateTests.SequenceExhausted_IsNotVictory_AliveSnapshotAndConservationRemainAvailable",
+    "BattleCity.Tests.Stage01Tests.Stage01_All676CellsMatchIndependentPngSamples",
+    "BattleCity.Tests.Stage01Tests.Stage01_AsymmetricLandmarksAndBaseProtectionHaveCorrectYFlip",
+    "BattleCity.Tests.Stage01Tests.Stage01_FrozenSpawnsFitAndDoNotOverlapBaseOrTerrain",
+    "BattleCity.Tests.Stage01Tests.Stage01_RuntimeDestructionDoesNotMutateAuthoringData",
+    "BattleCity.Tests.Stage01Tests.Stage01_SavedSceneBindsInteractiveTilesCameraAndSessionBase",
+    "BattleCity.Tests.Stage01Tests.Stage01_SerializedTerrainOnDiskHasExactly676ValidCellsMatchingLayout"
+  ]
+}

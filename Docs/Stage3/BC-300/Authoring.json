@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command script",
+  "data": null,
+  "errors": [
+    {
+      "code": "COMMAND_FAILED",
+      "message": "Failed to execute command 'script': Network error: socket hang up"
+    }
+  ],
+  "warnings": []
+}

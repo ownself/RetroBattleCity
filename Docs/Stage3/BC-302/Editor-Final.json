@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "bool removed = UnityEditor.AssetDatabase.DeleteAsset(\"Assets/Docs\"); var t = System.Linq.Enumerable.First(System.Linq.Enumerable.Where(System.Linq.Enumerable.Select(System.AppDomain.CurrentDomain.GetAssemblies(), a => a.GetType(\"Unity.Pipeline.Editor.Commands.AutoTickCommand\")), t => t != null)); var flags = System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic; return new { removedCaptureImports = removed, autoTick = t.GetProperty(\"IsEnabled\", flags).GetValue(null), intervalMs = t.GetProperty(\"CurrentIntervalMs\", flags).GetValue(null), playing = UnityEditor.EditorApplication.isPlaying, paused = UnityEditor.EditorApplication.isPaused, background = UnityEngine.Application.runInBackground, configuredBackground = UnityEditor.PlayerSettings.runInBackground, scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().path, dirty = UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "removedCaptureImports": true,
+        "autoTick": true,
+        "intervalMs": 16,
+        "playing": false,
+        "paused": false,
+        "background": false,
+        "configuredBackground": false,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

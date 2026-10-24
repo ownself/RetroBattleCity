@@ -108,7 +108,7 @@ namespace BattleCity.Tests
             Assert.That(Level.playerSpawnPixels, Is.EqualTo(new Vector2Int(72, 8)));
             Assert.That(Level.enemySpawnPixels, Is.EqualTo(new[] { new Vector2Int(8, 200), new Vector2Int(104, 200), new Vector2Int(200, 200) }));
             Assert.That(Level.enemySequence, Has.Length.EqualTo(20));
-            Assert.That(Level.enemySequence.All(id => id == Stage01Authoring.EnemyDefinitionId), Is.True);
+            CollectionAssert.AreEqual(EnemyTypesAuthoring.PrototypeSequence(), Level.enemySequence);
             Assert.That(Level.maxActiveEnemies, Is.EqualTo(4));
             var enemy = AssetDatabase.LoadAssetAtPath<TankDefinition>(Stage01Authoring.EnemyPath);
             var wave = AssetDatabase.LoadAssetAtPath<EnemyWaveDefinition>(Stage01Authoring.WavePath);
@@ -117,7 +117,9 @@ namespace BattleCity.Tests
             Assert.That(enemy.definitionId, Is.EqualTo(Stage01Authoring.EnemyDefinitionId));
             Assert.That(enemy.spritePrefix, Is.EqualTo("tank.white.enemy.basic"));
             Assert.That(enemy.requiresCalibration && wave.requiresCalibration, Is.True);
-            Assert.That(wave.tankDefinitions, Is.EqualTo(new[] { enemy }));
+            var roster = AssetDatabase.LoadAssetAtPath<EnemyBalanceDefinition>(EnemyBalanceAuthoring.BalancePath);
+            Assert.That(wave.tankDefinitions, Is.EqualTo(Enum.GetValues(typeof(EnemyKind)).Cast<EnemyKind>().Select(roster.Get).ToArray()));
+            foreach (var group in Level.enemySequence.GroupBy(id => id)) Assert.That(group.Count(), Is.EqualTo(5));
             Assert.That(wave.seed, Is.EqualTo(1u));
             Assert.That(wave.preparationTicks, Is.EqualTo(60)); Assert.That(wave.spawnIntervalTicks, Is.EqualTo(120));
             Assert.DoesNotThrow(() => new EnemyWaveState(Level, wave));

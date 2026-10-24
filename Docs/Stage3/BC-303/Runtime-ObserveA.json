@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var s=UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>().Session; s.PlayerTank.IsProtected=true; s.SetFocus(true); s.StartBattle(); return new { frame=UnityEngine.Time.frameCount, tick=s.Clock.Tick, width=UnityEngine.Screen.width, height=UnityEngine.Screen.height };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "frame": 12592,
+        "tick": 0,
+        "width": 1523,
+        "height": 752
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

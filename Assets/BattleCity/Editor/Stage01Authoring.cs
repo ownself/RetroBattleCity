@@ -56,6 +56,8 @@ namespace BattleCity.Editor
             controller.name = "Stage 01 - Enter starts; R restarts; WASD or arrows; Space fires; Esc pauses";
             controller.level = AssetDatabase.LoadAssetAtPath<LevelDefinition>(LevelPath);
             controller.enemyWaveDefinition = wave;
+            controller.playerUpgradeDefinition = PlayerUpgradeAuthoring.Prepare();
+            controller.pickupDefinition = PickupAuthoring.Prepare();
             controller.enablePlayerLifecycle = true;
             controller.enableSessionLifecycle = true;
             controller.playerRenderer.transform.position = PixelGrid.ToWorld(controller.level.playerSpawnPixels);
@@ -68,10 +70,10 @@ namespace BattleCity.Editor
             controller.baseRenderer = baseRenderer;
             var hud = Stage01HudAuthoring.Create(controller);
             hud.Render(new ArenaSession(controller.level, controller.playerDefinition, wave, true,
-                PlayerLifeParameters.Prototype, true), controller.level.stageNumber);
+                PlayerLifeParameters.Prototype, true, controller.playerUpgradeDefinition, controller.pickupDefinition), controller.level.stageNumber);
             controller.ValidateBindings();
             if (!EditorSceneManager.SaveScene(scene, ScenePath)) throw new InvalidOperationException("Could not save Stage 01.");
-            return "BC-207 Stage 01 saved Ready with pixel HUD, session/player lifecycle, real base and 20 prototype basic enemies: " + ScenePath;
+            return "BC-301 Stage 01 saved Ready with pixel HUD, session/player lifecycle, real base and 20 mixed prototype enemies: " + ScenePath;
         }
 
         public static void Populate(LevelDefinition level)
@@ -106,38 +108,21 @@ namespace BattleCity.Editor
             level.playerSpawnPixels = new Vector2Int(72, 8);
             level.enemySpawnPixels = new[] { new Vector2Int(8, 200), new Vector2Int(104, 200), new Vector2Int(200, 200) };
             // Project prototype sequence, NOT a claim about the original game's first wave.
-            level.enemySequence = Enumerable.Repeat(EnemyDefinitionId, 20).ToArray();
+            level.enemySequence = EnemyTypesAuthoring.PrototypeSequence();
             level.maxActiveEnemies = 4;
             level.Validate();
         }
 
         private static EnemyWaveDefinition BuildWaveAssets()
         {
-            var enemy = AssetDatabase.LoadAssetAtPath<TankDefinition>(EnemyPath);
-            if (enemy == null)
-            {
-                enemy = ScriptableObject.CreateInstance<TankDefinition>();
-                AssetDatabase.CreateAsset(enemy, EnemyPath);
-            }
-            enemy.definitionId = EnemyDefinitionId;
-            enemy.spritePrefix = "tank.white.enemy.basic";
-            enemy.requiresCalibration = true;
-            enemy.moveSpeedPixelsPerSecond = 60;
-            enemy.bulletSpeedPixelsPerSecond = 180;
-            enemy.fireCooldownTicks = 15;
-            enemy.maxActiveBullets = 1;
-            enemy.hitPoints = 1;
-            enemy.score = 0; // Scoring is not part of BC-203.
-            enemy.Validate();
-            EditorUtility.SetDirty(enemy);
-            AssetDatabase.SaveAssetIfDirty(enemy);
+            var roster = EnemyTypesAuthoring.PrepareRoster();
             var wave = AssetDatabase.LoadAssetAtPath<EnemyWaveDefinition>(WavePath);
             if (wave == null)
             {
                 wave = ScriptableObject.CreateInstance<EnemyWaveDefinition>();
                 AssetDatabase.CreateAsset(wave, WavePath);
             }
-            wave.tankDefinitions = new[] { enemy };
+            wave.tankDefinitions = Enum.GetValues(typeof(EnemyKind)).Cast<EnemyKind>().Select(roster.Get).ToArray();
             wave.seed = 1;
             wave.preparationTicks = 60;
             wave.spawnIntervalTicks = 120;

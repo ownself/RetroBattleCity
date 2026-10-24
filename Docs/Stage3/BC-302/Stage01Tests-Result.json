@@ -1,0 +1,77 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "Stage01Tests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 6,
+        "Passed": 6,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_All676CellsMatchIndependentPngSamples",
+          "Status": "Passed",
+          "Duration": 0.0258492,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_AsymmetricLandmarksAndBaseProtectionHaveCorrectYFlip",
+          "Status": "Passed",
+          "Duration": 0.0012542,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_FrozenSpawnsFitAndDoNotOverlapBaseOrTerrain",
+          "Status": "Passed",
+          "Duration": 0.0184276,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_RuntimeDestructionDoesNotMutateAuthoringData",
+          "Status": "Passed",
+          "Duration": 0.0063838,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_SavedSceneBindsInteractiveTilesCameraAndSessionBase",
+          "Status": "Passed",
+          "Duration": 0.0278257,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_SerializedTerrainOnDiskHasExactly676ValidCellsMatchingLayout",
+          "Status": "Passed",
+          "Duration": 0.0466186,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 0.56,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: Stage01Tests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

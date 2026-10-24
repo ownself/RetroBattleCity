@@ -1,0 +1,172 @@
+{
+  "status": "Implemented; acceptance pending manual verification. No BC-301 checkmark.",
+  "verifiedBy": "primary coding agent, no independent reviewer",
+  "baseHEAD": "a8daced9ef7f71708cd642deaf873dd21497eeb5",
+  "resultFiles": [
+    "Edit-Result.json",
+    "Edit-Retest-Result.json",
+    "Play-Result.json",
+    "EnemyBalanceDefinitionTests-Result.json",
+    "Stage01Tests-Result.json",
+    "TankStateTests-Result.json",
+    "EnemyWaveStateTests-Result.json",
+    "SessionLifecycleIntegrationTests-Result.json",
+    "PlayerLifeIntegrationTests-Result.json",
+    "EnemyTankViewTests-Result.json",
+    "EnemyWaveIntegrationPlayModeTests-Result.json"
+  ],
+  "uniqueLatestTests": 154,
+  "passed": 153,
+  "unresolvedTests": [
+    "BattleCity.Tests.EnemyWaveIntegrationPlayModeTests.DefaultStage01_RealUpdatesSpawnMoveFireAndRenderUpToCap_PauseFreezesPreparationAndInterval"
+  ],
+  "unresolvedNote": "Old wave test managed-wrapper identity failed. Assertion changed to native GetEntityId; compilation recovered but corrected assertion has NOT been retested. Automated retry cancelled; manual test requested.",
+  "newTests": {
+    "EditMode": 16,
+    "PlayMode": 2,
+    "finalPassed": 18
+  },
+  "runtimeProof": [
+    "BC301 Stage01 natural mixed types=4 frame=20->107 tick=601->614 score=100 pending=16"
+  ],
+  "protectedUnchanged": [
+    "Assets/BattleCity/Scenes/Stage01.unity",
+    "Assets/BattleCity/Scenes/CombatArena.unity",
+    "Assets/BattleCity/Data/EnemyBasicPrototype.asset",
+    "Assets/BattleCity/Art/GeneralSprites.png",
+    "ProjectSettings/ProjectSettings.asset"
+  ],
+  "levelOnlySequenceChanged": true,
+  "sourceAndAssetHashes": [
+    {
+      "path": "Assets/BattleCity/Data/EnemyArmor.asset",
+      "sha256": "9f8f83db6bb28c04375c90fda9e243598e1b805ac38681f9811428db9694d095"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyArmor.asset.meta",
+      "sha256": "071e4c6585c7dd81ec4be9dddd8a9e0cbbb4e7b4462861bac3096ff4dc9703b3"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBalance.asset",
+      "sha256": "afbfe66fb5c8049dd8fce99f2324910c0c3f8209d97228ef9591d5253f7f4614"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBalance.asset.meta",
+      "sha256": "15398f5c72356b643ac604195280895d39de0209724bf752457cadbf48802e48"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBasic.asset",
+      "sha256": "c8791208bb8d698886abc837c1e5dee41044cabfdc525da88583a145bffbd8da"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBasic.asset.meta",
+      "sha256": "c2b97fb3944d555432eb0d76f27f9cf28f6ceb557d83f9a1ef3be1da3dd0569c"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyFast.asset",
+      "sha256": "a9fa904fa1d52dea4c8dd95c767e209158b62c8c2275f84bb24b62db81a1a82b"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyFast.asset.meta",
+      "sha256": "4ee5c86aefd9e6994d4098c776692f70eb9b722449af69da8b1ea4ebe845d1c9"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyFastBullet.asset",
+      "sha256": "4d1c6313b921e313d47ab1e455302ca2940d73012c08fd192010b4a9b18d6a1c"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyFastBullet.asset.meta",
+      "sha256": "9903d3750b76582e9e43aa2ae99133d1094dc1a7abcd714ab4662626fdb76cfc"
+    },
+    {
+      "path": "Assets/BattleCity/Data/Stage01.asset",
+      "sha256": "d0fe08e536bef7ab95506174c12fc6a7758fd853d619a59e5258fa87b7222445"
+    },
+    {
+      "path": "Assets/BattleCity/Data/Stage01EnemyWave.asset",
+      "sha256": "14cdf7d07029117c82a77702915a414f71b27041cd741ead9cabfa73aa3c7a69"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/EnemyBalanceAuthoring.cs",
+      "sha256": "f2bd1a307276325eb03e152b1f8d343c6b429e2b61132f02c41ba7565f3b9ee8"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/EnemyBalanceAuthoring.cs.meta",
+      "sha256": "7dfca4a0f157dd6488d58a38a0b6b406be9cf34a496ff25b0cd3c9fdb5ebacfb"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/EnemyTypesAuthoring.cs",
+      "sha256": "a3daa306550b1d1d8b639cff460b6e6eb64775ab80d77fe79a37daf99ab57a08"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/EnemyTypesAuthoring.cs.meta",
+      "sha256": "55a9c24868cc7856e02621212ba694aad1d89978195112f424fefee9596e62e0"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Stage01Authoring.cs",
+      "sha256": "f64929b5e763840ea344240edfb94467e459d2d3d23260bfd8c6528feec7e3d9"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/AI/EnemyBalanceDefinition.cs",
+      "sha256": "dfb614df106b4ebe5342c3e6123cc9eed7b52af07452f8aa59c9fa9abb569377"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/AI/EnemyBalanceDefinition.cs.meta",
+      "sha256": "ff6d95982521fe0591cb758ab7bddc725fc78138fda2bdfb54cfff79e42060ba"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/ArenaController.cs",
+      "sha256": "0c0e102cec2962a891d9519034b9023644ebc3ab000f388a87d6081337feb75b"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/ArenaSession.cs",
+      "sha256": "b09e12d0ed2a4dfe181793bf86579644b28c9547025a20c57b588565c1602f1f"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/EnemyTankView.cs",
+      "sha256": "2863605a84dc550d5fa9ad1491e47eecabd2bd7ebaccbaee9a6db325dc6cb817"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/TankDefinition.cs",
+      "sha256": "a24aea1d580ba142aa462091b4083c0f4bbde5fc71442c7cba2ba40a9df57792"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/TankState.cs",
+      "sha256": "1cb3950a83f998327c249274d3ab0725345ce2dcf2274578cda9befce11e3013"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyBalanceDefinitionTests.cs",
+      "sha256": "5a6e68bc2c035be721ba3678a56a6ae183c4ae557b591867159fe1b9d1d65594"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyBalanceDefinitionTests.cs.meta",
+      "sha256": "c84b89548ea3f8820fd8ec2ab7daad2d41c6e65f216bda380d60390598e06e01"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyTypesTests.cs",
+      "sha256": "ac843f55e6a41f0c0908e703ab880cfd9ded2f281e040b1c46ba65581fa18a91"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyTypesTests.cs.meta",
+      "sha256": "0a49e68ca2f2dea42fcbdc92e6f763a7c17fcc3008809f44f505fcfae743ee19"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/Stage01Tests.cs",
+      "sha256": "bded563f3fe3922bb1c617af6aedc55e4beb7e1dffed143fe63cf9f1bacada9a"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/EnemyTypesPlayModeTests.cs",
+      "sha256": "22c04cf9d93441c095a5cd978e4d0e281396f99de07ff51d1c10cca400107256"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/EnemyTypesPlayModeTests.cs.meta",
+      "sha256": "ceafa7a6e8323408fc3787aafb779ed09d9d90262331a13b06d79ca48714b005"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/EnemyWaveIntegrationPlayModeTests.cs",
+      "sha256": "62eb70c86dafa8a211e01e1ea4fe50d3a644021c2624392aebef369b35fb2900"
+    }
+  ],
+  "compilationHandoff": "Compile-Handoff-Result.json: completed, failed=false",
+  "cleanup": "Cleanup.json: Stage01/stopped/not paused/clean/background false; transient TestRunner scene gone; introduced default Pipeline config moved to Temp/BC301-EditorPipelineConfig.json"
+}

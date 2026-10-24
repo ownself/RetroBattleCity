@@ -1,0 +1,140 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.46,
+      "summary": {
+        "total": 16,
+        "passed": 15,
+        "failed": 1,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.Armor_AllFourDamagePalettesResolveEveryDirectionAndFrame_MissingDamageFrameFailsEarly",
+          "Status": "Passed",
+          "Duration": 0.0308036,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.Armor_SameTickOverkillScoresOnce_AndSnapshotsScoreAtBirth",
+          "Status": "Passed",
+          "Duration": 0.0165997,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_MovesAndFiresUsingConfiguredSpeedCooldownAndLimit(Basic)",
+          "Status": "Passed",
+          "Duration": 0.0038408,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_MovesAndFiresUsingConfiguredSpeedCooldownAndLimit(Fast)",
+          "Status": "Passed",
+          "Duration": 0.000912,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_MovesAndFiresUsingConfiguredSpeedCooldownAndLimit(FastBullet)",
+          "Status": "Passed",
+          "Duration": 0.0008176,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_MovesAndFiresUsingConfiguredSpeedCooldownAndLimit(Armor)",
+          "Status": "Passed",
+          "Duration": 0.0008078,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_RequiresConfiguredHits_OnlyDeathScores_DeadTankNeverScoresOrMovesAgain(Basic)",
+          "Status": "Passed",
+          "Duration": 0.0033348,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_RequiresConfiguredHits_OnlyDeathScores_DeadTankNeverScoresOrMovesAgain(Fast)",
+          "Status": "Passed",
+          "Duration": 0.0009851,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_RequiresConfiguredHits_OnlyDeathScores_DeadTankNeverScoresOrMovesAgain(FastBullet)",
+          "Status": "Passed",
+          "Duration": 0.0009508,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_RequiresConfiguredHits_OnlyDeathScores_DeadTankNeverScoresOrMovesAgain(Armor)",
+          "Status": "Passed",
+          "Duration": 0.000972,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.InvalidDamageStageMappings_AreRejected(\"null\")",
+          "Status": "Passed",
+          "Duration": 0.0037258,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.InvalidDamageStageMappings_AreRejected(\"length\")",
+          "Status": "Passed",
+          "Duration": 0.0024689,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.InvalidDamageStageMappings_AreRejected(\"first\")",
+          "Status": "Passed",
+          "Duration": 0.0030393,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.InvalidDamageStageMappings_AreRejected(\"empty\")",
+          "Status": "Passed",
+          "Duration": 0.002844,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.PlayerDeath_NeverAwardsEnemyKillScore",
+          "Status": "Failed",
+          "Duration": 0.0155542,
+          "Message": "  Expected: False\r\n  But was:  True\r\n",
+          "StackTrace": "at BattleCity.Tests.EnemyTypesTests.PlayerDeath_NeverAwardsEnemyKillScore () [0x00028] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\EnemyTypesTests.cs:135\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.ProtectionFriendlyFireAndPause_DoNotDamageOrAwardPoints",
+          "Status": "Passed",
+          "Duration": 0.001724,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

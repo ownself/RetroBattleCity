@@ -50,12 +50,14 @@ namespace BattleCity
         public readonly Vector2Int DamageCell;
         public readonly TerrainKind Terrain;
         public readonly double TickFraction;
+        public readonly bool CanDestroySteel;
 
         internal BulletHit(BulletState bullet, BulletHitKind kind, long targetId, Vector2 position,
             double fraction, Vector2Int cell, TerrainKind terrain, long otherId = 0, Vector2 otherPosition = default)
         {
             BulletId = bullet.Id; OwnerId = bullet.OwnerId; Team = bullet.Team;
             Direction = bullet.Direction; Kind = kind; TargetId = targetId;
+            CanDestroySteel = bullet.CanDestroySteel;
             Position = position; TickFraction = fraction; DamageCell = cell; Terrain = terrain;
             OtherBulletId = otherId; OtherPosition = otherPosition;
         }

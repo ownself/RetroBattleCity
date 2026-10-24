@@ -1,0 +1,8 @@
+{
+  "Assets/BattleCity/Scenes/Stage01.unity": "09907c747ca0440e8ea14075bec00dd8b9399bbb443e7042a6c10e469dfa05e6",
+  "Assets/BattleCity/Scenes/CombatArena.unity": "0c55e43b775211bb110a3fdba61035dd834ddcb62e6aae2335da25f2095229c2",
+  "Assets/BattleCity/Data/Stage01.asset": "d0fe08e536bef7ab95506174c12fc6a7758fd853d619a59e5258fa87b7222445",
+  "Assets/BattleCity/Data/Stage01EnemyWave.asset": "14cdf7d07029117c82a77702915a414f71b27041cd741ead9cabfa73aa3c7a69",
+  "Assets/BattleCity/Data/PlayerPrototype.asset": "4e0a1ab9d84fe7ec16a5866a0a7d53a5f2e18cf615d2b545a4d00382c4683c37",
+  "ProjectSettings/ProjectSettings.asset": "b0ec2beeaa0139891bbd46899d712c1f1be8425a113c702eaf506c3cacdb4300"
+}

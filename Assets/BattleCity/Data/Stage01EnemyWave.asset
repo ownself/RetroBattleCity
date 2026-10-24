@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Stage01EnemyWave
   m_EditorClassIdentifier: BattleCity.Runtime::BattleCity.EnemyWaveDefinition
   tankDefinitions:
-  - {fileID: 11400000, guid: 24bbfcc23a39f5047b3ec4c4a7d77970, type: 2}
+  - {fileID: 11400000, guid: 7cf32345446df5a49acd4c14b16569e8, type: 2}
+  - {fileID: 11400000, guid: 9ad8bd3765c5d7645bbc6c30eff3ab76, type: 2}
+  - {fileID: 11400000, guid: 71fc30864d832a04794c87bd42ad6c49, type: 2}
+  - {fileID: 11400000, guid: 97fca6fcaf540f64fb2f485d90d72a01, type: 2}
   seed: 1
   preparationTicks: 60
   spawnIntervalTicks: 120

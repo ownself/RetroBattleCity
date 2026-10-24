@@ -1,0 +1,161 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.37,
+      "summary": {
+        "total": 19,
+        "passed": 18,
+        "failed": 1,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.PickupTests.AuthoredData_HasThreeExplicitCarriersSixSpritesAndCompleteRedFamilies_NoGunOrEffects",
+          "Status": "Passed",
+          "Duration": 0.0345812,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.BaseBlocksRoute_DestinationExclusionsCoverPlayerLiveTanksAndReservations",
+          "Status": "Passed",
+          "Duration": 0.0117531,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.CollectionIsStrictOverlapAliveOnly_ReceiptOnce_DifferentItemsCanBeCollected",
+          "Status": "Passed",
+          "Duration": 0.0035081,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.DeadPlayerCannotCollect_PickupSurvivesDeath_ProtectedRespawnCanCollect",
+          "Status": "Passed",
+          "Duration": 0.0218383,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.FirstAcceptedCarrierHitDropsBeforeDeath_ProtectedAndFriendlyHitsDoNotConsumeIt",
+          "Status": "Passed",
+          "Duration": 0.0039527,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.InvalidRulesFailEarly(0)",
+          "Status": "Passed",
+          "Duration": 0.0008575,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.InvalidRulesFailEarly(1)",
+          "Status": "Passed",
+          "Duration": 0.0002648,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.InvalidRulesFailEarly(2)",
+          "Status": "Passed",
+          "Duration": 0.0002458,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.InvalidRulesFailEarly(3)",
+          "Status": "Passed",
+          "Duration": 0.000246,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.InvalidRulesFailEarly(4)",
+          "Status": "Passed",
+          "Duration": 0.0008309,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.InvalidRulesFailEarly(5)",
+          "Status": "Passed",
+          "Duration": 0.0002804,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.LastEnemyTerminalTickClearsSlotAndSkipsNewDropOrCollection",
+          "Status": "Passed",
+          "Duration": 0.0034232,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.LethalOverkillDropsOnce_ManualEnemyNeverGetsCarrierFlag",
+          "Status": "Passed",
+          "Duration": 0.0025064,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.MissingWaveIsRejected_OptOutRetainsLegacy",
+          "Status": "Passed",
+          "Duration": 0.002571,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.NoCandidateOrDeadPlayer_PreservesSlotAndRng_ConsumesOpportunity_NoRetryLoop",
+          "Status": "Passed",
+          "Duration": 0.0028119,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.ReadyPauseAndFocusDoNotCollect_ResumeCollectsOnceWithoutScoreOrEffects",
+          "Status": "Passed",
+          "Duration": 0.0034849,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.SnapshotAndIndependentRng_ReproducibleDrops_ValidReplacementGetsNewIdentity",
+          "Status": "Passed",
+          "Duration": 0.004565,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.UnreachableRoomsWaterSteelAndBrickNeverReceivePickup_FractionalPlayerConnects",
+          "Status": "Failed",
+          "Duration": 0.0088624,
+          "Message": "  Expected: True\r\n  But was:  False\r\n",
+          "StackTrace": "at BattleCity.Tests.PickupTests.UnreachableRoomsWaterSteelAndBrickNeverReceivePickup_FractionalPlayerConnects () [0x00079] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\PickupTests.cs:122\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.UnrelatedWaveAndAiAreUnaffectedByIndependentDropRandomness",
+          "Status": "Passed",
+          "Duration": 0.0074907,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

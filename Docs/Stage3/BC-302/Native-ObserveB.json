@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c = UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); var value = new { frame = UnityEngine.Time.frameCount, tick = c.Session.Clock.Tick }; c.Session.SetPaused(true); return value;"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "frame": 2720,
+        "tick": 164
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

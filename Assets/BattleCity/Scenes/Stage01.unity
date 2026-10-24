@@ -216,6 +216,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: BattleCity.Runtime::BattleCity.ArenaController
   level: {fileID: 11400000, guid: f6d6dc8b03b323d4887d49ced670c862, type: 2}
   playerDefinition: {fileID: 11400000, guid: 09ec8dcb8bf142c4087182defbce2524, type: 2}
+  playerUpgradeDefinition: {fileID: 11400000, guid: 6efa33ead80927047b4520ef3f4f4cba, type: 2}
+  pickupDefinition: {fileID: 11400000, guid: e15bea4a07ff18e40afbb78d82b52f83, type: 2}
   enemyWaveDefinition: {fileID: 11400000, guid: afafd5e850347ad41ac4bd6e9623cacf, type: 2}
   sprites: {fileID: 11400000, guid: c8974cb6e55fae6458d52d3d9e9dd2cd, type: 2}
   mapView: {fileID: 2126228642}

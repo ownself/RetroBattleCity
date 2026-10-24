@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "UnityEditor.PlayerSettings.runInBackground=false; var settings=UnityEditor.AssetDatabase.LoadAllAssetsAtPath(\"ProjectSettings/ProjectSettings.asset\"); foreach(var item in settings){ UnityEditor.EditorUtility.SetDirty(item); UnityEditor.AssetDatabase.SaveAssetIfDirty(item); } return new { count=settings.Length, configured=UnityEditor.PlayerSettings.runInBackground };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "count": 1,
+        "configured": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

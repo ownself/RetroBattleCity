@@ -22,24 +22,24 @@ MonoBehaviour:
   - {x: 104, y: 200}
   - {x: 200, y: 200}
   enemySequence:
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
-  - enemy.basic.prototype
+  - enemy.basic
+  - enemy.fast
+  - enemy.power
+  - enemy.armor
+  - enemy.basic
+  - enemy.fast
+  - enemy.power
+  - enemy.armor
+  - enemy.basic
+  - enemy.fast
+  - enemy.power
+  - enemy.armor
+  - enemy.basic
+  - enemy.fast
+  - enemy.power
+  - enemy.armor
+  - enemy.basic
+  - enemy.fast
+  - enemy.power
+  - enemy.armor
   maxActiveEnemies: 4

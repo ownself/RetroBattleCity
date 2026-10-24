@@ -1,0 +1,301 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "BulletCollisionTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 38,
+        "Passed": 38,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Base_BothTeamsCanHit(Player)",
+          "Status": "Passed",
+          "Duration": 0.0017895,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Base_BothTeamsCanHit(Enemy)",
+          "Status": "Passed",
+          "Duration": 0.0001533,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.BoundaryImpact_RecordsExactBoxContact(Up,100,206)",
+          "Status": "Passed",
+          "Duration": 0.0004806,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.BoundaryImpact_RecordsExactBoxContact(Left,2,100)",
+          "Status": "Passed",
+          "Duration": 0.0001579,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.BoundaryImpact_RecordsExactBoxContact(Down,100,2)",
+          "Status": "Passed",
+          "Duration": 0.0001509,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.BoundaryImpact_RecordsExactBoxContact(Right,206,100)",
+          "Status": "Passed",
+          "Duration": 0.0001489,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.ContactExactlyAtTickEnd_IsAHit",
+          "Status": "Passed",
+          "Duration": 0.001384,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.DuplicateTargetIds_AreRejectedBeforeAdvancingBullets",
+          "Status": "Passed",
+          "Duration": 0.0013288,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.EarlierPairInvalidatesLaterWallAndBoundaryHits",
+          "Status": "Passed",
+          "Duration": 0.0015719,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.EarlierWallInvalidatesPair_AndOtherBulletStillGetsItsLaterWallHit",
+          "Status": "Passed",
+          "Duration": 0.0017741,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.FriendlyBullets_PassThroughEachOther",
+          "Status": "Passed",
+          "Duration": 0.0004016,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.GlobalOrdering_UsesTickTimeNotDistanceOrSpawnOrder",
+          "Status": "Passed",
+          "Duration": 0.000654,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.GrazingParallelEdge_IsNotAHit",
+          "Status": "Passed",
+          "Duration": 0.0002732,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HighSpeed_FourSidesStopAtFirstSteelFace(Up,100,64,100,94)",
+          "Status": "Passed",
+          "Duration": 0.0012054,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HighSpeed_FourSidesStopAtFirstSteelFace(Left,144,100,106,100)",
+          "Status": "Passed",
+          "Duration": 0.000716,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HighSpeed_FourSidesStopAtFirstSteelFace(Down,100,144,100,106)",
+          "Status": "Passed",
+          "Duration": 0.0007057,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HighSpeed_FourSidesStopAtFirstSteelFace(Right,64,100,94,100)",
+          "Status": "Passed",
+          "Duration": 0.0007048,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HostileHeadOnPair_CannotTunnelAndReleasesBothOwners",
+          "Status": "Passed",
+          "Duration": 0.0005696,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HostilePerpendicularPair_UsesRelativeSweep",
+          "Status": "Passed",
+          "Duration": 0.0003658,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.ImmutableHitSurvivesPoolReuseAndStaleIdCannotReleaseNewLease",
+          "Status": "Passed",
+          "Duration": 0.000551,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.NearestDistanceWinsBeforeKindPriority",
+          "Status": "Passed",
+          "Duration": 0.000871,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.NonBlockingTerrain_DoesNotConsumeBullets(Water)",
+          "Status": "Passed",
+          "Duration": 0.0009957,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.NonBlockingTerrain_DoesNotConsumeBullets(Grass)",
+          "Status": "Passed",
+          "Duration": 0.0007675,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.NonBlockingTerrain_DoesNotConsumeBullets(Ice)",
+          "Status": "Passed",
+          "Duration": 0.000519,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTime_BaseBeforeTank",
+          "Status": "Passed",
+          "Duration": 0.0003464,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTime_BoundaryBeforeTerrainAndBulletPair",
+          "Status": "Passed",
+          "Duration": 0.0007989,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTime_TankBeforeBulletPair",
+          "Status": "Passed",
+          "Duration": 0.0004524,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTime_TerrainBeforeBaseAndTank",
+          "Status": "Passed",
+          "Duration": 0.0007359,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTimeSameKind_LowestStableTargetIdWinsRegardlessOfInputOrder(False)",
+          "Status": "Passed",
+          "Duration": 0.000417,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTimeSameKind_LowestStableTargetIdWinsRegardlessOfInputOrder(True)",
+          "Status": "Passed",
+          "Duration": 0.000332,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Session_ActuallyUsesTerrainSweep",
+          "Status": "Passed",
+          "Duration": 0.0007932,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SpawnInsideBrick_IsConsumedAtZeroTimeAndOnlyOnce",
+          "Status": "Passed",
+          "Duration": 0.0015222,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.StartingContact_HitsOnlyWhenMovingIntoTarget(False)",
+          "Status": "Passed",
+          "Duration": 0.0003334,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.StartingContact_HitsOnlyWhenMovingIntoTarget(True)",
+          "Status": "Passed",
+          "Duration": 0.0001244,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Tanks_FriendlyAndOwnerAreIgnoredButHostileIsHit(Player)",
+          "Status": "Passed",
+          "Duration": 0.0007658,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Tanks_FriendlyAndOwnerAreIgnoredButHostileIsHit(Enemy)",
+          "Status": "Passed",
+          "Duration": 0.000154,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Terrain_NearestWinsAndSweepPhaseDoesNotMutateMap",
+          "Status": "Passed",
+          "Duration": 0.0012095,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.ThreeWayContact_ConsumesEachLeaseAtMostOnce",
+          "Status": "Passed",
+          "Duration": 0.0003145,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 0.54,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: BulletCollisionTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

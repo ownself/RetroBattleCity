@@ -14,7 +14,12 @@ namespace BattleCity
         public CombatTeam Team { get; }
         public TankMotor Motor { get; }
         public WeaponState Weapon { get; }
+        public string DefinitionId { get; }
+        public int KillScore { get; }
+        public int MaxHitPoints => initialHitPoints;
         public int HitPoints { get; private set; }
+        // Session assigns only to successful natural wave spawns; the first accepted hit consumes it.
+        public bool CarriesPickup { get; internal set; }
         public bool IsAlive => HitPoints > 0;
         // Generic protection; session-owned respawn protection is applied independently.
         public bool IsProtected { get; set; }
@@ -29,6 +34,8 @@ namespace BattleCity
             if (definition == null) throw new ArgumentNullException(nameof(definition));
             definition.Validate();
             EntityId = entityId; Team = team;
+            DefinitionId = definition.definitionId;
+            KillScore = definition.score;
             Motor = new TankMotor(spawn, map);
             Weapon = new WeaponState(definition, bullets, team, entityId);
             moveSpeed = definition.moveSpeedPixelsPerSecond;

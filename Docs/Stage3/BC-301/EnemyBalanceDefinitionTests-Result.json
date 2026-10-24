@@ -1,0 +1,273 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "EnemyBalanceDefinitionTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 34,
+        "Passed": 34,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"id\")",
+          "Status": "Passed",
+          "Duration": 0.0086339,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"sprite\")",
+          "Status": "Passed",
+          "Duration": 0.0008396,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"moveZero\")",
+          "Status": "Passed",
+          "Duration": 0.0002302,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"moveNegative\")",
+          "Status": "Passed",
+          "Duration": 0.0005185,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"moveNaN\")",
+          "Status": "Passed",
+          "Duration": 0.0003875,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"moveInfinity\")",
+          "Status": "Passed",
+          "Duration": 0.0003129,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"bulletZero\")",
+          "Status": "Passed",
+          "Duration": 0.0004681,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"bulletNegative\")",
+          "Status": "Passed",
+          "Duration": 0.0085347,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"bulletNaN\")",
+          "Status": "Passed",
+          "Duration": 0.0001976,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"bulletInfinity\")",
+          "Status": "Passed",
+          "Duration": 0.0002077,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"cooldown\")",
+          "Status": "Passed",
+          "Duration": 0.0001823,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"bulletLimit\")",
+          "Status": "Passed",
+          "Duration": 0.0001812,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"hp\")",
+          "Status": "Passed",
+          "Duration": 0.0001815,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"score\")",
+          "Status": "Passed",
+          "Duration": 0.0001804,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"null\")",
+          "Status": "Passed",
+          "Duration": 0.0005736,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"missing\")",
+          "Status": "Passed",
+          "Duration": 0.0010364,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"extra\")",
+          "Status": "Passed",
+          "Duration": 0.001393,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"duplicateKind\")",
+          "Status": "Passed",
+          "Duration": 0.0002791,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"unknownKind\")",
+          "Status": "Passed",
+          "Duration": 0.0001844,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"nullTank\")",
+          "Status": "Passed",
+          "Duration": 0.0001829,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"duplicateId\")",
+          "Status": "Passed",
+          "Duration": 0.0001814,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"sharedTank\")",
+          "Status": "Passed",
+          "Duration": 0.000177,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.MissingSpriteCatalogOrFrame_IsRejected",
+          "Status": "Passed",
+          "Duration": 0.0059167,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.NewDefinitions_AreCompatibleWithWaveMapping_Stage01UsesMixedPrototype_LegacyAssetRetained",
+          "Status": "Passed",
+          "Duration": 0.0072173,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.Provenance_DefaultsRemainUnverified_ExplicitVerificationCanCiteEvidence",
+          "Status": "Passed",
+          "Duration": 0.0012144,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.RepeatedAuthoring_RetainsAssetsAndDoesNotTouchActiveSceneOrLegacyBindings",
+          "Status": "Passed",
+          "Duration": 0.1341022,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.ShippedAssets_HaveDocumentedDefaultsAndEightValidSpriteFrames(Basic,\"basic\",60,180,1,100)",
+          "Status": "Passed",
+          "Duration": 0.0045176,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.ShippedAssets_HaveDocumentedDefaultsAndEightValidSpriteFrames(Fast,\"fast\",90,180,1,200)",
+          "Status": "Passed",
+          "Duration": 0.0004484,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.ShippedAssets_HaveDocumentedDefaultsAndEightValidSpriteFrames(FastBullet,\"power\",60,300,1,300)",
+          "Status": "Passed",
+          "Duration": 0.0003897,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.ShippedAssets_HaveDocumentedDefaultsAndEightValidSpriteFrames(Armor,\"armor\",45,180,4,400)",
+          "Status": "Passed",
+          "Duration": 0.0003742,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.ValidRoster_ResolvesTypedDefinitionsWithoutDependingOnArrayOrder",
+          "Status": "Passed",
+          "Duration": 0.000912,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.VerifiedOriginalValues_RequireEvidence(null)",
+          "Status": "Passed",
+          "Duration": 0.0002995,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.VerifiedOriginalValues_RequireEvidence(\"\")",
+          "Status": "Passed",
+          "Duration": 0.0001704,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.VerifiedOriginalValues_RequireEvidence(\" \")",
+          "Status": "Passed",
+          "Duration": 0.0001698,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 0.64,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: EnemyBalanceDefinitionTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

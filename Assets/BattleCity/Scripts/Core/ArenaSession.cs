@@ -14,6 +14,7 @@ namespace BattleCity
         private readonly List<Rect> blockers = new List<Rect>();
         private readonly Dictionary<long, EnemyBrain> enemyBrains = new Dictionary<long, EnemyBrain>();
         private readonly List<int> decisionMasks = new List<int>();
+        private readonly List<TankState> hitCarriers = new List<TankState>();
         private readonly Dictionary<long, TankDefinition> waveEnemyDefinitions = new Dictionary<long, TankDefinition>();
         private readonly Vector2 playerSpawn;
         private long nextEntityId;
@@ -33,11 +34,16 @@ namespace BattleCity
         public TankMotor Player => PlayerTank.Motor;
         public BulletWorld Bullets { get; } = new BulletWorld();
         public CombatEffects Effects { get; } = new CombatEffects();
+        // Minimal per-session kill total. Classification/rewards/score UI belong to BC-308.
+        public long Score { get; private set; }
+        public int DefeatedEnemyCount { get; private set; }
         public WeaponState PlayerWeapon => PlayerTank.Weapon;
         public TankCommand LastCommand { get; private set; } = new TankCommand(CardinalDirection.None);
         public EnemyWaveState EnemyWave { get; }
         public BaseState Base { get; }
         public PlayerLifeState PlayerLife { get; }
+        public PlayerUpgradeState PlayerUpgrades { get; }
+        public PickupState Pickups { get; }
         public bool PlayerLifeFailureRequested => PlayerLife != null && PlayerLife.IsExhausted;
         public event Action PlayerLivesExhausted;
         /// <summary>Latched failure request for BC-206, not a terminal state or a combat freeze.</summary>
@@ -55,17 +61,21 @@ namespace BattleCity
         }
 
         public ArenaSession(LevelDefinition level, TankDefinition tank, EnemyWaveDefinition wave = null, bool enableBase = false,
-            PlayerLifeParameters playerLifeParameters = null, bool enableSessionLifecycle = false)
+            PlayerLifeParameters playerLifeParameters = null, bool enableSessionLifecycle = false,
+            PlayerUpgradeDefinition playerUpgrades = null, PickupDefinition pickups = null)
         {
             if (enableSessionLifecycle && wave == null) throw new ArgumentNullException(nameof(wave));
             if (enableSessionLifecycle) { flow = new SessionFlowState(); Clock.SetPaused(true); }
             if (tank == null) throw new ArgumentNullException(nameof(tank));
             tank.Validate();
+            PlayerUpgrades = playerUpgrades == null ? null : new PlayerUpgradeState(playerUpgrades, tank);
             Map = new MapState(level);
             playerSpawn = level.playerSpawnPixels;
             PlayerLife = playerLifeParameters == null ? null : new PlayerLifeState(playerLifeParameters);
             // Validate/snapshot the complete wave before registering any combat entity.
             EnemyWave = wave == null ? null : new EnemyWaveState(level, wave);
+            if (pickups != null && wave == null) throw new ArgumentException("Pickup carriers require a natural wave.", nameof(pickups));
+            Pickups = pickups == null ? null : new PickupState(pickups, level);
             if (enableBase)
             {
                 if (!Map.CanOccupy(level.baseCenterPixels, BaseState.HalfSizePixels))
@@ -113,6 +123,7 @@ namespace BattleCity
             if (nextEntityId >= BaseState.EntityId - 1) throw new InvalidOperationException("Tank IDs exhausted.");
             var state = new TankState(checked(nextEntityId + 1), CombatTeam.Enemy, request.PositionPixels,
                 request.Definition, Map, Bullets);
+            state.CarriesPickup = Pickups != null && Pickups.IsCarrierIndex(request.SequenceIndex);
             enemyBrains.Add(state.EntityId, brain);
             waveEnemyDefinitions.Add(state.EntityId, request.Definition);
             tanks.Add(state);
@@ -178,6 +189,14 @@ namespace BattleCity
             finally { advancing = false; }
         }
 
+        /// <summary>BC-304 pickup seam: one request advances at most one level. No input/debug shortcut.</summary>
+        public bool TryUpgradePlayer()
+        {
+            if (retired || notifying || Clock.Paused || Phase != SessionPhase.Playing || !PlayerTank.IsAlive || PlayerUpgrades == null)
+                return false;
+            return PlayerUpgrades.TryUpgrade(PlayerWeapon);
+        }
+
         public bool StartBattle()
         {
             if (flow == null || !focused || retired || notifying || advancing || !flow.TryStart()) return false;
@@ -218,6 +237,7 @@ namespace BattleCity
         internal void Stop()
         {
             retired = true;
+            Pickups?.ClearActive();
             Clock.SetPaused(true);
             ClearCommands();
         }
@@ -309,6 +329,7 @@ namespace BattleCity
             Map.ApplyBulletHits(Bullets.Hits); // All sweeps see one pre-damage snapshot for this tick.
             Effects.Step(Bullets.Hits); // Consume every tick, never from a potentially slower render frame.
             bool baseDestroyed = false;
+            hitCarriers.Clear();
             for (int hit = 0; hit < Bullets.Hits.Count; hit++)
             {
                 if (Base != null && Base.ApplyHit(Bullets.Hits[hit]))
@@ -319,7 +340,23 @@ namespace BattleCity
                 for (int tank = 0; tank < tanks.Count; tank++)
                 {
                     if (tanks[tank] == PlayerTank && PlayerLife != null && PlayerLife.IsProtected) continue;
-                    if (tanks[tank].ApplyHit(Bullets.Hits[hit])) Effects.PlayExplosion(tanks[tank].Motor.Position);
+                    var state = tanks[tank];
+                    int previousHp = state.HitPoints;
+                    bool died = state.ApplyHit(Bullets.Hits[hit]);
+                    if (state.HitPoints < previousHp && state.CarriesPickup)
+                    {
+                        state.CarriesPickup = false;
+                        hitCarriers.Add(state);
+                    }
+                    if (!died) continue;
+                    Effects.PlayExplosion(state.Motor.Position);
+                    if (state == PlayerTank) PlayerUpgrades?.ResetOnDeath(PlayerWeapon);
+                    // ApplyHit returns true only on the alive -> dead transition, even for same-tick overkill.
+                    if (state.Team == CombatTeam.Enemy)
+                    {
+                        Score += state.KillScore;
+                        DefeatedEnemyCount++;
+                    }
                 }
             }
             // Birth commits AFTER damage. New tanks cannot enter the earlier decision/move/fire loops this tick.
@@ -333,7 +370,21 @@ namespace BattleCity
             EnemyWave?.Step(AliveEnemyCount, IsEnemySpawnOccupied, TryCreateWaveEnemy);
             bool ended = flow != null && flow.Settle(BaseFailureRequested, PlayerLifeFailureRequested,
                 EnemyWave.SequenceExhausted, AliveEnemyCount, EnemyWave.PendingCount, EnemyWave.ReservedCount);
-            if (ended) { Clock.SetPaused(true); ClearCommands(); }
+            if (ended) { Clock.SetPaused(true); ClearCommands(); Pickups?.ClearActive(); }
+            else if (Pickups != null)
+            {
+                // No terminal-tick drop/collection. Every carrier was consumed only by accepted damage.
+                // Drop after ALL damage and births: a dead player never supplies a bogus reachability origin.
+                for (int drop = 0; drop < hitCarriers.Count; drop++)
+                {
+                    CollectBlockers(null);
+                    if (EnemyWave?.Reservation is EnemySpawnRequest reservation)
+                        blockers.Add(new Rect((Vector2)reservation.PositionPixels - Vector2.one * 8, Vector2.one * 16));
+                    Pickups.TryDrop(Map, Player.Position, PlayerTank.IsAlive, blockers, Base?.Bounds);
+                }
+                // Framework ledger only. Concrete star/shield/life/freeze/grenade/shovel effects are later tasks.
+                Pickups.TryCollect(PlayerTank.Bounds, PlayerTank.IsAlive, Clock.Tick);
+            }
             // All original death notifications survive simultaneous failures. The outcome is already frozen.
             notifying = true;
             try

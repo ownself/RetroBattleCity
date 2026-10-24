@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.39,
+      "summary": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradePlayModeTests.CombatArena_RemainsOptOutWithOriginalWeaponAndSprite",
+          "Status": "Passed",
+          "Duration": 0.0576927,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradePlayModeTests.Stage01_AllLevelsRenderDirectionTrackPairs_PauseRejectsUpgrade_RealUpdatesAdvance",
+          "Status": "Passed",
+          "Duration": 0.257203,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradePlayModeTests.Stage01_TopLevelRealProjectileRemovesSteelTile_RestartRestoresMapWeaponAndLevel",
+          "Status": "Passed",
+          "Duration": 0.0565269,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

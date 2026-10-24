@@ -1,0 +1,52 @@
+{
+  "data": {
+    "result": {
+      "status": "completed",
+      "duration": 1.5,
+      "summary": {
+        "total": 5,
+        "passed": 4,
+        "failed": 1,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationPlayModeTests.CombatArena_RemainsWaveFreeWithNoEnemyOrPreparationDisplay",
+          "Status": "Passed",
+          "Duration": 0.0430624,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationPlayModeTests.DefaultStage01_ActualSharedProjectileDeathClearsOnlyItsViewAndAllowsReplacement",
+          "Status": "Passed",
+          "Duration": 0.0562202,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationPlayModeTests.DefaultStage01_RealUpdatesSpawnMoveFireAndRenderUpToCap_PauseFreezesPreparationAndInterval",
+          "Status": "Failed",
+          "Duration": 1.299171,
+          "Message": "  Expected: same as <tank.white.enemy.basic.down.0 (UnityEngine.Sprite)>\r\n  But was:  <tank.white.enemy.basic.down.0 (UnityEngine.Sprite)>\r\n",
+          "StackTrace": "at BattleCity.Tests.EnemyWaveIntegrationPlayModeTests+<DefaultStage01_RealUpdatesSpawnMoveFireAndRenderUpToCap_PauseFreezesPreparationAndInterval>d__12.MoveNext () [0x00531] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyWaveIntegrationPlayModeTests.cs:78\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@ee3fe9477490\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationPlayModeTests.DestroyHostComponent_DoesNotStrandSessionBoundDisplayChildrenOrLeases",
+          "Status": "Passed",
+          "Duration": 0.0371359,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationPlayModeTests.DisableReenableAndDestroy_ClearViewsHintsAndBulletLeases_OnlyRebindCurrentLivingTanks",
+          "Status": "Passed",
+          "Duration": 0.0473191,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    }
+  }
+}

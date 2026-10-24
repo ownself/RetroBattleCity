@@ -1,0 +1,189 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.48,
+      "summary": {
+        "total": 23,
+        "passed": 22,
+        "failed": 1,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.AuthoredDefaultsAndAll32SpritesResolve_MissingUpgradeFrameFailsEarly",
+          "Status": "Passed",
+          "Duration": 0.0371542,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.BaseDefinitionMismatchIsRejected",
+          "Status": "Passed",
+          "Duration": 0.0047133,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.DeathImmediatelyResetsToZero_OldBulletRetainsCapability_RespawnClearsOnlyPlayerLeases",
+          "Status": "Passed",
+          "Duration": 0.020215,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.EachLevel_RealMovementSpeedBulletSpeedCooldownAndLeaseLimit(0)",
+          "Status": "Passed",
+          "Duration": 0.0027748,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.EachLevel_RealMovementSpeedBulletSpeedCooldownAndLeaseLimit(1)",
+          "Status": "Passed",
+          "Duration": 0.0007447,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.EachLevel_RealMovementSpeedBulletSpeedCooldownAndLeaseLimit(2)",
+          "Status": "Passed",
+          "Duration": 0.0006756,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.EachLevel_RealMovementSpeedBulletSpeedCooldownAndLeaseLimit(3)",
+          "Status": "Passed",
+          "Duration": 0.000654,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.FourDirections_SteelRequiresTopLevel_OneEightPixelCellConsumedNoPiercing(0)",
+          "Status": "Passed",
+          "Duration": 0.0040726,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.FourDirections_SteelRequiresTopLevel_OneEightPixelCellConsumedNoPiercing(1)",
+          "Status": "Passed",
+          "Duration": 0.0018711,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.FourDirections_SteelRequiresTopLevel_OneEightPixelCellConsumedNoPiercing(2)",
+          "Status": "Passed",
+          "Duration": 0.002255,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.FourDirections_SteelRequiresTopLevel_OneEightPixelCellConsumedNoPiercing(3)",
+          "Status": "Failed",
+          "Duration": 0.0039431,
+          "Message": "  Expected: Empty\r\n  But was:  Steel\r\n",
+          "StackTrace": "at BattleCity.Tests.PlayerUpgradeTests.FourDirections_SteelRequiresTopLevel_OneEightPixelCellConsumedNoPiercing (System.Int32 target) [0x0012b] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\PlayerUpgradeTests.cs:156\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"null\")",
+          "Status": "Passed",
+          "Duration": 0.0017134,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"length\")",
+          "Status": "Passed",
+          "Duration": 0.0005538,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"entry\")",
+          "Status": "Passed",
+          "Duration": 0.000552,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"duplicate\")",
+          "Status": "Passed",
+          "Duration": 0.0005327,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"movement\")",
+          "Status": "Passed",
+          "Duration": 0.0005231,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"hp\")",
+          "Status": "Passed",
+          "Duration": 0.0005227,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"score\")",
+          "Status": "Passed",
+          "Duration": 0.0005251,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"damage\")",
+          "Status": "Passed",
+          "Duration": 0.0005486,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.LegacyUnboundPauseFocusReadyAndTerminalRejectUpgrade_ResumeAndShieldPermitIt",
+          "Status": "Passed",
+          "Duration": 0.0074264,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.SessionSnapshotsAllProfilesAndSprites_NoAssetMutation_EnemyWeaponsNeverUpgrade",
+          "Status": "Passed",
+          "Duration": 0.0176924,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.TwoSteelShotsSharePreDamageSnapshot_ImpactAndPoolReuseKeepCapabilitySnapshots",
+          "Status": "Passed",
+          "Duration": 0.0028465,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.Upgrade_DoesNotRecreateWeaponResetCooldownOrMutateExistingBullets_SecondLeaseUsesNewProfile",
+          "Status": "Passed",
+          "Duration": 0.0020344,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

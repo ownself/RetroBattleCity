@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.23,
+      "summary": {
+        "total": 3,
+        "passed": 2,
+        "failed": 1,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.PickupPlayModeTests.CombatArenaOptOut_StandaloneViewProjectsAllSixKindsReadOnlyAndClearsOnDisable",
+          "Status": "Passed",
+          "Duration": 0.0853532,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupPlayModeTests.Stage01_DisableRebindAndRepeatedRestart_ClearOldSlotUseStartupRulesAndOneRenderer",
+          "Status": "Passed",
+          "Duration": 0.0725021,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupPlayModeTests.Stage01_NaturalCarrierFlashes_FirstNonlethalHitDrops_RealInputCollectsExactlyOnce",
+          "Status": "Failed",
+          "Duration": 0.0603598,
+          "Message": "  Expected: not null\r\n  But was:  null\r\n",
+          "StackTrace": "at BattleCity.Tests.PickupPlayModeTests+<Stage01_NaturalCarrierFlashes_FirstNonlethalHitDrops_RealInputCollectsExactlyOnce>d__10.MoveNext () [0x00372] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\PickupPlayModeTests.cs:69\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@ee3fe9477490\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

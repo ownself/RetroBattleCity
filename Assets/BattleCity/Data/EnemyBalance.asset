@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e811ad97f303d88458c74820416d76e4, type: 3}
+  m_Name: EnemyBalance
+  m_EditorClassIdentifier: BattleCity.Runtime::BattleCity.EnemyBalanceDefinition
+  entries:
+  - kind: 0
+    tank: {fileID: 11400000, guid: 7cf32345446df5a49acd4c14b16569e8, type: 2}
+    originalValuesSource: 
+  - kind: 1
+    tank: {fileID: 11400000, guid: 9ad8bd3765c5d7645bbc6c30eff3ab76, type: 2}
+    originalValuesSource: 
+  - kind: 2
+    tank: {fileID: 11400000, guid: 71fc30864d832a04794c87bd42ad6c49, type: 2}
+    originalValuesSource: 
+  - kind: 3
+    tank: {fileID: 11400000, guid: 97fca6fcaf540f64fb2f485d90d72a01, type: 2}
+    originalValuesSource: 

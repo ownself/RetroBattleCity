@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var t = System.Linq.Enumerable.First(System.Linq.Enumerable.Where(System.Linq.Enumerable.Select(System.AppDomain.CurrentDomain.GetAssemblies(), a => a.GetType(\"Unity.Pipeline.Editor.Commands.AutoTickCommand\")), t => t != null)); var flags = System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic; return new { autoTick = t.GetProperty(\"IsEnabled\", flags).GetValue(null), intervalMs = t.GetProperty(\"CurrentIntervalMs\", flags).GetValue(null), background = UnityEngine.Application.runInBackground, playing = UnityEditor.EditorApplication.isPlaying, scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().path, dirty = UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "autoTick": true,
+        "intervalMs": 16,
+        "background": false,
+        "playing": false,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

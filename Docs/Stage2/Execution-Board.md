@@ -1,5 +1,7 @@
 # 阶段二剩余任务执行看板
 
+> 后续进度：用户已另行授权并完成BC-300（阶段三1/10），见 `../Stage3/Execution-Board.md`。本文件下方“不进入阶段三”等约束为当时阶段二轮次的历史边界，不覆盖新的BC-300授权。
+
 ## 授权与起点
 
 - 用户本轮请求：根据 `Docs/BattleCity-Implementation-Plan.md`，利用 subagent 逐一发起并完成阶段二剩余工作。

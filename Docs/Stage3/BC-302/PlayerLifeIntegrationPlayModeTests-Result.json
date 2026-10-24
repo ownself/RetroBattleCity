@@ -1,0 +1,31 @@
+{
+  "data": {
+    "result": {
+      "status": "completed",
+      "duration": 3.41,
+      "summary": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationPlayModeTests.CombatArena_RemainsExplicitlyLifecycleDisabled",
+          "Status": "Passed",
+          "Duration": 0.0237871,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationPlayModeTests.Stage01_RealUpdateSharedEnemyWeaponDeathHiddenWaitRespawnShieldExpiry_PauseAndFocusFreeze",
+          "Status": "Passed",
+          "Duration": 3.3772707,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    }
+  }
+}

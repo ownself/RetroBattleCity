@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c = UnityEngine.Object.FindFirstObjectByType<UnityEngine.Camera>(); return new { width = UnityEngine.Screen.width, height = UnityEngine.Screen.height, cameraWidth = c.pixelWidth, cameraHeight = c.pixelHeight, aspect = c.aspect, rect = c.rect };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "{ width = 1523, height = 752, cameraWidth = 768, cameraHeight = 720, aspect = 1.066667, rect = (x:0.25, y:0.02, width:0.50, height:0.96) }"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

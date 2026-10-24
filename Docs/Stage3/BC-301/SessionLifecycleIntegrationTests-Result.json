@@ -1,0 +1,105 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "SessionLifecycleIntegrationTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 10,
+        "Passed": 10,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(False,False,Won,None)",
+          "Status": "Passed",
+          "Duration": 0.0095292,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(True,False,Lost,BaseDestroyed)",
+          "Status": "Passed",
+          "Duration": 0.0011772,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(False,True,Lost,PlayerLivesExhausted)",
+          "Status": "Passed",
+          "Duration": 0.0013146,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(True,True,Lost,BaseDestroyed, PlayerLivesExhausted)",
+          "Status": "Passed",
+          "Duration": 0.0014364,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.EmptyFieldPendingBlockedAndReservationNeverWins_BirthSettlesBeforeOutcome",
+          "Status": "Passed",
+          "Duration": 0.0028744,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.FocusLossInsideStateNotification_PausesBeforeAnyTickWithoutRecursiveNotification(False)",
+          "Status": "Passed",
+          "Duration": 0.0018327,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.FocusLossInsideStateNotification_PausesBeforeAnyTickWithoutRecursiveNotification(True)",
+          "Status": "Passed",
+          "Duration": 0.001224,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.OptInRequiresWave_OldConstructorsStillAdvanceAndNeverSettle",
+          "Status": "Passed",
+          "Duration": 0.0014815,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ReadyStartPauseFocusAndHeldCombat_TransitionsNeverContributeElapsed",
+          "Status": "Passed",
+          "Duration": 0.0024115,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.StateNotificationCannotReenterStartPauseOrAdvance",
+          "Status": "Passed",
+          "Duration": 0.0016098,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 0.44,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: SessionLifecycleIntegrationTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

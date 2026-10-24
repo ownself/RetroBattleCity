@@ -1,0 +1,203 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "TankStateTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 24,
+        "Passed": 24,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.AllTanksBlock_HighSpeedHeadOnCannotSwapOrTunnel(Player)",
+          "Status": "Passed",
+          "Duration": 0.0018613,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.AllTanksBlock_HighSpeedHeadOnCannotSwapOrTunnel(Enemy)",
+          "Status": "Passed",
+          "Duration": 0.0007199,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.CombatRules_FrozenSelfFriendlyHostileMatrix(Player,Player,2,False)",
+          "Status": "Passed",
+          "Duration": 0.0004704,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.CombatRules_FrozenSelfFriendlyHostileMatrix(Enemy,Enemy,2,False)",
+          "Status": "Passed",
+          "Duration": 0.0001872,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.CombatRules_FrozenSelfFriendlyHostileMatrix(Player,Enemy,2,True)",
+          "Status": "Passed",
+          "Duration": 0.0001675,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.CombatRules_FrozenSelfFriendlyHostileMatrix(Enemy,Player,2,True)",
+          "Status": "Passed",
+          "Duration": 0.0001658,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.CombatRules_FrozenSelfFriendlyHostileMatrix(Player,Enemy,1,False)",
+          "Status": "Passed",
+          "Duration": 0.0001603,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DamageSettlesAfterAllWeapons_IndependentLanesCanKillBothTeamsInOneTick",
+          "Status": "Passed",
+          "Duration": 0.0053436,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.Death_ReleasesMovementOccupancyButNotOutstandingProjectileLease",
+          "Status": "Passed",
+          "Duration": 0.0016027,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DynamicSweep_ClampsAtEveryTankFace(Up,24,72,24,56)",
+          "Status": "Passed",
+          "Duration": 0.0013681,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DynamicSweep_ClampsAtEveryTankFace(Down,24,8,24,24)",
+          "Status": "Passed",
+          "Duration": 0.0006991,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DynamicSweep_ClampsAtEveryTankFace(Right,72,24,56,24)",
+          "Status": "Passed",
+          "Duration": 0.0007092,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DynamicSweep_ClampsAtEveryTankFace(Left,8,24,24,24)",
+          "Status": "Passed",
+          "Duration": 0.0025321,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DynamicSweep_ExactParallelTouchPassesButOverlapBlocks",
+          "Status": "Passed",
+          "Duration": 0.0021529,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.FriendlyTank_IsIgnoredByRealSweepBeforeHostileTank",
+          "Status": "Passed",
+          "Duration": 0.0021427,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.IncomingHit_UsesHealthAndProtectionForPlayerAndEnemy(False)",
+          "Status": "Passed",
+          "Duration": 0.010893,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.IncomingHit_UsesHealthAndProtectionForPlayerAndEnemy(True)",
+          "Status": "Passed",
+          "Duration": 0.0005908,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.Pause_FreezesAllTanksAndClearsNonPlayerCommands",
+          "Status": "Passed",
+          "Duration": 0.0010917,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.SameTickAllSweepsSeeLivingFrontTarget_DeathOnlyOnceThenNextTickOpensPath",
+          "Status": "Passed",
+          "Duration": 0.0041759,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.SideTurn_RequiresWholeDynamicAlignmentPathClear(25)",
+          "Status": "Passed",
+          "Duration": 0.0014964,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.SideTurn_RequiresWholeDynamicAlignmentPathClear(27)",
+          "Status": "Passed",
+          "Duration": 0.0009086,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.StableIds_SpawnRejectsOverlapAndNeverConsumesIdOnFailure",
+          "Status": "Passed",
+          "Duration": 0.0025045,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.TankCommand_SharesMovementAnimationMuzzleCooldownAndCapacity(Player)",
+          "Status": "Passed",
+          "Duration": 0.002395,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.TankCommand_SharesMovementAnimationMuzzleCooldownAndCapacity(Enemy)",
+          "Status": "Passed",
+          "Duration": 0.0008727,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 0.51,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: TankStateTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

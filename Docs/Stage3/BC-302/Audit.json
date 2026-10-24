@@ -1,0 +1,258 @@
+{
+  "status": "BC-302 accepted; BC-301 manual validation still pending",
+  "verifiedBy": "primary coding agent, no independent reviewer",
+  "baseHEAD": "a8daced9ef7f71708cd642deaf873dd21497eeb5",
+  "rawResultFiles": [
+    "Edit-Result.json",
+    "Edit-Retest.json",
+    "Play-Result.json",
+    "WeaponTests-Result.json",
+    "BulletCollisionTests-Result.json",
+    "BrickDestructionTests-Result.json",
+    "TankStateTests-Result.json",
+    "PlayerLifeIntegrationTests-Result.json",
+    "SessionLifecycleIntegrationTests-Result.json",
+    "Stage01Tests-Result.json",
+    "EnemyTypesTests-Result.json",
+    "PlayerLifeIntegrationPlayModeTests-Result.json",
+    "SessionLifecyclePlayModeTests-Result.json"
+  ],
+  "summaries": {
+    "Edit-Result.json": {
+      "total": 23,
+      "passed": 22,
+      "failed": 1,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "Edit-Retest.json": {
+      "Total": 1,
+      "Passed": 1,
+      "Failed": 0,
+      "Skipped": 0,
+      "Inconclusive": 0
+    },
+    "Play-Result.json": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "WeaponTests-Result.json": {
+      "Total": 15,
+      "Passed": 15,
+      "Failed": 0,
+      "Skipped": 0,
+      "Inconclusive": 0
+    },
+    "BulletCollisionTests-Result.json": {
+      "Total": 38,
+      "Passed": 38,
+      "Failed": 0,
+      "Skipped": 0,
+      "Inconclusive": 0
+    },
+    "BrickDestructionTests-Result.json": {
+      "Total": 33,
+      "Passed": 33,
+      "Failed": 0,
+      "Skipped": 0,
+      "Inconclusive": 0
+    },
+    "TankStateTests-Result.json": {
+      "Total": 24,
+      "Passed": 24,
+      "Failed": 0,
+      "Skipped": 0,
+      "Inconclusive": 0
+    },
+    "PlayerLifeIntegrationTests-Result.json": {
+      "Total": 15,
+      "Passed": 15,
+      "Failed": 0,
+      "Skipped": 0,
+      "Inconclusive": 0
+    },
+    "SessionLifecycleIntegrationTests-Result.json": {
+      "Total": 10,
+      "Passed": 10,
+      "Failed": 0,
+      "Skipped": 0,
+      "Inconclusive": 0
+    },
+    "Stage01Tests-Result.json": {
+      "Total": 6,
+      "Passed": 6,
+      "Failed": 0,
+      "Skipped": 0,
+      "Inconclusive": 0
+    },
+    "EnemyTypesTests-Result.json": {
+      "Total": 16,
+      "Passed": 16,
+      "Failed": 0,
+      "Skipped": 0,
+      "Inconclusive": 0
+    },
+    "PlayerLifeIntegrationPlayModeTests-Result.json": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "SessionLifecyclePlayModeTests-Result.json": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    }
+  },
+  "uniqueFinalTests": 188,
+  "uniquePassed": 188,
+  "newSpecialistTests": {
+    "EditMode": 23,
+    "PlayMode": 3
+  },
+  "firstRunFailureRetained": "FourDirections_SteelRequiresTopLevel_OneEightPixelCellConsumedNoPiercing(3): fixture put another steel tile in incoming path from right. Corrected diagonal neighbor only; retest 1/1. Production collision unchanged by fix.",
+  "authoringFailureRetained": "Authoring.json: scene transition unloaded unrooted level references; author now reloads table after scene load. Authoring-Final.json succeeded.",
+  "runtimeTestProof": [
+    "BC302 Stage01 level=3 real Update frame=31->101 tick=64->74 sprite=tank.yellow.player.level3.left.0"
+  ],
+  "protectedUnchangedSinceTaskStart": [
+    "Assets/BattleCity/Scenes/CombatArena.unity",
+    "Assets/BattleCity/Data/Stage01.asset",
+    "Assets/BattleCity/Data/Stage01EnemyWave.asset",
+    "Assets/BattleCity/Data/PlayerPrototype.asset",
+    "ProjectSettings/ProjectSettings.asset"
+  ],
+  "stage01SceneOnlyAddedUpgradeBinding": true,
+  "sourceAndAssetHashes": [
+    {
+      "path": "Assets/BattleCity/Data/PlayerLevel1.asset",
+      "sha256": "5cc4795ebe34fa14981c20993b29d3ad34d81e26b04f7a25c7771dd902d46d5e"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerLevel1.asset.meta",
+      "sha256": "4ae1ae1e7730baaba7e5bac17b0fadeb6122f6b66e8a6831659f258204c85b18"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerLevel2.asset",
+      "sha256": "0b225c00f7d87795f55388663f3aab41d93cbc1da53e8040636ddb91a789334e"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerLevel2.asset.meta",
+      "sha256": "0a4221f91695bc4a5b86f0e252056fb5f91a5b4bea196af7f38ad7bb5cc1d2c6"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerLevel3.asset",
+      "sha256": "cc3c642f4fd0ffddfb4540f8debe7b0f58e4a543794627df58727ded3364f0ba"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerLevel3.asset.meta",
+      "sha256": "55ebcfdd4605943fb05eac0492a797280a61eadd597832f79e84c07e404b1186"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerUpgrades.asset",
+      "sha256": "252852439bdb93aa425c22792a69f49541278057048411c1b3f03af36f7321e8"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerUpgrades.asset.meta",
+      "sha256": "6c5a8c65f03990960e8f72f8899f7293b0150fa251b03f9d1143fb7384ec7268"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/PlayerUpgradeAuthoring.cs",
+      "sha256": "c05df8c29f19a9712377e31966a53583bde97edc66483d2a5526ef722f566bb9"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/PlayerUpgradeAuthoring.cs.meta",
+      "sha256": "c6ee56a4146e904e06d8862fb3ccef334a8b00c9ccbf2a0e2550d552c756e2e5"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Stage01Authoring.cs",
+      "sha256": "5c72306b958afd189a16c292d84db431c41d8e480983406417ef49f055e47285"
+    },
+    {
+      "path": "Assets/BattleCity/Scenes/Stage01.unity",
+      "sha256": "291500d0207c5c90718212899f968dbbe5a6d77b0547bb10f6d53c179056d880"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/BulletHit.cs",
+      "sha256": "709cb71bc9adbef66b1e3ad18af45c43cbd0b81a43beea156e0c00f7a45e3c4f"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/BulletWorld.cs",
+      "sha256": "2f55eba1f31de2dcad49a8b4125567b37936f3428a9a4ddfe7c75b80c6766acd"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/WeaponState.cs",
+      "sha256": "5d863268c3a22422dd2be8f011d271c9b159aaa3195a3eb1c652c1a39153753d"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/ArenaController.cs",
+      "sha256": "2a20c5233e773ff7e71c4251fbb4304bad205dc35e6045390fa3310510bea1a5"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/ArenaSession.cs",
+      "sha256": "72b31ef12ad8f0495f682ecc23c4fee5b2ae377b153fd1eaa9b52eff72479dee"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Map/MapState.cs",
+      "sha256": "2c6e350f15b6848260d839ad513b18aee9c448c7b0cd86b95788a66bd14e5dea"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/PlayerUpgradeDefinition.cs",
+      "sha256": "76cc5c14c60367b48b1eb60cbb2181f24c68a08e684e6cb59531f4a36346fc34"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/PlayerUpgradeDefinition.cs.meta",
+      "sha256": "efdf18de7c6efa825c47d414c073512276626f17356c40a227b61790c7a17e61"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/PlayerUpgradeState.cs",
+      "sha256": "f872ac837d65537a77cb0dbab5c1f7c7d218181f95a30cfdca0ae06c28656a80"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/PlayerUpgradeState.cs.meta",
+      "sha256": "5459427fe5b820b41301d9b079fd0dd243c3680396ada3214ecef6957602479d"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/TankDefinition.cs",
+      "sha256": "259a48edf630d91e9e1ae9008cfef5cb174c5c499f4e9b6466e711a5ee386e81"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PlayerUpgradeTests.cs",
+      "sha256": "86587510f2e1b2e1e57b1d6b5419d20c7e778f6c59f7d2e3140db0d25ad10ee8"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PlayerUpgradeTests.cs.meta",
+      "sha256": "15b824b4718ea6a811609b66fef15f2eab4e973394697dcce79b3d7f53de7734"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/PlayerUpgradePlayModeTests.cs",
+      "sha256": "ee870ec37677db8a0a7c65ebb227be0cb6a3ebf90e8fcb4dc906ed429574369e"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/PlayerUpgradePlayModeTests.cs.meta",
+      "sha256": "2cc4d3ff97eda79b68557224463c2b87a86c9d3e4f35868233dd6b366031f33a"
+    }
+  ],
+  "screenshots": [
+    "Player-Level0-Native.png",
+    "Player-Level3-Native.png"
+  ],
+  "captureNote": "Native Screen1523x752. Initial forced512x480 images were anisotropically resized by tool; retained as non-pixel evidence only. CLI prefixes Assets/ to requested Docs path; copied PNGs to Docs then removed only introduced Assets/Docs via Editor API.",
+  "console": {
+    "session": "316dee6ba1864c7dab134a9af37d8ce3",
+    "beforeCursor": 986,
+    "afterCursor": 1198,
+    "newLogs": 212,
+    "newWarnings": 0,
+    "newErrors": 0,
+    "historicalErrors": 8,
+    "historicalWarnings": 1
+  },
+  "editorFinal": "Stage01, stopped, not paused, clean; backgroundfalse; autoTicktrue16 matches pre-run; default Pipeline config moved to Temp; no screenshot imports/temporary test scenes"
+}

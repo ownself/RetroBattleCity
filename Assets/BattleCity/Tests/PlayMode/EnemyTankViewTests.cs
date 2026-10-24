@@ -62,8 +62,8 @@ namespace BattleCity.Tests
         {
             var display = Display;
             Assert.That(display.enabled, Is.EqualTo(state.IsAlive));
-            Assert.That(display.sprite, Is.SameAs(catalog.Get(definition.spritePrefix + "." +
-                state.Motor.Facing.SpriteKey() + "." + state.Motor.TrackFrame)));
+            var expected = catalog.Get(definition.spritePrefix + "." + state.Motor.Facing.SpriteKey() + "." + state.Motor.TrackFrame);
+            Assert.That(display.sprite.GetEntityId(), Is.EqualTo(expected.GetEntityId()));
             var position = state.Motor.Position;
             Assert.That(display.transform.position, Is.EqualTo(PixelGrid.ToWorld(
                 new Vector2(Mathf.Round(position.x), Mathf.Round(position.y)))));
@@ -91,7 +91,7 @@ namespace BattleCity.Tests
             for (int i = 0; i < 100; i++) view.Render();
             Assert.That(enemy.Motor.IsMoving, Is.False);
             Assert.That(enemy.Motor.Position, Is.EqualTo(position));
-            Assert.That(Display.sprite, Is.SameAs(sprite));
+            Assert.That(Display.sprite.GetEntityId(), Is.EqualTo(sprite.GetEntityId()));
             AssertProjection(enemy);
         }
 
@@ -142,7 +142,7 @@ namespace BattleCity.Tests
             Assert.That(session.Clock.Tick, Is.EqualTo(tick));
             Assert.That(enemy.Motor.Position, Is.EqualTo(position));
             Assert.That(enemy.Motor.TrackFrame, Is.EqualTo(track));
-            Assert.That(Display.sprite, Is.SameAs(sprite));
+            Assert.That(Display.sprite.GetEntityId(), Is.EqualTo(sprite.GetEntityId()));
             AssertProjection(enemy);
             session.SetPaused(false);
             CommandTicks(CardinalDirection.Down, 1);
@@ -255,8 +255,8 @@ namespace BattleCity.Tests
                 {
                     CommandTicks(direction, 1);
                     view.Render();
-                    Assert.That(Display.sprite, Is.SameAs(catalog.Get("tank.white.enemy.basic." +
-                        enemy.Motor.Facing.SpriteKey() + "." + enemy.Motor.TrackFrame)));
+                    var expected = catalog.Get("tank.white.enemy.basic." + enemy.Motor.Facing.SpriteKey() + "." + enemy.Motor.TrackFrame);
+                    Assert.That(Display.sprite.GetEntityId(), Is.EqualTo(expected.GetEntityId()));
                 }
             }
         }

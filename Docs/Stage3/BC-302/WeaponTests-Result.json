@@ -1,0 +1,140 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "WeaponTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 15,
+        "Passed": 15,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.ActiveLimit_RejectsWithoutRestartingCooldownAndRearmsOnRelease",
+          "Status": "Passed",
+          "Duration": 0.0011057,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.BulletTravel_IsRenderRateIndependent(30)",
+          "Status": "Passed",
+          "Duration": 0.0012362,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.BulletTravel_IsRenderRateIndependent(60)",
+          "Status": "Passed",
+          "Duration": 0.0005643,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.BulletTravel_IsRenderRateIndependent(144)",
+          "Status": "Passed",
+          "Duration": 0.0005577,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.ConfiguredCap_IsPerOwnerAndCanExceedOne",
+          "Status": "Passed",
+          "Duration": 0.0004348,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.Cooldown_FirstShotImmediateNextShotExactlyFifteenTicksLater",
+          "Status": "Passed",
+          "Duration": 0.0003873,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.HeldFire_RepeatsWhenCooldownAndCapacityBothAllow",
+          "Status": "Passed",
+          "Duration": 0.0003124,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.MuzzleAndTravel_UseFacingAndLogicalPixels(Up)",
+          "Status": "Passed",
+          "Duration": 0.0010533,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.MuzzleAndTravel_UseFacingAndLogicalPixels(Left)",
+          "Status": "Passed",
+          "Duration": 0.0001922,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.MuzzleAndTravel_UseFacingAndLogicalPixels(Down)",
+          "Status": "Passed",
+          "Duration": 0.0001759,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.MuzzleAndTravel_UseFacingAndLogicalPixels(Right)",
+          "Status": "Passed",
+          "Duration": 0.0001731,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.Pause_FreezesBulletAndCooldownAndDoesNotResumeHeldFire",
+          "Status": "Passed",
+          "Duration": 0.0010699,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.PoolReuse_ResetsStateAndStaleLeaseCannotReleaseNewBullet",
+          "Status": "Passed",
+          "Duration": 0.0009877,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.RefusedTap_IsNotQueuedForLater",
+          "Status": "Passed",
+          "Duration": 0.0003744,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.Session_MovesThenSpawnsAndAdvancesBulletInSameTick",
+          "Status": "Passed",
+          "Duration": 0.0009846,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 0.67,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: WeaponTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

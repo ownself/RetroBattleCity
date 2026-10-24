@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var table = UnityEditor.AssetDatabase.LoadAssetAtPath<BattleCity.PlayerUpgradeDefinition>(BattleCity.Editor.PlayerUpgradeAuthoring.DefinitionPath); return new { tableExists = table != null, levels = table == null ? null : System.Array.ConvertAll(table.levels, t => t == null ? \"null\" : t.definitionId), paths = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Select(new[] { BattleCity.Editor.PlayerUpgradeAuthoring.BasePath, BattleCity.Editor.PlayerUpgradeAuthoring.LevelPath(1), BattleCity.Editor.PlayerUpgradeAuthoring.LevelPath(2), BattleCity.Editor.PlayerUpgradeAuthoring.LevelPath(3) }, p => new { path = p, exists = UnityEditor.AssetDatabase.LoadAssetAtPath<BattleCity.TankDefinition>(p) != null })) };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "tableExists": true,
+        "levels": [
+          "player.level0",
+          "player.level1",
+          "player.level2",
+          "player.level3"
+        ],
+        "paths": [
+          {
+            "path": "Assets/BattleCity/Data/PlayerPrototype.asset",
+            "exists": true
+          },
+          {
+            "path": "Assets/BattleCity/Data/PlayerLevel1.asset",
+            "exists": true
+          },
+          {
+            "path": "Assets/BattleCity/Data/PlayerLevel2.asset",
+            "exists": true
+          },
+          {
+            "path": "Assets/BattleCity/Data/PlayerLevel3.asset",
+            "exists": true
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

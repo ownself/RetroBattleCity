@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.15,
+      "summary": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_All676CellsMatchIndependentPngSamples",
+          "Status": "Passed",
+          "Duration": 0.0386832,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_AsymmetricLandmarksAndBaseProtectionHaveCorrectYFlip",
+          "Status": "Passed",
+          "Duration": 0.0014616,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_FrozenSpawnsFitAndDoNotOverlapBaseOrTerrain",
+          "Status": "Passed",
+          "Duration": 0.0123116,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_RuntimeDestructionDoesNotMutateAuthoringData",
+          "Status": "Passed",
+          "Duration": 0.0040092,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_SavedSceneBindsInteractiveTilesCameraAndSessionBase",
+          "Status": "Passed",
+          "Duration": 0.0233678,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_SerializedTerrainOnDiskHasExactly676ValidCellsMatchingLayout",
+          "Status": "Passed",
+          "Duration": 0.0361805,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

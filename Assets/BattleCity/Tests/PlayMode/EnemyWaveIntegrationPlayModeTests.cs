@@ -75,7 +75,9 @@ namespace BattleCity.Tests
             Assert.That(enemy.Motor.Position, Is.Not.EqualTo(birth)); Assert.That(enemy.Weapon.CooldownRemainingTicks, Is.GreaterThan(0));
             Assert.That(s.Bullets.Active.Any(b => b.OwnerId == enemy.EntityId && b.Team == CombatTeam.Enemy), Is.True);
             var renderer = Display(enemy); Assert.That(renderer.enabled, Is.True);
-            Assert.That(renderer.sprite, Is.SameAs(c.sprites.Get("tank.white.enemy.basic." + enemy.Motor.Facing.SpriteKey() + "." + enemy.Motor.TrackFrame)));
+            // Unity may remarshal another managed wrapper for the same native Sprite after scene loads.
+            Assert.That(renderer.sprite.GetEntityId(), Is.EqualTo(c.sprites.Get("tank.white.enemy.basic." +
+                enemy.Motor.Facing.SpriteKey() + "." + enemy.Motor.TrackFrame).GetEntityId()));
             Assert.That(PixelGrid.ToMapPixels(renderer.transform.position), Is.EqualTo(new Vector2(Mathf.Round(enemy.Motor.Position.x), Mathf.Round(enemy.Motor.Position.y))));
             Assert.That(renderer.sharedMaterial, Is.SameAs(c.playerRenderer.sharedMaterial));
             Assert.That(Hint == null || !Hint.enabled, Is.True);
