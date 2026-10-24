@@ -19,6 +19,8 @@ namespace BattleCity
             if (keyboard.rightArrowKey.isPressed) buttons |= PlayerButtons.Right;
             if (keyboard.spaceKey.isPressed) buttons |= PlayerButtons.Fire;
             if (keyboard.escapeKey.isPressed) buttons |= PlayerButtons.Pause;
+            if (keyboard.enterKey.isPressed) buttons |= PlayerButtons.Start;
+            if (keyboard.rKey.isPressed) buttons |= PlayerButtons.Restart;
             return buttons;
         }
     }

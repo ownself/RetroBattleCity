@@ -167,6 +167,7 @@ namespace BattleCity.Tests
                 var roots = scene.GetRootGameObjects();
                 var controller = roots.SelectMany(r => r.GetComponentsInChildren<ArenaController>()).Single();
                 Assert.That(controller.level, Is.SameAs(Level)); Assert.DoesNotThrow(controller.ValidateBindings);
+                Assert.That(controller.enableSessionLifecycle, Is.True, "Stage01 explicitly starts Ready");
                 Assert.That(controller.enemyWaveDefinition, Is.SameAs(AssetDatabase.LoadAssetAtPath<EnemyWaveDefinition>(Stage01Authoring.WavePath)));
                 Assert.That(PixelGrid.ToMapPixels(controller.playerRenderer.transform.position), Is.EqualTo((Vector2)Level.playerSpawnPixels));
                 var baseRenderer = roots.SelectMany(r => r.GetComponentsInChildren<SpriteRenderer>()).Single(r => r.sprite.name == "base.alive");

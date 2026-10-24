@@ -22,6 +22,28 @@
 
 ## 当前 lane
 
+**最新覆盖：fresh审查已完成OK with notes，无P0/P1，发现一条有效P2（通知回调内失焦暂停请求被丢弃）。** 主代理拟在本项最小修补/聚焦验证/复审；用户可能正在补两张Game图，按AGENTS.md当前不改源码或Unity现场、无活跃writer，等图或用户明确结束检查再动。见BC-206/FinalReview.md、Review-Disposition.md。
+
+**前一技术核对：470个唯一用例已有有效通过证据，主代理对账完成。** 原407/407Edit、62/63Play，唯一失败旧测试等待真实开始转换帧后1/1复测通过；不冒称一次470全绿。主代理原始集合、68源码、4模型、985保护文件hash均核对，见BC-206/Parent-Audit.json。独立画面eval误用Session.Flow已停止，不恢复或继续自动截图。用户仅需提供Ready/Playing两图，无需读内部属性/执行代码或重复测试。见Closeout-Decision.md。6/10/M2未通过，BC207不开展。
+
+**上一检查点：用户已反馈前述人工检查均无问题，Ready需Enter的疑问已解决，见BC-206/Manual-Check.md。** 主代理已核实Stage01 clean/stopped、后台设置及磁盘恢复；源码冻结，仅启动缺口验证（一次最终全量包含修补后的3项Play，不重复专项）→fresh只读审查，不恢复原实现child、不再次整项委派。若受阻立即人工交接；6/10及M2未通过不变，BC207不启动。
+
+**上一自动化停止记录：BC206集成child在25分钟期限终止，workflow failed。** 模型40/40、集成Edit8/8通过；Play1/3，另2项fixture虚拟键盘引用问题已最小修补但未复测。停止受阻自动化，不自动resume/relaunch；请用户按`BC-206/Manual-Handoff.md`先在Test Runner运行这3项并正常Save Project落盘后台设置。完整回归/独立运行/最终资源Console/审查尚欠，未验收，仍6/10/M2未通过。原始结果、源码及Temp/BC206-Stop-ab68a23d快照保留。下列授权和拓扑仍有效，不代表自动恢复许可。
+
+**授权：用户要求继续实现BC-206；此前暂停206的记录转为历史。** BC200～205已验收6/10，M2未通过。当前基线main/e2383bacf3b661f930f87667ed9d6d3062780f79，起点仅.vsconfig未跟踪。只开展206，不进入207。精确规则见`BC-206/Contract.md`。
+
+拓扑为multi-seam，严格串行单writer，不为并行制造拆分：独立纯状态裁决可单测；现有Session/Controller的tick冻结、通知、初始快照与显示重绑定必须由唯一integration-only owner接线。
+
+| Lane | cwd / 隔离 | 决策 / 文件所有权 | 权限 | 下一门禁 / 交接 | 独立性 |
+| --- | --- | --- | --- | --- | --- |
+| BC206-model | H:/Projects/Unities/BattleCity；原工作区串行 | 新SessionFlowState.cs（含enum）、SessionFlowStateTests.cs及Editor生成meta；只读其他Assets | 实现模型、实际编译及模型专项；Docs/Stage2/BC-206/Model-Handoff.md；不提交/委派/验收 | 专项通过并冻结API，再启动integration | 仅System依赖的5状态转换/裁决，与Unity装配独立 |
+| BC206-integration | 同cwd；模型交接后唯一writer | ArenaSession/Controller、输入、作者recipe/Stage01、必要LogicClock/显示接缝、专项及必要旧测试兼容；不得重写模型 | 完整接入、一次最终回归和短运行，Verification/清理/证据；无勾选权 | 实际验证→fresh只读审查 | 现有tick/重开/显示host共同生命周期，拆并行会重叠Controller/Session所有权 |
+| BC206-review | 同cwd只读；writer结束后 | 精确206增量/契约/原始测试与运行证据 | 不修改项目或Unity状态；返回有引用的问题与OK/BLOCK | 主代理直接核对/处置后Acceptance | 独立fresh审查，不以worker ready代替验收 |
+
+任何受阻遵守AGENTS.md及时人工交接；不等硬超时，不反复恢复；所有child显式openai/gpt-6.1-sol。
+
+### 上一检查点（BC205收口时历史）
+
 BC-201～BC-205已通过主代理验收（含此前BC-200，阶段二6/10），M2未通过。用户补充四项人工检查初步均通过并要求继续，见`BC-204/Manual-Check.md`。恢复时用户已提交此前工作，新基线main/d010f12f1a814d3595f8c065eedd7732475cddc7，仅.vsconfig未跟踪；不回退旧HEAD。BC-205模型→integration-only→有限恢复→fresh只读审查均已结束，主代理技术核对完成，精确契约见`Docs/Stage2/BC-205/Contract.md`，正式结论见`Docs/Stage2/BC-205/Acceptance.md`，主代理核对见`Parent-Check.md`。用户已明确总共出场3次且复活护盾有效，计数疑问已解决并勾选BC-205。按用户要求不启动BC-206，不重复运行成功测试或恢复已完成worker。以下保留各项历史边界。
 
 | Lane | repo/cwd | 决策与类型 | 所有权/边界 | 隔离 | 权限 | 下一门禁 | 交接 | 划分依据 |
@@ -106,7 +128,7 @@ BC-201 可包含坦克通用血量/幂等命中/死亡能力以及可测试的�
 | BC-203 | 已验收 | 299/299 EditMode、55/55 PlayMode；fresh审查OK with notes，主代理354集合/15文件当前SHA256/源码/截图复核；详见Acceptance.md |
 | BC-204 | 已验收，用户四项初步人工检查通过 | 320/320 EditMode、58/58 PlayMode；fresh审查OK with notes；主代理378集合/12实现+67保护文件当前SHA256/源码/截图复核，见Acceptance.md；无活跃worker |
 | BC-205 | 已验收，用户人工确认通过 | 359 Edit+60 Play=419唯一Passed；独立Update/三截图/清理齐全，fresh审查OK with notes；主代理64源码+259保护文件+5recipe/截图hash与原始集合/运行端点核对通过；用户确认总3次出场及复活护盾有效，见Acceptance.md/Manual-Check.md；无活跃worker |
-| BC-206 | 待办；用户明确要求暂不启动 | 后续集成会话状态、终局优先级、完整重开，本轮不开展 |
+| BC-206 | fresh审查完成；待人工两图/结束当前检查后修有效P2 | 470有效唯一通过证据及hash核对保留；审查OK with notes，通知内失焦P2拟最小修补/聚焦验证复审。为不改变用户截图版本当前无writer/Unity操作，不重跑整套/不自动再截图，不开展207 |
 | BC-207 | 待办 | 先读ui→ui-ugui skill，接入像素HUD |
 | BC-208 | 待办 | 完整闭环与边界自动回归 |
 | BC-209 / M2 | 待办 | 运行、截图、Console及流程验收；列明人工体验未覆盖项 |

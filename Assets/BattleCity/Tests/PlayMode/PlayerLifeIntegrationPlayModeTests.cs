@@ -38,7 +38,9 @@ namespace BattleCity.Tests
             enemyDefinition = Object.Instantiate(c.playerDefinition);
             enemyDefinition.moveSpeedPixelsPerSecond = .001f; enemyDefinition.bulletSpeedPixelsPerSecond = 6000;
             var enemy = s.AddTank(enemyDefinition, CombatTeam.Enemy, new Vector2(72, 40));
-            s.SetFocus(true); s.SetPaused(false);
+            s.SetFocus(true); s.StartBattle(); s.SetPaused(false);
+            // The start transition intentionally discards combat commands; inject only after its real Update.
+            yield return null;
             int firstFrame = Time.frameCount; long firstTick = s.Clock.Tick;
             s.SetTankCommand(enemy.EntityId, new TankCommand(CardinalDirection.Down, false, true));
             yield return WaitUntil(() => !player.IsAlive);

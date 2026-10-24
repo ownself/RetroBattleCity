@@ -51,10 +51,11 @@ namespace BattleCity.Editor
             if (!EditorSceneManager.SaveScene(source, ScenePath, true)) throw new InvalidOperationException("Could not copy arena harness.");
             var scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
             var controller = scene.GetRootGameObjects().SelectMany(r => r.GetComponentsInChildren<ArenaController>()).Single();
-            controller.name = "Stage 01 - WASD or arrows; Space fires; Esc pauses";
+            controller.name = "Stage 01 - Enter starts; R restarts; WASD or arrows; Space fires; Esc pauses";
             controller.level = AssetDatabase.LoadAssetAtPath<LevelDefinition>(LevelPath);
             controller.enemyWaveDefinition = wave;
             controller.enablePlayerLifecycle = true;
+            controller.enableSessionLifecycle = true;
             controller.playerRenderer.transform.position = PixelGrid.ToWorld(controller.level.playerSpawnPixels);
             controller.mapView.Render(new MapState(controller.level));
             var baseRenderer = new GameObject("Base - session state projection", typeof(SpriteRenderer)).GetComponent<SpriteRenderer>();
@@ -65,7 +66,7 @@ namespace BattleCity.Editor
             controller.baseRenderer = baseRenderer;
             controller.ValidateBindings();
             if (!EditorSceneManager.SaveScene(scene, ScenePath)) throw new InvalidOperationException("Could not save Stage 01.");
-            return "BC-205 Stage 01 saved with player lifecycle, real base and 20 prototype basic enemies: " + ScenePath;
+            return "BC-206 Stage 01 saved Ready with session/player lifecycle, real base and 20 prototype basic enemies: " + ScenePath;
         }
 
         public static void Populate(LevelDefinition level)

@@ -1,6 +1,41 @@
 # 阶段二续接记录
 
-## 最新覆盖状态（BC-205已验收，按用户要求暂不开展BC-206）
+## 最新覆盖状态：BC206审查完成，有效P2待修，先不改变用户截图版本
+
+- fresh review workflow368ac00d-ba3b-4413-956e-6f49c2dfc68b、child1e934775-5c98-4a82-9df3-d910d3db99c6已completed，原文BC-206/FinalReview.md；OK with notes，无P0/P1，一条P2。
+- P2：ArenaSession.SetFocus(false)在StateChanged回调内把focused设false，但ChangePaused被notifying guard拒绝，外层通知后仍Playing并继续tick。父代理判VALID，拟最小修补+聚焦Edit回归/复审，不能用OK with notes掩盖。详见Review-Disposition.md。
+- 用户可能正在按请求给Ready/Playing两张Game图；AGENTS.md禁止改变正在检查的版本/现场，因此当前不改生产/测试、不编译/测试/Play、不启动writer。用户补图或明确结束检查后再修P2，无需用户复现内部API。
+- 470唯一有效通过证据（不是单次470全绿）、Parent-Audit.json及全部hash/原失败保留；这批证据属于P2修补前源码。当前无Acceptance，阶段二6/10，M2未通过，BC207不开展。后续只补真实blast radius，不重跑整项或截图自动化。
+
+## 前一检查点：测试与主代理对账完成（历史）
+
+- 原full407Edit全过/Play62过1失败；父代理确定旧PlayerLife测试在StartBattle转换帧前注入FirePressed被规则清空，唯一修补yield return null等待真实Update；精确单例1/1复测过。有效证据覆盖470唯一用例，不是单次470全绿；原失败保留。生产源码未变，不再重跑测试。
+- Parent-Audit.json：父代理从原始发现/结果重算470无missing/extra/duplicate/nonPassed，当前68源码、4模型及985保护文件hash匹配。完整验证Final-Verification.md，复测Recheck-Verification.md，裁决Closeout-Decision.md。
+- 独立截图前eval误引用Session.Flow（正确Phase）被拒绝，子代理立即退出临时Play，最终clean/stopped/背景false/SessionState键不存在/ProjectSettings diff空；无新图或独立逻辑采样，不掩盖。不要恢复child/重新委派截图/继续尝试Unity。
+- 已请用户只补两张Game图：Ready（Play未Enter）、Playing（Enter后敌出现）。不用重复测试或执行内部C#；此前人工体验通过仍记录，不伪装精确tick/TestRunner计数。
+- fresh只读review已启动，workflow368ac00d-ba3b-4413-956e-6f49c2dfc68b，显式openai/gpt-6.1-sol；等原生通知，不poll。父代理保留验收权；BC206未写Acceptance、仍6/10/M2未通过，BC207不开展。用户补图期间不改变源码或Unity现场。
+
+## 人工反馈初到时检查点（历史）
+
+- 用户确认“前面需要验证…都没有问题”；Ready需Enter后才控制的疑问已解决。详见BC-206/Manual-Check.md，不伪装为Test Runner精确3/3。
+- 父代理最新预检：Stage01 clean/stopped、未暂停编译更新、后台内存false，ProjectSettings磁盘diff为空，e2383ba未变。源码冻结。
+- 只启动validation-only子任务（一次最终完整Edit/Play覆盖修补后3项，不额外专项）→fresh只读审查；不恢复原超时实现child、不再委派整项，不写复杂observer。若受阻及时停止人工交接。正式6/10/M2未通过，BC207不启动。
+
+## 上一停止与人工交接检查点（历史）
+
+- workflow ab68a23d-8bde-44e4-98cc-94bd595f6574已failed、无活跃worker；model374cc0e8…成功40专项，integration6bc297fd…25分钟超时；fresh审查未启动。不要自动恢复/换模式/重跑成功测试。
+- 实现已落盘、实际编译曾成功、集成Edit8/8；Play完成1/3，2项fixture移除Keyboard但保留引用，已最小置null修补但无复测证据。仍6/10、M2未通过、无BC206 Acceptance。
+- 用户最小介入见`BC-206/Manual-Handoff.md`：Unity中等待自动编译、File→Save Project（后台设置内存已false但磁盘待落盘）、Test Runner PlayMode仅运行SessionLifecyclePlayModeTests的3项并回传结果。不是要求用户完成整套验收。
+- 父代理安全清理时Stage01 clean/stopped/未暂停、编译更新false；runInBackground runtime与PlayerSettings内存false，磁盘最后diff仍1，不能说完全恢复；autoTick基线true/16ms保留，无独立observer。原始现场报告Parent-PostTimeout-*.json，源码/model hash及补丁快照Parent-Stop-Snapshot.json、Temp/BC206-Stop-ab68a23d。
+- 源码/证据/失败保留，未暂存提交；后续只补必要缺口（3项结果→稳定源码全量一次→短运行/图/Console资源清理→fresh审查→父验收），不进入207。所有后续subagent仍openai/gpt-6.1-sol，受阻按AGENTS.md及时人工交接。
+
+## BC-206启动时检查点（历史授权/拓扑）
+
+- 用户新要求继续实现BC206，覆盖此前暂停206的指令；只开展本项，不启动207。BC200～205已验收6/10、M2未通过。
+- 当前用户新提交main/e2383bacf3b661f930f87667ed9d6d3062780f79，起点仅.vsconfig未跟踪；不回退旧HEAD。Unity status本轮确认原PID26924/端口7800 ready。
+- `BC-206/Contract.md`冻结Ready/Playing/Paused/Won/Lost、失败优先、Enter开始/R重开回Ready、旧夹具默认禁用与完整快照重开。拓扑及所有权见Execution-Board：纯模型→integration-only→fresh审查→父代理验收；所有child显式openai/gpt-6.1-sol。AGENTS.md及时人工交接规则优先，不反复恢复或重跑成功测试。
+
+## 上一检查点（BC-205验收时的历史）
 
 - 用户最新要求：由主代理完成BC-205剩余工作，**暂不启动BC-206**。实现/模型/恢复/fresh审查均已结束；workflow `3ecd2e19-3e4b-4721-8cbf-165dee644d45` completed，无需等待或恢复。审查OK with notes，无具体缺陷。
 - 主代理已完成源码/原始419测试集合/运行端点/三截图/Console核对，并独立重算64源码、259保护文件、5recipe/截图hash，全部匹配。详见`BC-205/Parent-Check.md`和`Parent-Final-Audit.json`。本轮未重新运行测试、未请求Unity状态，避免干扰用户现场。

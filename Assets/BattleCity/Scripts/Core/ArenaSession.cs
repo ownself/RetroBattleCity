@@ -18,6 +18,14 @@ namespace BattleCity
         private readonly Vector2 playerSpawn;
         private long nextEntityId;
         private bool focused = true;
+        private readonly SessionFlowState flow;
+        private bool advancing, notifying, retired, transitionPending;
+        private PlayerButtons previousButtons;
+        public bool EnableSessionLifecycle => flow != null;
+        public SessionPhase Phase => flow?.Phase ?? (Clock.Paused ? SessionPhase.Paused : SessionPhase.Playing);
+        public SessionFailureReason FailureReason => flow?.FailureReason ?? SessionFailureReason.None;
+        public event Action StateChanged;
+        public event Action SessionEnded;
         public LogicClock Clock { get; } = new LogicClock();
         public MapState Map { get; }
         public IReadOnlyList<TankState> Tanks { get; }
@@ -47,8 +55,10 @@ namespace BattleCity
         }
 
         public ArenaSession(LevelDefinition level, TankDefinition tank, EnemyWaveDefinition wave = null, bool enableBase = false,
-            PlayerLifeParameters playerLifeParameters = null)
+            PlayerLifeParameters playerLifeParameters = null, bool enableSessionLifecycle = false)
         {
+            if (enableSessionLifecycle && wave == null) throw new ArgumentNullException(nameof(wave));
+            if (enableSessionLifecycle) { flow = new SessionFlowState(); Clock.SetPaused(true); }
             if (tank == null) throw new ArgumentNullException(nameof(tank));
             tank.Validate();
             Map = new MapState(level);
@@ -149,21 +159,81 @@ namespace BattleCity
 
         public int AdvanceFrame(double elapsedSeconds, PlayerButtons buttons)
         {
+            // Notifications may call public APIs. Never recursively run a combat tick.
+            if (advancing || notifying || retired) return 0;
+            bool start = (buttons & PlayerButtons.Start) != 0 && (previousButtons & PlayerButtons.Start) == 0;
+            previousButtons = buttons;
             bool toggle = input.Sample(buttons, focused && !Clock.Paused && PlayerTank.IsAlive);
-            if (toggle && focused)
+            if (focused && ((flow != null && start && StartBattle()) ||
+                (toggle && ChangePaused(!Clock.Paused))))
             {
-                SetPaused(!Clock.Paused);
-                return 0; // The transition frame never contributes elapsed combat time.
+                transitionPending = false;
+                return 0;
             }
-            return Clock.Advance(elapsedSeconds, Step);
+            if (transitionPending) { transitionPending = false; ClearCommands(); return 0; }
+            // The state model, not a writable Clock flag, owns lifecycle permission.
+            if (flow != null && flow.Phase != SessionPhase.Playing) { Clock.SetPaused(true); return 0; }
+            advancing = true;
+            try { return Clock.Advance(elapsedSeconds, Step); }
+            finally { advancing = false; }
         }
 
-        public void SetPaused(bool paused)
+        public bool StartBattle()
         {
+            if (flow == null || !focused || retired || notifying || advancing || !flow.TryStart()) return false;
+            Clock.SetPaused(false);
+            ClearCommands();
+            transitionPending = true;
+            NotifyStateChanged();
+            return true;
+        }
+
+        public void SetPaused(bool paused) => ChangePaused(paused);
+
+        private bool ChangePaused(bool paused)
+        {
+            if (retired || notifying || (flow != null && (!focused && !paused))) return false;
+            if (flow != null && !flow.SetPaused(paused)) return false;
             Clock.SetPaused(paused);
+            ClearCommands();
+            if (flow != null) { transitionPending = true; NotifyStateChanged(); }
+            return true;
+        }
+
+        private void ClearCommands()
+        {
             input.SuppressHeld();
             LastCommand = new TankCommand(CardinalDirection.None);
             for (int i = 0; i < tanks.Count; i++) tanks[i].Command = LastCommand;
+        }
+
+        internal void SuppressInput(PlayerButtons buttons)
+        {
+            previousButtons = buttons;
+            input.Sample(buttons, false);
+            ClearCommands();
+        }
+
+        // Stop an old controller session immediately, even when restart was requested by a notification.
+        internal void Stop()
+        {
+            retired = true;
+            Clock.SetPaused(true);
+            ClearCommands();
+        }
+
+        internal void Release()
+        {
+            Stop();
+            Bullets.Clear();
+            Effects.Clear();
+        }
+
+        private void NotifyStateChanged()
+        {
+            notifying = true;
+            try { StateChanged?.Invoke(); }
+            finally { notifying = false; }
         }
 
         public void SetFocus(bool hasFocus)
@@ -245,8 +315,18 @@ namespace BattleCity
                 PlayerTank.Command = LastCommand;
             }
             EnemyWave?.Step(AliveEnemyCount, IsEnemySpawnOccupied, TryCreateWaveEnemy);
-            if (lifeResult.LivesExhaustedThisTick) PlayerLivesExhausted?.Invoke();
-            if (baseDestroyed) BaseDestroyed?.Invoke();
+            bool ended = flow != null && flow.Settle(BaseFailureRequested, PlayerLifeFailureRequested,
+                EnemyWave.SequenceExhausted, AliveEnemyCount, EnemyWave.PendingCount, EnemyWave.ReservedCount);
+            if (ended) { Clock.SetPaused(true); ClearCommands(); }
+            // All original death notifications survive simultaneous failures. The outcome is already frozen.
+            notifying = true;
+            try
+            {
+                if (lifeResult.LivesExhaustedThisTick) PlayerLivesExhausted?.Invoke();
+                if (baseDestroyed) BaseDestroyed?.Invoke();
+                if (ended) { StateChanged?.Invoke(); SessionEnded?.Invoke(); }
+            }
+            finally { notifying = false; }
         }
     }
 }

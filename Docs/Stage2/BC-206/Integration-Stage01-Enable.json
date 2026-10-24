@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "if(UnityEditor.EditorApplication.isPlaying) throw new System.Exception(\"Playing\"); var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene(); if(scene.path!=\"Assets/BattleCity/Scenes/Stage01.unity\" || scene.isDirty) throw new System.Exception(\"Unexpected/dirty scene\"); var c=UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); c.enableSessionLifecycle=true; c.name=\"Stage 01 - Enter starts; R restarts; WASD or arrows; Space fires; Esc pauses\"; UnityEditor.EditorUtility.SetDirty(c); UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene); bool saved=UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene); return new {saved, c.enableSessionLifecycle,scene.isDirty,model=typeof(BattleCity.SessionFlowState).FullName, integration=typeof(BattleCity.Tests.SessionLifecycleIntegrationTests).FullName};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "saved": true,
+        "enableSessionLifecycle": true,
+        "isDirty": false,
+        "model": "BattleCity.SessionFlowState",
+        "integration": "BattleCity.Tests.SessionLifecycleIntegrationTests"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

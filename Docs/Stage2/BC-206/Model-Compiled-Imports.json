@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var paths = new [] { \"Assets/BattleCity/Scripts/Core/SessionFlowState.cs\", \"Assets/BattleCity/Tests/EditMode/SessionFlowStateTests.cs\" }; var scripts = new System.Collections.Generic.List<object>(); foreach (var path in paths) { var script = UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEditor.MonoScript>(path); scripts.Add(new { path, guid = UnityEditor.AssetDatabase.AssetPathToGUID(path), type = script.GetClass().FullName }); } return scripts;"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "path": "Assets/BattleCity/Scripts/Core/SessionFlowState.cs",
+          "guid": "0c98980668ec52140825d6f220f3ef6d",
+          "type": "BattleCity.SessionFlowState"
+        },
+        {
+          "path": "Assets/BattleCity/Tests/EditMode/SessionFlowStateTests.cs",
+          "guid": "985b450d27bb7e14dbd8634fee3102df",
+          "type": "BattleCity.Tests.SessionFlowStateTests"
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

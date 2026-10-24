@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 65998006}
   - component: {fileID: 65998005}
   m_Layer: 0
-  m_Name: Stage 01 - WASD or arrows; Space fires; Esc pauses
+  m_Name: Stage 01 - Enter starts; R restarts; WASD or arrows; Space fires; Esc pauses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,6 +156,7 @@ MonoBehaviour:
   playerRenderer: {fileID: 1907681948}
   baseRenderer: {fileID: 1348632812}
   enablePlayerLifecycle: 1
+  enableSessionLifecycle: 1
 --- !u!4 &65998006
 Transform:
   m_ObjectHideFlags: 0

@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var scenes = new System.Collections.Generic.List<object>(); for (int i=0;i<UnityEngine.SceneManagement.SceneManager.sceneCount;i++){var s=UnityEngine.SceneManagement.SceneManager.GetSceneAt(i);scenes.Add(new{s.path,s.isDirty});} return new {playing=UnityEditor.EditorApplication.isPlaying,paused=UnityEditor.EditorApplication.isPaused,runInBackground=UnityEngine.Application.runInBackground,scenes,autoTickExists=UnityEditor.EditorPrefs.HasKey(\"UnityPipeline.AutoTick.Enabled\"),autoTick=UnityEditor.EditorPrefs.GetBool(\"UnityPipeline.AutoTick.Enabled\"),intervalExists=UnityEditor.EditorPrefs.HasKey(\"UnityPipeline.AutoTick.IntervalMs\"),interval=UnityEditor.EditorPrefs.GetInt(\"UnityPipeline.AutoTick.IntervalMs\")};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playing": false,
+        "paused": false,
+        "runInBackground": false,
+        "scenes": [
+          {
+            "path": "Assets/BattleCity/Scenes/Stage01.unity",
+            "isDirty": false
+          }
+        ],
+        "autoTickExists": false,
+        "autoTick": false,
+        "intervalExists": false,
+        "interval": 0
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

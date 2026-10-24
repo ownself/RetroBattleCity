@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command editor_status",
+  "data": null,
+  "errors": [
+    {
+      "code": "REMOTE_COMMAND_NOT_FOUND",
+      "message": "Pipeline server returned 400 Bad Request: Command Not Found. No command named 'editor_status' is available. It was renamed: run 'unity command editor status'."
+    }
+  ],
+  "warnings": []
+}

@@ -26,11 +26,13 @@ namespace BattleCity.Tests
             InputSystem.QueueStateEvent(keyboard, new KeyboardState()); InputSystem.Update();
             scene = EditorSceneManager.LoadSceneInPlayMode("Assets/BattleCity/Scenes/Stage01.unity", new LoadSceneParameters(LoadSceneMode.Additive));
             yield return null;
-            Controller.Session.SetFocus(true); Controller.Session.SetPaused(true);
+            Controller.Session.SetFocus(true); Controller.Session.StartBattle();
+            Controller.Session.AdvanceFrame(0, PlayerButtons.None); Controller.Session.SetPaused(true);
         }
         private static void Tick(ArenaSession s, int count)
         {
             s.SetPaused(false);
+            if (s.EnableSessionLifecycle) s.AdvanceFrame(0, PlayerButtons.None);
             for (int i = 0; i < count; i++) s.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.None);
             s.SetPaused(true);
         }

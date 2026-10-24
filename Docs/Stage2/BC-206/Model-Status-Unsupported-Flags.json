@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "status",
+  "data": null,
+  "errors": [
+    {
+      "code": "INVALID_COMMAND_ARGS",
+      "message": "错误：未知选项 '--caller'\n（您是指 --color 吗？）"
+    }
+  ],
+  "warnings": []
+}

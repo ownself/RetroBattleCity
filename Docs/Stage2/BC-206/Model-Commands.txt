@@ -1,0 +1,65 @@
+unity --version --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json
+exit=0
+stderr=
+Local Python decoding failed on status stdout (default GBK). Clear safe cause; bounded correction: capture raw bytes and decode UTF-8. No Editor mutation occurred.
+unity status --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json
+exit=2
+stderr=
+unity status --project-path H:/Projects/Unities/BattleCity --format json
+exit=0
+stderr=
+unity command --caller plugin --skill unity-cli --group-by flat --project-path H:/Projects/Unities/BattleCity --format json
+exit=0
+stderr=
+unity command --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json editor status
+exit=0
+stderr=
+unity command --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json script eval --code var scenes = new System.Collections.Generic.List<object>(); for (int i = 0; i < UnityEngine.SceneManagement.SceneManager.sceneCount; i++) { var s = UnityEngine.SceneManagement.SceneManager.GetSceneAt(i); scenes.Add(new { s.path, s.isDirty, s.isLoaded }); } return new { playing = UnityEditor.EditorApplication.isPlaying, paused = UnityEditor.EditorApplication.isPaused, compiling = UnityEditor.EditorApplication.isCompiling, runInBackground = UnityEngine.Application.runInBackground, scenes, pipelineVersion = UnityEditor.PackageManager.PackageInfo.FindForAssembly(typeof(Unity.Pipeline.Editor.Commands.EditorStatusCommand).Assembly).version };
+exit=6
+stderr=
+unity command --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json script eval --code var scenes = new System.Collections.Generic.List<object>(); for (int i = 0; i < UnityEngine.SceneManagement.SceneManager.sceneCount; i++) { var s = UnityEngine.SceneManagement.SceneManager.GetSceneAt(i); scenes.Add(new { s.path, s.isDirty, s.isLoaded }); } return new { playing = UnityEditor.EditorApplication.isPlaying, paused = UnityEditor.EditorApplication.isPaused, compiling = UnityEditor.EditorApplication.isCompiling, runInBackground = UnityEngine.Application.runInBackground, scenes };
+exit=0
+stderr=
+unity command --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json console get --tail 30
+exit=0
+stderr=
+unity recompile --help --format json
+exit=0
+unity command script eval --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json --code UnityEditor.AssetDatabase.ImportAsset("Assets/BattleCity/Scripts/Core/SessionFlowState.cs", UnityEditor.ImportAssetOptions.ForceSynchronousImport); UnityEditor.AssetDatabase.ImportAsset("Assets/BattleCity/Tests/EditMode/SessionFlowStateTests.cs", UnityEditor.ImportAssetOptions.ForceSynchronousImport); return new { imported = true };
+exit=0
+stderr=
+unity recompile --project-path H:/Projects/Unities/BattleCity --timeout 120 --format json
+exit=7
+stderr=
+unity status --help --format json
+exit=0
+unity status --until-ready --timeout 60 --project-path H:/Projects/Unities/BattleCity --format json
+exit=0
+stderr=
+unity command --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json script recompile_status
+exit=0
+stderr=
+unity command --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json editor status
+exit=0
+stderr=
+unity command --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json console get --tail 15
+exit=0
+stderr=
+unity command --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json script eval --code var paths = new [] { "Assets/BattleCity/Scripts/Core/SessionFlowState.cs", "Assets/BattleCity/Tests/EditMode/SessionFlowStateTests.cs" }; var scripts = new System.Collections.Generic.List<object>(); foreach (var path in paths) { var script = UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEditor.MonoScript>(path); scripts.Add(new { path, guid = UnityEditor.AssetDatabase.AssetPathToGUID(path), type = script.GetClass().FullName }); } return scripts;
+exit=0
+stderr=
+unity command --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json test list --mode editor
+exit=0
+stderr=
+unity command test run --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json -- --mode editor --filter BattleCity.Tests.SessionFlowStateTests --filter_type testName --timeout 120
+exit=0
+stderr=
+unity command --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json editor status
+exit=0
+stderr=
+unity command --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json script eval --code var scenes = new System.Collections.Generic.List<object>(); for (int i = 0; i < UnityEngine.SceneManagement.SceneManager.sceneCount; i++) { var s = UnityEngine.SceneManagement.SceneManager.GetSceneAt(i); scenes.Add(new { s.path, s.isDirty, s.isLoaded }); } return new { playing = UnityEditor.EditorApplication.isPlaying, paused = UnityEditor.EditorApplication.isPaused, compiling = UnityEditor.EditorApplication.isCompiling, runInBackground = UnityEngine.Application.runInBackground, scenes };
+exit=0
+stderr=
+unity command --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json console get --tail 12
+exit=0
+stderr=

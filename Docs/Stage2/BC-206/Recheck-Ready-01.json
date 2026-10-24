@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command script",
+  "data": null,
+  "errors": [
+    {
+      "code": "COMMAND_FAILED",
+      "message": "Compilation Failed\n  'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'（第 1 行，第 18 列）\n  'ArenaSession' does not contain a definition for 'Flow' and no accessible extension method 'Flow' accepting a first argument of type 'ArenaSession' could be found (are you missing a using directive or an assembly reference?)（第 1 行，第 178 列）\n  'Object.GetInstanceID()' is obsolete: 'Use GetEntityId instead.'（第 1 行，第 211 列）\n  Unreachable code detected（第 2 行，第 12 列）"
+    }
+  ],
+  "warnings": []
+}

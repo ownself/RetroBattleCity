@@ -1,0 +1,291 @@
+[
+  {
+    "command": "console get",
+    "name": "get",
+    "group": "console",
+    "description": "Get captured Unity console output (Editor or Player; supports tail, level filtering, and follow via a cursor)",
+    "tags": [
+      "observability/console"
+    ],
+    "package": "Unity.Pipeline",
+    "mainThreadRequired": false,
+    "parameters": [
+      {
+        "name": "tail",
+        "description": "Maximum number of most-recent entries to return",
+        "type": "Int32",
+        "required": false,
+        "defaultValue": 100
+      },
+      {
+        "name": "level",
+        "description": "Minimum severity to include: log | warn | error",
+        "type": "String",
+        "required": false,
+        "defaultValue": "log"
+      },
+      {
+        "name": "since",
+        "description": "Cursor: only return entries newer than this seq. Use the 'cursor' from a previous response to follow.",
+        "type": "Int64",
+        "required": false,
+        "defaultValue": -1
+      },
+      {
+        "name": "since_session",
+        "description": "Session the 'since' cursor came from: pass the 'session' from a previous response. A cursor from another session is refused and the tail returned with reset=true.",
+        "type": "String",
+        "required": false,
+        "defaultValue": null
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "console get",
+      "description": "Get captured Unity console output (Editor or Player; supports tail, level filtering, and follow via a cursor)",
+      "properties": {
+        "tail": {
+          "type": "integer",
+          "description": "Maximum number of most-recent entries to return",
+          "default": 100
+        },
+        "level": {
+          "type": "string",
+          "description": "Minimum severity to include: log | warn | error",
+          "default": "log"
+        },
+        "since": {
+          "type": "integer",
+          "description": "Cursor: only return entries newer than this seq. Use the 'cursor' from a previous response to follow.",
+          "default": -1
+        },
+        "since_session": {
+          "type": "string",
+          "description": "Session the 'since' cursor came from: pass the 'session' from a previous response. A cursor from another session is refused and the tail returned with reset=true."
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": false,
+        "methodName": "Unity.Pipeline.Runtime.Commands.ConsoleCommand.Get"
+      }
+    }
+  },
+  {
+    "command": "editor status",
+    "name": "status",
+    "group": "editor",
+    "description": "Get detailed Unity Editor status and state information",
+    "tags": [
+      "editor"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor status",
+      "description": "Get detailed Unity Editor status and state information",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.EditorStatusCommand.Status"
+      }
+    }
+  },
+  {
+    "command": "script eval",
+    "name": "eval",
+    "group": "script",
+    "description": "Evaluate C# code dynamically using Roslyn compiler",
+    "tags": [
+      "scripts/eval"
+    ],
+    "package": "Unity.Pipeline",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "code",
+        "description": "C# code to evaluate",
+        "type": "String",
+        "required": true,
+        "defaultValue": null
+      },
+      {
+        "name": "timeout",
+        "description": "Timeout in seconds",
+        "type": "Double",
+        "required": false,
+        "defaultValue": 30
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "script eval",
+      "description": "Evaluate C# code dynamically using Roslyn compiler",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "C# code to evaluate"
+        },
+        "timeout": {
+          "type": "number",
+          "description": "Timeout in seconds",
+          "default": 30
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Runtime.Commands.CodeEvalCommand.Eval"
+      }
+    }
+  },
+  {
+    "command": "test list",
+    "name": "list",
+    "group": "test",
+    "description": "List all available tests (EditMode and/or PlayMode) without running them",
+    "tags": [
+      "tests"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "mode",
+        "description": "Test mode: all, editor, playmode (default: all)",
+        "type": "String",
+        "required": false,
+        "defaultValue": "all"
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "test list",
+      "description": "List all available tests (EditMode and/or PlayMode) without running them",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "description": "Test mode: all, editor, playmode (default: all)",
+          "default": "all"
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.TestCommands.List"
+      }
+    }
+  },
+  {
+    "command": "test run",
+    "name": "run",
+    "group": "test",
+    "description": "Execute Unity tests with filtering options",
+    "tags": [
+      "tests"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "mode",
+        "description": "Test mode: all, editor, playmode (default: all)",
+        "type": "String",
+        "required": false,
+        "defaultValue": "all"
+      },
+      {
+        "name": "filter",
+        "description": "Test name filter pattern (case-insensitive partial match)",
+        "type": "String",
+        "required": false,
+        "defaultValue": ""
+      },
+      {
+        "name": "filter_type",
+        "description": "Filter type: testName, assembly, category (default: testName)",
+        "type": "String",
+        "required": false,
+        "defaultValue": "testName"
+      },
+      {
+        "name": "include_explicit",
+        "description": "Include tests marked with [Explicit] attribute",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": false
+      },
+      {
+        "name": "async_tests",
+        "description": "Run asynchronously - return immediately, poll /test-status for results",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": false
+      },
+      {
+        "name": "timeout",
+        "description": "Test execution timeout in seconds (default: 600)",
+        "type": "Double",
+        "required": false,
+        "defaultValue": 600
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "test run",
+      "description": "Execute Unity tests with filtering options",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "description": "Test mode: all, editor, playmode (default: all)",
+          "default": "all"
+        },
+        "filter": {
+          "type": "string",
+          "description": "Test name filter pattern (case-insensitive partial match)",
+          "default": ""
+        },
+        "filter_type": {
+          "type": "string",
+          "description": "Filter type: testName, assembly, category (default: testName)",
+          "default": "testName"
+        },
+        "include_explicit": {
+          "type": "boolean",
+          "description": "Include tests marked with [Explicit] attribute",
+          "default": false
+        },
+        "async_tests": {
+          "type": "boolean",
+          "description": "Run asynchronously - return immediately, poll /test-status for results",
+          "default": false
+        },
+        "timeout": {
+          "type": "number",
+          "description": "Test execution timeout in seconds (default: 600)",
+          "default": 600
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.TestCommands.Run"
+      }
+    }
+  }
+]

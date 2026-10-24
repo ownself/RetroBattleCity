@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var scenes=new System.Collections.Generic.List<object>(); for(int i=0;i<UnityEngine.SceneManagement.SceneManager.sceneCount;i++){var s=UnityEngine.SceneManagement.SceneManager.GetSceneAt(i); scenes.Add(new{s.path,s.isDirty});} var c=UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); return new {playing=UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode,paused=UnityEditor.EditorApplication.isPaused,compiling=UnityEditor.EditorApplication.isCompiling,updating=UnityEditor.EditorApplication.isUpdating,runInBackground=UnityEngine.Application.runInBackground,projectBackground=UnityEditor.PlayerSettings.runInBackground,scenes,phase=c!=null && c.Session!=null?c.Session.Phase.ToString():null};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playing": false,
+        "paused": false,
+        "compiling": false,
+        "updating": false,
+        "runInBackground": false,
+        "projectBackground": false,
+        "scenes": [
+          {
+            "path": "Assets/BattleCity/Scenes/Stage01.unity",
+            "isDirty": false
+          }
+        ],
+        "phase": null
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

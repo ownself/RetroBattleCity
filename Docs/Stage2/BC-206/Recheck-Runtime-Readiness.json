@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "command": "status",
+  "data": {
+    "count": 1,
+    "instances": [
+      {
+        "port": 7800,
+        "project": "H:\\Projects\\Unities\\BattleCity",
+        "projectPath": "H:\\Projects\\Unities\\BattleCity",
+        "version": "6000.6.7f1",
+        "editorVersion": "6000.6.7f1",
+        "pid": 26924,
+        "state": "ready",
+        "role": "main",
+        "instanceName": "Main Editor",
+        "frameCount": 5760,
+        "playerLoopTicking": true
+      }
+    ]
+  },
+  "errors": [],
+  "warnings": []
+}

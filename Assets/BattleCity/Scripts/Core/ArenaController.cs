@@ -16,6 +16,14 @@ namespace BattleCity
         public SpriteRenderer baseRenderer;
         // Stage01 opts in explicitly; legacy combat harnesses keep death-only behavior.
         public bool enablePlayerLifecycle;
+        public bool enableSessionLifecycle;
+        private LevelDefinition initialLevel;
+        private TankDefinition initialPlayer;
+        private EnemyWaveDefinition initialWave, sessionWave;
+        private readonly List<UnityEngine.Object> initialObjects = new List<UnityEngine.Object>();
+        private bool initialBaseEnabled, initialPlayerLifecycle, initialSessionLifecycle;
+        private bool focused, updating, restarting, restartPending;
+        private PlayerButtons previousButtons;
         private readonly Sprite[] shieldFrames = new Sprite[2];
         private SpriteRenderer playerShield;
         private Sprite baseAlive, baseDead;
@@ -31,6 +39,8 @@ namespace BattleCity
         private void Awake()
         {
             ValidateBindings();
+            CaptureInitialConfiguration();
+            focused = Application.isFocused;
             for (int direction = 0; direction < 4; direction++) for (int frame = 0; frame < 2; frame++)
                 playerFrames[direction, frame] = sprites.Get(playerDefinition.spritePrefix + "." + ((CardinalDirection)direction).SpriteKey() + "." + frame);
             if (enemyWaveDefinition != null)
@@ -47,8 +57,7 @@ namespace BattleCity
                 playerShield.sharedMaterial = playerRenderer.sharedMaterial;
                 playerShield.sortingLayerName = "Effects";
             }
-            Session = new ArenaSession(level, playerDefinition, enemyWaveDefinition, baseRenderer != null,
-                enablePlayerLifecycle ? PlayerLifeParameters.Prototype : null);
+            Session = CreateSession();
             BulletView = new GameObject("Bullets - display only").AddComponent<BulletView>();
             BulletView.transform.SetParent(transform, false);
             BulletView.Initialize(Session.Bullets, sprites, playerRenderer.sharedMaterial);
@@ -56,16 +65,95 @@ namespace BattleCity
             EffectView.transform.SetParent(transform, false);
             EffectView.Initialize(Session.Effects, sprites, playerRenderer.sharedMaterial);
             mapView.Render(Session.Map);
-            Session.SetFocus(Application.isFocused);
+            Session.SetFocus(focused);
             RenderBase();
             RenderPlayer();
             RenderEnemies();
         }
 
+        private T Snapshot<T>(T source) where T : UnityEngine.Object
+        {
+            var copy = Instantiate(source);
+            copy.hideFlags = HideFlags.HideAndDontSave;
+            initialObjects.Add(copy);
+            return copy;
+        }
+
+        private void CaptureInitialConfiguration()
+        {
+            initialLevel = Snapshot(level);
+            initialPlayer = Snapshot(playerDefinition);
+            if (enemyWaveDefinition != null)
+            {
+                initialWave = Snapshot(enemyWaveDefinition);
+                initialWave.tankDefinitions = new TankDefinition[enemyWaveDefinition.tankDefinitions.Length];
+                for (int i = 0; i < initialWave.tankDefinitions.Length; i++)
+                    initialWave.tankDefinitions[i] = Snapshot(enemyWaveDefinition.tankDefinitions[i]);
+                // Wave requests expose definitions for display; never expose the private restart originals.
+                sessionWave = Snapshot(initialWave);
+                sessionWave.tankDefinitions = new TankDefinition[initialWave.tankDefinitions.Length];
+                for (int i = 0; i < sessionWave.tankDefinitions.Length; i++)
+                    sessionWave.tankDefinitions[i] = Snapshot(initialWave.tankDefinitions[i]);
+            }
+            initialBaseEnabled = baseRenderer != null;
+            initialPlayerLifecycle = enablePlayerLifecycle;
+            initialSessionLifecycle = enableSessionLifecycle;
+        }
+
+        private ArenaSession CreateSession()
+        {
+            if (sessionWave != null)
+                for (int i = 0; i < sessionWave.tankDefinitions.Length; i++)
+                    JsonUtility.FromJsonOverwrite(JsonUtility.ToJson(initialWave.tankDefinitions[i]), sessionWave.tankDefinitions[i]);
+            return new ArenaSession(initialLevel, initialPlayer, sessionWave,
+                initialBaseEnabled, initialPlayerLifecycle ? PlayerLifeParameters.Prototype : null, initialSessionLifecycle);
+        }
+
+        public bool StartBattle() => Session != null && Session.StartBattle();
+
+        public void RestartSession()
+        {
+            if (Session == null || restarting) return;
+            Session.Stop();
+            if (updating) { restartPending = true; return; }
+            RestartNow();
+        }
+
+        private void RestartNow()
+        {
+            restarting = true;
+            try
+            {
+                Session.Release();
+                HidePlayerShield();
+                ClearEnemyDisplays();
+                Session = CreateSession();
+                Session.SetFocus(focused);
+                // Preserve physical management edges in the controller; do not replay held combat keys.
+                Session.SuppressInput(previousButtons);
+                BulletView.Initialize(Session.Bullets, sprites, playerRenderer.sharedMaterial);
+                EffectView.Initialize(Session.Effects, sprites, playerRenderer.sharedMaterial);
+                RenderSession();
+            }
+            finally { restarting = false; restartPending = false; }
+        }
+
         private void Update()
         {
-            Session.AdvanceFrame(Time.unscaledDeltaTime, KeyboardInputSource.Read());
-            mapView.Render(Session.Map); // No tile writes unless logical cell revisions changed.
+            var buttons = KeyboardInputSource.Read();
+            bool restart = (buttons & PlayerButtons.Restart) != 0 && (previousButtons & PlayerButtons.Restart) == 0;
+            previousButtons = buttons;
+            if (initialSessionLifecycle && focused && restart) { RestartSession(); return; }
+            updating = true;
+            try { Session.AdvanceFrame(Time.unscaledDeltaTime, buttons); }
+            finally { updating = false; }
+            if (restartPending) RestartNow();
+            else RenderSession();
+        }
+
+        private void RenderSession()
+        {
+            mapView.Render(Session.Map);
             RenderBase();
             RenderPlayer();
             RenderEnemies();
@@ -75,6 +163,7 @@ namespace BattleCity
 
         private void OnApplicationFocus(bool hasFocus)
         {
+            focused = hasFocus;
             if (Session != null) Session.SetFocus(hasFocus);
         }
 
@@ -99,7 +188,15 @@ namespace BattleCity
             if (BulletView != null) Destroy(BulletView.gameObject);
             if (EffectView != null) Destroy(EffectView.gameObject);
             if (playerShield != null) { HidePlayerShield(); Destroy(playerShield.gameObject); }
+            Session?.Release();
             Session = null;
+            foreach (var owned in initialObjects)
+                if (owned != null)
+                {
+                    if (Application.isPlaying) Destroy(owned);
+                    else DestroyImmediate(owned);
+                }
+            initialObjects.Clear();
         }
 
         private void HidePlayerShield()
@@ -109,8 +206,7 @@ namespace BattleCity
             playerShield.sprite = null;
         }
 
-        /// <summary>Lifecycle seam for reset/reload; does not implement a full session restart.
-        /// Re-enabling remains paused and never replays the previous tick's hits.</summary>
+        /// <summary>Clears logical and visible effects without resuming combat.</summary>
         public void ClearEffects()
         {
             if (Session != null) Session.Effects.Clear();
@@ -212,6 +308,8 @@ namespace BattleCity
             if (level == null || playerDefinition == null || sprites == null || mapView == null || playerRenderer == null)
                 throw new InvalidOperationException("Missing arena reference.");
             level.Validate(); playerDefinition.Validate(); sprites.Validate(); mapView.ValidateBindings();
+            if (enableSessionLifecycle && enemyWaveDefinition == null)
+                throw new InvalidOperationException("Session lifecycle requires an enemy wave definition.");
             if (baseRenderer != null)
             {
                 if (baseRenderer == playerRenderer) throw new InvalidOperationException("Base and player require distinct renderers.");

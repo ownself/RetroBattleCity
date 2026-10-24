@@ -6,7 +6,7 @@ namespace BattleCity
     public enum PlayerButtons
     {
         None = 0, W = 1, Up = 2, A = 4, Left = 8, S = 16, Down = 32,
-        D = 64, Right = 128, Fire = 256, Pause = 512
+        D = 64, Right = 128, Fire = 256, Pause = 512, Start = 1024, Restart = 2048
     }
 
     public readonly struct TankCommand

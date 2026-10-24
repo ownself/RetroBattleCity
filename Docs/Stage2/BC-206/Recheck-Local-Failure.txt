@@ -1,0 +1,1 @@
+Local evidence-summary Python heredoc failed before executing any statement: SyntaxError: unterminated string literal (line 4), caused by backslash replacement escaping. Corrected to pathlib.Path.as_posix(). No Unity call, test rerun, source/setting mutation, or prior evidence rewrite resulted.

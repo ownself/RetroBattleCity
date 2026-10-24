@@ -1,0 +1,45 @@
+["unity", "status", "--project-path", "H:/Projects/Unities/BattleCity", "--format", "json"]
+exit=0
+stderr=
+["unity", "command", "--caller", "plugin", "--skill", "unity-cli", "--project-path", "H:/Projects/Unities/BattleCity", "--format", "json", "--group-by", "flat"]
+exit=0
+stderr=
+["unity", "command", "--caller", "plugin", "--skill", "unity-cli", "--project-path", "H:/Projects/Unities/BattleCity", "--format", "json", "script", "eval", "--code", "var scenes = new System.Collections.Generic.List<object>(); for (int i=0;i<UnityEngine.SceneManagement.SceneManager.sceneCount;i++){var s=UnityEngine.SceneManagement.SceneManager.GetSceneAt(i);scenes.Add(new{s.path,s.isDirty});} return new {playing=UnityEditor.EditorApplication.isPlaying,paused=UnityEditor.EditorApplication.isPaused,runInBackground=UnityEngine.Application.runInBackground,scenes,autoTickExists=UnityEditor.EditorPrefs.HasKey(\"UnityPipeline.AutoTick.Enabled\"),autoTick=UnityEditor.EditorPrefs.GetBool(\"UnityPipeline.AutoTick.Enabled\"),intervalExists=UnityEditor.EditorPrefs.HasKey(\"UnityPipeline.AutoTick.IntervalMs\"),interval=UnityEditor.EditorPrefs.GetInt(\"UnityPipeline.AutoTick.IntervalMs\")};"]
+exit=0
+stderr=
+["unity", "command", "--caller", "plugin", "--skill", "unity-cli", "--project-path", "H:/Projects/Unities/BattleCity", "--format", "json", "console", "get", "--tail", "10"]
+exit=0
+stderr=
+["unity", "command", "--caller", "plugin", "--skill", "unity-cli", "--project-path", "H:/Projects/Unities/BattleCity", "--format", "json", "script", "eval", "--code", "UnityEditor.AssetDatabase.Refresh(UnityEditor.ImportAssetOptions.ForceSynchronousImport); return new { imported=true };"]
+exit=0
+stderr=
+["unity", "status", "--until-ready", "--timeout", "60", "--project-path", "H:/Projects/Unities/BattleCity", "--format", "json"]
+exit=0
+stderr=
+["unity", "command", "--caller", "plugin", "--skill", "unity-cli", "--project-path", "H:/Projects/Unities/BattleCity", "--format", "json", "script", "recompile_status"]
+exit=0
+stderr=
+["unity", "command", "--caller", "plugin", "--skill", "unity-cli", "--project-path", "H:/Projects/Unities/BattleCity", "--format", "json", "script", "eval", "--code", "if(UnityEditor.EditorApplication.isPlaying) throw new System.Exception(\"Playing\"); var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene(); if(scene.path!=\"Assets/BattleCity/Scenes/Stage01.unity\" || scene.isDirty) throw new System.Exception(\"Unexpected/dirty scene\"); var c=UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); c.enableSessionLifecycle=true; c.name=\"Stage 01 - Enter starts; R restarts; WASD or arrows; Space fires; Esc pauses\"; UnityEditor.EditorUtility.SetDirty(c); UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene); bool saved=UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene); return new {saved, c.enableSessionLifecycle,scene.isDirty,model=typeof(BattleCity.SessionFlowState).FullName, integration=typeof(BattleCity.Tests.SessionLifecycleIntegrationTests).FullName};"]
+exit=0
+stderr=
+["unity", "command", "--caller", "plugin", "--skill", "unity-cli", "--project-path", "H:/Projects/Unities/BattleCity", "--format", "json", "test", "run", "--", "--mode", "editor", "--filter", "BattleCity.Tests.SessionLifecycleIntegrationTests", "--filter_type", "testName", "--timeout", "90"]
+exit=0
+stderr=
+["unity", "command", "--caller", "plugin", "--skill", "unity-cli", "--project-path", "H:/Projects/Unities/BattleCity", "--format", "json", "script", "eval", "--code", "var t=System.AppDomain.CurrentDomain.GetAssemblies().SelectMany(a=>a.GetTypes()).Single(t=>t.FullName==\"Unity.Pipeline.Editor.Commands.AutoTickCommand\"); var f=System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic; return new { enabled=t.GetField(\"s_Enabled\",f).GetValue(null),interval=t.GetField(\"s_IntervalMs\",f).GetValue(null),storedEnabled=UnityEditor.SessionState.GetBool(\"Unity.Pipeline.AutoTick.Enabled\",false),storedInterval=UnityEditor.SessionState.GetInt(\"Unity.Pipeline.AutoTick.IntervalMs\",-1),runInBackground=UnityEngine.Application.runInBackground};"]
+exit=0
+stderr=
+["unity", "command", "--caller", "plugin", "--skill", "unity-cli", "--project-path", "H:/Projects/Unities/BattleCity", "--format", "json", "editor", "set_auto_tick", "--", "--enable", "true", "--interval_ms", "16", "--persist", "false"]
+exit=0
+stderr=
+["unity", "command", "--caller", "plugin", "--skill", "unity-cli", "--project-path", "H:/Projects/Unities/BattleCity", "--format", "json", "script", "eval", "--code", "UnityEngine.Application.runInBackground=true; return new {UnityEngine.Application.runInBackground};"]
+exit=0
+stderr=
+["unity", "command", "--caller", "plugin", "--skill", "unity-cli", "--project-path", "H:/Projects/Unities/BattleCity", "--format", "json", "test", "run", "--", "--mode", "playmode", "--filter", "BattleCity.Tests.SessionLifecyclePlayModeTests", "--filter_type", "testName", "--async_tests", "true", "--timeout", "90"]
+exit=0
+stderr=
+["unity", "status", "--until-ready", "--timeout", "60", "--project-path", "H:/Projects/Unities/BattleCity", "--format", "json"]
+exit=0
+stderr=
+["unity", "command", "--caller", "plugin", "--skill", "unity-cli", "--project-path", "H:/Projects/Unities/BattleCity", "--format", "json", "test", "status"]
+exit=0
+stderr=

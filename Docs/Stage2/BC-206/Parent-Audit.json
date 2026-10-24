@@ -1,0 +1,61 @@
+{
+  "utc": "2026-10-24T10:38:36.944668+00:00",
+  "actor": "Parent independent file-only calculation; no Unity commands/tests",
+  "head": "e2383bacf3b661f930f87667ed9d6d3062780f79",
+  "originalFullRun": {
+    "editPassed": 407,
+    "editTotal": 407,
+    "playPassed": 62,
+    "playTotal": 63,
+    "originalNonPassed": [
+      {
+        "FullName": "BattleCity.Tests.PlayerLifeIntegrationPlayModeTests.Stage01_RealUpdateSharedEnemyWeaponDeathHiddenWaitRespawnShieldExpiry_PauseAndFocusFreeze",
+        "Status": "Failed",
+        "Duration": 5.0274953,
+        "Message": "  Real Update did not reach the required life phase before deadline\r\n  Expected: True\r\n  But was:  False\r\n",
+        "StackTrace": "at BattleCity.Tests.PlayerLifeIntegrationPlayModeTests+<WaitUntil>d__6.MoveNext () [0x0005c] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\PlayerLifeIntegrationPlayModeTests.cs:28\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@ee3fe9477490\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n",
+        "Mode": "PlayMode"
+      }
+    ]
+  },
+  "recheck": {
+    "executed": 1,
+    "passed": 1,
+    "fullName": "BattleCity.Tests.PlayerLifeIntegrationPlayModeTests.Stage01_RealUpdateSharedEnemyWeaponDeathHiddenWaitRespawnShieldExpiry_PauseAndFocusFreeze",
+    "status": "completed"
+  },
+  "effectiveEvidenceUnion": {
+    "discovered": 470,
+    "originalExecutedUnique": 470,
+    "retainedOriginalPassed": 469,
+    "correctedReplacement": 1,
+    "unique": 470,
+    "missing": [],
+    "extra": [],
+    "duplicates": [],
+    "unresolvedNonPassed": [],
+    "note": "Not a single 470-pass execution; only corrected test source changed, all production sources unchanged."
+  },
+  "sourceDifferenceFromOriginalFullRun": [
+    "Assets/BattleCity/Tests/PlayMode/PlayerLifeIntegrationPlayModeTests.cs"
+  ],
+  "currentSourceHashes": {
+    "checked": 68,
+    "changed": [],
+    "missing": []
+  },
+  "frozenModelHashes": {
+    "checked": 4,
+    "changed": [],
+    "missing": []
+  },
+  "recheckProtectedHashes": {
+    "checked": 985,
+    "changed": [],
+    "missing": []
+  },
+  "manualFeedback": "User confirms preceding manual checks all fine; no invented TestRunner count or exact manual tick measurement.",
+  "runtimeImages": "No BC206 independent Ready/Playing images. Eval used nonexistent Session.Flow and was rejected before execution. User has been asked for two Game screenshots; no more automated retry.",
+  "independentReview": "Launched fresh read-only review; pending at audit time.",
+  "acceptance": "Not yet accepted; Stage2 remains 6/10, BC207 not started."
+}

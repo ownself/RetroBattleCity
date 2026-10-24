@@ -34,7 +34,19 @@ namespace BattleCity.Tests
             Keys();
             scene = EditorSceneManager.LoadSceneInPlayMode("Assets/BattleCity/Scenes/Stage01.unity", new LoadSceneParameters(LoadSceneMode.Additive));
             yield return null;
-            var c = Controller; var s = c.Session;
+            var authored = Controller;
+            // BC204's nonterminal failure-request oracle explicitly opts out before the new host's Awake.
+            authored.enabled = false;
+            var host = new GameObject("BC204 lifecycle-disabled harness"); host.SetActive(false);
+            SceneManager.MoveGameObjectToScene(host, scene);
+            var c = host.AddComponent<ArenaController>();
+            c.level = authored.level; c.playerDefinition = authored.playerDefinition;
+            c.enemyWaveDefinition = authored.enemyWaveDefinition; c.sprites = authored.sprites;
+            c.mapView = authored.mapView; c.playerRenderer = authored.playerRenderer; c.baseRenderer = authored.baseRenderer;
+            c.enablePlayerLifecycle = true; c.enableSessionLifecycle = false;
+            host.SetActive(true);
+            var s = c.Session;
+            Assert.That(s.EnableSessionLifecycle, Is.False);
             Assert.That(s.Base, Is.Not.Null); Assert.That(s.Base.IsAlive, Is.True);
             Assert.That(c.baseRenderer.sprite, Is.SameAs(c.sprites.Get("base.alive")));
             Assert.That(s.EnemyWave.TotalCount, Is.EqualTo(20), "Use default scene, not a wave-disabled fixture");

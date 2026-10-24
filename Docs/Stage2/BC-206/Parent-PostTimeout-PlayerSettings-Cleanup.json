@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "bool dirty = false; for (int i = 0; i < UnityEngine.SceneManagement.SceneManager.sceneCount; i++) dirty |= UnityEngine.SceneManagement.SceneManager.GetSceneAt(i).isDirty; bool safe = !dirty && !UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode && !UnityEditor.EditorApplication.isCompiling && !UnityEditor.EditorApplication.isUpdating; bool before = UnityEditor.PlayerSettings.runInBackground; if (safe && before) UnityEditor.PlayerSettings.runInBackground = false; return new { safeCleanup = safe, projectBefore = before, projectAfter = UnityEditor.PlayerSettings.runInBackground, runtimeAfter = UnityEngine.Application.runInBackground };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "safeCleanup": true,
+        "projectBefore": false,
+        "projectAfter": false,
+        "runtimeAfter": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

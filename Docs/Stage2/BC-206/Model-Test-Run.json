@@ -1,0 +1,317 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "BattleCity.Tests.SessionFlowStateTests",
+      "filter_type": "testName",
+      "timeout": "120"
+    },
+    "result": {
+      "Summary": {
+        "Total": 40,
+        "Passed": 40,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.NewSession_IsReadyWithNoFailureAndNotTerminal",
+          "Status": "Passed",
+          "Duration": 0.0250905,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.NewSessions_AreIndependentAndDoNotResetAnExistingTerminalState",
+          "Status": "Passed",
+          "Duration": 0.001544,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.PauseResume_DoesNotLatchIgnoredFailure_AndAllowsSubsequentWin",
+          "Status": "Passed",
+          "Duration": 0.0004547,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Ready,False)",
+          "Status": "Passed",
+          "Duration": 0.0011664,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Ready,True)",
+          "Status": "Passed",
+          "Duration": 0.0001748,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Playing,False)",
+          "Status": "Passed",
+          "Duration": 0.0001384,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Playing,True)",
+          "Status": "Passed",
+          "Duration": 0.0001476,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Paused,False)",
+          "Status": "Passed",
+          "Duration": 0.0001442,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Paused,True)",
+          "Status": "Passed",
+          "Duration": 0.00014,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Won,False)",
+          "Status": "Passed",
+          "Duration": 0.0001341,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Won,True)",
+          "Status": "Passed",
+          "Duration": 0.0001616,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Lost,False)",
+          "Status": "Passed",
+          "Duration": 0.0001376,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Lost,True)",
+          "Status": "Passed",
+          "Duration": 0.0001584,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_FailurePrecedesWinAndEnemyGuards_AndRetainsBothReasons(True,False,True,0,0,0,BaseDestroyed)",
+          "Status": "Passed",
+          "Duration": 0.000493,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_FailurePrecedesWinAndEnemyGuards_AndRetainsBothReasons(False,True,True,0,0,0,PlayerLivesExhausted)",
+          "Status": "Passed",
+          "Duration": 0.0001414,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_FailurePrecedesWinAndEnemyGuards_AndRetainsBothReasons(True,True,True,0,0,0,BaseDestroyed, PlayerLivesExhausted)",
+          "Status": "Passed",
+          "Duration": 0.0001265,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_FailurePrecedesWinAndEnemyGuards_AndRetainsBothReasons(True,False,False,1,2,1,BaseDestroyed)",
+          "Status": "Passed",
+          "Duration": 0.0001258,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_FailurePrecedesWinAndEnemyGuards_AndRetainsBothReasons(False,True,False,1,2,1,PlayerLivesExhausted)",
+          "Status": "Passed",
+          "Duration": 0.0001211,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_FailurePrecedesWinAndEnemyGuards_AndRetainsBothReasons(True,True,False,1,2,1,BaseDestroyed, PlayerLivesExhausted)",
+          "Status": "Passed",
+          "Duration": 0.0001245,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_IncompleteEnemySequenceOrOutstandingEnemiesNeverWin(False,0,0,0)",
+          "Status": "Passed",
+          "Duration": 0.0027312,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_IncompleteEnemySequenceOrOutstandingEnemiesNeverWin(False,0,1,0)",
+          "Status": "Passed",
+          "Duration": 0.000561,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_IncompleteEnemySequenceOrOutstandingEnemiesNeverWin(False,0,1,1)",
+          "Status": "Passed",
+          "Duration": 0.0004936,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_IncompleteEnemySequenceOrOutstandingEnemiesNeverWin(True,1,0,0)",
+          "Status": "Passed",
+          "Duration": 0.0004768,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_IncompleteEnemySequenceOrOutstandingEnemiesNeverWin(True,0,1,0)",
+          "Status": "Passed",
+          "Duration": 0.0004769,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_IncompleteEnemySequenceOrOutstandingEnemiesNeverWin(True,0,1,1)",
+          "Status": "Passed",
+          "Duration": 0.0005018,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_IncompleteEnemySequenceOrOutstandingEnemiesNeverWin(True,int.MaxValue,int.MaxValue,int.MaxValue)",
+          "Status": "Passed",
+          "Duration": 0.0004762,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_InvalidCountsThrowInEveryPhaseWithoutChangingState(Ready)",
+          "Status": "Passed",
+          "Duration": 0.0158131,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_InvalidCountsThrowInEveryPhaseWithoutChangingState(Playing)",
+          "Status": "Passed",
+          "Duration": 0.0004719,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_InvalidCountsThrowInEveryPhaseWithoutChangingState(Paused)",
+          "Status": "Passed",
+          "Duration": 0.0004295,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_InvalidCountsThrowInEveryPhaseWithoutChangingState(Won)",
+          "Status": "Passed",
+          "Duration": 0.0004084,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_InvalidCountsThrowInEveryPhaseWithoutChangingState(Lost)",
+          "Status": "Passed",
+          "Duration": 0.0006911,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_OutsidePlayingIgnoresBothWinAndFailureSnapshots(Ready)",
+          "Status": "Passed",
+          "Duration": 0.0005566,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_OutsidePlayingIgnoresBothWinAndFailureSnapshots(Paused)",
+          "Status": "Passed",
+          "Duration": 0.000217,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_OutsidePlayingIgnoresBothWinAndFailureSnapshots(Won)",
+          "Status": "Passed",
+          "Duration": 0.000206,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_OutsidePlayingIgnoresBothWinAndFailureSnapshots(Lost)",
+          "Status": "Passed",
+          "Duration": 0.0002046,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.TryStart_TransitionsOnlyFromReady_AndRepeatedCallIsFalse(Ready)",
+          "Status": "Passed",
+          "Duration": 0.0010764,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.TryStart_TransitionsOnlyFromReady_AndRepeatedCallIsFalse(Playing)",
+          "Status": "Passed",
+          "Duration": 0.0007636,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.TryStart_TransitionsOnlyFromReady_AndRepeatedCallIsFalse(Paused)",
+          "Status": "Passed",
+          "Duration": 0.0006223,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.TryStart_TransitionsOnlyFromReady_AndRepeatedCallIsFalse(Won)",
+          "Status": "Passed",
+          "Duration": 0.0006964,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.TryStart_TransitionsOnlyFromReady_AndRepeatedCallIsFalse(Lost)",
+          "Status": "Passed",
+          "Duration": 0.0007152,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 3.32,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: BattleCity.Tests.SessionFlowStateTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

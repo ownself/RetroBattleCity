@@ -1,0 +1,218 @@
+{
+  "Docs/Stage2/BC-206/Final-Baseline-Hashes.json": {
+    "sha256": "a54c2a3a90e957ba26bc9f56abc819be8f00e7a23858f930b9ef076eed0c9178",
+    "mtimeNs": 1792837082597801600
+  },
+  "Docs/Stage2/BC-206/Final-Commands.jsonl": {
+    "sha256": "e2f1c8bee95aa0093928a949cf1925fc15c59ebb1886e490defc1f2a1d1ce0ae",
+    "mtimeNs": 1792837404159701300
+  },
+  "Docs/Stage2/BC-206/Final-Console-After-Edit.json": {
+    "sha256": "c9fdc8563eb87f67ca9190ed91b3a902f5a3ecfb1f1340d11e62e19009dbc54c",
+    "mtimeNs": 1792837336229453300
+  },
+  "Docs/Stage2/BC-206/Final-Console-After-Edit.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837336229453300
+  },
+  "Docs/Stage2/BC-206/Final-Console-Before.json": {
+    "sha256": "0e511eb5136165ba4284c9c84e0e90ea85cc969b88acbc672bd9d858449f3356",
+    "mtimeNs": 1792837174683896500
+  },
+  "Docs/Stage2/BC-206/Final-Console-Before.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837174683896500
+  },
+  "Docs/Stage2/BC-206/Final-Console-Preflight.json": {
+    "sha256": "72cb1d37c166900ca054ccf725cc90bc01932cfdd30d1376caeb6ecea6965486",
+    "mtimeNs": 1792837184621916900
+  },
+  "Docs/Stage2/BC-206/Final-Console-Preflight.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837184621916900
+  },
+  "Docs/Stage2/BC-206/Final-Console-Since562.json": {
+    "sha256": "73f9821ce183bf151952a7a6c7ee4ef2dbab86509f93fa97d80097700e302bb6",
+    "mtimeNs": 1792837400547854200
+  },
+  "Docs/Stage2/BC-206/Final-Console-Since562.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837400547854200
+  },
+  "Docs/Stage2/BC-206/Final-Console-Since581.json": {
+    "sha256": "8e5e69d1097ebfb0cee6cd3a36286c4c9cfafc54e9a16cd0d23fa2779cc1a80f",
+    "mtimeNs": 1792837401668738800
+  },
+  "Docs/Stage2/BC-206/Final-Console-Since581.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837401669735800
+  },
+  "Docs/Stage2/BC-206/Final-Console-Status.json": {
+    "sha256": "74b3c0688f2198f1507b1879eec8f4af7fb91b133ffdd22c9bd140dddb40e930",
+    "mtimeNs": 1792837404158703400
+  },
+  "Docs/Stage2/BC-206/Final-Console-Status.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837404158703400
+  },
+  "Docs/Stage2/BC-206/Final-Diff-Check.txt": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837432376703900
+  },
+  "Docs/Stage2/BC-206/Final-Discovery.json": {
+    "sha256": "3c31d9440c2eb38d74fbd21792574876bfd84709b3918292c38d9168e1d40afc",
+    "mtimeNs": 1792837250316800400
+  },
+  "Docs/Stage2/BC-206/Final-Discovery.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837250316800400
+  },
+  "Docs/Stage2/BC-206/Final-Editor-After-Tests.json": {
+    "sha256": "4da3f0e067c98eaa949f6633ac50532e07d5b4389b4c80246fc5a3cf762cebbf",
+    "mtimeNs": 1792837396778218200
+  },
+  "Docs/Stage2/BC-206/Final-Editor-After-Tests.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837396778218200
+  },
+  "Docs/Stage2/BC-206/Final-Editor-Before.json": {
+    "sha256": "27c285fa2aac9bee3b9c568883109bbaf082541e911bb6fef688c25a6dfdcff2",
+    "mtimeNs": 1792837172047103200
+  },
+  "Docs/Stage2/BC-206/Final-Editor-Before.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837172047103200
+  },
+  "Docs/Stage2/BC-206/Final-Editor-Preflight.json": {
+    "sha256": "2bef0dee5aef2edb73f7bb01164647f8cffb7f96d251859c70cdffe913e30b2d",
+    "mtimeNs": 1792837183288314200
+  },
+  "Docs/Stage2/BC-206/Final-Editor-Preflight.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837183288314200
+  },
+  "Docs/Stage2/BC-206/Final-Existing-Evidence-Hashes.json": {
+    "sha256": "0fc10e987b35936d80b4d73d041937fa307c13374a60a90b78160d9d9d626273",
+    "mtimeNs": 1792837364937721100
+  },
+  "Docs/Stage2/BC-206/Final-Full-Edit-Status-01.json": {
+    "sha256": "996e2122939f292e1da5ecd520dca8d63ffe55aad516117d9286447a94b21f1d",
+    "mtimeNs": 1792837326301243400
+  },
+  "Docs/Stage2/BC-206/Final-Full-Edit-Status-01.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837326302389200
+  },
+  "Docs/Stage2/BC-206/Final-Full-Edit.json": {
+    "sha256": "c11afdf127d8b287163331fa3148bdea3903fd771d05bf3704437fbb66004b8c",
+    "mtimeNs": 1792837285305962300
+  },
+  "Docs/Stage2/BC-206/Final-Full-Edit.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837285305962300
+  },
+  "Docs/Stage2/BC-206/Final-Full-Play-Status-01.json": {
+    "sha256": "af330b7761229fc2cdb9524a5c563699670be9fb062c2c3b38efd6937a4d6d55",
+    "mtimeNs": 1792837349213811100
+  },
+  "Docs/Stage2/BC-206/Final-Full-Play-Status-01.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837349213811100
+  },
+  "Docs/Stage2/BC-206/Final-Full-Play-Status-02.json": {
+    "sha256": "2158c368341e95951f6e9e457d9842c7496f3bb48a532969995af92026af6627",
+    "mtimeNs": 1792837370011946500
+  },
+  "Docs/Stage2/BC-206/Final-Full-Play-Status-02.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837370012943700
+  },
+  "Docs/Stage2/BC-206/Final-Full-Play.json": {
+    "sha256": "e004702a8cb1ec7a210de9cea1e6d1404a97efc4889e086dd3c94d8bce5a22ed",
+    "mtimeNs": 1792837338276130300
+  },
+  "Docs/Stage2/BC-206/Final-Full-Play.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837338276130300
+  },
+  "Docs/Stage2/BC-206/Final-Git-After.txt": {
+    "sha256": "433281e39a420716af911ac55870086efb364642e22391a8a5333b7a62eaaca3",
+    "mtimeNs": 1792837432254415200
+  },
+  "Docs/Stage2/BC-206/Final-Git-Before.txt": {
+    "sha256": "433281e39a420716af911ac55870086efb364642e22391a8a5333b7a62eaaca3",
+    "mtimeNs": 1792837082638486300
+  },
+  "Docs/Stage2/BC-206/Final-Hash-Comparison.json": {
+    "sha256": "b8e69d4674fd0581cadc07d6d1cc9723f91083d07daf1ed41c55815001c2895d",
+    "mtimeNs": 1792837432210791500
+  },
+  "Docs/Stage2/BC-206/Final-HEAD.txt": {
+    "sha256": "c7fed346758c4ada239a5750cd2d80bd40dd4d51f811a3f546d5529e4e9e0651",
+    "mtimeNs": 1792837082671510300
+  },
+  "Docs/Stage2/BC-206/Final-Loaded-State-After-Tests.json": {
+    "sha256": "eaafd15aaee74dc0430afc41c98bfff2fdb8ca3f12ae6ca52db65fcbadfab18f",
+    "mtimeNs": 1792837399337734400
+  },
+  "Docs/Stage2/BC-206/Final-Loaded-State-After-Tests.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837399337734400
+  },
+  "Docs/Stage2/BC-206/Final-Loaded-State-Corrected.json": {
+    "sha256": "eaafd15aaee74dc0430afc41c98bfff2fdb8ca3f12ae6ca52db65fcbadfab18f",
+    "mtimeNs": 1792837248484340300
+  },
+  "Docs/Stage2/BC-206/Final-Loaded-State-Corrected.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837248484340300
+  },
+  "Docs/Stage2/BC-206/Final-Loaded-State.json": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837208007176500
+  },
+  "Docs/Stage2/BC-206/Final-Loaded-State.stderr": {
+    "sha256": "fbf0f75a97e935fe7a51289a05923375277d81a1618734c3969ded9271df04b8",
+    "mtimeNs": 1792837208007176500
+  },
+  "Docs/Stage2/BC-206/Final-Play-Readiness.json": {
+    "sha256": "de5f4b2efef3788a458eef4be515541331973250bfa4412869d5b30d2506d2b3",
+    "mtimeNs": 1792837343842141800
+  },
+  "Docs/Stage2/BC-206/Final-Play-Readiness.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837343842141800
+  },
+  "Docs/Stage2/BC-206/Final-ProjectSettings.diff": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837432322953300
+  },
+  "Docs/Stage2/BC-206/Final-Run.py": {
+    "sha256": "895139edf40ac04388b6e3fbc2c0210920d0bf18e92e5fc2c3ab449bda0b8b6a",
+    "mtimeNs": 1792837234397885500
+  },
+  "Docs/Stage2/BC-206/Final-Staged-After.txt": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837432288569100
+  },
+  "Docs/Stage2/BC-206/Final-Staged-Before.txt": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837082709736500
+  },
+  "Docs/Stage2/BC-206/Final-Status-Before.json": {
+    "sha256": "fe1d71572e16172877680e7995dbc066d63c566605e6dc81a4156ae587cd1633",
+    "mtimeNs": 1792837146306008100
+  },
+  "Docs/Stage2/BC-206/Final-Status-Before.stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mtimeNs": 1792837146306975500
+  },
+  "Docs/Stage2/BC-206/Final-Test-Reconciliation.json": {
+    "sha256": "615e3500ebc0f848b5a1c68d0133ea2b6b4426f6b712c21c7cc42dbe5379e36c",
+    "mtimeNs": 1792837432213783100
+  },
+  "Docs/Stage2/BC-206/Final-Verification.md": {
+    "sha256": "d5b39f0656d8a3d68f2e697c79de3c18e195ada603a227ecbb735c081f0a0bd1",
+    "mtimeNs": 1792837627433094800
+  }
+}

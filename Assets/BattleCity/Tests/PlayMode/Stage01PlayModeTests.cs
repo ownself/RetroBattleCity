@@ -41,7 +41,7 @@ namespace BattleCity.Tests
             yield return null;
             var controller = Controller; var session = controller.Session;
             var authored = (TerrainKind[])controller.level.terrain.Clone();
-            session.SetFocus(true); session.SetPaused(false);
+            session.SetFocus(true); session.StartBattle(); session.AdvanceFrame(0, PlayerButtons.None); session.SetPaused(false);
             Keys(Key.A);
             int firstFrame = Time.frameCount; long firstTick = session.Clock.Tick;
             float deadline = Time.realtimeSinceStartup + 2;
@@ -54,7 +54,7 @@ namespace BattleCity.Tests
             long tick = session.Clock.Tick;
             yield return new WaitForSecondsRealtime(.1f);
             Assert.That(session.Clock.Tick, Is.EqualTo(tick));
-            session.SetPaused(false); Keys(Key.W, Key.Space);
+            session.SetPaused(false); session.AdvanceFrame(0, PlayerButtons.None); Keys(Key.W, Key.Space);
             deadline = Time.realtimeSinceStartup + 2;
             while (session.Map.Revision == 0 && Time.realtimeSinceStartup < deadline) yield return null;
             session.SetPaused(true); Keys();
@@ -79,7 +79,7 @@ namespace BattleCity.Tests
             controller.enabled = false;
             var session = new ArenaSession(controller.level, controller.playerDefinition);
             Assert.That(session.EnemyWave, Is.Null);
-            session.SetFocus(true); session.SetPaused(false);
+            session.SetFocus(true); session.StartBattle(); session.AdvanceFrame(0, PlayerButtons.None); session.SetPaused(false);
             for (int i = 0; i < 192; i++) session.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.W);
             for (int i = 0; i < 32; i++) session.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.D);
             Assert.That(session.Player.Position, Is.EqualTo(new Vector2(104, 200)));
@@ -122,7 +122,7 @@ namespace BattleCity.Tests
                 Assert.That(session.Map.Revision, Is.Zero);
                 var baseRenderer = scene.GetRootGameObjects().SelectMany(r => r.GetComponentsInChildren<SpriteRenderer>()).Single(r => r.sprite != null && r.sprite.name == "base.alive");
                 Assert.That(PixelGrid.ToMapPixels(baseRenderer.transform.position), Is.EqualTo(new Vector2(104, 8)));
-                session.SetFocus(true); session.SetPaused(false);
+                session.SetFocus(true); session.StartBattle(); session.AdvanceFrame(0, PlayerButtons.None); session.SetPaused(false);
                 for (int i = 0; i < 16; i++) session.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.A);
                 session.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.W | PlayerButtons.Fire);
                 Assert.That(session.Map.Revision, Is.GreaterThan(0));
