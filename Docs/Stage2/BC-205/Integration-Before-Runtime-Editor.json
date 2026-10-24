@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command editor status",
+  "data": {
+    "command": "editor status",
+    "parameters": {},
+    "result": {
+      "status": "ready",
+      "compiling": false,
+      "domainReloadInProgress": false,
+      "playMode": "stopped",
+      "runInBackground": false,
+      "lastHeartbeat": "2026-10-24T07:35:46.7113709Z",
+      "projectPath": "H:\\Projects\\Unities\\BattleCity",
+      "unityVersion": "6000.6.7f1",
+      "role": "main",
+      "instanceName": "Main Editor"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

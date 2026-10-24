@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "if(UnityEditor.EditorApplication.isPlaying) throw new System.Exception(\"Must be stopped\"); UnityEditor.EditorApplication.isPaused=true; UnityEditor.EditorApplication.isPlaying=true; return \"Fresh Editor Play requested paused for controlled observation\";"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "Fresh Editor Play requested paused for controlled observation"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

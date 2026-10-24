@@ -1,0 +1,26 @@
+{
+  "success": false,
+  "command": "recompile",
+  "data": {
+    "status": "completed",
+    "compiling": false,
+    "failed": true,
+    "compilationFailed": true,
+    "errors": [
+      {
+        "type": "compile-error",
+        "raw": "Assets\\BattleCity\\Tests\\PlayMode\\PlayerLifeIntegrationPlayModeTests.cs(57,43): error CS0117: 'Is' does not contain a definition for 'AnyOf'",
+        "file": "Assets\\BattleCity\\Tests\\PlayMode\\PlayerLifeIntegrationPlayModeTests.cs",
+        "line": 57,
+        "column": 43,
+        "code": "CS0117",
+        "message": "'Is' does not contain a definition for 'AnyOf'"
+      }
+    ],
+    "warnings": [],
+    "summary": {
+      "errors": 1,
+      "warnings": 0
+    }
+  }
+}

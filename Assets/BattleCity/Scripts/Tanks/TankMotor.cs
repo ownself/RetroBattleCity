@@ -69,6 +69,15 @@ namespace BattleCity
 
         internal void Stop() => IsMoving = false;
 
+        // Caller has checked the complete spawn footprint against current blockers.
+        internal void Respawn(Vector2 position)
+        {
+            Position = position;
+            Facing = CardinalDirection.Up;
+            movingTicks = 0;
+            IsMoving = false;
+        }
+
         private void UpdateMovement(Vector2 before)
         {
             IsMoving = (Position - before).sqrMagnitude > MapState.Epsilon * MapState.Epsilon;

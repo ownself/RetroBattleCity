@@ -1,0 +1,25 @@
+ M Assets/BattleCity/Editor/Stage01Authoring.cs
+ M Assets/BattleCity/Scripts/Combat/BulletWorld.cs
+ M Assets/BattleCity/Scripts/Combat/WeaponState.cs
+ M Assets/BattleCity/Scripts/Core/ArenaController.cs
+ M Assets/BattleCity/Scripts/Core/ArenaSession.cs
+ M Assets/BattleCity/Scripts/Tanks/TankMotor.cs
+ M Assets/BattleCity/Scripts/Tanks/TankState.cs
+ M Docs/BattleCity-Implementation-Plan.md
+ M Docs/Stage2/Continuation-Handoff.md
+ M Docs/Stage2/Execution-Board.md
+?? .vsconfig
+?? Assets/BattleCity/Scripts/Core/PlayerLifeParameters.cs
+?? Assets/BattleCity/Scripts/Core/PlayerLifeParameters.cs.meta
+?? Assets/BattleCity/Scripts/Core/PlayerLifeState.cs
+?? Assets/BattleCity/Scripts/Core/PlayerLifeState.cs.meta
+?? Assets/BattleCity/Tests/EditMode/PlayerLifeIntegrationTests.cs
+?? Assets/BattleCity/Tests/EditMode/PlayerLifeIntegrationTests.cs.meta
+?? Assets/BattleCity/Tests/EditMode/PlayerLifeParametersTests.cs
+?? Assets/BattleCity/Tests/EditMode/PlayerLifeParametersTests.cs.meta
+?? Assets/BattleCity/Tests/EditMode/PlayerLifeStateTests.cs
+?? Assets/BattleCity/Tests/EditMode/PlayerLifeStateTests.cs.meta
+?? Assets/BattleCity/Tests/PlayMode/PlayerLifeIntegrationPlayModeTests.cs
+?? Assets/BattleCity/Tests/PlayMode/PlayerLifeIntegrationPlayModeTests.cs.meta
+?? Docs/Stage2/BC-204/Manual-Check.md
+?? Docs/Stage2/BC-205/

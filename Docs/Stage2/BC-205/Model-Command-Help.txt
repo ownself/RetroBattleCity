@@ -1,0 +1,91 @@
+Usage: unity command|cmd [options] [command] [args...]
+
+Execute commands on connected Unity Editor instances, or list available commands
+
+Arguments:
+  command                       Command to execute on Unity Editor (omit to list
+                                available commands)
+  args                          Arguments for the command
+
+Options:
+  --project-path <path>         Path to Unity project (auto-detected if not
+                                specified) (env: UNITY_PROJECT_PATH)
+  --runtime <player exec name>  Connect to a Unity Player runtime instance
+                                (search by process name)
+  --runtime-path <path>         Connect to a Unity Player by path to port file
+  --port <number>               Connect to the Unity Editor whose Pipeline
+                                server listens on this port
+  --pid <number>                Connect to the Unity Editor with this process ID
+  --instance <name>             Connect to the Multiplayer Play Mode instance
+                                with this name or virtual player ID
+  --timeout <seconds>           Timeout in seconds (default: per command; 30 for
+                                a Player or an older Pipeline)
+  --detach                      Submit as a detached job and print its job ID
+                                immediately
+  --result-only                 Print only the pipeline command's result as
+                                JSON, without the command/parameters/target
+                                envelope
+  --detail [level]              Listing: detail level, compact | full (default:
+                                full)
+  --query [term]                Search the built-in commands, plugins and
+                                Pipeline commands of the connected Editor for a
+                                term; with another listing option, filter the
+                                Editor listing by substring on name,
+                                description, or tag
+  --tags                        Listing: list the available tags instead of the
+                                commands
+  --obsolete-command-names      Listing: list the obsolete command names and the
+                                names that replaced them
+  --tag [tag]                   Listing: filter to a tag subtree (e.g. assets or
+                                assets/import)
+  --group-by [mode]             Listing: group results, flat | package | tag |
+                                group
+  --sort [key]                  Listing: sort by, name | package (default: name)
+  --order [direction]           Listing: sort direction, asc | desc (default:
+                                asc)
+  --offset [n]                  Listing: skip the first N commands
+  --limit [n]                   Listing: return at most N commands
+  -h, --help                    display help for command
+
+Global Options:
+  --format <format>             Output format: human, json, tsv, ndjson, github
+                                (env: UNITY_FORMAT)
+  --json                        Shorthand for --format json
+  --no-banner                   Suppress the startup banner (env:
+                                UNITY_NO_BANNER)
+  --no-header                   Leave out the header row in tsv output
+  --no-pager                    Disable the pager for long output (env:
+                                UNITY_NO_PAGER)
+  --non-interactive             Disable interactive prompts. Useful in CI/CD
+                                environments. (env: UNITY_NON_INTERACTIVE)
+  --quiet                       Suppress informational output (env: UNITY_QUIET)
+  --verbose                     Show full error details including stack traces
+                                on failure (env: UNITY_VERBOSE)
+  --color <mode>                Control colored output (choices: "auto",
+                                "always", "never")
+  --no-color                    Disable colored output (shorthand for --color
+                                never)
+  --proxy <url>                 HTTP/HTTPS/SOCKS/PAC proxy URL. Examples:
+                                http://<user>:<pass>@host:8080,
+                                socks5://host:1080, pac+http://wpad/proxy.pac
+                                (env: UNITY_PROXY)
+  --proxy-disable               Disable proxy for this invocation, ignoring all
+                                sources
+  --log-proxy                   Log every outbound request to proxy-request.json
+                                for this run. Off by default; typically used
+                                once when reproducing a proxy issue for support.
+                                Also settable via UNITY_LOG_PROXY=1 or the
+                                proxyRequestLogging user setting. (env:
+                                UNITY_LOG_PROXY)
+  --no-log-proxy                Opt out of --log-proxy / UNITY_LOG_PROXY / the
+                                persisted user setting for this run. Use when
+                                logging is enabled globally but you want one
+                                clean invocation.
+
+Examples:
+  unity command                            List the available command groups
+  unity command --tags                     List the available command tags
+  unity command --obsolete-command-names   List the obsolete command names and their new names
+  unity command --tag runtime              List the commands carrying a tag
+  unity command editor.playmode start      Run a command
+  unity command script eval "return 1+1;"  Run a command with arguments

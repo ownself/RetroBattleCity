@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var field=typeof(UnityEditor.EditorApplication).GetField(\"update\",System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.Public|System.Reflection.BindingFlags.NonPublic); if(field==null) throw new System.Exception(\"Cannot safely find observer subscription\"); var callbacks=(System.Delegate)field.GetValue(null); var removed=0; var keyboards=0; foreach(var d in callbacks.GetInvocationList()) { if(d.Method.DeclaringType.Assembly.GetName().Name!=\"PipelineRunScript_IntegrationRuntimeProbe_1917116bf2294f7ca838fb6e2b461c07\") continue; if(d.Target!=null) foreach(var f in d.Target.GetType().GetFields(System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.Public|System.Reflection.BindingFlags.NonPublic)) { var k=f.GetValue(d.Target) as UnityEngine.InputSystem.Keyboard; if(k!=null && UnityEngine.InputSystem.InputSystem.devices.Contains(k)) {UnityEngine.InputSystem.InputSystem.RemoveDevice(k); keyboards++;} } UnityEditor.EditorApplication.update-=(UnityEditor.EditorApplication.CallbackFunction)d; removed++; } UnityEditor.SessionState.EraseBool(\"BC205.ObserverActive\"); var c=UnityEngine.Object.FindAnyObjectByType<BattleCity.ArenaController>(); if(c!=null)c.Session.SetPaused(true); UnityEngine.Application.runInBackground=false; return new {removedObservers=removed,removedKeyboards=keyboards,observerActive=UnityEditor.SessionState.GetBool(\"BC205.ObserverActive\",false),background=UnityEngine.Application.runInBackground,playing=UnityEditor.EditorApplication.isPlaying,paused=UnityEditor.EditorApplication.isPaused};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "removedObservers": 1,
+        "removedKeyboards": 1,
+        "observerActive": false,
+        "background": false,
+        "playing": true,
+        "paused": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

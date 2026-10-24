@@ -1,0 +1,839 @@
+[
+  {
+    "command": "console clear",
+    "name": "clear",
+    "group": "console",
+    "description": "Clear the captured log buffer and the Unity Editor console.",
+    "tags": [
+      "observability/console"
+    ],
+    "package": "Unity.Pipeline",
+    "mainThreadRequired": true,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "console clear",
+      "description": "Clear the captured log buffer and the Unity Editor console.",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Runtime.Commands.ConsoleCommand.Clear"
+      }
+    }
+  },
+  {
+    "command": "console get",
+    "name": "get",
+    "group": "console",
+    "description": "Get captured Unity console output (Editor or Player; supports tail, level filtering, and follow via a cursor)",
+    "tags": [
+      "observability/console"
+    ],
+    "package": "Unity.Pipeline",
+    "mainThreadRequired": false,
+    "parameters": [
+      {
+        "name": "tail",
+        "description": "Maximum number of most-recent entries to return",
+        "type": "Int32",
+        "required": false,
+        "defaultValue": 100
+      },
+      {
+        "name": "level",
+        "description": "Minimum severity to include: log | warn | error",
+        "type": "String",
+        "required": false,
+        "defaultValue": "log"
+      },
+      {
+        "name": "since",
+        "description": "Cursor: only return entries newer than this seq. Use the 'cursor' from a previous response to follow.",
+        "type": "Int64",
+        "required": false,
+        "defaultValue": -1
+      },
+      {
+        "name": "since_session",
+        "description": "Session the 'since' cursor came from: pass the 'session' from a previous response. A cursor from another session is refused and the tail returned with reset=true.",
+        "type": "String",
+        "required": false,
+        "defaultValue": null
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "console get",
+      "description": "Get captured Unity console output (Editor or Player; supports tail, level filtering, and follow via a cursor)",
+      "properties": {
+        "tail": {
+          "type": "integer",
+          "description": "Maximum number of most-recent entries to return",
+          "default": 100
+        },
+        "level": {
+          "type": "string",
+          "description": "Minimum severity to include: log | warn | error",
+          "default": "log"
+        },
+        "since": {
+          "type": "integer",
+          "description": "Cursor: only return entries newer than this seq. Use the 'cursor' from a previous response to follow.",
+          "default": -1
+        },
+        "since_session": {
+          "type": "string",
+          "description": "Session the 'since' cursor came from: pass the 'session' from a previous response. A cursor from another session is refused and the tail returned with reset=true."
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": false,
+        "methodName": "Unity.Pipeline.Runtime.Commands.ConsoleCommand.Get"
+      }
+    }
+  },
+  {
+    "command": "console status",
+    "name": "status",
+    "group": "console",
+    "description": "Console ground truth and buffer counters without pulling entries: compile-failure flag, Editor console counts, and the buffer's retained counts and cursor.",
+    "tags": [
+      "observability/console"
+    ],
+    "package": "Unity.Pipeline",
+    "mainThreadRequired": false,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "console status",
+      "description": "Console ground truth and buffer counters without pulling entries: compile-failure flag, Editor console counts, and the buffer's retained counts and cursor.",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": false,
+        "methodName": "Unity.Pipeline.Runtime.Commands.ConsoleCommand.Status"
+      }
+    }
+  },
+  {
+    "command": "console write",
+    "name": "write",
+    "group": "console",
+    "description": "Write a message to Unity console",
+    "tags": [
+      "observability/console",
+      "runtime"
+    ],
+    "package": "Unity.Pipeline",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "message",
+        "description": "Message to log to console",
+        "type": "String",
+        "required": true,
+        "defaultValue": null
+      },
+      {
+        "name": "level",
+        "description": "Log level: info, warning, error",
+        "type": "String",
+        "required": false,
+        "defaultValue": "info"
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "console write",
+      "description": "Write a message to Unity console",
+      "properties": {
+        "message": {
+          "type": "string",
+          "description": "Message to log to console"
+        },
+        "level": {
+          "type": "string",
+          "description": "Log level: info, warning, error",
+          "default": "info"
+        }
+      },
+      "required": [
+        "message"
+      ],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Runtime.Commands.RuntimeLogCommand.Write"
+      }
+    }
+  },
+  {
+    "command": "editor focus",
+    "name": "focus",
+    "group": "editor",
+    "description": "Bring the Unity Editor window to the foreground",
+    "tags": [
+      "editor"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor focus",
+      "description": "Bring the Unity Editor window to the foreground",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.FocusEditorCommand.Focus"
+      }
+    }
+  },
+  {
+    "command": "editor invoke_menu",
+    "name": "invoke_menu",
+    "group": "editor",
+    "description": "Execute an Editor menu item by path, or list available items when no path is given",
+    "tags": [
+      "editor"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "path",
+        "description": "Menu item path to execute, e.g. \"Assets/Reimport All\". Omit to list available menu items.",
+        "type": "String",
+        "required": false,
+        "defaultValue": ""
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor invoke_menu",
+      "description": "Execute an Editor menu item by path, or list available items when no path is given",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Menu item path to execute, e.g. \"Assets/Reimport All\". Omit to list available menu items.",
+          "default": ""
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.MenuItemCommand.InvokeMenu"
+      }
+    }
+  },
+  {
+    "command": "editor save_all",
+    "name": "save_all",
+    "group": "editor",
+    "description": "Save all open scenes that have unsaved changes.",
+    "tags": [
+      "scenes"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor save_all",
+      "description": "Save all open scenes that have unsaved changes.",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.Scenes.SceneCommands.SaveAll"
+      }
+    }
+  },
+  {
+    "command": "editor search",
+    "name": "search",
+    "group": "editor",
+    "description": "Run a Unity Search query and return structured results.",
+    "tags": [
+      "navigation"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "query",
+        "description": "Unity Search query string, e.g. 't:Material', 'p: my asset', 'h: Main Camera'.",
+        "type": "String",
+        "required": true,
+        "defaultValue": null
+      },
+      {
+        "name": "limit",
+        "description": "Max results to return (capped 200).",
+        "type": "Int32",
+        "required": false,
+        "defaultValue": 50
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor search",
+      "description": "Run a Unity Search query and return structured results.",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Unity Search query string, e.g. 't:Material', 'p: my asset', 'h: Main Camera'."
+        },
+        "limit": {
+          "type": "integer",
+          "description": "Max results to return (capped 200).",
+          "default": 50
+        }
+      },
+      "required": [
+        "query"
+      ],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.Navigation.NavigationCommands.Search"
+      }
+    }
+  },
+  {
+    "command": "editor set_auto_tick",
+    "name": "set_auto_tick",
+    "group": "editor",
+    "description": "Keep the editor ticking while unfocused by forcing EditorApplication.SignalTick at a throttled rate",
+    "tags": [
+      "editor"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "enable",
+        "description": "Enable (true) or disable (false) auto-tick mode",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": true
+      },
+      {
+        "name": "interval_ms",
+        "description": "Minimum milliseconds between forced ticks. 0 = every update (max rate, pegs a CPU core). Default 16 (~60Hz).",
+        "type": "Int32",
+        "required": false,
+        "defaultValue": 16
+      },
+      {
+        "name": "persist",
+        "description": "Persist this choice to SessionState so it survives a domain reload. Set false for a one-off/expensive setting (e.g. interval_ms=0) that should revert to the last persisted choice (or the default) after the next recompile instead of sticking for the rest of the session.",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": true
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor set_auto_tick",
+      "description": "Keep the editor ticking while unfocused by forcing EditorApplication.SignalTick at a throttled rate",
+      "properties": {
+        "enable": {
+          "type": "boolean",
+          "description": "Enable (true) or disable (false) auto-tick mode",
+          "default": true
+        },
+        "interval_ms": {
+          "type": "integer",
+          "description": "Minimum milliseconds between forced ticks. 0 = every update (max rate, pegs a CPU core). Default 16 (~60Hz).",
+          "default": 16
+        },
+        "persist": {
+          "type": "boolean",
+          "description": "Persist this choice to SessionState so it survives a domain reload. Set false for a one-off/expensive setting (e.g. interval_ms=0) that should revert to the last persisted choice (or the default) after the next recompile instead of sticking for the rest of the session.",
+          "default": true
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.AutoTickCommand.SetAutoTick"
+      }
+    }
+  },
+  {
+    "command": "editor status",
+    "name": "status",
+    "group": "editor",
+    "description": "Get detailed Unity Editor status and state information",
+    "tags": [
+      "editor"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor status",
+      "description": "Get detailed Unity Editor status and state information",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.EditorStatusCommand.Status"
+      }
+    }
+  },
+  {
+    "command": "editor.playmode list_instances",
+    "name": "list_instances",
+    "group": "editor.playmode",
+    "description": "List running Editor instances reachable over Pipeline (this Editor + its MPPM virtual player clones). Connect to one with 'unity command --project-path <its projectPath>'.",
+    "tags": [
+      "editor/instances"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": false,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor.playmode list_instances",
+      "description": "List running Editor instances reachable over Pipeline (this Editor + its MPPM virtual player clones). Connect to one with 'unity command --project-path <its projectPath>'.",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": false,
+        "methodName": "Unity.Pipeline.Editor.Commands.InstanceCommands.ListInstances"
+      }
+    }
+  },
+  {
+    "command": "editor.playmode pause",
+    "name": "pause",
+    "group": "editor.playmode",
+    "description": "Toggle pause state of Unity Editor play mode",
+    "tags": [
+      "editor/playmode"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor.playmode pause",
+      "description": "Toggle pause state of Unity Editor play mode",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.PlayModeCommands.Pause"
+      }
+    }
+  },
+  {
+    "command": "editor.playmode set_run_in_background",
+    "name": "set_run_in_background",
+    "group": "editor.playmode",
+    "description": "Override the project's Run In Background Player Setting, recording enough state to restore it later and to keep it out of builds",
+    "tags": [
+      "editor/playmode"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "enable",
+        "description": "Turn the override on (true, default) or stop it (false) and restore the project's own value, unless the \"Ensure editor runs in background in PlayMode\" setting is still forcing it on right now",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": true
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor.playmode set_run_in_background",
+      "description": "Override the project's Run In Background Player Setting, recording enough state to restore it later and to keep it out of builds",
+      "properties": {
+        "enable": {
+          "type": "boolean",
+          "description": "Turn the override on (true, default) or stop it (false) and restore the project's own value, unless the \"Ensure editor runs in background in PlayMode\" setting is still forcing it on right now",
+          "default": true
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.PlayModeCommands.SetRunInBackground"
+      }
+    }
+  },
+  {
+    "command": "editor.playmode start",
+    "name": "start",
+    "group": "editor.playmode",
+    "description": "Enter Unity Editor play mode",
+    "tags": [
+      "editor/playmode"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor.playmode start",
+      "description": "Enter Unity Editor play mode",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.PlayModeCommands.Start"
+      }
+    }
+  },
+  {
+    "command": "editor.playmode stop",
+    "name": "stop",
+    "group": "editor.playmode",
+    "description": "Exit Unity Editor play mode",
+    "tags": [
+      "editor/playmode"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "editor.playmode stop",
+      "description": "Exit Unity Editor play mode",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.PlayModeCommands.Stop"
+      }
+    }
+  },
+  {
+    "command": "script eval",
+    "name": "eval",
+    "group": "script",
+    "description": "Evaluate C# code dynamically using Roslyn compiler",
+    "tags": [
+      "scripts/eval"
+    ],
+    "package": "Unity.Pipeline",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "code",
+        "description": "C# code to evaluate",
+        "type": "String",
+        "required": true,
+        "defaultValue": null
+      },
+      {
+        "name": "timeout",
+        "description": "Timeout in seconds",
+        "type": "Double",
+        "required": false,
+        "defaultValue": 30
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "script eval",
+      "description": "Evaluate C# code dynamically using Roslyn compiler",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "C# code to evaluate"
+        },
+        "timeout": {
+          "type": "number",
+          "description": "Timeout in seconds",
+          "default": 30
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Runtime.Commands.CodeEvalCommand.Eval"
+      }
+    }
+  },
+  {
+    "command": "script eval_file",
+    "name": "eval_file",
+    "group": "script",
+    "description": "Evaluate C# code read from a .cs file on disk",
+    "tags": [
+      "scripts/eval"
+    ],
+    "package": "Unity.Pipeline",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "file",
+        "description": "Path to a .cs file to evaluate",
+        "type": "String",
+        "required": true,
+        "defaultValue": null
+      },
+      {
+        "name": "timeout",
+        "description": "Timeout in seconds",
+        "type": "Double",
+        "required": false,
+        "defaultValue": 30
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "script eval_file",
+      "description": "Evaluate C# code read from a .cs file on disk",
+      "properties": {
+        "file": {
+          "type": "string",
+          "description": "Path to a .cs file to evaluate"
+        },
+        "timeout": {
+          "type": "number",
+          "description": "Timeout in seconds",
+          "default": 30
+        }
+      },
+      "required": [
+        "file"
+      ],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Runtime.Commands.CodeEvalCommand.EvalFile"
+      }
+    }
+  },
+  {
+    "command": "test cancel",
+    "name": "cancel",
+    "group": "test",
+    "description": "Cancel running test execution",
+    "tags": [
+      "tests"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "test cancel",
+      "description": "Cancel running test execution",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.TestCommands.Cancel"
+      }
+    }
+  },
+  {
+    "command": "test list",
+    "name": "list",
+    "group": "test",
+    "description": "List all available tests (EditMode and/or PlayMode) without running them",
+    "tags": [
+      "tests"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "mode",
+        "description": "Test mode: all, editor, playmode (default: all)",
+        "type": "String",
+        "required": false,
+        "defaultValue": "all"
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "test list",
+      "description": "List all available tests (EditMode and/or PlayMode) without running them",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "description": "Test mode: all, editor, playmode (default: all)",
+          "default": "all"
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.TestCommands.List"
+      }
+    }
+  },
+  {
+    "command": "test run",
+    "name": "run",
+    "group": "test",
+    "description": "Execute Unity tests with filtering options",
+    "tags": [
+      "tests"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": true,
+    "parameters": [
+      {
+        "name": "mode",
+        "description": "Test mode: all, editor, playmode (default: all)",
+        "type": "String",
+        "required": false,
+        "defaultValue": "all"
+      },
+      {
+        "name": "filter",
+        "description": "Test name filter pattern (case-insensitive partial match)",
+        "type": "String",
+        "required": false,
+        "defaultValue": ""
+      },
+      {
+        "name": "filter_type",
+        "description": "Filter type: testName, assembly, category (default: testName)",
+        "type": "String",
+        "required": false,
+        "defaultValue": "testName"
+      },
+      {
+        "name": "include_explicit",
+        "description": "Include tests marked with [Explicit] attribute",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": false
+      },
+      {
+        "name": "async_tests",
+        "description": "Run asynchronously - return immediately, poll /test-status for results",
+        "type": "Boolean",
+        "required": false,
+        "defaultValue": false
+      },
+      {
+        "name": "timeout",
+        "description": "Test execution timeout in seconds (default: 600)",
+        "type": "Double",
+        "required": false,
+        "defaultValue": 600
+      }
+    ],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "test run",
+      "description": "Execute Unity tests with filtering options",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "description": "Test mode: all, editor, playmode (default: all)",
+          "default": "all"
+        },
+        "filter": {
+          "type": "string",
+          "description": "Test name filter pattern (case-insensitive partial match)",
+          "default": ""
+        },
+        "filter_type": {
+          "type": "string",
+          "description": "Filter type: testName, assembly, category (default: testName)",
+          "default": "testName"
+        },
+        "include_explicit": {
+          "type": "boolean",
+          "description": "Include tests marked with [Explicit] attribute",
+          "default": false
+        },
+        "async_tests": {
+          "type": "boolean",
+          "description": "Run asynchronously - return immediately, poll /test-status for results",
+          "default": false
+        },
+        "timeout": {
+          "type": "number",
+          "description": "Test execution timeout in seconds (default: 600)",
+          "default": 600
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": true,
+        "methodName": "Unity.Pipeline.Editor.Commands.TestCommands.Run"
+      }
+    }
+  },
+  {
+    "command": "test status",
+    "name": "status",
+    "group": "test",
+    "description": "Get status of running async test execution",
+    "tags": [
+      "tests"
+    ],
+    "package": "Unity.Pipeline.Editor",
+    "mainThreadRequired": false,
+    "parameters": [],
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "title": "test status",
+      "description": "Get status of running async test execution",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false,
+      "x-command-metadata": {
+        "mainThreadRequired": false,
+        "methodName": "Unity.Pipeline.Editor.Commands.TestCommands.Status"
+      }
+    }
+  }
+]

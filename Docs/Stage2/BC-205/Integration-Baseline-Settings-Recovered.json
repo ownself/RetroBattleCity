@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var t=System.AppDomain.CurrentDomain.GetAssemblies().Select(a=>a.GetType(\"Unity.Pipeline.Editor.Commands.AutoTickCommand\")).FirstOrDefault(x=>x!=null); var flags=System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic; var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene(); return new {playing=UnityEditor.EditorApplication.isPlaying,compiling=UnityEditor.EditorApplication.isCompiling,scene=scene.path,dirty=scene.isDirty,background=UnityEngine.Application.runInBackground,autoTypeFound=t!=null,autoEnabled=t==null?null:t.GetProperty(\"IsEnabled\",flags).GetValue(null),autoInterval=t==null?null:t.GetProperty(\"CurrentIntervalMs\",flags).GetValue(null),enabledKey=\"Unity.Pipeline.AutoTick.Enabled\",intervalKey=\"Unity.Pipeline.AutoTick.IntervalMs\",persistedEnabledDefaultFalse=UnityEditor.SessionState.GetBool(\"Unity.Pipeline.AutoTick.Enabled\",false),persistedEnabledDefaultTrue=UnityEditor.SessionState.GetBool(\"Unity.Pipeline.AutoTick.Enabled\",true),persistedInterval=UnityEditor.SessionState.GetInt(\"Unity.Pipeline.AutoTick.IntervalMs\",-1),recentKey=\"RecentlyUsedSceneGuid-0\",recentExists=UnityEditor.EditorPrefs.HasKey(\"RecentlyUsedSceneGuid-0\"),recent=UnityEditor.EditorPrefs.GetString(\"RecentlyUsedSceneGuid-0\",\"\"),configExists=System.IO.File.Exists(\"ProjectSettings/Packages/com.unity.pipeline/EditorPipelineConfig.json\"),userSettingsDirectoryExists=System.IO.Directory.Exists(\"UserSettings\")};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playing": false,
+        "compiling": false,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false,
+        "background": false,
+        "autoTypeFound": true,
+        "autoEnabled": true,
+        "autoInterval": 16,
+        "enabledKey": "Unity.Pipeline.AutoTick.Enabled",
+        "intervalKey": "Unity.Pipeline.AutoTick.IntervalMs",
+        "persistedEnabledDefaultFalse": false,
+        "persistedEnabledDefaultTrue": true,
+        "persistedInterval": -1,
+        "recentKey": "RecentlyUsedSceneGuid-0",
+        "recentExists": false,
+        "recent": "",
+        "configExists": false,
+        "userSettingsDirectoryExists": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "command": "command editor.playmode stop",
+  "data": {
+    "command": "editor.playmode stop",
+    "parameters": {},
+    "result": "Already in edit mode",
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,3122 @@
+{
+  "success": true,
+  "command": "command test list",
+  "data": {
+    "command": "test list",
+    "parameters": {
+      "mode": "editor"
+    },
+    "result": {
+      "Mode": "EditMode",
+      "Count": 344,
+      "Tests": [
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EarlierTerrainConsumesShotBeforeBase(Brick)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EarlierTerrainConsumesShotBeforeBase(Steel)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Up)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Left)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Down)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Right)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Up)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Left)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Down)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Right)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.HighSpeedSweepCannotTunnel_OneHitDestroys",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.IntactAndRuinedBaseBlockNaturalBirths(False)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.IntactAndRuinedBaseBlockNaturalBirths(True)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.IntactAndRuinedFootprintsBlockMovementAndExplicitSpawns(False)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.IntactAndRuinedFootprintsBlockMovementAndExplicitSpawns(True)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.LegacySessionHasNoInvisibleBase_EnabledSessionsOwnIndependentSnapshot",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.PauseFreezesIncomingShotAndFailure_ResumeSettlesOnce",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.SameTickMultipleShotsConsumeOldBase_OneExplosionAndNotification_AllTankDamageStillSettles",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.TankBeforeBaseWinsDistance_BaseWinsSameDistancePriority(64,Tank)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.TankBeforeBaseWinsDistance_BaseWinsSameDistancePriority(104,Base)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.TankBeforeBaseWinsDistance_BaseWinsSameDistancePriority(144,Base)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.AcrossStrip_FloorsLowerEdgeToFourPixelGrid(104.0f,24)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.AcrossStrip_FloorsLowerEdgeToFourPixelGrid(107.5f,24)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.AcrossStrip_FloorsLowerEdgeToFourPixelGrid(108.0f,25)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.AuthoringAndNewSession_RetainOriginalFullBricks",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.EightPixelGap_RemainsImpassableTo16PixelTank",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.FourDirections_RemoveOnlyOne16By4Strip(Up,104,48,20)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.FourDirections_RemoveOnlyOne16By4Strip(Down,104,160,31)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.FourDirections_RemoveOnlyOne16By4Strip(Right,48,104,20)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.FourDirections_RemoveOnlyOne16By4Strip(Left,160,104,31)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.MapEdge_ClipsWithoutShiftingStripInward(4.0f,0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.MapEdge_ClipsWithoutShiftingStripInward(204.0f,49)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.PausedSession_DoesNotReplayLastTickDamage",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.RemainingLayerBlocksTank_ThenFourShotsOpenA16PixelPassage",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.SameTickTwoBullets_HitOneSnapshotAndDoNotDrillTwoLayers",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.Session_MultipleTicksApplyDamageBeforeTheNextSweep",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.SteelBoundaryAndEmptyEvents_DoNotAdvanceMapRevision",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.Strip_NeverChangesOtherTerrain(Steel)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.Strip_NeverChangesOtherTerrain(Water)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.Strip_NeverChangesOtherTerrain(Grass)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.Strip_NeverChangesOtherTerrain(Ice)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.TouchingWall_SameTimeWeaponsSelectSameOuterLayerInStableOrder(Up)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.TouchingWall_SameTimeWeaponsSelectSameOuterLayerInStableOrder(Down)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.TouchingWall_SameTimeWeaponsSelectSameOuterLayerInStableOrder(Right)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.TouchingWall_SameTimeWeaponsSelectSameOuterLayerInStableOrder(Left)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.TwoShots_RemoveTwoLayersAndClearTerrainOnlyWhenLastBitIsGone",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Up,0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Down,0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Right,0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Left,0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Up,8)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Down,8)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Right,8)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Left,8)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Base_BothTeamsCanHit(Player)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Base_BothTeamsCanHit(Enemy)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.BoundaryImpact_RecordsExactBoxContact(Up,100,206)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.BoundaryImpact_RecordsExactBoxContact(Left,2,100)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.BoundaryImpact_RecordsExactBoxContact(Down,100,2)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.BoundaryImpact_RecordsExactBoxContact(Right,206,100)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.ContactExactlyAtTickEnd_IsAHit",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.DuplicateTargetIds_AreRejectedBeforeAdvancingBullets",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.EarlierPairInvalidatesLaterWallAndBoundaryHits",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.EarlierWallInvalidatesPair_AndOtherBulletStillGetsItsLaterWallHit",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.FriendlyBullets_PassThroughEachOther",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.GlobalOrdering_UsesTickTimeNotDistanceOrSpawnOrder",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.GrazingParallelEdge_IsNotAHit",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HighSpeed_FourSidesStopAtFirstSteelFace(Up,100,64,100,94)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HighSpeed_FourSidesStopAtFirstSteelFace(Left,144,100,106,100)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HighSpeed_FourSidesStopAtFirstSteelFace(Down,100,144,100,106)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HighSpeed_FourSidesStopAtFirstSteelFace(Right,64,100,94,100)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HostileHeadOnPair_CannotTunnelAndReleasesBothOwners",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HostilePerpendicularPair_UsesRelativeSweep",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.ImmutableHitSurvivesPoolReuseAndStaleIdCannotReleaseNewLease",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.NearestDistanceWinsBeforeKindPriority",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.NonBlockingTerrain_DoesNotConsumeBullets(Water)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.NonBlockingTerrain_DoesNotConsumeBullets(Grass)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.NonBlockingTerrain_DoesNotConsumeBullets(Ice)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTime_BaseBeforeTank",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTime_BoundaryBeforeTerrainAndBulletPair",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTime_TankBeforeBulletPair",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTime_TerrainBeforeBaseAndTank",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTimeSameKind_LowestStableTargetIdWinsRegardlessOfInputOrder(False)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTimeSameKind_LowestStableTargetIdWinsRegardlessOfInputOrder(True)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Session_ActuallyUsesTerrainSweep",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SpawnInsideBrick_IsConsumedAtZeroTimeAndOnlyOnce",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.StartingContact_HitsOnlyWhenMovingIntoTarget(False)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.StartingContact_HitsOnlyWhenMovingIntoTarget(True)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Tanks_FriendlyAndOwnerAreIgnoredButHostileIsHit(Player)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Tanks_FriendlyAndOwnerAreIgnoredButHostileIsHit(Enemy)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Terrain_NearestWinsAndSweepPhaseDoesNotMutateMap",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.ThreeWayContact_ConsumesEachLeaseAtMostOnce",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.BoundaryAndEnemyBulletPair_EachProduceOneSmallEffect",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.ClearWhilePaused_DoesNotReplayOldHitsAndFreshSessionIsEmpty",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.Explosion_IsPresentationOnlyAndExpiresWithoutRendering",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.MultipleLogicSteps_KeepEveryHitEvenWhenLastTickHasNone",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.NonlethalTankHit_IsNotAutomaticallyADeathExplosion",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.PauseAndFocusLoss_FreezeAgeAndNeverReplayLastHit",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.SameTickSamePosition_IndependentBulletsAreNotDeduplicated",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.TerrainHit_ExpiresAfterTwelveTicksAndReusesResetLease(Brick)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.TerrainHit_ExpiresAfterTwelveTicksAndReusesResetLease(Steel)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Up,104,200)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Down,104,8)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Left,8,104)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Right,200,104)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Death_StopsDecisionsRandomTimersMovementAndNewShots",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Decisions_UseStartOfTickOccupancy_NotEarlierIdsMovementOrFuturePlayerCommand",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.DynamicMutualBlock_TurnsAndNeverOverlapsAcrossTicks",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.FullyBlocked_RetriesWithoutRandomChurn_AndShootsBrickOpen",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.NarrowCorridor_Exact16PixelsNeverCrossesWalls_DeadEndReverses(False)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.NarrowCorridor_Exact16PixelsNeverCrossesWalls_DeadEndReverses(True)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.PauseFreezesFullBrainAndResumeDoesNotCatchUp",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.PrototypeParameters_AreExplicitValidatedAndUncalibrated",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(1)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(7)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(123456)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(uint.MaxValue)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Registration_IsExplicitAndUsesSameSharedTank_ExternalControlRemainsAvailable",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RenderDelta_Same720TicksMatches60HzReference(30)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RenderDelta_Same720TicksMatches60HzReference(60)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RenderDelta_Same720TicksMatches60HzReference(144)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.SameSeed_ReplaysEveryTickIncludingPositionFacingShotsAndRandom_WithoutUnityRandom",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Up,12,14)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Up,12,14)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Down,12,11)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Down,12,11)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Left,11,12)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Left,11,12)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Right,14,12)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Right,14,12)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.ActivePlusReservedNeverExceedsCap_ExternalRegistrationCannotStealReservedCapacity(1)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.ActivePlusReservedNeverExceedsCap_ExternalRegistrationCannotStealReservedCapacity(4)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.AllSpawnsOccupiedByPlayer_WaitsWithoutConsumingSequenceThenUsesReleasedSpace",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.DeathSettlesBeforeReservation_RepeatedDeadTicksDoNotLoseOrDoubleCountEnemies",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.ExhaustionMeansAllCreatedNotVictory_DeathsAndLateTicksKeepConservation",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.InvalidMappingFailsAtConstruction_NotAfterAnEnemyIsPartlyRegistered",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.MapAndBaseFootprintsBlockNaturalSpawns(True)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.MapAndBaseFootprintsBlockNaturalSpawns(False)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.OptionalWave_PreservesLegacyPureLogicAndEmptySequence",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.PauseFreezesPreparationIntervalBrainAndRandom_ResumeDoesNotCatchUp",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.PreparationEndsWithPlayerInTheWay_HoldsRequestAndCountUntilPlayerLeaves",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.SameSeedAndInputReplayIdenticalIntegratedWorld_AuthoredArraysStayUnchanged",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.SpawnCommitsSharedTankAndBrainAfterCombat_NewEnemyOnlyActsNextTick",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.AllPointsBlocked_WaitsWithoutConsumingRandomSequenceOrReservation_ThenUsesOnlyClearPoint",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.AuthorArraysAndTiming_AreSnapshotted_AndRuntimeNeverMutatesThem",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications(1)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications(4)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.DefaultTiming_FirstCreationCall61_Second241_DeathBeforeStepAndNextTickControlAreHostContract",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.EmptySequence_IsExhaustedWithoutReservationOrCallbacks",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.ExactSeedOne_FirstPointAndBrainSeedAreStable",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.FailedCreation_IsNotCommitted_AndCanRetryWithIdenticalRequest",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(1)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(7)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(uint.MaxValue)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"unknown\")",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"duplicate\")",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"nullMapping\")",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"nullDefinition\")",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroSeed\")",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroPreparation\")",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"negativePreparation\")",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroInterval\")",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"negativeInterval\")",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"invalidTank\")",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"nullSequence\")",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"emptyId\")",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroCap\")",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"noSpawns\")",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidStepInput_RejectsCapacityIncludingExistingReservationWithoutMutation",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.NoStep_PauseFreezesReservationIntervalCountersAndRandom",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.PreparationFinishedThenOccupied_RetriesSameReservationWithoutResetOrLostCountOrSeed",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.ReentrantOrThrowingCallback_CannotDoubleCommit_ReservationIsRetryable",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.SequenceExhausted_IsNotVictory_AliveSnapshotAndConservationRemainAvailable",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase0Tests.BaselineScene_CameraBindingsSortingAndTilesAreValid",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase0Tests.Catalog_All319SlicesMatchInventoryAndPixelContract",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase0Tests.ConfigurationSchemas_RejectInvalidValues",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase0Tests.CoordinateContract_RoundTripsAndBoundaries",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase0Tests.Importers_PointUncompressedNoMipAndUniformPPU",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase0Tests.TankFrames_AllDirectionsUseSameCanvasAndPivot",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase0Tests.Transparency_BackgroundMaskPreservesTrueBlackAndNearBlackHudInk",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Animation_OnlyAdvancesForActualMovementAndDoesNotMoveCollider",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.ArenaAssetAndScene_DisplayExactlyMatchesMapAndHasNoPhysicsState",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Channels_RespectFullSixteenPixelTankWidth(8,False)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Channels_RespectFullSixteenPixelTankWidth(16,True)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Channels_RespectFullSixteenPixelTankWidth(24,True)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Clock_LongFrameIsBoundedAndPauseDropsPartialTime",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.FocusLoss_PausesAndRequiresManualResume",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Input_NewestPhysicalKeyWinsAndReleaseFallsBack",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Input_QuickFireTapSurvivesUntilExactlyOneTick",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Input_SimultaneousKeysUseFrozenPriority",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.KeyboardAdapter_MapsRealInputSystemKeyboardState",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Map_CopiesAuthoringDataAndHonorsHalfOpenEdges",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Pause_DiscardsQueuedAndHeldCombatInputUntilRelease",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.RenderRate_DoesNotChangeDistanceOrTickCount(30)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.RenderRate_DoesNotChangeDistanceOrTickCount(60)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.RenderRate_DoesNotChangeDistanceOrTickCount(144)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_ClampsToEveryMapBoundary(1,0,200,24)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_ClampsToEveryMapBoundary(-1,0,8,24)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_ClampsToEveryMapBoundary(0,1,24,200)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_ClampsToEveryMapBoundary(0,-1,24,8)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_DoesNotTunnelThroughThinWalls(Brick)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_DoesNotTunnelThroughThinWalls(Steel)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Turn_AtWallCornerAndBoundaryKeepsLegalFullSizeBox",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Turn_SmallCorrectionWorksButNeverCrossesWallOrTeleports",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.InitialLives_MustBePositive(0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.InitialLives_MustBePositive(-1)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.InitialLives_MustBePositive(int.MinValue)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.MaximumPositiveValues_AreSupportedWithoutTimerArithmeticOverflow",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.NullParameters_AreRejected",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.ProtectionTicks_RejectsZeroAndNegative(0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.ProtectionTicks_RejectsZeroAndNegative(-1)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.ProtectionTicks_RejectsZeroAndNegative(int.MinValue)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.Prototype_IsImmutableThreeTotalLivesAnd60Delay120Protection_RequiresCalibration",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.RespawnDelayTicks_RejectsZeroAndNegative(0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.RespawnDelayTicks_RejectsZeroAndNegative(-1)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.RespawnDelayTicks_RejectsZeroAndNegative(int.MinValue)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.State_CopiesImmutableParameterSnapshot_IndependentOfCallerReferenceReplacement",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.AbsoluteTicks_DeathDDoesNotDecrement_DPlus59Waits_DPlus60FirstRespawn",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.AbsoluteTicks_RPlus1ThroughRPlus120FullDamagePhasesProtected_RPlus121FirstVulnerable",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.InitialLife_IncludesCurrentAndHasNoProtectionOrPendingRespawn",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.NoStepDuringPauseOrFocusLoss_LeavesWaitAndProtectionUnchanged_NoCatchUpClock",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.NullCallbackAndUnauthorizedRevival_AreRejectedWithoutChangingState",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.OneTickDelayAndProtection_DeathDoesNotSpawn_RespawnDoesNotExpireProtection",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.ReadyButBlocked_RetriesEachTickAtZeroWithoutSpendingLifeOrRestartingDelay",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.RepeatedDeadSnapshotsAndReadOnlyObservations_DoNotSpendAdditionalLives",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.SeparateStates_DoNotShareMutableLifeOrTimerState",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.ThreeLives_DeathSpendsOnePerGeneration_ExhaustionEdgeOnceAndLatchForever",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.ThrowingOrReentrantCallback_DoesNotCommitAndCanRetryOnNextTick",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.RenderDeltaCombatTests.HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes(30)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.RenderDeltaCombatTests.HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes(60)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.RenderDeltaCombatTests.HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes(144)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.RenderDeltaCombatTests.HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes(30)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.RenderDeltaCombatTests.HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes(60)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.RenderDeltaCombatTests.HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes(144)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_All676CellsMatchIndependentPngSamples",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_AsymmetricLandmarksAndBaseProtectionHaveCorrectYFlip",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_FrozenSpawnsFitAndDoNotOverlapBaseOrTerrain",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_RuntimeDestructionDoesNotMutateAuthoringData",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_SavedSceneBindsInteractiveTilesCameraAndSessionBase",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_SerializedTerrainOnDiskHasExactly676ValidCellsMatchingLayout",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.AllTanksBlock_HighSpeedHeadOnCannotSwapOrTunnel(Player)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.AllTanksBlock_HighSpeedHeadOnCannotSwapOrTunnel(Enemy)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.CombatRules_FrozenSelfFriendlyHostileMatrix(Player,Player,2,False)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.CombatRules_FrozenSelfFriendlyHostileMatrix(Enemy,Enemy,2,False)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.CombatRules_FrozenSelfFriendlyHostileMatrix(Player,Enemy,2,True)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.CombatRules_FrozenSelfFriendlyHostileMatrix(Enemy,Player,2,True)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.CombatRules_FrozenSelfFriendlyHostileMatrix(Player,Enemy,1,False)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DamageSettlesAfterAllWeapons_IndependentLanesCanKillBothTeamsInOneTick",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.Death_ReleasesMovementOccupancyButNotOutstandingProjectileLease",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DynamicSweep_ClampsAtEveryTankFace(Up,24,72,24,56)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DynamicSweep_ClampsAtEveryTankFace(Down,24,8,24,24)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DynamicSweep_ClampsAtEveryTankFace(Right,72,24,56,24)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DynamicSweep_ClampsAtEveryTankFace(Left,8,24,24,24)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DynamicSweep_ExactParallelTouchPassesButOverlapBlocks",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.FriendlyTank_IsIgnoredByRealSweepBeforeHostileTank",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.IncomingHit_UsesHealthAndProtectionForPlayerAndEnemy(False)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.IncomingHit_UsesHealthAndProtectionForPlayerAndEnemy(True)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.Pause_FreezesAllTanksAndClearsNonPlayerCommands",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.SameTickAllSweepsSeeLivingFrontTarget_DeathOnlyOnceThenNextTickOpensPath",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.SideTurn_RequiresWholeDynamicAlignmentPathClear(25)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.SideTurn_RequiresWholeDynamicAlignmentPathClear(27)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.StableIds_SpawnRejectsOverlapAndNeverConsumesIdOnFailure",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.TankCommand_SharesMovementAnimationMuzzleCooldownAndCapacity(Player)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.TankCommand_SharesMovementAnimationMuzzleCooldownAndCapacity(Enemy)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,1)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,2)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,3)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,4)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,5)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,6)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,7)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,1)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,2)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,3)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,4)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,5)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,6)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,7)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,1)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,2)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,3)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,4)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,5)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,6)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,7)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,1)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,2)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,3)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,4)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,5)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,6)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,7)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,1)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,2)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,3)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,4)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,5)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,6)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,7)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,1)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,2)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,3)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,4)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,5)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,6)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,7)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,1)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,2)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,3)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,4)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,5)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,6)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,7)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,0)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,1)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,2)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,3)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,4)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,5)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,6)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,7)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.Session_ReleasedOldKeyDoesNotLeaveSideTurnPermanentlyStuck",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.ActiveLimit_RejectsWithoutRestartingCooldownAndRearmsOnRelease",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.BulletTravel_IsRenderRateIndependent(30)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.BulletTravel_IsRenderRateIndependent(60)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.BulletTravel_IsRenderRateIndependent(144)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.ConfiguredCap_IsPerOwnerAndCanExceedOne",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.Cooldown_FirstShotImmediateNextShotExactlyFifteenTicksLater",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.HeldFire_RepeatsWhenCooldownAndCapacityBothAllow",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.MuzzleAndTravel_UseFacingAndLogicalPixels(Up)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.MuzzleAndTravel_UseFacingAndLogicalPixels(Left)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.MuzzleAndTravel_UseFacingAndLogicalPixels(Down)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.MuzzleAndTravel_UseFacingAndLogicalPixels(Right)",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.Pause_FreezesBulletAndCooldownAndDoesNotResumeHeldFire",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.PoolReuse_ResetsStateAndStaleLeaseCannotReleaseNewBullet",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.RefusedTap_IsNotQueuedForLater",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.Session_MovesThenSpawnsAndAdvancesBulletInSameTick",
+          "Mode": "EditMode",
+          "Assembly": "BattleCity.EditModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        }
+      ],
+      "success": true,
+      "result": null,
+      "message": "Found 344 test(s)."
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

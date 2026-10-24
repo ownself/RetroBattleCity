@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command script run",
+  "data": {
+    "command": "script run",
+    "parameters": {
+      "file": "Docs/Stage2/BC-205/RecoveryRuntimeProbe.cs",
+      "entry": "BC205RecoveryRuntimeProbe.Main"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 305,
+      "executeMs": 4,
+      "assemblyName": "PipelineRunScript_RecoveryRuntimeProbe_4cf580ca04c44b05942a4dbd8be1d619",
+      "success": true,
+      "result": "Single automatic observation armed: warm paused real Updates, shared enemy weapon death, pause, respawn shield, focus-handler freeze, protected hit, expiry, screenshots, finally cleanup. Cancel via BC205RecoveryRuntimeProbe.Cancel()."
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

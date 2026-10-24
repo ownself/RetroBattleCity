@@ -8,6 +8,7 @@ namespace BattleCity
     public sealed class TankState
     {
         private readonly float moveSpeed;
+        private readonly int initialHitPoints;
         internal float MoveSpeedPixelsPerSecond => moveSpeed;
         public long EntityId { get; }
         public CombatTeam Team { get; }
@@ -15,7 +16,7 @@ namespace BattleCity
         public WeaponState Weapon { get; }
         public int HitPoints { get; private set; }
         public bool IsAlive => HitPoints > 0;
-        // Generic protection only. Timed respawn and pickup policies belong to later tasks.
+        // Generic protection; session-owned respawn protection is applied independently.
         public bool IsProtected { get; set; }
         public Rect Bounds => new Rect(Motor.Position - Vector2.one * TankMotor.HalfSizePixels,
             Vector2.one * (TankMotor.HalfSizePixels * 2));
@@ -31,7 +32,16 @@ namespace BattleCity
             Motor = new TankMotor(spawn, map);
             Weapon = new WeaponState(definition, bullets, team, entityId);
             moveSpeed = definition.moveSpeedPixelsPerSecond;
-            HitPoints = definition.hitPoints;
+            HitPoints = initialHitPoints = definition.hitPoints;
+        }
+
+        internal void Respawn(Vector2 position)
+        {
+            Weapon.ResetForRespawn();
+            Motor.Respawn(position);
+            HitPoints = initialHitPoints;
+            IsProtected = false;
+            Command = new TankCommand(CardinalDirection.None);
         }
 
         internal void Move(MapState map, IReadOnlyList<Rect> blockers)

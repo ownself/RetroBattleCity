@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command script run",
+  "data": {
+    "command": "script run",
+    "parameters": {
+      "file": "Docs/Stage2/BC-205/IntegrationRuntimeProbe.cs",
+      "entry": "BC205IntegrationRuntimeProbe.Main"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 335,
+      "executeMs": 19,
+      "assemblyName": "PipelineRunScript_IntegrationRuntimeProbe_1917116bf2294f7ca838fb6e2b461c07",
+      "success": true,
+      "result": "Observer armed. Only real Controller.Update advances combat; shared enemy WeaponState produces the lethal projectile. Resume paused session after each capture."
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

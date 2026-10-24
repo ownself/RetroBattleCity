@@ -1,0 +1,319 @@
+diff --git a/Assets/BattleCity/Editor/Stage01Authoring.cs b/Assets/BattleCity/Editor/Stage01Authoring.cs
+index 4750e95..0028500 100644
+--- a/Assets/BattleCity/Editor/Stage01Authoring.cs
++++ b/Assets/BattleCity/Editor/Stage01Authoring.cs
+@@ -54,6 +54,7 @@ namespace BattleCity.Editor
+             controller.name = "Stage 01 - WASD or arrows; Space fires; Esc pauses";
+             controller.level = AssetDatabase.LoadAssetAtPath<LevelDefinition>(LevelPath);
+             controller.enemyWaveDefinition = wave;
++            controller.enablePlayerLifecycle = true;
+             controller.playerRenderer.transform.position = PixelGrid.ToWorld(controller.level.playerSpawnPixels);
+             controller.mapView.Render(new MapState(controller.level));
+             var baseRenderer = new GameObject("Base - session state projection", typeof(SpriteRenderer)).GetComponent<SpriteRenderer>();
+@@ -64,7 +65,7 @@ namespace BattleCity.Editor
+             controller.baseRenderer = baseRenderer;
+             controller.ValidateBindings();
+             if (!EditorSceneManager.SaveScene(scene, ScenePath)) throw new InvalidOperationException("Could not save Stage 01.");
+-            return "BC-204 Stage 01 saved with real base and 20 prototype basic enemies: " + ScenePath;
++            return "BC-205 Stage 01 saved with player lifecycle, real base and 20 prototype basic enemies: " + ScenePath;
+         }
+ 
+         public static void Populate(LevelDefinition level)
+diff --git a/Assets/BattleCity/Scenes/Stage01.unity b/Assets/BattleCity/Scenes/Stage01.unity
+index 184a9a7..994cd18 100644
+--- a/Assets/BattleCity/Scenes/Stage01.unity
++++ b/Assets/BattleCity/Scenes/Stage01.unity
+@@ -155,6 +155,7 @@ MonoBehaviour:
+   mapView: {fileID: 2126228642}
+   playerRenderer: {fileID: 1907681948}
+   baseRenderer: {fileID: 1348632812}
++  enablePlayerLifecycle: 1
+ --- !u!4 &65998006
+ Transform:
+   m_ObjectHideFlags: 0
+diff --git a/Assets/BattleCity/Scripts/Combat/BulletWorld.cs b/Assets/BattleCity/Scripts/Combat/BulletWorld.cs
+index a6e23cb..9e724db 100644
+--- a/Assets/BattleCity/Scripts/Combat/BulletWorld.cs
++++ b/Assets/BattleCity/Scripts/Combat/BulletWorld.cs
+@@ -180,6 +180,12 @@ namespace BattleCity
+             return false;
+         }
+ 
++        internal void ReleaseOwnedBy(WeaponState owner)
++        {
++            for (int i = active.Count - 1; i >= 0; i--)
++                if (ReferenceEquals(active[i].Owner, owner)) ReleaseAt(i);
++        }
++
+         public void Clear()
+         {
+             while (active.Count > 0) ReleaseAt(active.Count - 1);
+diff --git a/Assets/BattleCity/Scripts/Combat/WeaponState.cs b/Assets/BattleCity/Scripts/Combat/WeaponState.cs
+index 007c024..9f472b0 100644
+--- a/Assets/BattleCity/Scripts/Combat/WeaponState.cs
++++ b/Assets/BattleCity/Scripts/Combat/WeaponState.cs
+@@ -45,6 +45,13 @@ namespace BattleCity
+             return true;
+         }
+ 
++        internal void ResetForRespawn()
++        {
++            bullets.ReleaseOwnedBy(this);
++            if (ActiveBullets != 0) throw new InvalidOperationException("Outstanding player projectile lease after respawn release.");
++            CooldownRemainingTicks = 0;
++        }
++
+         internal void ReleaseBullet() { ActiveBullets--; }
+     }
+ }
+diff --git a/Assets/BattleCity/Scripts/Core/ArenaController.cs b/Assets/BattleCity/Scripts/Core/ArenaController.cs
+index 1a1fb96..04144c6 100644
+--- a/Assets/BattleCity/Scripts/Core/ArenaController.cs
++++ b/Assets/BattleCity/Scripts/Core/ArenaController.cs
+@@ -14,6 +14,10 @@ namespace BattleCity
+         public SpriteRenderer playerRenderer;
+         // Explicit binding enables the base; unbound combat harnesses remain base-free.
+         public SpriteRenderer baseRenderer;
++        // Stage01 opts in explicitly; legacy combat harnesses keep death-only behavior.
++        public bool enablePlayerLifecycle;
++        private readonly Sprite[] shieldFrames = new Sprite[2];
++        private SpriteRenderer playerShield;
+         private Sprite baseAlive, baseDead;
+         private readonly Sprite[,] playerFrames = new Sprite[4, 2];
+         private readonly Sprite[] spawnFrames = new Sprite[4];
+@@ -35,7 +39,16 @@ namespace BattleCity
+             {
+                 baseAlive = sprites.Get("base.alive"); baseDead = sprites.Get("base.dead");
+             }
+-            Session = new ArenaSession(level, playerDefinition, enemyWaveDefinition, baseRenderer != null);
++            if (enablePlayerLifecycle)
++            {
++                for (int i = 0; i < shieldFrames.Length; i++) shieldFrames[i] = sprites.Get("effect.shield." + i);
++                playerShield = new GameObject("Player shield - display only", typeof(SpriteRenderer)).GetComponent<SpriteRenderer>();
++                playerShield.transform.SetParent(transform, false);
++                playerShield.sharedMaterial = playerRenderer.sharedMaterial;
++                playerShield.sortingLayerName = "Effects";
++            }
++            Session = new ArenaSession(level, playerDefinition, enemyWaveDefinition, baseRenderer != null,
++                enablePlayerLifecycle ? PlayerLifeParameters.Prototype : null);
+             BulletView = new GameObject("Bullets - display only").AddComponent<BulletView>();
+             BulletView.transform.SetParent(transform, false);
+             BulletView.Initialize(Session.Bullets, sprites, playerRenderer.sharedMaterial);
+@@ -73,6 +86,7 @@ namespace BattleCity
+                 Session.Bullets.Clear(); // Release owner leases, not just their display.
+                 if (BulletView != null) BulletView.Render();
+             }
++            HidePlayerShield();
+             ClearEnemyDisplays();
+             ClearEffects();
+         }
+@@ -84,9 +98,17 @@ namespace BattleCity
+             // Destroying just the host component must not strand children referencing its old session.
+             if (BulletView != null) Destroy(BulletView.gameObject);
+             if (EffectView != null) Destroy(EffectView.gameObject);
++            if (playerShield != null) { HidePlayerShield(); Destroy(playerShield.gameObject); }
+             Session = null;
+         }
+ 
++        private void HidePlayerShield()
++        {
++            if (playerShield == null) return;
++            playerShield.enabled = false;
++            playerShield.sprite = null;
++        }
++
+         /// <summary>Lifecycle seam for reset/reload; does not implement a full session restart.
+         /// Re-enabling remains paused and never replays the previous tick's hits.</summary>
+         public void ClearEffects()
+@@ -172,6 +194,17 @@ namespace BattleCity
+             position = new Vector2(Mathf.Round(position.x), Mathf.Round(position.y));
+             playerRenderer.transform.position = PixelGrid.ToWorld(position);
+             playerRenderer.sprite = playerFrames[(int)Session.Player.Facing, Session.Player.TrackFrame];
++            if (playerShield != null)
++            {
++                if (Session.PlayerTank.IsAlive && Session.PlayerLife.IsProtected)
++                {
++                    int age = Session.PlayerLife.Parameters.ProtectionTicks - Session.PlayerLife.ProtectionRemainingTicks;
++                    playerShield.sprite = shieldFrames[age / TankMotor.TrackFrameTicks % shieldFrames.Length];
++                    playerShield.transform.position = playerRenderer.transform.position;
++                    playerShield.enabled = true;
++                }
++                else HidePlayerShield();
++            }
+         }
+ 
+         public void ValidateBindings()
+@@ -184,6 +217,10 @@ namespace BattleCity
+                 if (baseRenderer == playerRenderer) throw new InvalidOperationException("Base and player require distinct renderers.");
+                 sprites.Get("base.alive"); sprites.Get("base.dead");
+             }
++            if (enablePlayerLifecycle)
++            {
++                sprites.Get("effect.shield.0"); sprites.Get("effect.shield.1");
++            }
+             if (enemyWaveDefinition != null)
+             {
+                 // Resolve every sequence ID now, not halfway through a future spawn callback.
+diff --git a/Assets/BattleCity/Scripts/Core/ArenaSession.cs b/Assets/BattleCity/Scripts/Core/ArenaSession.cs
+index f884432..e7fe23f 100644
+--- a/Assets/BattleCity/Scripts/Core/ArenaSession.cs
++++ b/Assets/BattleCity/Scripts/Core/ArenaSession.cs
+@@ -15,6 +15,7 @@ namespace BattleCity
+         private readonly Dictionary<long, EnemyBrain> enemyBrains = new Dictionary<long, EnemyBrain>();
+         private readonly List<int> decisionMasks = new List<int>();
+         private readonly Dictionary<long, TankDefinition> waveEnemyDefinitions = new Dictionary<long, TankDefinition>();
++        private readonly Vector2 playerSpawn;
+         private long nextEntityId;
+         private bool focused = true;
+         public LogicClock Clock { get; } = new LogicClock();
+@@ -28,6 +29,9 @@ namespace BattleCity
+         public TankCommand LastCommand { get; private set; } = new TankCommand(CardinalDirection.None);
+         public EnemyWaveState EnemyWave { get; }
+         public BaseState Base { get; }
++        public PlayerLifeState PlayerLife { get; }
++        public bool PlayerLifeFailureRequested => PlayerLife != null && PlayerLife.IsExhausted;
++        public event Action PlayerLivesExhausted;
+         /// <summary>Latched failure request for BC-206, not a terminal state or a combat freeze.</summary>
+         public bool BaseFailureRequested => Base != null && !Base.IsAlive;
+         /// <summary>Once, after this tick's damage and births settle. Late consumers can read the latched request.</summary>
+@@ -42,11 +46,14 @@ namespace BattleCity
+             }
+         }
+ 
+-        public ArenaSession(LevelDefinition level, TankDefinition tank, EnemyWaveDefinition wave = null, bool enableBase = false)
++        public ArenaSession(LevelDefinition level, TankDefinition tank, EnemyWaveDefinition wave = null, bool enableBase = false,
++            PlayerLifeParameters playerLifeParameters = null)
+         {
+             if (tank == null) throw new ArgumentNullException(nameof(tank));
+             tank.Validate();
+             Map = new MapState(level);
++            playerSpawn = level.playerSpawnPixels;
++            PlayerLife = playerLifeParameters == null ? null : new PlayerLifeState(playerLifeParameters);
+             // Validate/snapshot the complete wave before registering any combat entity.
+             EnemyWave = wave == null ? null : new EnemyWaveState(level, wave);
+             if (enableBase)
+@@ -142,7 +149,7 @@ namespace BattleCity
+ 
+         public int AdvanceFrame(double elapsedSeconds, PlayerButtons buttons)
+         {
+-            bool toggle = input.Sample(buttons, focused && !Clock.Paused);
++            bool toggle = input.Sample(buttons, focused && !Clock.Paused && PlayerTank.IsAlive);
+             if (toggle && focused)
+             {
+                 SetPaused(!Clock.Paused);
+@@ -165,9 +172,20 @@ namespace BattleCity
+             if (!hasFocus) SetPaused(true); // Focus return is deliberately not resume.
+         }
+ 
++        private bool TryRespawnPlayer()
++        {
++            CollectBlockers(PlayerTank);
++            if (EnemyWave?.Reservation is EnemySpawnRequest reservation)
++                blockers.Add(new Rect((Vector2)reservation.PositionPixels - Vector2.one * TankMotor.HalfSizePixels,
++                    Vector2.one * (TankMotor.HalfSizePixels * 2)));
++            if (!Map.CanOccupy(playerSpawn, TankMotor.HalfSizePixels, blockers)) return false;
++            PlayerTank.Respawn(playerSpawn);
++            return true;
++        }
++
+         private void Step()
+         {
+-            LastCommand = input.ConsumeTick();
++            LastCommand = PlayerTank.IsAlive ? input.ConsumeTick() : new TankCommand(CardinalDirection.None);
+             PlayerTank.Command = LastCommand;
+             // Capture ALL local options before any decision or movement. Later IDs cannot observe this tick's moves.
+             decisionMasks.Clear();
+@@ -213,10 +231,21 @@ namespace BattleCity
+                     Effects.PlayExplosion(Base.Position);
+                 }
+                 for (int tank = 0; tank < tanks.Count; tank++)
++                {
++                    if (tanks[tank] == PlayerTank && PlayerLife != null && PlayerLife.IsProtected) continue;
+                     if (tanks[tank].ApplyHit(Bullets.Hits[hit])) Effects.PlayExplosion(tanks[tank].Motor.Position);
++                }
+             }
+             // Birth commits AFTER damage. New tanks cannot enter the earlier decision/move/fire loops this tick.
++            var lifeResult = PlayerLife == null ? default : PlayerLife.Step(PlayerTank.IsAlive, TryRespawnPlayer);
++            if (!PlayerTank.IsAlive || lifeResult.Respawned)
++            {
++                input.SuppressHeld();
++                LastCommand = new TankCommand(CardinalDirection.None);
++                PlayerTank.Command = LastCommand;
++            }
+             EnemyWave?.Step(AliveEnemyCount, IsEnemySpawnOccupied, TryCreateWaveEnemy);
++            if (lifeResult.LivesExhaustedThisTick) PlayerLivesExhausted?.Invoke();
+             if (baseDestroyed) BaseDestroyed?.Invoke();
+         }
+     }
+diff --git a/Assets/BattleCity/Scripts/Tanks/TankMotor.cs b/Assets/BattleCity/Scripts/Tanks/TankMotor.cs
+index f1c685d..c1f23a2 100644
+--- a/Assets/BattleCity/Scripts/Tanks/TankMotor.cs
++++ b/Assets/BattleCity/Scripts/Tanks/TankMotor.cs
+@@ -69,6 +69,15 @@ namespace BattleCity
+ 
+         internal void Stop() => IsMoving = false;
+ 
++        // Caller has checked the complete spawn footprint against current blockers.
++        internal void Respawn(Vector2 position)
++        {
++            Position = position;
++            Facing = CardinalDirection.Up;
++            movingTicks = 0;
++            IsMoving = false;
++        }
++
+         private void UpdateMovement(Vector2 before)
+         {
+             IsMoving = (Position - before).sqrMagnitude > MapState.Epsilon * MapState.Epsilon;
+diff --git a/Assets/BattleCity/Scripts/Tanks/TankState.cs b/Assets/BattleCity/Scripts/Tanks/TankState.cs
+index ed9f3d1..7786c6e 100644
+--- a/Assets/BattleCity/Scripts/Tanks/TankState.cs
++++ b/Assets/BattleCity/Scripts/Tanks/TankState.cs
+@@ -8,6 +8,7 @@ namespace BattleCity
+     public sealed class TankState
+     {
+         private readonly float moveSpeed;
++        private readonly int initialHitPoints;
+         internal float MoveSpeedPixelsPerSecond => moveSpeed;
+         public long EntityId { get; }
+         public CombatTeam Team { get; }
+@@ -15,7 +16,7 @@ namespace BattleCity
+         public WeaponState Weapon { get; }
+         public int HitPoints { get; private set; }
+         public bool IsAlive => HitPoints > 0;
+-        // Generic protection only. Timed respawn and pickup policies belong to later tasks.
++        // Generic protection; session-owned respawn protection is applied independently.
+         public bool IsProtected { get; set; }
+         public Rect Bounds => new Rect(Motor.Position - Vector2.one * TankMotor.HalfSizePixels,
+             Vector2.one * (TankMotor.HalfSizePixels * 2));
+@@ -31,7 +32,16 @@ namespace BattleCity
+             Motor = new TankMotor(spawn, map);
+             Weapon = new WeaponState(definition, bullets, team, entityId);
+             moveSpeed = definition.moveSpeedPixelsPerSecond;
+-            HitPoints = definition.hitPoints;
++            HitPoints = initialHitPoints = definition.hitPoints;
++        }
++
++        internal void Respawn(Vector2 position)
++        {
++            Weapon.ResetForRespawn();
++            Motor.Respawn(position);
++            HitPoints = initialHitPoints;
++            IsProtected = false;
++            Command = new TankCommand(CardinalDirection.None);
+         }
+ 
+         internal void Move(MapState map, IReadOnlyList<Rect> blockers)
+diff --git a/Assets/BattleCity/Tests/PlayMode/Stage01PlayModeTests.cs b/Assets/BattleCity/Tests/PlayMode/Stage01PlayModeTests.cs
+index 98241f0..2141f97 100644
+--- a/Assets/BattleCity/Tests/PlayMode/Stage01PlayModeTests.cs
++++ b/Assets/BattleCity/Tests/PlayMode/Stage01PlayModeTests.cs
+@@ -120,7 +120,7 @@ namespace BattleCity.Tests
+                 Assert.That(session.Player.Position, Is.EqualTo(new Vector2(72, 8)));
+                 Assert.That(session.Map.BrickMaskAt(6, 2), Is.EqualTo(15));
+                 Assert.That(session.Map.Revision, Is.Zero);
+-                var baseRenderer = scene.GetRootGameObjects().SelectMany(r => r.GetComponentsInChildren<SpriteRenderer>()).Single(r => r.sprite.name == "base.alive");
++                var baseRenderer = scene.GetRootGameObjects().SelectMany(r => r.GetComponentsInChildren<SpriteRenderer>()).Single(r => r.sprite != null && r.sprite.name == "base.alive");
+                 Assert.That(PixelGrid.ToMapPixels(baseRenderer.transform.position), Is.EqualTo(new Vector2(104, 8)));
+                 session.SetFocus(true); session.SetPaused(false);
+                 for (int i = 0; i < 16; i++) session.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.A);

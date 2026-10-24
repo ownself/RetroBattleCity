@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    },
+    "server": {
+      "version": "0.0.1",
+      "port": 7800
+    },
+    "commands": [],
+    "count": 0,
+    "total": 0,
+    "offset": 0,
+    "limit": null,
+    "hint": "没有与“console|test|script|editor”匹配的 Pipeline 命令。 要搜索 CLI 命令和插件，请运行 unity commands --grep <pattern>。"
+  },
+  "errors": [],
+  "warnings": []
+}

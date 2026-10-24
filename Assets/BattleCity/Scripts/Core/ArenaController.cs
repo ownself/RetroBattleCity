@@ -14,6 +14,10 @@ namespace BattleCity
         public SpriteRenderer playerRenderer;
         // Explicit binding enables the base; unbound combat harnesses remain base-free.
         public SpriteRenderer baseRenderer;
+        // Stage01 opts in explicitly; legacy combat harnesses keep death-only behavior.
+        public bool enablePlayerLifecycle;
+        private readonly Sprite[] shieldFrames = new Sprite[2];
+        private SpriteRenderer playerShield;
         private Sprite baseAlive, baseDead;
         private readonly Sprite[,] playerFrames = new Sprite[4, 2];
         private readonly Sprite[] spawnFrames = new Sprite[4];
@@ -35,7 +39,16 @@ namespace BattleCity
             {
                 baseAlive = sprites.Get("base.alive"); baseDead = sprites.Get("base.dead");
             }
-            Session = new ArenaSession(level, playerDefinition, enemyWaveDefinition, baseRenderer != null);
+            if (enablePlayerLifecycle)
+            {
+                for (int i = 0; i < shieldFrames.Length; i++) shieldFrames[i] = sprites.Get("effect.shield." + i);
+                playerShield = new GameObject("Player shield - display only", typeof(SpriteRenderer)).GetComponent<SpriteRenderer>();
+                playerShield.transform.SetParent(transform, false);
+                playerShield.sharedMaterial = playerRenderer.sharedMaterial;
+                playerShield.sortingLayerName = "Effects";
+            }
+            Session = new ArenaSession(level, playerDefinition, enemyWaveDefinition, baseRenderer != null,
+                enablePlayerLifecycle ? PlayerLifeParameters.Prototype : null);
             BulletView = new GameObject("Bullets - display only").AddComponent<BulletView>();
             BulletView.transform.SetParent(transform, false);
             BulletView.Initialize(Session.Bullets, sprites, playerRenderer.sharedMaterial);
@@ -73,6 +86,7 @@ namespace BattleCity
                 Session.Bullets.Clear(); // Release owner leases, not just their display.
                 if (BulletView != null) BulletView.Render();
             }
+            HidePlayerShield();
             ClearEnemyDisplays();
             ClearEffects();
         }
@@ -84,7 +98,15 @@ namespace BattleCity
             // Destroying just the host component must not strand children referencing its old session.
             if (BulletView != null) Destroy(BulletView.gameObject);
             if (EffectView != null) Destroy(EffectView.gameObject);
+            if (playerShield != null) { HidePlayerShield(); Destroy(playerShield.gameObject); }
             Session = null;
+        }
+
+        private void HidePlayerShield()
+        {
+            if (playerShield == null) return;
+            playerShield.enabled = false;
+            playerShield.sprite = null;
         }
 
         /// <summary>Lifecycle seam for reset/reload; does not implement a full session restart.
@@ -172,6 +194,17 @@ namespace BattleCity
             position = new Vector2(Mathf.Round(position.x), Mathf.Round(position.y));
             playerRenderer.transform.position = PixelGrid.ToWorld(position);
             playerRenderer.sprite = playerFrames[(int)Session.Player.Facing, Session.Player.TrackFrame];
+            if (playerShield != null)
+            {
+                if (Session.PlayerTank.IsAlive && Session.PlayerLife.IsProtected)
+                {
+                    int age = Session.PlayerLife.Parameters.ProtectionTicks - Session.PlayerLife.ProtectionRemainingTicks;
+                    playerShield.sprite = shieldFrames[age / TankMotor.TrackFrameTicks % shieldFrames.Length];
+                    playerShield.transform.position = playerRenderer.transform.position;
+                    playerShield.enabled = true;
+                }
+                else HidePlayerShield();
+            }
         }
 
         public void ValidateBindings()
@@ -183,6 +216,10 @@ namespace BattleCity
             {
                 if (baseRenderer == playerRenderer) throw new InvalidOperationException("Base and player require distinct renderers.");
                 sprites.Get("base.alive"); sprites.Get("base.dead");
+            }
+            if (enablePlayerLifecycle)
+            {
+                sprites.Get("effect.shield.0"); sprites.Get("effect.shield.1");
             }
             if (enemyWaveDefinition != null)
             {

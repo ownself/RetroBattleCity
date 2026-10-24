@@ -15,6 +15,7 @@ namespace BattleCity
         private readonly Dictionary<long, EnemyBrain> enemyBrains = new Dictionary<long, EnemyBrain>();
         private readonly List<int> decisionMasks = new List<int>();
         private readonly Dictionary<long, TankDefinition> waveEnemyDefinitions = new Dictionary<long, TankDefinition>();
+        private readonly Vector2 playerSpawn;
         private long nextEntityId;
         private bool focused = true;
         public LogicClock Clock { get; } = new LogicClock();
@@ -28,6 +29,9 @@ namespace BattleCity
         public TankCommand LastCommand { get; private set; } = new TankCommand(CardinalDirection.None);
         public EnemyWaveState EnemyWave { get; }
         public BaseState Base { get; }
+        public PlayerLifeState PlayerLife { get; }
+        public bool PlayerLifeFailureRequested => PlayerLife != null && PlayerLife.IsExhausted;
+        public event Action PlayerLivesExhausted;
         /// <summary>Latched failure request for BC-206, not a terminal state or a combat freeze.</summary>
         public bool BaseFailureRequested => Base != null && !Base.IsAlive;
         /// <summary>Once, after this tick's damage and births settle. Late consumers can read the latched request.</summary>
@@ -42,11 +46,14 @@ namespace BattleCity
             }
         }
 
-        public ArenaSession(LevelDefinition level, TankDefinition tank, EnemyWaveDefinition wave = null, bool enableBase = false)
+        public ArenaSession(LevelDefinition level, TankDefinition tank, EnemyWaveDefinition wave = null, bool enableBase = false,
+            PlayerLifeParameters playerLifeParameters = null)
         {
             if (tank == null) throw new ArgumentNullException(nameof(tank));
             tank.Validate();
             Map = new MapState(level);
+            playerSpawn = level.playerSpawnPixels;
+            PlayerLife = playerLifeParameters == null ? null : new PlayerLifeState(playerLifeParameters);
             // Validate/snapshot the complete wave before registering any combat entity.
             EnemyWave = wave == null ? null : new EnemyWaveState(level, wave);
             if (enableBase)
@@ -142,7 +149,7 @@ namespace BattleCity
 
         public int AdvanceFrame(double elapsedSeconds, PlayerButtons buttons)
         {
-            bool toggle = input.Sample(buttons, focused && !Clock.Paused);
+            bool toggle = input.Sample(buttons, focused && !Clock.Paused && PlayerTank.IsAlive);
             if (toggle && focused)
             {
                 SetPaused(!Clock.Paused);
@@ -165,9 +172,20 @@ namespace BattleCity
             if (!hasFocus) SetPaused(true); // Focus return is deliberately not resume.
         }
 
+        private bool TryRespawnPlayer()
+        {
+            CollectBlockers(PlayerTank);
+            if (EnemyWave?.Reservation is EnemySpawnRequest reservation)
+                blockers.Add(new Rect((Vector2)reservation.PositionPixels - Vector2.one * TankMotor.HalfSizePixels,
+                    Vector2.one * (TankMotor.HalfSizePixels * 2)));
+            if (!Map.CanOccupy(playerSpawn, TankMotor.HalfSizePixels, blockers)) return false;
+            PlayerTank.Respawn(playerSpawn);
+            return true;
+        }
+
         private void Step()
         {
-            LastCommand = input.ConsumeTick();
+            LastCommand = PlayerTank.IsAlive ? input.ConsumeTick() : new TankCommand(CardinalDirection.None);
             PlayerTank.Command = LastCommand;
             // Capture ALL local options before any decision or movement. Later IDs cannot observe this tick's moves.
             decisionMasks.Clear();
@@ -213,10 +231,21 @@ namespace BattleCity
                     Effects.PlayExplosion(Base.Position);
                 }
                 for (int tank = 0; tank < tanks.Count; tank++)
+                {
+                    if (tanks[tank] == PlayerTank && PlayerLife != null && PlayerLife.IsProtected) continue;
                     if (tanks[tank].ApplyHit(Bullets.Hits[hit])) Effects.PlayExplosion(tanks[tank].Motor.Position);
+                }
             }
             // Birth commits AFTER damage. New tanks cannot enter the earlier decision/move/fire loops this tick.
+            var lifeResult = PlayerLife == null ? default : PlayerLife.Step(PlayerTank.IsAlive, TryRespawnPlayer);
+            if (!PlayerTank.IsAlive || lifeResult.Respawned)
+            {
+                input.SuppressHeld();
+                LastCommand = new TankCommand(CardinalDirection.None);
+                PlayerTank.Command = LastCommand;
+            }
             EnemyWave?.Step(AliveEnemyCount, IsEnemySpawnOccupied, TryCreateWaveEnemy);
+            if (lifeResult.LivesExhaustedThisTick) PlayerLivesExhausted?.Invoke();
             if (baseDestroyed) BaseDestroyed?.Invoke();
         }
     }

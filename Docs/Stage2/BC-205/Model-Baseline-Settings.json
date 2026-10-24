@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "return new { scene = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().path, dirty = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().isDirty, isPlaying = UnityEditor.EditorApplication.isPlaying, runInBackground = UnityEngine.Application.runInBackground, editorVersion = UnityEngine.Application.unityVersion };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false,
+        "isPlaying": false,
+        "runInBackground": false,
+        "editorVersion": "6000.6.7f1"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

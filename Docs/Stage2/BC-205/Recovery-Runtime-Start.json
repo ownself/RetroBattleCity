@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene(); if(UnityEditor.EditorApplication.isPlaying || scene.isDirty || scene.path!=\"Assets/BattleCity/Scenes/Stage01.unity\") throw new System.Exception(\"Expected stopped clean Stage01\"); UnityEditor.EditorApplication.isPaused=true; UnityEditor.EditorApplication.isPlaying=true; return \"One fresh paused Editor Play observation requested; no game-level restart implementation.\";"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "One fresh paused Editor Play observation requested; no game-level restart implementation."
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

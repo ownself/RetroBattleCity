@@ -1,0 +1,204 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "PlayerLife",
+      "filter_type": "testName"
+    },
+    "result": {
+      "Summary": {
+        "Total": 24,
+        "Passed": 24,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.InitialLives_MustBePositive(0)",
+          "Status": "Passed",
+          "Duration": 0.0437241,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.InitialLives_MustBePositive(-1)",
+          "Status": "Passed",
+          "Duration": 0.0001642,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.InitialLives_MustBePositive(int.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0001214,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.MaximumPositiveValues_AreSupportedWithoutTimerArithmeticOverflow",
+          "Status": "Passed",
+          "Duration": 0.0024036,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.NullParameters_AreRejected",
+          "Status": "Passed",
+          "Duration": 0.0003425,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.ProtectionTicks_RejectsZeroAndNegative(0)",
+          "Status": "Passed",
+          "Duration": 0.0003166,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.ProtectionTicks_RejectsZeroAndNegative(-1)",
+          "Status": "Passed",
+          "Duration": 0.000128,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.ProtectionTicks_RejectsZeroAndNegative(int.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0001149,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.Prototype_IsImmutableThreeTotalLivesAnd60Delay120Protection_RequiresCalibration",
+          "Status": "Passed",
+          "Duration": 0.0011887,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.RespawnDelayTicks_RejectsZeroAndNegative(0)",
+          "Status": "Passed",
+          "Duration": 0.0003358,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.RespawnDelayTicks_RejectsZeroAndNegative(-1)",
+          "Status": "Passed",
+          "Duration": 0.0001195,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.RespawnDelayTicks_RejectsZeroAndNegative(int.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0001186,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.State_CopiesImmutableParameterSnapshot_IndependentOfCallerReferenceReplacement",
+          "Status": "Passed",
+          "Duration": 0.0026694,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.AbsoluteTicks_DeathDDoesNotDecrement_DPlus59Waits_DPlus60FirstRespawn",
+          "Status": "Passed",
+          "Duration": 0.0183015,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.AbsoluteTicks_RPlus1ThroughRPlus120FullDamagePhasesProtected_RPlus121FirstVulnerable",
+          "Status": "Passed",
+          "Duration": 0.0246689,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.InitialLife_IncludesCurrentAndHasNoProtectionOrPendingRespawn",
+          "Status": "Passed",
+          "Duration": 0.0026525,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.NoStepDuringPauseOrFocusLoss_LeavesWaitAndProtectionUnchanged_NoCatchUpClock",
+          "Status": "Passed",
+          "Duration": 0.0080292,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.NullCallbackAndUnauthorizedRevival_AreRejectedWithoutChangingState",
+          "Status": "Passed",
+          "Duration": 0.0006897,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.OneTickDelayAndProtection_DeathDoesNotSpawn_RespawnDoesNotExpireProtection",
+          "Status": "Passed",
+          "Duration": 0.0005316,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.ReadyButBlocked_RetriesEachTickAtZeroWithoutSpendingLifeOrRestartingDelay",
+          "Status": "Passed",
+          "Duration": 0.000808,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.RepeatedDeadSnapshotsAndReadOnlyObservations_DoNotSpendAdditionalLives",
+          "Status": "Passed",
+          "Duration": 0.0105785,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.SeparateStates_DoNotShareMutableLifeOrTimerState",
+          "Status": "Passed",
+          "Duration": 0.0003385,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.ThreeLives_DeathSpendsOnePerGeneration_ExhaustionEdgeOnceAndLatchForever",
+          "Status": "Passed",
+          "Duration": 0.0052462,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.ThrowingOrReentrantCallback_DoesNotCommitAndCanRetryOnNextTick",
+          "Status": "Passed",
+          "Duration": 0.0009043,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 3.1,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: PlayerLife",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

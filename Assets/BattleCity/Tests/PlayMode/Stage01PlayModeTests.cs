@@ -120,7 +120,7 @@ namespace BattleCity.Tests
                 Assert.That(session.Player.Position, Is.EqualTo(new Vector2(72, 8)));
                 Assert.That(session.Map.BrickMaskAt(6, 2), Is.EqualTo(15));
                 Assert.That(session.Map.Revision, Is.Zero);
-                var baseRenderer = scene.GetRootGameObjects().SelectMany(r => r.GetComponentsInChildren<SpriteRenderer>()).Single(r => r.sprite.name == "base.alive");
+                var baseRenderer = scene.GetRootGameObjects().SelectMany(r => r.GetComponentsInChildren<SpriteRenderer>()).Single(r => r.sprite != null && r.sprite.name == "base.alive");
                 Assert.That(PixelGrid.ToMapPixels(baseRenderer.transform.position), Is.EqualTo(new Vector2(104, 8)));
                 session.SetFocus(true); session.SetPaused(false);
                 for (int i = 0; i < 16; i++) session.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.A);

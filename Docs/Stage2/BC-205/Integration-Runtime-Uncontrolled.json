@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var c=UnityEngine.Object.FindAnyObjectByType<BattleCity.ArenaController>(); UnityEngine.Application.runInBackground=false; return new {frame=UnityEngine.Time.frameCount,tick=c.Session.Clock.Tick,lives=c.Session.PlayerLife.RemainingLives,background=UnityEngine.Application.runInBackground,note=\"Initial uncontrolled default runtime exhausted before observer setup; no life or HP mutation. A fresh paused Editor Play session will be arranged for bounded production-path observation.\"};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "frame": 43006,
+        "tick": 3675,
+        "lives": 0,
+        "background": false,
+        "note": "Initial uncontrolled default runtime exhausted before observer setup; no life or HP mutation. A fresh paused Editor Play session will be arranged for bounded production-path observation."
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

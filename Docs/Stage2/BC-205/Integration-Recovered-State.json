@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene(); var t=System.AppDomain.CurrentDomain.GetAssemblies().Select(a=>a.GetType(\"BattleCity.Tests.PlayerLifeIntegrationPlayModeTests\")).FirstOrDefault(x=>x!=null); return new {playing=UnityEditor.EditorApplication.isPlaying,compiling=UnityEditor.EditorApplication.isCompiling,failed=UnityEditor.EditorUtility.scriptCompilationFailed,scene=scene.path,dirty=scene.isDirty,lifeType=typeof(BattleCity.PlayerLifeState).FullName,sessionLifeProperty=typeof(BattleCity.ArenaSession).GetProperty(\"PlayerLife\")!=null,newPlayTestType=t!=null,enabled=UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>().enablePlayerLifecycle};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playing": false,
+        "compiling": false,
+        "failed": false,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false,
+        "lifeType": "BattleCity.PlayerLifeState",
+        "sessionLifeProperty": true,
+        "newPlayTestType": true,
+        "enabled": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

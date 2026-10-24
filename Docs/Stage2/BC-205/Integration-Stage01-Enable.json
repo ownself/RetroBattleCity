@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command script",
+  "data": null,
+  "errors": [
+    {
+      "code": "EDITOR_NOT_RUNNING",
+      "message": "未找到项目 H:\\Projects\\Unities\\BattleCity 的 Pipeline 实例。请确保 Unity Editor 正在运行且已安装 Pipeline 包。"
+    }
+  ],
+  "warnings": []
+}

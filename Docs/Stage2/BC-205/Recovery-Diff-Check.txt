@@ -1,0 +1,1 @@
+warning: in the working copy of 'Assets/BattleCity/Scenes/Stage01.unity', LF will be replaced by CRLF the next time Git touches it

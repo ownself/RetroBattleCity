@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var t=System.AppDomain.CurrentDomain.GetAssemblies().Select(a=>a.GetType(\"Unity.Pipeline.Editor.Commands.AutoTickCommand\")).First(x=>x!=null); var f=System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic; var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene(); return new {playing=UnityEditor.EditorApplication.isPlaying,paused=UnityEditor.EditorApplication.isPaused,compiling=UnityEditor.EditorApplication.isCompiling,failed=UnityEditor.EditorUtility.scriptCompilationFailed,scene=scene.path,dirty=scene.isDirty,background=UnityEngine.Application.runInBackground,recentExists=UnityEditor.EditorPrefs.HasKey(\"RecentlyUsedSceneGuid-0\"),recent=UnityEditor.EditorPrefs.GetString(\"RecentlyUsedSceneGuid-0\",\"\"),autoEnabled=t.GetProperty(\"IsEnabled\",f).GetValue(null),autoInterval=t.GetProperty(\"CurrentIntervalMs\",f).GetValue(null),persistedInterval=UnityEditor.SessionState.GetInt(\"Unity.Pipeline.AutoTick.IntervalMs\",-1),persistedEnabledFalse=UnityEditor.SessionState.GetBool(\"Unity.Pipeline.AutoTick.Enabled\",false),persistedEnabledTrue=UnityEditor.SessionState.GetBool(\"Unity.Pipeline.AutoTick.Enabled\",true),observer=UnityEditor.SessionState.GetBool(\"BC205.ObserverActive\",false),configExists=System.IO.File.Exists(\"ProjectSettings/Packages/com.unity.pipeline/EditorPipelineConfig.json\")};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playing": false,
+        "paused": false,
+        "compiling": false,
+        "failed": false,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false,
+        "background": false,
+        "recentExists": false,
+        "recent": "",
+        "autoEnabled": true,
+        "autoInterval": 16,
+        "persistedInterval": -1,
+        "persistedEnabledFalse": false,
+        "persistedEnabledTrue": true,
+        "observer": false,
+        "configExists": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

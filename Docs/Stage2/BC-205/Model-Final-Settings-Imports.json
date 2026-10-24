@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var paths = new [] { \"Assets/BattleCity/Scripts/Core/PlayerLifeParameters.cs\", \"Assets/BattleCity/Scripts/Core/PlayerLifeState.cs\", \"Assets/BattleCity/Tests/EditMode/PlayerLifeParametersTests.cs\", \"Assets/BattleCity/Tests/EditMode/PlayerLifeStateTests.cs\" }; var scripts = new System.Collections.Generic.List<object>(); foreach (var path in paths) { var script = UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEditor.MonoScript>(path); scripts.Add(new { path, guid = UnityEditor.AssetDatabase.AssetPathToGUID(path), type = script == null || script.GetClass() == null ? null : script.GetClass().FullName }); } return new { scene = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().path, dirty = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().isDirty, isPlaying = UnityEditor.EditorApplication.isPlaying, runInBackground = UnityEngine.Application.runInBackground, scripts };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false,
+        "isPlaying": false,
+        "runInBackground": false,
+        "scripts": [
+          {
+            "path": "Assets/BattleCity/Scripts/Core/PlayerLifeParameters.cs",
+            "guid": "38f65f2485c9d7948858fcdd12008d9a",
+            "type": "BattleCity.PlayerLifeParameters"
+          },
+          {
+            "path": "Assets/BattleCity/Scripts/Core/PlayerLifeState.cs",
+            "guid": "320babbe05fa83647b03a3e08a7c084c",
+            "type": "BattleCity.PlayerLifeState"
+          },
+          {
+            "path": "Assets/BattleCity/Tests/EditMode/PlayerLifeParametersTests.cs",
+            "guid": "5a208993a3ef9b640a66c431a1e474b6",
+            "type": "BattleCity.Tests.PlayerLifeParametersTests"
+          },
+          {
+            "path": "Assets/BattleCity/Tests/EditMode/PlayerLifeStateTests.cs",
+            "guid": "402717a93cb692045b285d91cda665a3",
+            "type": "BattleCity.Tests.PlayerLifeStateTests"
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

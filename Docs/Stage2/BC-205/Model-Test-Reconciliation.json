@@ -1,0 +1,33 @@
+{
+  "discoveredCount": 24,
+  "executedCount": 24,
+  "missing": [],
+  "unexpected": [],
+  "allPassed": true,
+  "FullNames": [
+    "BattleCity.Tests.PlayerLifeParametersTests.InitialLives_MustBePositive(-1)",
+    "BattleCity.Tests.PlayerLifeParametersTests.InitialLives_MustBePositive(0)",
+    "BattleCity.Tests.PlayerLifeParametersTests.InitialLives_MustBePositive(int.MinValue)",
+    "BattleCity.Tests.PlayerLifeParametersTests.MaximumPositiveValues_AreSupportedWithoutTimerArithmeticOverflow",
+    "BattleCity.Tests.PlayerLifeParametersTests.NullParameters_AreRejected",
+    "BattleCity.Tests.PlayerLifeParametersTests.ProtectionTicks_RejectsZeroAndNegative(-1)",
+    "BattleCity.Tests.PlayerLifeParametersTests.ProtectionTicks_RejectsZeroAndNegative(0)",
+    "BattleCity.Tests.PlayerLifeParametersTests.ProtectionTicks_RejectsZeroAndNegative(int.MinValue)",
+    "BattleCity.Tests.PlayerLifeParametersTests.Prototype_IsImmutableThreeTotalLivesAnd60Delay120Protection_RequiresCalibration",
+    "BattleCity.Tests.PlayerLifeParametersTests.RespawnDelayTicks_RejectsZeroAndNegative(-1)",
+    "BattleCity.Tests.PlayerLifeParametersTests.RespawnDelayTicks_RejectsZeroAndNegative(0)",
+    "BattleCity.Tests.PlayerLifeParametersTests.RespawnDelayTicks_RejectsZeroAndNegative(int.MinValue)",
+    "BattleCity.Tests.PlayerLifeParametersTests.State_CopiesImmutableParameterSnapshot_IndependentOfCallerReferenceReplacement",
+    "BattleCity.Tests.PlayerLifeStateTests.AbsoluteTicks_DeathDDoesNotDecrement_DPlus59Waits_DPlus60FirstRespawn",
+    "BattleCity.Tests.PlayerLifeStateTests.AbsoluteTicks_RPlus1ThroughRPlus120FullDamagePhasesProtected_RPlus121FirstVulnerable",
+    "BattleCity.Tests.PlayerLifeStateTests.InitialLife_IncludesCurrentAndHasNoProtectionOrPendingRespawn",
+    "BattleCity.Tests.PlayerLifeStateTests.NoStepDuringPauseOrFocusLoss_LeavesWaitAndProtectionUnchanged_NoCatchUpClock",
+    "BattleCity.Tests.PlayerLifeStateTests.NullCallbackAndUnauthorizedRevival_AreRejectedWithoutChangingState",
+    "BattleCity.Tests.PlayerLifeStateTests.OneTickDelayAndProtection_DeathDoesNotSpawn_RespawnDoesNotExpireProtection",
+    "BattleCity.Tests.PlayerLifeStateTests.ReadyButBlocked_RetriesEachTickAtZeroWithoutSpendingLifeOrRestartingDelay",
+    "BattleCity.Tests.PlayerLifeStateTests.RepeatedDeadSnapshotsAndReadOnlyObservations_DoNotSpendAdditionalLives",
+    "BattleCity.Tests.PlayerLifeStateTests.SeparateStates_DoNotShareMutableLifeOrTimerState",
+    "BattleCity.Tests.PlayerLifeStateTests.ThreeLives_DeathSpendsOnePerGeneration_ExhaustionEdgeOnceAndLatchForever",
+    "BattleCity.Tests.PlayerLifeStateTests.ThrowingOrReentrantCallback_DoesNotCommitAndCanRetryOnNextTick"
+  ]
+}

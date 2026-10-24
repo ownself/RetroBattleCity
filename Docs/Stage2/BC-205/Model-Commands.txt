@@ -1,0 +1,46 @@
+BC205 model lane — actual command inventory (project cwd H:/Projects/Unities/BattleCity)
+All Unity commands below used the existing live Editor; no upgrade/restart/kill/batch fallback.
+No staged files / commits / pushes.
+
+Initial source/context inspection:
+- Read Docs/Stage2/BC-205/Contract.md and Docs/Stage0/Core-Rules.md before implementation.
+- Read unity-cli/SKILL.md, references/integration-advanced.md, references/build-run-test.md.
+- git status --short; git rev-parse HEAD; git diff --cached --name-only; git diff --stat
+- sha256sum .vsconfig Docs/Stage2/BC-205/Contract.md
+- git ls-files -z Assets ProjectSettings Packages | xargs -0 sha256sum
+  Combined git/hash output: Model-Baseline-Files.txt
+
+CLI/discovery/preflight commands (each output redirected to the named persistent report):
+- unity --version -> Model-CLI-Version.txt
+- unity status --project-path H:/Projects/Unities/BattleCity --format json -> Model-Baseline-Status.json
+- unity command --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json -> Model-Command-Catalog.json
+- unity command --help -> Model-Command-Help.txt (local help only; no Editor invocation)
+- unity recompile --help -> Model-Recompile-Help.txt
+- unity command --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --group-by flat --query 'console|test|script|editor' --format json -> Model-Discovery-Filtered.json
+- unity command --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --group-by flat --format json -> Model-Discovery-Full.json
+  Selected actual console/editor/test/script schemas extracted without altering raw report into Model-Selected-Schemas.json.
+- unity command console get --tail 200 --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json -> Model-Baseline-Console.json
+- unity command editor status --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json -> Model-Baseline-Editor.json
+- unity command script eval --code '<exact C# stored in data.parameters.code in Model-Baseline-Settings.json>' --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json -> Model-Baseline-Settings.json
+
+Checkpoint written before the following validation commands:
+- unity recompile --project-path H:/Projects/Unities/BattleCity --timeout 120 --format json -> Model-Compile.json
+  exit0, completed, errors0/warnings0
+- unity command test list --mode editor --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json -> Model-Test-Discovery.json
+  exit0, EditMode Count344
+- unity command test run --mode editor --filter PlayerLife --filter_type testName --timeout 120 --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json -> Model-Test-Run.json
+  exit0, 24 passed, no failed/skipped/inconclusive
+- Python compared discovered PlayerLife FullNames against executed results -> Model-Test-Reconciliation.json
+  24=24, missing=[], unexpected=[], allPassed=true
+- unity command console get --tail 100 --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json -> Model-Final-Console.json
+- unity command editor status --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json -> Model-Final-Editor.json
+- unity command script eval --code '<exact C# stored in data.parameters.code in Model-Final-Settings-Imports.json>' --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json -> Model-Final-Settings-Imports.json
+  Editor API read-only AssetDatabase GUID/type verification and scene/settings checks.
+- Python hashlib.sha256 on all 248 baseline hash entries (accepting sha256sum Windows binary '*' marker) -> Model-Protected-Files-Comparison.json
+  checked248, changed=[]
+- Python hashlib.sha256 on four new scripts and their Editor-generated metas -> Model-Implementation-Test-Hashes.txt
+- Python difflib.unified_diff from empty to four new source files -> Model-Partial.diff
+- git status --short; git rev-parse HEAD; git diff --cached --name-only -> Model-Final-Git-Status.txt
+- git diff --check -> passed (no output)
+
+Notes: Full catalog is intentionally persisted rather than printed to chat. Local Python inspection encoding/dictionary assumptions were corrected to parse the successful raw discovery; the protected-hash parser was corrected for Windows sha256sum's binary marker before acceptance. These were output-processing errors, not Editor/CLI infrastructure errors. No Unity command was retried after a failure, and no temporary Editor/project setting was changed.

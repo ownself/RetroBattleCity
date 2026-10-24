@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var t=System.AppDomain.CurrentDomain.GetAssemblies().Select(a=>a.GetType(\"Unity.Pipeline.Editor.Commands.AutoTickCommand\")).First(x=>x!=null); var f=System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic; var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene(); var c=UnityEngine.Object.FindAnyObjectByType<BattleCity.ArenaController>(); return new {playing=UnityEditor.EditorApplication.isPlaying,paused=UnityEditor.EditorApplication.isPaused,compiling=UnityEditor.EditorApplication.isCompiling,failed=UnityEditor.EditorUtility.scriptCompilationFailed,scene=scene.path,dirty=scene.isDirty,background=UnityEngine.Application.runInBackground,recentExists=UnityEditor.EditorPrefs.HasKey(\"RecentlyUsedSceneGuid-0\"),recent=UnityEditor.EditorPrefs.GetString(\"RecentlyUsedSceneGuid-0\",\"\"),autoEnabled=t.GetProperty(\"IsEnabled\",f).GetValue(null),autoInterval=t.GetProperty(\"CurrentIntervalMs\",f).GetValue(null),persistedInterval=UnityEditor.SessionState.GetInt(\"Unity.Pipeline.AutoTick.IntervalMs\",-1),persistedEnabledFalse=UnityEditor.SessionState.GetBool(\"Unity.Pipeline.AutoTick.Enabled\",false),persistedEnabledTrue=UnityEditor.SessionState.GetBool(\"Unity.Pipeline.AutoTick.Enabled\",true),oldObserver=UnityEditor.SessionState.GetBool(\"BC205.ObserverActive\",false),recoveryObserver=UnityEditor.SessionState.GetBool(\"BC205.RecoveryObserverActive\",false),configExists=System.IO.File.Exists(\"ProjectSettings/Packages/com.unity.pipeline/EditorPipelineConfig.json\"),temporaryAssets=System.IO.Directory.Exists(\"Assets/Docs\"),stageLife=c!=null && c.enablePlayerLifecycle,sceneGuid=UnityEditor.AssetDatabase.AssetPathToGUID(scene.path),playerLifeType=typeof(BattleCity.PlayerLifeState).FullName,shield0=c.sprites.Get(\"effect.shield.0\").name,shield1=c.sprites.Get(\"effect.shield.1\").name,temporarySceneObjects=UnityEngine.Object.FindObjectsByType<UnityEngine.GameObject>(UnityEngine.FindObjectsSortMode.None).Count(g=>g.name==\"Player shield - display only\" || g.name==\"Enemy 2 - display only\")};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playing": false,
+        "paused": false,
+        "compiling": false,
+        "failed": false,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false,
+        "background": false,
+        "recentExists": false,
+        "recent": "",
+        "autoEnabled": true,
+        "autoInterval": 16,
+        "persistedInterval": -1,
+        "persistedEnabledFalse": false,
+        "persistedEnabledTrue": true,
+        "oldObserver": false,
+        "recoveryObserver": false,
+        "configExists": false,
+        "temporaryAssets": false,
+        "stageLife": true,
+        "sceneGuid": "0fe55d5f9afb88645bebaf1591d0d2ca",
+        "playerLifeType": "BattleCity.PlayerLifeState",
+        "shield0": "effect.shield.0",
+        "shield1": "effect.shield.1",
+        "temporarySceneObjects": 0
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

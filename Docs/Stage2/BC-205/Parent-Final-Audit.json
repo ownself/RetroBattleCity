@@ -1,0 +1,96 @@
+{
+  "utc": "2026-10-24T08:45:41.852774+00:00",
+  "actor": "parent agent independent read-only calculation",
+  "head": "d010f12f1a814d3595f8c065eedd7732475cddc7",
+  "tests": {
+    "discovered": 419,
+    "executed": 419,
+    "unique": 419,
+    "edit": 359,
+    "play": 60,
+    "missing": [],
+    "unexpected": [],
+    "duplicates": [],
+    "notPassed": [],
+    "discoveryDuplicates": [],
+    "modeMismatches": [],
+    "passed": true
+  },
+  "validatedSourceHashes": {
+    "checked": 64,
+    "changed": [],
+    "missing": [],
+    "passed": true
+  },
+  "recoveryProtectedHashes": {
+    "checked": 259,
+    "changed": [],
+    "missing": [],
+    "passed": true
+  },
+  "recipeScreenshotHashes": {
+    "checked": 5,
+    "changed": [],
+    "missing": [],
+    "passed": true
+  },
+  "runtime": {
+    "checks": {
+      "reportPassed": true,
+      "delay60": true,
+      "deathHidden": true,
+      "waitPauseFrozen": true,
+      "respawnShield": true,
+      "focusReturnFrozen": true,
+      "protectedHit": true,
+      "protectionEnd": true,
+      "priorDropsRetained": true
+    },
+    "passed": true,
+    "observationCount": 1464,
+    "frames": [
+      1,
+      1665
+    ],
+    "deathTick": 4,
+    "respawnTick": 64,
+    "endTick": 184,
+    "currentRunDroppedTicks": 0,
+    "priorRunDroppedTicks": 4533,
+    "scope": "Saved production Update observations; not a fresh Unity run, OS focus test, R+121 picture or performance acceptance."
+  },
+  "console": {
+    "entries": 76,
+    "dropped": false,
+    "reset": false,
+    "nonLog": [
+      {
+        "seq": 481,
+        "level": "error",
+        "message": "Assets\\BattleCity\\Tests\\PlayMode\\PlayerLifeIntegrationPlayModeTests.cs(57,43): error CS0117: 'Is' does not contain a definition for 'AnyOf'"
+      },
+      {
+        "seq": 556,
+        "level": "warn",
+        "message": "Editor is already in edit mode"
+      }
+    ],
+    "groundTruth": {
+      "sampledUtc": "2026-10-24T08:11:52.3010287Z",
+      "ageMs": 69,
+      "compilationFailed": false,
+      "compiling": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 1,
+      "consoleLogs": 0,
+      "seeded": true
+    }
+  },
+  "manual": "At technical audit time: respawn behavior reported correct; appearance-count clarification was still pending.",
+  "subsequentManualConfirmation": "User explicitly clarified three total appearances (initial spawn plus two respawns) and observed that the respawn shield provides protection. See Manual-Check.md.",
+  "finalAcceptance": "BC-205 accepted by parent after the subsequent user confirmation. Stage 2 is 6/10; BC-206 not started at user request.",
+  "unityRequestsMade": 0,
+  "testsRerun": false,
+  "localAuditToolFailure": "First local Python invocation failed at parse time due to backslash quoting; one bounded correction used chr(92). No project files or Unity state were changed by that failed invocation.",
+  "technicalChecksPassed": true
+}

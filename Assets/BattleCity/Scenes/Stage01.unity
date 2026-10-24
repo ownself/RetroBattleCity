@@ -155,6 +155,7 @@ MonoBehaviour:
   mapView: {fileID: 2126228642}
   playerRenderer: {fileID: 1907681948}
   baseRenderer: {fileID: 1348632812}
+  enablePlayerLifecycle: 1
 --- !u!4 &65998006
 Transform:
   m_ObjectHideFlags: 0

@@ -1,0 +1,76 @@
+{
+    "ProcessId":  26924,
+    "ExecutablePath":  "E:\\Program Files\\Unity\\6000.6.7f1\\Editor\\Unity.exe",
+    "CreationDate":  "\/Date(1792809436154)\/",
+    "CommandLine":  "\"E:\\Program Files\\Unity\\6000.6.7f1\\Editor\\Unity.exe\" -projectpath H:\\Projects\\Unities\\BattleCity -useHub -hubIPC -cloudEnvironment production -licensingIpc LicenseClient-Jimmy -hubSessionId bd81c670-cf53-11f1-9d34-3dd15f1a91e9 -accessToken [REDACTED]"
+}
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 18964)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 20096)
+VBCSCompiler prewarm took 433.75 ms
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.6/staging' branch; Version is '6000.6.7f1 (b22767f04f04) revision 11675495'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'zh' Physical Memory: 16335 MB
+BatchMode: 0, IsHumanControllingUs: 1, StartBugReporterOnCrash: 1, Is64bit: 1
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Jimmy" at "2026-10-24T02:37:23.8090268Z"
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-24T02:37:23Z
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 21128, path: "E:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Error: Unexpected message Type: ApiErrorResponse, expected: HandshakeResponse
+*********************************
+Logs moved to project-relative Editor.log file, and subsequent logs will only be written to this file. See:
+H:/Projects/Unities/BattleCity/Logs/Editor.log
+COMMAND LINE ARGUMENTS:
+E:\Program Files\Unity\6000.6.7f1\Editor\Unity.exe
+-projectpath
+H:\Projects\Unities\BattleCity
+-useHub
+-hubIPC
+-cloudEnvironment
+production
+-licensingIpc
+LicenseClient-Jimmy
+-hubSessionId
+bd81c670-cf53-11f1-9d34-3dd15f1a91e9
+-accessToken
+[REDACTED]
+Successfully changed project path to: H:\Projects\Unities\BattleCity
+H:/Projects/Unities/BattleCity
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=1"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"

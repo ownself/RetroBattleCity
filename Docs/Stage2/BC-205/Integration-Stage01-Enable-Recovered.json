@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene(); if(UnityEditor.EditorApplication.isPlaying || scene.isDirty || scene.path!=\"Assets/BattleCity/Scenes/Stage01.unity\") throw new System.InvalidOperationException(\"Stage01 must be clean/stopped\"); var c=scene.GetRootGameObjects().SelectMany(r=>r.GetComponentsInChildren<BattleCity.ArenaController>()).Single(); c.enablePlayerLifecycle=true; c.ValidateBindings(); UnityEditor.EditorUtility.SetDirty(c); UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene); var saved=UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene); return new {saved,enabled=c.enablePlayerLifecycle,scene=scene.path,dirty=scene.isDirty};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "saved": true,
+        "enabled": true,
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

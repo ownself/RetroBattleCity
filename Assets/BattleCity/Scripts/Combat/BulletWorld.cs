@@ -180,6 +180,12 @@ namespace BattleCity
             return false;
         }
 
+        internal void ReleaseOwnedBy(WeaponState owner)
+        {
+            for (int i = active.Count - 1; i >= 0; i--)
+                if (ReferenceEquals(active[i].Owner, owner)) ReleaseAt(i);
+        }
+
         public void Clear()
         {
             while (active.Count > 0) ReleaseAt(active.Count - 1);

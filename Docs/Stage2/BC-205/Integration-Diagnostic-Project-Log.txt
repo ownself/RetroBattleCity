@@ -1,0 +1,240 @@
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebHeaderCollection.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebSockets.Client.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebSockets.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Numerics.Vectors.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.ObjectModel.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.DispatchProxy.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.ILGeneration.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.Lightweight.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Extensions.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Primitives.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.Reader.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.ResourceManager.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.Writer.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Extensions.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Handles.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.InteropServices.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Numerics.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Json.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Xml.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Claims.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Csp.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Encoding.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Primitives.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Principal.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.SecureString.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Text.Encoding.Extensions.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Text.Encoding.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Text.RegularExpressions.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Overlapped.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.Extensions.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.Parallel.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Thread.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.ThreadPool.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Timer.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.ValueTuple.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.ReaderWriter.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XDocument.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlDocument.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlSerializer.dll"
+-r:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
+-r:"Library/PackageCache/com.unity.ext.nunit@0198eae3b53e/net472/unity-custom/nunit.framework.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/BattleCity.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+-analyzer:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/analyzers/dotnet/roslyn4.0/cs/Microsoft.Extensions.Logging.Generators.dll"
+-analyzer:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/analyzers/dotnet/roslyn4.0/cs/System.Text.Json.SourceGeneration.dll"
+-analyzer:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/Tools/BuildPipeline/Unity.Analyzers/Unity.Analyzers.Common.dll"
+-analyzer:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/Tools/BuildPipeline/Unity.Analyzers/Unity.Analyzers.LongLiving.dll"
+-analyzer:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
+-analyzer:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+-analyzer:"E:/Program Files/Unity/6000.6.7f1/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+"Assets/BattleCity/Tests/PlayMode/ArenaPlayModeTests.cs"
+"Assets/BattleCity/Tests/PlayMode/BaseStatePlayModeTests.cs"
+"Assets/BattleCity/Tests/PlayMode/BrickMapViewTests.cs"
+"Assets/BattleCity/Tests/PlayMode/CombatEffectViewTests.cs"
+"Assets/BattleCity/Tests/PlayMode/EnemyBrainPlayModeTests.cs"
+"Assets/BattleCity/Tests/PlayMode/EnemyTankViewTests.cs"
+"Assets/BattleCity/Tests/PlayMode/EnemyWaveIntegrationPlayModeTests.cs"
+"Assets/BattleCity/Tests/PlayMode/PlayerLifeIntegrationPlayModeTests.cs"
+"Assets/BattleCity/Tests/PlayMode/RenderLoopRegressionTests.cs"
+"Assets/BattleCity/Tests/PlayMode/Stage01PlayModeTests.cs"
+"Assets/BattleCity/Tests/PlayMode/TankStatePlayModeTests.cs"
+-langversion:9.0
+/deterministic
+/optimize+
+/debug:portable
+/nologo
+/RuntimeMetadataVersion:v4.0.30319
+/nowarn:0169
+/nowarn:0649
+/nowarn:0282
+/nowarn:1701
+/nowarn:1702
+/utf8output
+/preferreduilang:en-US
+/additionalfile:"Library/Bee/artifacts/1900b0aE.dag/BattleCity.PlayModeTests.UnityAdditionalFile.txt"
+##### Custom Environment Variables
+DOTNET_HOST_PATH=E:\Program Files\Unity\6000.6.7f1\Editor\Data\DotNetSdk\dotnet.exe
+DOTNET_MULTILEVEL_LOOKUP=0
+DOTNET_SYSTEM_GLOBALIZATION_USENLS=1
+##### ExitCode
+1
+##### Output
+Assets\BattleCity\Tests\PlayMode\PlayerLifeIntegrationPlayModeTests.cs(57,43): error CS0117: 'Is' does not contain a definition for 'AnyOf'
+*** Tundra build failed (1.52 seconds), 15 items updated, 1322 evaluated
+## Script Compilation Error for: Csc Library/Bee/artifacts/1900b0aE.dag/BattleCity.PlayModeTests.dll (+2 others)
+## CmdLine: "E:\Program Files\Unity\6000.6.7f1\Editor\Data\DotNetSdk\dotnet.exe" exec "E:/Program Files/Unity/6000.6.7f1/Editor/Data/DotNetSdk/sdk/8.0.318/Roslyn/bincore/csc.dll" /nostdlib /noconfig /shared "@Library/Bee/artifacts/1900b0aE.dag/BattleCity.PlayModeTests.rsp" "@Library/Bee/artifacts/1900b0aE.dag/BattleCity.PlayModeTests.rsp2"
+## Output:
+Assets\BattleCity\Tests\PlayMode\PlayerLifeIntegrationPlayModeTests.cs(57,43): error CS0117: 'Is' does not contain a definition for 'AnyOf'
+
+Assets\BattleCity\Tests\PlayMode\PlayerLifeIntegrationPlayModeTests.cs(57,43): error CS0117: 'Is' does not contain a definition for 'AnyOf'
+Total cache size 136303924
+Total cache size after purge 136303924, took 00:00:00.1713155
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Asset Pipeline Refresh (id=ebe23855162fa7346a6a412b2a31e027): Total: 0.037 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Starting: E:\Program Files\Unity\6000.6.7f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: H:/Projects/Unities/BattleCity
+ExitCode: 0 Duration: 0s643ms
+[1005/1322  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[1318/1322  0s] Csc Library/Bee/artifacts/1900b0aE.dag/BattleCity.PlayModeTests.dll (+2 others)
+[1319/1322  0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/BattleCity.PlayModeTests.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/BattleCity.PlayModeTests.dll, with 148 defines and 293 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, Unity.Pipeline.CodeGen.MethodReloadInPlaceILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running Unity.Pipeline.CodeGen.MethodReloadInPlaceILPostProcessor
+[1320/1322  0s] CopyFiles Library/ScriptAssemblies/BattleCity.PlayModeTests.pdb
+[1321/1322  0s] CopyFiles Library/ScriptAssemblies/BattleCity.PlayModeTests.dll
+*** Tundra build success (0.62 seconds), 5 items updated, 1322 evaluated
+Reloading assemblies after finishing script compilation.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Total cache size 136303924
+Total cache size after purge 136303924, took 00:00:00.1699734
+Symbol file LoadedFromMemory is not a mono symbol file
+Refreshing native plugins compatible for Editor in 2.30 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Start HTTP server: port:7800
+Pipeline: Descriptor written to H:\Projects\Unities\BattleCity\Library\Pipeline\.unity-pipeline-port
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  3.061 seconds
+Domain Reload Profiling: 4869ms
+	BeginReloadAssembly (954ms)
+		DisableScriptedObjects (158ms)
+		CreateAndSetChildDomain (446ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (24ms)
+	initialDomainReloadingComplete (107ms)
+	LoadAllAssembliesAndSetupDomain (703ms)
+		LoadAssemblies (225ms)
+		TypeCache.Refresh (16ms)
+		AnalyzeDomain (400ms)
+			BuildScriptInfoCaches (384ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (3062ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (319ms)
+			ProcessInitializeOnLoadAttributes (900ms)
+			ProcessInitializeOnLoadMethodAttributes (208ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (748ms)
+
+Asset Pipeline Refresh (id=dd3afe53b982c7b4fade826242f683e7): Total: 5.155 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=3199 ms
+		Asset DB Callback time: managed=77 ms, native=4 ms
+		Scripting: domain reloads=1, domain reload time=1872 ms, compile time=2 ms, other=0 ms
+		Project Asset Count: scripts=1761, non-scripts=3324
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 1.173ms
+	ApplyChangesToAssetFolders: 0.319ms
+	Collect global state as custom dependencies: 4.104ms
+	ProcessAssetsWithTransientArtifactChanges: 6.568ms
+	CategorizeAssets: 71.964ms
+	CompileScripts: 1.980ms
+	ImportOutOfDateAssets: 3071.738ms (3068.996ms without children)
+		CollectScriptTypesHashes: 0.822ms
+		ReloadNativeAssets: 1.115ms
+		UnloadImportedAssets: 0.284ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.914ms
+		ImportSchedulerStart: 0.408ms
+	PostProcessAllAssets: 78.178ms
+		XRBuildSystem.XRAssetImported 0.495ms
+		MonoPostProcessAllAssets: 77.282ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 19.975ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.640ms
+			AssetChangedListener.OnPostprocessAllAssets 6.623ms
+			AssetPostprocessor.OnPostprocessAllAssets 5.231ms
+			SyncVS.PostprocessSyncProject 3.433ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 2.751ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 2.119ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.760ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.603ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.528ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.127ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.844ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.843ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.822ms
+			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.698ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.678ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.633ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.610ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.585ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.447ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.431ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.422ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.409ms
+			PostProcessor.OnPostprocessAllAssets 0.341ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.340ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.321ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.278ms
+			AssetEvents.OnPostprocessAllAssets 0.265ms
+			SpriteLibraryAssetPostprocessor.OnPostprocessAllAssets 0.251ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.187ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.177ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.175ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.175ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.173ms
+			PSDImportPostProcessor.OnPostprocessAllAssets 0.158ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.157ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.153ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.122ms
+			PSDImporterAssetPostProcessor.OnPostprocessAllAssets 0.120ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.093ms
+			AssetProcessor.OnPostprocessAllAssets 0.069ms
+	PostAssetChangesProfiler: 2.993ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.204ms
+	PersistCurrentRevisions: 0.157ms
+	GenerateScriptTypeHashes: 2.952ms
+	GenerateScriptTypeSerializationHashes: 5.280ms
+	Untracked: 1913.059ms
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details

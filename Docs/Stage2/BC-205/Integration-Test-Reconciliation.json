@@ -1,0 +1,15 @@
+{
+  "discovered": 419,
+  "byMode": {
+    "EditMode": 359,
+    "PlayMode": 60
+  },
+  "executed": 419,
+  "uniqueExecuted": 419,
+  "missing": [],
+  "unexpected": [],
+  "duplicates": [],
+  "notPassed": [],
+  "sourceHashEvidence": "Integration-Validated-Source-Hashes.json",
+  "editNote": "359 successful Edit tests precede only a PlayMode-test null predicate guard; all runtime/model/Edit sources unchanged thereafter."
+}

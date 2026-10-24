@@ -1,0 +1,77 @@
+# BC205 actual command/evidence index
+
+All Editor commands used: unity command <name> --caller plugin --skill unity-cli --project-path H:/Projects/Unities/BattleCity --format json <parameters>.
+Exact script code and arguments remain in each raw JSON data.parameters. status/recompile used explicit project path; no batch Editor, upgrade, restart, commit or push.
+
+Other local commands: git status --short; git rev-parse HEAD; git diff --cached --name-only; git diff --check; git diff --binary; sha256sum / Python hashlib.sha256; bounded file/package/log inspection; original read-only OS PID check.
+
+Async Play: test run --mode playmode --async_tests true, status --until-ready, test status (one completed status query per run). Not repeated in recovery.
+Recovery: status; console get; guarded script eval baseline; script eval fresh paused Play; status --until-ready; script run --file Docs/Stage2/BC-205/RecoveryRuntimeProbe.cs --entry BC205RecoveryRuntimeProbe.Main; editor.playmode stop; status --until-ready; guarded final script eval; console get --since555 / --since480; editor status. No further Unity commands after parent closeout steering.
+
+| Evidence | Actual command | Outer success |
+|---|---|---|
+| Integration-Baseline-Console.json | command console get | True |
+| Integration-Baseline-Editor.json | command editor status | True |
+| Integration-Baseline-Settings-Recovered.json | command script eval | True |
+| Integration-Baseline-Settings.json | unity command script | False |
+| Integration-Baseline-Status.json | status | True |
+| Integration-Before-Runtime-Editor.json | command editor status | True |
+| Integration-Cleanup-Final-State.json | command script eval | True |
+| Integration-Cleanup-Observer.json | command script eval | True |
+| Integration-Cleanup-Ready.json | status | True |
+| Integration-Cleanup-Stop.json | command editor.playmode stop | True |
+| Integration-Compile-Final-Ready.json | status | True |
+| Integration-Compile-Final-Settled.json | command script recompile_status | True |
+| Integration-Compile-Final.json | recompile | True |
+| Integration-Compile-Initial.json | recompile | False |
+| Integration-Compile-Loaded-Final.json | command script eval | True |
+| Integration-Compile-Second.json | recompile | True |
+| Integration-Compile-Verified.json | recompile | False |
+| Integration-Diagnostic-Pipeline.json | pipeline list | True |
+| Integration-Diagnostic-Status.json | status | True |
+| Integration-Diagnostic2-Compile-Status.json | command script recompile_status | True |
+| Integration-Diagnostic2-Editor.json | command editor status | True |
+| Integration-Diagnostic2-Status.json | status | True |
+| Integration-Discovery-Full.json | command | True |
+| Integration-Edit-Special-Recovered.json | command test run | True |
+| Integration-Edit-Special.json | unity command test | False |
+| Integration-Final-Play-Ready.json | status | True |
+| Integration-Final-Play-Start.json | command test run | True |
+| Integration-Final-Play-Status-01.json | command test status | True |
+| Integration-Full-Edit.json | command test run | True |
+| Integration-Full-Play-Ready.json | status | True |
+| Integration-Full-Play-Start.json | command test run | True |
+| Integration-Full-Play-Status-01.json | command test status | True |
+| Integration-Observer-Schema.json | script run | None |
+| Integration-Play-Special-Ready.json | status | True |
+| Integration-Play-Special-Start.json | command test run | True |
+| Integration-Play-Special-Status-01.json | command test status | True |
+| Integration-Play-Special.json | command test run | True |
+| Integration-Recovered-Compile-Status.json | command script recompile_status | True |
+| Integration-Recovered-Console.json | command console get | True |
+| Integration-Recovered-State.json | command script eval | True |
+| Integration-Recovered-Status.json | status | True |
+| Integration-Runtime-Background.json | command script eval | True |
+| Integration-Runtime-Controlled-Ready.json | status | True |
+| Integration-Runtime-Controlled-Start.json | command script eval | True |
+| Integration-Runtime-Probe-Request.json | command script run | True |
+| Integration-Runtime-Ready.json | status | True |
+| Integration-Runtime-Start.json | command editor.playmode start | True |
+| Integration-Runtime-Uncontrolled-Stop.json | command editor.playmode stop | True |
+| Integration-Runtime-Uncontrolled-Stopped-Ready.json | status | True |
+| Integration-Runtime-Uncontrolled.json | command script eval | True |
+| Integration-Stage01-Enable-Recovered.json | command script eval | True |
+| Integration-Stage01-Enable.json | unity command script | False |
+| Integration-Test-Discovery.json | command test list | True |
+| Recovery-Baseline-Console.json | command console get | True |
+| Recovery-Baseline-Settings.json | command script eval | True |
+| Recovery-Baseline-Status.json | status | True |
+| Recovery-Console-Delta.json | command console get | True |
+| Recovery-Final-Console-All-Integration-Delta.json | command console get | True |
+| Recovery-Final-Editor.json | command editor status | True |
+| Recovery-Final-Settings-Resources.json | command script eval | True |
+| Recovery-Runtime-Probe-Request.json | command script run | True |
+| Recovery-Runtime-Ready.json | status | True |
+| Recovery-Runtime-Start.json | command script eval | True |
+| Recovery-Runtime-Stop.json | command editor.playmode stop | True |
+| Recovery-Stopped-Ready.json | status | True |

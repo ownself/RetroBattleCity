@@ -45,6 +45,13 @@ namespace BattleCity
             return true;
         }
 
+        internal void ResetForRespawn()
+        {
+            bullets.ReleaseOwnedBy(this);
+            if (ActiveBullets != 0) throw new InvalidOperationException("Outstanding player projectile lease after respawn release.");
+            CooldownRemainingTicks = 0;
+        }
+
         internal void ReleaseBullet() { ActiveBullets--; }
     }
 }

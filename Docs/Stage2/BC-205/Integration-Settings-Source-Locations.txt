@@ -1,0 +1,125 @@
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Authoring/ProjectPaths.cs:29:        // Per-project EditorPrefs key so the root doesn't leak across projects on the same machine.
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Authoring/ProjectPaths.cs:37:        /// authoring writes are confined to. Defaults to "Assets". Persisted per project via EditorPrefs.
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Authoring/ProjectPaths.cs:44:                var root = EditorPrefs.GetString(PrefKey, DefaultRoot);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Authoring/ProjectPaths.cs:52:                EditorPrefs.SetString(PrefKey, normalized);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Authoring/ProjectPaths.cs:57:        public static void ResetAuthoringRoot() => EditorPrefs.DeleteKey(PrefKey);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/BuildProcessors/PipelineRuntimeBuildProcessor.cs:254:                SessionState.SetBool(PipelineServerStartup.RunInBackgroundRestoredForBuildKey, true);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/BuildProcessors/PipelineRuntimeBuildProcessor.cs:271:            SessionState.SetBool(PipelineServerStartup.RunInBackgroundRestoredForBuildKey, false);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/CommandExecution/CommandExecutor/EditorCommandExecutor.cs:43:        /// SessionState marker: the Editor has been seen idle at least once this session, i.e.
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/CommandExecution/CommandExecutor/EditorCommandExecutor.cs:44:        /// the post-startup settle window is over for the whole session. SessionState survives
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/CommandExecution/CommandExecutor/EditorCommandExecutor.cs:68:        /// Whether this Editor session has already completed its settle window (the SessionState
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/CommandExecution/CommandExecutor/EditorCommandExecutor.cs:72:        internal static bool IsSessionSettled => SessionState.GetBool(SettledSessionKey, false);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/CommandExecution/CommandExecutor/EditorCommandExecutor.cs:76:        /// starts, so the Editor state and SessionState are readable directly. The latch is released
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/CommandExecution/CommandExecutor/EditorCommandExecutor.cs:86:            if (SessionState.GetBool(SettledSessionKey, false)
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/CommandExecution/CommandExecutor/EditorCommandExecutor.cs:122:            SessionState.SetBool(SettledSessionKey, true);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:21:    /// enabled/interval choice is persisted to SessionState and restored by
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:28:    static class AutoTickCommand
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:32:        // Default interval when nothing else applies (fresh editor session, no prior SetAutoTick call).
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:35:        // SessionState keys: session-scoped editor state, survives domain reload, dies with the editor.
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:36:        private const string EnabledKey = "Unity.Pipeline.AutoTick.Enabled";
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:37:        private const string IntervalKey = "Unity.Pipeline.AutoTick.IntervalMs";
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:49:        public static string SetAutoTick(
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:52:            [CliArg("persist", "Persist this choice to SessionState so it survives a domain reload. Set false for a one-off/expensive setting (e.g. interval_ms=0) that should revert to the last persisted choice (or the default) after the next recompile instead of sticking for the rest of the session.")] bool persist = true)
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:54:            var result = ApplyAutoTick(enable, intervalMs);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:61:            SessionState.SetBool(EnabledKey, s_Enabled);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:62:            SessionState.SetInt(IntervalKey, (int)s_IntervalMs);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:67:        /// Restore auto-tick to whatever the user last explicitly set via <see cref="SetAutoTick"/>
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:71:        /// enabled setting decides auto-tick's state. Call on the main thread (touches SessionState).
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:75:            var storedInterval = SessionState.GetInt(IntervalKey, -1);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:78:                ApplyAutoTick(defaultEnabled, DefaultIntervalMs);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:82:            var storedEnabled = SessionState.GetBool(EnabledKey, defaultEnabled);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:83:            ApplyAutoTick(storedEnabled, storedInterval);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:88:        /// SessionState, to simulate a domain reload (statics cleared, SessionState survives).
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:103:        /// Test-only: erase the persisted SessionState copy (unlike <see cref="ResetForTests"/>, which
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:108:            SessionState.EraseInt(IntervalKey);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:109:            SessionState.EraseBool(EnabledKey);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:113:        /// Test-only: read the persisted SessionState copy without touching the in-memory statics.
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:118:            var storedInterval = SessionState.GetInt(IntervalKey, -1);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:126:            enabled = SessionState.GetBool(EnabledKey, false);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:132:        /// Test-only: write the persisted SessionState copy directly, bypassing ApplyAutoTick.
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:136:            SessionState.SetBool(EnabledKey, enabled);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:137:            SessionState.SetInt(IntervalKey, (int)intervalMs);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/AutoTickCommand.cs:140:        private static string ApplyAutoTick(bool enable, int intervalMs)
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/Build/BuildCommand.cs:228:            "Status of the current/most recent build: idle | queued | building | completed, with the full " +
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/Build/BuildProfileCommands.cs:730:    /// The record lives in <see cref="SessionState"/>, which, like the undo stack, survives a domain reload
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/Build/BuildProfileCommands.cs:755:            SessionState.SetString(SessionKey, string.Join("\n", latest.Select(r => $"{r.Value}:{r.Key}")));
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/Build/BuildProfileCommands.cs:766:        internal static void Clear() => SessionState.EraseString(SessionKey);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/Build/BuildProfileCommands.cs:772:            foreach (var line in SessionState.GetString(SessionKey, string.Empty).Split('\n'))
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/Capture/CaptureCommands.cs:232:        /// <see cref="GetGameViewTargetTexture"/>): the most recently rendered game frame at its true
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/Capture/CaptureCommands.cs:325:        /// target texture holds the game view's most recently rendered frame — overlay canvases
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/Observability/PerformanceCommands.cs:11:    /// Render statistics for the most recently rendered Editor frame, read from
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/PushReloadCommand.cs:456:        // override while the editor reports "up to date". SessionState-backed so the play-mode
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/PushReloadCommand.cs:463:            var raw = SessionState.GetString(SkPushedMethods, "");
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/PushReloadCommand.cs:489:            var raw = SessionState.GetString(SkPushedMethods, "");
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/PushReloadCommand.cs:498:            SessionState.SetString(SkPushedMethods, string.Join("\n", lines));
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/WaitForCommands.cs:466:        /// <summary>The most recently observed value (the value at the moment the wait resolved).</summary>
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/WaitRegistry.cs:129:        /// <see cref="StartedAt"/> in the registry yet be the most recently finished).</summary>
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Commands/WaitRegistry.cs:570:            // earliest StartedAt of any job in the registry yet be the most recently finished, and
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Console/EditorConsoleCaptureBootstrap.cs:19:    ///  - A session identifier and a sequence floor in <see cref="SessionState"/>, so a client can
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Console/EditorConsoleCaptureBootstrap.cs:32:        // SessionState survives domain reloads and is cleared when the Editor restarts, which is
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Console/EditorConsoleCaptureBootstrap.cs:40:            var session = SessionState.GetString(SessionKey, string.Empty);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Console/EditorConsoleCaptureBootstrap.cs:44:                SessionState.SetString(SessionKey, session);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Console/EditorConsoleCaptureBootstrap.cs:53:            if (long.TryParse(SessionState.GetString(SeqFloorKey, "0"), NumberStyles.Integer, CultureInfo.InvariantCulture, out var floor))
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Console/EditorConsoleCaptureBootstrap.cs:71:            SessionState.SetString(SeqFloorKey, ConsoleLogCapture.Buffer.LastSeq.ToString(CultureInfo.InvariantCulture));
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Console/EditorConsoleEntries.cs:95:        /// Read up to <paramref name="max"/> most recent console entries, oldest first. Returns
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Console/EditorConsoleGroundTruth.cs:47:            s_Seeded = SessionState.GetBool(SeededKey, false);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Console/EditorConsoleGroundTruth.cs:148:            SessionState.SetBool(SeededKey, true);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Console/EditorConsoleGroundTruth.cs:213:            SessionState.EraseBool(SeededKey);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:30:    /// reloads (state persisted in <see cref="EditorPrefs"/>); the Pipeline settings page only
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:167:            EditorPrefs.SetString(PkPath, s_WatchPath);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:168:            EditorPrefs.SetBool(PkIsFolder, isFolder);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:169:            EditorPrefs.SetInt(PkPrevAutoRefresh, s_PrevAutoRefresh);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:170:            EditorPrefs.SetInt(PkPrevAutoRefreshMode, s_PrevAutoRefreshMode);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:195:            SessionState.EraseString(SkMethodBaselines);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:199:            EditorPrefs.DeleteKey(PkPath);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:200:            EditorPrefs.DeleteKey(PkIsFolder);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:201:            EditorPrefs.DeleteKey(PkPrevAutoRefresh);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:202:            EditorPrefs.DeleteKey(PkPrevAutoRefreshMode);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:209:            var path = EditorPrefs.GetString(PkPath, null);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:212:            bool isFolder = EditorPrefs.GetBool(PkIsFolder, false);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:216:                EditorPrefs.DeleteKey(PkPath);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:222:            s_PrevAutoRefresh = EditorPrefs.GetInt(PkPrevAutoRefresh, -1);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:223:            s_PrevAutoRefreshMode = EditorPrefs.GetInt(PkPrevAutoRefreshMode, -1);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:239:                MethodReloadBaseline.Restore(SessionState.GetString(SkMethodBaselines, ""));
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:266:            int prev = EditorPrefs.GetInt(AutoRefreshPref, 1);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:269:                EditorPrefs.SetInt(AutoRefreshPref, 0);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:271:            int prevMode = EditorPrefs.GetInt(AutoRefreshModePref, 1);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:274:                EditorPrefs.SetInt(AutoRefreshModePref, 0);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:280:                EditorPrefs.SetInt(AutoRefreshPref, s_PrevAutoRefresh);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:282:                EditorPrefs.SetInt(AutoRefreshModePref, s_PrevAutoRefreshMode);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:578:        // file. SessionState-backed for the same reason as the applied-files journal: the play-mode
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:622:            SessionState.SetString(SkMethodBaselines, MethodReloadBaseline.Serialize());
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:656:        // SessionState-backed because the overrides it mirrors live only in MethodReloadRegistry's
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:671:            SessionState.SetString(SkAppliedFiles, joined);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:677:            var raw = SessionState.GetString(SkAppliedFiles, "");
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorMethodReloadWatcher.cs:682:        internal static void ClearAppliedFilesJournal() => SessionState.EraseString(SkAppliedFiles);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorPipelineLegacyAssetNotice.cs:17:        // SessionState, not EditorPrefs: survives domain reloads so a recompile does not re-nag,
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorPipelineLegacyAssetNotice.cs:28:            if (SessionState.GetBool(WarnedKey, false))
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorPipelineLegacyAssetNotice.cs:30:            SessionState.SetBool(WarnedKey, true);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorPipelineServer.cs:124:        /// <summary>How recently the frame count must have moved for the loop to count as ticking.</summary>
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorPipelineStartup.cs:207:                // Rotate the transaction log once per Unity session (main thread; SessionState-gated).
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorPipelineStartup.cs:208:                // The append path runs off-thread and can't touch SessionState.
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorPipelineStartup.cs:214:                // domain reload that just wiped AutoTickCommand's statics). Only a session with no
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorPipelineStartup.cs:215:                // prior explicit set_autotick call falls back to a default, and that default is "on"
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorPipelineStartup.cs:221:                Commands.AutoTickCommand.RestoreFromSession(defaultEnabled: m_Server.WatchdogEnabled);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorPipelineStartup.cs:293:        /// <summary>SessionState flag: a build put the project's Run In Background value back and has
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorPipelineStartup.cs:354:            // The flag is SessionState, so it dies with the Editor: after a restart a leftover false
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorPipelineStartup.cs:356:            bool restoredForBuild = SessionState.GetBool(RunInBackgroundRestoredForBuildKey, false);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorPipelineStartup.cs:358:                SessionState.SetBool(RunInBackgroundRestoredForBuildKey, false);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/EditorProgressMirror.cs:41:            // Mirror the most recently ADDED running item (enumeration is registration order,
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/PipelineAnalytics.cs:20:    /// Everything here is main-thread only — SendAnalytic, SessionState and the editor state the
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/PipelineAnalytics.cs:25:    /// A session spans a Unity PROCESS, not a domain: the latch lives in SessionState, which
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/PipelineAnalytics.cs:72:        /// The session latch as stored in SessionState: whether the start event has been sent this
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/PipelineAnalytics.cs:80:                var started = SessionState.GetBool(SessionStartedKey, false);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/PipelineAnalytics.cs:81:                long.TryParse(SessionState.GetString(SessionStartTicksKey, "0"), out var ticks);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/PipelineAnalytics.cs:86:                SessionState.SetBool(SessionStartedKey, value.started);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/PipelineAnalytics.cs:87:                SessionState.SetString(SessionStartTicksKey, value.startTicks.ToString());
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/PipelineTransactionLog.cs:20:    /// the first server start of a Unity session: SessionState survives domain reloads but resets on
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/PipelineTransactionLog.cs:24:    /// Rotation must run on the main thread (SessionState is main-thread only), hence it lives in
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/PipelineTransactionLog.cs:48:        /// so the session starts with a fresh log. Gated by SessionState (resets on editor restart),
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/PipelineTransactionLog.cs:55:                if (SessionState.GetBool(SessionRotatedKey, false))
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/PipelineTransactionLog.cs:59:                SessionState.SetBool(SessionRotatedKey, true);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/PipelineTransactionLog.cs:86:        /// replacing any prior backup. No SessionState gate — exposed as the testable rotation seam.
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/RuntimePipelineSettingsMigration.cs:30:        /// Stops <see cref="MigrateOnLoad"/> from migrating. Kept in SessionState so it holds across
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/RuntimePipelineSettingsMigration.cs:36:            get => SessionState.GetBool(SuspendedOnLoadKey, false);
+Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/RuntimePipelineSettingsMigration.cs:37:            set => SessionState.SetBool(SuspendedOnLoadKey, value);

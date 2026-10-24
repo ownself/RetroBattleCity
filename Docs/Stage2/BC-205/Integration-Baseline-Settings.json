@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command script",
+  "data": null,
+  "errors": [
+    {
+      "code": "COMMAND_FAILED",
+      "message": "Runtime Error\n  Could not find file \"H:\\Projects\\Unities\\BattleCity\\UserSettings\\UnityCliSettings.json\""
+    }
+  ],
+  "warnings": []
+}

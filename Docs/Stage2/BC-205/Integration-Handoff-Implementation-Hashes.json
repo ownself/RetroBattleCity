@@ -1,0 +1,15 @@
+{
+  "Assets/BattleCity/Editor/Stage01Authoring.cs": "2a87c0f6e3e5bafff3a056e1a919a55d01a6e03ab425613cec24fcbe4270f763",
+  "Assets/BattleCity/Scenes/Stage01.unity": "b12b49a2307882fb2a749bc678ce98343cf91ccb75070229f8d53a405d70490a",
+  "Assets/BattleCity/Scripts/Combat/BulletWorld.cs": "18727dc29da87004356d1580b92f1b1564c2b4865a3061e0827ea180e89e2962",
+  "Assets/BattleCity/Scripts/Combat/WeaponState.cs": "7a0a25711d2fced80922fbdce820acd24a87f360c06ae2661959daac1a668b97",
+  "Assets/BattleCity/Scripts/Core/ArenaController.cs": "38db3f9115c6ce68f335bab99792461fb5634dc8140509e75c5bc1642669157b",
+  "Assets/BattleCity/Scripts/Core/ArenaSession.cs": "c97d7422e93e5cbeac66c5146ddd9c1fc5898713e8995d663306f47ac97f82ec",
+  "Assets/BattleCity/Scripts/Tanks/TankMotor.cs": "e0eb9b8636ab145d96eba8d2d80814325fdcdd0f3b67fbc5e52ff81ee1e864f8",
+  "Assets/BattleCity/Scripts/Tanks/TankState.cs": "d37bdf222b656a313274c59092440a204435d62cef16d85c89cc03d686f69872",
+  "Assets/BattleCity/Tests/PlayMode/Stage01PlayModeTests.cs": "c3d5465c34bc98d94fb9eb9a94d346a585b0eb5ca0e381e48c48a3fa0d47239e",
+  "Assets/BattleCity/Tests/EditMode/PlayerLifeIntegrationTests.cs": "21d6c3fdff816c504ff5bc0296165711b8954690f1d3b4cf19be38fe415c520c",
+  "Assets/BattleCity/Tests/EditMode/PlayerLifeIntegrationTests.cs.meta": "9f062c250db6346c981be1d776573a5d01265e6ca1d7fa0cec9398b710773125",
+  "Assets/BattleCity/Tests/PlayMode/PlayerLifeIntegrationPlayModeTests.cs": "58ec731c76384b957209fcbbf6e52d37fa3308e936d6c29eb1218a9f6b82d8cd",
+  "Assets/BattleCity/Tests/PlayMode/PlayerLifeIntegrationPlayModeTests.cs.meta": "e2147bde65809be221937eec83246f4b41e3eefd90c97a2e97e965fca7f52153"
+}

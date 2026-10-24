@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene(); var test=System.AppDomain.CurrentDomain.GetAssemblies().Select(a=>a.GetType(\"BattleCity.Tests.Stage01PlayModeTests\")).FirstOrDefault(t=>t!=null); return new {compiling=UnityEditor.EditorApplication.isCompiling,failed=UnityEditor.EditorUtility.scriptCompilationFailed,loadedTest=test==null?null:test.Assembly.FullName,loadedSession=typeof(BattleCity.ArenaSession).Assembly.FullName,scene=scene.path,dirty=scene.isDirty,playing=UnityEditor.EditorApplication.isPlaying};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "compiling": false,
+        "failed": false,
+        "loadedTest": "BattleCity.PlayModeTests, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "loadedSession": "BattleCity.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "scene": "Assets/BattleCity/Scenes/Stage01.unity",
+        "dirty": false,
+        "playing": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

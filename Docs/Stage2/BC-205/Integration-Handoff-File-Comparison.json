@@ -1,0 +1,16 @@
+{
+  "checked": 255,
+  "changed": [
+    "Assets/BattleCity/Editor/Stage01Authoring.cs",
+    "Assets/BattleCity/Scenes/Stage01.unity",
+    "Assets/BattleCity/Scripts/Combat/BulletWorld.cs",
+    "Assets/BattleCity/Scripts/Combat/WeaponState.cs",
+    "Assets/BattleCity/Scripts/Core/ArenaController.cs",
+    "Assets/BattleCity/Scripts/Core/ArenaSession.cs",
+    "Assets/BattleCity/Scripts/Tanks/TankMotor.cs",
+    "Assets/BattleCity/Scripts/Tanks/TankState.cs",
+    "Assets/BattleCity/Tests/PlayMode/Stage01PlayModeTests.cs"
+  ],
+  "missing": [],
+  "note": "Handoff filesystem comparison only; final post-runtime Console/Editor resource API verification not completed."
+}

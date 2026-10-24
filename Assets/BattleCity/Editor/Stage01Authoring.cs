@@ -54,6 +54,7 @@ namespace BattleCity.Editor
             controller.name = "Stage 01 - WASD or arrows; Space fires; Esc pauses";
             controller.level = AssetDatabase.LoadAssetAtPath<LevelDefinition>(LevelPath);
             controller.enemyWaveDefinition = wave;
+            controller.enablePlayerLifecycle = true;
             controller.playerRenderer.transform.position = PixelGrid.ToWorld(controller.level.playerSpawnPixels);
             controller.mapView.Render(new MapState(controller.level));
             var baseRenderer = new GameObject("Base - session state projection", typeof(SpriteRenderer)).GetComponent<SpriteRenderer>();
@@ -64,7 +65,7 @@ namespace BattleCity.Editor
             controller.baseRenderer = baseRenderer;
             controller.ValidateBindings();
             if (!EditorSceneManager.SaveScene(scene, ScenePath)) throw new InvalidOperationException("Could not save Stage 01.");
-            return "BC-204 Stage 01 saved with real base and 20 prototype basic enemies: " + ScenePath;
+            return "BC-205 Stage 01 saved with player lifecycle, real base and 20 prototype basic enemies: " + ScenePath;
         }
 
         public static void Populate(LevelDefinition level)
