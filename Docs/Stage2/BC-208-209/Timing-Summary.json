@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-24T20:10:58+08:00",
+  "acceptanceRecordedAt": "2026-10-24T20:23:50.571789+08:00",
+  "elapsedSeconds": 772.571789,
+  "steps": [
+    {
+      "agent": "worker",
+      "start": "2026-10-24T20:12:36.431000+08:00",
+      "end": "2026-10-24T20:20:17.855000+08:00",
+      "elapsedSeconds": 461.424
+    },
+    {
+      "agent": "reviewer",
+      "start": "2026-10-24T20:20:17.899000+08:00",
+      "end": "2026-10-24T20:21:50.658000+08:00",
+      "elapsedSeconds": 92.759
+    }
+  ],
+  "evidence": "Parent timestamps and workflow runtime; no fabricated subphase net durations"
+}

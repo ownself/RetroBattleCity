@@ -1,0 +1,154 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    },
+    "server": {
+      "version": "0.0.1",
+      "port": 7800
+    },
+    "commands": [
+      {
+        "command": "package resolve",
+        "name": "resolve",
+        "group": "package",
+        "description": "Resolve/refresh packages from the manifest (re-fetch and re-link). May trigger a recompile/domain reload — poll script recompile_status. Its outcome is recorded for package status.",
+        "tags": [
+          "packages"
+        ],
+        "package": "Unity.Pipeline.Editor",
+        "mainThreadRequired": true,
+        "parameters": [],
+        "schema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "title": "package resolve",
+          "description": "Resolve/refresh packages from the manifest (re-fetch and re-link). May trigger a recompile/domain reload — poll script recompile_status. Its outcome is recorded for package status.",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false,
+          "x-command-metadata": {
+            "mainThreadRequired": true,
+            "methodName": "Unity.Pipeline.Editor.Commands.PackageManager.PackageManagerCommand.Resolve"
+          }
+        }
+      }
+    ],
+    "count": 1,
+    "total": 1,
+    "offset": 0,
+    "limit": null,
+    "search": {
+      "pattern": "refresh",
+      "count": 9,
+      "matches": [
+        {
+          "kind": "command",
+          "name": "editor module refresh",
+          "path": "editor module refresh",
+          "description": "Re-fetch the module list for a located editor.",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity editor module refresh"
+        },
+        {
+          "kind": "command",
+          "name": "editors module refresh",
+          "path": "editors module refresh",
+          "description": "Re-fetch the module list for a located editor.",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity editors module refresh"
+        },
+        {
+          "kind": "command",
+          "name": "skill refresh",
+          "path": "skill refresh",
+          "description": "Re-render every previously installed Unity CLI skill against the currently-embedded tree",
+          "matchedOn": "name",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity skill refresh"
+        },
+        {
+          "kind": "pipeline",
+          "name": "package resolve",
+          "path": "package resolve",
+          "description": "Resolve/refresh packages from the manifest (re-fetch and re-link). May trigger a recompile/domain reload — poll script recompile_status. Its outcome is recorded for package status.",
+          "matchedOn": "description",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity command package resolve"
+        },
+        {
+          "kind": "command",
+          "name": "editors",
+          "path": "editors",
+          "description": "Manage Unity editors",
+          "matchedOn": "option",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity editors"
+        },
+        {
+          "kind": "command",
+          "name": "plugin list",
+          "path": "plugin list",
+          "description": "List every external component with its kind, state, resolved path, and whether it came from the managed install or PATH",
+          "matchedOn": "option",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity plugin list"
+        },
+        {
+          "kind": "command",
+          "name": "plugin install",
+          "path": "plugin install",
+          "description": "Download and install a managed tool",
+          "matchedOn": "option",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity plugin install"
+        },
+        {
+          "kind": "command",
+          "name": "plugin upgrade",
+          "path": "plugin upgrade",
+          "description": "Re-install a managed tool when its pinned build changed",
+          "matchedOn": "option",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity plugin upgrade"
+        },
+        {
+          "kind": "command",
+          "name": "projects list",
+          "path": "projects list",
+          "description": "List Unity projects registered in the Hub",
+          "matchedOn": "option",
+          "state": null,
+          "installed": null,
+          "installCommand": null,
+          "invoke": "unity projects list"
+        }
+      ],
+      "hint": ""
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

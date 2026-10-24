@@ -1,0 +1,168 @@
+{
+  "success": true,
+  "command": "command console get",
+  "data": {
+    "command": "console get",
+    "parameters": {
+      "since": "776",
+      "tail": "100"
+    },
+    "result": {
+      "entries": [
+        {
+          "seq": 777,
+          "timestampUtc": "2026-10-24T12:16:32.2544813Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/PipelineTestRunner.cs:508)\nUnity.Pipeline.Editor.Testing.PipelineTestReloader:ResumePendingTests () (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/PipelineTestReloader.cs:60)\nUnity.Pipeline.Editor.Testing.PipelineTestReloader:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/PipelineTestReloader.cs:34)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 778,
+          "timestampUtc": "2026-10-24T12:16:34.3505752Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 779,
+          "timestampUtc": "2026-10-24T12:16:35.3440083Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 67 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 780,
+          "timestampUtc": "2026-10-24T12:16:35.3450051Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 67 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 781,
+          "timestampUtc": "2026-10-24T12:16:35.5221409Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC209 controlled death frame=20 tick=2 lives=2 phase=Playing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.Stage01LifeExhaustionPlayModeTests/<RealUpdate_ThreeStage01LivesExhaustedByControlledEnemyBullets_LostThenPhysicalRReady>d__8:MoveNext () (at Assets/BattleCity/Tests/PlayMode/Stage01LifeExhaustionPlayModeTests.cs:90)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 782,
+          "timestampUtc": "2026-10-24T12:16:36.5181408Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC209 controlled birth frame=471 tick=62 lives=2",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.Stage01LifeExhaustionPlayModeTests/<RealUpdate_ThreeStage01LivesExhaustedByControlledEnemyBullets_LostThenPhysicalRReady>d__8:MoveNext () (at Assets/BattleCity/Tests/PlayMode/Stage01LifeExhaustionPlayModeTests.cs:96)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 783,
+          "timestampUtc": "2026-10-24T12:16:38.5331452Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC209 controlled death frame=1317 tick=183 lives=1 phase=Playing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.Stage01LifeExhaustionPlayModeTests/<RealUpdate_ThreeStage01LivesExhaustedByControlledEnemyBullets_LostThenPhysicalRReady>d__8:MoveNext () (at Assets/BattleCity/Tests/PlayMode/Stage01LifeExhaustionPlayModeTests.cs:90)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 784,
+          "timestampUtc": "2026-10-24T12:16:39.5329103Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC209 controlled birth frame=1766 tick=243 lives=1",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.Stage01LifeExhaustionPlayModeTests/<RealUpdate_ThreeStage01LivesExhaustedByControlledEnemyBullets_LostThenPhysicalRReady>d__8:MoveNext () (at Assets/BattleCity/Tests/PlayMode/Stage01LifeExhaustionPlayModeTests.cs:96)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 785,
+          "timestampUtc": "2026-10-24T12:16:41.5496596Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC209 controlled death frame=2642 tick=364 lives=0 phase=Lost",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.Stage01LifeExhaustionPlayModeTests/<RealUpdate_ThreeStage01LivesExhaustedByControlledEnemyBullets_LostThenPhysicalRReady>d__8:MoveNext () (at Assets/BattleCity/Tests/PlayMode/Stage01LifeExhaustionPlayModeTests.cs:90)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 786,
+          "timestampUtc": "2026-10-24T12:16:41.7466367Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC209 controlled realUpdate frames=12->2687 ticks=1->364 restartTick=0 outcomes=1 droppedTicks=0",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.Stage01LifeExhaustionPlayModeTests/<RealUpdate_ThreeStage01LivesExhaustedByControlledEnemyBullets_LostThenPhysicalRReady>d__8:MoveNext () (at Assets/BattleCity/Tests/PlayMode/Stage01LifeExhaustionPlayModeTests.cs:120)\nUnityEditor.GUIView:ProcessEvent (UnityEngine.EntityId,intptr,bool&)\n",
+          "seeded": false
+        },
+        {
+          "seq": 787,
+          "timestampUtc": "2026-10-24T12:16:41.7718227Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Jimmy/AppData/LocalLow/DefaultCompany/BattleCity\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 788,
+          "timestampUtc": "2026-10-24T12:16:41.8065564Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 1 total, 1 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 789,
+          "timestampUtc": "2026-10-24T12:16:41.821109Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 1 total, 1 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 790,
+          "timestampUtc": "2026-10-24T12:16:42.0512248Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        }
+      ],
+      "cursor": 790,
+      "session": "316dee6ba1864c7dab134a9af37d8ce3",
+      "returned": 14,
+      "dropped": false,
+      "reset": false,
+      "counts": {
+        "error": 5,
+        "warn": 1,
+        "log": 784
+      },
+      "groundTruth": {
+        "sampledUtc": "2026-10-24T12:16:57.026725Z",
+        "ageMs": 163,
+        "compilationFailed": false,
+        "compiling": false,
+        "consoleErrors": 0,
+        "consoleWarnings": 0,
+        "consoleLogs": 12,
+        "seeded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

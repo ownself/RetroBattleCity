@@ -1,0 +1,162 @@
+[
+  {
+    "evidence": "Docs/Stage2/BC-206/P2-Edit-Current.json",
+    "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(False,False,Won,None)",
+    "Status": "Passed",
+    "Duration": 0.0485769,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-206/P2-Edit-Current.json",
+    "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(True,False,Lost,BaseDestroyed)",
+    "Status": "Passed",
+    "Duration": 0.0025025,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-206/P2-Edit-Current.json",
+    "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(False,True,Lost,PlayerLivesExhausted)",
+    "Status": "Passed",
+    "Duration": 0.0020647,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-206/P2-Edit-Current.json",
+    "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(True,True,Lost,BaseDestroyed, PlayerLivesExhausted)",
+    "Status": "Passed",
+    "Duration": 0.0014816,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-206/P2-Edit-Current.json",
+    "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.EmptyFieldPendingBlockedAndReservationNeverWins_BirthSettlesBeforeOutcome",
+    "Status": "Passed",
+    "Duration": 0.0023109,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-206/P2-Edit-Current.json",
+    "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.FocusLossInsideStateNotification_PausesBeforeAnyTickWithoutRecursiveNotification(False)",
+    "Status": "Passed",
+    "Duration": 0.0019916,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-206/P2-Edit-Current.json",
+    "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.FocusLossInsideStateNotification_PausesBeforeAnyTickWithoutRecursiveNotification(True)",
+    "Status": "Passed",
+    "Duration": 0.0009704,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-206/P2-Edit-Current.json",
+    "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.OptInRequiresWave_OldConstructorsStillAdvanceAndNeverSettle",
+    "Status": "Passed",
+    "Duration": 0.0036632,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-206/P2-Edit-Current.json",
+    "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ReadyStartPauseFocusAndHeldCombat_TransitionsNeverContributeElapsed",
+    "Status": "Passed",
+    "Duration": 0.003921,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-206/P2-Edit-Current.json",
+    "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.StateNotificationCannotReenterStartPauseOrAdvance",
+    "Status": "Passed",
+    "Duration": 0.0016945,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-206/Final-Full-Edit-Status-01.json",
+    "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.EnemyReservationAndThenLivingEnemyBlockReadyPlayer_UntilDamageReleasesSpace",
+    "Status": "Passed",
+    "Duration": 0.0045635,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-206/Final-Full-Edit-Status-01.json",
+    "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.ReadyBirthUsesFullSixteenPixelLivingTankFootprint_DeadPositionNotReserved(39,False)",
+    "Status": "Passed",
+    "Duration": 0.0055519,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-206/Final-Full-Edit-Status-01.json",
+    "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.ReadyBirthUsesFullSixteenPixelLivingTankFootprint_DeadPositionNotReserved(40,True)",
+    "Status": "Passed",
+    "Duration": 0.0028873,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-206/Final-Full-Edit-Status-01.json",
+    "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.SharedEnemyWeaponDeath_AbsoluteDelayAndProtectionEndpoints_ConsumesProtectedHits",
+    "Status": "Passed",
+    "Duration": 0.0070825,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-206/Final-Full-Edit-Status-01.json",
+    "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.ThreeActualGenerationsSpendExactlyThreeLives_ThenNeverRespawn",
+    "Status": "Passed",
+    "Duration": 0.0029526,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-207/Raw/lifecycle-play-result.json",
+    "FullName": "BattleCity.Tests.SessionLifecyclePlayModeTests.OutcomeNotificationRestart_ReplacesOnlyAfterSettledTickAndOldSessionNeverAdvancesAgain",
+    "Status": "Passed",
+    "Duration": 0.0633576,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-207/Raw/lifecycle-play-result.json",
+    "FullName": "BattleCity.Tests.SessionLifecyclePlayModeTests.RealControllerUpdate_ReadyStartHeldInputFocusTerminalAndRestartEdges",
+    "Status": "Passed",
+    "Duration": 0.5446971,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-207/Raw/lifecycle-play-result.json",
+    "FullName": "BattleCity.Tests.SessionLifecyclePlayModeTests.ThreeRestarts_RestoreSnapshotsNaturalFirstSpawnLeasesAndPresentationWithoutHostAccumulation",
+    "Status": "Passed",
+    "Duration": 0.0985584,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-206/Recheck-Test-Status-01.json",
+    "FullName": "BattleCity.Tests.PlayerLifeIntegrationPlayModeTests.Stage01_RealUpdateSharedEnemyWeaponDeathHiddenWaitRespawnShieldExpiry_PauseAndFocusFreeze",
+    "Status": "Passed",
+    "Duration": 3.436936,
+    "Message": null,
+    "StackTrace": null
+  },
+  {
+    "evidence": "Docs/Stage2/BC-207/Raw/hud-play-final-result.json",
+    "FullName": "BattleCity.Tests.ArenaHudPlayModeTests.RealUpdate_PhasesCountsTerminalAndPhysicalRestartRebindImmediately",
+    "Status": "Passed",
+    "Duration": 0.1107063,
+    "Message": null,
+    "StackTrace": null
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var t=System.AppDomain.CurrentDomain.GetAssemblies().SelectMany(a=>a.GetTypes()).Single(t=>t.FullName==\"Unity.Pipeline.Editor.Commands.AutoTickCommand\"); var f=System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic; return new { playing=UnityEditor.EditorApplication.isPlaying, paused=UnityEditor.EditorApplication.isPaused, compiling=UnityEditor.EditorApplication.isCompiling, scenes=Enumerable.Range(0,UnityEngine.SceneManagement.SceneManager.sceneCount).Select(i=> new { path=UnityEngine.SceneManagement.SceneManager.GetSceneAt(i).path, dirty=UnityEngine.SceneManagement.SceneManager.GetSceneAt(i).isDirty }).ToArray(), background=UnityEngine.Application.runInBackground, playerBackground=UnityEditor.PlayerSettings.runInBackground, autoTick=t.GetField(\"s_Enabled\",f).GetValue(null),interval=t.GetField(\"s_IntervalMs\",f).GetValue(null),storedEnabled=UnityEditor.SessionState.GetBool(\"Unity.Pipeline.AutoTick.Enabled\",false),storedInterval=UnityEditor.SessionState.GetInt(\"Unity.Pipeline.AutoTick.IntervalMs\",-1) };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playing": false,
+        "paused": false,
+        "compiling": false,
+        "scenes": [
+          {
+            "path": "Assets/BattleCity/Scenes/Stage01.unity",
+            "dirty": false
+          }
+        ],
+        "background": false,
+        "playerBackground": false,
+        "autoTick": true,
+        "interval": 16,
+        "storedEnabled": false,
+        "storedInterval": -1
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

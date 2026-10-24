@@ -22,6 +22,10 @@
 
 ## 当前 lane
 
+**2026-10-24 本轮最终覆盖：BC208/209已验收，阶段二10/10，M2通过。** 八边界复用20唯一历史成功用例；只新增Stage01真实Update三生命耗尽→Lost→物理R Ready一项与相邻复活专项一次，2/2 Passed。胜利/基地毁坏使用用户本轮明确人工游玩确认；新两图、tick1→364、Console776→800无新增warn/error。fresh Review OK with notes，无具体缺陷；主代理独立68源码hash/20原始结果及文件边界核对。见`BC-208-209/Acceptance.md`，无需用户补测。没有自动自然通关或新全量回归声明，无活跃writer、无提交/推送，不自动进入阶段三。以下授权/207及更早状态均为历史。
+
+**2026-10-24 20:10:58+08:00 新授权覆盖：继续BC208/209，避免重复已通过验证。** 新基线main/eb858f3，起点仅既存.vsconfig。用户已在Editor玩过数局，明确确认胜利/基地被毁基本循环正常，作为人工证据而非自动结果。一个worker查8项已有覆盖→只补缺口→209最小运行/画面/Console，随后一个fresh只读审查与主代理验收；生产源码默认不动，不重跑全量/像素矩阵、不要求用户重打已确认流程。契约`BC-208-209/Contract.md`。阶段二暂仍8/10/M2未通过，收齐证据才勾选，不进入阶段三。以下207及更早记录为历史。
+
 **2026-10-24 本轮最终覆盖：BC-207已通过主代理验收，阶段二8/10，M2未通过。** 基线main/b2b14b9；single-seam只读HUD，一个worker实现/聚焦验证与一个fresh reviewer均完成。40唯一用例Passed（新13+相关27）、实际tick0→623、两种实际GameView像素比较一致，Console增量无warn/error；fresh Review OK with notes，无具体P0/P1/P2。主代理17文件hash/结果/保护资产核对完成。详见`BC-207/Acceptance.md`，约24分钟分阶段及优化见`TimeLog.md`。Editor保存证据时stopped/clean、临时设置清理；无活跃writer、无提交/推送，不自动开展208/209。下方BC206“最终覆盖”及其他覆盖均为历史。
 
 **最终覆盖：BC206已验收，阶段二7/10，M2未通过。** 用户确认Editor无持续异常后主代理直接完成P2修补：10/10生命周期Edit（新增2例）、3/3生命周期Play、1/1复活Play通过，独立聚焦复审OK。有效证据并集472唯一用例，不是单次472全量；截图未留档如实记录，不再阻塞206。最终Editor stopped/clean/backgroundfalse、增量32Console全log；见BC-206/Acceptance.md、P2-Final-Audit.json。无活跃writer，不自动开展207。以下状态为历史。
@@ -134,5 +138,5 @@ BC-201 可包含坦克通用血量/幂等命中/死亡能力以及可测试的�
 | BC-205 | 已验收，用户人工确认通过 | 359 Edit+60 Play=419唯一Passed；独立Update/三截图/清理齐全，fresh审查OK with notes；主代理64源码+259保护文件+5recipe/截图hash与原始集合/运行端点核对通过；用户确认总3次出场及复活护盾有效，见Acceptance.md/Manual-Check.md；无活跃worker |
 | BC-206 | 已验收 | P2已修，10Edit+4Play聚焦通过，fresh复审OK；有效证据472唯一用例、原失败保留；截图不再阻塞，详见BC-206/Acceptance.md |
 | BC-207 | 已验收 | 像素HUD/提示、真实计数与重开绑定；40唯一用例通过、实际两档窗口缩放证据、fresh Review OK with notes；见BC-207/Acceptance.md及TimeLog.md，无活跃writer |
-| BC-208 | 待办 | 完整闭环与边界自动回归 |
-| BC-209 / M2 | 待办 | 运行、截图、Console及流程验收；列明人工体验未覆盖项 |
+| BC-208 | 已验收 | 八边界映射20既有唯一Passed证据，当前源码兼容；仅补一条真实Stage01三生命耗尽整合，不全量重跑 |
+| BC-209 / M2 | 已验收 / M2通过 | 人工胜利/基地毁坏＋本轮三生命耗尽→Lost→R Ready，2/2执行Passed、tick/两图/Console/清理及fresh审查/主代理核对；阶段二10/10，无需用户补测 |

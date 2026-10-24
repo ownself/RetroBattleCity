@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-24T20:22:43.164980+08:00",
+  "head": "eb858f3579626b5e66ba253afb94cdb0240118f2",
+  "sourceHashesIndependentlyRecomputed": 68,
+  "allMatch": true,
+  "historicalPassedCasesCheckedAgainstOriginalResults": 20,
+  "currentPassedTests": [
+    "BattleCity.Tests.Stage01LifeExhaustionPlayModeTests.RealUpdate_ThreeStage01LivesExhaustedByControlledEnemyBullets_LostThenPhysicalRReady",
+    "BattleCity.Tests.PlayerLifeIntegrationPlayModeTests.Stage01_RealUpdateSharedEnemyWeaponDeathHiddenWaitRespawnShieldExpiry_PauseAndFocusFreeze"
+  ],
+  "historicalPlusNewUnique": 21,
+  "trackedFilesBeforeAcceptance": [
+    "Docs/Stage2/Execution-Board.md"
+  ],
+  "newAssetFiles": [
+    "Assets/BattleCity/Tests/PlayMode/Stage01LifeExhaustionPlayModeTests.cs",
+    "Assets/BattleCity/Tests/PlayMode/Stage01LifeExhaustionPlayModeTests.cs.meta"
+  ],
+  "consoleEntriesChecked": 24,
+  "consoleCursor": 800,
+  "imageReview": "Parent directly opened Lost and R Ready; consistent with test assertions. Not independent pixel recomputation.",
+  "auditCorrection": "Initial local parser assumed lower-case results; historical synchronous runner uses Results. Corrected once; no Unity action/test rerun."
+}
