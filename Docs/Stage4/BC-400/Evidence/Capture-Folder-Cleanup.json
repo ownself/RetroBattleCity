@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "if (System.IO.Directory.Exists(\"Assets/Temp\") && System.IO.Directory.GetFileSystemEntries(\"Assets/Temp\").Length == 0) UnityEditor.AssetDatabase.DeleteAsset(\"Assets/Temp\"); return \"temporary capture folder cleaned only if empty\";"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "temporary capture folder cleaned only if empty"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

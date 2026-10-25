@@ -1,0 +1,17 @@
+{
+  "Assets\\BattleCity\\Editor\\SinglePlayerAuthoring.cs": "0bc17e95b5c2f748a9781dc8c00776358d862657a01ab5efa75fba0c02e51fd9",
+  "Assets\\BattleCity\\Editor\\SinglePlayerAuthoring.cs.meta": "665e3966a99cfccabb6fc53197d1b5b7ecb418d6484c501c034df2d7b38b4c81",
+  "Assets\\BattleCity\\Scenes\\SinglePlayer.unity": "cb03fdfd8493346a8d042d2ef9c2a6f15bc80bfb56f2e4bda219638b6a47c05f",
+  "Assets\\BattleCity\\Scenes\\SinglePlayer.unity.meta": "e27c3d82d5bdc495dd93d0f2523feb1b104cd2686436bff6da9241f9dd8f3e94",
+  "Assets\\BattleCity\\Tests\\EditMode\\SinglePlayerFlowTests.cs": "4d43b60e3e030a8de13af9bfa834c6791d6ca6fdea35165853fc0c1ef66d0758",
+  "Assets\\BattleCity\\Tests\\EditMode\\SinglePlayerFlowTests.cs.meta": "4f7ea15eaac5b1355160e60018ea63a0bc1e773f6042f4b749db3a9df99b3b09",
+  "Assets\\BattleCity\\Tests\\PlayMode\\SinglePlayerFlowPlayModeTests.cs": "14645876423ff293857da83092269a27a9d0fc2855199d8075a6fc81352267a1",
+  "Assets\\BattleCity\\Tests\\PlayMode\\SinglePlayerFlowPlayModeTests.cs.meta": "8f05c5b1c8abd9515a9a42b9d3a19fd6905c16b50f848099ff1ab1ed2491aa89",
+  "Assets\\BattleCity\\Scripts\\UI\\SinglePlayerFlow.cs": "6134b4a3c4de43321c69b6ca901c2f4350543d8885f4b6e8c69ed57972aa4b65",
+  "Assets\\BattleCity\\Scripts\\UI\\SinglePlayerFlow.cs.meta": "4900bf7e549be47051e4921cee985f81018abf64b321f78b05d035655ad650c1",
+  "Assets\\BattleCity\\Scripts\\UI\\SinglePlayerFlowState.cs": "6e71ba50821303d1065c2bf00ffcb975cab69fb4e11addff7f503de8d76be648",
+  "Assets\\BattleCity\\Scripts\\UI\\SinglePlayerFlowState.cs.meta": "cba63962d7d0aaa2acdc7b0f3a1fb1dd3006a45dddc16d4afe6d52279675485b",
+  "Assets\\BattleCity\\Scripts\\Core\\ArenaController.cs": "185920dba8a2ebc97922686255943f17e8bb19ed846146526147ed691bb90bfa",
+  "Assets\\BattleCity\\Scripts\\UI\\PixelHudText.cs": "3f14974c55d1a26194e538d12cc364064b19e2ba0ad16d540ca2a5152d7a02d0",
+  "Assets\\BattleCity\\Art\\Title.png": "7b16eaece57165acef3083cce29e8b580e46a73651eab76b71f8197e5c51ed98"
+}

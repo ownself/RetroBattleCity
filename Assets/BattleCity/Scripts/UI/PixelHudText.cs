@@ -18,6 +18,22 @@ namespace BattleCity
         {
             switch (c)
             {
+                case '0': return "111101101101111";
+                case '1': return "010110010010111";
+                case '2': return "110001111100111";
+                case '3': return "110001011001110";
+                case '4': return "101101111001001";
+                case '5': return "111100110001110";
+                case '6': return "011100111101111";
+                case '7': return "111001010010010";
+                case '8': return "111101111101111";
+                case '9': return "111101111001110";
+                case '>': return "100010001010100";
+                case 'B': return "110101110101110";
+                case 'H': return "101101111101101";
+                case 'K': return "101101110101101";
+                case 'X': return "101101010101101";
+                case 'Z': return "111001010100111";
                 case 'A': return "010101111101101";
                 case 'C': return "111100100100111";
                 case 'D': return "110101101101110";

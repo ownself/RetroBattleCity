@@ -1,0 +1,26 @@
+{
+  "success": false,
+  "command": "recompile",
+  "data": {
+    "status": "completed",
+    "compiling": false,
+    "failed": true,
+    "compilationFailed": true,
+    "errors": [
+      {
+        "type": "compile-error",
+        "raw": "Assets\\BattleCity\\Tests\\PlayMode\\SinglePlayerFlowPlayModeTests.cs(86,25): error CS1061: 'ArenaSession' does not contain a definition for 'Release' and no accessible extension method 'Release' accepting a first argument of type 'ArenaSession' could be found (are you missing a using directive or an assembly reference?)",
+        "file": "Assets\\BattleCity\\Tests\\PlayMode\\SinglePlayerFlowPlayModeTests.cs",
+        "line": 86,
+        "column": 25,
+        "code": "CS1061",
+        "message": "'ArenaSession' does not contain a definition for 'Release' and no accessible extension method 'Release' accepting a first argument of type 'ArenaSession' could be found (are you missing a using directive or an assembly reference?)"
+      }
+    ],
+    "warnings": [],
+    "summary": {
+      "errors": 1,
+      "warnings": 0
+    }
+  }
+}

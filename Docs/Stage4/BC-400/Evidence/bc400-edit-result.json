@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.36,
+      "summary": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.SinglePlayerFlowTests.AlternateConfirmKeysCannotBypassHeldConfirmation",
+          "Status": "Passed",
+          "Duration": 0.0176834,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SinglePlayerFlowTests.HeldConfirmCannotSkipIntroOrLeakIntoBattle",
+          "Status": "Passed",
+          "Duration": 0.0003634,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SinglePlayerFlowTests.RestartBattleReturnsToIntroOnlyOnce",
+          "Status": "Passed",
+          "Duration": 0.0002768,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SinglePlayerFlowTests.TerminalResultRequiresFreshConfirmAndCanReturnToTitle(Won,Complete)",
+          "Status": "Passed",
+          "Duration": 0.0029952,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SinglePlayerFlowTests.TerminalResultRequiresFreshConfirmAndCanReturnToTitle(Lost,GameOver)",
+          "Status": "Passed",
+          "Duration": 0.0007189,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SinglePlayerFlowTests.UnfocusedAndSuppressedHeldConfirmCannotAdvance",
+          "Status": "Passed",
+          "Duration": 0.0007597,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

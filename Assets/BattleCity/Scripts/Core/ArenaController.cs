@@ -41,6 +41,7 @@ namespace BattleCity
         public CombatEffectView EffectView { get; private set; }
         public PickupView PickupView { get; private set; }
         public ArenaHud hud;
+        public SinglePlayerFlow singlePlayerFlow;
 
         private void Awake()
         {
@@ -176,7 +177,13 @@ namespace BattleCity
             var buttons = KeyboardInputSource.Read();
             bool restart = (buttons & PlayerButtons.Restart) != 0 && (previousButtons & PlayerButtons.Restart) == 0;
             previousButtons = buttons;
-            if (initialSessionLifecycle && focused && restart) { RestartSession(); return; }
+            if (singlePlayerFlow != null)
+            {
+                if (!singlePlayerFlow.Route(this, buttons, focused)) { RenderSession(); return; }
+                // Flow owns restart; the legacy combat harness retains its original input path.
+                buttons &= ~(PlayerButtons.Restart | PlayerButtons.Start);
+            }
+            else if (initialSessionLifecycle && focused && restart) { RestartSession(); return; }
             updating = true;
             try { Session.AdvanceFrame(Time.unscaledDeltaTime, buttons); }
             finally { updating = false; }
@@ -198,17 +205,24 @@ namespace BattleCity
 
         private void RenderHud()
         {
-            if (hud != null) hud.Render(Session, initialLevel.stageNumber);
+            if (hud != null)
+            {
+                hud.Render(Session, initialLevel.stageNumber);
+                if (singlePlayerFlow != null && singlePlayerFlow.State.Screen != SinglePlayerScreen.Battle) hud.Clear();
+            }
+            if (singlePlayerFlow != null) singlePlayerFlow.Render(Session, initialLevel.stageNumber);
         }
 
         private void OnApplicationFocus(bool hasFocus)
         {
             focused = hasFocus;
+            if (singlePlayerFlow != null) singlePlayerFlow.State.Suppress(KeyboardInputSource.Read());
             if (Session != null) Session.SetFocus(hasFocus);
         }
 
         private void OnDisable()
         {
+            if (singlePlayerFlow != null) singlePlayerFlow.Clear();
             if (hud != null) hud.Clear();
             if (Session != null)
             {
@@ -224,6 +238,7 @@ namespace BattleCity
 
         private void OnDestroy()
         {
+            if (singlePlayerFlow != null) singlePlayerFlow.Clear();
             if (hud != null) hud.Clear();
             ClearEnemyDisplays();
             ClearEffects();
@@ -376,6 +391,11 @@ namespace BattleCity
                 }
             }
             if (hud != null) hud.ValidateBindings();
+            if (singlePlayerFlow != null)
+            {
+                if (!enableSessionLifecycle) throw new InvalidOperationException("Single-player flow requires session lifecycle.");
+                singlePlayerFlow.ValidateBindings();
+            }
             if (enableSessionLifecycle && enemyWaveDefinition == null)
                 throw new InvalidOperationException("Session lifecycle requires an enemy wave definition.");
             if (baseRenderer != null)

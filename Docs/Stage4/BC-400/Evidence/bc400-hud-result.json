@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.22,
+      "summary": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.ArenaHudPlayModeTests.DisableDestroy_ClearsSessionReferenceAndCanvasWithoutSubscriptions",
+          "Status": "Passed",
+          "Duration": 0.0423649,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaHudPlayModeTests.Projection_DeathWaitRespawnAndWonShowSettledNumbersWithoutAdvancingClock",
+          "Status": "Passed",
+          "Duration": 0.0433442,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaHudPlayModeTests.RealUpdate_PhasesCountsTerminalAndPhysicalRestartRebindImmediately",
+          "Status": "Passed",
+          "Duration": 0.1243956,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command capture game_view",
+  "data": {
+    "command": "capture game_view",
+    "parameters": {
+      "source": "screen",
+      "save_path": "Temp/BC400-Intro.png"
+    },
+    "result": {
+      "width": 1280,
+      "height": 720,
+      "encoding": "png",
+      "bytes": 13143,
+      "source": "screen",
+      "savedPath": "Assets/Temp/BC400-Intro.png"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}
