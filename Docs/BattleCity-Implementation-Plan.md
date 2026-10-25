@@ -404,6 +404,14 @@ Docs/
 
 | PH4-009 | 道具掉落随机性修复 | 用户报告铁锹/时钟/星星不出现、首件总是坦克；确认每关重置seed303导致前三件固定Tank/Grenade/Helmet，改实际Controller每Session使用新非零独立seed，保留纯模拟固定seed及显式重放能力 | 新5Edit及相关定向去重34唯一最终Passed（25Edit+9Play）；覆盖六种首件、实际携带者/拾取、重开新seed与重放、六效果；铁锹长时序夹具2失败一次隔离自然出生后2/2通过，原件保留；编译成功，Console增量55全log、最终错误0/警告0；见Docs/Bugfixes/Pickup-Randomness/Verification.md | 仍为每关3次自然机会、随机可重复，不保证每局六种齐全；未改道具效果/资产/波次AI随机流，非首轮全绿/自然多局概率实测；Editor stopped/clean/backgroundfalse，无提交推送 |
 
+| PH4-010 | 普通/快弹速度与星星层次调校 | 用户反馈初始玩家/普通敌人弹速过快，确认既有一星快弹/二星两发/三星破钢顺序，普通180→120、快弹300→240 px/s；保留15tick冷却、Power敌人快弹；Editor API更新9坦克资产及缺失资产配方/默认值 | 新增4Edit+1Play；一次全Edit744/757、旧弹速13断言一次同步定向通过；定向Play最终13唯一Passed，EnemyTypes一项端点冷却时序一次修正通过；并集770唯一最终Passed（757Edit+13Play），非首轮全绿/全Play回归；见Docs/Bugfixes/Bullet-Speed/Verification.md | 新值为手感调校而非原版逐帧证据，用户试玩手感待反馈；不改碰撞/破砖/坦克移动/AI/波次/道具效果/场景；Console增量102全log、最终错误0/警告0，Editor stopped/clean/backgroundfalse；无提交推送 |
+
+| PH4-011 | 正常切关继承星星等级 | 用户报告升级无法继承；确认AdvanceStage复用重开路径把等级归0，改仅正常胜利推进携带当前0～3级至新Session，立即恢复Sprite/武器；死亡、R重开、选关及新一轮仍归零，不携带旧弹/冷却/临时效果 | 修复前一星切关用例Expected1/Actual0；新增8Edit+4Play，定向49唯一最终Passed（35Edit+14Play），覆盖1/2/3级继承、继续升级/封顶、死亡后0级继承、重开/全通关/失败回Title清零；编译成功，见Docs/Bugfixes/Star-Carryover/Verification.md | 保留前轮全部未提交弹速补丁，20项hash未变；不扩展生命/分数跨关规则，不改资产/场景/升级与死亡规则；Console增量59全log、最终错误0/警告0，Editor stopped/clean/backgroundfalse；非全回归/自然通关/用户试玩，无提交推送 |
+
+| PH4-012 | 三星破铁按命中面整排消除 | 用户指出2×2钢块应首发削为2×1/1×2；确认旧MapState只删一个8px钢格，改为16px横宽×8px进深双格排；保留同tick接触快照、不穿透及仅三星门禁 | 新25Edit＋1Play；修复前15/25复现Expected8/Actual4，修复后全Edit790/790、升级Play5/5，795唯一最终Passed；覆盖四方向两发、同帧幂等/不钻穿、裁边、混合地形、碰撞/Tilemap及重开；见Docs/Bugfixes/Steel-Strip/Verification.md | 无资产/场景/素材/物理系统改动，砖墙16×4不变；前两轮22项hash保护；首次域重载连接间隙一次ready纠正成功、原件保留，无升级重启；Console增量44全log、最终错误0/警告0，Editor stopped/clean/backgroundfalse；非自然通关/全Play/构建/人工试玩，无提交推送 |
+
+| PH4-013 | 显式60FPS渲染上限 | 用户要求游戏帧率上限60；新增场景前运行时启动钩子设置targetFrameRate=60、vSyncCount=0，防桌面VSync覆盖限帧；不改独立60Hz逻辑 | 新3Edit+1Play共4唯一Passed；启动钩子/真实SinglePlayer加载/帧推进通过，短时Editor30帧/0.510秒约58.8fps，非独立Player性能保证；编译成功，见Docs/Bugfixes/Frame-Cap/Verification.md | 不修改ProjectSettings/场景/资产，前轮27项hash保护；Console增量14全log、最终错误0/警告0；测试后恢复Editor原cap=-1/VSync1，stopped/clean/backgroundfalse，下次Play自动60/0；非全回归/构建/人工试玩，无提交推送 |
+
 ### 实施记录填写模板
 
 ```text

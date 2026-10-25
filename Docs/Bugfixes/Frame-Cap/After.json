@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "if (UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode) throw new System.InvalidOperationException(\"Do not alter an active Play session\"); UnityEngine.Application.targetFrameRate = -1; return new { playing = UnityEditor.EditorApplication.isPlaying, paused = UnityEditor.EditorApplication.isPaused, scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().path, dirty = UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty, background = UnityEngine.Application.runInBackground, targetFrameRate = UnityEngine.Application.targetFrameRate, vSyncCount = UnityEngine.QualitySettings.vSyncCount };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playing": false,
+        "paused": false,
+        "scene": "Assets/BattleCity/Scenes/SinglePlayer.unity",
+        "dirty": false,
+        "background": false,
+        "targetFrameRate": -1,
+        "vSyncCount": 1
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

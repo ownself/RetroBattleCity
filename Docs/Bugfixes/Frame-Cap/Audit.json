@@ -1,0 +1,42 @@
+{
+  "uniquePassed": 4,
+  "editPassed": 3,
+  "playPassed": 1,
+  "sourceAndGeneratedMetaSha256": {
+    "Assets/BattleCity/Scripts/Core/GameFrameRate.cs": "4591d977275d64aa3e63cf0ad49db0056cc505b69d6a836dadebef82e0b46307",
+    "Assets/BattleCity/Tests/EditMode/GameFrameRateTests.cs": "4b2aa451294163a149d8a5ec536739943e26a3715d8c711be96124149addd467",
+    "Assets/BattleCity/Tests/PlayMode/GameFrameRatePlayModeTests.cs": "9a100c2a68cb738003986ee6b5645f5655a0075cca9f420f91700fac96f1d720",
+    "Assets/BattleCity/Scripts/Core/GameFrameRate.cs.meta": "9080da3982825f9d6196614e0c45425f95f1fcd04cc9a2f2c03ded2b805ac19e",
+    "Assets/BattleCity/Tests/EditMode/GameFrameRateTests.cs.meta": "311baab748ae9da60742d9c60ba26b7228e10c3b474b5f09e44a819b3e29298d",
+    "Assets/BattleCity/Tests/PlayMode/GameFrameRatePlayModeTests.cs.meta": "986fa29eea1b7e7596f51d7219e105029a8e42dee1f481affa6948260058b7c9"
+  },
+  "priorPatchesUnchangedSha256": {
+    "Assets/BattleCity/Data/EnemyArmor.asset": "229fe261e61c624e0004c210f5fef251e227455e97d0ae21ea1d4b037caf0a90",
+    "Assets/BattleCity/Data/EnemyBasic.asset": "361dcf86ce63cf69749a2f6e01e620a47d24436f06919df2875edbba0c37e702",
+    "Assets/BattleCity/Data/EnemyBasicPrototype.asset": "9c5a6f0d08b599582561cddaf22ee29d075532b4f7e801c1f659ba00a193eeff",
+    "Assets/BattleCity/Data/EnemyFast.asset": "5fdb9d23c90081885b76ea61e079f69286a2a7dc78590e4a2208a4a6b312bf0d",
+    "Assets/BattleCity/Data/EnemyFastBullet.asset": "5976a767b9819e9973f5f9d38be2669529a84f23f988f130a5ec73dfadf1ded3",
+    "Assets/BattleCity/Data/PlayerLevel1.asset": "25fc463302abec1e84afe75dc7ec212117aff70cf14d64c50811449519c1288b",
+    "Assets/BattleCity/Data/PlayerLevel2.asset": "598e69bfebaca5145a0a01dabc29496a4ae624fe206c7d3b7525c43961616c27",
+    "Assets/BattleCity/Data/PlayerLevel3.asset": "86fbfa22ff29eb34d187c9355c727e5daa1c61c70614feaf8330c8ae43dac545",
+    "Assets/BattleCity/Data/PlayerPrototype.asset": "8c4b4113a25a96ef384878a1939cc25799f67c1eee82714ca5f60e9f15d5806e",
+    "Assets/BattleCity/Editor/EnemyBalanceAuthoring.cs": "0e0da1a02c8ed231fd33dc81afb41200889c50fe3126c1507bddb228343faff1",
+    "Assets/BattleCity/Editor/PlayerUpgradeAuthoring.cs": "2c0f45ac045c8bec05e06c2b37fe5be9f191a2ef46401bf0800cce1cd088eb07",
+    "Assets/BattleCity/Scripts/Tanks/TankDefinition.cs": "fb7df1f80d96e7ac92c551692a19f68eb766998d10bb2c0fbb2424fd8baef46f",
+    "Assets/BattleCity/Tests/EditMode/BaseStateTests.cs": "24bbd69d7b476d37e76c81b313cdc5c2b3d338ae619334adc5c54c4f65c13431",
+    "Assets/BattleCity/Tests/EditMode/EnemyBalanceDefinitionTests.cs": "cdc4dcc6d80e6dcdfdf59372c5b274096e41d456ec6403f3781027f0d0f70b03",
+    "Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs": "7fe21da0f1bfbed2ac1f456dfc13c3e377b2bc88a3f749fb937c5e845cb37ba0",
+    "Assets/BattleCity/Tests/EditMode/TankStateTests.cs": "a9fa4193089704f10e0923e0a6e9d29a77ef551a4b7fcf8d7b4836662026b9c4",
+    "Assets/BattleCity/Tests/EditMode/WeaponTests.cs": "1d513733b8a9b569a84cf311d47ca4e6bdf0ebea8f3526af212bb081243debe4",
+    "Assets/BattleCity/Tests/PlayMode/ArenaPlayModeTests.cs": "a60a8231f351afdfd71d31399478a9e43466cff2934d48476962e947ff49b5ca",
+    "Assets/BattleCity/Tests/PlayMode/EnemyTypesPlayModeTests.cs": "8cf6cb6085e6d0085968ae28305172f3a16ed69664827ecc647627759397984d",
+    "Assets/BattleCity/Scripts/Core/ArenaController.cs": "f630a4edcb966e19a810c43f68c4f06ac31f6c0e58ce7f855cd7967938bfc331",
+    "Assets/BattleCity/Scripts/Core/ArenaSession.cs": "f5f69805dc2f1bb9c4f0d4be03a1f3db634e046e170735bcf8a9bd45a0063913",
+    "Assets/BattleCity/Tests/PlayMode/CampaignPlayModeTests.cs": "84a72412465e46338ea2060b565c4d9d8982e4c0b9ec89752dd8b08bc6ab5cad",
+    "Assets/BattleCity/Scripts/Map/MapState.cs": "26bbb4512cc5fa7a2aee9a96afa3f50ba65b1b7f0cacf7f943e10adea5a84d85",
+    "Assets/BattleCity/Tests/EditMode/SteelDestructionTests.cs": "4c760bec4e0603b6cec1997658179dd79b5e4255c8f8d66fd1642c7a9caa09b8",
+    "Assets/BattleCity/Tests/EditMode/SteelDestructionTests.cs.meta": "af733fb1056e800d7fe82431ab20472572520f2b1353413267073ec6f6d48864",
+    "Assets/BattleCity/Tests/EditMode/PlayerUpgradeTests.cs": "7180fbe33aaf63ccdd8ff1e4e02c11c230560cac662a9211f715ac278aaebc77",
+    "Assets/BattleCity/Tests/PlayMode/PlayerUpgradePlayModeTests.cs": "d8e7f2017e8ac00897abd0217c035cde1a33821599c4c6571bd8513469903ddb"
+  }
+}

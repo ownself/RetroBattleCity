@@ -28,10 +28,10 @@ namespace BattleCity.Editor
 
             var entries = new[]
             {
-                Create(EnemyKind.Basic, "Basic", "basic", 60, 180, 1, 100),
-                Create(EnemyKind.Fast, "Fast", "fast", 90, 180, 1, 200),
-                Create(EnemyKind.FastBullet, "FastBullet", "power", 60, 300, 1, 300),
-                Create(EnemyKind.Armor, "Armor", "armor", 45, 180, 4, 400)
+                Create(EnemyKind.Basic, "Basic", "basic", 60, 120, 1, 100),
+                Create(EnemyKind.Fast, "Fast", "fast", 90, 120, 1, 200),
+                Create(EnemyKind.FastBullet, "FastBullet", "power", 60, 240, 1, 300),
+                Create(EnemyKind.Armor, "Armor", "armor", 45, 120, 4, 400)
             };
             roster = ScriptableObject.CreateInstance<EnemyBalanceDefinition>();
             try

@@ -67,12 +67,16 @@ namespace BattleCity
 
         public ArenaSession(LevelDefinition level, TankDefinition tank, EnemyWaveDefinition wave = null, bool enableBase = false,
             PlayerLifeParameters playerLifeParameters = null, bool enableSessionLifecycle = false,
-            PlayerUpgradeDefinition playerUpgrades = null, PickupDefinition pickups = null, uint? pickupSeed = null)
+            PlayerUpgradeDefinition playerUpgrades = null, PickupDefinition pickups = null, uint? pickupSeed = null,
+            int initialPlayerUpgradeLevel = 0)
         {
             if (enableSessionLifecycle && wave == null) throw new ArgumentNullException(nameof(wave));
             if (enableSessionLifecycle) { flow = new SessionFlowState(); Clock.SetPaused(true); }
             if (tank == null) throw new ArgumentNullException(nameof(tank));
             tank.Validate();
+            if (initialPlayerUpgradeLevel < 0 || initialPlayerUpgradeLevel > PlayerUpgradeDefinition.MaxLevel ||
+                (playerUpgrades == null && initialPlayerUpgradeLevel != 0))
+                throw new ArgumentOutOfRangeException(nameof(initialPlayerUpgradeLevel));
             PlayerUpgrades = playerUpgrades == null ? null : new PlayerUpgradeState(playerUpgrades, tank);
             Map = new MapState(level);
             stageNumber = level.stageNumber;
@@ -93,6 +97,8 @@ namespace BattleCity
             }
             Tanks = tanks.AsReadOnly();
             PlayerTank = AddTank(tank, CombatTeam.Player, level.playerSpawnPixels);
+            // Restore only progression onto a fresh weapon: no old cooldown, projectiles or receipts.
+            for (int i = 0; i < initialPlayerUpgradeLevel; i++) PlayerUpgrades.TryUpgrade(PlayerWeapon);
         }
 
         /// <summary>Explicit registration, not a wave/spawn policy. IDs are never reused in this session.</summary>

@@ -39,7 +39,8 @@ namespace BattleCity.Tests
         {
             var s = Session(); int notifications = 0; s.BaseDestroyed += () => notifications++;
             var weapon = Shoot(s.Bullets, team, s.Base.Position - direction.Vector() * 32, direction, BaseState.EntityId);
-            Tick(s, 4);
+            // Muzzle to base contact is 12px: six ticks at the normal 2px/tick speed.
+            Tick(s, 6);
             Assert.That(s.Base.IsAlive, Is.False); Assert.That(s.BaseFailureRequested, Is.True);
             Assert.That(notifications, Is.EqualTo(1)); Assert.That(weapon.ActiveBullets, Is.Zero);
             Assert.That(s.Bullets.Hits.Single().Kind, Is.EqualTo(BulletHitKind.Base));

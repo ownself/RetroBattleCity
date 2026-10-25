@@ -1,0 +1,438 @@
+{
+  "success": true,
+  "command": "command console get",
+  "data": {
+    "command": "console get",
+    "parameters": {
+      "since": "2853",
+      "tail": "200"
+    },
+    "result": {
+      "entries": [
+        {
+          "seq": 2854,
+          "timestampUtc": "2026-10-25T07:05:56.8535571Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Running 25 tests (explicit tests excluded)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner/<>c__DisplayClass9_0:<ExecuteTestsInternal>b__0 (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/PipelineTestRunner.cs:359)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2855,
+          "timestampUtc": "2026-10-25T07:05:58.653457Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2856,
+          "timestampUtc": "2026-10-25T07:05:58.9896183Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 790 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2857,
+          "timestampUtc": "2026-10-25T07:05:59.5058361Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Jimmy/AppData/LocalLow/DefaultCompany/BattleCity\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 2858,
+          "timestampUtc": "2026-10-25T07:05:59.5602564Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 25 total, 10 passed, 15 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2859,
+          "timestampUtc": "2026-10-25T07:05:59.7684142Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2860,
+          "timestampUtc": "2026-10-25T07:07:29.1588906Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Running 790 tests (explicit tests excluded)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner/<>c__DisplayClass9_0:<ExecuteTestsInternal>b__0 (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/PipelineTestRunner.cs:359)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2861,
+          "timestampUtc": "2026-10-25T07:07:31.4437225Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2862,
+          "timestampUtc": "2026-10-25T07:07:32.4323188Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 790 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2863,
+          "timestampUtc": "2026-10-25T07:07:38.6247787Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=30 tick=10 dropped=0 player=(24.00, 34.00) cooldown=6 ownerBullets=0 revision=4 brick2x8=12 bullets=[] effects=[id=1,pos=(24.00, 62.00),age=9,frame=2]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2864,
+          "timestampUtc": "2026-10-25T07:07:38.6257761Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=30 tick=20 dropped=0 player=(24.00, 44.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=2,pos=(24.00, 66.00),age=4,frame=1]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2865,
+          "timestampUtc": "2026-10-25T07:07:38.6257761Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=30 tick=30 dropped=0 player=(24.00, 54.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2866,
+          "timestampUtc": "2026-10-25T07:07:38.6267734Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=30 tick=40 dropped=0 player=(24.00, 64.00) cooldown=6 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=3,pos=(24.00, 126.00),age=9,frame=2]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2867,
+          "timestampUtc": "2026-10-25T07:07:38.6277707Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=30 tick=50 dropped=0 player=(24.00, 74.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=4,pos=(24.00, 126.00),age=4,frame=1]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2868,
+          "timestampUtc": "2026-10-25T07:07:38.6277707Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=30 tick=60 dropped=0 player=(24.00, 84.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2869,
+          "timestampUtc": "2026-10-25T07:07:38.6307629Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=60 tick=10 dropped=0 player=(24.00, 34.00) cooldown=6 ownerBullets=0 revision=4 brick2x8=12 bullets=[] effects=[id=1,pos=(24.00, 62.00),age=9,frame=2]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2870,
+          "timestampUtc": "2026-10-25T07:07:38.6307629Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=60 tick=20 dropped=0 player=(24.00, 44.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=2,pos=(24.00, 66.00),age=4,frame=1]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2871,
+          "timestampUtc": "2026-10-25T07:07:38.6317603Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=60 tick=30 dropped=0 player=(24.00, 54.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2872,
+          "timestampUtc": "2026-10-25T07:07:38.6327576Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=60 tick=40 dropped=0 player=(24.00, 64.00) cooldown=6 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=3,pos=(24.00, 126.00),age=9,frame=2]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2873,
+          "timestampUtc": "2026-10-25T07:07:38.6327576Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=60 tick=50 dropped=0 player=(24.00, 74.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=4,pos=(24.00, 126.00),age=4,frame=1]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2874,
+          "timestampUtc": "2026-10-25T07:07:38.6337548Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=60 tick=60 dropped=0 player=(24.00, 84.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2875,
+          "timestampUtc": "2026-10-25T07:07:38.6347523Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=144 tick=10 dropped=0 player=(24.00, 34.00) cooldown=6 ownerBullets=0 revision=4 brick2x8=12 bullets=[] effects=[id=1,pos=(24.00, 62.00),age=9,frame=2]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2876,
+          "timestampUtc": "2026-10-25T07:07:38.6357503Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=144 tick=20 dropped=0 player=(24.00, 44.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=2,pos=(24.00, 66.00),age=4,frame=1]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2877,
+          "timestampUtc": "2026-10-25T07:07:38.6357503Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=144 tick=30 dropped=0 player=(24.00, 54.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2878,
+          "timestampUtc": "2026-10-25T07:07:38.6367475Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=144 tick=40 dropped=0 player=(24.00, 64.00) cooldown=6 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=3,pos=(24.00, 126.00),age=9,frame=2]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2879,
+          "timestampUtc": "2026-10-25T07:07:38.6377441Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=144 tick=50 dropped=0 player=(24.00, 74.00) cooldown=11 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[id=4,pos=(24.00, 126.00),age=4,frame=1]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2880,
+          "timestampUtc": "2026-10-25T07:07:38.6377441Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=144 tick=60 dropped=0 player=(24.00, 84.00) cooldown=1 ownerBullets=0 revision=8 brick2x8=0 bullets=[] effects=[]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:100)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2881,
+          "timestampUtc": "2026-10-25T07:07:38.6467205Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=30 tick=30 dropped=0 player=(54.00, 24.00) cooldown=0 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=1,pos=(95.00, 24.00),age=30] effects=[]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:44)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2882,
+          "timestampUtc": "2026-10-25T07:07:38.6477181Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=30 tick=90 dropped=0 player=(114.00, 24.00) cooldown=12 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=2,pos=(129.00, 24.00),age=4] effects=[id=1,pos=(206.00, 24.00),age=4,frame=1]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:61)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2883,
+          "timestampUtc": "2026-10-25T07:07:38.6497125Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=60 tick=30 dropped=0 player=(54.00, 24.00) cooldown=0 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=1,pos=(95.00, 24.00),age=30] effects=[]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:44)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2884,
+          "timestampUtc": "2026-10-25T07:07:38.6497125Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=60 tick=90 dropped=0 player=(114.00, 24.00) cooldown=12 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=2,pos=(129.00, 24.00),age=4] effects=[id=1,pos=(206.00, 24.00),age=4,frame=1]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:61)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2885,
+          "timestampUtc": "2026-10-25T07:07:38.6517322Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=144 tick=30 dropped=0 player=(54.00, 24.00) cooldown=0 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=1,pos=(95.00, 24.00),age=30] effects=[]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:44)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2886,
+          "timestampUtc": "2026-10-25T07:07:38.6527293Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC108 simulatedDelta=144 tick=90 dropped=0 player=(114.00, 24.00) cooldown=12 ownerBullets=1 revision=0 brick2x8=0 bullets=[id=2,pos=(129.00, 24.00),age=4] effects=[id=1,pos=(206.00, 24.00),age=4,frame=1]",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.RenderDeltaCombatTests:Trace (int,BattleCity.ArenaSession) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:111)\nBattleCity.Tests.RenderDeltaCombatTests:HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes (int) (at Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs:61)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2887,
+          "timestampUtc": "2026-10-25T07:07:41.7920556Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Jimmy/AppData/LocalLow/DefaultCompany/BattleCity\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 2888,
+          "timestampUtc": "2026-10-25T07:07:42.1015987Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 790 total, 790 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2889,
+          "timestampUtc": "2026-10-25T07:07:42.5414534Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2890,
+          "timestampUtc": "2026-10-25T07:07:57.4225697Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2891,
+          "timestampUtc": "2026-10-25T07:07:58.8741727Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 97 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 2892,
+          "timestampUtc": "2026-10-25T07:07:58.875143Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 97 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 2893,
+          "timestampUtc": "2026-10-25T07:07:59.2329985Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "BC302 Stage01 level=3 real Update frame=31->95 tick=64->74 sprite=tank.yellow.player.level3.left.0",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.PlayerUpgradePlayModeTests/<Stage01_AllLevelsRenderDirectionTrackPairs_PauseRejectsUpgrade_RealUpdatesAdvance>d__8:MoveNext () (at Assets/BattleCity/Tests/PlayMode/PlayerUpgradePlayModeTests.cs:76)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 2894,
+          "timestampUtc": "2026-10-25T07:07:59.4179698Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Jimmy/AppData/LocalLow/DefaultCompany/BattleCity\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 2895,
+          "timestampUtc": "2026-10-25T07:07:59.4289601Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Ignoring duplicate RunFinished (already completed)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:89)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 2896,
+          "timestampUtc": "2026-10-25T07:07:59.4289601Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 5 total, 5 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 2897,
+          "timestampUtc": "2026-10-25T07:07:59.6680139Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        }
+      ],
+      "cursor": 2897,
+      "session": "316dee6ba1864c7dab134a9af37d8ce3",
+      "returned": 44,
+      "dropped": false,
+      "reset": false,
+      "counts": {
+        "error": 13,
+        "warn": 0,
+        "log": 1987
+      },
+      "groundTruth": {
+        "sampledUtc": "2026-10-25T07:08:47.4553965Z",
+        "ageMs": 101,
+        "compilationFailed": false,
+        "compiling": false,
+        "consoleErrors": 0,
+        "consoleWarnings": 0,
+        "consoleLogs": 7,
+        "seeded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

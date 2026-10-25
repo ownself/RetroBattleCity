@@ -31,7 +31,7 @@ namespace BattleCity.Tests
             Assert.That(bullet.Direction, Is.EqualTo(facing));
             Assert.That(bullet.AgeTicks, Is.Zero);
             world.Step();
-            Assert.That(bullet.Position, Is.EqualTo(muzzle + facing.Vector() * 3));
+            Assert.That(bullet.Position, Is.EqualTo(muzzle + facing.Vector() * 2));
             Assert.That(bullet.PreviousPosition, Is.EqualTo(muzzle));
             Assert.That(bullet.AgeTicks, Is.EqualTo(1));
             for (int i = 0; i < 100; i++) world.Step();
@@ -137,7 +137,7 @@ namespace BattleCity.Tests
                 session.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.D | PlayerButtons.Fire);
                 Assert.That(session.Player.Position, Is.EqualTo(new Vector2(25, 24)));
                 Assert.That(session.Bullets.Active[0].PreviousPosition, Is.EqualTo(new Vector2(35, 24)));
-                Assert.That(session.Bullets.Active[0].Position, Is.EqualTo(new Vector2(38, 24)));
+                Assert.That(session.Bullets.Active[0].Position, Is.EqualTo(new Vector2(37, 24)));
                 Assert.That(session.Bullets.Active[0].Direction, Is.EqualTo(CardinalDirection.Right));
             }
             finally { Object.DestroyImmediate(level); }
@@ -181,7 +181,7 @@ namespace BattleCity.Tests
                 session.AdvanceFrame(0, PlayerButtons.Fire);
                 for (int frame = 0; frame < fps / 2; frame++) session.AdvanceFrame(1.0 / fps, PlayerButtons.None);
                 Assert.That(session.Clock.Tick, Is.EqualTo(30));
-                Assert.That(session.Bullets.Active[0].Position, Is.EqualTo(new Vector2(24, 124)));
+                Assert.That(session.Bullets.Active[0].Position, Is.EqualTo(new Vector2(24, 94)));
             }
             finally { Object.DestroyImmediate(level); }
         }

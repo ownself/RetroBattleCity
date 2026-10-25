@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "RenderDeltaCombatTests.HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes"
+    },
+    "result": {
+      "Summary": {
+        "Total": 3,
+        "Passed": 3,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.RenderDeltaCombatTests.HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes(30)",
+          "Status": "Passed",
+          "Duration": 0.0084072,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.RenderDeltaCombatTests.HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes(60)",
+          "Status": "Passed",
+          "Duration": 0.0018542,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.RenderDeltaCombatTests.HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes(144)",
+          "Status": "Passed",
+          "Duration": 0.001921,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 0.47,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: RenderDeltaCombatTests.HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

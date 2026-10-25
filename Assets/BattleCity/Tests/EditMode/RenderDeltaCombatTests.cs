@@ -37,26 +37,26 @@ namespace BattleCity.Tests
             Assert.That(session.Player.Position, Is.EqualTo(new Vector2(54, 24)));
             var first = session.Bullets.Active.Single();
             Assert.That(first.Id, Is.EqualTo(1), "Capacity blocks firing even after cooldown reaches zero");
-            Assert.That(first.Position, Is.EqualTo(new Vector2(125, 24)));
+            Assert.That(first.Position, Is.EqualTo(new Vector2(95, 24)));
             Assert.That(first.AgeTicks, Is.EqualTo(30));
             Assert.That(session.PlayerWeapon.CooldownRemainingTicks, Is.Zero);
             Assert.That(session.PlayerWeapon.ActiveBullets, Is.EqualTo(1));
             Trace(fps, session);
 
-            Advance(session, fps, fps / 2, PlayerButtons.D | PlayerButtons.Fire);
-            Assert.That(session.Clock.Tick, Is.EqualTo(60));
-            Assert.That(session.Player.Position, Is.EqualTo(new Vector2(84, 24)));
+            Advance(session, fps, fps, PlayerButtons.D | PlayerButtons.Fire);
+            Assert.That(session.Clock.Tick, Is.EqualTo(90));
+            Assert.That(session.Player.Position, Is.EqualTo(new Vector2(114, 24)));
             var second = session.Bullets.Active.Single();
             Assert.That(second, Is.SameAs(first), "Boundary release returns the slot to the pool");
             Assert.That(second.Id, Is.EqualTo(2));
-            // Contact at the END of tick 57 recycles immediately; shot 2 starts on tick 58.
-            Assert.That(second.Position, Is.EqualTo(new Vector2(101, 24)));
-            Assert.That(second.AgeTicks, Is.EqualTo(3));
-            Assert.That(session.PlayerWeapon.CooldownRemainingTicks, Is.EqualTo(13));
+            // The slower shot contacts the boundary on tick 86; shot 2 starts on tick 87.
+            Assert.That(second.Position, Is.EqualTo(new Vector2(129, 24)));
+            Assert.That(second.AgeTicks, Is.EqualTo(4));
+            Assert.That(session.PlayerWeapon.CooldownRemainingTicks, Is.EqualTo(12));
             Assert.That(session.PlayerWeapon.ActiveBullets, Is.EqualTo(1));
             Assert.That(session.Map.Revision, Is.Zero);
             var effect = session.Effects.Active.Single();
-            Assert.That(effect.AgeTicks, Is.EqualTo(3));
+            Assert.That(effect.AgeTicks, Is.EqualTo(4));
             Assert.That(effect.Position, Is.EqualTo(new Vector2(206, 24)));
             Trace(fps, session);
         }

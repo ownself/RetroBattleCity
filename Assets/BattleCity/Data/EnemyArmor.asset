@@ -16,9 +16,10 @@ MonoBehaviour:
   spritePrefix: tank.white.enemy.armor
   requiresCalibration: 1
   moveSpeedPixelsPerSecond: 45
-  bulletSpeedPixelsPerSecond: 180
+  bulletSpeedPixelsPerSecond: 120
   fireCooldownTicks: 15
   maxActiveBullets: 1
+  canDestroySteel: 0
   hitPoints: 4
   score: 400
   damageSpritePrefixes:

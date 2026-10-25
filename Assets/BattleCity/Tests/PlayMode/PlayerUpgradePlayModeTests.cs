@@ -102,7 +102,7 @@ namespace BattleCity.Tests
             Assert.That(fresh.Phase, Is.EqualTo(SessionPhase.Ready)); AssertSprite(0);
             Assert.That(fresh.Map.TerrainAt(cell.x, cell.y), Is.EqualTo(TerrainKind.Steel));
             Assert.That(controller.mapView.obstacles.GetTile(cell), Is.Not.Null);
-            Assert.That(fresh.PlayerWeapon.Parameters.BulletSpeedPixelsPerSecond, Is.EqualTo(180));
+            Assert.That(fresh.PlayerWeapon.Parameters.BulletSpeedPixelsPerSecond, Is.EqualTo(120));
             Assert.That(fresh.PlayerWeapon.Parameters.MaxActiveBullets, Is.EqualTo(1));
             Assert.That(fresh.PlayerWeapon.Parameters.CanDestroySteel, Is.False);
             Assert.That(fresh.Bullets.Active, Is.Empty);
@@ -111,12 +111,103 @@ namespace BattleCity.Tests
             Assert.That(fresh.PlayerWeapon.Parameters.CanDestroySteel, Is.True);
         }
 
+        [UnityTest] public IEnumerator Stage01_TopLevelSteelBlockLosesFrontPairThenBackPair_FourDirectionsAndRestartProjection()
+        {
+            yield return Load("Stage01");
+            var s = controller.Session; s.StartBattle(); s.AdvanceFrame(0, PlayerButtons.None);
+            for (int i = 0; i < 3; i++) Assert.That(s.TryUpgradePlayer(), Is.True);
+            s.SetPaused(true);
+            var cells = new[] { new Vector3Int(12, 12, 0), new Vector3Int(13, 12, 0),
+                new Vector3Int(12, 13, 0), new Vector3Int(13, 13, 0) };
+            var original = cells.Select(cell => s.Map.TerrainAt(cell.x, cell.y)).ToArray();
+            var originalVisible = cells.Select(cell => controller.mapView.obstacles.HasTile(cell)).ToArray();
+            foreach (var direction in new[] { CardinalDirection.Up, CardinalDirection.Down, CardinalDirection.Left, CardinalDirection.Right })
+            {
+                foreach (var cell in cells) s.Map.SetTerrainCell(cell.x, cell.y, TerrainKind.Steel);
+                for (int shot = 0; shot < 2; shot++)
+                {
+                    if (s.PlayerWeapon.CooldownRemainingTicks > 0) Tick(s, s.PlayerWeapon.CooldownRemainingTicks);
+                    var center = new Vector2(104, 104) - direction.Vector() * 16;
+                    Assert.That(s.PlayerWeapon.Step(new TankCommand(direction, true), center, direction), Is.True);
+                    Tick(s, 1); yield return null;
+                    var hit = s.Bullets.Hits.Single(h => h.OwnerId == ArenaSession.PlayerEntityId);
+                    Assert.That(hit.Terrain, Is.EqualTo(TerrainKind.Steel)); Assert.That(hit.CanDestroySteel, Is.True);
+                    foreach (var cell in cells)
+                    {
+                        bool front = direction == CardinalDirection.Up ? cell.y == 12 : direction == CardinalDirection.Down ? cell.y == 13 :
+                            direction == CardinalDirection.Right ? cell.x == 12 : cell.x == 13;
+                        bool remains = shot == 0 && !front;
+                        Assert.That(s.Map.TerrainAt(cell.x, cell.y), Is.EqualTo(remains ? TerrainKind.Steel : TerrainKind.Empty));
+                        Assert.That(controller.mapView.obstacles.HasTile(cell), Is.EqualTo(remains), "Both tiles must project in the same Update.");
+                    }
+                    Assert.That(s.Map.CanOccupy(new Vector2(104, 104)), Is.EqualTo(shot == 1));
+                    Assert.That(s.PlayerWeapon.ActiveBullets, Is.Zero);
+                }
+            }
+            controller.RestartSession(); yield return null;
+            AssertSprite(0);
+            for (int i = 0; i < cells.Length; i++)
+            {
+                Assert.That(controller.Session.Map.TerrainAt(cells[i].x, cells[i].y), Is.EqualTo(original[i]));
+                Assert.That(controller.mapView.obstacles.HasTile(cells[i]), Is.EqualTo(originalVisible[i]));
+            }
+        }
+
+        [UnityTest] public IEnumerator Stage01_ThreeCollectedStarsGiveFastThenTwoLiveShotsThenSteel()
+        {
+            yield return Load("Stage01");
+            var s = controller.Session; s.StartBattle(); s.AdvanceFrame(0, PlayerButtons.None); s.SetPaused(true);
+            // Controlled clear lane: verify flight/capacity, not unrelated terrain impacts or natural drops.
+            int column = Mathf.FloorToInt(s.Player.Position.x / 8);
+            for (int y = 0; y < 26; y++)
+            {
+                s.Map.SetTerrainCell(column - 1, y, TerrainKind.Empty);
+                s.Map.SetTerrainCell(column, y, TerrainKind.Empty);
+            }
+            var p = s.Player.Position;
+            var excluded = new[] {
+                new Rect(-1000, -1000, p.x - 8 + 1000, 2000), new Rect(p.x + 8, -1000, 2000, 2000),
+                new Rect(-1000, -1000, 2000, p.y - 8 + 1000), new Rect(-1000, p.y + 8, 2000, 2000) };
+            for (int level = 0; level < 4; level++)
+            {
+                // Upgrades intentionally retain a live cooldown; do not confuse it with a speed/cap change.
+                if (s.PlayerWeapon.CooldownRemainingTicks > 0) Tick(s, s.PlayerWeapon.CooldownRemainingTicks);
+                s.Bullets.Clear();
+                if (level > 0)
+                {
+                    bool found = false;
+                    for (int attempt = 0; attempt < 128 && !found; attempt++)
+                    {
+                        Assert.That(s.Pickups.TryDrop(s.Map, p, true, excluded, s.Base.Bounds), Is.True);
+                        found = s.Pickups.Active.Value.Kind == PickupKind.Star;
+                    }
+                    Assert.That(found, Is.True, "Bounded Star selection failed.");
+                    Tick(s, 1);
+                    Assert.That(s.Pickups.LastCollected.Value.Item.Kind, Is.EqualTo(PickupKind.Star));
+                    Assert.That(s.Pickups.CollectedCount, Is.EqualTo(level));
+                }
+                Tick(s, 1, PlayerButtons.Fire);
+                var first = s.Bullets.Active.Single(); long id = first.Id;
+                Assert.That(first.SpeedPixelsPerSecond, Is.EqualTo(level == 0 ? 120 : 240));
+                Assert.That(first.Position.y - first.PreviousPosition.y, Is.EqualTo(level == 0 ? 2 : 4));
+                Assert.That(first.CanDestroySteel, Is.EqualTo(level == 3));
+                Tick(s, 14, PlayerButtons.Fire);
+                Assert.That(s.Bullets.Active.Count, Is.EqualTo(1));
+                Assert.That(s.PlayerWeapon.CooldownRemainingTicks, Is.EqualTo(1));
+                Tick(s, 1, PlayerButtons.Fire);
+                Assert.That(s.Bullets.Active.Any(b => b.Id == id), Is.True);
+                Assert.That(s.Bullets.Active.Count, Is.EqualTo(level < 2 ? 1 : 2));
+                yield return null;
+                AssertSprite(level);
+            }
+        }
+
         [UnityTest] public IEnumerator CombatArena_RemainsOptOutWithOriginalWeaponAndSprite()
         {
             yield return Load("CombatArena");
             var s = controller.Session;
             Assert.That(s.PlayerUpgrades, Is.Null); Assert.That(s.TryUpgradePlayer(), Is.False);
-            Assert.That(s.PlayerWeapon.Parameters.BulletSpeedPixelsPerSecond, Is.EqualTo(180));
+            Assert.That(s.PlayerWeapon.Parameters.BulletSpeedPixelsPerSecond, Is.EqualTo(120));
             Assert.That(s.PlayerWeapon.Parameters.MaxActiveBullets, Is.EqualTo(1));
             Assert.That(s.PlayerWeapon.Parameters.CanDestroySteel, Is.False);
             Assert.That(controller.playerRenderer.sprite.name, Does.StartWith("tank.yellow.player.level0"));

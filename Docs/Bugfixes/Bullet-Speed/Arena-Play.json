@@ -1,0 +1,63 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.52,
+      "summary": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.ArenaPlayModeTests.Arena_BrickHitRemovesFourPixelLayerAndDisplaysRemainingWall",
+          "Status": "Passed",
+          "Duration": 0.0357662,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaPlayModeTests.Arena_FourBrickLayersOpenA16PixelTankPassage",
+          "Status": "Passed",
+          "Duration": 0.0253252,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaPlayModeTests.Arena_KeyboardFiresAndRendererIsReusedAfterRelease",
+          "Status": "Passed",
+          "Duration": 0.071959,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaPlayModeTests.Arena_ReloadRecreatesRuntimeStateWithoutMutatingAsset",
+          "Status": "Passed",
+          "Duration": 0.0418747,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaPlayModeTests.Arena_RuntimeUpdatesRenderStateAndPauseFreezesClock",
+          "Status": "Passed",
+          "Duration": 0.3338833,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

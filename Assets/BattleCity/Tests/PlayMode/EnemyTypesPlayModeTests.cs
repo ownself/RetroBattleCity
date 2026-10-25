@@ -127,6 +127,8 @@ namespace BattleCity.Tests
                 var display = view.GetComponentInChildren<SpriteRenderer>();
                 Assert.That(display.enabled, Is.True);
                 var definition = session.GetWaveEnemyDefinition(enemy.EntityId);
+                Assert.That(enemy.Weapon.Parameters.BulletSpeedPixelsPerSecond,
+                    Is.EqualTo(enemy.DefinitionId == "enemy.power" ? 240 : 120), "Only the Power tank starts with fast bullets.");
                 string prefix = enemy.CarriesPickup && session.Clock.Tick / 8 % 2 == 1
                     ? PickupDefinition.CarrierPrefix(definition) : definition.spritePrefix;
                 var expected = controller.sprites.Get(prefix + "." + enemy.Motor.Facing.SpriteKey() + "." + enemy.Motor.TrackFrame);
@@ -135,11 +137,17 @@ namespace BattleCity.Tests
             long before = session.Clock.Tick; int frame = Time.frameCount;
             session.SetPaused(false);
             float deadline = Time.realtimeSinceStartup + 3;
-            while (session.Clock.Tick < before + 12 && Time.realtimeSinceStartup < deadline) yield return null;
+            bool observedFire = false;
+            while ((session.Clock.Tick < before + 12 || !observedFire) && Time.realtimeSinceStartup < deadline)
+            {
+                yield return null;
+                observedFire |= enemies.Any(e => e.Weapon.CooldownRemainingTicks > 0);
+                session.Bullets.Clear(); // Keep the controlled arrival's combat isolation during this observation too.
+            }
             session.SetPaused(true); yield return null;
             Assert.That(Time.frameCount, Is.GreaterThan(frame));
             Assert.That(session.Clock.Tick, Is.GreaterThanOrEqualTo(before + 12));
-            Assert.That(enemies.Any(e => e.Weapon.CooldownRemainingTicks > 0), Is.True);
+            Assert.That(observedFire, Is.True, "Observe actual firing, not an arbitrary endpoint inside a 15-tick cooldown.");
             session.Bullets.Clear();
             Shoot(session, enemies[0]); Tick(session, 1); yield return null; yield return null;
             Assert.That(enemies[0].IsAlive, Is.False);

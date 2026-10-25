@@ -1,0 +1,20 @@
+{
+  "success": false,
+  "command": "unity command test",
+  "data": {
+    "candidates": [
+      {
+        "project": "BattleCity",
+        "projectPath": "H:\\Projects\\Unities\\BattleCity",
+        "pid": 26924
+      }
+    ]
+  },
+  "errors": [
+    {
+      "code": "PIPELINE_UNREACHABLE",
+      "message": "有一个已安装 Pipeline 软件包的 Unity 编辑器正在运行，但其 Pipeline 服务器无法连接：\n\n  1. BattleCity - H:\\Projects\\Unities\\BattleCity\n\n如果编辑器刚启动、正在进行域重新加载，或 Pipeline 软件包版本过旧，都可能出现这种情况。请使用 unity pipeline list 检查。"
+    }
+  ],
+  "warnings": []
+}

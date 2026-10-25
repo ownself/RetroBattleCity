@@ -45,7 +45,7 @@ namespace BattleCity.Tests
             Assert.That(other.Weapon.ActiveBullets, Is.EqualTo(1));
             var bullet = session.Bullets.Active.Single(b => b.OwnerId == other.EntityId);
             Assert.That(bullet.Team, Is.EqualTo(team));
-            Assert.That(bullet.Position, Is.EqualTo(new Vector2(72, 59)));
+            Assert.That(bullet.Position, Is.EqualTo(new Vector2(72, 51)));
             Assert.That(other.Bounds, Is.EqualTo(new Rect(64, 24, 16, 16)));
         }
 

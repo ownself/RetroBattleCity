@@ -11,7 +11,7 @@ namespace BattleCity
         [Tooltip("Prototype defaults, not verified original-game values. All speeds are logical pixels/second.")]
         public bool requiresCalibration = true;
         public float moveSpeedPixelsPerSecond = 60f;
-        public float bulletSpeedPixelsPerSecond = 180f;
+        public float bulletSpeedPixelsPerSecond = 120f;
         public int fireCooldownTicks = 15;
         public int maxActiveBullets = 1;
         public bool canDestroySteel;

@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "GameFrameRateTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 3,
+        "Passed": 3,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.GameFrameRateTests.ApplyOverridesVSyncAndOldCap_WithoutChangingLogicRate(0,-1,30)",
+          "Status": "Passed",
+          "Duration": 0.0519404,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.GameFrameRateTests.ApplyOverridesVSyncAndOldCap_WithoutChangingLogicRate(1,144,60)",
+          "Status": "Passed",
+          "Duration": 0.0001634,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.GameFrameRateTests.ApplyOverridesVSyncAndOldCap_WithoutChangingLogicRate(2,30,144)",
+          "Status": "Passed",
+          "Duration": 0.0001238,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 4.44,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: GameFrameRateTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

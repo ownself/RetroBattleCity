@@ -139,7 +139,7 @@ namespace BattleCity.Tests
         }
 
         [TestCase(0)] [TestCase(1)] [TestCase(2)] [TestCase(3)]
-        public void FourDirections_SteelRequiresTopLevel_OneEightPixelCellConsumedNoPiercing(int target)
+        public void FourDirections_SteelRequiresTopLevel_IsolatedCellConsumedWithoutPiercingDiagonalNeighbor(int target)
         {
             foreach (CardinalDirection direction in new[] { CardinalDirection.Up, CardinalDirection.Down, CardinalDirection.Left, CardinalDirection.Right })
             {
@@ -196,6 +196,61 @@ namespace BattleCity.Tests
             Assert.Throws<InvalidOperationException>(() => Session());
         }
 
+        [TestCase(0)] [TestCase(1)] [TestCase(2)] [TestCase(3)]
+        public void AuthoredProfiles_NormalTwoPixelsFastFour_SecondShotAfterCooldownWhileFirstStillFlying(int target)
+        {
+            var authored = AssetDatabase.LoadAssetAtPath<PlayerUpgradeDefinition>(PlayerUpgradeAuthoring.DefinitionPath);
+            var s = new ArenaSession(level, authored.levels[0], playerUpgrades: authored);
+            Upgrade(s, target);
+            Tick(s, 1, PlayerButtons.Fire);
+            var first = s.Bullets.Active.Single(); long firstId = first.Id;
+            Assert.That(first.SpeedPixelsPerSecond, Is.EqualTo(target == 0 ? 120 : 240));
+            Assert.That(first.Position.y - first.PreviousPosition.y, Is.EqualTo(target == 0 ? 2 : 4));
+            Assert.That(first.CanDestroySteel, Is.EqualTo(target == 3));
+            Tick(s, 14, PlayerButtons.Fire);
+            Assert.That(s.PlayerWeapon.CooldownRemainingTicks, Is.EqualTo(1));
+            Assert.That(s.Bullets.Active.Count, Is.EqualTo(1), "No instant double shot or cooldown bypass.");
+            Tick(s, 1, PlayerButtons.Fire);
+            Assert.That(s.Bullets.Active.Any(b => b.Id == firstId), Is.True, "First projectile must still be flying.");
+            Assert.That(s.Bullets.Active.Count, Is.EqualTo(target < 2 ? 1 : 2));
+            Tick(s, 15, PlayerButtons.Fire);
+            Assert.That(s.Bullets.Active.Count, Is.EqualTo(target < 2 ? 1 : 2), "Capacity is not an automatic burst.");
+        }
+
+        [TestCase(0)] [TestCase(1)] [TestCase(2)] [TestCase(3)]
+        public void InitialCampaignTierRestoresProfileInReadyWithoutCombatOrAssetMutation(int target)
+        {
+            var authored = AssetDatabase.LoadAssetAtPath<PlayerUpgradeDefinition>(PlayerUpgradeAuthoring.DefinitionPath);
+            string before = JsonUtility.ToJson(authored.levels[target]);
+            wave = ScriptableObject.CreateInstance<EnemyWaveDefinition>(); wave.tankDefinitions = new[] { authored.levels[0] };
+            var s = new ArenaSession(level, authored.levels[0], wave, enableSessionLifecycle: true,
+                playerUpgrades: authored, initialPlayerUpgradeLevel: target);
+            Assert.That(s.Phase, Is.EqualTo(SessionPhase.Ready));
+            Assert.That(s.Clock.Tick, Is.Zero); Assert.That(s.Clock.Paused, Is.True);
+            Assert.That(s.PlayerUpgrades.Level, Is.EqualTo(target));
+            Assert.That(s.PlayerUpgrades.SpritePrefix, Is.EqualTo("tank.yellow.player.level" + target));
+            Assert.That(s.PlayerWeapon.Parameters.BulletSpeedPixelsPerSecond, Is.EqualTo(target == 0 ? 120 : 240));
+            Assert.That(s.PlayerWeapon.Parameters.MaxActiveBullets, Is.EqualTo(target < 2 ? 1 : 2));
+            Assert.That(s.PlayerWeapon.Parameters.CanDestroySteel, Is.EqualTo(target == 3));
+            Assert.That(s.TryUpgradePlayer(), Is.False, "Ready still rejects gameplay upgrades.");
+            Assert.That(s.PlayerWeapon.CooldownRemainingTicks, Is.Zero);
+            Assert.That(s.PlayerWeapon.ActiveBullets, Is.Zero); Assert.That(s.Bullets.Active, Is.Empty);
+            Assert.That(s.Score, Is.Zero); Assert.That(s.Result, Is.Null);
+            Assert.That(JsonUtility.ToJson(authored.levels[target]), Is.EqualTo(before));
+        }
+
+        [TestCase(-1)] [TestCase(4)] [TestCase(int.MaxValue)]
+        public void InvalidInitialCampaignTierIsRejected(int target)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => new ArenaSession(level, definitions[0],
+                playerUpgrades: upgrades, initialPlayerUpgradeLevel: target));
+        }
+
+        [Test] public void NonzeroInitialCampaignTierRequiresUpgradeTable()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => new ArenaSession(level, definitions[0], initialPlayerUpgradeLevel: 1));
+        }
+
         [Test] public void BaseDefinitionMismatchIsRejected()
         {
             var other = Object.Instantiate(definitions[0]);
@@ -212,7 +267,8 @@ namespace BattleCity.Tests
             for (int i = 0; i < 4; i++)
             {
                 Assert.That(authored.levels[i].requiresCalibration, Is.True);
-                Assert.That(authored.levels[i].bulletSpeedPixelsPerSecond, Is.EqualTo(i == 0 ? 180 : 300));
+                Assert.That(authored.levels[i].bulletSpeedPixelsPerSecond, Is.EqualTo(i == 0 ? 120 : 240));
+                Assert.That(authored.levels[i].fireCooldownTicks, Is.EqualTo(15));
                 Assert.That(authored.levels[i].maxActiveBullets, Is.EqualTo(i < 2 ? 1 : 2));
                 Assert.That(authored.levels[i].canDestroySteel, Is.EqualTo(i == 3));
             }

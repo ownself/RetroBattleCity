@@ -1,0 +1,168 @@
+{
+  "success": true,
+  "command": "command console get",
+  "data": {
+    "command": "console get",
+    "parameters": {
+      "since": "2897",
+      "tail": "200"
+    },
+    "result": {
+      "entries": [
+        {
+          "seq": 2898,
+          "timestampUtc": "2026-10-25T07:13:23.9156187Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Running 3 tests (explicit tests excluded)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner/<>c__DisplayClass9_0:<ExecuteTestsInternal>b__0 (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/PipelineTestRunner.cs:359)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2899,
+          "timestampUtc": "2026-10-25T07:13:25.862867Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2900,
+          "timestampUtc": "2026-10-25T07:13:26.2351233Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 793 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2901,
+          "timestampUtc": "2026-10-25T07:13:26.696922Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Jimmy/AppData/LocalLow/DefaultCompany/BattleCity\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 2902,
+          "timestampUtc": "2026-10-25T07:13:26.7373543Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 3 total, 3 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2903,
+          "timestampUtc": "2026-10-25T07:13:26.8702288Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2904,
+          "timestampUtc": "2026-10-25T07:13:31.8444222Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 2905,
+          "timestampUtc": "2026-10-25T07:13:33.3166601Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 98 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 2906,
+          "timestampUtc": "2026-10-25T07:13:33.3166601Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 98 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 2907,
+          "timestampUtc": "2026-10-25T07:13:34.0685307Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Frame cap: target=60 vSync=0; Editor sample frames=30 elapsed=0.510s measured=58.8fps (not a standalone timing guarantee)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nBattleCity.Tests.GameFrameRatePlayModeTests/<StartupHookCapsGameBeforeSceneLoad_RealFramesAdvance>d__2:MoveNext () (at Assets/BattleCity/Tests/PlayMode/GameFrameRatePlayModeTests.cs:35)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 2908,
+          "timestampUtc": "2026-10-25T07:13:34.0995244Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Jimmy/AppData/LocalLow/DefaultCompany/BattleCity\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 2909,
+          "timestampUtc": "2026-10-25T07:13:34.1097837Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Ignoring duplicate RunFinished (already completed)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:89)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 2910,
+          "timestampUtc": "2026-10-25T07:13:34.1097837Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 1 total, 1 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@f311b58065e4/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 2911,
+          "timestampUtc": "2026-10-25T07:13:34.3198986Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        }
+      ],
+      "cursor": 2911,
+      "session": "316dee6ba1864c7dab134a9af37d8ce3",
+      "returned": 14,
+      "dropped": false,
+      "reset": false,
+      "counts": {
+        "error": 13,
+        "warn": 0,
+        "log": 1987
+      },
+      "groundTruth": {
+        "sampledUtc": "2026-10-25T07:14:03.1163951Z",
+        "ageMs": 135,
+        "compilationFailed": false,
+        "compiling": false,
+        "consoleErrors": 0,
+        "consoleWarnings": 0,
+        "consoleLogs": 7,
+        "seeded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

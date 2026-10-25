@@ -1,0 +1,210 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "SteelDestructionTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 25,
+        "Passed": 10,
+        "Failed": 15,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.AcrossStripFloorsLowerEdgeToEightPixelGrid(104.0f,12)",
+          "Status": "Failed",
+          "Duration": 0.0390637,
+          "Message": "  Expected: 8\r\n  But was:  4\r\n",
+          "StackTrace": "at BattleCity.Tests.SteelDestructionTests.AcrossStripFloorsLowerEdgeToEightPixelGrid (System.Single across, System.Int32 first) [0x00018] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\SteelDestructionTests.cs:104\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.AcrossStripFloorsLowerEdgeToEightPixelGrid(111.5f,12)",
+          "Status": "Failed",
+          "Duration": 0.0009414,
+          "Message": "  Expected: 8\r\n  But was:  4\r\n",
+          "StackTrace": "at BattleCity.Tests.SteelDestructionTests.AcrossStripFloorsLowerEdgeToEightPixelGrid (System.Single across, System.Int32 first) [0x00018] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\SteelDestructionTests.cs:104\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.AcrossStripFloorsLowerEdgeToEightPixelGrid(112.0f,13)",
+          "Status": "Failed",
+          "Duration": 0.0007488,
+          "Message": "  Expected: 8\r\n  But was:  4\r\n",
+          "StackTrace": "at BattleCity.Tests.SteelDestructionTests.AcrossStripFloorsLowerEdgeToEightPixelGrid (System.Single across, System.Int32 first) [0x00018] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\SteelDestructionTests.cs:104\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.EdgeClipsStripWithoutShiftingItInward(Up)",
+          "Status": "Passed",
+          "Duration": 0.0038846,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.EdgeClipsStripWithoutShiftingItInward(Down)",
+          "Status": "Passed",
+          "Duration": 0.000864,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.EdgeClipsStripWithoutShiftingItInward(Left)",
+          "Status": "Passed",
+          "Duration": 0.0007211,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.EdgeClipsStripWithoutShiftingItInward(Right)",
+          "Status": "Passed",
+          "Duration": 0.0006915,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.OrdinaryShotCannotRemoveEitherSteelCell",
+          "Status": "Passed",
+          "Duration": 0.0008865,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.SameTickTwoShotsRemoveOnlyOneFrontPair_NoPiercingOrDoubleCount(Up)",
+          "Status": "Failed",
+          "Duration": 0.0013695,
+          "Message": "  Expected: 8\r\n  But was:  4\r\n",
+          "StackTrace": "at BattleCity.Tests.SteelDestructionTests.SameTickTwoShotsRemoveOnlyOneFrontPair_NoPiercingOrDoubleCount (BattleCity.CardinalDirection direction) [0x0007c] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\SteelDestructionTests.cs:91\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.SameTickTwoShotsRemoveOnlyOneFrontPair_NoPiercingOrDoubleCount(Down)",
+          "Status": "Failed",
+          "Duration": 0.0007893,
+          "Message": "  Expected: 8\r\n  But was:  4\r\n",
+          "StackTrace": "at BattleCity.Tests.SteelDestructionTests.SameTickTwoShotsRemoveOnlyOneFrontPair_NoPiercingOrDoubleCount (BattleCity.CardinalDirection direction) [0x0007c] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\SteelDestructionTests.cs:91\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.SameTickTwoShotsRemoveOnlyOneFrontPair_NoPiercingOrDoubleCount(Left)",
+          "Status": "Failed",
+          "Duration": 0.0007458,
+          "Message": "  Expected: 8\r\n  But was:  4\r\n",
+          "StackTrace": "at BattleCity.Tests.SteelDestructionTests.SameTickTwoShotsRemoveOnlyOneFrontPair_NoPiercingOrDoubleCount (BattleCity.CardinalDirection direction) [0x0007c] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\SteelDestructionTests.cs:91\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.SameTickTwoShotsRemoveOnlyOneFrontPair_NoPiercingOrDoubleCount(Right)",
+          "Status": "Failed",
+          "Duration": 0.0008448,
+          "Message": "  Expected: 8\r\n  But was:  4\r\n",
+          "StackTrace": "at BattleCity.Tests.SteelDestructionTests.SameTickTwoShotsRemoveOnlyOneFrontPair_NoPiercingOrDoubleCount (BattleCity.CardinalDirection direction) [0x0007c] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\SteelDestructionTests.cs:91\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.SteelCapableBrickHitStillUsesBrickStripAndLeavesNeighborSteel",
+          "Status": "Passed",
+          "Duration": 0.0014021,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.SteelStripNeverDamagesOtherTerrain(Brick)",
+          "Status": "Passed",
+          "Duration": 0.0043046,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.SteelStripNeverDamagesOtherTerrain(Water)",
+          "Status": "Passed",
+          "Duration": 0.0037203,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.SteelStripNeverDamagesOtherTerrain(Grass)",
+          "Status": "Passed",
+          "Duration": 0.0032072,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.SteelStripNeverDamagesOtherTerrain(Ice)",
+          "Status": "Passed",
+          "Duration": 0.0033238,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair(Up,0)",
+          "Status": "Failed",
+          "Duration": 0.0059295,
+          "Message": "  One 16x8 strip = eight 4px damage cells.\r\n  Expected: 8\r\n  But was:  4\r\n",
+          "StackTrace": "at BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair (BattleCity.CardinalDirection direction, System.Int32 gap) [0x00076] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\SteelDestructionTests.cs:63\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair(Up,8)",
+          "Status": "Failed",
+          "Duration": 0.0020578,
+          "Message": "  One 16x8 strip = eight 4px damage cells.\r\n  Expected: 8\r\n  But was:  4\r\n",
+          "StackTrace": "at BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair (BattleCity.CardinalDirection direction, System.Int32 gap) [0x00076] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\SteelDestructionTests.cs:63\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair(Down,0)",
+          "Status": "Failed",
+          "Duration": 0.0038482,
+          "Message": "  One 16x8 strip = eight 4px damage cells.\r\n  Expected: 8\r\n  But was:  4\r\n",
+          "StackTrace": "at BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair (BattleCity.CardinalDirection direction, System.Int32 gap) [0x00076] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\SteelDestructionTests.cs:63\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair(Down,8)",
+          "Status": "Failed",
+          "Duration": 0.0037775,
+          "Message": "  One 16x8 strip = eight 4px damage cells.\r\n  Expected: 8\r\n  But was:  4\r\n",
+          "StackTrace": "at BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair (BattleCity.CardinalDirection direction, System.Int32 gap) [0x00076] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\SteelDestructionTests.cs:63\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair(Left,0)",
+          "Status": "Failed",
+          "Duration": 0.0036212,
+          "Message": "  One 16x8 strip = eight 4px damage cells.\r\n  Expected: 8\r\n  But was:  4\r\n",
+          "StackTrace": "at BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair (BattleCity.CardinalDirection direction, System.Int32 gap) [0x00076] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\SteelDestructionTests.cs:63\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair(Left,8)",
+          "Status": "Failed",
+          "Duration": 0.0039072,
+          "Message": "  One 16x8 strip = eight 4px damage cells.\r\n  Expected: 8\r\n  But was:  4\r\n",
+          "StackTrace": "at BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair (BattleCity.CardinalDirection direction, System.Int32 gap) [0x00076] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\SteelDestructionTests.cs:63\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair(Right,0)",
+          "Status": "Failed",
+          "Duration": 0.0019766,
+          "Message": "  One 16x8 strip = eight 4px damage cells.\r\n  Expected: 8\r\n  But was:  4\r\n",
+          "StackTrace": "at BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair (BattleCity.CardinalDirection direction, System.Int32 gap) [0x00076] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\SteelDestructionTests.cs:63\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair(Right,8)",
+          "Status": "Failed",
+          "Duration": 0.0014901,
+          "Message": "  One 16x8 strip = eight 4px damage cells.\r\n  Expected: 8\r\n  But was:  4\r\n",
+          "StackTrace": "at BattleCity.Tests.SteelDestructionTests.TwoByTwoBlock_FirstShotClearsFrontPair_SecondClearsBackPair (BattleCity.CardinalDirection direction, System.Int32 gap) [0x00076] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\SteelDestructionTests.cs:63\r\n"
+        }
+      ],
+      "Duration": 4.23,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: SteelDestructionTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

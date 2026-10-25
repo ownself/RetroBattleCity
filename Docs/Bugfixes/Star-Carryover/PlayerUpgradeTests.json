@@ -1,0 +1,280 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "PlayerUpgradeTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 35,
+        "Passed": 35,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.AuthoredDefaultsAndAll32SpritesResolve_MissingUpgradeFrameFailsEarly",
+          "Status": "Passed",
+          "Duration": 0.0451531,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.AuthoredProfiles_NormalTwoPixelsFastFour_SecondShotAfterCooldownWhileFirstStillFlying(0)",
+          "Status": "Passed",
+          "Duration": 0.0193328,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.AuthoredProfiles_NormalTwoPixelsFastFour_SecondShotAfterCooldownWhileFirstStillFlying(1)",
+          "Status": "Passed",
+          "Duration": 0.0009486,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.AuthoredProfiles_NormalTwoPixelsFastFour_SecondShotAfterCooldownWhileFirstStillFlying(2)",
+          "Status": "Passed",
+          "Duration": 0.0037552,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.AuthoredProfiles_NormalTwoPixelsFastFour_SecondShotAfterCooldownWhileFirstStillFlying(3)",
+          "Status": "Passed",
+          "Duration": 0.0006585,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.BaseDefinitionMismatchIsRejected",
+          "Status": "Passed",
+          "Duration": 0.0048841,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.DeathImmediatelyResetsToZero_OldBulletRetainsCapability_RespawnClearsOnlyPlayerLeases",
+          "Status": "Passed",
+          "Duration": 0.0063051,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.EachLevel_RealMovementSpeedBulletSpeedCooldownAndLeaseLimit(0)",
+          "Status": "Passed",
+          "Duration": 0.0040007,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.EachLevel_RealMovementSpeedBulletSpeedCooldownAndLeaseLimit(1)",
+          "Status": "Passed",
+          "Duration": 0.0021342,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.EachLevel_RealMovementSpeedBulletSpeedCooldownAndLeaseLimit(2)",
+          "Status": "Passed",
+          "Duration": 0.0016359,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.EachLevel_RealMovementSpeedBulletSpeedCooldownAndLeaseLimit(3)",
+          "Status": "Passed",
+          "Duration": 0.0098081,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.FourDirections_SteelRequiresTopLevel_OneEightPixelCellConsumedNoPiercing(0)",
+          "Status": "Passed",
+          "Duration": 0.0037263,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.FourDirections_SteelRequiresTopLevel_OneEightPixelCellConsumedNoPiercing(1)",
+          "Status": "Passed",
+          "Duration": 0.0017599,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.FourDirections_SteelRequiresTopLevel_OneEightPixelCellConsumedNoPiercing(2)",
+          "Status": "Passed",
+          "Duration": 0.0024747,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.FourDirections_SteelRequiresTopLevel_OneEightPixelCellConsumedNoPiercing(3)",
+          "Status": "Passed",
+          "Duration": 0.0024891,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InitialCampaignTierRestoresProfileInReadyWithoutCombatOrAssetMutation(0)",
+          "Status": "Passed",
+          "Duration": 0.0035807,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InitialCampaignTierRestoresProfileInReadyWithoutCombatOrAssetMutation(1)",
+          "Status": "Passed",
+          "Duration": 0.0014964,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InitialCampaignTierRestoresProfileInReadyWithoutCombatOrAssetMutation(2)",
+          "Status": "Passed",
+          "Duration": 0.0014397,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InitialCampaignTierRestoresProfileInReadyWithoutCombatOrAssetMutation(3)",
+          "Status": "Passed",
+          "Duration": 0.0014261,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidInitialCampaignTierIsRejected(-1)",
+          "Status": "Passed",
+          "Duration": 0.002932,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidInitialCampaignTierIsRejected(4)",
+          "Status": "Passed",
+          "Duration": 0.0014706,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidInitialCampaignTierIsRejected(int.MaxValue)",
+          "Status": "Passed",
+          "Duration": 0.0014982,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"null\")",
+          "Status": "Passed",
+          "Duration": 0.0019812,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"length\")",
+          "Status": "Passed",
+          "Duration": 0.0005541,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"entry\")",
+          "Status": "Passed",
+          "Duration": 0.0009548,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"duplicate\")",
+          "Status": "Passed",
+          "Duration": 0.0008052,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"movement\")",
+          "Status": "Passed",
+          "Duration": 0.0005739,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"hp\")",
+          "Status": "Passed",
+          "Duration": 0.0005283,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"score\")",
+          "Status": "Passed",
+          "Duration": 0.0005218,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"damage\")",
+          "Status": "Passed",
+          "Duration": 0.0005391,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.LegacyUnboundPauseFocusReadyAndTerminalRejectUpgrade_ResumeAndShieldPermitIt",
+          "Status": "Passed",
+          "Duration": 0.0174185,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.NonzeroInitialCampaignTierRequiresUpgradeTable",
+          "Status": "Passed",
+          "Duration": 0.0014815,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.SessionSnapshotsAllProfilesAndSprites_NoAssetMutation_EnemyWeaponsNeverUpgrade",
+          "Status": "Passed",
+          "Duration": 0.0047429,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.TwoSteelShotsSharePreDamageSnapshot_ImpactAndPoolReuseKeepCapabilitySnapshots",
+          "Status": "Passed",
+          "Duration": 0.0075957,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.Upgrade_DoesNotRecreateWeaponResetCooldownOrMutateExistingBullets_SecondLeaseUsesNewProfile",
+          "Status": "Passed",
+          "Duration": 0.0037725,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 4.5,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: PlayerUpgradeTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

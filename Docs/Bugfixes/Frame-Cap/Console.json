@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "command": "command console status",
+  "data": {
+    "command": "console status",
+    "parameters": {},
+    "result": {
+      "entries": [],
+      "cursor": 2911,
+      "session": "316dee6ba1864c7dab134a9af37d8ce3",
+      "returned": 0,
+      "dropped": false,
+      "reset": false,
+      "counts": {
+        "error": 13,
+        "warn": 0,
+        "log": 1987
+      },
+      "groundTruth": {
+        "sampledUtc": "2026-10-25T07:14:01.3662622Z",
+        "ageMs": 84,
+        "compilationFailed": false,
+        "compiling": false,
+        "consoleErrors": 0,
+        "consoleWarnings": 0,
+        "consoleLogs": 7,
+        "seeded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

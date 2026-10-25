@@ -36,7 +36,7 @@ namespace BattleCity.Editor
                     tank.moveSpeedPixelsPerSecond = player.moveSpeedPixelsPerSecond;
                     tank.hitPoints = player.hitPoints; tank.score = player.score;
                     // Project defaults only: fast bullets after one upgrade; two live shots after two.
-                    tank.bulletSpeedPixelsPerSecond = 300;
+                    tank.bulletSpeedPixelsPerSecond = 240;
                     tank.fireCooldownTicks = 15;
                     tank.maxActiveBullets = i >= 2 ? 2 : 1;
                     tank.canDestroySteel = i == 3;

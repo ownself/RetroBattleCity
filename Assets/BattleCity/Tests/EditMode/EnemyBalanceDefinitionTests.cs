@@ -109,10 +109,10 @@ namespace BattleCity.Tests
             Assert.That(tanks.Skip(1).All(t => t.requiresCalibration), Is.True);
         }
 
-        [TestCase(EnemyKind.Basic, "basic", 60, 180, 1, 100)]
-        [TestCase(EnemyKind.Fast, "fast", 90, 180, 1, 200)]
-        [TestCase(EnemyKind.FastBullet, "power", 60, 300, 1, 300)]
-        [TestCase(EnemyKind.Armor, "armor", 45, 180, 4, 400)]
+        [TestCase(EnemyKind.Basic, "basic", 60, 120, 1, 100)]
+        [TestCase(EnemyKind.Fast, "fast", 90, 120, 1, 200)]
+        [TestCase(EnemyKind.FastBullet, "power", 60, 240, 1, 300)]
+        [TestCase(EnemyKind.Armor, "armor", 45, 120, 4, 400)]
         public void ShippedAssets_HaveDocumentedDefaultsAndEightValidSpriteFrames(
             EnemyKind kind, string variant, float move, float bullet, int hp, int score)
         {

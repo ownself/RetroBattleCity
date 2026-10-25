@@ -1,0 +1,63 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 1.16,
+      "summary": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.CampaignPlayModeTests.DeathBeforeVictoryCarriesCurrentZeroTier_NotEarlierThreeStars",
+          "Status": "Passed",
+          "Duration": 0.1682276,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignPlayModeTests.NormalAdvanceCarriesOneStar",
+          "Status": "Passed",
+          "Duration": 0.1416909,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignPlayModeTests.NormalAdvanceCarriesThreeStars",
+          "Status": "Passed",
+          "Duration": 0.1487249,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignPlayModeTests.NormalAdvanceCarriesTwoStars",
+          "Status": "Passed",
+          "Duration": 0.1642888,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignPlayModeTests.TwoStagesSameHostSnapshotIsolationRestartAndFinalCompletion",
+          "Status": "Passed",
+          "Duration": 0.5196208,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

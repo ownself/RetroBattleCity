@@ -16,8 +16,10 @@ MonoBehaviour:
   spritePrefix: tank.white.enemy.basic
   requiresCalibration: 1
   moveSpeedPixelsPerSecond: 60
-  bulletSpeedPixelsPerSecond: 180
+  bulletSpeedPixelsPerSecond: 120
   fireCooldownTicks: 15
   maxActiveBullets: 1
+  canDestroySteel: 0
   hitPoints: 1
   score: 100
+  damageSpritePrefixes: []

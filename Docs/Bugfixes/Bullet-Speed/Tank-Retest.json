@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "TankStateTests.TankCommand_SharesMovementAnimationMuzzleCooldownAndCapacity"
+    },
+    "result": {
+      "Summary": {
+        "Total": 2,
+        "Passed": 2,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.TankCommand_SharesMovementAnimationMuzzleCooldownAndCapacity(Player)",
+          "Status": "Passed",
+          "Duration": 0.0109795,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.TankCommand_SharesMovementAnimationMuzzleCooldownAndCapacity(Enemy)",
+          "Status": "Passed",
+          "Duration": 0.0010183,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 0.48,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: TankStateTests.TankCommand_SharesMovementAnimationMuzzleCooldownAndCapacity",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

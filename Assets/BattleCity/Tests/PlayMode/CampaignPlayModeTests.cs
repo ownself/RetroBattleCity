@@ -86,6 +86,67 @@ namespace BattleCity.Tests
             yield return Until(() => c.singlePlayerFlow.State.Screen == SinglePlayerScreen.Results);
             Assert.That(s.Phase, Is.EqualTo(SessionPhase.Won));
         }
+        private void AssertUpgrade(int level)
+        {
+            Assert.That(c.Session.PlayerUpgrades.Level, Is.EqualTo(level));
+            Assert.That(c.Session.PlayerWeapon.Parameters.BulletSpeedPixelsPerSecond, Is.EqualTo(level == 0 ? 120 : 240));
+            Assert.That(c.Session.PlayerWeapon.Parameters.MaxActiveBullets, Is.EqualTo(level < 2 ? 1 : 2));
+            Assert.That(c.Session.PlayerWeapon.Parameters.CanDestroySteel, Is.EqualTo(level == 3));
+            Assert.That(c.playerRenderer.sprite.name, Does.StartWith("tank.yellow.player.level" + level + "."));
+        }
+
+        private IEnumerator CarryUpgrade(int level)
+        {
+            yield return Load();
+            yield return Press(Key.Enter); yield return Press(Key.Enter);
+            var old = c.Session;
+            for (int i = 0; i < level; i++) Assert.That(old.TryUpgradePlayer(), Is.True);
+            Assert.That(old.PlayerWeapon.Step(new TankCommand(CardinalDirection.Up, true), old.Player.Position, CardinalDirection.Up), Is.True);
+            yield return Win();
+            Assert.That(old.PlayerUpgrades.Level, Is.EqualTo(level));
+            yield return Press(Key.Enter);
+            Assert.That(c.CurrentStageNumber, Is.EqualTo(23));
+            Assert.That(c.Session.Phase, Is.EqualTo(SessionPhase.Ready));
+            Assert.That(c.Session.Clock.Tick, Is.Zero);
+            AssertUpgrade(level);
+            Assert.That(c.Session.PlayerWeapon.CooldownRemainingTicks, Is.Zero);
+            Assert.That(c.Session.Bullets.Active, Is.Empty);
+            Assert.That(old.Bullets.Active, Is.Empty);
+            Assert.That(c.Session.PlayerUpgrades, Is.Not.SameAs(old.PlayerUpgrades), "Carry a tier, not a mutable old session.");
+            Assert.That(c.Session.Score, Is.Zero); Assert.That(c.Session.Result, Is.Null);
+            Assert.That(c.singlePlayerFlow.State.CanSelectStage, Is.False);
+            yield return Press(Key.Enter);
+            AssertUpgrade(level);
+            Assert.That(c.Session.TryUpgradePlayer(), Is.EqualTo(level < 3));
+            Assert.That(c.Session.PlayerUpgrades.Level, Is.EqualTo(System.Math.Min(level + 1, 3)));
+            yield return Press(Key.R);
+            AssertUpgrade(0);
+            Assert.That(c.singlePlayerFlow.State.CanSelectStage, Is.True);
+            yield return Press(Key.UpArrow); AssertUpgrade(0);
+            yield return Press(Key.DownArrow); AssertUpgrade(0);
+        }
+
+        [UnityTest] public IEnumerator NormalAdvanceCarriesOneStar() => CarryUpgrade(1);
+        [UnityTest] public IEnumerator NormalAdvanceCarriesTwoStars() => CarryUpgrade(2);
+        [UnityTest] public IEnumerator NormalAdvanceCarriesThreeStars() => CarryUpgrade(3);
+
+        [UnityTest] public IEnumerator DeathBeforeVictoryCarriesCurrentZeroTier_NotEarlierThreeStars()
+        {
+            yield return Load();
+            yield return Press(Key.Enter); yield return Press(Key.Enter);
+            var old = c.Session;
+            for (int i = 0; i < 3; i++) Assert.That(old.TryUpgradePlayer(), Is.True);
+            var gun = new WeaponState(shot, old.Bullets, CombatTeam.Enemy, 7777);
+            Assert.That(gun.Step(new TankCommand(CardinalDirection.Down, true), old.Player.Position + Vector2.up * 18, CardinalDirection.Down), Is.True);
+            old.AdvanceFrame(0, PlayerButtons.None);
+            old.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.None);
+            Assert.That(old.PlayerTank.IsAlive, Is.False);
+            Assert.That(old.PlayerUpgrades.Level, Is.Zero);
+            yield return Win(); yield return Press(Key.Enter);
+            Assert.That(c.CurrentStageNumber, Is.EqualTo(23));
+            AssertUpgrade(0);
+        }
+
         [UnityTest] public IEnumerator TwoStagesSameHostSnapshotIsolationRestartAndFinalCompletion()
         {
             yield return Load();
@@ -148,13 +209,16 @@ namespace BattleCity.Tests
             Assert.That(c.CurrentStageNumber, Is.EqualTo(11));
             yield return Press(Key.DownArrow);
             Assert.That(c.CurrentStageNumber, Is.EqualTo(23));
-            yield return Press(Key.Enter); yield return Win();
+            yield return Press(Key.Enter);
+            for (int i = 0; i < 3; i++) Assert.That(c.Session.TryUpgradePlayer(), Is.True);
+            yield return Win();
             Assert.That(c.HasNextStage, Is.False);
             yield return Press(Key.Enter);
             Assert.That(c.singlePlayerFlow.State.Screen, Is.EqualTo(SinglePlayerScreen.Complete));
             Assert.That(c.singlePlayerFlow.heading.Text, Is.EqualTo("CAMPAIGN COMPLETE"));
             yield return Press(Key.Enter);
             Assert.That(c.CurrentStageNumber, Is.EqualTo(11)); Assert.That(c.CampaignIndex, Is.Zero);
+            AssertUpgrade(0);
             Assert.That(c.singlePlayerFlow.State.CanSelectStage, Is.True, "PLAY AGAIN starts a new selectable game.");
             Assert.That(c.singlePlayerFlow.lines[1].Text, Does.Contain("SELECT STAGE"));
             Assert.That(c.Session.Clock.Tick, Is.Zero);
@@ -164,6 +228,7 @@ namespace BattleCity.Tests
             yield return Press(Key.Enter); yield return Win(); yield return Press(Key.Enter);
             yield return Press(Key.Enter); yield return Until(() => c.Session.Clock.Tick > 0);
             var later = c.Session;
+            Assert.That(later.TryUpgradePlayer(), Is.True);
             var baseShot = new WeaponState(shot, later.Bullets, CombatTeam.Enemy, 8888);
             baseShot.Step(new TankCommand(CardinalDirection.Down, true), later.Base.Position + Vector2.up * 10, CardinalDirection.Down);
             yield return Until(() => c.singlePlayerFlow.State.Screen == SinglePlayerScreen.Results);
@@ -174,6 +239,7 @@ namespace BattleCity.Tests
             yield return Press(Key.DownArrow); yield return Press(Key.Enter);
             Assert.That(c.singlePlayerFlow.State.Screen, Is.EqualTo(SinglePlayerScreen.Title));
             Assert.That(c.CurrentStageNumber, Is.EqualTo(11));
+            AssertUpgrade(0);
             Assert.That(c.Session.Score, Is.Zero);
             Debug.Log($"BC401 same host {id}, stages 11->23->11, real Update frame {Time.frameCount}, no scene duplication");
         }

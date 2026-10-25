@@ -16,7 +16,7 @@ MonoBehaviour:
   spritePrefix: tank.yellow.player.level2
   requiresCalibration: 1
   moveSpeedPixelsPerSecond: 60
-  bulletSpeedPixelsPerSecond: 300
+  bulletSpeedPixelsPerSecond: 240
   fireCooldownTicks: 15
   maxActiveBullets: 2
   canDestroySteel: 0

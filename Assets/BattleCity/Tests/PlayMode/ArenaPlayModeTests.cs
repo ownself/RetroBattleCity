@@ -71,6 +71,8 @@ namespace BattleCity.Tests
                 Assert.That(session.Bullets.Active.Count, Is.EqualTo(1));
                 var bullet = session.Bullets.Active[0]; long id = bullet.Id;
                 Assert.That(bullet.Direction, Is.EqualTo(CardinalDirection.Right));
+                Assert.That(bullet.SpeedPixelsPerSecond, Is.EqualTo(120));
+                Assert.That((bullet.Position - bullet.PreviousPosition).magnitude, Is.EqualTo(2).Within(.0001f));
                 session.SetPaused(true);
                 InputSystem.QueueStateEvent(keyboard, new KeyboardState());
                 InputSystem.Update();

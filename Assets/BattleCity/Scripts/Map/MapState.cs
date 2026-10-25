@@ -9,6 +9,7 @@ namespace BattleCity
     {
         public const float Epsilon = .0001f;
         public const int BrickStripWidthPixels = 16; // Prototype, not a verified original-game value.
+        public const int SteelStripWidthPixels = 16; // Two 8px tiles across, one contacted tile deep.
         public const int DamageCellsPerAxis = PixelGrid.MapSizePixels / PixelGrid.DestructionCellPixels;
         private readonly TerrainKind[] terrain;
         // Each 8px brick owns four 4px quadrants, bits x + y*2 (Y up).
@@ -80,15 +81,7 @@ namespace BattleCity
                 if (hit.Kind != BulletHitKind.Terrain) continue;
                 if (hit.Terrain == TerrainKind.Steel && hit.CanDestroySteel)
                 {
-                    // Project default: consume the projectile and remove only the contacted 8px steel tile.
-                    // All bullets still sweep the pre-damage map; no same-tick piercing through a new hole.
-                    int steelIndex = hit.DamageCell.y / 2 * PixelGrid.TerrainCellsPerAxis + hit.DamageCell.x / 2;
-                    if (terrain[steelIndex] == TerrainKind.Steel)
-                    {
-                        terrain[steelIndex] = TerrainKind.Empty;
-                        cellRevisions[steelIndex] = ++Revision;
-                        removed += 4;
-                    }
+                    removed += RemoveSteelStrip(hit);
                     continue;
                 }
                 if (hit.Terrain != TerrainKind.Brick) continue;
@@ -112,6 +105,29 @@ namespace BattleCity
                     cellRevisions[index] = ++Revision;
                     removed++;
                 }
+            }
+            return removed;
+        }
+
+        private int RemoveSteelStrip(BulletHit hit)
+        {
+            bool horizontal = hit.Direction == CardinalDirection.Left || hit.Direction == CardinalDirection.Right;
+            if (!horizontal && hit.Direction != CardinalDirection.Up && hit.Direction != CardinalDirection.Down) return 0;
+            int along = (horizontal ? hit.DamageCell.x : hit.DamageCell.y) / 2;
+            float across = horizontal ? hit.Position.y : hit.Position.x;
+            int first = Mathf.FloorToInt((across - SteelStripWidthPixels / 2 + Epsilon) / PixelGrid.TerrainCellPixels);
+            int removed = 0;
+            // Use the captured contact layer, never search deeper after an earlier same-tick hit.
+            for (int offset = 0; offset < SteelStripWidthPixels / PixelGrid.TerrainCellPixels; offset++)
+            {
+                int x = horizontal ? along : first + offset;
+                int y = horizontal ? first + offset : along;
+                if (x < 0 || y < 0 || x >= PixelGrid.TerrainCellsPerAxis || y >= PixelGrid.TerrainCellsPerAxis) continue;
+                int index = y * PixelGrid.TerrainCellsPerAxis + x;
+                if (terrain[index] != TerrainKind.Steel) continue;
+                terrain[index] = TerrainKind.Empty;
+                cellRevisions[index] = ++Revision;
+                removed += 4; // Each removed 8px tile accounts for four 4px damage cells.
             }
             return removed;
         }

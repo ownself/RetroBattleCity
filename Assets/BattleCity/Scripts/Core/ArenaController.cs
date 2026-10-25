@@ -146,14 +146,14 @@ namespace BattleCity
             initialSessionLifecycle = enableSessionLifecycle;
         }
 
-        private ArenaSession CreateSession()
+        private ArenaSession CreateSession(int initialPlayerUpgradeLevel = 0)
         {
             if (sessionWave != null)
                 for (int i = 0; i < sessionWave.tankDefinitions.Length; i++)
                     JsonUtility.FromJsonOverwrite(JsonUtility.ToJson(initialWave.tankDefinitions[i]), sessionWave.tankDefinitions[i]);
             return new ArenaSession(initialLevel, initialPlayer, sessionWave,
                 initialBaseEnabled, initialPlayerLifecycle ? PlayerLifeParameters.Prototype : null, initialSessionLifecycle, initialUpgrades, initialPickups,
-                initialPickups == null ? (uint?)null : CreatePickupSeed());
+                initialPickups == null ? (uint?)null : CreatePickupSeed(), initialPlayerUpgradeLevel);
         }
 
         private uint CreatePickupSeed()
@@ -173,9 +173,12 @@ namespace BattleCity
         {
             // Never replace a session while inside its notification/tick, or skip unfinished stages.
             if (updating || restarting || Session == null || Session.Phase != SessionPhase.Won || !HasNextStage) return false;
+            int carriedUpgradeLevel = Session.PlayerUpgrades?.Level ?? 0;
             CampaignIndex++;
             initialLevel = campaignLevels[CampaignIndex];
-            RestartSession();
+            // Only normal victory continuation carries the current tier; explicit restarts remain fresh.
+            Session.Stop();
+            RestartNow(carriedUpgradeLevel);
             return true;
         }
 
@@ -207,7 +210,7 @@ namespace BattleCity
             RestartNow();
         }
 
-        private void RestartNow()
+        private void RestartNow(int initialPlayerUpgradeLevel = 0)
         {
             restarting = true;
             try
@@ -215,7 +218,7 @@ namespace BattleCity
                 Session.Release();
                 HidePlayerShield();
                 ClearEnemyDisplays();
-                Session = CreateSession();
+                Session = CreateSession(initialPlayerUpgradeLevel);
                 Session.SetFocus(focused);
                 // Preserve physical management edges in the controller; do not replay held combat keys.
                 Session.SuppressInput(previousButtons);

@@ -1,0 +1,87 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "if (UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode) throw new System.InvalidOperationException(\"Exit Play first\"); var names = new[] { \"PlayerPrototype\", \"PlayerLevel1\", \"PlayerLevel2\", \"PlayerLevel3\", \"EnemyBasic\", \"EnemyFast\", \"EnemyFastBullet\", \"EnemyArmor\", \"EnemyBasicPrototype\" }; var tanks = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Select(names, name => UnityEditor.AssetDatabase.LoadAssetAtPath<BattleCity.TankDefinition>(\"Assets/BattleCity/Data/\" + name + \".asset\"))); for (int i = 0; i < tanks.Length; i++) { var t = tanks[i]; bool fast = (i >= 1 && i <= 3) || i == 6; if (t == null || UnityEditor.EditorUtility.IsDirty(t) || t.bulletSpeedPixelsPerSecond != (fast ? 300 : 180)) throw new System.InvalidOperationException(\"Unexpected or unsaved tank: \" + names[i]); } for (int i = 0; i < tanks.Length; i++) { UnityEditor.Undo.RecordObject(tanks[i], \"Tune normal and fast bullet speeds\"); tanks[i].bulletSpeedPixelsPerSecond = ((i >= 1 && i <= 3) || i == 6) ? 240 : 120; tanks[i].Validate(); UnityEditor.EditorUtility.SetDirty(tanks[i]); UnityEditor.AssetDatabase.SaveAssetIfDirty(tanks[i]); } var upgrades = UnityEditor.AssetDatabase.LoadAssetAtPath<BattleCity.PlayerUpgradeDefinition>(\"Assets/BattleCity/Data/PlayerUpgrades.asset\"); upgrades.ValidateFor(tanks[0]); return System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Select(tanks, t => new { path = UnityEditor.AssetDatabase.GetAssetPath(t), t.bulletSpeedPixelsPerSecond, t.fireCooldownTicks, t.maxActiveBullets, t.canDestroySteel }));"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "path": "Assets/BattleCity/Data/PlayerPrototype.asset",
+          "bulletSpeedPixelsPerSecond": 120,
+          "fireCooldownTicks": 15,
+          "maxActiveBullets": 1,
+          "canDestroySteel": false
+        },
+        {
+          "path": "Assets/BattleCity/Data/PlayerLevel1.asset",
+          "bulletSpeedPixelsPerSecond": 240,
+          "fireCooldownTicks": 15,
+          "maxActiveBullets": 1,
+          "canDestroySteel": false
+        },
+        {
+          "path": "Assets/BattleCity/Data/PlayerLevel2.asset",
+          "bulletSpeedPixelsPerSecond": 240,
+          "fireCooldownTicks": 15,
+          "maxActiveBullets": 2,
+          "canDestroySteel": false
+        },
+        {
+          "path": "Assets/BattleCity/Data/PlayerLevel3.asset",
+          "bulletSpeedPixelsPerSecond": 240,
+          "fireCooldownTicks": 15,
+          "maxActiveBullets": 2,
+          "canDestroySteel": true
+        },
+        {
+          "path": "Assets/BattleCity/Data/EnemyBasic.asset",
+          "bulletSpeedPixelsPerSecond": 120,
+          "fireCooldownTicks": 15,
+          "maxActiveBullets": 1,
+          "canDestroySteel": false
+        },
+        {
+          "path": "Assets/BattleCity/Data/EnemyFast.asset",
+          "bulletSpeedPixelsPerSecond": 120,
+          "fireCooldownTicks": 15,
+          "maxActiveBullets": 1,
+          "canDestroySteel": false
+        },
+        {
+          "path": "Assets/BattleCity/Data/EnemyFastBullet.asset",
+          "bulletSpeedPixelsPerSecond": 240,
+          "fireCooldownTicks": 15,
+          "maxActiveBullets": 1,
+          "canDestroySteel": false
+        },
+        {
+          "path": "Assets/BattleCity/Data/EnemyArmor.asset",
+          "bulletSpeedPixelsPerSecond": 120,
+          "fireCooldownTicks": 15,
+          "maxActiveBullets": 1,
+          "canDestroySteel": false
+        },
+        {
+          "path": "Assets/BattleCity/Data/EnemyBasicPrototype.asset",
+          "bulletSpeedPixelsPerSecond": 120,
+          "fireCooldownTicks": 15,
+          "maxActiveBullets": 1,
+          "canDestroySteel": false
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,94 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "return new { playing = UnityEditor.EditorApplication.isPlaying, paused = UnityEditor.EditorApplication.isPaused, scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().path, dirty = UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty, background = UnityEngine.Application.runInBackground, tanks = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Select(UnityEditor.AssetDatabase.FindAssets(\"t:TankDefinition\", new[] { \"Assets/BattleCity/Data\" }), guid => { var path = UnityEditor.AssetDatabase.GUIDToAssetPath(guid); var t = UnityEditor.AssetDatabase.LoadAssetAtPath<BattleCity.TankDefinition>(path); return new { path, t.bulletSpeedPixelsPerSecond, t.fireCooldownTicks, t.maxActiveBullets, t.canDestroySteel }; })) };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playing": false,
+        "paused": false,
+        "scene": "Assets/BattleCity/Scenes/SinglePlayer.unity",
+        "dirty": false,
+        "background": false,
+        "tanks": [
+          {
+            "path": "Assets/BattleCity/Data/EnemyArmor.asset",
+            "bulletSpeedPixelsPerSecond": 180,
+            "fireCooldownTicks": 15,
+            "maxActiveBullets": 1,
+            "canDestroySteel": false
+          },
+          {
+            "path": "Assets/BattleCity/Data/EnemyBasic.asset",
+            "bulletSpeedPixelsPerSecond": 180,
+            "fireCooldownTicks": 15,
+            "maxActiveBullets": 1,
+            "canDestroySteel": false
+          },
+          {
+            "path": "Assets/BattleCity/Data/EnemyBasicPrototype.asset",
+            "bulletSpeedPixelsPerSecond": 180,
+            "fireCooldownTicks": 15,
+            "maxActiveBullets": 1,
+            "canDestroySteel": false
+          },
+          {
+            "path": "Assets/BattleCity/Data/EnemyFast.asset",
+            "bulletSpeedPixelsPerSecond": 180,
+            "fireCooldownTicks": 15,
+            "maxActiveBullets": 1,
+            "canDestroySteel": false
+          },
+          {
+            "path": "Assets/BattleCity/Data/EnemyFastBullet.asset",
+            "bulletSpeedPixelsPerSecond": 300,
+            "fireCooldownTicks": 15,
+            "maxActiveBullets": 1,
+            "canDestroySteel": false
+          },
+          {
+            "path": "Assets/BattleCity/Data/PlayerLevel1.asset",
+            "bulletSpeedPixelsPerSecond": 300,
+            "fireCooldownTicks": 15,
+            "maxActiveBullets": 1,
+            "canDestroySteel": false
+          },
+          {
+            "path": "Assets/BattleCity/Data/PlayerLevel2.asset",
+            "bulletSpeedPixelsPerSecond": 300,
+            "fireCooldownTicks": 15,
+            "maxActiveBullets": 2,
+            "canDestroySteel": false
+          },
+          {
+            "path": "Assets/BattleCity/Data/PlayerLevel3.asset",
+            "bulletSpeedPixelsPerSecond": 300,
+            "fireCooldownTicks": 15,
+            "maxActiveBullets": 2,
+            "canDestroySteel": true
+          },
+          {
+            "path": "Assets/BattleCity/Data/PlayerPrototype.asset",
+            "bulletSpeedPixelsPerSecond": 180,
+            "fireCooldownTicks": 15,
+            "maxActiveBullets": 1,
+            "canDestroySteel": false
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

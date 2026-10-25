@@ -1,0 +1,91 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering"
+    },
+    "result": {
+      "Summary": {
+        "Total": 8,
+        "Passed": 8,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Up)",
+          "Status": "Passed",
+          "Duration": 0.0450804,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Left)",
+          "Status": "Passed",
+          "Duration": 0.0010284,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Down)",
+          "Status": "Passed",
+          "Duration": 0.0015736,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Right)",
+          "Status": "Passed",
+          "Duration": 0.0018739,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Up)",
+          "Status": "Passed",
+          "Duration": 0.0013628,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Left)",
+          "Status": "Passed",
+          "Duration": 0.0008843,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Down)",
+          "Status": "Passed",
+          "Duration": 0.0007671,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Right)",
+          "Status": "Passed",
+          "Duration": 0.0007567,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 1.38,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}
