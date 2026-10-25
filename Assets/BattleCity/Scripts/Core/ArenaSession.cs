@@ -17,6 +17,7 @@ namespace BattleCity
         private readonly List<TankState> hitCarriers = new List<TankState>();
         private readonly Dictionary<long, TankDefinition> waveEnemyDefinitions = new Dictionary<long, TankDefinition>();
         private readonly Vector2 playerSpawn;
+        private readonly int stageNumber, pickupScore;
         private long nextEntityId;
         private bool focused = true;
         private readonly SessionFlowState flow;
@@ -34,9 +35,10 @@ namespace BattleCity
         public TankMotor Player => PlayerTank.Motor;
         public BulletWorld Bullets { get; } = new BulletWorld();
         public CombatEffects Effects { get; } = new CombatEffects();
-        // Minimal per-session kill total. Classification/rewards/score UI belong to BC-308.
-        public long Score { get; private set; }
-        public int DefeatedEnemyCount { get; private set; }
+        public ScoreState Scoring { get; } = new ScoreState();
+        public long Score => Scoring.Total;
+        public int DefeatedEnemyCount => Scoring.DefeatedCount;
+        public StageResult Result { get; private set; }
         public WeaponState PlayerWeapon => PlayerTank.Weapon;
         public TankCommand LastCommand { get; private set; } = new TankCommand(CardinalDirection.None);
         public EnemyWaveState EnemyWave { get; }
@@ -73,12 +75,14 @@ namespace BattleCity
             tank.Validate();
             PlayerUpgrades = playerUpgrades == null ? null : new PlayerUpgradeState(playerUpgrades, tank);
             Map = new MapState(level);
+            stageNumber = level.stageNumber;
             playerSpawn = level.playerSpawnPixels;
             PlayerLife = playerLifeParameters == null ? null : new PlayerLifeState(playerLifeParameters);
             // Validate/snapshot the complete wave before registering any combat entity.
             EnemyWave = wave == null ? null : new EnemyWaveState(level, wave);
             if (pickups != null && wave == null) throw new ArgumentException("Pickup carriers require a natural wave.", nameof(pickups));
             Pickups = pickups == null ? null : new PickupState(pickups, level);
+            pickupScore = pickups?.collectionScore ?? 0;
             if (enableBase)
             {
                 if (!Map.CanOccupy(level.baseCenterPixels, BaseState.HalfSizePixels))
@@ -247,6 +251,7 @@ namespace BattleCity
             Pickups?.ClearGlobalEffects();
             Clock.SetPaused(true);
             BaseFortification?.Cancel();
+            for (int i = 0; i < tanks.Count; i++) tanks[i].Motor.Stop();
             ClearCommands();
         }
 
@@ -314,8 +319,7 @@ namespace BattleCity
             Effects.PlayExplosion(state.Motor.Position);
             if (state == PlayerTank) PlayerUpgrades?.ResetOnDeath(PlayerWeapon);
             if (state.Team != CombatTeam.Enemy) return;
-            Score += state.KillScore;
-            DefeatedEnemyCount++;
+            Scoring.RecordEnemy(state);
         }
 
         private bool SettleOutcome() => flow != null && flow.Settle(BaseFailureRequested, PlayerLifeFailureRequested,
@@ -415,6 +419,8 @@ namespace BattleCity
                 }
                 if (Pickups.TryCollect(PlayerTank.Bounds, PlayerTank.IsAlive, Clock.Tick))
                 {
+                    // Count every accepted receipt, even when a capped/optional effect cannot change state.
+                    Scoring.RecordPickup(Pickups.LastCollected.Value.Item.Kind, pickupScore);
                     // Consume only a newly committed receipt, never replay LastCollected on later ticks/renders.
                     switch (Pickups.LastCollected.Value.Item.Kind)
                     {
@@ -444,6 +450,9 @@ namespace BattleCity
                 Clock.SetPaused(true); ClearCommands(); Pickups?.ClearActive();
                 Pickups?.ClearPlayerEffects(); Pickups?.ClearGlobalEffects();
                 BaseFortification?.Cancel();
+                for (int i = 0; i < tanks.Count; i++) tanks[i].Motor.Stop();
+                Result = new StageResult(stageNumber, Phase, FailureReason, Clock.Tick,
+                    PlayerLife?.RemainingLives ?? (PlayerTank.IsAlive ? 1 : 0), Scoring);
             }
             // All original death notifications survive simultaneous failures. The outcome is already frozen.
             notifying = true;

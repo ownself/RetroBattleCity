@@ -29,7 +29,7 @@ namespace BattleCity.Tests
             value ^= value << 13; value ^= value >> 17; value ^= value << 5; return value;
         }
         private static string Snapshot(ArenaSession s, EnemyBrain b, TankState t)
-            => $"{s.Clock.Tick}|{t.Motor.Position.x:R},{t.Motor.Position.y:R}|{t.Motor.Facing}|{t.Motor.TrackFrame}|{b.State}|{b.Direction}|{b.RandomState}|{b.DirectionTicksRemaining}|{b.DecisionTicks}|{t.Weapon.CooldownRemainingTicks}|" +
+            => $"{s.Clock.Tick}|{t.Motor.Position.x:R},{t.Motor.Position.y:R}|{t.Motor.Facing}|{t.Motor.TrackFrame}|{b.State}|{b.Direction}|{b.RandomState}|{b.DirectionTicksRemaining}|{b.DecisionTicks}|{b.FireTicksRemaining}|{b.FireRandomState}|{b.FireAttempts}|{t.Weapon.CooldownRemainingTicks}|" +
                 string.Join(";", s.Bullets.Active.Select(p => $"{p.OwnerId}:{p.Position.x:R},{p.Position.y:R}:{p.Direction}"));
 
         [Test]
@@ -39,7 +39,8 @@ namespace BattleCity.Tests
             var external = s.AddTank(definition, CombatTeam.Enemy, new Vector2(72, 24));
             var controlled = s.AddTank(definition, CombatTeam.Enemy, new Vector2(120, 120));
             s.SetTankCommand(external.EntityId, new TankCommand(CardinalDirection.Up));
-            var b = s.RegisterEnemyAI(controlled.EntityId, 7);
+            // This legacy registration/weapon seam test explicitly requests every tick.
+            var b = s.RegisterEnemyAI(controlled.EntityId, 7, new EnemyBrainParameters(60, 180, 4, 1, 1, 1));
             Tick(s);
             Assert.That(s.Tanks.Single(t => t.EntityId == controlled.EntityId), Is.SameAs(controlled));
             Assert.That(external.Motor.Position, Is.EqualTo(new Vector2(72, 25)));
@@ -62,6 +63,7 @@ namespace BattleCity.Tests
             Assert.That(p.RequiresCalibration, Is.True);
             Assert.That(p.MinDirectionTicks, Is.EqualTo(60)); Assert.That(p.MaxDirectionTicks, Is.EqualTo(180));
             Assert.That(p.DownWeight, Is.EqualTo(4)); Assert.That(p.OtherDirectionWeight, Is.EqualTo(1));
+            Assert.That(p.MinFireDelayTicks, Is.EqualTo(45)); Assert.That(p.MaxFireDelayTicks, Is.EqualTo(105));
             Assert.Throws<ArgumentOutOfRangeException>(() => new EnemyBrainParameters(0, 10, 1, 1));
             Assert.Throws<ArgumentOutOfRangeException>(() => new EnemyBrainParameters(10, 9, 1, 1));
             Assert.Throws<ArgumentOutOfRangeException>(() => new EnemyBrainParameters(1, int.MaxValue, 1, 1));
@@ -98,7 +100,7 @@ namespace BattleCity.Tests
         {
             var s = new ArenaSession(level, definition);
             var t = s.AddTank(definition, CombatTeam.Enemy, new Vector2(x, y));
-            var b = s.RegisterEnemyAI(t.EntityId, 7, initialDirection: initial);
+            var b = s.RegisterEnemyAI(t.EntityId, 7, new EnemyBrainParameters(60, 180, 4, 1, 1, 1), initial);
             Tick(s);
             Assert.That(b.Direction, Is.Not.EqualTo(initial));
             Assert.That(t.Motor.IsMoving, Is.True);
@@ -125,7 +127,7 @@ namespace BattleCity.Tests
             Wall(x, y, terrain);
             var s = new ArenaSession(level, definition);
             var t = s.AddTank(definition, CombatTeam.Enemy, new Vector2(104, 104));
-            var b = s.RegisterEnemyAI(t.EntityId, 11, initialDirection: initial);
+            var b = s.RegisterEnemyAI(t.EntityId, 11, new EnemyBrainParameters(60, 180, 4, 1, 1, 1), initial);
             Tick(s);
             Assert.That(b.Direction, Is.Not.EqualTo(initial));
             Assert.That(t.Motor.IsMoving, Is.True);
@@ -204,7 +206,7 @@ namespace BattleCity.Tests
                 if (x == 11 || x == 14 || y == 11 || y == 14) Wall(x, y, TerrainKind.Brick);
             var s = new ArenaSession(level, definition);
             var t = s.AddTank(definition, CombatTeam.Enemy, new Vector2(104, 104));
-            var b = s.RegisterEnemyAI(t.EntityId, 17, initialDirection: CardinalDirection.Up);
+            var b = s.RegisterEnemyAI(t.EntityId, 17, new EnemyBrainParameters(60, 180, 4, 1, 1, 1), CardinalDirection.Up);
             Tick(s);
             Assert.That(b.State, Is.EqualTo(EnemyDecisionState.Blocked));
             Assert.That(b.RandomState, Is.EqualTo(17));
@@ -232,6 +234,99 @@ namespace BattleCity.Tests
             Assert.That(t.Motor.Position, Is.EqualTo(position)); Assert.That(t.Weapon.CooldownRemainingTicks, Is.EqualTo(cooldown));
             Assert.That(t.Weapon.ActiveBullets, Is.Zero);
             Assert.Throws<ArgumentException>(() => s.RegisterEnemyAI(t.EntityId, 3));
+        }
+
+        [TestCase(1u)] [TestCase(7u)] [TestCase(123456u)] [TestCase(0x9E3779B9u)]
+        public void Fire_DefaultRandomInitialAndLaterIntervalsAreBounded_ReproducibleAndNotHeld(uint seed)
+        {
+            var s = new ArenaSession(level, definition);
+            var t = s.AddTank(definition, CombatTeam.Enemy, new Vector2(104, 104));
+            var b = s.RegisterEnemyAI(t.EntityId, seed);
+            int first = b.FireTicksRemaining; Assert.That(first, Is.InRange(45, 105));
+            long previousAttempt = 0, previousTick = 0;
+            var intervals = new HashSet<long>();
+            for (int i = 1; i <= 1200; i++)
+            {
+                s.Bullets.Clear(); Tick(s);
+                if (i < first) Assert.That(b.FireAttempts, Is.Zero);
+                if (b.FireAttempts == previousAttempt) continue;
+                Assert.That(b.FireAttempts, Is.EqualTo(previousAttempt + 1));
+                long interval = i - previousTick; Assert.That(interval, Is.InRange(45, 105));
+                intervals.Add(interval); previousTick = i; previousAttempt = b.FireAttempts;
+                Assert.That(t.Weapon.CooldownRemainingTicks, Is.EqualTo(definition.fireCooldownTicks));
+            }
+            Assert.That(previousAttempt, Is.InRange(11, 27)); Assert.That(intervals.Count, Is.GreaterThan(1));
+        }
+
+        [Test]
+        public void Fire_ReleasingProjectileCapacityDoesNotImmediatelyShootOrQueueRequests()
+        {
+            definition.fireCooldownTicks = 1;
+            var s = new ArenaSession(level, definition);
+            var t = s.AddTank(definition, CombatTeam.Enemy, new Vector2(104, 104));
+            var b = s.RegisterEnemyAI(t.EntityId, 7, new EnemyBrainParameters(60, 180, 4, 1, 3, 3));
+            Tick(s); Tick(s); Assert.That(t.Weapon.ActiveBullets, Is.Zero); Assert.That(b.FireAttempts, Is.Zero);
+            Tick(s); Assert.That(t.Weapon.ActiveBullets, Is.EqualTo(1)); Assert.That(b.FireAttempts, Is.EqualTo(1));
+            // Keep the cap full through the next request; that request is discarded, not saved for later.
+            Tick(s); Tick(s); Tick(s); Assert.That(b.FireAttempts, Is.EqualTo(2)); Assert.That(t.Weapon.ActiveBullets, Is.EqualTo(1));
+            s.Bullets.Clear(); Tick(s); Tick(s);
+            Assert.That(t.Weapon.ActiveBullets, Is.Zero); Assert.That(b.FireAttempts, Is.EqualTo(2));
+            Tick(s); Assert.That(t.Weapon.ActiveBullets, Is.EqualTo(1)); Assert.That(b.FireAttempts, Is.EqualTo(3));
+        }
+
+        [Test]
+        public void Fire_FullyBlockedStillWaitsAndShoots_WithoutChangingMovementRandom()
+        {
+            for (int y = 11; y <= 14; y++) for (int x = 11; x <= 14; x++)
+                if (x == 11 || x == 14 || y == 11 || y == 14) Wall(x, y, TerrainKind.Steel);
+            var s = new ArenaSession(level, definition); var t = s.AddTank(definition, CombatTeam.Enemy, new Vector2(104, 104));
+            var b = s.RegisterEnemyAI(t.EntityId, 17, new EnemyBrainParameters(60, 180, 4, 1, 3, 3));
+            Tick(s); Tick(s); Assert.That(b.FireAttempts, Is.Zero); Assert.That(t.Weapon.CooldownRemainingTicks, Is.Zero);
+            Tick(s); Assert.That(b.FireAttempts, Is.EqualTo(1)); Assert.That(t.Weapon.CooldownRemainingTicks, Is.EqualTo(15));
+            Assert.That(b.State, Is.EqualTo(EnemyDecisionState.Blocked)); Assert.That(b.RandomState, Is.EqualTo(17));
+        }
+
+        [Test]
+        public void Fire_TuningDoesNotPerturbDirectionRandomOrMovement()
+        {
+            var a = new ArenaSession(level, definition); var c = new ArenaSession(level, definition);
+            a.PlayerTank.IsProtected = c.PlayerTank.IsProtected = true;
+            var ta = a.AddTank(definition, CombatTeam.Enemy, new Vector2(104, 104));
+            var tc = c.AddTank(definition, CombatTeam.Enemy, new Vector2(104, 104));
+            var ba = a.RegisterEnemyAI(ta.EntityId, 73, new EnemyBrainParameters(2, 8, 4, 1, 1, 1));
+            var bc = c.RegisterEnemyAI(tc.EntityId, 73, new EnemyBrainParameters(2, 8, 4, 1));
+            for (int i = 0; i < 1000; i++)
+            {
+                Tick(a); Tick(c);
+                Assert.That(ba.Direction, Is.EqualTo(bc.Direction)); Assert.That(ba.RandomState, Is.EqualTo(bc.RandomState));
+                Assert.That(ta.Motor.Position, Is.EqualTo(tc.Motor.Position));
+            }
+            Assert.That(ba.FireAttempts, Is.GreaterThan(bc.FireAttempts));
+        }
+
+        [TestCase(0, 10)] [TestCase(10, 9)] [TestCase(1, int.MaxValue)]
+        public void Fire_InvalidDelayRangeRejected(int min, int max)
+            => Assert.Throws<ArgumentOutOfRangeException>(() => new EnemyBrainParameters(60, 180, 4, 1, min, max));
+
+        [Test]
+        public void Fire_ClockAndPauseFreezeIndependentCountdownAndRandom_NoBacklogOnResume()
+        {
+            var wave = ScriptableObject.CreateInstance<EnemyWaveDefinition>();
+            var rules = ScriptableObject.CreateInstance<PickupDefinition>();
+            try
+            {
+                wave.tankDefinitions = new[] { definition }; rules.carrierSequenceIndices = new int[0]; rules.clockDurationTicks = 3;
+                var s = new ArenaSession(level, definition, wave, pickups: rules);
+                var t = s.AddTank(definition, CombatTeam.Enemy, new Vector2(104, 104));
+                var b = s.RegisterEnemyAI(t.EntityId, 7, new EnemyBrainParameters(60, 180, 4, 1, 6, 6));
+                ClassicRulesCombinationTests.Drop(s, PickupKind.Clock); Tick(s);
+                Assert.That(b.FireTicksRemaining, Is.EqualTo(5)); uint random = b.FireRandomState;
+                s.SetPaused(true); for (int i = 0; i < 5; i++) Tick(s);
+                s.SetPaused(false); for (int i = 0; i < 3; i++) Tick(s);
+                Assert.That(b.FireTicksRemaining, Is.EqualTo(5)); Assert.That(b.FireRandomState, Is.EqualTo(random));
+                Assert.That(b.FireAttempts, Is.Zero); Tick(s); Assert.That(b.FireTicksRemaining, Is.EqualTo(4));
+            }
+            finally { UnityEngine.Object.DestroyImmediate(wave); UnityEngine.Object.DestroyImmediate(rules); }
         }
 
         [Test]

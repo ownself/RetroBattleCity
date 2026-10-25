@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "command": "command script recompile",
+  "data": {
+    "command": "script recompile",
+    "parameters": {
+      "focus": "true"
+    },
+    "result": {
+      "status": "compiling",
+      "message": "Recompilation started. Poll script recompile_status until completed."
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

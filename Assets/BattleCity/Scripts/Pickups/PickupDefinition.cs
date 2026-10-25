@@ -11,6 +11,7 @@ namespace BattleCity
     public sealed class PickupDefinition : ScriptableObject
     {
         public uint seed = 303;
+        public int collectionScore = 500; // Each accepted pickup, including capped rewards. Project default.
         public int helmetDurationTicks = 600;
         public int clockDurationTicks = 600;
         public int shovelDurationTicks = BaseFortificationState.DefaultDurationTicks;
@@ -24,6 +25,7 @@ namespace BattleCity
         public void Validate()
         {
             if (seed == 0) throw new InvalidOperationException("Pickup seed must be nonzero.");
+            if (collectionScore < 0) throw new InvalidOperationException("Pickup collection score must be nonnegative.");
             if (helmetDurationTicks < 1 || clockDurationTicks < 1 || shovelDurationTicks < 1 || maximumLives < 1)
                 throw new InvalidOperationException("Pickup duration and life ceiling must be positive.");
             if (carrierSequenceIndices == null) throw new InvalidOperationException("Missing pickup carrier indices.");

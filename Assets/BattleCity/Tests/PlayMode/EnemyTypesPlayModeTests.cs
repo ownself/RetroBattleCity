@@ -75,8 +75,9 @@ namespace BattleCity.Tests
                     {
                         session.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.None);
                         view.Render();
-                        Assert.That(display.sprite, Is.SameAs(catalog.Get(expected[stage] + "." +
-                            enemy.Motor.Facing.SpriteKey() + "." + enemy.Motor.TrackFrame)));
+                        // Unity can return different managed wrappers for the same native Sprite entity.
+                        Assert.That(display.sprite.GetEntityId(), Is.EqualTo(catalog.Get(expected[stage] + "." +
+                            enemy.Motor.Facing.SpriteKey() + "." + enemy.Motor.TrackFrame).GetEntityId()));
                     }
                     Assert.That(enemy.Motor.Facing, Is.EqualTo((CardinalDirection)direction));
                 }
@@ -85,7 +86,7 @@ namespace BattleCity.Tests
                 var sprite = display.sprite; var position = enemy.Motor.Position; long tickBefore = session.Clock.Tick;
                 yield return null;
                 session.AdvanceFrame(1, PlayerButtons.None); view.Render();
-                Assert.That(display.sprite, Is.SameAs(sprite));
+                Assert.That(display.sprite.GetEntityId(), Is.EqualTo(sprite.GetEntityId()));
                 Assert.That(enemy.Motor.Position, Is.EqualTo(position));
                 Assert.That(session.Clock.Tick, Is.EqualTo(tickBefore));
                 Shoot(session, enemy); Tick(session, 1); view.Render();

@@ -1,0 +1,4613 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "timeout": "120"
+    },
+    "result": {
+      "Summary": {
+        "Total": 654,
+        "Passed": 653,
+        "Failed": 1,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.ArenaHudTests.LegacyScenes_DoNotAcquireHud(\"Assets/BattleCity/Scenes/CombatArena.unity\")",
+          "Status": "Passed",
+          "Duration": 0.0959695,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaHudTests.LegacyScenes_DoNotAcquireHud(\"Assets/BattleCity/Scenes/PixelBaseline.unity\")",
+          "Status": "Passed",
+          "Duration": 0.0079005,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaHudTests.Lives_TotalIncludesCurrent_DeathSpendsAndRespawnDoesNotSpendAgain",
+          "Status": "Passed",
+          "Duration": 0.0028423,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaHudTests.PhaseCaption_AllSessionPhases(Ready,\"READY  ENTER START\")",
+          "Status": "Passed",
+          "Duration": 0.000523,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaHudTests.PhaseCaption_AllSessionPhases(Playing,\"\")",
+          "Status": "Passed",
+          "Duration": 0.0001587,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaHudTests.PhaseCaption_AllSessionPhases(Paused,\"PAUSED  ESC RESUME\")",
+          "Status": "Passed",
+          "Duration": 0.0001456,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaHudTests.PhaseCaption_AllSessionPhases(Won,\"WON\")",
+          "Status": "Passed",
+          "Duration": 0.0001457,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaHudTests.PhaseCaption_AllSessionPhases(Lost,\"LOST\")",
+          "Status": "Passed",
+          "Duration": 0.0001459,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaHudTests.RemainingEnemies_ReservationBlockedMaterializationAndDeathOnlySpendOne",
+          "Status": "Passed",
+          "Duration": 0.0054868,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ArenaHudTests.Stage01_SavedHudUsesNativeNumbersAndOnlyMarginGeometry",
+          "Status": "Passed",
+          "Duration": 0.0483542,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationAndRefresh_DeferLiveTankAndBirthReservationIndependently_NoPoseMutation",
+          "Status": "Passed",
+          "Duration": 0.002729,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(1)",
+          "Status": "Passed",
+          "Duration": 0.0014009,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(2)",
+          "Status": "Passed",
+          "Duration": 0.0007537,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(3)",
+          "Status": "Passed",
+          "Duration": 0.0007492,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(4)",
+          "Status": "Passed",
+          "Duration": 0.0007412,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(5)",
+          "Status": "Passed",
+          "Duration": 0.0007456,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(6)",
+          "Status": "Passed",
+          "Duration": 0.000604,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(7)",
+          "Status": "Passed",
+          "Duration": 0.0005381,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(8)",
+          "Status": "Passed",
+          "Duration": 0.0006044,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(9)",
+          "Status": "Passed",
+          "Duration": 0.0005392,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(10)",
+          "Status": "Passed",
+          "Duration": 0.0005527,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(11)",
+          "Status": "Passed",
+          "Duration": 0.0007338,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(12)",
+          "Status": "Passed",
+          "Duration": 0.0006875,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(13)",
+          "Status": "Passed",
+          "Duration": 0.0006034,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(14)",
+          "Status": "Passed",
+          "Duration": 0.0005335,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(15)",
+          "Status": "Passed",
+          "Duration": 0.0005383,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ArenaMapView_IncrementalRevisionProjectsActivationAndRestoration_NoSceneOrAssetChanges",
+          "Status": "Passed",
+          "Duration": 0.003179,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.CancelFromActiveOrPendingRestore_ForcesExactSnapshotAndClearsAllWork_Idempotent(False)",
+          "Status": "Passed",
+          "Duration": 0.0012542,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.CancelFromActiveOrPendingRestore_ForcesExactSnapshotAndClearsAllWork_Idempotent(True)",
+          "Status": "Passed",
+          "Duration": 0.0005316,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.DurationIs1200FutureCompleteTicks_RefreshNotAddition_ExpiryAtEndOfLastTick",
+          "Status": "Passed",
+          "Duration": 0.0009579,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(8,8,5)",
+          "Status": "Passed",
+          "Duration": 0.0045755,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(200,8,5)",
+          "Status": "Passed",
+          "Duration": 0.0039801,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(8,200,2)",
+          "Status": "Passed",
+          "Duration": 0.0061627,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(200,200,2)",
+          "Status": "Passed",
+          "Duration": 0.0079398,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(104,200,4)",
+          "Status": "Passed",
+          "Duration": 0.0105962,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ExpiredActivationPendingNeverBuildsSteelLater_OnlyOriginalRestorationRetries",
+          "Status": "Passed",
+          "Duration": 0.0020281,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.Expiry_DefersBlockingOriginalsPerCell_IncludingReservation_RestoresEmptyImmediately",
+          "Status": "Passed",
+          "Duration": 0.0028432,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.FortifiedCellsUseExistingSteelBulletRules_DestroyedWallStaysOpenUntilNewActivation(False)",
+          "Status": "Passed",
+          "Duration": 0.0047014,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.FortifiedCellsUseExistingSteelBulletRules_DestroyedWallStaysOpenUntilNewActivation(True)",
+          "Status": "Passed",
+          "Duration": 0.0005506,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(105,8)",
+          "Status": "Passed",
+          "Duration": 0.0016656,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(104,9)",
+          "Status": "Passed",
+          "Duration": 0.0005492,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(0,8)",
+          "Status": "Passed",
+          "Duration": 0.0004868,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(208,8)",
+          "Status": "Passed",
+          "Duration": 0.000728,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(104,0)",
+          "Status": "Passed",
+          "Duration": 0.0007747,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(104,208)",
+          "Status": "Passed",
+          "Duration": 0.0028678,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.InvalidDurationAndNullDependenciesAreRejected_CancelBeforeActivationIsSafe",
+          "Status": "Passed",
+          "Duration": 0.0021675,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Empty,byte.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0015867,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Brick,9)",
+          "Status": "Passed",
+          "Duration": 0.0013983,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Steel,byte.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0012891,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Water,byte.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0006991,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Grass,byte.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0005669,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Ice,byte.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0005557,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ReactivationWhileRestoringKeepsFirstSnapshot_CompletedCycleAllowsNewSnapshot",
+          "Status": "Passed",
+          "Duration": 0.0008091,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.RealBulletDamagedBrickMaskAndProjectionRevisionSurviveFortifyAndRestore",
+          "Status": "Passed",
+          "Duration": 0.0010319,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.RestoringNonblockingTerrainNeverWaitsForOccupants(Grass)",
+          "Status": "Passed",
+          "Duration": 0.0007566,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.RestoringNonblockingTerrainNeverWaitsForOccupants(Ice)",
+          "Status": "Passed",
+          "Duration": 0.0005144,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.SetTerrainCell_ExactDataAndCellRevision_OnlyChangedCellDirty_InvalidWritesAtomic",
+          "Status": "Passed",
+          "Duration": 0.0014504,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.Stage01Uring_IsEightCells_LeftTopRight_NoBaseOrBottomOrOtherChanges",
+          "Status": "Passed",
+          "Duration": 0.0056539,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.TouchingCellEdgeIsNotOccupation_StrictOverlapDefers",
+          "Status": "Passed",
+          "Duration": 0.00103,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EarlierTerrainConsumesShotBeforeBase(Brick)",
+          "Status": "Passed",
+          "Duration": 0.0025299,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EarlierTerrainConsumesShotBeforeBase(Steel)",
+          "Status": "Passed",
+          "Duration": 0.0008687,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Up)",
+          "Status": "Passed",
+          "Duration": 0.0017871,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Left)",
+          "Status": "Passed",
+          "Duration": 0.0009796,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Down)",
+          "Status": "Passed",
+          "Duration": 0.0009314,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Player,Right)",
+          "Status": "Passed",
+          "Duration": 0.0009274,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Up)",
+          "Status": "Passed",
+          "Duration": 0.000941,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Left)",
+          "Status": "Passed",
+          "Duration": 0.000942,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Down)",
+          "Status": "Passed",
+          "Duration": 0.0006725,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.EitherTeamFromEveryDirectionDestroysBase_WithoutTankOwnerFiltering(Enemy,Right)",
+          "Status": "Passed",
+          "Duration": 0.0005989,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.HighSpeedSweepCannotTunnel_OneHitDestroys",
+          "Status": "Passed",
+          "Duration": 0.001031,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.IntactAndRuinedBaseBlockNaturalBirths(False)",
+          "Status": "Passed",
+          "Duration": 0.001597,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.IntactAndRuinedBaseBlockNaturalBirths(True)",
+          "Status": "Passed",
+          "Duration": 0.0010318,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.IntactAndRuinedFootprintsBlockMovementAndExplicitSpawns(False)",
+          "Status": "Passed",
+          "Duration": 0.0010747,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.IntactAndRuinedFootprintsBlockMovementAndExplicitSpawns(True)",
+          "Status": "Passed",
+          "Duration": 0.0008053,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.LegacySessionHasNoInvisibleBase_EnabledSessionsOwnIndependentSnapshot",
+          "Status": "Passed",
+          "Duration": 0.0057978,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.PauseFreezesIncomingShotAndFailure_ResumeSettlesOnce",
+          "Status": "Passed",
+          "Duration": 0.0014033,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.SameTickMultipleShotsConsumeOldBase_OneExplosionAndNotification_AllTankDamageStillSettles",
+          "Status": "Passed",
+          "Duration": 0.0037539,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.TankBeforeBaseWinsDistance_BaseWinsSameDistancePriority(64,Tank)",
+          "Status": "Passed",
+          "Duration": 0.0013602,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.TankBeforeBaseWinsDistance_BaseWinsSameDistancePriority(104,Base)",
+          "Status": "Passed",
+          "Duration": 0.0007934,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseStateTests.TankBeforeBaseWinsDistance_BaseWinsSameDistancePriority(144,Base)",
+          "Status": "Passed",
+          "Duration": 0.0008529,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.AcrossStrip_FloorsLowerEdgeToFourPixelGrid(104.0f,24)",
+          "Status": "Passed",
+          "Duration": 0.0017755,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.AcrossStrip_FloorsLowerEdgeToFourPixelGrid(107.5f,24)",
+          "Status": "Passed",
+          "Duration": 0.0008033,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.AcrossStrip_FloorsLowerEdgeToFourPixelGrid(108.0f,25)",
+          "Status": "Passed",
+          "Duration": 0.0007661,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.AuthoringAndNewSession_RetainOriginalFullBricks",
+          "Status": "Passed",
+          "Duration": 0.0020053,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.EightPixelGap_RemainsImpassableTo16PixelTank",
+          "Status": "Passed",
+          "Duration": 0.001309,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.FourDirections_RemoveOnlyOne16By4Strip(Up,104,48,20)",
+          "Status": "Passed",
+          "Duration": 0.0046499,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.FourDirections_RemoveOnlyOne16By4Strip(Down,104,160,31)",
+          "Status": "Passed",
+          "Duration": 0.0029842,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.FourDirections_RemoveOnlyOne16By4Strip(Right,48,104,20)",
+          "Status": "Passed",
+          "Duration": 0.0029067,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.FourDirections_RemoveOnlyOne16By4Strip(Left,160,104,31)",
+          "Status": "Passed",
+          "Duration": 0.0029093,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.MapEdge_ClipsWithoutShiftingStripInward(4.0f,0)",
+          "Status": "Passed",
+          "Duration": 0.0013131,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.MapEdge_ClipsWithoutShiftingStripInward(204.0f,49)",
+          "Status": "Passed",
+          "Duration": 0.0010992,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.PausedSession_DoesNotReplayLastTickDamage",
+          "Status": "Passed",
+          "Duration": 0.0007893,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.RemainingLayerBlocksTank_ThenFourShotsOpenA16PixelPassage",
+          "Status": "Passed",
+          "Duration": 0.000921,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.SameTickTwoBullets_HitOneSnapshotAndDoNotDrillTwoLayers",
+          "Status": "Passed",
+          "Duration": 0.0008084,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.Session_MultipleTicksApplyDamageBeforeTheNextSweep",
+          "Status": "Passed",
+          "Duration": 0.0012143,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.SteelBoundaryAndEmptyEvents_DoNotAdvanceMapRevision",
+          "Status": "Passed",
+          "Duration": 0.0010379,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.Strip_NeverChangesOtherTerrain(Steel)",
+          "Status": "Passed",
+          "Duration": 0.0009508,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.Strip_NeverChangesOtherTerrain(Water)",
+          "Status": "Passed",
+          "Duration": 0.0007123,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.Strip_NeverChangesOtherTerrain(Grass)",
+          "Status": "Passed",
+          "Duration": 0.0007021,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.Strip_NeverChangesOtherTerrain(Ice)",
+          "Status": "Passed",
+          "Duration": 0.000699,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.TouchingWall_SameTimeWeaponsSelectSameOuterLayerInStableOrder(Up)",
+          "Status": "Passed",
+          "Duration": 0.0020445,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.TouchingWall_SameTimeWeaponsSelectSameOuterLayerInStableOrder(Down)",
+          "Status": "Passed",
+          "Duration": 0.0007364,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.TouchingWall_SameTimeWeaponsSelectSameOuterLayerInStableOrder(Right)",
+          "Status": "Passed",
+          "Duration": 0.000783,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.TouchingWall_SameTimeWeaponsSelectSameOuterLayerInStableOrder(Left)",
+          "Status": "Passed",
+          "Duration": 0.0007292,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.TwoShots_RemoveTwoLayersAndClearTerrainOnlyWhenLastBitIsGone",
+          "Status": "Passed",
+          "Duration": 0.0012959,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Up,0)",
+          "Status": "Passed",
+          "Duration": 0.0015417,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Down,0)",
+          "Status": "Passed",
+          "Duration": 0.0008025,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Right,0)",
+          "Status": "Passed",
+          "Duration": 0.000781,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Left,0)",
+          "Status": "Passed",
+          "Duration": 0.0007823,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Up,8)",
+          "Status": "Passed",
+          "Duration": 0.000765,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Down,8)",
+          "Status": "Passed",
+          "Duration": 0.0007635,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Right,8)",
+          "Status": "Passed",
+          "Duration": 0.0007652,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Left,8)",
+          "Status": "Passed",
+          "Duration": 0.0007664,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Base_BothTeamsCanHit(Player)",
+          "Status": "Passed",
+          "Duration": 0.0009447,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Base_BothTeamsCanHit(Enemy)",
+          "Status": "Passed",
+          "Duration": 0.0001449,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.BoundaryImpact_RecordsExactBoxContact(Up,100,206)",
+          "Status": "Passed",
+          "Duration": 0.0004739,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.BoundaryImpact_RecordsExactBoxContact(Left,2,100)",
+          "Status": "Passed",
+          "Duration": 0.0001511,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.BoundaryImpact_RecordsExactBoxContact(Down,100,2)",
+          "Status": "Passed",
+          "Duration": 0.0001575,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.BoundaryImpact_RecordsExactBoxContact(Right,206,100)",
+          "Status": "Passed",
+          "Duration": 0.0001496,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.ContactExactlyAtTickEnd_IsAHit",
+          "Status": "Passed",
+          "Duration": 0.0004255,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.DuplicateTargetIds_AreRejectedBeforeAdvancingBullets",
+          "Status": "Passed",
+          "Duration": 0.000593,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.EarlierPairInvalidatesLaterWallAndBoundaryHits",
+          "Status": "Passed",
+          "Duration": 0.0010228,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.EarlierWallInvalidatesPair_AndOtherBulletStillGetsItsLaterWallHit",
+          "Status": "Passed",
+          "Duration": 0.0010893,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.FriendlyBullets_PassThroughEachOther",
+          "Status": "Passed",
+          "Duration": 0.0003173,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.GlobalOrdering_UsesTickTimeNotDistanceOrSpawnOrder",
+          "Status": "Passed",
+          "Duration": 0.0006476,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.GrazingParallelEdge_IsNotAHit",
+          "Status": "Passed",
+          "Duration": 0.000284,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HighSpeed_FourSidesStopAtFirstSteelFace(Up,100,64,100,94)",
+          "Status": "Passed",
+          "Duration": 0.001178,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HighSpeed_FourSidesStopAtFirstSteelFace(Left,144,100,106,100)",
+          "Status": "Passed",
+          "Duration": 0.0005366,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HighSpeed_FourSidesStopAtFirstSteelFace(Down,100,144,100,106)",
+          "Status": "Passed",
+          "Duration": 0.0007043,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HighSpeed_FourSidesStopAtFirstSteelFace(Right,64,100,94,100)",
+          "Status": "Passed",
+          "Duration": 0.0006918,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HostileHeadOnPair_CannotTunnelAndReleasesBothOwners",
+          "Status": "Passed",
+          "Duration": 0.0006317,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.HostilePerpendicularPair_UsesRelativeSweep",
+          "Status": "Passed",
+          "Duration": 0.0004131,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.ImmutableHitSurvivesPoolReuseAndStaleIdCannotReleaseNewLease",
+          "Status": "Passed",
+          "Duration": 0.0007719,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.NearestDistanceWinsBeforeKindPriority",
+          "Status": "Passed",
+          "Duration": 0.0007378,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.NonBlockingTerrain_DoesNotConsumeBullets(Water)",
+          "Status": "Passed",
+          "Duration": 0.0009653,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.NonBlockingTerrain_DoesNotConsumeBullets(Grass)",
+          "Status": "Passed",
+          "Duration": 0.0006801,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.NonBlockingTerrain_DoesNotConsumeBullets(Ice)",
+          "Status": "Passed",
+          "Duration": 0.0006209,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTime_BaseBeforeTank",
+          "Status": "Passed",
+          "Duration": 0.0003896,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTime_BoundaryBeforeTerrainAndBulletPair",
+          "Status": "Passed",
+          "Duration": 0.0008029,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTime_TankBeforeBulletPair",
+          "Status": "Passed",
+          "Duration": 0.0003734,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTime_TerrainBeforeBaseAndTank",
+          "Status": "Passed",
+          "Duration": 0.0009184,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTimeSameKind_LowestStableTargetIdWinsRegardlessOfInputOrder(False)",
+          "Status": "Passed",
+          "Duration": 0.0003421,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SameTimeSameKind_LowestStableTargetIdWinsRegardlessOfInputOrder(True)",
+          "Status": "Passed",
+          "Duration": 0.000342,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Session_ActuallyUsesTerrainSweep",
+          "Status": "Passed",
+          "Duration": 0.0008307,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.SpawnInsideBrick_IsConsumedAtZeroTimeAndOnlyOnce",
+          "Status": "Passed",
+          "Duration": 0.0011794,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.StartingContact_HitsOnlyWhenMovingIntoTarget(False)",
+          "Status": "Passed",
+          "Duration": 0.0003718,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.StartingContact_HitsOnlyWhenMovingIntoTarget(True)",
+          "Status": "Passed",
+          "Duration": 0.0001295,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Tanks_FriendlyAndOwnerAreIgnoredButHostileIsHit(Player)",
+          "Status": "Passed",
+          "Duration": 0.0007709,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Tanks_FriendlyAndOwnerAreIgnoredButHostileIsHit(Enemy)",
+          "Status": "Passed",
+          "Duration": 0.0001599,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.Terrain_NearestWinsAndSweepPhaseDoesNotMutateMap",
+          "Status": "Passed",
+          "Duration": 0.0010417,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BulletCollisionTests.ThreeWayContact_ConsumesEachLeaseAtMostOnce",
+          "Status": "Passed",
+          "Duration": 0.0003267,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.AllFourAuthoredTypes_ClassifyByDefinitionNotHpColor",
+          "Status": "Passed",
+          "Duration": 0.0087587,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.CappedTankPickup_StillScoresAndDoesNotAddLife",
+          "Status": "Passed",
+          "Duration": 0.0028889,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.CappedUpgradeRewardsAndIce_HighestWeaponBreaksSteelUsingExistingSweep",
+          "Status": "Passed",
+          "Duration": 0.0062696,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.ClassifiedKills_SnapshotIdsAndScores_ArmorOverkillAndGrenadeExactlyOnce",
+          "Status": "Passed",
+          "Duration": 0.007878,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.ClockPauseAndIce_FreezesEnemyMomentumButPlayerCoasts_ResumesAfterExactExpiry",
+          "Status": "Passed",
+          "Duration": 0.0073015,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.DeathAndRespawnClearIceMomentum_ProtectedRespawnHasNoStaleMotion",
+          "Status": "Passed",
+          "Duration": 0.0034034,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.EveryPickup_Exactly500PerReceiptEvenWithoutOptionalCapability_NoReplay(Clock)",
+          "Status": "Passed",
+          "Duration": 0.0196602,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.EveryPickup_Exactly500PerReceiptEvenWithoutOptionalCapability_NoReplay(Grenade)",
+          "Status": "Passed",
+          "Duration": 0.0022002,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.EveryPickup_Exactly500PerReceiptEvenWithoutOptionalCapability_NoReplay(Helmet)",
+          "Status": "Passed",
+          "Duration": 0.0049773,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.EveryPickup_Exactly500PerReceiptEvenWithoutOptionalCapability_NoReplay(Shovel)",
+          "Status": "Passed",
+          "Duration": 0.0034315,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.EveryPickup_Exactly500PerReceiptEvenWithoutOptionalCapability_NoReplay(Star)",
+          "Status": "Passed",
+          "Duration": 0.0027649,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.EveryPickup_Exactly500PerReceiptEvenWithoutOptionalCapability_NoReplay(Tank)",
+          "Status": "Passed",
+          "Duration": 0.0023183,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.GrenadeLastEnemy_FreezesCompleteResultBeforeOneNotification_NewSessionDoesNotInherit",
+          "Status": "Passed",
+          "Duration": 0.008131,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.PickupScore_SnapshotsConfiguration_ZeroAllowed_NegativeRejected",
+          "Status": "Passed",
+          "Duration": 0.0063362,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.ShieldAndDeath_ProtectedBulletConsumes_ExpiredShieldCannotRescueDeathOrEarnPickup",
+          "Status": "Passed",
+          "Duration": 0.0032568,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.ShovelExpiryOccupiedPartialBrick_OnlyRestoresAfterRelease_RewardNotReplayed",
+          "Status": "Passed",
+          "Duration": 0.0040956,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.SimultaneousFinalKillAndBaseLoss_RecordsKillButNeverCollectsTerminalReward",
+          "Status": "Passed",
+          "Duration": 0.0028442,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.AlreadyTerminalBulletKillPreventsAnyPickupReward",
+          "Status": "Passed",
+          "Duration": 0.0059967,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.AuthoredClockDefaultIsExplicitAndUncalibrated",
+          "Status": "Passed",
+          "Duration": 0.0003431,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Clock_Default600FutureCompleteTicks_SnapshotsRules_FreezesAIAndExternalWeaponMotorTracks",
+          "Status": "Passed",
+          "Duration": 0.0240145,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Clock_NewWaveBirthStillOccurs_StaysFrozenAndBlocksPlayer_ButCanBeKilled",
+          "Status": "Passed",
+          "Duration": 0.0052593,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Clock_PlayerAndEnemyBulletsAndEffectsContinue_PlayerDeathDoesNotCancelGlobalEffect",
+          "Status": "Passed",
+          "Duration": 0.0052377,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Clock_RepeatRefreshesNotAdds_NoReceiptReplay_PauseReadyAndFocusConsumeNothing",
+          "Status": "Passed",
+          "Duration": 0.0075101,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_ArmorBatchAndSameTickBulletDeath_ScoreAndExplosionExactlyOnce_NoProjectileTerrainOrBaseDamage",
+          "Status": "Passed",
+          "Duration": 0.0055402,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_DoesNotReplayOnLaterEnemy_ReservationAndPendingAndCadenceConserved",
+          "Status": "Passed",
+          "Duration": 0.0028359,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_KillsNewlyCommittedCarrierWithoutDropping_OnceWaveStepOnly",
+          "Status": "Passed",
+          "Duration": 0.0031495,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_LastEnemyWinsSameTick_OneTerminalEventAndCleanup",
+          "Status": "Passed",
+          "Duration": 0.0053983,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_SameTickBaseFailurePreventsCollectionAndKills_FailureWins",
+          "Status": "Passed",
+          "Duration": 0.0025829,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.InvalidClockDurationRejected(0)",
+          "Status": "Passed",
+          "Duration": 0.0014592,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.InvalidClockDurationRejected(-1)",
+          "Status": "Passed",
+          "Duration": 0.0013096,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.SimultaneousLastEnemyBulletDeathAndPlayerExhaustion_IsLossNotGrenadeReward",
+          "Status": "Passed",
+          "Duration": 0.0027739,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.BoundaryAndEnemyBulletPair_EachProduceOneSmallEffect",
+          "Status": "Passed",
+          "Duration": 0.0012893,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.ClearWhilePaused_DoesNotReplayOldHitsAndFreshSessionIsEmpty",
+          "Status": "Passed",
+          "Duration": 0.0012954,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.Explosion_IsPresentationOnlyAndExpiresWithoutRendering",
+          "Status": "Passed",
+          "Duration": 0.0009562,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.MultipleLogicSteps_KeepEveryHitEvenWhenLastTickHasNone",
+          "Status": "Passed",
+          "Duration": 0.0009634,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.NonlethalTankHit_IsNotAutomaticallyADeathExplosion",
+          "Status": "Passed",
+          "Duration": 0.0011617,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.PauseAndFocusLoss_FreezeAgeAndNeverReplayLastHit",
+          "Status": "Passed",
+          "Duration": 0.0010596,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.SameTickSamePosition_IndependentBulletsAreNotDeduplicated",
+          "Status": "Passed",
+          "Duration": 0.0012863,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.TerrainHit_ExpiresAfterTwelveTicksAndReusesResetLease(Brick)",
+          "Status": "Passed",
+          "Duration": 0.0014932,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CombatEffectsTests.TerrainHit_ExpiresAfterTwelveTicksAndReusesResetLease(Steel)",
+          "Status": "Passed",
+          "Duration": 0.0007761,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"id\")",
+          "Status": "Passed",
+          "Duration": 0.0043217,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"sprite\")",
+          "Status": "Passed",
+          "Duration": 0.0003225,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"moveZero\")",
+          "Status": "Passed",
+          "Duration": 0.0001868,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"moveNegative\")",
+          "Status": "Passed",
+          "Duration": 0.0001881,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"moveNaN\")",
+          "Status": "Passed",
+          "Duration": 0.0001833,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"moveInfinity\")",
+          "Status": "Passed",
+          "Duration": 0.0001813,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"bulletZero\")",
+          "Status": "Passed",
+          "Duration": 0.0001826,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"bulletNegative\")",
+          "Status": "Passed",
+          "Duration": 0.0001807,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"bulletNaN\")",
+          "Status": "Passed",
+          "Duration": 0.0001844,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"bulletInfinity\")",
+          "Status": "Passed",
+          "Duration": 0.0001909,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"cooldown\")",
+          "Status": "Passed",
+          "Duration": 0.0001801,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"bulletLimit\")",
+          "Status": "Passed",
+          "Duration": 0.0001668,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"hp\")",
+          "Status": "Passed",
+          "Duration": 0.000191,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidCombatParameters_AreRejectedBySharedTankValidation(\"score\")",
+          "Status": "Passed",
+          "Duration": 0.000177,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"null\")",
+          "Status": "Passed",
+          "Duration": 0.0012264,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"missing\")",
+          "Status": "Passed",
+          "Duration": 0.0010672,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"extra\")",
+          "Status": "Passed",
+          "Duration": 0.0013277,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"duplicateKind\")",
+          "Status": "Passed",
+          "Duration": 0.0002894,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"unknownKind\")",
+          "Status": "Passed",
+          "Duration": 0.0001702,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"nullTank\")",
+          "Status": "Passed",
+          "Duration": 0.0001689,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"duplicateId\")",
+          "Status": "Passed",
+          "Duration": 0.0001975,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.InvalidRoster_IsRejected(\"sharedTank\")",
+          "Status": "Passed",
+          "Duration": 0.000163,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.MissingSpriteCatalogOrFrame_IsRejected",
+          "Status": "Passed",
+          "Duration": 0.0007728,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.NewDefinitions_AreCompatibleWithWaveMapping_Stage01UsesMixedPrototype_LegacyAssetRetained",
+          "Status": "Passed",
+          "Duration": 0.003542,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.Provenance_DefaultsRemainUnverified_ExplicitVerificationCanCiteEvidence",
+          "Status": "Passed",
+          "Duration": 0.0014726,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.RepeatedAuthoring_RetainsAssetsAndDoesNotTouchActiveSceneOrLegacyBindings",
+          "Status": "Passed",
+          "Duration": 0.1412355,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.ShippedAssets_HaveDocumentedDefaultsAndEightValidSpriteFrames(Basic,\"basic\",60,180,1,100)",
+          "Status": "Passed",
+          "Duration": 0.0027693,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.ShippedAssets_HaveDocumentedDefaultsAndEightValidSpriteFrames(Fast,\"fast\",90,180,1,200)",
+          "Status": "Passed",
+          "Duration": 0.0003692,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.ShippedAssets_HaveDocumentedDefaultsAndEightValidSpriteFrames(FastBullet,\"power\",60,300,1,300)",
+          "Status": "Passed",
+          "Duration": 0.0003452,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.ShippedAssets_HaveDocumentedDefaultsAndEightValidSpriteFrames(Armor,\"armor\",45,180,4,400)",
+          "Status": "Passed",
+          "Duration": 0.0003816,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.ValidRoster_ResolvesTypedDefinitionsWithoutDependingOnArrayOrder",
+          "Status": "Passed",
+          "Duration": 0.0007399,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.VerifiedOriginalValues_RequireEvidence(null)",
+          "Status": "Passed",
+          "Duration": 0.0002943,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.VerifiedOriginalValues_RequireEvidence(\"\")",
+          "Status": "Passed",
+          "Duration": 0.0001759,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBalanceDefinitionTests.VerifiedOriginalValues_RequireEvidence(\" \")",
+          "Status": "Passed",
+          "Duration": 0.0002921,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Up,104,200)",
+          "Status": "Passed",
+          "Duration": 0.027329,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Down,104,8)",
+          "Status": "Passed",
+          "Duration": 0.0078078,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Left,8,104)",
+          "Status": "Passed",
+          "Duration": 0.0074559,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Right,200,104)",
+          "Status": "Passed",
+          "Duration": 0.0061945,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Death_StopsDecisionsRandomTimersMovementAndNewShots",
+          "Status": "Passed",
+          "Duration": 0.0015479,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Decisions_UseStartOfTickOccupancy_NotEarlierIdsMovementOrFuturePlayerCommand",
+          "Status": "Passed",
+          "Duration": 0.001866,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.DynamicMutualBlock_TurnsAndNeverOverlapsAcrossTicks",
+          "Status": "Passed",
+          "Duration": 0.0096544,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.FullyBlocked_RetriesWithoutRandomChurn_AndShootsBrickOpen",
+          "Status": "Passed",
+          "Duration": 0.0019776,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.NarrowCorridor_Exact16PixelsNeverCrossesWalls_DeadEndReverses(False)",
+          "Status": "Passed",
+          "Duration": 0.0043769,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.NarrowCorridor_Exact16PixelsNeverCrossesWalls_DeadEndReverses(True)",
+          "Status": "Passed",
+          "Duration": 0.003901,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.PauseFreezesFullBrainAndResumeDoesNotCatchUp",
+          "Status": "Passed",
+          "Duration": 0.0025711,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.PrototypeParameters_AreExplicitValidatedAndUncalibrated",
+          "Status": "Passed",
+          "Duration": 0.00157,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(1)",
+          "Status": "Passed",
+          "Duration": 0.0010247,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(7)",
+          "Status": "Passed",
+          "Duration": 0.0005168,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(123456)",
+          "Status": "Passed",
+          "Duration": 0.0005154,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(uint.MaxValue)",
+          "Status": "Passed",
+          "Duration": 0.0005122,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Registration_IsExplicitAndUsesSameSharedTank_ExternalControlRemainsAvailable",
+          "Status": "Passed",
+          "Duration": 0.0015738,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RenderDelta_Same720TicksMatches60HzReference(30)",
+          "Status": "Passed",
+          "Duration": 0.0063596,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RenderDelta_Same720TicksMatches60HzReference(60)",
+          "Status": "Passed",
+          "Duration": 0.0064918,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RenderDelta_Same720TicksMatches60HzReference(144)",
+          "Status": "Passed",
+          "Duration": 0.0064055,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.SameSeed_ReplaysEveryTickIncludingPositionFacingShotsAndRandom_WithoutUnityRandom",
+          "Status": "Passed",
+          "Duration": 0.0872673,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Up,12,14)",
+          "Status": "Passed",
+          "Duration": 0.0023842,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Up,12,14)",
+          "Status": "Passed",
+          "Duration": 0.0017875,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Down,12,11)",
+          "Status": "Passed",
+          "Duration": 0.0017608,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Down,12,11)",
+          "Status": "Passed",
+          "Duration": 0.0017596,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Left,11,12)",
+          "Status": "Passed",
+          "Duration": 0.0017637,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Left,11,12)",
+          "Status": "Passed",
+          "Duration": 0.0017661,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Right,14,12)",
+          "Status": "Passed",
+          "Duration": 0.0017588,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Right,14,12)",
+          "Status": "Passed",
+          "Duration": 0.0018709,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.Armor_AllFourDamagePalettesResolveEveryDirectionAndFrame_MissingDamageFrameFailsEarly",
+          "Status": "Passed",
+          "Duration": 0.005231,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.Armor_SameTickOverkillScoresOnce_AndSnapshotsScoreAtBirth",
+          "Status": "Passed",
+          "Duration": 0.0012911,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_MovesAndFiresUsingConfiguredSpeedCooldownAndLimit(Basic)",
+          "Status": "Passed",
+          "Duration": 0.0013141,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_MovesAndFiresUsingConfiguredSpeedCooldownAndLimit(Fast)",
+          "Status": "Passed",
+          "Duration": 0.000691,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_MovesAndFiresUsingConfiguredSpeedCooldownAndLimit(FastBullet)",
+          "Status": "Passed",
+          "Duration": 0.0006723,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_MovesAndFiresUsingConfiguredSpeedCooldownAndLimit(Armor)",
+          "Status": "Passed",
+          "Duration": 0.000675,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_RequiresConfiguredHits_OnlyDeathScores_DeadTankNeverScoresOrMovesAgain(Basic)",
+          "Status": "Passed",
+          "Duration": 0.0017839,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_RequiresConfiguredHits_OnlyDeathScores_DeadTankNeverScoresOrMovesAgain(Fast)",
+          "Status": "Passed",
+          "Duration": 0.0009683,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_RequiresConfiguredHits_OnlyDeathScores_DeadTankNeverScoresOrMovesAgain(FastBullet)",
+          "Status": "Passed",
+          "Duration": 0.0009008,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.EachType_RequiresConfiguredHits_OnlyDeathScores_DeadTankNeverScoresOrMovesAgain(Armor)",
+          "Status": "Passed",
+          "Duration": 0.0010408,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.InvalidDamageStageMappings_AreRejected(\"null\")",
+          "Status": "Passed",
+          "Duration": 0.0011274,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.InvalidDamageStageMappings_AreRejected(\"length\")",
+          "Status": "Passed",
+          "Duration": 0.0008675,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.InvalidDamageStageMappings_AreRejected(\"first\")",
+          "Status": "Passed",
+          "Duration": 0.0008437,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.InvalidDamageStageMappings_AreRejected(\"empty\")",
+          "Status": "Passed",
+          "Duration": 0.0006503,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.PlayerDeath_NeverAwardsEnemyKillScore",
+          "Status": "Passed",
+          "Duration": 0.0009811,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesTests.ProtectionFriendlyFireAndPause_DoNotDamageOrAwardPoints",
+          "Status": "Passed",
+          "Duration": 0.0009984,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.ActivePlusReservedNeverExceedsCap_ExternalRegistrationCannotStealReservedCapacity(1)",
+          "Status": "Passed",
+          "Duration": 0.0160913,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.ActivePlusReservedNeverExceedsCap_ExternalRegistrationCannotStealReservedCapacity(4)",
+          "Status": "Passed",
+          "Duration": 0.0283911,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.AllSpawnsOccupiedByPlayer_WaitsWithoutConsumingSequenceThenUsesReleasedSpace",
+          "Status": "Passed",
+          "Duration": 0.0024536,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.DeathSettlesBeforeReservation_RepeatedDeadTicksDoNotLoseOrDoubleCountEnemies",
+          "Status": "Passed",
+          "Duration": 0.0024404,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.ExhaustionMeansAllCreatedNotVictory_DeathsAndLateTicksKeepConservation",
+          "Status": "Passed",
+          "Duration": 0.0023044,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.InvalidMappingFailsAtConstruction_NotAfterAnEnemyIsPartlyRegistered",
+          "Status": "Passed",
+          "Duration": 0.0022715,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.MapAndBaseFootprintsBlockNaturalSpawns(True)",
+          "Status": "Passed",
+          "Duration": 0.002158,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.MapAndBaseFootprintsBlockNaturalSpawns(False)",
+          "Status": "Passed",
+          "Duration": 0.0031671,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.OptionalWave_PreservesLegacyPureLogicAndEmptySequence",
+          "Status": "Passed",
+          "Duration": 0.016213,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.PauseFreezesPreparationIntervalBrainAndRandom_ResumeDoesNotCatchUp",
+          "Status": "Passed",
+          "Duration": 0.0023304,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.PreparationEndsWithPlayerInTheWay_HoldsRequestAndCountUntilPlayerLeaves",
+          "Status": "Passed",
+          "Duration": 0.0042177,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.SameSeedAndInputReplayIdenticalIntegratedWorld_AuthoredArraysStayUnchanged",
+          "Status": "Passed",
+          "Duration": 0.0640402,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.SpawnCommitsSharedTankAndBrainAfterCombat_NewEnemyOnlyActsNextTick",
+          "Status": "Passed",
+          "Duration": 0.002323,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.AllPointsBlocked_WaitsWithoutConsumingRandomSequenceOrReservation_ThenUsesOnlyClearPoint",
+          "Status": "Passed",
+          "Duration": 0.0029631,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.AuthorArraysAndTiming_AreSnapshotted_AndRuntimeNeverMutatesThem",
+          "Status": "Passed",
+          "Duration": 0.0016337,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications(1)",
+          "Status": "Passed",
+          "Duration": 0.0012397,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications(4)",
+          "Status": "Passed",
+          "Duration": 0.0008064,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.DefaultTiming_FirstCreationCall61_Second241_DeathBeforeStepAndNextTickControlAreHostContract",
+          "Status": "Passed",
+          "Duration": 0.0037879,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.EmptySequence_IsExhaustedWithoutReservationOrCallbacks",
+          "Status": "Passed",
+          "Duration": 0.0007713,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.ExactSeedOne_FirstPointAndBrainSeedAreStable",
+          "Status": "Passed",
+          "Duration": 0.0007549,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.FailedCreation_IsNotCommitted_AndCanRetryWithIdenticalRequest",
+          "Status": "Passed",
+          "Duration": 0.0016533,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(1)",
+          "Status": "Passed",
+          "Duration": 0.0078739,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(7)",
+          "Status": "Passed",
+          "Duration": 0.0015292,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(uint.MaxValue)",
+          "Status": "Passed",
+          "Duration": 0.0013834,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"unknown\")",
+          "Status": "Passed",
+          "Duration": 0.0041552,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"duplicate\")",
+          "Status": "Passed",
+          "Duration": 0.0007482,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"nullMapping\")",
+          "Status": "Passed",
+          "Duration": 0.0008008,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"nullDefinition\")",
+          "Status": "Passed",
+          "Duration": 0.0007223,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroSeed\")",
+          "Status": "Passed",
+          "Duration": 0.0007137,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroPreparation\")",
+          "Status": "Passed",
+          "Duration": 0.0016715,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"negativePreparation\")",
+          "Status": "Passed",
+          "Duration": 0.001594,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroInterval\")",
+          "Status": "Passed",
+          "Duration": 0.0015972,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"negativeInterval\")",
+          "Status": "Passed",
+          "Duration": 0.0015978,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"invalidTank\")",
+          "Status": "Passed",
+          "Duration": 0.001608,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"nullSequence\")",
+          "Status": "Passed",
+          "Duration": 0.0015855,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"emptyId\")",
+          "Status": "Passed",
+          "Duration": 0.0016507,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroCap\")",
+          "Status": "Passed",
+          "Duration": 0.0037135,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"noSpawns\")",
+          "Status": "Passed",
+          "Duration": 0.0006916,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.InvalidStepInput_RejectsCapacityIncludingExistingReservationWithoutMutation",
+          "Status": "Passed",
+          "Duration": 0.0019561,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.NoStep_PauseFreezesReservationIntervalCountersAndRandom",
+          "Status": "Passed",
+          "Duration": 0.0015192,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.PreparationFinishedThenOccupied_RetriesSameReservationWithoutResetOrLostCountOrSeed",
+          "Status": "Passed",
+          "Duration": 0.0028639,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.ReentrantOrThrowingCallback_CannotDoubleCommit_ReservationIsRetryable",
+          "Status": "Passed",
+          "Duration": 0.0012942,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyWaveStateTests.SequenceExhausted_IsNotVictory_AliveSnapshotAndConservationRemainAvailable",
+          "Status": "Passed",
+          "Duration": 0.0035666,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase0Tests.BaselineScene_CameraBindingsSortingAndTilesAreValid",
+          "Status": "Passed",
+          "Duration": 0.0486589,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase0Tests.Catalog_All319SlicesMatchInventoryAndPixelContract",
+          "Status": "Passed",
+          "Duration": 0.0188903,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase0Tests.ConfigurationSchemas_RejectInvalidValues",
+          "Status": "Passed",
+          "Duration": 0.0021162,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase0Tests.CoordinateContract_RoundTripsAndBoundaries",
+          "Status": "Passed",
+          "Duration": 0.0014002,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase0Tests.Importers_PointUncompressedNoMipAndUniformPPU",
+          "Status": "Failed",
+          "Duration": 0.0598496,
+          "Message": "System.NullReferenceException : Object reference not set to an instance of an object",
+          "StackTrace": "  at BattleCity.Tests.Phase0Tests.Importers_PointUncompressedNoMipAndUniformPPU () [0x00033] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\Phase0Tests.cs:72 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <a8858c8db8794c73aac95c6a07c9f981>:0 "
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase0Tests.TankFrames_AllDirectionsUseSameCanvasAndPivot",
+          "Status": "Passed",
+          "Duration": 0.0091417,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase0Tests.Transparency_BackgroundMaskPreservesTrueBlackAndNearBlackHudInk",
+          "Status": "Passed",
+          "Duration": 0.8278682,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Animation_OnlyAdvancesForActualMovementAndDoesNotMoveCollider",
+          "Status": "Passed",
+          "Duration": 0.0012156,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.ArenaAssetAndScene_DisplayExactlyMatchesMapAndHasNoPhysicsState",
+          "Status": "Passed",
+          "Duration": 0.016833,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Channels_RespectFullSixteenPixelTankWidth(8,False)",
+          "Status": "Passed",
+          "Duration": 0.001149,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Channels_RespectFullSixteenPixelTankWidth(16,True)",
+          "Status": "Passed",
+          "Duration": 0.0004988,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Channels_RespectFullSixteenPixelTankWidth(24,True)",
+          "Status": "Passed",
+          "Duration": 0.0004846,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Clock_LongFrameIsBoundedAndPauseDropsPartialTime",
+          "Status": "Passed",
+          "Duration": 0.0007477,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.FocusLoss_PausesAndRequiresManualResume",
+          "Status": "Passed",
+          "Duration": 0.0007709,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Input_NewestPhysicalKeyWinsAndReleaseFallsBack",
+          "Status": "Passed",
+          "Duration": 0.0003559,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Input_QuickFireTapSurvivesUntilExactlyOneTick",
+          "Status": "Passed",
+          "Duration": 0.0002677,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Input_SimultaneousKeysUseFrozenPriority",
+          "Status": "Passed",
+          "Duration": 0.000344,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.KeyboardAdapter_MapsRealInputSystemKeyboardState",
+          "Status": "Passed",
+          "Duration": 0.000778,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Map_CopiesAuthoringDataAndHonorsHalfOpenEdges",
+          "Status": "Passed",
+          "Duration": 0.0010441,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Pause_DiscardsQueuedAndHeldCombatInputUntilRelease",
+          "Status": "Passed",
+          "Duration": 0.0010363,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.RenderRate_DoesNotChangeDistanceOrTickCount(30)",
+          "Status": "Passed",
+          "Duration": 0.0012152,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.RenderRate_DoesNotChangeDistanceOrTickCount(60)",
+          "Status": "Passed",
+          "Duration": 0.0006851,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.RenderRate_DoesNotChangeDistanceOrTickCount(144)",
+          "Status": "Passed",
+          "Duration": 0.0005776,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_ClampsToEveryMapBoundary(1,0,200,24)",
+          "Status": "Passed",
+          "Duration": 0.0010301,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_ClampsToEveryMapBoundary(-1,0,8,24)",
+          "Status": "Passed",
+          "Duration": 0.00068,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_ClampsToEveryMapBoundary(0,1,24,200)",
+          "Status": "Passed",
+          "Duration": 0.0006709,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_ClampsToEveryMapBoundary(0,-1,24,8)",
+          "Status": "Passed",
+          "Duration": 0.0006698,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_DoesNotTunnelThroughThinWalls(Brick)",
+          "Status": "Passed",
+          "Duration": 0.000769,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_DoesNotTunnelThroughThinWalls(Steel)",
+          "Status": "Passed",
+          "Duration": 0.0005107,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Turn_AtWallCornerAndBoundaryKeepsLegalFullSizeBox",
+          "Status": "Passed",
+          "Duration": 0.0009062,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Turn_SmallCorrectionWorksButNeverCrossesWallOrTeleports",
+          "Status": "Passed",
+          "Duration": 0.0015164,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.AuthoredData_HasThreeExplicitCarriersSixSpritesAndCompleteRedFamilies_NoGunOrEffects",
+          "Status": "Passed",
+          "Duration": 0.0020806,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.BaseBlocksRoute_DestinationExclusionsCoverPlayerLiveTanksAndReservations",
+          "Status": "Passed",
+          "Duration": 0.0036499,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.CollectionIsStrictOverlapAliveOnly_ReceiptOnce_DifferentItemsCanBeCollected",
+          "Status": "Passed",
+          "Duration": 0.0023421,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.DeadPlayerCannotCollect_PickupSurvivesDeath_ProtectedRespawnCanCollect",
+          "Status": "Passed",
+          "Duration": 0.0027429,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.FirstAcceptedCarrierHitDropsBeforeDeath_ProtectedAndFriendlyHitsDoNotConsumeIt",
+          "Status": "Passed",
+          "Duration": 0.0030803,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.InvalidRulesFailEarly(0)",
+          "Status": "Passed",
+          "Duration": 0.0003907,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.InvalidRulesFailEarly(1)",
+          "Status": "Passed",
+          "Duration": 0.000178,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.InvalidRulesFailEarly(2)",
+          "Status": "Passed",
+          "Duration": 0.0001693,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.InvalidRulesFailEarly(3)",
+          "Status": "Passed",
+          "Duration": 0.000169,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.InvalidRulesFailEarly(4)",
+          "Status": "Passed",
+          "Duration": 0.0007172,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.InvalidRulesFailEarly(5)",
+          "Status": "Passed",
+          "Duration": 0.000171,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.LastEnemyTerminalTickClearsSlotAndSkipsNewDropOrCollection",
+          "Status": "Passed",
+          "Duration": 0.0026024,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.LethalOverkillDropsOnce_ManualEnemyNeverGetsCarrierFlag",
+          "Status": "Passed",
+          "Duration": 0.0027266,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.MissingWaveIsRejected_OptOutRetainsLegacy",
+          "Status": "Passed",
+          "Duration": 0.0022789,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.NoCandidateOrDeadPlayer_PreservesSlotAndRng_ConsumesOpportunity_NoRetryLoop",
+          "Status": "Passed",
+          "Duration": 0.0019515,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.ReadyPauseAndFocusDoNotCollect_ResumeCollectsOnceWithoutScoreOrEffects",
+          "Status": "Passed",
+          "Duration": 0.002,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.SessionDeadPlayerRejectsCarrierDropWithoutRetryingAfterRespawn",
+          "Status": "Passed",
+          "Duration": 0.0034803,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.SnapshotAndIndependentRng_ReproducibleDrops_ValidReplacementGetsNewIdentity",
+          "Status": "Passed",
+          "Duration": 0.0037084,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.UnreachableRoomsWaterSteelAndBrickNeverReceivePickup_FractionalPlayerConnects",
+          "Status": "Passed",
+          "Duration": 0.0059256,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupTests.UnrelatedWaveAndAiAreUnaffectedByIndependentDropRandomness",
+          "Status": "Passed",
+          "Duration": 0.002969,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.BirthAllowsExactBaseEdgeTouch_RegistrationStillRejectsIntactOrRuinedBase(False)",
+          "Status": "Passed",
+          "Duration": 0.0019321,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.BirthAllowsExactBaseEdgeTouch_RegistrationStillRejectsIntactOrRuinedBase(True)",
+          "Status": "Passed",
+          "Duration": 0.0006021,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.DeadInputAndMultiTickFrameCannotReplayHeldMoveOrFire_ReleaseThenPressRearms_EscapeStillWorks",
+          "Status": "Passed",
+          "Duration": 0.001088,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.EnemyReservationAndThenLivingEnemyBlockReadyPlayer_UntilDamageReleasesSpace",
+          "Status": "Passed",
+          "Duration": 0.0015443,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.FinalDeathRetainsPlayerProjectileUntilItsNormalRelease",
+          "Status": "Passed",
+          "Duration": 0.0008623,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.LegacyTwoThreeFourArgumentSessionsRemainDeathOnly",
+          "Status": "Passed",
+          "Duration": 0.0021601,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.MultiHitDeathDoesNotTruncateOtherDamage_ExhaustionEventOnce_NoWorldFreeze",
+          "Status": "Passed",
+          "Duration": 0.0017089,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.NewPressDuringDeadRenderFramesIsNotCachedAcrossRespawn",
+          "Status": "Passed",
+          "Duration": 0.0011674,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.PauseAndFocusFreezeBothTimers_NoCatchupAndManualResume",
+          "Status": "Passed",
+          "Duration": 0.001155,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.PlayerBirthPrecedesNewEnemyReservationWhenDamageFreesWaveCapacity",
+          "Status": "Passed",
+          "Duration": 0.001754,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.ReadyBirthUsesFullSixteenPixelLivingTankFootprint_DeadPositionNotReserved(39,False)",
+          "Status": "Passed",
+          "Duration": 0.0010726,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.ReadyBirthUsesFullSixteenPixelLivingTankFootprint_DeadPositionNotReserved(40,True)",
+          "Status": "Passed",
+          "Duration": 0.0005647,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.RespawnPreservesReferencesIdsAndSnapshots_ResetsPoseHealthWeaponAndOnlyPlayerLeases",
+          "Status": "Passed",
+          "Duration": 0.0022327,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.SharedEnemyWeaponDeath_AbsoluteDelayAndProtectionEndpoints_ConsumesProtectedHits",
+          "Status": "Passed",
+          "Duration": 0.0024001,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeIntegrationTests.ThreeActualGenerationsSpendExactlyThreeLives_ThenNeverRespawn",
+          "Status": "Passed",
+          "Duration": 0.0009387,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.InitialLives_MustBePositive(0)",
+          "Status": "Passed",
+          "Duration": 0.0004748,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.InitialLives_MustBePositive(-1)",
+          "Status": "Passed",
+          "Duration": 0.0000595,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.InitialLives_MustBePositive(int.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0000553,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.MaximumPositiveValues_AreSupportedWithoutTimerArithmeticOverflow",
+          "Status": "Passed",
+          "Duration": 0.0004266,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.NullParameters_AreRejected",
+          "Status": "Passed",
+          "Duration": 0.0001832,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.ProtectionTicks_RejectsZeroAndNegative(0)",
+          "Status": "Passed",
+          "Duration": 0.0002239,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.ProtectionTicks_RejectsZeroAndNegative(-1)",
+          "Status": "Passed",
+          "Duration": 0.000054,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.ProtectionTicks_RejectsZeroAndNegative(int.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0000533,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.Prototype_IsImmutableThreeTotalLivesAnd60Delay120Protection_RequiresCalibration",
+          "Status": "Passed",
+          "Duration": 0.0007195,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.RespawnDelayTicks_RejectsZeroAndNegative(0)",
+          "Status": "Passed",
+          "Duration": 0.0002249,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.RespawnDelayTicks_RejectsZeroAndNegative(-1)",
+          "Status": "Passed",
+          "Duration": 0.000052,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.RespawnDelayTicks_RejectsZeroAndNegative(int.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0000508,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeParametersTests.State_CopiesImmutableParameterSnapshot_IndependentOfCallerReferenceReplacement",
+          "Status": "Passed",
+          "Duration": 0.0004417,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.AbsoluteTicks_DeathDDoesNotDecrement_DPlus59Waits_DPlus60FirstRespawn",
+          "Status": "Passed",
+          "Duration": 0.0055673,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.AbsoluteTicks_RPlus1ThroughRPlus120FullDamagePhasesProtected_RPlus121FirstVulnerable",
+          "Status": "Passed",
+          "Duration": 0.0035666,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.InitialLife_IncludesCurrentAndHasNoProtectionOrPendingRespawn",
+          "Status": "Passed",
+          "Duration": 0.0017103,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.NoStepDuringPauseOrFocusLoss_LeavesWaitAndProtectionUnchanged_NoCatchUpClock",
+          "Status": "Passed",
+          "Duration": 0.0171772,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.NullCallbackAndUnauthorizedRevival_AreRejectedWithoutChangingState",
+          "Status": "Passed",
+          "Duration": 0.0005337,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.OneTickDelayAndProtection_DeathDoesNotSpawn_RespawnDoesNotExpireProtection",
+          "Status": "Passed",
+          "Duration": 0.0003904,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.ReadyButBlocked_RetriesEachTickAtZeroWithoutSpendingLifeOrRestartingDelay",
+          "Status": "Passed",
+          "Duration": 0.0006329,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.RepeatedDeadSnapshotsAndReadOnlyObservations_DoNotSpendAdditionalLives",
+          "Status": "Passed",
+          "Duration": 0.0110419,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.SeparateStates_DoNotShareMutableLifeOrTimerState",
+          "Status": "Passed",
+          "Duration": 0.0002956,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.ThreeLives_DeathSpendsOnePerGeneration_ExhaustionEdgeOnceAndLatchForever",
+          "Status": "Passed",
+          "Duration": 0.0028768,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerLifeStateTests.ThrowingOrReentrantCallback_DoesNotCommitAndCanRetryOnNextTick",
+          "Status": "Passed",
+          "Duration": 0.0008468,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.AuthoredEffectDefaultsAreExplicitAndUncalibrated",
+          "Status": "Passed",
+          "Duration": 0.0012686,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.FutureEffectsRemainLedgerOnly(Clock)",
+          "Status": "Passed",
+          "Duration": 0.004818,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.FutureEffectsRemainLedgerOnly(Grenade)",
+          "Status": "Passed",
+          "Duration": 0.0018424,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.FutureEffectsRemainLedgerOnly(Shovel)",
+          "Status": "Passed",
+          "Duration": 0.0034036,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.Helmet_AndRespawnProtectionTickIndependently_UnionDoesNotShortenLongerProtection",
+          "Status": "Passed",
+          "Duration": 0.0031344,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.Helmet_ProtectsExactlyFullFutureDamagePhases_ConsumesEveryIncomingBullet",
+          "Status": "Passed",
+          "Duration": 0.0028491,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.Helmet_RepeatRefreshesNotAdds_ReceiptDoesNotRefreshOnLaterTicks",
+          "Status": "Passed",
+          "Duration": 0.0055349,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.HelmetLongerThanRespawnProtection_ContinuesAfterRespawnShieldExpires",
+          "Status": "Passed",
+          "Duration": 0.0021628,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.InvalidEffectRulesRejected(0,5)",
+          "Status": "Passed",
+          "Duration": 0.001141,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.InvalidEffectRulesRejected(-1,5)",
+          "Status": "Passed",
+          "Duration": 0.0009571,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.InvalidEffectRulesRejected(3,0)",
+          "Status": "Passed",
+          "Duration": 0.0009561,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.InvalidEffectRulesRejected(3,-1)",
+          "Status": "Passed",
+          "Duration": 0.0009514,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.LethalDamageBeforePickup_DeadPlayerCannotReceiveReward(Star)",
+          "Status": "Passed",
+          "Duration": 0.0029454,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.LethalDamageBeforePickup_DeadPlayerCannotReceiveReward(Helmet)",
+          "Status": "Passed",
+          "Duration": 0.0018701,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.LethalDamageBeforePickup_DeadPlayerCannotReceiveReward(Tank)",
+          "Status": "Passed",
+          "Duration": 0.0019425,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.LifeRewardRejectsDeadExhaustedAndOverflow_NeverTruncatesHigherInitialLives",
+          "Status": "Passed",
+          "Duration": 0.0007589,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.OptionalCapabilitiesRemainOptional_HelmetWorksWithoutPlayerLife",
+          "Status": "Passed",
+          "Duration": 0.0047263,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.ReadyPauseFocusFreezeCollectionAndHelmetTime(Star)",
+          "Status": "Passed",
+          "Duration": 0.0049729,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.ReadyPauseFocusFreezeCollectionAndHelmetTime(Helmet)",
+          "Status": "Passed",
+          "Duration": 0.0046681,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.ReadyPauseFocusFreezeCollectionAndHelmetTime(Tank)",
+          "Status": "Passed",
+          "Duration": 0.0018717,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.SnapshotEffectRules_DoNotFollowMutableAsset",
+          "Status": "Passed",
+          "Duration": 0.0051068,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.Star_DeathImmediatelyResetsLevel_RespawnStaysZero",
+          "Status": "Passed",
+          "Duration": 0.0026699,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.Star_OneLevelPerNewReceipt_CapsAtThree_NoReplayOrScore",
+          "Status": "Passed",
+          "Duration": 0.0062208,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.Star_PreservesExistingBulletSnapshotAndWeaponCooldown",
+          "Status": "Passed",
+          "Duration": 0.0034202,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.Tank_IncreasesTotalLivesOnce_CapsAndConsumesFurtherItems_DeathSpendsOne",
+          "Status": "Passed",
+          "Duration": 0.0054015,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.TerminalTickClearsHelmetAndSlot_DoesNotApplyTankReward",
+          "Status": "Passed",
+          "Duration": 0.003349,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.AuthoredDefaultsAndAll32SpritesResolve_MissingUpgradeFrameFailsEarly",
+          "Status": "Passed",
+          "Duration": 0.0014977,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.BaseDefinitionMismatchIsRejected",
+          "Status": "Passed",
+          "Duration": 0.0004562,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.DeathImmediatelyResetsToZero_OldBulletRetainsCapability_RespawnClearsOnlyPlayerLeases",
+          "Status": "Passed",
+          "Duration": 0.0043286,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.EachLevel_RealMovementSpeedBulletSpeedCooldownAndLeaseLimit(0)",
+          "Status": "Passed",
+          "Duration": 0.0016174,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.EachLevel_RealMovementSpeedBulletSpeedCooldownAndLeaseLimit(1)",
+          "Status": "Passed",
+          "Duration": 0.000655,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.EachLevel_RealMovementSpeedBulletSpeedCooldownAndLeaseLimit(2)",
+          "Status": "Passed",
+          "Duration": 0.0006221,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.EachLevel_RealMovementSpeedBulletSpeedCooldownAndLeaseLimit(3)",
+          "Status": "Passed",
+          "Duration": 0.0006072,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.FourDirections_SteelRequiresTopLevel_OneEightPixelCellConsumedNoPiercing(0)",
+          "Status": "Passed",
+          "Duration": 0.0026017,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.FourDirections_SteelRequiresTopLevel_OneEightPixelCellConsumedNoPiercing(1)",
+          "Status": "Passed",
+          "Duration": 0.001805,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.FourDirections_SteelRequiresTopLevel_OneEightPixelCellConsumedNoPiercing(2)",
+          "Status": "Passed",
+          "Duration": 0.0046911,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.FourDirections_SteelRequiresTopLevel_OneEightPixelCellConsumedNoPiercing(3)",
+          "Status": "Passed",
+          "Duration": 0.0050727,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"null\")",
+          "Status": "Passed",
+          "Duration": 0.0006933,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"length\")",
+          "Status": "Passed",
+          "Duration": 0.0002234,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"entry\")",
+          "Status": "Passed",
+          "Duration": 0.000205,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"duplicate\")",
+          "Status": "Passed",
+          "Duration": 0.0002026,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"movement\")",
+          "Status": "Passed",
+          "Duration": 0.0002011,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"hp\")",
+          "Status": "Passed",
+          "Duration": 0.0001981,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"score\")",
+          "Status": "Passed",
+          "Duration": 0.0001982,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.InvalidTablesAreRejectedBeforeSessionCreation(\"damage\")",
+          "Status": "Passed",
+          "Duration": 0.0002046,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.LegacyUnboundPauseFocusReadyAndTerminalRejectUpgrade_ResumeAndShieldPermitIt",
+          "Status": "Passed",
+          "Duration": 0.0029907,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.SessionSnapshotsAllProfilesAndSprites_NoAssetMutation_EnemyWeaponsNeverUpgrade",
+          "Status": "Passed",
+          "Duration": 0.0012632,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.TwoSteelShotsSharePreDamageSnapshot_ImpactAndPoolReuseKeepCapabilitySnapshots",
+          "Status": "Passed",
+          "Duration": 0.0026794,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerUpgradeTests.Upgrade_DoesNotRecreateWeaponResetCooldownOrMutateExistingBullets_SecondLeaseUsesNewProfile",
+          "Status": "Passed",
+          "Duration": 0.0016602,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.RenderDeltaCombatTests.HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes(30)",
+          "Status": "Passed",
+          "Duration": 0.0066425,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.RenderDeltaCombatTests.HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes(60)",
+          "Status": "Passed",
+          "Duration": 0.0044121,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.RenderDeltaCombatTests.HeldFire_BrickSteelDestructionAndEffectAgesMatchAtSharedTimes(144)",
+          "Status": "Passed",
+          "Duration": 0.0043042,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.RenderDeltaCombatTests.HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes(30)",
+          "Status": "Passed",
+          "Duration": 0.0055716,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.RenderDeltaCombatTests.HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes(60)",
+          "Status": "Passed",
+          "Duration": 0.0017762,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.RenderDeltaCombatTests.HeldFire_MovingCapCooldownAndBoundaryRecycleMatchAtSharedTimes(144)",
+          "Status": "Passed",
+          "Duration": 0.0017244,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.NewSession_IsReadyWithNoFailureAndNotTerminal",
+          "Status": "Passed",
+          "Duration": 0.0003943,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.NewSessions_AreIndependentAndDoNotResetAnExistingTerminalState",
+          "Status": "Passed",
+          "Duration": 0.0005405,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.PauseResume_DoesNotLatchIgnoredFailure_AndAllowsSubsequentWin",
+          "Status": "Passed",
+          "Duration": 0.00028,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Ready,False)",
+          "Status": "Passed",
+          "Duration": 0.0004716,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Ready,True)",
+          "Status": "Passed",
+          "Duration": 0.0001165,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Playing,False)",
+          "Status": "Passed",
+          "Duration": 0.0001109,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Playing,True)",
+          "Status": "Passed",
+          "Duration": 0.0001243,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Paused,False)",
+          "Status": "Passed",
+          "Duration": 0.0001226,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Paused,True)",
+          "Status": "Passed",
+          "Duration": 0.0001124,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Won,False)",
+          "Status": "Passed",
+          "Duration": 0.0001178,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Won,True)",
+          "Status": "Passed",
+          "Duration": 0.000112,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Lost,False)",
+          "Status": "Passed",
+          "Duration": 0.0001191,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.SetPaused_ReturnsTrueOnlyForActualPlayingPausedTransition(Lost,True)",
+          "Status": "Passed",
+          "Duration": 0.0001443,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_FailurePrecedesWinAndEnemyGuards_AndRetainsBothReasons(True,False,True,0,0,0,BaseDestroyed)",
+          "Status": "Passed",
+          "Duration": 0.0006056,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_FailurePrecedesWinAndEnemyGuards_AndRetainsBothReasons(False,True,True,0,0,0,PlayerLivesExhausted)",
+          "Status": "Passed",
+          "Duration": 0.0001109,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_FailurePrecedesWinAndEnemyGuards_AndRetainsBothReasons(True,True,True,0,0,0,BaseDestroyed, PlayerLivesExhausted)",
+          "Status": "Passed",
+          "Duration": 0.0000956,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_FailurePrecedesWinAndEnemyGuards_AndRetainsBothReasons(True,False,False,1,2,1,BaseDestroyed)",
+          "Status": "Passed",
+          "Duration": 0.0000949,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_FailurePrecedesWinAndEnemyGuards_AndRetainsBothReasons(False,True,False,1,2,1,PlayerLivesExhausted)",
+          "Status": "Passed",
+          "Duration": 0.0000985,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_FailurePrecedesWinAndEnemyGuards_AndRetainsBothReasons(True,True,False,1,2,1,BaseDestroyed, PlayerLivesExhausted)",
+          "Status": "Passed",
+          "Duration": 0.0000947,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_IncompleteEnemySequenceOrOutstandingEnemiesNeverWin(False,0,0,0)",
+          "Status": "Passed",
+          "Duration": 0.0005054,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_IncompleteEnemySequenceOrOutstandingEnemiesNeverWin(False,0,1,0)",
+          "Status": "Passed",
+          "Duration": 0.0000881,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_IncompleteEnemySequenceOrOutstandingEnemiesNeverWin(False,0,1,1)",
+          "Status": "Passed",
+          "Duration": 0.0000728,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_IncompleteEnemySequenceOrOutstandingEnemiesNeverWin(True,1,0,0)",
+          "Status": "Passed",
+          "Duration": 0.0000725,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_IncompleteEnemySequenceOrOutstandingEnemiesNeverWin(True,0,1,0)",
+          "Status": "Passed",
+          "Duration": 0.0000749,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_IncompleteEnemySequenceOrOutstandingEnemiesNeverWin(True,0,1,1)",
+          "Status": "Passed",
+          "Duration": 0.0000729,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_IncompleteEnemySequenceOrOutstandingEnemiesNeverWin(True,int.MaxValue,int.MaxValue,int.MaxValue)",
+          "Status": "Passed",
+          "Duration": 0.0000766,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_InvalidCountsThrowInEveryPhaseWithoutChangingState(Ready)",
+          "Status": "Passed",
+          "Duration": 0.0011092,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_InvalidCountsThrowInEveryPhaseWithoutChangingState(Playing)",
+          "Status": "Passed",
+          "Duration": 0.0001498,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_InvalidCountsThrowInEveryPhaseWithoutChangingState(Paused)",
+          "Status": "Passed",
+          "Duration": 0.0001369,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_InvalidCountsThrowInEveryPhaseWithoutChangingState(Won)",
+          "Status": "Passed",
+          "Duration": 0.0001356,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_InvalidCountsThrowInEveryPhaseWithoutChangingState(Lost)",
+          "Status": "Passed",
+          "Duration": 0.0001367,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_OutsidePlayingIgnoresBothWinAndFailureSnapshots(Ready)",
+          "Status": "Passed",
+          "Duration": 0.0002495,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_OutsidePlayingIgnoresBothWinAndFailureSnapshots(Paused)",
+          "Status": "Passed",
+          "Duration": 0.0000808,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_OutsidePlayingIgnoresBothWinAndFailureSnapshots(Won)",
+          "Status": "Passed",
+          "Duration": 0.0000796,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.Settle_OutsidePlayingIgnoresBothWinAndFailureSnapshots(Lost)",
+          "Status": "Passed",
+          "Duration": 0.0000791,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.TryStart_TransitionsOnlyFromReady_AndRepeatedCallIsFalse(Ready)",
+          "Status": "Passed",
+          "Duration": 0.0004369,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.TryStart_TransitionsOnlyFromReady_AndRepeatedCallIsFalse(Playing)",
+          "Status": "Passed",
+          "Duration": 0.0001008,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.TryStart_TransitionsOnlyFromReady_AndRepeatedCallIsFalse(Paused)",
+          "Status": "Passed",
+          "Duration": 0.0000882,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.TryStart_TransitionsOnlyFromReady_AndRepeatedCallIsFalse(Won)",
+          "Status": "Passed",
+          "Duration": 0.0000919,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionFlowStateTests.TryStart_TransitionsOnlyFromReady_AndRepeatedCallIsFalse(Lost)",
+          "Status": "Passed",
+          "Duration": 0.000092,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(False,False,Won,None)",
+          "Status": "Passed",
+          "Duration": 0.0054195,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(True,False,Lost,BaseDestroyed)",
+          "Status": "Passed",
+          "Duration": 0.0015767,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(False,True,Lost,PlayerLivesExhausted)",
+          "Status": "Passed",
+          "Duration": 0.0015266,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(True,True,Lost,BaseDestroyed, PlayerLivesExhausted)",
+          "Status": "Passed",
+          "Duration": 0.0013903,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.EmptyFieldPendingBlockedAndReservationNeverWins_BirthSettlesBeforeOutcome",
+          "Status": "Passed",
+          "Duration": 0.0029262,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.FocusLossInsideStateNotification_PausesBeforeAnyTickWithoutRecursiveNotification(False)",
+          "Status": "Passed",
+          "Duration": 0.0019591,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.FocusLossInsideStateNotification_PausesBeforeAnyTickWithoutRecursiveNotification(True)",
+          "Status": "Passed",
+          "Duration": 0.001269,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.OptInRequiresWave_OldConstructorsStillAdvanceAndNeverSettle",
+          "Status": "Passed",
+          "Duration": 0.0015386,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ReadyStartPauseFocusAndHeldCombat_TransitionsNeverContributeElapsed",
+          "Status": "Passed",
+          "Duration": 0.002355,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.StateNotificationCannotReenterStartPauseOrAdvance",
+          "Status": "Passed",
+          "Duration": 0.0015737,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ActivationAndLaterStepUseCurrentWaveReservationAndNewBirth",
+          "Status": "Passed",
+          "Duration": 0.005398,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ActivationUsesEveryLiveTank_DeferredSteelRetriesAfterTankLeaves(Player)",
+          "Status": "Passed",
+          "Duration": 0.0040861,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ActivationUsesEveryLiveTank_DeferredSteelRetriesAfterTankLeaves(Enemy)",
+          "Status": "Passed",
+          "Duration": 0.0034373,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_AuthoredDefault1200RequiresCalibration",
+          "Status": "Passed",
+          "Duration": 0.0003284,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ClockHelmetAndGrenadeRemainIndependent",
+          "Status": "Passed",
+          "Duration": 0.0070406,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_Default1200FutureCompleteTicks_SnapshotsConfigurationAndExactDamagedLayout",
+          "Status": "Passed",
+          "Duration": 0.0151095,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ExpiryRestorationUsesReservationUntilBirthMovesAway",
+          "Status": "Passed",
+          "Duration": 0.0032805,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ExpiryRestorationWaitsForLiveTank_PauseKeepsPending_ThenRestoresMask",
+          "Status": "Passed",
+          "Duration": 0.0032623,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_InvalidDurationRejected(0)",
+          "Status": "Passed",
+          "Duration": 0.003193,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_InvalidDurationRejected(-1)",
+          "Status": "Passed",
+          "Duration": 0.002196,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_NoBaseConsumesReceiptWithoutTerrainOrImplicitComponent",
+          "Status": "Passed",
+          "Duration": 0.0066045,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_PlayerDeathAndRespawnDoNotCancelGlobalFortification",
+          "Status": "Passed",
+          "Duration": 0.0142572,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ReadyStartPauseFocusAndResumeDoNotConsumeExtraTime",
+          "Status": "Passed",
+          "Duration": 0.0033104,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_RefreshRebuildsDestroyedSteelWithoutReplacingSnapshot_ReceiptDoesNotReplay",
+          "Status": "Passed",
+          "Duration": 0.0035635,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_TerminalLossOrGrenadeVictoryRestoresAndCancelsPending(False)",
+          "Status": "Passed",
+          "Duration": 0.0039588,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_TerminalLossOrGrenadeVictoryRestoresAndCancelsPending(True)",
+          "Status": "Passed",
+          "Duration": 0.0042363,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.CollisionMatrix_TanksAndBulletsHaveSeparateTruth(Water,False,False)",
+          "Status": "Passed",
+          "Duration": 0.0009279,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.CollisionMatrix_TanksAndBulletsHaveSeparateTruth(Grass,True,False)",
+          "Status": "Passed",
+          "Duration": 0.0005361,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.CollisionMatrix_TanksAndBulletsHaveSeparateTruth(Ice,True,False)",
+          "Status": "Passed",
+          "Duration": 0.0005199,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.CollisionMatrix_TanksAndBulletsHaveSeparateTruth(Brick,False,True)",
+          "Status": "Passed",
+          "Duration": 0.0005194,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.CollisionMatrix_TanksAndBulletsHaveSeparateTruth(Steel,False,True)",
+          "Status": "Passed",
+          "Duration": 0.0005243,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_CoastingClampsToTerrainFaceAndClearsMomentum(Brick)",
+          "Status": "Passed",
+          "Duration": 0.0008503,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_CoastingClampsToTerrainFaceAndClearsMomentum(Steel)",
+          "Status": "Passed",
+          "Duration": 0.0005043,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_CoastingClampsToTerrainFaceAndClearsMomentum(Water)",
+          "Status": "Passed",
+          "Duration": 0.0005012,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_CoastUsesSweptLiveBlockersAndMapEdge_NoTunnelingAtHighSpeed",
+          "Status": "Passed",
+          "Duration": 0.0010904,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_DirectionalInputOverridesCoast_RefreshesNotStacks_UsesSafeAlignment",
+          "Status": "Passed",
+          "Duration": 0.0009896,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_LeavingCenterCellStopsCoastAndDryGroundNeverCoasts",
+          "Status": "Passed",
+          "Duration": 0.0006536,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_ReleaseCoastsExactly24FutureTicksAtNormalSpeed(Up)",
+          "Status": "Passed",
+          "Duration": 0.0012256,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_ReleaseCoastsExactly24FutureTicksAtNormalSpeed(Left)",
+          "Status": "Passed",
+          "Duration": 0.0007571,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_ReleaseCoastsExactly24FutureTicksAtNormalSpeed(Down)",
+          "Status": "Passed",
+          "Duration": 0.0007437,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_ReleaseCoastsExactly24FutureTicksAtNormalSpeed(Right)",
+          "Status": "Passed",
+          "Duration": 0.0007698,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.RealBulletSweep_PassesSpecialTerrainAndHitsEnemyBehindWithoutMutatingMap(Water)",
+          "Status": "Passed",
+          "Duration": 0.0011895,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.RealBulletSweep_PassesSpecialTerrainAndHitsEnemyBehindWithoutMutatingMap(Grass)",
+          "Status": "Passed",
+          "Duration": 0.0005378,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.RealBulletSweep_PassesSpecialTerrainAndHitsEnemyBehindWithoutMutatingMap(Ice)",
+          "Status": "Passed",
+          "Duration": 0.0005291,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.StageReferenceMoved_All35ReferencesAndTitleSheetPresent_OriginalStageStillMatches",
+          "Status": "Passed",
+          "Duration": 0.0008575,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Water_RejectsSpawnAndBlocksPickupReachabilityAcrossFullBarrier",
+          "Status": "Passed",
+          "Duration": 0.0015201,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_All676CellsMatchIndependentPngSamples",
+          "Status": "Passed",
+          "Duration": 0.0236593,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_AsymmetricLandmarksAndBaseProtectionHaveCorrectYFlip",
+          "Status": "Passed",
+          "Duration": 0.0014869,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_FrozenSpawnsFitAndDoNotOverlapBaseOrTerrain",
+          "Status": "Passed",
+          "Duration": 0.0106611,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_RuntimeDestructionDoesNotMutateAuthoringData",
+          "Status": "Passed",
+          "Duration": 0.0028541,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_SavedSceneBindsInteractiveTilesCameraAndSessionBase",
+          "Status": "Passed",
+          "Duration": 0.0120694,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Stage01Tests.Stage01_SerializedTerrainOnDiskHasExactly676ValidCellsMatchingLayout",
+          "Status": "Passed",
+          "Duration": 0.0629858,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.AllTanksBlock_HighSpeedHeadOnCannotSwapOrTunnel(Player)",
+          "Status": "Passed",
+          "Duration": 0.0023492,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.AllTanksBlock_HighSpeedHeadOnCannotSwapOrTunnel(Enemy)",
+          "Status": "Passed",
+          "Duration": 0.0008382,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.CombatRules_FrozenSelfFriendlyHostileMatrix(Player,Player,2,False)",
+          "Status": "Passed",
+          "Duration": 0.0005682,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.CombatRules_FrozenSelfFriendlyHostileMatrix(Enemy,Enemy,2,False)",
+          "Status": "Passed",
+          "Duration": 0.0001941,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.CombatRules_FrozenSelfFriendlyHostileMatrix(Player,Enemy,2,True)",
+          "Status": "Passed",
+          "Duration": 0.0001719,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.CombatRules_FrozenSelfFriendlyHostileMatrix(Enemy,Player,2,True)",
+          "Status": "Passed",
+          "Duration": 0.0001698,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.CombatRules_FrozenSelfFriendlyHostileMatrix(Player,Enemy,1,False)",
+          "Status": "Passed",
+          "Duration": 0.000165,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DamageSettlesAfterAllWeapons_IndependentLanesCanKillBothTeamsInOneTick",
+          "Status": "Passed",
+          "Duration": 0.0016175,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.Death_ReleasesMovementOccupancyButNotOutstandingProjectileLease",
+          "Status": "Passed",
+          "Duration": 0.0013851,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DynamicSweep_ClampsAtEveryTankFace(Up,24,72,24,56)",
+          "Status": "Passed",
+          "Duration": 0.0011935,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DynamicSweep_ClampsAtEveryTankFace(Down,24,8,24,24)",
+          "Status": "Passed",
+          "Duration": 0.0008577,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DynamicSweep_ClampsAtEveryTankFace(Right,72,24,56,24)",
+          "Status": "Passed",
+          "Duration": 0.0005784,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DynamicSweep_ClampsAtEveryTankFace(Left,8,24,24,24)",
+          "Status": "Passed",
+          "Duration": 0.0005349,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.DynamicSweep_ExactParallelTouchPassesButOverlapBlocks",
+          "Status": "Passed",
+          "Duration": 0.0008961,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.FriendlyTank_IsIgnoredByRealSweepBeforeHostileTank",
+          "Status": "Passed",
+          "Duration": 0.0008477,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.IncomingHit_UsesHealthAndProtectionForPlayerAndEnemy(False)",
+          "Status": "Passed",
+          "Duration": 0.0016629,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.IncomingHit_UsesHealthAndProtectionForPlayerAndEnemy(True)",
+          "Status": "Passed",
+          "Duration": 0.0037277,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.Pause_FreezesAllTanksAndClearsNonPlayerCommands",
+          "Status": "Passed",
+          "Duration": 0.0011462,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.SameTickAllSweepsSeeLivingFrontTarget_DeathOnlyOnceThenNextTickOpensPath",
+          "Status": "Passed",
+          "Duration": 0.0055508,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.SideTurn_RequiresWholeDynamicAlignmentPathClear(25)",
+          "Status": "Passed",
+          "Duration": 0.0018046,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.SideTurn_RequiresWholeDynamicAlignmentPathClear(27)",
+          "Status": "Passed",
+          "Duration": 0.0013044,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.StableIds_SpawnRejectsOverlapAndNeverConsumesIdOnFailure",
+          "Status": "Passed",
+          "Duration": 0.0031319,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.TankCommand_SharesMovementAnimationMuzzleCooldownAndCapacity(Player)",
+          "Status": "Passed",
+          "Duration": 0.0042434,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TankStateTests.TankCommand_SharesMovementAnimationMuzzleCooldownAndCapacity(Enemy)",
+          "Status": "Passed",
+          "Duration": 0.0020602,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,0)",
+          "Status": "Passed",
+          "Duration": 0.002175,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,1)",
+          "Status": "Passed",
+          "Duration": 0.0007273,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,2)",
+          "Status": "Passed",
+          "Duration": 0.0006886,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,3)",
+          "Status": "Passed",
+          "Duration": 0.0006843,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,4)",
+          "Status": "Passed",
+          "Duration": 0.0006571,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,5)",
+          "Status": "Passed",
+          "Duration": 0.0006532,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,6)",
+          "Status": "Passed",
+          "Duration": 0.000662,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,7)",
+          "Status": "Passed",
+          "Duration": 0.0006463,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,0)",
+          "Status": "Passed",
+          "Duration": 0.0006498,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,1)",
+          "Status": "Passed",
+          "Duration": 0.0006423,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,2)",
+          "Status": "Passed",
+          "Duration": 0.0006439,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,3)",
+          "Status": "Passed",
+          "Duration": 0.0006538,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,4)",
+          "Status": "Passed",
+          "Duration": 0.0006671,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,5)",
+          "Status": "Passed",
+          "Duration": 0.0006528,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,6)",
+          "Status": "Passed",
+          "Duration": 0.0006481,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,7)",
+          "Status": "Passed",
+          "Duration": 0.0006476,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,0)",
+          "Status": "Passed",
+          "Duration": 0.0006623,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,1)",
+          "Status": "Passed",
+          "Duration": 0.0006918,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,2)",
+          "Status": "Passed",
+          "Duration": 0.00065,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,3)",
+          "Status": "Passed",
+          "Duration": 0.0006556,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,4)",
+          "Status": "Passed",
+          "Duration": 0.0006542,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,5)",
+          "Status": "Passed",
+          "Duration": 0.000647,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,6)",
+          "Status": "Passed",
+          "Duration": 0.0006475,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,7)",
+          "Status": "Passed",
+          "Duration": 0.0006466,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,0)",
+          "Status": "Passed",
+          "Duration": 0.0006632,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,1)",
+          "Status": "Passed",
+          "Duration": 0.0006518,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,2)",
+          "Status": "Passed",
+          "Duration": 0.0007357,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,3)",
+          "Status": "Passed",
+          "Duration": 0.0005092,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,4)",
+          "Status": "Passed",
+          "Duration": 0.0005038,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,5)",
+          "Status": "Passed",
+          "Duration": 0.0004867,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,6)",
+          "Status": "Passed",
+          "Duration": 0.0005224,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,7)",
+          "Status": "Passed",
+          "Duration": 0.0006518,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,0)",
+          "Status": "Passed",
+          "Duration": 0.0006523,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,1)",
+          "Status": "Passed",
+          "Duration": 0.0006815,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,2)",
+          "Status": "Passed",
+          "Duration": 0.0006947,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,3)",
+          "Status": "Passed",
+          "Duration": 0.0007428,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,4)",
+          "Status": "Passed",
+          "Duration": 0.0006636,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,5)",
+          "Status": "Passed",
+          "Duration": 0.0006604,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,6)",
+          "Status": "Passed",
+          "Duration": 0.000657,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,7)",
+          "Status": "Passed",
+          "Duration": 0.0006464,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,0)",
+          "Status": "Passed",
+          "Duration": 0.0006449,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,1)",
+          "Status": "Passed",
+          "Duration": 0.0006618,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,2)",
+          "Status": "Passed",
+          "Duration": 0.0006547,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,3)",
+          "Status": "Passed",
+          "Duration": 0.0006564,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,4)",
+          "Status": "Passed",
+          "Duration": 0.00065,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,5)",
+          "Status": "Passed",
+          "Duration": 0.0006498,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,6)",
+          "Status": "Passed",
+          "Duration": 0.0006433,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,7)",
+          "Status": "Passed",
+          "Duration": 0.0006644,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,0)",
+          "Status": "Passed",
+          "Duration": 0.0006624,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,1)",
+          "Status": "Passed",
+          "Duration": 0.0006471,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,2)",
+          "Status": "Passed",
+          "Duration": 0.0006426,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,3)",
+          "Status": "Passed",
+          "Duration": 0.000651,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,4)",
+          "Status": "Passed",
+          "Duration": 0.0006524,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,5)",
+          "Status": "Passed",
+          "Duration": 0.0006484,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,6)",
+          "Status": "Passed",
+          "Duration": 0.0006399,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,7)",
+          "Status": "Passed",
+          "Duration": 0.0006489,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,0)",
+          "Status": "Passed",
+          "Duration": 0.0006452,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,1)",
+          "Status": "Passed",
+          "Duration": 0.0006401,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,2)",
+          "Status": "Passed",
+          "Duration": 0.000642,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,3)",
+          "Status": "Passed",
+          "Duration": 0.0006504,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,4)",
+          "Status": "Passed",
+          "Duration": 0.0006466,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,5)",
+          "Status": "Passed",
+          "Duration": 0.0006426,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,6)",
+          "Status": "Passed",
+          "Duration": 0.0006409,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,7)",
+          "Status": "Passed",
+          "Duration": 0.0006397,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.Session_ReleasedOldKeyDoesNotLeaveSideTurnPermanentlyStuck",
+          "Status": "Passed",
+          "Duration": 0.0012952,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.ActiveLimit_RejectsWithoutRestartingCooldownAndRearmsOnRelease",
+          "Status": "Passed",
+          "Duration": 0.0012417,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.BulletTravel_IsRenderRateIndependent(30)",
+          "Status": "Passed",
+          "Duration": 0.0017101,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.BulletTravel_IsRenderRateIndependent(60)",
+          "Status": "Passed",
+          "Duration": 0.001157,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.BulletTravel_IsRenderRateIndependent(144)",
+          "Status": "Passed",
+          "Duration": 0.0011561,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.ConfiguredCap_IsPerOwnerAndCanExceedOne",
+          "Status": "Passed",
+          "Duration": 0.0007744,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.Cooldown_FirstShotImmediateNextShotExactlyFifteenTicksLater",
+          "Status": "Passed",
+          "Duration": 0.0007284,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.HeldFire_RepeatsWhenCooldownAndCapacityBothAllow",
+          "Status": "Passed",
+          "Duration": 0.0005307,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.MuzzleAndTravel_UseFacingAndLogicalPixels(Up)",
+          "Status": "Passed",
+          "Duration": 0.0010399,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.MuzzleAndTravel_UseFacingAndLogicalPixels(Left)",
+          "Status": "Passed",
+          "Duration": 0.0002154,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.MuzzleAndTravel_UseFacingAndLogicalPixels(Down)",
+          "Status": "Passed",
+          "Duration": 0.0001919,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.MuzzleAndTravel_UseFacingAndLogicalPixels(Right)",
+          "Status": "Passed",
+          "Duration": 0.0001857,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.Pause_FreezesBulletAndCooldownAndDoesNotResumeHeldFire",
+          "Status": "Passed",
+          "Duration": 0.0013275,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.PoolReuse_ResetsStateAndStaleLeaseCannotReleaseNewBullet",
+          "Status": "Passed",
+          "Duration": 0.0008482,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.RefusedTap_IsNotQueuedForLater",
+          "Status": "Passed",
+          "Duration": 0.0003561,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.WeaponTests.Session_MovesThenSpawnsAndAdvancesBulletInSameTick",
+          "Status": "Passed",
+          "Duration": 0.0011853,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 5.08,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": null,
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

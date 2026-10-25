@@ -22,7 +22,7 @@ namespace BattleCity
             }
             display.sharedMaterial = material;
             display.sortingLayerName = "Actors";
-            display.sortingOrder = -1;
+            display.sortingOrder = 2; // Above grass (Actors/1), below projectiles/effects.
             this.state = state;
             Render();
         }

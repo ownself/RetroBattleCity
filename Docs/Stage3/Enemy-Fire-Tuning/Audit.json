@@ -1,0 +1,704 @@
+{
+  "verifier": "main coding assistant; actual Unity tests",
+  "baseline": "Temp/EnemyFire-Before/Hashes.json",
+  "baselineCount": 391,
+  "unchangedCount": 386,
+  "changes": {
+    "Assets/BattleCity/Tests/EditMode/EnemyBrainTests.cs": {
+      "before": "9a3325766b85ee5e8182a29d78b2db0f901bb65644da39ff8dd2745547912c77",
+      "after": "eb1965e37ac97ba8db51d0a9016542326ec072ab65e5ac48b25f08aedc913e59"
+    },
+    "Assets/BattleCity/Tests/EditMode/EnemyWaveIntegrationTests.cs": {
+      "before": "bea70afabb35a5da2ef8f4d575e1a9e51795ef1f31fde29f8de659599b24833f",
+      "after": "72e89c37f0a29f1a049bc1de86b8e0638973ae36fdc99b54083a1c15346c3c46"
+    },
+    "Assets/BattleCity/Tests/PlayMode/EnemyBrainPlayModeTests.cs": {
+      "before": "3df49d462b0cf4d67bc6b58f063dc9d12215bcad639fb60602d731c686502c12",
+      "after": "80b79e91f338e934435190f9fe1dac97f934b662f97186f2f0b4208fc36fcd9e"
+    },
+    "Assets/BattleCity/Scripts/AI/EnemyBrain.cs": {
+      "before": "e9fb97f04f3ad017342b83fd4c44f62b1e4d6b8c6b1ac5e195e331f9df3ca069",
+      "after": "5b68012eeb11763c15869844ec0b0c73c3b2eefa72030440abd8ad58d33792ed"
+    },
+    "Assets/BattleCity/Scripts/AI/EnemyBrainParameters.cs": {
+      "before": "6875e8420d5b442444ab56bb0fa4743fc43ccc5ceb8e904f0f8e52b8308d99cd",
+      "after": "56ab2b155ea70cfe9bf541e735647675da74fb71cb91f9384ec9c41df46fe368"
+    }
+  },
+  "uniqueFinalPassed": 99,
+  "modeCounts": {
+    "EditMode": 97,
+    "PlayMode": 2
+  },
+  "runs": [
+    {
+      "source": "Edit-Result.json",
+      "summary": {
+        "Total": 40,
+        "Passed": 40,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      }
+    },
+    {
+      "source": "Wave-Result.json",
+      "summary": {
+        "Total": 43,
+        "Passed": 42,
+        "Failed": 1,
+        "Skipped": 0,
+        "Inconclusive": 0
+      }
+    },
+    {
+      "source": "Clock-Result.json",
+      "summary": {
+        "Total": 14,
+        "Passed": 14,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      }
+    },
+    {
+      "source": "Play-Result.json",
+      "summary": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      }
+    },
+    {
+      "source": "Wave-Fix-Result.json",
+      "summary": {
+        "Total": 1,
+        "Passed": 1,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      }
+    }
+  ],
+  "originalFailures": [
+    {
+      "source": "Wave-Result.json",
+      "result": {
+        "FullName": "BattleCity.Tests.EnemyWaveIntegrationTests.SpawnCommitsSharedTankAndBrainAfterCombat_NewEnemyOnlyActsNextTick",
+        "Status": "Failed",
+        "Duration": 0.0070345,
+        "Message": "  Expected: 1\r\n  But was:  0\r\n",
+        "StackTrace": "at BattleCity.Tests.EnemyWaveIntegrationTests.SpawnCommitsSharedTankAndBrainAfterCombat_NewEnemyOnlyActsNextTick () [0x001b3] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\EnemyWaveIntegrationTests.cs:78\r\n"
+      }
+    }
+  ],
+  "finalTests": [
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Up,104,200)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Down,104,8)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Left,8,104)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Right,200,104)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Death_StopsDecisionsRandomTimersMovementAndNewShots",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Decisions_UseStartOfTickOccupancy_NotEarlierIdsMovementOrFuturePlayerCommand",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.DynamicMutualBlock_TurnsAndNeverOverlapsAcrossTicks",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Fire_ClockAndPauseFreezeIndependentCountdownAndRandom_NoBacklogOnResume",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Fire_DefaultRandomInitialAndLaterIntervalsAreBounded_ReproducibleAndNotHeld(1)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Fire_DefaultRandomInitialAndLaterIntervalsAreBounded_ReproducibleAndNotHeld(7)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Fire_DefaultRandomInitialAndLaterIntervalsAreBounded_ReproducibleAndNotHeld(123456)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Fire_DefaultRandomInitialAndLaterIntervalsAreBounded_ReproducibleAndNotHeld(2654435769)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Fire_FullyBlockedStillWaitsAndShoots_WithoutChangingMovementRandom",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Fire_InvalidDelayRangeRejected(0,10)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Fire_InvalidDelayRangeRejected(10,9)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Fire_InvalidDelayRangeRejected(1,int.MaxValue)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Fire_ReleasingProjectileCapacityDoesNotImmediatelyShootOrQueueRequests",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Fire_TuningDoesNotPerturbDirectionRandomOrMovement",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.FullyBlocked_RetriesWithoutRandomChurn_AndShootsBrickOpen",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.NarrowCorridor_Exact16PixelsNeverCrossesWalls_DeadEndReverses(False)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.NarrowCorridor_Exact16PixelsNeverCrossesWalls_DeadEndReverses(True)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.PauseFreezesFullBrainAndResumeDoesNotCatchUp",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.PrototypeParameters_AreExplicitValidatedAndUncalibrated",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(1)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(7)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(123456)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(uint.MaxValue)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Registration_IsExplicitAndUsesSameSharedTank_ExternalControlRemainsAvailable",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.RenderDelta_Same720TicksMatches60HzReference(30)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.RenderDelta_Same720TicksMatches60HzReference(60)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.RenderDelta_Same720TicksMatches60HzReference(144)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.SameSeed_ReplaysEveryTickIncludingPositionFacingShotsAndRandom_WithoutUnityRandom",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Up,12,14)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Up,12,14)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Down,12,11)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Down,12,11)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Left,11,12)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Left,11,12)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Right,14,12)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Right,14,12)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Edit-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveIntegrationTests.ActivePlusReservedNeverExceedsCap_ExternalRegistrationCannotStealReservedCapacity(1)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveIntegrationTests.ActivePlusReservedNeverExceedsCap_ExternalRegistrationCannotStealReservedCapacity(4)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveIntegrationTests.AllSpawnsOccupiedByPlayer_WaitsWithoutConsumingSequenceThenUsesReleasedSpace",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveIntegrationTests.DeathSettlesBeforeReservation_RepeatedDeadTicksDoNotLoseOrDoubleCountEnemies",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveIntegrationTests.ExhaustionMeansAllCreatedNotVictory_DeathsAndLateTicksKeepConservation",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveIntegrationTests.InvalidMappingFailsAtConstruction_NotAfterAnEnemyIsPartlyRegistered",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveIntegrationTests.MapAndBaseFootprintsBlockNaturalSpawns(True)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveIntegrationTests.MapAndBaseFootprintsBlockNaturalSpawns(False)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveIntegrationTests.OptionalWave_PreservesLegacyPureLogicAndEmptySequence",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveIntegrationTests.PauseFreezesPreparationIntervalBrainAndRandom_ResumeDoesNotCatchUp",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveIntegrationTests.PreparationEndsWithPlayerInTheWay_HoldsRequestAndCountUntilPlayerLeaves",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveIntegrationTests.SameSeedAndInputReplayIdenticalIntegratedWorld_AuthoredArraysStayUnchanged",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveIntegrationTests.SpawnCommitsSharedTankAndBrainAfterCombat_NewEnemyOnlyActsNextTick",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Fix-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.AllPointsBlocked_WaitsWithoutConsumingRandomSequenceOrReservation_ThenUsesOnlyClearPoint",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.AuthorArraysAndTiming_AreSnapshotted_AndRuntimeNeverMutatesThem",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications(1)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.Capacity_IncludesReservation_DeathSnapshotReleasesSlotWithoutNotifications(4)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.DefaultTiming_FirstCreationCall61_Second241_DeathBeforeStepAndNextTickControlAreHostContract",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.EmptySequence_IsExhaustedWithoutReservationOrCallbacks",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.ExactSeedOne_FirstPointAndBrainSeedAreStable",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.FailedCreation_IsNotCommitted_AndCanRetryWithIdenticalRequest",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(1)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(7)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.FixedSeed_ReplaysPointsAndBrainSeeds_IndependentOfGlobalRandomAndBlockedRetries(uint.MaxValue)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"unknown\")",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"duplicate\")",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"nullMapping\")",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"nullDefinition\")",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroSeed\")",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroPreparation\")",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"negativePreparation\")",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroInterval\")",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"negativeInterval\")",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"invalidTank\")",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"nullSequence\")",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"emptyId\")",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"zeroCap\")",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.InvalidConfiguration_FailsEarlyWithClearMessage(\"noSpawns\")",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.InvalidStepInput_RejectsCapacityIncludingExistingReservationWithoutMutation",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.NoStep_PauseFreezesReservationIntervalCountersAndRandom",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.PreparationFinishedThenOccupied_RetriesSameReservationWithoutResetOrLostCountOrSeed",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.ReentrantOrThrowingCallback_CannotDoubleCommit_ReservationIsRetryable",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyWaveStateTests.SequenceExhausted_IsNotVictory_AliveSnapshotAndConservationRemainAvailable",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Wave-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.ClockGrenadePickupTests.AlreadyTerminalBulletKillPreventsAnyPickupReward",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Clock-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.ClockGrenadePickupTests.AuthoredClockDefaultIsExplicitAndUncalibrated",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Clock-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.ClockGrenadePickupTests.Clock_Default600FutureCompleteTicks_SnapshotsRules_FreezesAIAndExternalWeaponMotorTracks",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Clock-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.ClockGrenadePickupTests.Clock_NewWaveBirthStillOccurs_StaysFrozenAndBlocksPlayer_ButCanBeKilled",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Clock-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.ClockGrenadePickupTests.Clock_PlayerAndEnemyBulletsAndEffectsContinue_PlayerDeathDoesNotCancelGlobalEffect",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Clock-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.ClockGrenadePickupTests.Clock_RepeatRefreshesNotAdds_NoReceiptReplay_PauseReadyAndFocusConsumeNothing",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Clock-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_ArmorBatchAndSameTickBulletDeath_ScoreAndExplosionExactlyOnce_NoProjectileTerrainOrBaseDamage",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Clock-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_DoesNotReplayOnLaterEnemy_ReservationAndPendingAndCadenceConserved",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Clock-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_KillsNewlyCommittedCarrierWithoutDropping_OnceWaveStepOnly",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Clock-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_LastEnemyWinsSameTick_OneTerminalEventAndCleanup",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Clock-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_SameTickBaseFailurePreventsCollectionAndKills_FailureWins",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Clock-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.ClockGrenadePickupTests.InvalidClockDurationRejected(0)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Clock-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.ClockGrenadePickupTests.InvalidClockDurationRejected(-1)",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Clock-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.ClockGrenadePickupTests.SimultaneousLastEnemyBulletDeathAndPlayerExhaustion_IsLossNotGrenadeReward",
+      "mode": "EditMode",
+      "status": "Passed",
+      "source": "Clock-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainPlayModeTests.RealUpdate_RegisteredEnemyMovesTurnsFires_PauseFreezes_ResumeAdvancesWithoutBacklog",
+      "mode": "PlayMode",
+      "status": "Passed",
+      "source": "Play-Result.json"
+    },
+    {
+      "name": "BattleCity.Tests.EnemyBrainPlayModeTests.Stage01_NaturalEnemyWaitsBeforeFirstShot_UsesRandomDefaultWithoutAssetChanges",
+      "mode": "PlayMode",
+      "status": "Passed",
+      "source": "Play-Result.json"
+    }
+  ],
+  "consoleDelta": {
+    "from": 2192,
+    "to": 2235,
+    "logs": 43,
+    "warnings": 0,
+    "errors": 0
+  },
+  "limitations": [
+    "Directed AI/wave/clock tests only, not full M3 regression",
+    "0.75-1.75s is a gameplay tuning default awaiting user playtesting, not verified original-game timing"
+  ]
+}

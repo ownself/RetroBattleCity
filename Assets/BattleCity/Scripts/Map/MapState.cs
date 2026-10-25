@@ -33,6 +33,14 @@ namespace BattleCity
             return terrain[y * PixelGrid.TerrainCellsPerAxis + x];
         }
 
+        /// <summary>Center-sampled ice, shared by command movement and its pure AI preview.</summary>
+        public bool IsIceAt(Vector2 center)
+        {
+            if (center.x < 0 || center.y < 0 || center.x >= PixelGrid.MapSizePixels || center.y >= PixelGrid.MapSizePixels) return false;
+            return TerrainAt(Mathf.FloorToInt(center.x / PixelGrid.TerrainCellPixels),
+                Mathf.FloorToInt(center.y / PixelGrid.TerrainCellPixels)) == TerrainKind.Ice;
+        }
+
         public byte BrickMaskAt(int x, int y)
         {
             TerrainAt(x, y); // Shared bounds validation.

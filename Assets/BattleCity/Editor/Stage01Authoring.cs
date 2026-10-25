@@ -17,7 +17,7 @@ namespace BattleCity.Editor
         public const string EnemyDefinitionId = "enemy.basic.prototype";
         public const string ScenePath = Phase0Baseline.Root + "/Scenes/Stage01.unity";
         public const string LayoutPath = Phase0Baseline.Root + "/Editor/Stage01Layout.txt";
-        public const string ReferencePath = "Assets/Sprites/NES - Battle City (JPN) - Backgrounds - Stage 01.png";
+        public const string ReferencePath = "Assets/Sprites/Stages/NES - Battle City (JPN) - Backgrounds - Stage 01.png";
 
         [MenuItem("Battle City/Author Stage 01 (BC-200)")]
         public static void BuildFromMenu() => Debug.Log(Build());

@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "TerminalOutcome_Clears",
+      "timeout": "60"
+    },
+    "result": {
+      "Summary": {
+        "Total": 2,
+        "Passed": 1,
+        "Failed": 1,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.TerminalOutcome_ClearsRealPlayerAndEnemyIceMomentum(False)",
+          "Status": "Passed",
+          "Duration": 0.0548842,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.TerminalOutcome_ClearsRealPlayerAndEnemyIceMomentum(True)",
+          "Status": "Failed",
+          "Duration": 0.0092706,
+          "Message": "  Expected: True\r\n  But was:  False\r\n",
+          "StackTrace": "at BattleCity.Tests.ClassicRulesCombinationTests.Drop (BattleCity.ArenaSession s, BattleCity.PickupKind kind) [0x00004] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\ClassicRulesCombinationTests.cs:40\r\nat BattleCity.Tests.ClassicRulesCombinationTests.TerminalOutcome_ClearsRealPlayerAndEnemyIceMomentum (System.Boolean victory) [0x000df] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\ClassicRulesCombinationTests.cs:134\r\n"
+        }
+      ],
+      "Duration": 1.26,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: TerminalOutcome_Clears",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

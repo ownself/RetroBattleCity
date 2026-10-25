@@ -75,8 +75,10 @@ namespace BattleCity.Tests
             Tick(s);
             Assert.That(enemy.Motor.Position, Is.EqualTo(new Vector2(104, 103)));
             Assert.That(enemy.Motor.Facing, Is.EqualTo(CardinalDirection.Down));
-            Assert.That(enemy.Weapon.ActiveBullets, Is.EqualTo(1));
-            Assert.That(s.Bullets.Active.Single().OwnerId, Is.EqualTo(enemy.EntityId));
+            // Movement starts next tick, but the independent first-shot delay must still be honored.
+            Assert.That(enemy.Weapon.ActiveBullets, Is.Zero);
+            Assert.That(enemy.Weapon.CooldownRemainingTicks, Is.Zero);
+            Assert.That(s.Bullets.Active, Is.Empty);
         }
 
         [Test] public void AllSpawnsOccupiedByPlayer_WaitsWithoutConsumingSequenceThenUsesReleasedSpace()

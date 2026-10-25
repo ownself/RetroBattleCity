@@ -84,7 +84,9 @@ namespace BattleCity.Tests
             Assert.That(s.Pickups.CollectedCount, Is.EqualTo(1)); Assert.That(s.Pickups.Active, Is.Null);
             Assert.That(s.Clock.Tick, Is.GreaterThan(tick)); Assert.That(Time.frameCount, Is.GreaterThan(frame));
             Assert.That(Display(controller.PickupView).enabled, Is.False); Assert.That(Display(controller.PickupView).sprite, Is.Null);
-            Assert.That(s.Score, Is.Zero); Assert.That(s.PlayerUpgrades.Level, Is.Zero);
+            // The deterministic item can be Grenade: preserve actual kill points as well as its reward.
+            Assert.That(s.Scoring.PickupPoints, Is.EqualTo(500)); Assert.That(s.Score, Is.EqualTo(s.Scoring.EnemyPoints + 500));
+            Assert.That(s.PlayerUpgrades.Level, Is.Zero);
             for (int i = 0; i < 3; i++) { controller.PickupView.Render(); yield return null; }
             Assert.That(s.Pickups.CollectedCount, Is.EqualTo(1));
             Debug.Log($"BC303 Stage01 natural carrier hp4->3, drop/replace, keyboard collection={s.Pickups.CollectedCount} frame={frame}->{Time.frameCount} tick={tick}->{s.Clock.Tick}");

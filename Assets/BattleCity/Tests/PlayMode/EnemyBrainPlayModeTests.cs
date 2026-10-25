@@ -28,6 +28,29 @@ namespace BattleCity.Tests
         }
 
         [UnityTest]
+        public IEnumerator Stage01_NaturalEnemyWaitsBeforeFirstShot_UsesRandomDefaultWithoutAssetChanges()
+        {
+            scene = EditorSceneManager.LoadSceneInPlayMode("Assets/BattleCity/Scenes/Stage01.unity", new LoadSceneParameters(LoadSceneMode.Additive));
+            yield return null;
+            var controller = scene.GetRootGameObjects().SelectMany(r => r.GetComponentsInChildren<ArenaController>()).Single();
+            var s = controller.Session; s.SetFocus(true); s.StartBattle(); s.AdvanceFrame(0, PlayerButtons.None);
+            s.PlayerTank.IsProtected = true;
+            for (int i = 0; i < 61; i++) s.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.None);
+            var enemy = s.Tanks.Single(t => t.Team == CombatTeam.Enemy);
+            Assert.That(enemy.Weapon.CooldownRemainingTicks, Is.Zero);
+            int firstShot = 0;
+            for (int elapsed = 1; elapsed <= 105; elapsed++)
+            {
+                s.AdvanceFrame(LogicClock.StepSeconds, PlayerButtons.None);
+                if (elapsed < 45) Assert.That(enemy.Weapon.CooldownRemainingTicks, Is.Zero);
+                if (enemy.Weapon.CooldownRemainingTicks > 0) { firstShot = elapsed; break; }
+            }
+            s.SetPaused(true); yield return null;
+            Assert.That(firstShot, Is.InRange(45, 105));
+            Debug.Log($"Enemy fire tuning: Stage01 natural first shot {firstShot} complete combat ticks after birth; default range45..105; controlled AdvanceFrame, no asset edits");
+        }
+
+        [UnityTest]
         public IEnumerator RealUpdate_RegisteredEnemyMovesTurnsFires_PauseFreezes_ResumeAdvancesWithoutBacklog()
         {
             scene = EditorSceneManager.LoadSceneInPlayMode("Assets/BattleCity/Scenes/CombatArena.unity",
@@ -46,7 +69,7 @@ namespace BattleCity.Tests
             int startFrame = Time.frameCount; long startTick = session.Clock.Tick;
             session.SetPaused(false);
             float deadline = Time.realtimeSinceStartup + 3;
-            while (brain.DecisionTicks < 20 && Time.realtimeSinceStartup < deadline) yield return null;
+            while ((brain.DecisionTicks < 20 || brain.FireAttempts == 0) && Time.realtimeSinceStartup < deadline) yield return null;
             session.SetPaused(true);
             Assert.That(brain.DecisionTicks, Is.GreaterThanOrEqualTo(20), "Actual ArenaController.Update must drive AI, not direct AdvanceFrame");
             Assert.That(Time.frameCount, Is.GreaterThan(startFrame));
@@ -59,6 +82,7 @@ namespace BattleCity.Tests
             int pausedFrame = Time.frameCount, timer = brain.DirectionTicksRemaining;
             uint random = brain.RandomState; var position = enemy.Motor.Position;
             int cooldown = enemy.Weapon.CooldownRemainingTicks; int active = enemy.Weapon.ActiveBullets;
+            int fireTimer = brain.FireTicksRemaining; long attempts = brain.FireAttempts; uint fireRandom = brain.FireRandomState;
             long dropped = session.Clock.DroppedTicks;
             yield return new WaitForSecondsRealtime(.3f);
             Assert.That(Time.frameCount, Is.GreaterThan(pausedFrame));
@@ -66,6 +90,8 @@ namespace BattleCity.Tests
             Assert.That(brain.RandomState, Is.EqualTo(random)); Assert.That(brain.DirectionTicksRemaining, Is.EqualTo(timer));
             Assert.That(enemy.Motor.Position, Is.EqualTo(position)); Assert.That(enemy.Weapon.CooldownRemainingTicks, Is.EqualTo(cooldown));
             Assert.That(enemy.Weapon.ActiveBullets, Is.EqualTo(active));
+            Assert.That(brain.FireTicksRemaining, Is.EqualTo(fireTimer)); Assert.That(brain.FireAttempts, Is.EqualTo(attempts));
+            Assert.That(brain.FireRandomState, Is.EqualTo(fireRandom));
             int frozenFrame = Time.frameCount;
             session.SetPaused(false);
             deadline = Time.realtimeSinceStartup + 2;

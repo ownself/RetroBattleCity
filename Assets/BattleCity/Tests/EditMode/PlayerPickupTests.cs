@@ -33,6 +33,7 @@ namespace BattleCity.Tests
             wave = ScriptableObject.CreateInstance<EnemyWaveDefinition>();
             wave.tankDefinitions = new[] { tanks[0] }; wave.preparationTicks = 900; wave.spawnIntervalTicks = 900;
             rules = ScriptableObject.CreateInstance<PickupDefinition>();
+            rules.collectionScore = 0; // Isolate BC304 effects; default reward accounting is covered by BC308.
             rules.carrierSequenceIndices = new int[0]; rules.helmetDurationTicks = 3; rules.maximumLives = 5;
         }
         [TearDown] public void TearDown()

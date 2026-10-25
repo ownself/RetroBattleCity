@@ -1,0 +1,89 @@
+{
+  "verifier": "main coding assistant",
+  "head": "cc948e2b96d04b82bbf341f409870f3165e01611",
+  "baselineCount": 383,
+  "unchangedCount": 366,
+  "changed": {
+    "Assets/BattleCity/Data/Pickups.asset": {
+      "before": "40f44ee2a8cb4883f47e215bd6850c444fb3ae060f732c82ec272d19fdbb52fd",
+      "after": "81ea928533951c85a40fe9d8f61b5508248946c7cc78dd61911df113b2899993"
+    },
+    "Assets/BattleCity/Editor/Stage01Authoring.cs": {
+      "before": "a554f341a61d75186d6756159fd8622e97392c7c02aa9f968f484ca3d39c99db",
+      "after": "f3e50081d26ed8a8f9dfba922bbe6199b1ee6f9b8471e300541dc1c76316a873"
+    },
+    "Assets/BattleCity/Tests/EditMode/ClockGrenadePickupTests.cs": {
+      "before": "a5b403367f619ee80779141cc8d5514bb82e6af9cdbe2b1fce79b1e248ff02fd",
+      "after": "22c4d0197c4c982033725bc30653857a1166bfb9e560311382dd622c58f630ac"
+    },
+    "Assets/BattleCity/Tests/EditMode/Phase0Tests.cs": {
+      "before": "203fb5ea2ebbe7a5c2376eb873215eca173aa4b5c03e00043ddc1e18aca382bc",
+      "after": "82ffacee9be6e78667d5f60f446119b1f573efe7d587df84fb300695c70da4b7"
+    },
+    "Assets/BattleCity/Tests/EditMode/PickupTests.cs": {
+      "before": "17e9f4bec6f07ebdf1f7f0620806109d7b1ea6107fd32ebd15ec7703aaa73d86",
+      "after": "46ab8d95c40b5e4367246412a2a55025c31d977ae11475ae5ad6c1e001826902"
+    },
+    "Assets/BattleCity/Tests/EditMode/PlayerPickupTests.cs": {
+      "before": "b696ccff70b24fd4ba84edcef0ee0faf984a0dd31039094dbadfc75e1ed79869",
+      "after": "0941325b14aafa722e3c9740fe7eb11cba3cc5f30a347fb48f9db43707e9055f"
+    },
+    "Assets/BattleCity/Tests/PlayMode/ClockGrenadePickupPlayModeTests.cs": {
+      "before": "62408a527052505376c35f3ce8291a446e40bb8f498c8ed1080bdba50e3bb426",
+      "after": "407b0f890959588414d3b4b7fedbf12ee5074b191136d337d7d9a36f70c0cef8"
+    },
+    "Assets/BattleCity/Tests/PlayMode/EnemyTypesPlayModeTests.cs": {
+      "before": "ca34c2f5507dacfde724f8281234a4b18c6c6655db019df7a937a26b783ee754",
+      "after": "ead10beb4892d78acb62c16ee2e3ca462c59a077ccdf90c1ec2e0d2b257f5321"
+    },
+    "Assets/BattleCity/Tests/PlayMode/PickupPlayModeTests.cs": {
+      "before": "6bdb025f8ca9d9b3e68b6521b3b23e90e09b7098e913d005e74d6061af659842",
+      "after": "12430c41b2ab515b57677de1fd17517769bb20b192cdb6b65915bfd4726bc18b"
+    },
+    "Assets/BattleCity/Tests/PlayMode/PlayerPickupPlayModeTests.cs": {
+      "before": "aa86ae4198b4c9e9bebdd6262d5fd00fbcd0c90577f0929cffab53e334b6b287",
+      "after": "313049c7dfdaf66bf7fac2d90a312d1fa265825f2688b0395342d2432e7269d7"
+    },
+    "Assets/BattleCity/Scripts/Core/ArenaController.cs": {
+      "before": "3592a15085ded6036264b2ec71c1ab8b251e088b2a825ababcee7fcfcc89de86",
+      "after": "feae54c5d37c1a07cf961b82a646f545fdfc8dd18ef09296942003df57ea2b64"
+    },
+    "Assets/BattleCity/Scripts/Core/ArenaSession.cs": {
+      "before": "69cccad7d760533fb5efb060ebe6f5971fb89203c69b37ce1396949176c8d6c6",
+      "after": "51e0458368ab3c8ca77751b52f4addaa3c72038d976a46e07781e455a6279147"
+    },
+    "Assets/BattleCity/Scripts/Map/ArenaMapView.cs": {
+      "before": "9bccac5e8d3e5d54d031113009eefd5f43ad12b09c34031c916f51ce1a8fb0d8",
+      "after": "e1b3b95af68af66953c9a028e58b3c7369f6b6b5434ce6d83efb38c2256d5144"
+    },
+    "Assets/BattleCity/Scripts/Map/MapState.cs": {
+      "before": "479d16da5b6a582bfcedbb3e1b4a2a542a447102d2303018772800c06572c044",
+      "after": "1bb4a52da8c555b49a651d575faacc5baf728cf0eef22ba2650e1e2f64cc8577"
+    },
+    "Assets/BattleCity/Scripts/Pickups/PickupDefinition.cs": {
+      "before": "6ee9ccdf193d51fcc73b0559fa99701910ba8ae80aebbfef93aa3e08434cbe6f",
+      "after": "2f1df46994f3cf98f25f334d0673099d2fd41ecd71493f8558e51474cd14ef14"
+    },
+    "Assets/BattleCity/Scripts/Pickups/PickupView.cs": {
+      "before": "7681c7dda8bc949b470bab98f5c105089109951706956a1392c74ff2d36a5861",
+      "after": "fed27cc074ca24cc2adea5043bb80203d5525e8add3e4e13421fcda59b62d4cd"
+    },
+    "Assets/BattleCity/Scripts/Tanks/TankMotor.cs": {
+      "before": "e0eb9b8636ab145d96eba8d2d80814325fdcdd0f3b67fbc5e52ff81ee1e864f8",
+      "after": "6f025794883cccbe1aa1846ed99f6e4faebb9d1c27c0d07612111887c886d5c7"
+    }
+  },
+  "new": {
+    "Assets/BattleCity/Tests/EditMode/ClassicRulesCombinationTests.cs": "a4ff4f85555f4399a38f0f15368c6447c8ce7d62d5970b03bdb4c79f17a186c8",
+    "Assets/BattleCity/Tests/EditMode/ClassicRulesCombinationTests.cs.meta": "3d3d0a5512fa95f602f41a9ef4134f5edf94b4f6cb3084f918024a56a9f6343f",
+    "Assets/BattleCity/Tests/EditMode/SpecialTerrainTests.cs": "2102c2a74fc36a6409fbf80a78d2a6247de9dd00472b44161e481e3cfce54f82",
+    "Assets/BattleCity/Tests/EditMode/SpecialTerrainTests.cs.meta": "403893977a607d9b16cb1dac2791c4dcfcc638ef8450cb214160b1e30bc368bf",
+    "Assets/BattleCity/Tests/PlayMode/ClassicRulesPlayModeTests.cs": "73a0060ff52c7083cef26b78452c1af0201b6675aa08376203f15d21d20f02ce",
+    "Assets/BattleCity/Tests/PlayMode/ClassicRulesPlayModeTests.cs.meta": "931a13112bf4dd44731f63c3af5a098952dcf0d2b996205fe551b196e5fb73fc",
+    "Assets/BattleCity/Scripts/Core/ScoreState.cs": "4df4620cfedf561b83db0dedd6ecc6a1ae011deb9e30531273b676b5e1d782e1",
+    "Assets/BattleCity/Scripts/Core/ScoreState.cs.meta": "a1c49bdd8a81f10333ba97ce4853d7aca4e2b7ca441896b60c7e06a975357253"
+  },
+  "missing": [],
+  "allOriginalSpritesAndProjectSettingsAndScenesUnchanged": true,
+  "limitations": "Baseline already contains user Stage01 PNG/meta move; no reverting or staging it"
+}

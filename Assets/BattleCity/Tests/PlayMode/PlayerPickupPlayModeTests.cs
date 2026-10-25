@@ -74,7 +74,8 @@ namespace BattleCity.Tests
             Assert.That(Shield.enabled, Is.True); Assert.That(Shield.sprite.name, Does.StartWith("effect.shield."));
             Assert.That(Shield.transform.position, Is.EqualTo(controller.playerRenderer.transform.position));
             Assert.That(s.PlayerLife.RemainingLives, Is.EqualTo(4)); Assert.That(controller.hud.DisplayedLives, Is.EqualTo(4));
-            Assert.That(s.Score, Is.Zero); Assert.That(s.Clock.Tick, Is.GreaterThan(initialTick));
+            Assert.That(s.Score, Is.EqualTo(1500)); Assert.That(s.Scoring.PickupPoints, Is.EqualTo(1500));
+            Assert.That(s.Clock.Tick, Is.GreaterThan(initialTick));
             Assert.That(Time.frameCount, Is.GreaterThan(initialFrame));
             int remaining = s.Pickups.HelmetRemainingTicks; long tick = s.Clock.Tick;
             yield return null; yield return null; yield return null;

@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var scenes = new System.Collections.Generic.List<object>(); for (int i=0;i<UnityEngine.SceneManagement.SceneManager.sceneCount;i++) { var s=UnityEngine.SceneManagement.SceneManager.GetSceneAt(i); scenes.Add(new {path=s.path, loaded=s.isLoaded, dirty=s.isDirty}); } return new { playing=UnityEditor.EditorApplication.isPlaying, paused=UnityEditor.EditorApplication.isPaused, background=UnityEngine.Application.runInBackground, scenes=scenes, scoreType=typeof(BattleCity.ScoreState).FullName, coastTicks=BattleCity.TankMotor.IceCoastTicks };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playing": false,
+        "paused": false,
+        "background": false,
+        "scenes": [
+          {
+            "path": "Assets/BattleCity/Scenes/Stage01.unity",
+            "loaded": true,
+            "dirty": false
+          }
+        ],
+        "scoreType": "BattleCity.ScoreState",
+        "coastTicks": 24
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

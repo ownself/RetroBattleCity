@@ -1,0 +1,135 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "BC305",
+      "filter_type": "category",
+      "timeout": "90"
+    },
+    "result": {
+      "Summary": {
+        "Total": 14,
+        "Passed": 14,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.AlreadyTerminalBulletKillPreventsAnyPickupReward",
+          "Status": "Passed",
+          "Duration": 0.0090427,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.AuthoredClockDefaultIsExplicitAndUncalibrated",
+          "Status": "Passed",
+          "Duration": 0.0005989,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Clock_Default600FutureCompleteTicks_SnapshotsRules_FreezesAIAndExternalWeaponMotorTracks",
+          "Status": "Passed",
+          "Duration": 0.0230141,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Clock_NewWaveBirthStillOccurs_StaysFrozenAndBlocksPlayer_ButCanBeKilled",
+          "Status": "Passed",
+          "Duration": 0.0052411,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Clock_PlayerAndEnemyBulletsAndEffectsContinue_PlayerDeathDoesNotCancelGlobalEffect",
+          "Status": "Passed",
+          "Duration": 0.0073268,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Clock_RepeatRefreshesNotAdds_NoReceiptReplay_PauseReadyAndFocusConsumeNothing",
+          "Status": "Passed",
+          "Duration": 0.0077674,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_ArmorBatchAndSameTickBulletDeath_ScoreAndExplosionExactlyOnce_NoProjectileTerrainOrBaseDamage",
+          "Status": "Passed",
+          "Duration": 0.0061767,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_DoesNotReplayOnLaterEnemy_ReservationAndPendingAndCadenceConserved",
+          "Status": "Passed",
+          "Duration": 0.0022546,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_KillsNewlyCommittedCarrierWithoutDropping_OnceWaveStepOnly",
+          "Status": "Passed",
+          "Duration": 0.0033018,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_LastEnemyWinsSameTick_OneTerminalEventAndCleanup",
+          "Status": "Passed",
+          "Duration": 0.0054183,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_SameTickBaseFailurePreventsCollectionAndKills_FailureWins",
+          "Status": "Passed",
+          "Duration": 0.0029823,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.InvalidClockDurationRejected(0)",
+          "Status": "Passed",
+          "Duration": 0.0029112,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.InvalidClockDurationRejected(-1)",
+          "Status": "Passed",
+          "Duration": 0.0028548,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.SimultaneousLastEnemyBulletDeathAndPlayerExhaustion_IsLossNotGrenadeReward",
+          "Status": "Passed",
+          "Duration": 0.0043378,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 0.59,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "category: BC305",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

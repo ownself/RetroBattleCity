@@ -80,7 +80,8 @@ namespace BattleCity.Tests
             Assert.That(brain.DecisionTicks, Is.EqualTo(decisions)); Assert.That(tank.Motor.TrackFrame, Is.EqualTo(track));
             Assert.That(tank.Weapon.CooldownRemainingTicks, Is.EqualTo(cooldown));
             yield return CollectByRealKeyboardUpdate(s, PickupKind.Grenade);
-            Assert.That(tank.IsAlive, Is.False); Assert.That(s.DefeatedEnemyCount, Is.EqualTo(1)); Assert.That(s.Score, Is.EqualTo(armor.score));
+            Assert.That(tank.IsAlive, Is.False); Assert.That(s.DefeatedEnemyCount, Is.EqualTo(1)); Assert.That(s.Score, Is.EqualTo(armor.score + 1000));
+            Assert.That(s.Scoring.EnemyPoints, Is.EqualTo(armor.score)); Assert.That(s.Scoring.PickupPoints, Is.EqualTo(1000));
             Assert.That(s.EnemyWave.AliveCount, Is.Zero);
             Assert.That(s.Effects.Active.Count(e => e.Kind == CombatEffectKind.Explosion), Is.EqualTo(1));
             Assert.That(s.Pickups.CollectedCount, Is.EqualTo(2)); Assert.That(s.PlayerTank.IsAlive && s.Base.IsAlive, Is.True);

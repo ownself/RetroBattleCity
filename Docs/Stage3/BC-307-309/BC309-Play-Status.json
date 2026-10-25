@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 3.71,
+      "summary": {
+        "total": 3,
+        "passed": 2,
+        "failed": 1,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesPlayModeTests.Stage01_AllSpecialTileQuadrantsAndLayerRules_RevisionClearAndRestart_NoSavedLayoutChange",
+          "Status": "Passed",
+          "Duration": 0.1144039,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesPlayModeTests.Stage01_RealKeyboardUpdateIceCoasts_PauseFreezes_ReleaseEndsWithoutStaleInput",
+          "Status": "Passed",
+          "Duration": 0.5361166,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesPlayModeTests.Stage01_TerminalUpdateFreezesResultOnce_RestartCleansScoreEffectsAndIce_OldResultSurvives",
+          "Status": "Failed",
+          "Duration": 3.0482151,
+          "Message": "  Expected: Lost\r\n  But was:  Playing\r\n",
+          "StackTrace": "at BattleCity.Tests.ClassicRulesPlayModeTests+<Stage01_TerminalUpdateFreezesResultOnce_RestartCleansScoreEffectsAndIce_OldResultSurvives>d__11.MoveNext () [0x001ca] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\ClassicRulesPlayModeTests.cs:117\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@ee3fe9477490\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

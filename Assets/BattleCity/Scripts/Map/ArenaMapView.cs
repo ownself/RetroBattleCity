@@ -15,6 +15,50 @@ namespace BattleCity
         private readonly int[] renderedCells = new int[PixelGrid.TerrainCellsPerAxis * PixelGrid.TerrainCellsPerAxis];
         private MapState renderedMap;
         private int renderedRevision;
+        private Tilemap surfaces, foliage;
+        private readonly TileBase[,] specialTiles = new TileBase[3, 4];
+        private readonly System.Collections.Generic.List<UnityEngine.Object> ownedSpecial = new System.Collections.Generic.List<UnityEngine.Object>();
+        public Tilemap Surfaces => surfaces;
+        public Tilemap Foliage => foliage;
+
+        /// <summary>Derive 8px tiles from the existing semantic 16px sprites; no imported asset mutation.</summary>
+        public void ConfigureSpecialTerrain(SpriteCatalog catalog)
+        {
+            if (specialTiles[0, 0] != null) return;
+            ValidateBindings();
+            string[] ids = { "terrain.water.0", "terrain.grass16", "terrain.ice16" };
+            for (int kind = 0; kind < ids.Length; kind++)
+            {
+                var source = catalog.Get(ids[kind]);
+                if (source.packed || source.rect.size != new Vector2(16, 16))
+                    throw new InvalidOperationException("Special terrain needs unpacked 16px semantic sprites.");
+                for (int sy = 0; sy < 2; sy++) for (int x = 0; x < 2; x++)
+                {
+                    var sprite = Sprite.Create(source.texture, new Rect(source.rect.x + x * 8,
+                        source.rect.y + (1 - sy) * 8, 8, 8), Vector2.one * .5f, PixelGrid.PixelsPerUnit, 0, SpriteMeshType.FullRect);
+                    sprite.name = ids[kind] + ".quadrant." + x + "." + sy;
+                    sprite.hideFlags = HideFlags.HideAndDontSave;
+                    var tile = ScriptableObject.CreateInstance<Tile>();
+                    tile.sprite = sprite; tile.colliderType = Tile.ColliderType.None; tile.hideFlags = HideFlags.HideAndDontSave;
+                    specialTiles[kind, x + sy * 2] = tile;
+                    ownedSpecial.Add(tile); ownedSpecial.Add(sprite);
+                }
+            }
+            // Do not create a second collision system. Layers are display-only siblings of obstacles.
+            surfaces = CreateLayer("Water and ice - display only", "Obstacles", -1);
+            foliage = CreateLayer("Grass - hides tanks, not projectiles or effects", "Actors", 1);
+            renderedMap = null;
+        }
+
+        private Tilemap CreateLayer(string label, string sortingLayer, int order)
+        {
+            var layer = new GameObject(label, typeof(Tilemap), typeof(TilemapRenderer)).GetComponent<Tilemap>();
+            layer.transform.SetParent(obstacles.transform.parent, false);
+            var renderer = layer.GetComponent<TilemapRenderer>();
+            renderer.sharedMaterial = obstacles.GetComponent<TilemapRenderer>().sharedMaterial;
+            renderer.sortingLayerName = sortingLayer; renderer.sortingOrder = order;
+            return layer;
+        }
 
         public void Render(MapState map)
         {
@@ -22,7 +66,12 @@ namespace BattleCity
             if (ReferenceEquals(map, renderedMap) && renderedRevision == map.Revision) return;
             ValidateBindings();
             bool full = !ReferenceEquals(map, renderedMap);
-            if (full) obstacles.ClearAllTiles();
+            if (full)
+            {
+                obstacles.ClearAllTiles();
+                if (surfaces != null) surfaces.ClearAllTiles();
+                if (foliage != null) foliage.ClearAllTiles();
+            }
             for (int y = 0; y < PixelGrid.TerrainCellsPerAxis; y++) for (int x = 0; x < PixelGrid.TerrainCellsPerAxis; x++)
             {
                 int index = y * PixelGrid.TerrainCellsPerAxis + x;
@@ -34,9 +83,19 @@ namespace BattleCity
                     case TerrainKind.Empty: break;
                     case TerrainKind.Brick: tile = BrickTile(quadrant, map.BrickMaskAt(x, y)); break;
                     case TerrainKind.Steel: tile = steelTiles[quadrant]; break;
-                    default: throw new InvalidOperationException("M1 arena supports Empty, Brick and Steel only.");
+                    case TerrainKind.Water:
+                    case TerrainKind.Grass:
+                    case TerrainKind.Ice:
+                        if (surfaces == null || foliage == null) throw new InvalidOperationException("Configure special terrain before rendering it.");
+                        break;
+                    default: throw new InvalidOperationException("Unknown terrain.");
                 }
-                obstacles.SetTile(new Vector3Int(x, y, 0), tile);
+                var cell = new Vector3Int(x, y, 0);
+                var kind = map.TerrainAt(x, y);
+                obstacles.SetTile(cell, tile);
+                if (surfaces != null) surfaces.SetTile(cell, kind == TerrainKind.Water ? specialTiles[0, quadrant] :
+                    kind == TerrainKind.Ice ? specialTiles[2, quadrant] : null);
+                if (foliage != null) foliage.SetTile(cell, kind == TerrainKind.Grass ? specialTiles[1, quadrant] : null);
                 renderedCells[index] = map.CellRevisionAt(x, y);
             }
             renderedMap = map; renderedRevision = map.Revision;
@@ -82,6 +141,11 @@ namespace BattleCity
 
         private void OnDestroy()
         {
+            // Layers are siblings; destroying just this component must not strand hidden tiles.
+            if (surfaces != null) DestroyOwned(surfaces.gameObject);
+            if (foliage != null) DestroyOwned(foliage.gameObject);
+            foreach (var owned in ownedSpecial) if (owned != null) DestroyOwned(owned);
+            ownedSpecial.Clear();
             for (int quadrant = 0; quadrant < 4; quadrant++) for (int mask = 1; mask < 15; mask++)
             {
                 var tile = partialTiles[quadrant, mask];
@@ -91,6 +155,11 @@ namespace BattleCity
                 else { DestroyImmediate(tile); DestroyImmediate(sprite); }
                 partialTiles[quadrant, mask] = null;
             }
+        }
+
+        private static void DestroyOwned(UnityEngine.Object owned)
+        {
+            if (Application.isPlaying) Destroy(owned); else DestroyImmediate(owned);
         }
 
         public void ValidateBindings()

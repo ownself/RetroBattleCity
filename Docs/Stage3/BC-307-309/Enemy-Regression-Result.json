@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.32,
+      "summary": {
+        "total": 2,
+        "passed": 1,
+        "failed": 1,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesPlayModeTests.Armor_HitPointsSelectFourPalettes_TracksDirectionsPauseDeathAndRebindStayReadOnly",
+          "Status": "Failed",
+          "Duration": 0.0175409,
+          "Message": "  Expected: same as <tank.white.enemy.armor.up.0 (UnityEngine.Sprite)>\r\n  But was:  <tank.white.enemy.armor.up.0 (UnityEngine.Sprite)>\r\n",
+          "StackTrace": "at BattleCity.Tests.EnemyTypesPlayModeTests+<Armor_HitPointsSelectFourPalettes_TracksDirectionsPauseDeathAndRebindStayReadOnly>d__8.MoveNext () [0x001a9] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\EnemyTypesPlayModeTests.cs:78\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@ee3fe9477490\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyTypesPlayModeTests.Stage01_FourNaturalTypesRender_RealUpdateAdvances_DeathScoresOnce_RestartResetsScoreAndRoster",
+          "Status": "Passed",
+          "Duration": 0.2859736,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

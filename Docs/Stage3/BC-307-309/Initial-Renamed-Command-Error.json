@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command console_status",
+  "data": null,
+  "errors": [
+    {
+      "code": "REMOTE_COMMAND_NOT_FOUND",
+      "message": "Pipeline server returned 400 Bad Request: Command Not Found. No command named 'console_status' is available. It was renamed: run 'unity command console status'."
+    }
+  ],
+  "warnings": []
+}

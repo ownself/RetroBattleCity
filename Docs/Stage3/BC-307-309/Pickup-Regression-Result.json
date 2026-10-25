@@ -1,0 +1,91 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 1.2,
+      "summary": {
+        "total": 9,
+        "passed": 8,
+        "failed": 1,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupPlayModeTests.Stage01_RealKeyboardUpdateClockFreezesArmorAIThenGrenadeKillsOnce_PauseAndProjection",
+          "Status": "Passed",
+          "Duration": 0.2688796,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupPlayModeTests.Stage01_RestartRetiresClockAndReceipts_StartupSnapshotAndFreshWave",
+          "Status": "Passed",
+          "Duration": 0.0657969,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupPlayModeTests.CombatArenaOptOut_StandaloneViewProjectsAllSixKindsReadOnlyAndClearsOnDisable",
+          "Status": "Passed",
+          "Duration": 0.0436572,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupPlayModeTests.Stage01_DisableRebindAndRepeatedRestart_ClearOldSlotUseStartupRulesAndOneRenderer",
+          "Status": "Passed",
+          "Duration": 0.0565661,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupPlayModeTests.Stage01_NaturalCarrierFlashes_FirstNonlethalHitDrops_RealInputCollectsExactlyOnce",
+          "Status": "Failed",
+          "Duration": 0.0892008,
+          "Message": "  Expected: 500\r\n  But was:  1500\r\n",
+          "StackTrace": "at BattleCity.Tests.PickupPlayModeTests+<Stage01_NaturalCarrierFlashes_FirstNonlethalHitDrops_RealInputCollectsExactlyOnce>d__10.MoveNext () [0x00659] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\PickupPlayModeTests.cs:87\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@ee3fe9477490\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupPlayModeTests.Stage01_RealKeyboardUpdateCollectsAllThree_ProjectsUpgradeShieldAndLifeHudOnce",
+          "Status": "Passed",
+          "Duration": 0.3498575,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupPlayModeTests.Stage01_RepeatedRestartClearsEffectsAndProgress_UsesStartupSnapshotAndSingleShield",
+          "Status": "Passed",
+          "Duration": 0.0750342,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationPlayModeTests.Stage01_RealKeyboardUpdateShovel_AdvancesPausesAndRestoresPartialBrickTilemapAtExpiry",
+          "Status": "Passed",
+          "Duration": 0.1555896,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationPlayModeTests.Stage01_RestartRetiresActiveAndPendingRestoration_OldMapRestoredFreshSessionAndTilemapClean",
+          "Status": "Passed",
+          "Duration": 0.0627198,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

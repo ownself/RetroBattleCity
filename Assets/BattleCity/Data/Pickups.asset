@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Pickups
   m_EditorClassIdentifier: BattleCity.Runtime::BattleCity.PickupDefinition
   seed: 303
+  collectionScore: 500
   helmetDurationTicks: 600
   clockDurationTicks: 600
   shovelDurationTicks: 1200

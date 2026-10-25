@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "Importers_PointUncompressed",
+      "timeout": "60"
+    },
+    "result": {
+      "Summary": {
+        "Total": 1,
+        "Passed": 1,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.Phase0Tests.Importers_PointUncompressedNoMipAndUniformPPU",
+          "Status": "Passed",
+          "Duration": 0.0219302,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 1.2,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: Importers_PointUncompressed",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

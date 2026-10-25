@@ -66,7 +66,7 @@ namespace BattleCity.Tests
         [Test]
         public void Importers_PointUncompressedNoMipAndUniformPPU()
         {
-            foreach (var path in new[] { Phase0Baseline.AtlasPath, "Assets/Sprites/NES - Battle City (JPN) - Miscellaneous - General Sprites.png", "Assets/Sprites/NES - Battle City (JPN) - Backgrounds - Stage 01.png" })
+            foreach (var path in new[] { Phase0Baseline.AtlasPath, "Assets/Sprites/NES - Battle City (JPN) - Miscellaneous - General Sprites.png", Stage01Authoring.ReferencePath })
             {
                 var importer = (TextureImporter)AssetImporter.GetAtPath(path);
                 Assert.That(importer.filterMode, Is.EqualTo(FilterMode.Point)); Assert.That(importer.mipmapEnabled, Is.False);

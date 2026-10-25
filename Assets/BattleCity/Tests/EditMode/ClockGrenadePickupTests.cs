@@ -26,6 +26,7 @@ namespace BattleCity.Tests
             wave = ScriptableObject.CreateInstance<EnemyWaveDefinition>(); wave.tankDefinitions = new[] { enemy, armor };
             wave.preparationTicks = 900; wave.spawnIntervalTicks = 900;
             rules = ScriptableObject.CreateInstance<PickupDefinition>(); rules.carrierSequenceIndices = new int[0]; rules.clockDurationTicks = 3;
+            rules.collectionScore = 0; // Isolate BC305 death/freeze rules; BC308 tests default collection rewards.
         }
         [TearDown] public void TearDown()
         {

@@ -11,7 +11,10 @@ namespace BattleCity
         public const int AlignmentPixels = 8;
         public const float MaxTurnCorrectionPixels = 2;
         public const int TrackFrameTicks = 8;
+        public const int IceCoastTicks = 24; // Project default, not original-game calibration.
         private int movingTicks;
+        private CardinalDirection coastDirection = CardinalDirection.None;
+        public int IceRemainingTicks { get; private set; }
         public Vector2 Position { get; private set; }
         public CardinalDirection Facing { get; private set; } = CardinalDirection.Up;
         public bool IsMoving { get; private set; }
@@ -28,14 +31,34 @@ namespace BattleCity
             IReadOnlyList<Rect> blockers = null)
         {
             var before = Position;
-            Position = CalculateStep(requested, speedPixelsPerSecond, map, blockers, out var facing);
+            var effective = EffectiveDirection(requested, map);
+            Position = CalculateStep(effective, speedPixelsPerSecond, map, blockers, out var facing);
             Facing = facing;
             UpdateMovement(before);
+            float distance = speedPixelsPerSecond * PixelGrid.LogicStep;
+            bool blocked = (Position - before).sqrMagnitude < distance * distance - MapState.Epsilon;
+            if (!IsMoving || blocked || !map.IsIceAt(Position)) ClearInertia();
+            else if (requested != CardinalDirection.None && facing == requested)
+            {
+                coastDirection = facing;
+                IceRemainingTicks = IceCoastTicks;
+            }
+            else if (requested == CardinalDirection.None && IceRemainingTicks > 0)
+            {
+                IceRemainingTicks--;
+                if (IceRemainingTicks == 0) coastDirection = CardinalDirection.None;
+            }
         }
 
         // Decision query uses exactly the movement/alignment rules, without advancing pose or animation.
         internal Vector2 PreviewStep(CardinalDirection requested, float speedPixelsPerSecond, MapState map,
-            IReadOnlyList<Rect> blockers) => CalculateStep(requested, speedPixelsPerSecond, map, blockers, out _);
+            IReadOnlyList<Rect> blockers) => CalculateStep(EffectiveDirection(requested, map), speedPixelsPerSecond, map, blockers, out _);
+
+        private CardinalDirection EffectiveDirection(CardinalDirection requested, MapState map)
+            => requested != CardinalDirection.None ? requested :
+                IceRemainingTicks > 0 && map.IsIceAt(Position) ? coastDirection : CardinalDirection.None;
+
+        private void ClearInertia() { IceRemainingTicks = 0; coastDirection = CardinalDirection.None; }
 
         private Vector2 CalculateStep(CardinalDirection requested, float speedPixelsPerSecond, MapState map,
             IReadOnlyList<Rect> blockers, out CardinalDirection facing)
@@ -67,7 +90,7 @@ namespace BattleCity
             return map.MoveAxis(position, direction * (speedPixelsPerSecond * PixelGrid.LogicStep), HalfSizePixels, blockers);
         }
 
-        internal void Stop() => IsMoving = false;
+        internal void Stop() { IsMoving = false; ClearInertia(); }
 
         // Caller has checked the complete spawn footprint against current blockers.
         internal void Respawn(Vector2 position)
@@ -75,7 +98,7 @@ namespace BattleCity
             Position = position;
             Facing = CardinalDirection.Up;
             movingTicks = 0;
-            IsMoving = false;
+            Stop();
         }
 
         private void UpdateMovement(Vector2 before)

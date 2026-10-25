@@ -27,6 +27,7 @@ namespace BattleCity.Tests
             wave = ScriptableObject.CreateInstance<EnemyWaveDefinition>();
             wave.tankDefinitions = new[] { enemy }; wave.preparationTicks = 1; wave.spawnIntervalTicks = 900;
             rules = ScriptableObject.CreateInstance<PickupDefinition>(); rules.carrierSequenceIndices = new[] { 0 };
+            rules.collectionScore = 0; // Framework tests use a zero-reward policy; BC308 covers authored rewards.
         }
         [TearDown] public void TearDown()
         { foreach (var asset in new Object[] { rules, wave, enemy, player, level }) Object.DestroyImmediate(asset); }

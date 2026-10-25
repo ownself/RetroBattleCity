@@ -1,0 +1,156 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "BC309",
+      "filter_type": "category",
+      "timeout": "90"
+    },
+    "result": {
+      "Summary": {
+        "Total": 17,
+        "Passed": 17,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.AllFourAuthoredTypes_ClassifyByDefinitionNotHpColor",
+          "Status": "Passed",
+          "Duration": 0.03882,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.CappedTankPickup_StillScoresAndDoesNotAddLife",
+          "Status": "Passed",
+          "Duration": 0.0030256,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.CappedUpgradeRewardsAndIce_HighestWeaponBreaksSteelUsingExistingSweep",
+          "Status": "Passed",
+          "Duration": 0.0073399,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.ClassifiedKills_SnapshotIdsAndScores_ArmorOverkillAndGrenadeExactlyOnce",
+          "Status": "Passed",
+          "Duration": 0.0045768,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.ClockPauseAndIce_FreezesEnemyMomentumButPlayerCoasts_ResumesAfterExactExpiry",
+          "Status": "Passed",
+          "Duration": 0.0070233,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.DeathAndRespawnClearIceMomentum_ProtectedRespawnHasNoStaleMotion",
+          "Status": "Passed",
+          "Duration": 0.0031253,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.EveryPickup_Exactly500PerReceiptEvenWithoutOptionalCapability_NoReplay(Clock)",
+          "Status": "Passed",
+          "Duration": 0.0097942,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.EveryPickup_Exactly500PerReceiptEvenWithoutOptionalCapability_NoReplay(Grenade)",
+          "Status": "Passed",
+          "Duration": 0.0023418,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.EveryPickup_Exactly500PerReceiptEvenWithoutOptionalCapability_NoReplay(Helmet)",
+          "Status": "Passed",
+          "Duration": 0.0049564,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.EveryPickup_Exactly500PerReceiptEvenWithoutOptionalCapability_NoReplay(Shovel)",
+          "Status": "Passed",
+          "Duration": 0.0043349,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.EveryPickup_Exactly500PerReceiptEvenWithoutOptionalCapability_NoReplay(Star)",
+          "Status": "Passed",
+          "Duration": 0.0033232,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.EveryPickup_Exactly500PerReceiptEvenWithoutOptionalCapability_NoReplay(Tank)",
+          "Status": "Passed",
+          "Duration": 0.0029528,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.GrenadeLastEnemy_FreezesCompleteResultBeforeOneNotification_NewSessionDoesNotInherit",
+          "Status": "Passed",
+          "Duration": 0.0117789,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.PickupScore_SnapshotsConfiguration_ZeroAllowed_NegativeRejected",
+          "Status": "Passed",
+          "Duration": 0.0050257,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.ShieldAndDeath_ProtectedBulletConsumes_ExpiredShieldCannotRescueDeathOrEarnPickup",
+          "Status": "Passed",
+          "Duration": 0.0028106,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.ShovelExpiryOccupiedPartialBrick_OnlyRestoresAfterRelease_RewardNotReplayed",
+          "Status": "Passed",
+          "Duration": 0.0038131,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesCombinationTests.SimultaneousFinalKillAndBaseLoss_RecordsKillButNeverCollectsTerminalReward",
+          "Status": "Passed",
+          "Duration": 0.0024472,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 2.85,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "category: BC309",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

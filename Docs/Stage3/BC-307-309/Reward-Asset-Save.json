@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var p = UnityEditor.AssetDatabase.LoadAssetAtPath<BattleCity.PickupDefinition>(\"Assets/BattleCity/Data/Pickups.asset\"); p.Validate(); UnityEditor.EditorUtility.SetDirty(p); UnityEditor.AssetDatabase.SaveAssetIfDirty(p); return p.collectionScore;"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": 500
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

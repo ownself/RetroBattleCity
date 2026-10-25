@@ -80,6 +80,7 @@ namespace BattleCity
                 PickupView.transform.SetParent(transform, false);
                 PickupView.Initialize(Session.Pickups, sprites, playerRenderer.sharedMaterial);
             }
+            mapView.ConfigureSpecialTerrain(sprites);
             mapView.Render(Session.Map);
             Session.SetFocus(focused);
             RenderBase();
