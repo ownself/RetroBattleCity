@@ -191,6 +191,8 @@ namespace BattleCity.Tests
             Assert.That(c.Session.Result, Is.Null);
             Assert.That(c.Session.Base.IsAlive, Is.True);
             Assert.That(c.Session.Clock.Tick, Is.Zero);
+            Assert.That(flow.State.CanSelectStage, Is.True, "Game Over -> PLAY AGAIN reopens stage selection.");
+            Assert.That(flow.lines[1].Text, Does.Contain("SELECT STAGE"));
             yield return Press(Key.Enter);
             yield return Until(() => c.Session.Clock.Tick > 0);
             // Repeat the production failure path, then choose Title with a held navigation key.

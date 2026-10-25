@@ -75,6 +75,7 @@ namespace BattleCity.Tests
             var destination = s.Player.Position + Vector2.left * 16;
             Assert.That(s.Pickups.TryDrop(s.Map, s.Player.Position, true, ExcludeAllBut(destination), s.Base.Bounds), Is.True);
             Assert.That(s.Pickups.ReplacedCount, Is.EqualTo(1));
+            var collectedKind = s.Pickups.Active.Value.Kind;
             controller.PickupView.Render(); int frame = Time.frameCount; long tick = s.Clock.Tick;
             s.Bullets.Clear(); s.SetPaused(false); s.AdvanceFrame(0, PlayerButtons.None);
             InputSystem.QueueStateEvent(keyboard, new KeyboardState(Key.A)); InputSystem.Update();
@@ -84,9 +85,10 @@ namespace BattleCity.Tests
             Assert.That(s.Pickups.CollectedCount, Is.EqualTo(1)); Assert.That(s.Pickups.Active, Is.Null);
             Assert.That(s.Clock.Tick, Is.GreaterThan(tick)); Assert.That(Time.frameCount, Is.GreaterThan(frame));
             Assert.That(Display(controller.PickupView).enabled, Is.False); Assert.That(Display(controller.PickupView).sprite, Is.Null);
-            // The deterministic item can be Grenade: preserve actual kill points as well as its reward.
+            // Runtime seeds vary; verify the actual item and its upgrade rather than assuming no Star.
+            Assert.That(s.Pickups.LastCollected.Value.Item.Kind, Is.EqualTo(collectedKind));
             Assert.That(s.Scoring.PickupPoints, Is.EqualTo(500)); Assert.That(s.Score, Is.EqualTo(s.Scoring.EnemyPoints + 500));
-            Assert.That(s.PlayerUpgrades.Level, Is.Zero);
+            Assert.That(s.PlayerUpgrades.Level, Is.EqualTo(collectedKind == PickupKind.Star ? 1 : 0));
             for (int i = 0; i < 3; i++) { controller.PickupView.Render(); yield return null; }
             Assert.That(s.Pickups.CollectedCount, Is.EqualTo(1));
             Debug.Log($"BC303 Stage01 natural carrier hp4->3, drop/replace, keyboard collection={s.Pickups.CollectedCount} frame={frame}->{Time.frameCount} tick={tick}->{s.Clock.Tick}");
@@ -98,10 +100,12 @@ namespace BattleCity.Tests
             s.StartBattle(); s.AdvanceFrame(0, PlayerButtons.None); s.SetPaused(true);
             s.Pickups.TryDrop(s.Map, s.Player.Position, true, null, s.Base.Bounds); controller.PickupView.Render();
             long itemId = s.Pickups.Active.Value.Id;
+            uint unchangedSeed = s.Pickups.InitialSeed;
             controller.enabled = false;
             Assert.That(Display(controller.PickupView).enabled, Is.False); Assert.That(s.Pickups.Active.Value.Id, Is.EqualTo(itemId));
             controller.enabled = true;
             Assert.That(Display(controller.PickupView).enabled, Is.True);
+            Assert.That(controller.Session.Pickups.InitialSeed, Is.EqualTo(unchangedSeed), "Rebinding a view must not reroll gameplay.");
             controller.pickupDefinition = null;
             for (int i = 0; i < 3; i++)
             {
@@ -111,10 +115,20 @@ namespace BattleCity.Tests
                 Assert.That(fresh.Phase, Is.EqualTo(SessionPhase.Ready)); Assert.That(fresh.Pickups.SpawnedCount, Is.Zero);
                 Assert.That(fresh.Pickups.CollectedCount, Is.Zero); Assert.That(fresh.Pickups.Active, Is.Null);
                 Assert.That(fresh.Pickups.RandomState, Is.EqualTo(fresh.Pickups.InitialSeed));
+                Assert.That(fresh.Pickups.InitialSeed, Is.Not.Zero);
+                Assert.That(fresh.Pickups.InitialSeed, Is.Not.EqualTo(s.Pickups.InitialSeed), "Restart needs a fresh drop sequence, not the fixed asset seed.");
                 Assert.That(fresh.Pickups.IsCarrierIndex(3), Is.True); Assert.That(fresh.Pickups.IsCarrierIndex(0), Is.False);
                 Assert.That(Display(controller.PickupView).enabled, Is.False); Assert.That(Display(controller.PickupView).sprite, Is.Null);
                 Assert.That(controller.GetComponentsInChildren<PickupView>().Length, Is.EqualTo(1));
                 Assert.That(controller.PickupView.GetComponentsInChildren<SpriteRenderer>().Length, Is.EqualTo(1));
+                var rules = UnityEditor.AssetDatabase.LoadAssetAtPath<PickupDefinition>("Assets/BattleCity/Data/Pickups.asset");
+                uint authoredSeed = rules.seed;
+                var replay = new PickupState(rules, controller.level, fresh.Pickups.InitialSeed);
+                Assert.That(fresh.Pickups.TryDrop(fresh.Map, fresh.Player.Position, true, null, fresh.Base.Bounds), Is.True);
+                Assert.That(replay.TryDrop(fresh.Map, fresh.Player.Position, true, null, fresh.Base.Bounds), Is.True);
+                Assert.That(fresh.Pickups.Active.Value.Kind, Is.EqualTo(replay.Active.Value.Kind));
+                Assert.That(fresh.Pickups.Active.Value.Position, Is.EqualTo(replay.Active.Value.Position));
+                Assert.That(rules.seed, Is.EqualTo(authoredSeed));
                 s = fresh;
             }
         }

@@ -46,7 +46,9 @@ namespace BattleCity
             }
             // Do not create a second collision system. Layers are display-only siblings of obstacles.
             surfaces = CreateLayer("Water and ice - display only", "Obstacles", -1);
-            foliage = CreateLayer("Grass - hides tanks, not projectiles or effects", "Actors", 1);
+            foliage = CreateLayer("Grass - translucent tank cover", "Actors", 1);
+            // Keep the foliage above tanks, but leave their silhouettes readable while crossing it.
+            foliage.color = new Color(1, 1, 1, .6f);
             renderedMap = null;
         }
 

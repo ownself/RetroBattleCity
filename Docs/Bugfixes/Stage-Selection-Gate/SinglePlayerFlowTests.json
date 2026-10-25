@@ -1,0 +1,77 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "SinglePlayerFlowTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 6,
+        "Passed": 6,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.SinglePlayerFlowTests.AlternateConfirmKeysCannotBypassHeldConfirmation",
+          "Status": "Passed",
+          "Duration": 0.0003662,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SinglePlayerFlowTests.HeldConfirmCannotSkipIntroOrLeakIntoBattle",
+          "Status": "Passed",
+          "Duration": 0.000547,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SinglePlayerFlowTests.RestartBattleReturnsToIntroOnlyOnce",
+          "Status": "Passed",
+          "Duration": 0.0004285,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SinglePlayerFlowTests.TerminalResultRequiresFreshConfirmAndCanReturnToTitle(Won,Complete)",
+          "Status": "Passed",
+          "Duration": 0.0029808,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SinglePlayerFlowTests.TerminalResultRequiresFreshConfirmAndCanReturnToTitle(Lost,GameOver)",
+          "Status": "Passed",
+          "Duration": 0.0002571,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SinglePlayerFlowTests.UnfocusedAndSuppressedHeldConfirmCannotAdvance",
+          "Status": "Passed",
+          "Duration": 0.0006248,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 2.79,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: SinglePlayerFlowTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

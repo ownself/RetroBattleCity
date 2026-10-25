@@ -41,12 +41,14 @@ namespace BattleCity
         public int ReplacedCount { get; private set; }
         public int CollectedCount { get; private set; }
 
-        public PickupState(PickupDefinition definition, LevelDefinition level)
+        public PickupState(PickupDefinition definition, LevelDefinition level, uint? randomSeed = null)
         {
             if (definition == null) throw new ArgumentNullException(nameof(definition));
             definition.ValidateFor(level);
+            uint seed = randomSeed ?? definition.seed;
+            if (seed == 0) throw new ArgumentOutOfRangeException(nameof(randomSeed), "Pickup seed must be nonzero.");
             carriers = new HashSet<int>(definition.carrierSequenceIndices);
-            InitialSeed = RandomState = definition.seed;
+            InitialSeed = RandomState = seed;
             HelmetDurationTicks = definition.helmetDurationTicks;
             ClockDurationTicks = definition.clockDurationTicks;
             MaximumLives = definition.maximumLives;

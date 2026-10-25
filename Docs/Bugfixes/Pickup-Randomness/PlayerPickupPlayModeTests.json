@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.45,
+      "summary": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupPlayModeTests.Stage01_RealKeyboardUpdateCollectsAllThree_ProjectsUpgradeShieldAndLifeHudOnce",
+          "Status": "Passed",
+          "Duration": 0.3517264,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupPlayModeTests.Stage01_RepeatedRestartClearsEffectsAndProgress_UsesStartupSnapshotAndSingleShield",
+          "Status": "Passed",
+          "Duration": 0.0832628,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,5 +1,7 @@
 # 关卡提示界面选关
 
+> 当前规则更新：选关仅限首次开始或明确重新开始；正常胜利后的下一关提示不再允许选关，也不显示选关说明。新门禁、API保护和24项定向回归见 [Stage-Selection-Gate/Verification.md](../../Bugfixes/Stage-Selection-Gate/Verification.md)。以下17项结果和StageIntro门禁描述为首次实现的历史记录，不代表所有StageIntro现在均可选关。
+
 用户授权在开始游戏前STAGE界面加入上下选关，便于测试；沿BC400～402实现增补，不开展音频任务，无提交推送。
 
 ## 行为

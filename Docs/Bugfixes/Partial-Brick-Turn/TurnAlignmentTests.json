@@ -1,0 +1,553 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "TurnAlignmentTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 74,
+        "Passed": 74,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,0)",
+          "Status": "Passed",
+          "Duration": 0.0290584,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,1)",
+          "Status": "Passed",
+          "Duration": 0.0005511,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,2)",
+          "Status": "Passed",
+          "Duration": 0.000481,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,3)",
+          "Status": "Passed",
+          "Duration": 0.000615,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,4)",
+          "Status": "Passed",
+          "Duration": 0.0004841,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,5)",
+          "Status": "Passed",
+          "Duration": 0.0004718,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,6)",
+          "Status": "Passed",
+          "Duration": 0.0004632,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Left,7)",
+          "Status": "Passed",
+          "Duration": 0.0004677,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,0)",
+          "Status": "Passed",
+          "Duration": 0.0004603,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,1)",
+          "Status": "Passed",
+          "Duration": 0.0004653,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,2)",
+          "Status": "Passed",
+          "Duration": 0.0004627,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,3)",
+          "Status": "Passed",
+          "Duration": 0.0004662,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,4)",
+          "Status": "Passed",
+          "Duration": 0.0004677,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,5)",
+          "Status": "Passed",
+          "Duration": 0.0004678,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,6)",
+          "Status": "Passed",
+          "Duration": 0.000635,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Up,Right,7)",
+          "Status": "Passed",
+          "Duration": 0.0006355,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,0)",
+          "Status": "Passed",
+          "Duration": 0.0006446,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,1)",
+          "Status": "Passed",
+          "Duration": 0.000637,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,2)",
+          "Status": "Passed",
+          "Duration": 0.000629,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,3)",
+          "Status": "Passed",
+          "Duration": 0.0006404,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,4)",
+          "Status": "Passed",
+          "Duration": 0.000636,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,5)",
+          "Status": "Passed",
+          "Duration": 0.0006332,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,6)",
+          "Status": "Passed",
+          "Duration": 0.0006254,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Up,7)",
+          "Status": "Passed",
+          "Duration": 0.0006245,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,0)",
+          "Status": "Passed",
+          "Duration": 0.0006259,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,1)",
+          "Status": "Passed",
+          "Duration": 0.0006233,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,2)",
+          "Status": "Passed",
+          "Duration": 0.0006247,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,3)",
+          "Status": "Passed",
+          "Duration": 0.0006306,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,4)",
+          "Status": "Passed",
+          "Duration": 0.000632,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,5)",
+          "Status": "Passed",
+          "Duration": 0.0006251,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,6)",
+          "Status": "Passed",
+          "Duration": 0.000627,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Left,Down,7)",
+          "Status": "Passed",
+          "Duration": 0.0006262,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,0)",
+          "Status": "Passed",
+          "Duration": 0.0006227,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,1)",
+          "Status": "Passed",
+          "Duration": 0.0006223,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,2)",
+          "Status": "Passed",
+          "Duration": 0.0006351,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,3)",
+          "Status": "Passed",
+          "Duration": 0.0006409,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,4)",
+          "Status": "Passed",
+          "Duration": 0.0006482,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,5)",
+          "Status": "Passed",
+          "Duration": 0.0006366,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,6)",
+          "Status": "Passed",
+          "Duration": 0.0006243,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Left,7)",
+          "Status": "Passed",
+          "Duration": 0.0006277,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,0)",
+          "Status": "Passed",
+          "Duration": 0.0006225,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,1)",
+          "Status": "Passed",
+          "Duration": 0.0006237,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,2)",
+          "Status": "Passed",
+          "Duration": 0.000628,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,3)",
+          "Status": "Passed",
+          "Duration": 0.0006309,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,4)",
+          "Status": "Passed",
+          "Duration": 0.0006311,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,5)",
+          "Status": "Passed",
+          "Duration": 0.0006267,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,6)",
+          "Status": "Passed",
+          "Duration": 0.0006383,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Down,Right,7)",
+          "Status": "Passed",
+          "Duration": 0.0006246,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,0)",
+          "Status": "Passed",
+          "Duration": 0.0006258,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,1)",
+          "Status": "Passed",
+          "Duration": 0.0006243,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,2)",
+          "Status": "Passed",
+          "Duration": 0.0006221,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,3)",
+          "Status": "Passed",
+          "Duration": 0.0006309,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,4)",
+          "Status": "Passed",
+          "Duration": 0.0006315,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,5)",
+          "Status": "Passed",
+          "Duration": 0.0006475,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,6)",
+          "Status": "Passed",
+          "Duration": 0.0006213,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Up,7)",
+          "Status": "Passed",
+          "Duration": 0.0006221,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,0)",
+          "Status": "Passed",
+          "Duration": 0.0006264,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,1)",
+          "Status": "Passed",
+          "Duration": 0.0006267,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,2)",
+          "Status": "Passed",
+          "Duration": 0.0006301,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,3)",
+          "Status": "Passed",
+          "Duration": 0.0006322,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,4)",
+          "Status": "Passed",
+          "Duration": 0.0006346,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,5)",
+          "Status": "Passed",
+          "Duration": 0.0006274,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,6)",
+          "Status": "Passed",
+          "Duration": 0.000628,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.HeldSideTurn_ConvergesFromEveryGridOffset(Right,Down,7)",
+          "Status": "Passed",
+          "Duration": 0.0006255,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_BothAlignmentLinesBlocked_DoesNotCrossDynamicBlocker",
+          "Status": "Passed",
+          "Duration": 0.0017198,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Right,Up)",
+          "Status": "Passed",
+          "Duration": 0.0105938,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Right,Down)",
+          "Status": "Passed",
+          "Duration": 0.0007522,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Left,Up)",
+          "Status": "Passed",
+          "Duration": 0.0007396,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Left,Down)",
+          "Status": "Passed",
+          "Duration": 0.0006941,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Up,Left)",
+          "Status": "Passed",
+          "Duration": 0.0006966,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Up,Right)",
+          "Status": "Passed",
+          "Duration": 0.0006961,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Down,Left)",
+          "Status": "Passed",
+          "Duration": 0.0007283,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Down,Right)",
+          "Status": "Passed",
+          "Duration": 0.0007306,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.Session_ReleasedOldKeyDoesNotLeaveSideTurnPermanentlyStuck",
+          "Status": "Passed",
+          "Duration": 0.0096654,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 4.43,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: TurnAlignmentTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

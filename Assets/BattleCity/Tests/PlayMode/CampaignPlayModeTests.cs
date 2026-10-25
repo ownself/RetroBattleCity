@@ -95,10 +95,15 @@ namespace BattleCity.Tests
             second.stageNumber = 99; second.terrain[12 * 26 + 12] = TerrainKind.Brick;
             campaign.stages = new[] { first };
             Assert.That(c.AdvanceStage(), Is.False);
-            yield return Press(Key.Enter); yield return Press(Key.Enter);
+            yield return Press(Key.Enter);
+            Assert.That(c.singlePlayerFlow.State.CanSelectStage, Is.True);
+            Assert.That(c.singlePlayerFlow.lines[1].Text, Does.Contain("SELECT STAGE"));
+            yield return Press(Key.Enter);
             yield return Win();
             var old = c.Session; var result = old.Result;
             Assert.That(c.HasNextStage, Is.True);
+            Assert.That(c.singlePlayerFlow.State.CanSelectStage, Is.False);
+            Assert.That(c.SelectStage(1), Is.False, "Results cannot select another stage.");
             Assert.That(map.Foliage.HasTile(new Vector3Int(12, 12, 0)), Is.True);
             Assert.That(map.Surfaces.HasTile(new Vector3Int(12, 12, 0)), Is.False);
             yield return Press(Key.Enter, Key.Space, Key.D);
@@ -118,12 +123,31 @@ namespace BattleCity.Tests
             Assert.That(SceneManager.sceneCount, Is.EqualTo(scenes));
             yield return new WaitForSecondsRealtime(.1f);
             Assert.That(c.Session.Clock.Tick, Is.Zero, "held confirm must not skip stage intro");
+            Assert.That(c.singlePlayerFlow.State.CanSelectStage, Is.False);
+            Assert.That(c.singlePlayerFlow.lines[1].Text, Is.Empty, "Normal progression must not advertise stage selection.");
+            var nextSession = c.Session;
+            Assert.That(c.SelectStage(-1), Is.False, "Direct API cannot bypass the continuation lock.");
+            Assert.That(c.SelectStage(1), Is.False);
+            foreach (var key in new[] { Key.UpArrow, Key.DownArrow, Key.W, Key.S })
+            {
+                yield return Press(key);
+                Assert.That(c.CurrentStageNumber, Is.EqualTo(23));
+                Assert.That(c.Session, Is.SameAs(nextSession));
+                Assert.That(c.Session.Clock.Tick, Is.Zero);
+                Assert.That(c.singlePlayerFlow.heading.Text, Is.EqualTo("STAGE 23"));
+            }
             yield return Press(Key.Enter); yield return Until(() => c.Session.Clock.Tick > 0);
             Assert.That(c.hud.DisplayedStage, Is.EqualTo(23));
             Assert.That(c.Session.PlayerWeapon.ActiveBullets, Is.Zero);
             yield return Press(Key.R);
             Assert.That(c.CurrentStageNumber, Is.EqualTo(23));
             Assert.That(c.singlePlayerFlow.State.Screen, Is.EqualTo(SinglePlayerScreen.StageIntro));
+            Assert.That(c.singlePlayerFlow.State.CanSelectStage, Is.True, "Explicit R restart reopens selection.");
+            Assert.That(c.singlePlayerFlow.lines[1].Text, Does.Contain("SELECT STAGE"));
+            yield return Press(Key.UpArrow);
+            Assert.That(c.CurrentStageNumber, Is.EqualTo(11));
+            yield return Press(Key.DownArrow);
+            Assert.That(c.CurrentStageNumber, Is.EqualTo(23));
             yield return Press(Key.Enter); yield return Win();
             Assert.That(c.HasNextStage, Is.False);
             yield return Press(Key.Enter);
@@ -131,6 +155,8 @@ namespace BattleCity.Tests
             Assert.That(c.singlePlayerFlow.heading.Text, Is.EqualTo("CAMPAIGN COMPLETE"));
             yield return Press(Key.Enter);
             Assert.That(c.CurrentStageNumber, Is.EqualTo(11)); Assert.That(c.CampaignIndex, Is.Zero);
+            Assert.That(c.singlePlayerFlow.State.CanSelectStage, Is.True, "PLAY AGAIN starts a new selectable game.");
+            Assert.That(c.singlePlayerFlow.lines[1].Text, Does.Contain("SELECT STAGE"));
             Assert.That(c.Session.Clock.Tick, Is.Zero);
             Assert.That(map.Foliage.HasTile(new Vector3Int(12, 12, 0)), Is.True);
             Assert.That(map.Surfaces.HasTile(new Vector3Int(12, 12, 0)), Is.False);

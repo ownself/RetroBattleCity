@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.85,
+      "summary": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesPlayModeTests.Stage01_AllSpecialTileQuadrantsAndLayerRules_RevisionClearAndRestart_NoSavedLayoutChange",
+          "Status": "Passed",
+          "Duration": 0.1888907,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesPlayModeTests.Stage01_RealKeyboardUpdateIceCoasts_PauseFreezes_ReleaseEndsWithoutStaleInput",
+          "Status": "Passed",
+          "Duration": 0.5379261,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClassicRulesPlayModeTests.Stage01_TerminalUpdateFreezesResultOnce_RestartCleansScoreEffectsAndIce_OldResultSurvives",
+          "Status": "Passed",
+          "Duration": 0.0678499,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,203 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "Phase1Tests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 24,
+        "Passed": 24,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Animation_OnlyAdvancesForActualMovementAndDoesNotMoveCollider",
+          "Status": "Passed",
+          "Duration": 0.012248,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.ArenaAssetAndScene_DisplayExactlyMatchesMapAndHasNoPhysicsState",
+          "Status": "Passed",
+          "Duration": 0.0720697,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Channels_RespectFullSixteenPixelTankWidth(8,False)",
+          "Status": "Passed",
+          "Duration": 0.0010422,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Channels_RespectFullSixteenPixelTankWidth(16,True)",
+          "Status": "Passed",
+          "Duration": 0.0005517,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Channels_RespectFullSixteenPixelTankWidth(24,True)",
+          "Status": "Passed",
+          "Duration": 0.0038043,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Clock_LongFrameIsBoundedAndPauseDropsPartialTime",
+          "Status": "Passed",
+          "Duration": 0.0023464,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.FocusLoss_PausesAndRequiresManualResume",
+          "Status": "Passed",
+          "Duration": 0.0012091,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Input_NewestPhysicalKeyWinsAndReleaseFallsBack",
+          "Status": "Passed",
+          "Duration": 0.0003912,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Input_QuickFireTapSurvivesUntilExactlyOneTick",
+          "Status": "Passed",
+          "Duration": 0.0003065,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Input_SimultaneousKeysUseFrozenPriority",
+          "Status": "Passed",
+          "Duration": 0.0004258,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.KeyboardAdapter_MapsRealInputSystemKeyboardState",
+          "Status": "Passed",
+          "Duration": 0.0135441,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Map_CopiesAuthoringDataAndHonorsHalfOpenEdges",
+          "Status": "Passed",
+          "Duration": 0.0016198,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Pause_DiscardsQueuedAndHeldCombatInputUntilRelease",
+          "Status": "Passed",
+          "Duration": 0.0025981,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.RenderRate_DoesNotChangeDistanceOrTickCount(30)",
+          "Status": "Passed",
+          "Duration": 0.0023585,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.RenderRate_DoesNotChangeDistanceOrTickCount(60)",
+          "Status": "Passed",
+          "Duration": 0.0017891,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.RenderRate_DoesNotChangeDistanceOrTickCount(144)",
+          "Status": "Passed",
+          "Duration": 0.0110498,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_ClampsToEveryMapBoundary(1,0,200,24)",
+          "Status": "Passed",
+          "Duration": 0.0010683,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_ClampsToEveryMapBoundary(-1,0,8,24)",
+          "Status": "Passed",
+          "Duration": 0.000668,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_ClampsToEveryMapBoundary(0,1,24,200)",
+          "Status": "Passed",
+          "Duration": 0.0006682,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_ClampsToEveryMapBoundary(0,-1,24,8)",
+          "Status": "Passed",
+          "Duration": 0.0006633,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_DoesNotTunnelThroughThinWalls(Brick)",
+          "Status": "Passed",
+          "Duration": 0.0009269,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.SweptMovement_DoesNotTunnelThroughThinWalls(Steel)",
+          "Status": "Passed",
+          "Duration": 0.0006907,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Turn_AtWallCornerAndBoundaryKeepsLegalFullSizeBox",
+          "Status": "Passed",
+          "Duration": 0.0011279,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.Phase1Tests.Turn_SmallCorrectionWorksButNeverCrossesWallOrTeleports",
+          "Status": "Passed",
+          "Duration": 0.0016053,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 2.81,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: Phase1Tests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

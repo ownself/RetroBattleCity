@@ -93,6 +93,12 @@ namespace BattleCity.Tests
             var foliage = view.Foliage.GetComponent<TilemapRenderer>(); var surface = view.Surfaces.GetComponent<TilemapRenderer>();
             Assert.That(foliage.sortingLayerName, Is.EqualTo("Actors")); Assert.That(foliage.sortingOrder, Is.GreaterThan(controller.playerRenderer.sortingOrder));
             Assert.That(surface.sortingLayerName, Is.EqualTo("Obstacles"));
+            Assert.That(view.Foliage.color, Is.EqualTo(new Color(1, 1, 1, .6f)),
+                "Grass remains above tanks but must not completely hide their silhouettes.");
+            Assert.That(view.Surfaces.color, Is.EqualTo(Color.white), "Water and ice stay fully opaque.");
+            Assert.That(view.obstacles.color, Is.EqualTo(Color.white), "Brick and steel stay fully opaque.");
+            view.ConfigureSpecialTerrain(controller.sprites);
+            Assert.That(view.Foliage.color.a, Is.EqualTo(.6f), "Repeated configuration must preserve grass opacity.");
             Assert.That(SortingLayer.GetLayerValueFromName("Projectiles"), Is.GreaterThan(SortingLayer.GetLayerValueFromName("Actors")));
             Assert.That(SortingLayer.GetLayerValueFromName("Effects"), Is.GreaterThan(SortingLayer.GetLayerValueFromName("Actors")));
             ClassicRulesCombinationTestsProxy.Drop(s, PickupKind.Star); controller.PickupView.Render();
@@ -103,6 +109,7 @@ namespace BattleCity.Tests
             Assert.That(controller.Session.Map.TerrainAt(10, 10), Is.EqualTo(controller.level.terrain[10 * 26 + 10]));
             Assert.That(view.Surfaces.GetUsedTilesCount(), Is.Zero); Assert.That(view.Foliage.GetUsedTilesCount(), Is.Zero);
             Assert.That(view.GetComponentsInChildren<Tilemap>().Length, Is.EqualTo(3), "No layer duplication across restart");
+            Assert.That(view.Foliage.color.a, Is.EqualTo(.6f), "Restart must not restore opaque grass.");
         }
         [UnityTest] public IEnumerator Stage01_TerminalUpdateFreezesResultOnce_RestartCleansScoreEffectsAndIce_OldResultSurvives()
         {

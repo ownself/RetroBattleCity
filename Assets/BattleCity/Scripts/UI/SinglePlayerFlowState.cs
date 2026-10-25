@@ -8,6 +8,8 @@ namespace BattleCity
     {
         public SinglePlayerScreen Screen { get; private set; } = SinglePlayerScreen.Title;
         public int Selection { get; private set; }
+        public bool CanSelectStage => Screen == SinglePlayerScreen.StageIntro && stageSelectionAllowed;
+        private bool stageSelectionAllowed;
         private PlayerButtons previous;
         private bool won;
         private const PlayerButtons Confirm = PlayerButtons.Start | PlayerButtons.Fire;
@@ -30,11 +32,12 @@ namespace BattleCity
                 if ((buttons & PlayerButtons.Restart) != 0 && (old & PlayerButtons.Restart) == 0)
                 {
                     Screen = SinglePlayerScreen.StageIntro;
+                    stageSelectionAllowed = true;
                     return SinglePlayerAction.Restart;
                 }
                 return SinglePlayerAction.None;
             }
-            if (Screen == SinglePlayerScreen.StageIntro)
+            if (CanSelectStage)
             {
                 bool upHeld = (buttons & Up) != 0, downHeld = (buttons & Down) != 0;
                 if (upHeld != downHeld)
@@ -55,14 +58,17 @@ namespace BattleCity
             {
                 case SinglePlayerScreen.Title:
                     Screen = SinglePlayerScreen.StageIntro;
+                    stageSelectionAllowed = true;
                     return SinglePlayerAction.Restart;
                 case SinglePlayerScreen.StageIntro:
                     Screen = SinglePlayerScreen.Battle;
+                    stageSelectionAllowed = false;
                     return SinglePlayerAction.StartBattle;
                 case SinglePlayerScreen.Results:
                     if (won && hasNextStage)
                     {
                         Screen = SinglePlayerScreen.StageIntro;
+                        stageSelectionAllowed = false;
                         return SinglePlayerAction.NextStage;
                     }
                     Screen = won ? SinglePlayerScreen.Complete : SinglePlayerScreen.GameOver;
@@ -70,6 +76,7 @@ namespace BattleCity
                     break;
                 case SinglePlayerScreen.Complete:
                 case SinglePlayerScreen.GameOver:
+                    stageSelectionAllowed = Selection == 0;
                     Screen = Selection == 0 ? SinglePlayerScreen.StageIntro : SinglePlayerScreen.Title;
                     Selection = 0;
                     return SinglePlayerAction.Restart;

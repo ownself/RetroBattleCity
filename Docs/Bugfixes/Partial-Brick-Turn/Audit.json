@@ -1,0 +1,8 @@
+{
+  "baseline": "80ddf1ac2b49f3e06b2376da71712df522a06f91",
+  "uniquePassed": 215,
+  "sourceSha256": {
+    "Assets/BattleCity/Scripts/Tanks/TankMotor.cs": "85d980d6b84791538c2683a5706c2f93bbf9c023d15baccc67e1b234ea646f2d",
+    "Assets/BattleCity/Tests/EditMode/TurnAlignmentTests.cs": "61b732f3f57cac6237bb5997b22285233dd57175c31dac250333a91af8708e42"
+  }
+}

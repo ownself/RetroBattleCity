@@ -10,7 +10,7 @@ namespace BattleCity
     [CreateAssetMenu(menuName = "Battle City/Pickup rules")]
     public sealed class PickupDefinition : ScriptableObject
     {
-        public uint seed = 303;
+        public uint seed = 303; // Deterministic fallback for simulations/replays; gameplay supplies a fresh seed.
         public int collectionScore = 500; // Each accepted pickup, including capped rewards. Project default.
         public int helmetDurationTicks = 600;
         public int clockDurationTicks = 600;

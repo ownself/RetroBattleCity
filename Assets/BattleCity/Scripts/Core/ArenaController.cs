@@ -29,6 +29,7 @@ namespace BattleCity
         private TankDefinition initialPlayer;
         private PlayerUpgradeDefinition initialUpgrades;
         private PickupDefinition initialPickups;
+        private uint lastPickupSeed;
         private EnemyWaveDefinition initialWave, sessionWave;
         private readonly List<UnityEngine.Object> initialObjects = new List<UnityEngine.Object>();
         private bool initialBaseEnabled, initialPlayerLifecycle, initialSessionLifecycle;
@@ -151,7 +152,19 @@ namespace BattleCity
                 for (int i = 0; i < sessionWave.tankDefinitions.Length; i++)
                     JsonUtility.FromJsonOverwrite(JsonUtility.ToJson(initialWave.tankDefinitions[i]), sessionWave.tankDefinitions[i]);
             return new ArenaSession(initialLevel, initialPlayer, sessionWave,
-                initialBaseEnabled, initialPlayerLifecycle ? PlayerLifeParameters.Prototype : null, initialSessionLifecycle, initialUpgrades, initialPickups);
+                initialBaseEnabled, initialPlayerLifecycle ? PlayerLifeParameters.Prototype : null, initialSessionLifecycle, initialUpgrades, initialPickups,
+                initialPickups == null ? (uint?)null : CreatePickupSeed());
+        }
+
+        private uint CreatePickupSeed()
+        {
+            // Fresh gameplay entropy, independent of Unity's global RNG and the wave/AI streams.
+            // The effective seed remains available on PickupState for deterministic reproduction.
+            uint seed = BitConverter.ToUInt32(Guid.NewGuid().ToByteArray(), 0) ^ initialPickups.seed;
+            if (seed == 0 || seed == lastPickupSeed)
+                seed = lastPickupSeed == uint.MaxValue ? 1 : lastPickupSeed + 1;
+            lastPickupSeed = seed;
+            return seed;
         }
 
         public bool StartBattle() => Session != null && Session.StartBattle();
@@ -170,7 +183,7 @@ namespace BattleCity
         {
             if (direction != -1 && direction != 1) return false;
             if (updating || restarting || !focused || Session == null || Session.Phase != SessionPhase.Ready ||
-                singlePlayerFlow == null || singlePlayerFlow.State.Screen != SinglePlayerScreen.StageIntro || CampaignStageCount < 2)
+                singlePlayerFlow == null || !singlePlayerFlow.State.CanSelectStage || CampaignStageCount < 2)
                 return false;
             CampaignIndex = (CampaignIndex + direction + CampaignStageCount) % CampaignStageCount;
             initialLevel = campaignLevels[CampaignIndex];

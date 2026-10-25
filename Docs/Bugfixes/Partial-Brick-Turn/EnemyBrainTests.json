@@ -1,0 +1,315 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "EnemyBrainTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 40,
+        "Passed": 40,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Up,104,200)",
+          "Status": "Passed",
+          "Duration": 0.0137227,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Down,104,8)",
+          "Status": "Passed",
+          "Duration": 0.0084176,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Left,8,104)",
+          "Status": "Passed",
+          "Duration": 0.0098712,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Boundary_BlockTurnsAndFires_ThenRemainsInside(Right,200,104)",
+          "Status": "Passed",
+          "Duration": 0.0113475,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Death_StopsDecisionsRandomTimersMovementAndNewShots",
+          "Status": "Passed",
+          "Duration": 0.0024048,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Decisions_UseStartOfTickOccupancy_NotEarlierIdsMovementOrFuturePlayerCommand",
+          "Status": "Passed",
+          "Duration": 0.0022575,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.DynamicMutualBlock_TurnsAndNeverOverlapsAcrossTicks",
+          "Status": "Passed",
+          "Duration": 0.0265185,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Fire_ClockAndPauseFreezeIndependentCountdownAndRandom_NoBacklogOnResume",
+          "Status": "Passed",
+          "Duration": 0.0103525,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Fire_DefaultRandomInitialAndLaterIntervalsAreBounded_ReproducibleAndNotHeld(1)",
+          "Status": "Passed",
+          "Duration": 0.0058253,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Fire_DefaultRandomInitialAndLaterIntervalsAreBounded_ReproducibleAndNotHeld(7)",
+          "Status": "Passed",
+          "Duration": 0.0047114,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Fire_DefaultRandomInitialAndLaterIntervalsAreBounded_ReproducibleAndNotHeld(123456)",
+          "Status": "Passed",
+          "Duration": 0.0043025,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Fire_DefaultRandomInitialAndLaterIntervalsAreBounded_ReproducibleAndNotHeld(2654435769)",
+          "Status": "Passed",
+          "Duration": 0.0041856,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Fire_FullyBlockedStillWaitsAndShoots_WithoutChangingMovementRandom",
+          "Status": "Passed",
+          "Duration": 0.0011418,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Fire_InvalidDelayRangeRejected(0,10)",
+          "Status": "Passed",
+          "Duration": 0.0002819,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Fire_InvalidDelayRangeRejected(10,9)",
+          "Status": "Passed",
+          "Duration": 0.0001197,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Fire_InvalidDelayRangeRejected(1,int.MaxValue)",
+          "Status": "Passed",
+          "Duration": 0.0001188,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Fire_ReleasingProjectileCapacityDoesNotImmediatelyShootOrQueueRequests",
+          "Status": "Passed",
+          "Duration": 0.0009878,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Fire_TuningDoesNotPerturbDirectionRandomOrMovement",
+          "Status": "Passed",
+          "Duration": 0.0216,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.FullyBlocked_RetriesWithoutRandomChurn_AndShootsBrickOpen",
+          "Status": "Passed",
+          "Duration": 0.0016685,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.NarrowCorridor_Exact16PixelsNeverCrossesWalls_DeadEndReverses(False)",
+          "Status": "Passed",
+          "Duration": 0.0042444,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.NarrowCorridor_Exact16PixelsNeverCrossesWalls_DeadEndReverses(True)",
+          "Status": "Passed",
+          "Duration": 0.0037794,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.PauseFreezesFullBrainAndResumeDoesNotCatchUp",
+          "Status": "Passed",
+          "Duration": 0.0021423,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.PrototypeParameters_AreExplicitValidatedAndUncalibrated",
+          "Status": "Passed",
+          "Duration": 0.0016498,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(1)",
+          "Status": "Passed",
+          "Duration": 0.000901,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(7)",
+          "Status": "Passed",
+          "Duration": 0.000514,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(123456)",
+          "Status": "Passed",
+          "Duration": 0.0005025,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RandomDrawsAndDirectionWeights_HaveExactInspectableSequence(uint.MaxValue)",
+          "Status": "Passed",
+          "Duration": 0.0005015,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Registration_IsExplicitAndUsesSameSharedTank_ExternalControlRemainsAvailable",
+          "Status": "Passed",
+          "Duration": 0.001519,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RenderDelta_Same720TicksMatches60HzReference(30)",
+          "Status": "Passed",
+          "Duration": 0.0142636,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RenderDelta_Same720TicksMatches60HzReference(60)",
+          "Status": "Passed",
+          "Duration": 0.0128698,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.RenderDelta_Same720TicksMatches60HzReference(144)",
+          "Status": "Passed",
+          "Duration": 0.0071971,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.SameSeed_ReplaysEveryTickIncludingPositionFacingShotsAndRandom_WithoutUnityRandom",
+          "Status": "Passed",
+          "Duration": 0.0573563,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Up,12,14)",
+          "Status": "Passed",
+          "Duration": 0.0125811,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Up,12,14)",
+          "Status": "Passed",
+          "Duration": 0.0018735,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Down,12,11)",
+          "Status": "Passed",
+          "Duration": 0.0018238,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Down,12,11)",
+          "Status": "Passed",
+          "Duration": 0.0021433,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Left,11,12)",
+          "Status": "Passed",
+          "Duration": 0.0018952,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Left,11,12)",
+          "Status": "Passed",
+          "Duration": 0.0018551,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Brick,Right,14,12)",
+          "Status": "Passed",
+          "Duration": 0.0018497,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.EnemyBrainTests.Wall_BlockTurnsWithoutEnteringBrickOrSteel(Steel,Right,14,12)",
+          "Status": "Passed",
+          "Duration": 0.001855,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 2.92,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: EnemyBrainTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

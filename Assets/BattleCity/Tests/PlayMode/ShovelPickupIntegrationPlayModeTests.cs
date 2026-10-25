@@ -45,10 +45,19 @@ namespace BattleCity.Tests
             }
             Assert.Fail("Bounded deterministic drop search failed");
         }
+        private void BlockNaturalSpawns(ArenaSession s)
+        {
+            // These long-duration tests exercise restoration, not natural combat. Occupy all spawn
+            // anchors with stationary, unregistered tanks so AI/fire cannot end the session early.
+            foreach (var position in controller.level.enemySpawnPixels)
+                s.AddTank(controller.enemyWaveDefinition.tankDefinitions[0], CombatTeam.Enemy, position);
+            Assert.That(s.EnemyWave.SpawnedCount, Is.Zero);
+        }
         private static readonly Vector3Int Cell = new Vector3Int(12, 2, 0);
         [UnityTest] public IEnumerator Stage01_RealKeyboardUpdateShovel_AdvancesPausesAndRestoresPartialBrickTilemapAtExpiry()
         {
-            var s = controller.Session; s.StartBattle(); s.AdvanceFrame(0, PlayerButtons.None); s.SetPaused(true);
+            var s = controller.Session; BlockNaturalSpawns(s);
+            s.StartBattle(); s.AdvanceFrame(0, PlayerButtons.None); s.SetPaused(true);
             s.Map.SetTerrainCell(Cell.x, Cell.y, TerrainKind.Brick, 5); controller.mapView.Render(s.Map);
             var partial = (Tile)controller.mapView.obstacles.GetTile(Cell);
             Assert.That(partial.sprite.vertices.Length, Is.EqualTo(8));
@@ -94,6 +103,7 @@ namespace BattleCity.Tests
             var old = controller.Session;
             for (int restart = 0; restart < 2; restart++)
             {
+                BlockNaturalSpawns(old);
                 old.StartBattle(); old.AdvanceFrame(0, PlayerButtons.None); old.SetPaused(true);
                 old.Map.SetTerrainCell(Cell.x, Cell.y, TerrainKind.Brick, 7);
                 Drop(old, old.Player.Position); old.SetPaused(false); old.AdvanceFrame(0, PlayerButtons.None);

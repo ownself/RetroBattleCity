@@ -67,7 +67,7 @@ namespace BattleCity
 
         public ArenaSession(LevelDefinition level, TankDefinition tank, EnemyWaveDefinition wave = null, bool enableBase = false,
             PlayerLifeParameters playerLifeParameters = null, bool enableSessionLifecycle = false,
-            PlayerUpgradeDefinition playerUpgrades = null, PickupDefinition pickups = null)
+            PlayerUpgradeDefinition playerUpgrades = null, PickupDefinition pickups = null, uint? pickupSeed = null)
         {
             if (enableSessionLifecycle && wave == null) throw new ArgumentNullException(nameof(wave));
             if (enableSessionLifecycle) { flow = new SessionFlowState(); Clock.SetPaused(true); }
@@ -81,7 +81,7 @@ namespace BattleCity
             // Validate/snapshot the complete wave before registering any combat entity.
             EnemyWave = wave == null ? null : new EnemyWaveState(level, wave);
             if (pickups != null && wave == null) throw new ArgumentException("Pickup carriers require a natural wave.", nameof(pickups));
-            Pickups = pickups == null ? null : new PickupState(pickups, level);
+            Pickups = pickups == null ? null : new PickupState(pickups, level, pickupSeed);
             pickupScore = pickups?.collectionScore ?? 0;
             if (enableBase)
             {

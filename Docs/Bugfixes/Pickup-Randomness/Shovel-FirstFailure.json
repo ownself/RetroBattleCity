@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.22,
+      "summary": {
+        "total": 2,
+        "passed": 0,
+        "failed": 2,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationPlayModeTests.Stage01_RealKeyboardUpdateShovel_AdvancesPausesAndRestoresPartialBrickTilemapAtExpiry",
+          "Status": "Failed",
+          "Duration": 0.145481,
+          "Message": "  Expected: 1\r\n  But was:  0\r\n",
+          "StackTrace": "at BattleCity.Tests.ShovelPickupIntegrationPlayModeTests+<Stage01_RealKeyboardUpdateShovel_AdvancesPausesAndRestoresPartialBrickTilemapAtExpiry>d__9.MoveNext () [0x00557] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\ShovelPickupIntegrationPlayModeTests.cs:80\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@ee3fe9477490\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationPlayModeTests.Stage01_RestartRetiresActiveAndPendingRestoration_OldMapRestoredFreshSessionAndTilemapClean",
+          "Status": "Failed",
+          "Duration": 0.0615941,
+          "Message": "  Expected: True\r\n  But was:  False\r\n",
+          "StackTrace": "at BattleCity.Tests.ShovelPickupIntegrationPlayModeTests+<Stage01_RestartRetiresActiveAndPendingRestoration_OldMapRestoredFreshSessionAndTilemapClean>d__10.MoveNext () [0x001f1] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\ShovelPickupIntegrationPlayModeTests.cs:110\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@ee3fe9477490\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

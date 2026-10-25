@@ -1,0 +1,11 @@
+{
+  "uniquePassed": 24,
+  "sourceSha256": {
+    "Assets/BattleCity/Scripts/UI/SinglePlayerFlowState.cs": "3e8c2aaed1a6111f888d4f0f8b2bc14d755d33e3d1ef724c744aabdf2c2b5f05",
+    "Assets/BattleCity/Scripts/UI/SinglePlayerFlow.cs": "fa98a42cb719ac00480c8290c8e54228933d3a93211778da4e5bba5881e7a744",
+    "Assets/BattleCity/Scripts/Core/ArenaController.cs": "b5af84732ab60ab086b56af6b2c81e47c8f6b3161f2d63cc503ae249070cee93",
+    "Assets/BattleCity/Tests/EditMode/StageSelectionTests.cs": "d93d0332740836cbdfd79cee7b949412581da4c76b6250d4121a7700e9b5887f",
+    "Assets/BattleCity/Tests/PlayMode/CampaignPlayModeTests.cs": "70817763aa7557f4a17e8e2a34c81d0448ac3b5c4b9a5e6d69af3edd4228b9f9",
+    "Assets/BattleCity/Tests/PlayMode/SinglePlayerFlowPlayModeTests.cs": "68443b6bb495b3b781e42924cc5fcc1eafede67e029188fcaf7df918f3200302"
+  }
+}

@@ -74,9 +74,16 @@ namespace BattleCity
                 float axis = requested.IsVertical() ? Position.x : Position.y;
                 float snapped = Mathf.Round(axis / AlignmentPixels) * AlignmentPixels;
                 var aligned = requested.IsVertical() ? new Vector2(snapped, Position.y) : new Vector2(Position.x, snapped);
-                // Both endpoint and whole correction path must be clear. Never jump over a wall.
-                if (!map.CanOccupy(aligned, HalfSizePixels, blockers) ||
-                    (map.MoveAxis(Position, aligned - Position, HalfSizePixels, blockers) - aligned).sqrMagnitude > MapState.Epsilon * MapState.Epsilon) return Position;
+                if (!CanAlign(aligned, map, blockers))
+                {
+                    // A 4px brick cut can put the closest 8px line inside the remaining wall.
+                    // Preserve the existing wait behavior for a dynamic-only obstruction.
+                    if (CanAlign(aligned, map, null) || Mathf.Abs(snapped - axis) <= MapState.Epsilon) return Position;
+                    // Try only the other line bracketing this position, not a farther grid line.
+                    snapped += snapped < axis ? AlignmentPixels : -AlignmentPixels;
+                    aligned = requested.IsVertical() ? new Vector2(snapped, Position.y) : new Vector2(Position.x, snapped);
+                    if (!CanAlign(aligned, map, blockers)) return Position;
+                }
                 if (Mathf.Abs(snapped - axis) > MaxTurnCorrectionPixels + MapState.Epsilon)
                 {
                     // A held side-turn must make progress even after the old movement key is released.
@@ -89,6 +96,11 @@ namespace BattleCity
             facing = requested;
             return map.MoveAxis(position, direction * (speedPixelsPerSecond * PixelGrid.LogicStep), HalfSizePixels, blockers);
         }
+
+        // Check the endpoint AND the swept correction path against terrain and dynamic blockers.
+        private bool CanAlign(Vector2 aligned, MapState map, IReadOnlyList<Rect> blockers)
+            => map.CanOccupy(aligned, HalfSizePixels, blockers) &&
+                (map.MoveAxis(Position, aligned - Position, HalfSizePixels, blockers) - aligned).sqrMagnitude <= MapState.Epsilon * MapState.Epsilon;
 
         internal void Stop() { IsMoving = false; ClearInertia(); }
 

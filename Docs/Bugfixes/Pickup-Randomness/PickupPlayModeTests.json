@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.26,
+      "summary": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.PickupPlayModeTests.CombatArenaOptOut_StandaloneViewProjectsAllSixKindsReadOnlyAndClearsOnDisable",
+          "Status": "Passed",
+          "Duration": 0.079473,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupPlayModeTests.Stage01_DisableRebindAndRepeatedRestart_ClearOldSlotUseStartupRulesAndOneRenderer",
+          "Status": "Passed",
+          "Duration": 0.0819453,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PickupPlayModeTests.Stage01_NaturalCarrierFlashes_FirstNonlethalHitDrops_RealInputCollectsExactlyOnce",
+          "Status": "Passed",
+          "Duration": 0.0899144,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

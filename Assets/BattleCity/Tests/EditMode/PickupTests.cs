@@ -98,6 +98,67 @@ namespace BattleCity.Tests
             }
             Assert.That(a.SpawnedCount, Is.EqualTo(3)); Assert.That(a.ReplacedCount, Is.EqualTo(2));
         }
+        [Test] public void FixedSeed303ExplainsOldThreeDropSequence()
+        {
+            rules.seed = 303;
+            var state = new PickupState(rules, level); var map = new MapState(level);
+            foreach (var expected in new[] { PickupKind.Tank, PickupKind.Grenade, PickupKind.Helmet })
+            {
+                Assert.That(state.TryDrop(map, level.playerSpawnPixels, true, null), Is.True);
+                Assert.That(state.Active.Value.Kind, Is.EqualTo(expected));
+            }
+        }
+
+        [Test] public void ExplicitSeedOverrideReplaysWithoutMutatingRules()
+        {
+            var a = new PickupState(rules, level, 123);
+            var b = new PickupState(rules, level, a.InitialSeed);
+            var map = new MapState(level);
+            Assert.That(a.InitialSeed, Is.EqualTo(123));
+            for (int i = 0; i < 12; i++)
+            {
+                Assert.That(a.TryDrop(map, level.playerSpawnPixels, true, null), Is.True);
+                Assert.That(b.TryDrop(map, level.playerSpawnPixels, true, null), Is.True);
+                Assert.That(a.Active.Value.Kind, Is.EqualTo(b.Active.Value.Kind));
+                Assert.That(a.Active.Value.Position, Is.EqualTo(b.Active.Value.Position));
+                Assert.That(a.RandomState, Is.EqualTo(b.RandomState));
+            }
+            Assert.That(rules.seed, Is.EqualTo(303), "Runtime entropy must not overwrite authored rules.");
+        }
+
+        [Test] public void DifferentSeedsAllowAllSixKindsOnTheFirstDrop()
+        {
+            var seen = new System.Collections.Generic.HashSet<PickupKind>();
+            var map = new MapState(level);
+            // Deterministic coverage, not a flaky assertion over live random outcomes.
+            for (uint seed = 1; seed <= 120; seed++)
+            {
+                var state = new PickupState(rules, level, seed);
+                Assert.That(state.TryDrop(map, level.playerSpawnPixels, true, null), Is.True);
+                seen.Add(state.Active.Value.Kind);
+            }
+            CollectionAssert.AreEquivalent(Enum.GetValues(typeof(PickupKind)), seen);
+        }
+
+        [Test] public void ZeroSeedOverrideIsRejected()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => new PickupState(rules, level, 0));
+        }
+
+        [Test] public void SessionSeedOverrideIsIndependentOfWaveAndAi()
+        {
+            var a = new ArenaSession(level, player, wave, pickups: rules, pickupSeed: 11);
+            var b = new ArenaSession(level, player, wave, pickups: rules, pickupSeed: 29);
+            Assert.That(a.Pickups.InitialSeed, Is.EqualTo(11));
+            Assert.That(b.Pickups.InitialSeed, Is.EqualTo(29));
+            Assert.That(a.Pickups.TryDrop(a.Map, a.Player.Position, true, ExcludeAllBut(new Vector2(80, 80))), Is.True);
+            Assert.That(b.Pickups.TryDrop(b.Map, b.Player.Position, true, ExcludeAllBut(new Vector2(80, 80))), Is.True);
+            Tick(a, 27); Tick(b, 27);
+            Assert.That(a.EnemyWave.RandomState, Is.EqualTo(b.EnemyWave.RandomState));
+            Assert.That(a.Tanks[1].Motor.Position, Is.EqualTo(b.Tanks[1].Motor.Position));
+            Assert.That(a.Tanks[1].Motor.Facing, Is.EqualTo(b.Tanks[1].Motor.Facing));
+        }
+
         [Test] public void CollectionIsStrictOverlapAliveOnly_ReceiptOnce_DifferentItemsCanBeCollected()
         {
             var state = new PickupState(rules, level); var map = new MapState(level);

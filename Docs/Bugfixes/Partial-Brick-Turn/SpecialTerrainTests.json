@@ -1,0 +1,175 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "SpecialTerrainTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 20,
+        "Passed": 20,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.CollisionMatrix_TanksAndBulletsHaveSeparateTruth(Water,False,False)",
+          "Status": "Passed",
+          "Duration": 0.011537,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.CollisionMatrix_TanksAndBulletsHaveSeparateTruth(Grass,True,False)",
+          "Status": "Passed",
+          "Duration": 0.0086039,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.CollisionMatrix_TanksAndBulletsHaveSeparateTruth(Ice,True,False)",
+          "Status": "Passed",
+          "Duration": 0.0065195,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.CollisionMatrix_TanksAndBulletsHaveSeparateTruth(Brick,False,True)",
+          "Status": "Passed",
+          "Duration": 0.0261242,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.CollisionMatrix_TanksAndBulletsHaveSeparateTruth(Steel,False,True)",
+          "Status": "Passed",
+          "Duration": 0.0015838,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_CoastingClampsToTerrainFaceAndClearsMomentum(Brick)",
+          "Status": "Passed",
+          "Duration": 0.0029413,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_CoastingClampsToTerrainFaceAndClearsMomentum(Steel)",
+          "Status": "Passed",
+          "Duration": 0.0008848,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_CoastingClampsToTerrainFaceAndClearsMomentum(Water)",
+          "Status": "Passed",
+          "Duration": 0.000944,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_CoastUsesSweptLiveBlockersAndMapEdge_NoTunnelingAtHighSpeed",
+          "Status": "Passed",
+          "Duration": 0.0011603,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_DirectionalInputOverridesCoast_RefreshesNotStacks_UsesSafeAlignment",
+          "Status": "Passed",
+          "Duration": 0.001077,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_LeavingCenterCellStopsCoastAndDryGroundNeverCoasts",
+          "Status": "Passed",
+          "Duration": 0.000975,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_ReleaseCoastsExactly24FutureTicksAtNormalSpeed(Up)",
+          "Status": "Passed",
+          "Duration": 0.0012103,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_ReleaseCoastsExactly24FutureTicksAtNormalSpeed(Left)",
+          "Status": "Passed",
+          "Duration": 0.0007127,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_ReleaseCoastsExactly24FutureTicksAtNormalSpeed(Down)",
+          "Status": "Passed",
+          "Duration": 0.0007132,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Ice_ReleaseCoastsExactly24FutureTicksAtNormalSpeed(Right)",
+          "Status": "Passed",
+          "Duration": 0.0007098,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.RealBulletSweep_PassesSpecialTerrainAndHitsEnemyBehindWithoutMutatingMap(Water)",
+          "Status": "Passed",
+          "Duration": 0.0044218,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.RealBulletSweep_PassesSpecialTerrainAndHitsEnemyBehindWithoutMutatingMap(Grass)",
+          "Status": "Passed",
+          "Duration": 0.0015191,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.RealBulletSweep_PassesSpecialTerrainAndHitsEnemyBehindWithoutMutatingMap(Ice)",
+          "Status": "Passed",
+          "Duration": 0.0014827,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.StageReferenceMoved_All35ReferencesAndTitleSheetPresent_OriginalStageStillMatches",
+          "Status": "Passed",
+          "Duration": 0.0021922,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SpecialTerrainTests.Water_RejectsSpawnAndBlocksPickupReachabilityAcrossFullBarrier",
+          "Status": "Passed",
+          "Duration": 0.0037381,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 2.96,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: SpecialTerrainTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,91 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.35,
+      "summary": {
+        "total": 9,
+        "passed": 1,
+        "failed": 8,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_BothAlignmentLinesBlocked_DoesNotCrossDynamicBlocker",
+          "Status": "Passed",
+          "Duration": 0.0249769,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Right,Up)",
+          "Status": "Failed",
+          "Duration": 0.0178088,
+          "Message": "  Pending alignment must move away from, not into, the wall.\r\n  Expected: less than 0\r\n  But was:  0.0f\r\n",
+          "StackTrace": "at BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer (BattleCity.CardinalDirection approach, BattleCity.CardinalDirection requested) [0x001ca] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\TurnAlignmentTests.cs:92\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Right,Down)",
+          "Status": "Failed",
+          "Duration": 0.0010117,
+          "Message": "  Pending alignment must move away from, not into, the wall.\r\n  Expected: less than 0\r\n  But was:  0.0f\r\n",
+          "StackTrace": "at BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer (BattleCity.CardinalDirection approach, BattleCity.CardinalDirection requested) [0x001ca] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\TurnAlignmentTests.cs:92\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Left,Up)",
+          "Status": "Failed",
+          "Duration": 0.0009288,
+          "Message": "  Pending alignment must move away from, not into, the wall.\r\n  Expected: less than 0\r\n  But was:  0.0f\r\n",
+          "StackTrace": "at BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer (BattleCity.CardinalDirection approach, BattleCity.CardinalDirection requested) [0x001ca] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\TurnAlignmentTests.cs:92\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Left,Down)",
+          "Status": "Failed",
+          "Duration": 0.0009139,
+          "Message": "  Pending alignment must move away from, not into, the wall.\r\n  Expected: less than 0\r\n  But was:  0.0f\r\n",
+          "StackTrace": "at BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer (BattleCity.CardinalDirection approach, BattleCity.CardinalDirection requested) [0x001ca] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\TurnAlignmentTests.cs:92\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Up,Left)",
+          "Status": "Failed",
+          "Duration": 0.0008651,
+          "Message": "  Pending alignment must move away from, not into, the wall.\r\n  Expected: less than 0\r\n  But was:  0.0f\r\n",
+          "StackTrace": "at BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer (BattleCity.CardinalDirection approach, BattleCity.CardinalDirection requested) [0x001ca] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\TurnAlignmentTests.cs:92\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Up,Right)",
+          "Status": "Failed",
+          "Duration": 0.0008608,
+          "Message": "  Pending alignment must move away from, not into, the wall.\r\n  Expected: less than 0\r\n  But was:  0.0f\r\n",
+          "StackTrace": "at BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer (BattleCity.CardinalDirection approach, BattleCity.CardinalDirection requested) [0x001ca] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\TurnAlignmentTests.cs:92\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Down,Left)",
+          "Status": "Failed",
+          "Duration": 0.0009398,
+          "Message": "  Pending alignment must move away from, not into, the wall.\r\n  Expected: less than 0\r\n  But was:  0.0f\r\n",
+          "StackTrace": "at BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer (BattleCity.CardinalDirection approach, BattleCity.CardinalDirection requested) [0x001ca] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\TurnAlignmentTests.cs:92\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer(Down,Right)",
+          "Status": "Failed",
+          "Duration": 0.0009081,
+          "Message": "  Pending alignment must move away from, not into, the wall.\r\n  Expected: less than 0\r\n  But was:  0.0f\r\n",
+          "StackTrace": "at BattleCity.Tests.TurnAlignmentTests.PartialBrickWall_SideTurnAlignsAwayFromRemainingLayer (BattleCity.CardinalDirection approach, BattleCity.CardinalDirection requested) [0x001ca] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\TurnAlignmentTests.cs:92\r\n"
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

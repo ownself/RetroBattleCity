@@ -1,0 +1,12 @@
+{
+  "uniqueFinalPassed": 34,
+  "sourceSha256": {
+    "Assets/BattleCity/Scripts/Core/ArenaController.cs": "9b1f23f68b7a16cc47d9e38c75b30c8b652aad88ac7fe88b987ddde583c74ee6",
+    "Assets/BattleCity/Scripts/Core/ArenaSession.cs": "d17724eaba4b4b493656c3abee59c7cfa145a9edfc1c15e20158433e4223c6f9",
+    "Assets/BattleCity/Scripts/Pickups/PickupDefinition.cs": "6c15bcdb5f1d24b995125f10c4511df8454b8341ddcac5f6239fbe804aa9b5ea",
+    "Assets/BattleCity/Scripts/Pickups/PickupState.cs": "dc62ea8035ec63a62a8483188da7f232ac02e0e41903e29f2e4c4e46323afb81",
+    "Assets/BattleCity/Tests/EditMode/PickupTests.cs": "2e00cc426b0c2963e4b1c8bb7b34928846adf280be9a944db647f6a11bea025b",
+    "Assets/BattleCity/Tests/PlayMode/PickupPlayModeTests.cs": "dcdb42422b1bb9d4189217b39a95a279fdd4ff41bb22ec036509f8cac3ce4fe3",
+    "Assets/BattleCity/Tests/PlayMode/ShovelPickupIntegrationPlayModeTests.cs": "39a5a69f693014e691c1ff4bc89f6ac287caac229a2382fbce308321826f2210"
+  }
+}

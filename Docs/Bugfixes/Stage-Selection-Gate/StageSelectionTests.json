@@ -1,0 +1,133 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "StageSelectionTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 14,
+        "Passed": 14,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.AliasesAndOpposedKeysDoNotDuplicateSelection",
+          "Status": "Passed",
+          "Duration": 0.0196154,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.BattleDirectionsNeverSelectStage",
+          "Status": "Passed",
+          "Duration": 0.0001771,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.DirectionEmitsOnceUntilReleased(Up,PreviousSelection)",
+          "Status": "Passed",
+          "Duration": 0.0007099,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.DirectionEmitsOnceUntilReleased(W,PreviousSelection)",
+          "Status": "Passed",
+          "Duration": 0.0003482,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.DirectionEmitsOnceUntilReleased(Down,NextSelection)",
+          "Status": "Passed",
+          "Duration": 0.0003171,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.DirectionEmitsOnceUntilReleased(S,NextSelection)",
+          "Status": "Passed",
+          "Duration": 0.0003157,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.ExplicitRestartReopensSelectionAfterNormalProgression",
+          "Status": "Passed",
+          "Duration": 0.0007169,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.NavigationConsumesSimultaneousConfirmAndFocusBlocksHeldKeys",
+          "Status": "Passed",
+          "Duration": 0.0001794,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.NormalProgressionLocksSelectionButFreshConfirmStillStartsNextStage(Up)",
+          "Status": "Passed",
+          "Duration": 0.0007671,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.NormalProgressionLocksSelectionButFreshConfirmStillStartsNextStage(W)",
+          "Status": "Passed",
+          "Duration": 0.0001453,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.NormalProgressionLocksSelectionButFreshConfirmStillStartsNextStage(Down)",
+          "Status": "Passed",
+          "Duration": 0.0001187,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.NormalProgressionLocksSelectionButFreshConfirmStillStartsNextStage(S)",
+          "Status": "Passed",
+          "Duration": 0.0001121,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.PlayAgainReopensSelectionAfterCompletionOrGameOver(Won)",
+          "Status": "Passed",
+          "Duration": 0.0006607,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.PlayAgainReopensSelectionAfterCompletionOrGameOver(Lost)",
+          "Status": "Passed",
+          "Duration": 0.00015,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 4.57,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: StageSelectionTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

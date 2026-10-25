@@ -1,0 +1,266 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "BrickDestructionTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 33,
+        "Passed": 33,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.AcrossStrip_FloorsLowerEdgeToFourPixelGrid(104.0f,24)",
+          "Status": "Passed",
+          "Duration": 0.0019832,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.AcrossStrip_FloorsLowerEdgeToFourPixelGrid(107.5f,24)",
+          "Status": "Passed",
+          "Duration": 0.0007094,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.AcrossStrip_FloorsLowerEdgeToFourPixelGrid(108.0f,25)",
+          "Status": "Passed",
+          "Duration": 0.0006681,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.AuthoringAndNewSession_RetainOriginalFullBricks",
+          "Status": "Passed",
+          "Duration": 0.0020077,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.EightPixelGap_RemainsImpassableTo16PixelTank",
+          "Status": "Passed",
+          "Duration": 0.0014219,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.FourDirections_RemoveOnlyOne16By4Strip(Up,104,48,20)",
+          "Status": "Passed",
+          "Duration": 0.0044588,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.FourDirections_RemoveOnlyOne16By4Strip(Down,104,160,31)",
+          "Status": "Passed",
+          "Duration": 0.0033823,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.FourDirections_RemoveOnlyOne16By4Strip(Right,48,104,20)",
+          "Status": "Passed",
+          "Duration": 0.0033698,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.FourDirections_RemoveOnlyOne16By4Strip(Left,160,104,31)",
+          "Status": "Passed",
+          "Duration": 0.0033577,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.MapEdge_ClipsWithoutShiftingStripInward(4.0f,0)",
+          "Status": "Passed",
+          "Duration": 0.0014652,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.MapEdge_ClipsWithoutShiftingStripInward(204.0f,49)",
+          "Status": "Passed",
+          "Duration": 0.0039049,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.PausedSession_DoesNotReplayLastTickDamage",
+          "Status": "Passed",
+          "Duration": 0.001763,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.RemainingLayerBlocksTank_ThenFourShotsOpenA16PixelPassage",
+          "Status": "Passed",
+          "Duration": 0.0011299,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.SameTickTwoBullets_HitOneSnapshotAndDoNotDrillTwoLayers",
+          "Status": "Passed",
+          "Duration": 0.0009553,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.Session_MultipleTicksApplyDamageBeforeTheNextSweep",
+          "Status": "Passed",
+          "Duration": 0.0014793,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.SteelBoundaryAndEmptyEvents_DoNotAdvanceMapRevision",
+          "Status": "Passed",
+          "Duration": 0.003549,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.Strip_NeverChangesOtherTerrain(Steel)",
+          "Status": "Passed",
+          "Duration": 0.0018947,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.Strip_NeverChangesOtherTerrain(Water)",
+          "Status": "Passed",
+          "Duration": 0.00138,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.Strip_NeverChangesOtherTerrain(Grass)",
+          "Status": "Passed",
+          "Duration": 0.0014518,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.Strip_NeverChangesOtherTerrain(Ice)",
+          "Status": "Passed",
+          "Duration": 0.0095011,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.TouchingWall_SameTimeWeaponsSelectSameOuterLayerInStableOrder(Up)",
+          "Status": "Passed",
+          "Duration": 0.0023931,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.TouchingWall_SameTimeWeaponsSelectSameOuterLayerInStableOrder(Down)",
+          "Status": "Passed",
+          "Duration": 0.0005994,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.TouchingWall_SameTimeWeaponsSelectSameOuterLayerInStableOrder(Right)",
+          "Status": "Passed",
+          "Duration": 0.0005544,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.TouchingWall_SameTimeWeaponsSelectSameOuterLayerInStableOrder(Left)",
+          "Status": "Passed",
+          "Duration": 0.0005457,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.TwoShots_RemoveTwoLayersAndClearTerrainOnlyWhenLastBitIsGone",
+          "Status": "Passed",
+          "Duration": 0.0012037,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Up,0)",
+          "Status": "Passed",
+          "Duration": 0.001659,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Down,0)",
+          "Status": "Passed",
+          "Duration": 0.0008398,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Right,0)",
+          "Status": "Passed",
+          "Duration": 0.0008066,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Left,0)",
+          "Status": "Passed",
+          "Duration": 0.0007954,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Up,8)",
+          "Status": "Passed",
+          "Duration": 0.000801,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Down,8)",
+          "Status": "Passed",
+          "Duration": 0.0008048,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Right,8)",
+          "Status": "Passed",
+          "Duration": 0.0008018,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BrickDestructionTests.WeaponMuzzle_TwoShotsRemoveIncomingLayerThenRemainingLayer(Left,8)",
+          "Status": "Passed",
+          "Duration": 0.0008037,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 2.79,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: BrickDestructionTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

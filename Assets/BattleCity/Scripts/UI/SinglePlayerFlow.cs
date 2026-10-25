@@ -16,6 +16,7 @@ namespace BattleCity
         private SinglePlayerScreen? rendered;
         private int selection = -1;
         private int renderedStage = -1;
+        private bool renderedCanSelectStage;
 
         public bool Route(ArenaController controller, PlayerButtons buttons, bool focused)
         {
@@ -40,8 +41,10 @@ namespace BattleCity
             bool visible = State.Screen != SinglePlayerScreen.Battle;
             screenCanvas.enabled = visible && isActiveAndEnabled;
             if (!visible) { rendered = State.Screen; return; }
-            if (rendered == State.Screen && selection == State.Selection && renderedStage == stage && DisplayedResult == session?.Result) return;
+            if (rendered == State.Screen && selection == State.Selection && renderedStage == stage &&
+                renderedCanSelectStage == State.CanSelectStage && DisplayedResult == session?.Result) return;
             rendered = State.Screen; selection = State.Selection; renderedStage = stage; DisplayedResult = session?.Result;
+            renderedCanSelectStage = State.CanSelectStage;
             titleArt.enabled = State.Screen == SinglePlayerScreen.Title;
             foreach (var line in lines) line.Text = "";
             string number = stage.ToString("00", CultureInfo.InvariantCulture);
@@ -56,7 +59,7 @@ namespace BattleCity
                     break;
                 case SinglePlayerScreen.StageIntro:
                     heading.Text = "STAGE " + number;
-                    lines[1].Text = "UP DOWN OR W S SELECT STAGE";
+                    lines[1].Text = State.CanSelectStage ? "UP DOWN OR W S SELECT STAGE" : "";
                     lines[2].Text = "PROTECT YOUR BASE";
                     lines[4].Text = "ENTER OR SPACE TO BEGIN";
                     break;

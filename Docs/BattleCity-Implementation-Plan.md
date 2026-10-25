@@ -396,6 +396,14 @@ Docs/
 
 | PH4-005 | BC400～402选关增补 | 用户授权STAGE界面上下/W/S循环选择35关、确认开始；Ready安全入口/全新Session及显示关号缓存刷新，单边沿/别名/失焦/确认冲突抑制，不改关卡/场景 | 新7Edit+1Play、相关6Edit+3Play，17唯一Passed，真实键盘循环/所选地图逐格/HUD34与实际tick、原生命周期切关回归；见Docs/Stage4/Stage-Selection/Verification.md | 全部本轮专项首轮通过；Editor stopped/clean/backgroundfalse，无提交推送，不开展BC403，不声称原版选关节奏精确复现 |
 
+| PH4-006 | 部分破砖后贴墙转向修复 | 用户报告第一关残墙旁侧转卡住；TankMotor在最近8px对齐线被地形挡住时尝试空侧相邻线，保留完整扫掠/动态阻挡与原尺寸；新增9项回归 | 修复前新9项中8项复现失败；初版2条动态等待语义回归经一次有界纠正，最终6组215唯一EditMode Passed；编译成功，Console增量140全log、最终错误0/警告0；见Docs/Bugfixes/Partial-Brick-Turn/Verification.md | 待用户原位置手感复测；未进入Play/修改关卡场景设置，不冒称人工通过/全量回归；Editor stopped/clean，无提交推送，不开展BC403 |
+
+| PH4-007 | 草丛可见性调整 | 用户反馈草丛完全遮挡坦克；运行时草丛Tilemap统一改为60%不透明，保留上层覆盖及原地形/碰撞/子弹规则；增强既有地形生命周期断言 | 编译成功，ClassicRulesPlayModeTests 3/3 Passed（草丛alpha/其他地形不变/重复配置/重开及原分层断言）；Console增量10全log、最终错误0/警告0；见Docs/Bugfixes/Grass-Visibility/Verification.md | 待用户确认透明强度；统一作用于玩家/敌人，不冒称截图对比或人工视觉通过；Editor stopped/clean/backgroundfalse，保留贴墙补丁，无提交推送 |
+
+| PH4-008 | 限制选关入口 | 用户要求仅首次开始/明确重开可选关；新增CanSelectStage统一约束状态导航、Controller API及选关说明显示，正常胜利续关锁定下一关 | StageSelection14Edit＋Flow6Edit＋Campaign1Play＋Flow3Play，共24唯一Passed；新增7纯状态用例及双关真实键盘/API/说明隐藏/R恢复/终局重玩断言，编译成功；Console增量37全log、最终错误0/警告0；见Docs/Bugfixes/Stage-Selection-Gate/Verification.md | 保留R重开可选及PLAY AGAIN恢复；未改场景/关卡/输入绑定，未冒称人工试玩或自然通关；Editor stopped/clean/backgroundfalse，无提交推送 |
+
+| PH4-009 | 道具掉落随机性修复 | 用户报告铁锹/时钟/星星不出现、首件总是坦克；确认每关重置seed303导致前三件固定Tank/Grenade/Helmet，改实际Controller每Session使用新非零独立seed，保留纯模拟固定seed及显式重放能力 | 新5Edit及相关定向去重34唯一最终Passed（25Edit+9Play）；覆盖六种首件、实际携带者/拾取、重开新seed与重放、六效果；铁锹长时序夹具2失败一次隔离自然出生后2/2通过，原件保留；编译成功，Console增量55全log、最终错误0/警告0；见Docs/Bugfixes/Pickup-Randomness/Verification.md | 仍为每关3次自然机会、随机可重复，不保证每局六种齐全；未改道具效果/资产/波次AI随机流，非首轮全绿/自然多局概率实测；Editor stopped/clean/backgroundfalse，无提交推送 |
+
 ### 实施记录填写模板
 
 ```text
