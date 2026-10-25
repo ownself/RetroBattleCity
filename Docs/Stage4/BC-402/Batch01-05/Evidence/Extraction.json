@@ -1,0 +1,102 @@
+[
+  {
+    "stage": 1,
+    "source": "Assets\\Sprites\\Stages\\NES - Battle City (JPN) - Backgrounds - Stage 01.png",
+    "sha256": "0ad647c8af338e6c34bcad3e467cd5cf64607597f8a1dd1d5a2ef6e3f1111b7f",
+    "layoutSha256": "0a3953c9303367ef0abb06c77ed42405b90bc0baea10db4d001b10f7139da13a",
+    "counts": {
+      ".": 444,
+      "B": 220,
+      "S": 8,
+      "H": 4
+    },
+    "patterns": {
+      ".": 1,
+      "B": 1,
+      "S": 1,
+      "H": 4
+    }
+  },
+  {
+    "stage": 2,
+    "source": "Assets\\Sprites\\Stages\\NES - Battle City (JPN) - Backgrounds - Stage 02.png",
+    "sha256": "dc138c3fd984c98568f440b0485b6d12bd4d46c3557edbc064e6daf17cb1f9d0",
+    "layoutSha256": "3c04abf17f609572022f44fe78c4b45a6f7bcfe47eaee724359ca133e0a8d844",
+    "counts": {
+      ".": 388,
+      "S": 52,
+      "B": 192,
+      "G": 40,
+      "H": 4
+    },
+    "patterns": {
+      ".": 1,
+      "S": 1,
+      "B": 1,
+      "G": 1,
+      "H": 4
+    }
+  },
+  {
+    "stage": 3,
+    "source": "Assets\\Sprites\\Stages\\NES - Battle City (JPN) - Backgrounds - Stage 03.png",
+    "sha256": "ea2196f92402a84185c2109f465f66ea5722692058cfc4802206834c9a10e8b5",
+    "layoutSha256": "c5bf8f454ff33a1a5fd208f200ff99b7410e1554ad2df7a701f1e8b670213454",
+    "counts": {
+      ".": 364,
+      "B": 130,
+      "G": 152,
+      "S": 26,
+      "H": 4
+    },
+    "patterns": {
+      ".": 1,
+      "B": 1,
+      "G": 1,
+      "S": 1,
+      "H": 4
+    }
+  },
+  {
+    "stage": 4,
+    "source": "Assets\\Sprites\\Stages\\NES - Battle City (JPN) - Backgrounds - Stage 04.png",
+    "sha256": "62656c8bcc1f54b80ab5b5b974a7467a954ac27d84edb1a46871b22364d1304d",
+    "layoutSha256": "c970a009ea99b539f4327265a60ae55c0134fa7ce2070c75d74650c38eaf3d47",
+    "counts": {
+      ".": 326,
+      "G": 56,
+      "B": 262,
+      "S": 16,
+      "W": 12,
+      "H": 4
+    },
+    "patterns": {
+      ".": 1,
+      "G": 1,
+      "B": 1,
+      "S": 1,
+      "W": 1,
+      "H": 4
+    }
+  },
+  {
+    "stage": 5,
+    "source": "Assets\\Sprites\\Stages\\NES - Battle City (JPN) - Backgrounds - Stage 05.png",
+    "sha256": "557917a7635fe3bd76fd210de0a40ff6126748b91bd43c55fee13c1f44cd77fb",
+    "layoutSha256": "948bd632c2c976e0ce4fa068ec75d120447503ed4ccfd15f5acad5fba4d4f8be",
+    "counts": {
+      ".": 450,
+      "B": 136,
+      "S": 26,
+      "W": 60,
+      "H": 4
+    },
+    "patterns": {
+      ".": 1,
+      "B": 1,
+      "S": 1,
+      "W": 1,
+      "H": 4
+    }
+  }
+]

@@ -7,6 +7,12 @@ namespace BattleCity
     public sealed class ArenaController : MonoBehaviour
     {
         public LevelDefinition level;
+        public CampaignDefinition campaign;
+        private LevelDefinition[] campaignLevels;
+        public int CampaignIndex { get; private set; }
+        public int CampaignStageCount => campaignLevels?.Length ?? 1;
+        public int CurrentStageNumber => initialLevel == null ? level.stageNumber : initialLevel.stageNumber;
+        public bool HasNextStage => CampaignIndex + 1 < CampaignStageCount;
         public TankDefinition playerDefinition;
         public PlayerUpgradeDefinition playerUpgradeDefinition;
         public PickupDefinition pickupDefinition;
@@ -106,7 +112,13 @@ namespace BattleCity
 
         private void CaptureInitialConfiguration()
         {
-            initialLevel = Snapshot(level);
+            if (campaign != null)
+            {
+                campaignLevels = new LevelDefinition[campaign.stages.Length];
+                for (int i = 0; i < campaignLevels.Length; i++) campaignLevels[i] = Snapshot(campaign.stages[i]);
+                initialLevel = campaignLevels[0];
+            }
+            else initialLevel = Snapshot(level);
             initialPlayer = Snapshot(playerDefinition);
             if (pickupDefinition != null) initialPickups = Snapshot(pickupDefinition);
             if (playerUpgradeDefinition != null)
@@ -143,6 +155,36 @@ namespace BattleCity
         }
 
         public bool StartBattle() => Session != null && Session.StartBattle();
+
+        public bool AdvanceStage()
+        {
+            // Never replace a session while inside its notification/tick, or skip unfinished stages.
+            if (updating || restarting || Session == null || Session.Phase != SessionPhase.Won || !HasNextStage) return false;
+            CampaignIndex++;
+            initialLevel = campaignLevels[CampaignIndex];
+            RestartSession();
+            return true;
+        }
+
+        public bool SelectStage(int direction)
+        {
+            if (direction != -1 && direction != 1) return false;
+            if (updating || restarting || !focused || Session == null || Session.Phase != SessionPhase.Ready ||
+                singlePlayerFlow == null || singlePlayerFlow.State.Screen != SinglePlayerScreen.StageIntro || CampaignStageCount < 2)
+                return false;
+            CampaignIndex = (CampaignIndex + direction + CampaignStageCount) % CampaignStageCount;
+            initialLevel = campaignLevels[CampaignIndex];
+            RestartSession();
+            return true;
+        }
+
+        public void RestartCampaign()
+        {
+            if (updating || restarting || Session == null) return;
+            CampaignIndex = 0;
+            if (campaignLevels != null) initialLevel = campaignLevels[0];
+            RestartSession();
+        }
 
         public void RestartSession()
         {
@@ -207,10 +249,10 @@ namespace BattleCity
         {
             if (hud != null)
             {
-                hud.Render(Session, initialLevel.stageNumber);
+                hud.Render(Session, CurrentStageNumber);
                 if (singlePlayerFlow != null && singlePlayerFlow.State.Screen != SinglePlayerScreen.Battle) hud.Clear();
             }
-            if (singlePlayerFlow != null) singlePlayerFlow.Render(Session, initialLevel.stageNumber);
+            if (singlePlayerFlow != null) singlePlayerFlow.Render(Session, CurrentStageNumber);
         }
 
         private void OnApplicationFocus(bool hasFocus)
@@ -369,6 +411,13 @@ namespace BattleCity
             if (level == null || playerDefinition == null || sprites == null || mapView == null || playerRenderer == null)
                 throw new InvalidOperationException("Missing arena reference.");
             level.Validate(); playerDefinition.Validate(); sprites.Validate(); mapView.ValidateBindings();
+            if (campaign != null)
+            {
+                if (singlePlayerFlow == null || !enableSessionLifecycle || !enablePlayerLifecycle || baseRenderer == null)
+                    throw new InvalidOperationException("Campaign requires single-player flow, session/player lifecycle and base.");
+                campaign.Validate(enemyWaveDefinition, pickupDefinition, sprites);
+                if (campaign.stages[0] != level) throw new InvalidOperationException("Arena level must match the first campaign entry.");
+            }
             playerDefinition.ValidateSprites(sprites);
             if (playerUpgradeDefinition != null)
             {

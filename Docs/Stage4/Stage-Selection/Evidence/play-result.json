@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 1.28,
+      "summary": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.SinglePlayerFlowPlayModeTests.RealKeyboard_TitleIntroBattlePauseBaseLossResultsReplayAndTitle",
+          "Status": "Passed",
+          "Duration": 0.7192107,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SinglePlayerFlowPlayModeTests.RealKeyboardStageSelectionWrapsRefreshesHeadingAndStartsChosenMap",
+          "Status": "Passed",
+          "Duration": 0.4020954,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.SinglePlayerFlowPlayModeTests.VictoryResultProjectsFrozenCategoriesAndCompletion",
+          "Status": "Passed",
+          "Duration": 0.1388686,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,35 @@
+{
+  "success": false,
+  "command": "recompile",
+  "data": {
+    "status": "completed",
+    "compiling": false,
+    "failed": true,
+    "compilationFailed": true,
+    "errors": [
+      {
+        "type": "compile-error",
+        "raw": "Assets\\BattleCity\\Tests\\PlayMode\\CampaignPlayModeTests.cs(92,60): error CS0619: 'Object.GetInstanceID()' is obsolete: 'Use GetEntityId instead.'",
+        "file": "Assets\\BattleCity\\Tests\\PlayMode\\CampaignPlayModeTests.cs",
+        "line": 92,
+        "column": 60,
+        "code": "CS0619",
+        "message": "'Object.GetInstanceID()' is obsolete: 'Use GetEntityId instead.'"
+      },
+      {
+        "type": "compile-error",
+        "raw": "Assets\\BattleCity\\Tests\\PlayMode\\CampaignPlayModeTests.cs(113,65): error CS0619: 'Object.GetInstanceID()' is obsolete: 'Use GetEntityId instead.'",
+        "file": "Assets\\BattleCity\\Tests\\PlayMode\\CampaignPlayModeTests.cs",
+        "line": 113,
+        "column": 65,
+        "code": "CS0619",
+        "message": "'Object.GetInstanceID()' is obsolete: 'Use GetEntityId instead.'"
+      }
+    ],
+    "warnings": [],
+    "summary": {
+      "errors": 2,
+      "warnings": 0
+    }
+  }
+}

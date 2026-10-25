@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var s = UnityEngine.SceneManagement.SceneManager.GetActiveScene(); var c = UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); c.ValidateBindings(); return new { scene = s.path, dirty = s.isDirty, playing = UnityEditor.EditorApplication.isPlaying, background = UnityEngine.Application.runInBackground, count = c.campaign.stages.Length, first = c.campaign.stages[0].stageNumber };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "scene": "Assets/BattleCity/Scenes/SinglePlayer.unity",
+        "dirty": false,
+        "playing": false,
+        "background": false,
+        "count": 1,
+        "first": 1
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

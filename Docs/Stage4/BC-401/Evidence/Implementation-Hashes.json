@@ -1,0 +1,19 @@
+{
+  "Assets/BattleCity/Editor/SinglePlayerAuthoring.cs": "db63ae200962dc7486d78839ed545596173a4081c49fa8ebea8853da828ee914",
+  "Assets/BattleCity/Scenes/SinglePlayer.unity": "499ab818aac30bb9b66dc9631ddc6bd8f099e5341c3ea72c107a1b7d5ef47675",
+  "Assets/BattleCity/Scripts/Core/ArenaController.cs": "c0ba5410ff2017b204f56412f7a01489834357b0e90b5e2aa745eebe7eba1aab",
+  "Assets/BattleCity/Scripts/UI/SinglePlayerFlow.cs": "5d5fae1f5e7578d95d000768606a1a86d0b88dc1515b6e7e36d61bfb5f115bf3",
+  "Assets/BattleCity/Scripts/UI/SinglePlayerFlowState.cs": "0277a9438c4b82a6b4961897d66f7b814af6b6f8befffb4533590c711f99c212",
+  "Assets/BattleCity/Tests/PlayMode/SinglePlayerFlowPlayModeTests.cs": "804e381d6f31671c9cd2123f86a717c63b81e8d584f315a8edafe10cc3b8a10c",
+  "Docs/BattleCity-Implementation-Plan.md": "bcf3557e1a3ed630a120e7c18a13eaaf337427aa4bed47a98cde57104016c26a",
+  "Docs/Stage0/Core-Rules.md": "7af963f39fe4d5f871195006c5988c4a4bca6250db9c3460c419f4dc45fe6f85",
+  "Docs/Stage4/Execution-Board.md": "29fdc806c09780b14d16c5d7d5de90c00609e91155cb010e61bcbeeb85ae4348",
+  "Assets/BattleCity/Data/SinglePlayerCampaign.asset": "af299c16e931d2b925036c014559503e3a6c8490f3ab416b65c09fa27f985297",
+  "Assets/BattleCity/Data/SinglePlayerCampaign.asset.meta": "1a16323c92506aa1c141a3376011a3f2b9be6700bfcfcbb424fd8687dd19dcfe",
+  "Assets/BattleCity/Scripts/Map/CampaignDefinition.cs": "d30499337fc0da3642d4d1342c7cad07eb17fa6412a7d7e3748b5b3acfcfa22b",
+  "Assets/BattleCity/Scripts/Map/CampaignDefinition.cs.meta": "68a43109abc92fa11fb7ea1088dbd908d18fca57872c6a33606db18762e38354",
+  "Assets/BattleCity/Tests/EditMode/CampaignDefinitionTests.cs": "4b2e4488c26fc979763b0f03ec6a9289395aca239794896e929787d29b353fbb",
+  "Assets/BattleCity/Tests/EditMode/CampaignDefinitionTests.cs.meta": "e8433ac6279083861bef5f74aeabffda1f4416e25ff1442115cac7019de91778",
+  "Assets/BattleCity/Tests/PlayMode/CampaignPlayModeTests.cs": "12b310c7feebf8a997741a135a7c5d66d38b24d5dc43f681a537a59c2472498a",
+  "Assets/BattleCity/Tests/PlayMode/CampaignPlayModeTests.cs.meta": "24f0e259f350a555f99928c6f46f752560d6759983834d5870a9eacc3ad928b7"
+}

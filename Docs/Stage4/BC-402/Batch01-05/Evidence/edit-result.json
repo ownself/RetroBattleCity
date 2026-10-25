@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.42,
+      "summary": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.CampaignFirstBatchHasFiveDistinctOrderedAssets",
+          "Status": "Passed",
+          "Duration": 0.0397566,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(1)",
+          "Status": "Passed",
+          "Duration": 0.0306952,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(2)",
+          "Status": "Passed",
+          "Duration": 0.0299213,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(3)",
+          "Status": "Passed",
+          "Duration": 0.0142022,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(4)",
+          "Status": "Passed",
+          "Duration": 0.0140294,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(5)",
+          "Status": "Passed",
+          "Duration": 0.0152601,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

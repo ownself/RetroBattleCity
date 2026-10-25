@@ -42,6 +42,58 @@ namespace BattleCity.Tests
             LogAssert.NoUnexpectedReceived();
         }
 
+        [UnityTest] public IEnumerator RealKeyboardStageSelectionWrapsRefreshesHeadingAndStartsChosenMap()
+        {
+            Keys();
+            scene = EditorSceneManager.LoadSceneInPlayMode("Assets/BattleCity/Scenes/SinglePlayer.unity", new LoadSceneParameters(LoadSceneMode.Additive));
+            yield return null;
+            var c = Controller; c.SendMessage("OnApplicationFocus", true);
+            Assert.That(c.SelectStage(1), Is.False, "title is not a selection screen");
+            yield return Press(Key.Enter);
+            var original = c.Session; var bullets = c.BulletView;
+            yield return Press(Key.UpArrow);
+            Assert.That(c.CurrentStageNumber, Is.EqualTo(35));
+            Assert.That(c.singlePlayerFlow.heading.Text, Is.EqualTo("STAGE 35"));
+            Assert.That(c.Session, Is.Not.SameAs(original));
+            Assert.That(c.Session.Clock.Tick, Is.Zero);
+            yield return new WaitForSecondsRealtime(.1f);
+            Assert.That(c.CurrentStageNumber, Is.EqualTo(35), "held up must not repeat");
+            yield return Press(Key.DownArrow);
+            Assert.That(c.CurrentStageNumber, Is.EqualTo(1));
+            Assert.That(c.singlePlayerFlow.heading.Text, Is.EqualTo("STAGE 01"));
+            yield return Press(Key.S);
+            Assert.That(c.CurrentStageNumber, Is.EqualTo(2));
+            yield return Press(Key.W);
+            Assert.That(c.CurrentStageNumber, Is.EqualTo(1));
+            c.SendMessage("OnApplicationFocus", false);
+            yield return Press(Key.DownArrow);
+            Assert.That(c.CurrentStageNumber, Is.EqualTo(1));
+            c.SendMessage("OnApplicationFocus", true);
+            yield return new WaitForSecondsRealtime(.05f);
+            Assert.That(c.CurrentStageNumber, Is.EqualTo(1));
+            yield return Press(Key.UpArrow);
+            Assert.That(c.CurrentStageNumber, Is.EqualTo(35));
+            var chosen = c.Session;
+            var definition = c.campaign.stages[34];
+            for (int y = 0; y < 26; y++) for (int x = 0; x < 26; x++)
+                Assert.That(chosen.Map.TerrainAt(x, y), Is.EqualTo(definition.terrain[y * 26 + x]));
+            Assert.That(chosen.PlayerLife.RemainingLives, Is.EqualTo(3));
+            Assert.That(chosen.Score, Is.Zero); Assert.That(chosen.PlayerUpgrades.Level, Is.Zero);
+            Assert.That(c.BulletView, Is.SameAs(bullets));
+            yield return Press(Key.Enter, Key.Space, Key.UpArrow);
+            // A fresh navigation edge wins over confirm. Up selects 34, held confirm cannot start it.
+            Assert.That(c.CurrentStageNumber, Is.EqualTo(34));
+            Assert.That(c.singlePlayerFlow.State.Screen, Is.EqualTo(SinglePlayerScreen.StageIntro));
+            yield return new WaitForSecondsRealtime(.05f);
+            Assert.That(c.Session.Clock.Tick, Is.Zero);
+            yield return Press(Key.Enter, Key.Space);
+            yield return Until(() => c.Session.Clock.Tick > 0);
+            Assert.That(c.hud.DisplayedStage, Is.EqualTo(34));
+            Assert.That(c.Session.PlayerWeapon.ActiveBullets, Is.Zero);
+            Assert.That(c.SelectStage(1), Is.False, "battle cannot select");
+            Debug.Log($"Stage selection real keyboard 01->35->01->02->01->35->34; started tick {c.Session.Clock.Tick}");
+        }
+
         [UnityTest] public IEnumerator VictoryResultProjectsFrozenCategoriesAndCompletion()
         {
             Keys();
@@ -82,8 +134,8 @@ namespace BattleCity.Tests
                 flow.State.Sample(PlayerButtons.Start, true, s.Phase);
                 flow.Render(s, 1);
                 Assert.That(flow.State.Screen, Is.EqualTo(SinglePlayerScreen.Complete));
-                Assert.That(flow.heading.Text, Is.EqualTo("STAGE COMPLETE"));
-                Assert.That(flow.lines[0].Text, Is.EqualTo("END OF CURRENT SINGLE STAGE"));
+                Assert.That(flow.heading.Text, Is.EqualTo("CAMPAIGN COMPLETE"));
+                Assert.That(flow.lines[0].Text, Is.EqualTo("ALL CONFIGURED STAGES CLEARED"));
             }
             finally { s.Bullets.Clear(); s.Effects.Clear(); Object.Destroy(level); Object.Destroy(wave); }
         }

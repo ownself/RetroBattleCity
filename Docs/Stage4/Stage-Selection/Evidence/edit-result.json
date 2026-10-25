@@ -1,0 +1,77 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.36,
+      "summary": {
+        "total": 7,
+        "passed": 7,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.AliasesAndOpposedKeysDoNotDuplicateSelection",
+          "Status": "Passed",
+          "Duration": 0.0189904,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.BattleDirectionsNeverSelectStage",
+          "Status": "Passed",
+          "Duration": 0.0004434,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.DirectionEmitsOnceUntilReleased(Up,PreviousSelection)",
+          "Status": "Passed",
+          "Duration": 0.0008276,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.DirectionEmitsOnceUntilReleased(W,PreviousSelection)",
+          "Status": "Passed",
+          "Duration": 0.0004119,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.DirectionEmitsOnceUntilReleased(Down,NextSelection)",
+          "Status": "Passed",
+          "Duration": 0.0003544,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.DirectionEmitsOnceUntilReleased(S,NextSelection)",
+          "Status": "Passed",
+          "Duration": 0.0003702,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageSelectionTests.NavigationConsumesSimultaneousConfirmAndFocusBlocksHeldKeys",
+          "Status": "Passed",
+          "Duration": 0.0002402,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

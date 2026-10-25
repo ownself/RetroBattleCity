@@ -1,0 +1,280 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.95,
+      "summary": {
+        "total": 36,
+        "passed": 36,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.CampaignHasThirtyFiveDistinctOrderedAssets",
+          "Status": "Passed",
+          "Duration": 0.1083747,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(1)",
+          "Status": "Passed",
+          "Duration": 0.0224994,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(2)",
+          "Status": "Passed",
+          "Duration": 0.0151617,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(3)",
+          "Status": "Passed",
+          "Duration": 0.0120672,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(4)",
+          "Status": "Passed",
+          "Duration": 0.0170184,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(5)",
+          "Status": "Passed",
+          "Duration": 0.0301351,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(6)",
+          "Status": "Passed",
+          "Duration": 0.0150912,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(7)",
+          "Status": "Passed",
+          "Duration": 0.0150736,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(8)",
+          "Status": "Passed",
+          "Duration": 0.0141761,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(9)",
+          "Status": "Passed",
+          "Duration": 0.0133701,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(10)",
+          "Status": "Passed",
+          "Duration": 0.0139334,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(11)",
+          "Status": "Passed",
+          "Duration": 0.0111239,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(12)",
+          "Status": "Passed",
+          "Duration": 0.0136596,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(13)",
+          "Status": "Passed",
+          "Duration": 0.0162479,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(14)",
+          "Status": "Passed",
+          "Duration": 0.0303148,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(15)",
+          "Status": "Passed",
+          "Duration": 0.01072,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(16)",
+          "Status": "Passed",
+          "Duration": 0.0111116,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(17)",
+          "Status": "Passed",
+          "Duration": 0.0159184,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(18)",
+          "Status": "Passed",
+          "Duration": 0.0152913,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(19)",
+          "Status": "Passed",
+          "Duration": 0.0143141,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(20)",
+          "Status": "Passed",
+          "Duration": 0.0146642,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(21)",
+          "Status": "Passed",
+          "Duration": 0.0130899,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(22)",
+          "Status": "Passed",
+          "Duration": 0.0135174,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(23)",
+          "Status": "Passed",
+          "Duration": 0.0349153,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(24)",
+          "Status": "Passed",
+          "Duration": 0.0156403,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(25)",
+          "Status": "Passed",
+          "Duration": 0.0154877,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(26)",
+          "Status": "Passed",
+          "Duration": 0.015248,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(27)",
+          "Status": "Passed",
+          "Duration": 0.0154896,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(28)",
+          "Status": "Passed",
+          "Duration": 0.015019,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(29)",
+          "Status": "Passed",
+          "Duration": 0.0147504,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(30)",
+          "Status": "Passed",
+          "Duration": 0.0120936,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(31)",
+          "Status": "Passed",
+          "Duration": 0.0120984,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(32)",
+          "Status": "Passed",
+          "Duration": 0.0180203,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(33)",
+          "Status": "Passed",
+          "Duration": 0.030408,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(34)",
+          "Status": "Passed",
+          "Duration": 0.0156168,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.StageBatchDataTests.EveryReferenceCellMatchesInteractiveDataAndPlacement(35)",
+          "Status": "Passed",
+          "Duration": 0.0135808,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

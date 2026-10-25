@@ -1,7 +1,7 @@
 namespace BattleCity
 {
     public enum SinglePlayerScreen { Title, StageIntro, Battle, Results, Complete, GameOver }
-    public enum SinglePlayerAction { None, Restart, StartBattle }
+    public enum SinglePlayerAction { None, Restart, StartBattle, NextStage, PreviousSelection, NextSelection }
 
     /// <summary>One input owner; screen changes consume their edge and never tick combat in the same frame.</summary>
     public sealed class SinglePlayerFlowState
@@ -14,7 +14,7 @@ namespace BattleCity
         private const PlayerButtons Up = PlayerButtons.W | PlayerButtons.Up;
         private const PlayerButtons Down = PlayerButtons.S | PlayerButtons.Down;
 
-        public SinglePlayerAction Sample(PlayerButtons buttons, bool focused, SessionPhase phase)
+        public SinglePlayerAction Sample(PlayerButtons buttons, bool focused, SessionPhase phase, bool hasNextStage = false)
         {
             var old = previous;
             previous = buttons;
@@ -34,6 +34,16 @@ namespace BattleCity
                 }
                 return SinglePlayerAction.None;
             }
+            if (Screen == SinglePlayerScreen.StageIntro)
+            {
+                bool upHeld = (buttons & Up) != 0, downHeld = (buttons & Down) != 0;
+                if (upHeld != downHeld)
+                {
+                    // Navigation wins over simultaneous confirm; aliases share a single release gate.
+                    if (upHeld && (old & Up) == 0) return SinglePlayerAction.PreviousSelection;
+                    if (downHeld && (old & Down) == 0) return SinglePlayerAction.NextSelection;
+                }
+            }
             if (Screen == SinglePlayerScreen.Complete || Screen == SinglePlayerScreen.GameOver)
             {
                 bool up = (buttons & Up) != 0 && (old & Up) == 0;
@@ -50,6 +60,11 @@ namespace BattleCity
                     Screen = SinglePlayerScreen.Battle;
                     return SinglePlayerAction.StartBattle;
                 case SinglePlayerScreen.Results:
+                    if (won && hasNextStage)
+                    {
+                        Screen = SinglePlayerScreen.StageIntro;
+                        return SinglePlayerAction.NextStage;
+                    }
                     Screen = won ? SinglePlayerScreen.Complete : SinglePlayerScreen.GameOver;
                     Selection = 0;
                     break;

@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleCity.Runtime::BattleCity.ArenaController
   level: {fileID: 11400000, guid: f6d6dc8b03b323d4887d49ced670c862, type: 2}
+  campaign: {fileID: 11400000, guid: 3d873dced8c3fcd418086f8f7bf1d549, type: 2}
   playerDefinition: {fileID: 11400000, guid: 09ec8dcb8bf142c4087182defbce2524, type: 2}
   playerUpgradeDefinition: {fileID: 11400000, guid: 6efa33ead80927047b4520ef3f4f4cba, type: 2}
   pickupDefinition: {fileID: 11400000, guid: e15bea4a07ff18e40afbb78d82b52f83, type: 2}

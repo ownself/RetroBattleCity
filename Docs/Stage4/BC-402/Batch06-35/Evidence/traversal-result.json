@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.59,
+      "summary": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.StageBatchPlayModeTests.AuthoredCampaignCompletesAllThirtyFiveStagesOnOneController",
+          "Status": "Failed",
+          "Duration": 0.5290062,
+          "Message": "  stage 9 bounded completion\r\n  Expected: Won\r\n  But was:  Lost\r\n",
+          "StackTrace": "at BattleCity.Tests.StageBatchPlayModeTests+<AuthoredCampaignCompletesAllThirtyFiveStagesOnOneController>d__2.MoveNext () [0x002d9] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\PlayMode\\StageBatchPlayModeTests.cs:51\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@ee3fe9477490\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,133 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.32,
+      "summary": {
+        "total": 15,
+        "passed": 15,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.CampaignDefinitionTests.EmptyCampaignRejected",
+          "Status": "Passed",
+          "Duration": 0.0219725,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignDefinitionTests.InvalidDataReportsEntryAndCause(\"size\",\"26x26\")",
+          "Status": "Passed",
+          "Duration": 0.0013692,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignDefinitionTests.InvalidDataReportsEntryAndCause(\"terrain\",\"Unknown terrain\")",
+          "Status": "Passed",
+          "Duration": 0.0003276,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignDefinitionTests.InvalidDataReportsEntryAndCause(\"spawn\",\"Missing enemy spawn\")",
+          "Status": "Passed",
+          "Duration": 0.0008521,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignDefinitionTests.InvalidDataReportsEntryAndCause(\"blocked\",\"Blocked spawn/base\")",
+          "Status": "Passed",
+          "Duration": 0.0035411,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignDefinitionTests.InvalidDataReportsEntryAndCause(\"overlap\",\"Overlapping\")",
+          "Status": "Passed",
+          "Duration": 0.0011892,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignDefinitionTests.InvalidDataReportsEntryAndCause(\"sequence\",\"nonempty\")",
+          "Status": "Passed",
+          "Duration": 0.0013338,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignDefinitionTests.InvalidDataReportsEntryAndCause(\"id\",\"unknown\")",
+          "Status": "Passed",
+          "Duration": 0.0026554,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignDefinitionTests.InvalidDataReportsEntryAndCause(\"number\",\"Stage number\")",
+          "Status": "Passed",
+          "Duration": 0.000735,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignDefinitionTests.InvalidDataReportsEntryAndCause(\"missing\",\"Missing level\")",
+          "Status": "Passed",
+          "Duration": 0.0002716,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignDefinitionTests.InvalidDataReportsEntryAndCause(\"duplicate\",\"unique\")",
+          "Status": "Passed",
+          "Duration": 0.0023074,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignDefinitionTests.LaterStageInvalidPickupIndexIsRejectedBeforePlay",
+          "Status": "Passed",
+          "Duration": 0.0028992,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignDefinitionTests.MissingWaveRejected",
+          "Status": "Passed",
+          "Duration": 0.0037167,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignDefinitionTests.NextStageConfirmationIsSingleEdgeAndFinalVictoryEnds",
+          "Status": "Passed",
+          "Duration": 0.0094539,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.CampaignDefinitionTests.ValidSingleStageAccepted",
+          "Status": "Passed",
+          "Duration": 0.0022391,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

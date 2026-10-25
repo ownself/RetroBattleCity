@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "if (UnityEditor.EditorApplication.isPlaying) throw new System.InvalidOperationException(\"Exit Play first\"); var s = UnityEngine.SceneManagement.SceneManager.GetActiveScene(); if (s.isDirty) throw new System.InvalidOperationException(\"Save scene first\"); s = UnityEditor.SceneManagement.EditorSceneManager.OpenScene(BattleCity.Editor.SinglePlayerAuthoring.ScenePath); var c = UnityEngine.Object.FindFirstObjectByType<BattleCity.ArenaController>(); BattleCity.Editor.SinglePlayerAuthoring.BindCampaign(c); c.ValidateBindings(); UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(s); UnityEditor.SceneManagement.EditorSceneManager.SaveScene(s); return c.campaign.stages.Length;"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": 1
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

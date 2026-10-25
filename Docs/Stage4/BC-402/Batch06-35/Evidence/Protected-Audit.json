@@ -1,0 +1,9 @@
+{
+  "compared": 172,
+  "changed": [
+    "Assets\\BattleCity\\Data\\SinglePlayerCampaign.asset"
+  ],
+  "expected": [
+    "Assets/BattleCity/Data/SinglePlayerCampaign.asset"
+  ]
+}

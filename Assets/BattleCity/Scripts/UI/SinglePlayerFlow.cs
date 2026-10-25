@@ -15,12 +15,20 @@ namespace BattleCity
         public StageResult DisplayedResult { get; private set; }
         private SinglePlayerScreen? rendered;
         private int selection = -1;
+        private int renderedStage = -1;
 
         public bool Route(ArenaController controller, PlayerButtons buttons, bool focused)
         {
             var before = State.Screen;
-            var action = State.Sample(buttons, focused, controller.Session.Phase);
-            if (action == SinglePlayerAction.Restart) controller.RestartSession();
+            var action = State.Sample(buttons, focused, controller.Session.Phase, controller.HasNextStage);
+            if (action == SinglePlayerAction.Restart)
+            {
+                if (before == SinglePlayerScreen.Battle) controller.RestartSession();
+                else controller.RestartCampaign();
+            }
+            if (action == SinglePlayerAction.PreviousSelection) controller.SelectStage(-1);
+            if (action == SinglePlayerAction.NextSelection) controller.SelectStage(1);
+            if (action == SinglePlayerAction.NextStage) controller.AdvanceStage();
             if (action == SinglePlayerAction.StartBattle) controller.StartBattle();
             bool combat = before == SinglePlayerScreen.Battle && State.Screen == SinglePlayerScreen.Battle;
             if (!combat) controller.Session.SuppressInput(buttons);
@@ -32,8 +40,8 @@ namespace BattleCity
             bool visible = State.Screen != SinglePlayerScreen.Battle;
             screenCanvas.enabled = visible && isActiveAndEnabled;
             if (!visible) { rendered = State.Screen; return; }
-            if (rendered == State.Screen && selection == State.Selection && DisplayedResult == session?.Result) return;
-            rendered = State.Screen; selection = State.Selection; DisplayedResult = session?.Result;
+            if (rendered == State.Screen && selection == State.Selection && renderedStage == stage && DisplayedResult == session?.Result) return;
+            rendered = State.Screen; selection = State.Selection; renderedStage = stage; DisplayedResult = session?.Result;
             titleArt.enabled = State.Screen == SinglePlayerScreen.Title;
             foreach (var line in lines) line.Text = "";
             string number = stage.ToString("00", CultureInfo.InvariantCulture);
@@ -48,6 +56,7 @@ namespace BattleCity
                     break;
                 case SinglePlayerScreen.StageIntro:
                     heading.Text = "STAGE " + number;
+                    lines[1].Text = "UP DOWN OR W S SELECT STAGE";
                     lines[2].Text = "PROTECT YOUR BASE";
                     lines[4].Text = "ENTER OR SPACE TO BEGIN";
                     break;
@@ -69,8 +78,8 @@ namespace BattleCity
                     lines[7].Text = "ENTER OR SPACE TO CONTINUE";
                     break;
                 default:
-                    heading.Text = State.Screen == SinglePlayerScreen.Complete ? "STAGE COMPLETE" : "GAME OVER";
-                    lines[0].Text = State.Screen == SinglePlayerScreen.Complete ? "END OF CURRENT SINGLE STAGE" : FailureCaption(session.Result);
+                    heading.Text = State.Screen == SinglePlayerScreen.Complete ? "CAMPAIGN COMPLETE" : "GAME OVER";
+                    lines[0].Text = State.Screen == SinglePlayerScreen.Complete ? "ALL CONFIGURED STAGES CLEARED" : FailureCaption(session.Result);
                     lines[3].Text = (selection == 0 ? "> " : "  ") + "PLAY AGAIN";
                     lines[4].Text = (selection == 1 ? "> " : "  ") + "TITLE";
                     lines[6].Text = "UP DOWN SELECT  ENTER CONFIRM";

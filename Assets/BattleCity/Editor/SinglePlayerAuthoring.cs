@@ -11,6 +11,7 @@ namespace BattleCity.Editor
     public static class SinglePlayerAuthoring
     {
         public const string ScenePath = "Assets/BattleCity/Scenes/SinglePlayer.unity";
+        public const string CampaignPath = "Assets/BattleCity/Data/SinglePlayerCampaign.asset";
         public const string TitlePath = "Assets/BattleCity/Art/Title.png";
         private const string SourcePath = "Assets/Sprites/NES - Battle City (JPN) - Miscellaneous - Miscellaneous.png";
 
@@ -45,11 +46,28 @@ namespace BattleCity.Editor
             flow.lines = new PixelHudText[8];
             for (int i = 0; i < flow.lines.Length; i++) flow.lines[i] = Caption(rect, "Row " + i, 24, 172 - i * 20, 224, 5, 1);
             controller.singlePlayerFlow = flow;
+            BindCampaign(controller);
             flow.Render(null, controller.level.stageNumber);
             controller.ValidateBindings();
             EditorSceneManager.MarkSceneDirty(scene);
             if (!EditorSceneManager.SaveScene(scene)) throw new InvalidOperationException("Cannot save single player scene.");
             return ScenePath;
+        }
+
+        public static void BindCampaign(ArenaController controller)
+        {
+            var campaign = AssetDatabase.LoadAssetAtPath<CampaignDefinition>(CampaignPath);
+            if (campaign == null)
+            {
+                campaign = ScriptableObject.CreateInstance<CampaignDefinition>();
+                campaign.stages = new[] { AssetDatabase.LoadAssetAtPath<LevelDefinition>(Stage01Authoring.LevelPath) };
+                AssetDatabase.CreateAsset(campaign, CampaignPath);
+            }
+            campaign.Validate(controller.enemyWaveDefinition, controller.pickupDefinition, controller.sprites);
+            controller.campaign = campaign;
+            controller.level = campaign.stages[0];
+            EditorUtility.SetDirty(controller);
+            AssetDatabase.SaveAssetIfDirty(campaign);
         }
 
         private static void PrepareTitle()
