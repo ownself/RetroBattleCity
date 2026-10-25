@@ -44,6 +44,15 @@ namespace BattleCity
             RemainingLives = Parameters.InitialLives;
         }
 
+        /// <summary>Pickup reward only. The ceiling never truncates existing lives or revives a dead generation.</summary>
+        public bool TryAddLife(int maximumLives)
+        {
+            if (maximumLives < 1) throw new ArgumentOutOfRangeException(nameof(maximumLives));
+            if (stepping || !IsAlive || IsExhausted || RemainingLives >= maximumLives) return false;
+            RemainingLives++; // RemainingLives < maximumLives <= int.MaxValue, so cannot overflow.
+            return true;
+        }
+
         /// <summary>
         /// playerAliveAfterDamage is the host's settled snapshot of the current generation. Only this model's
         /// successful callback may revive it. Repeated dead snapshots cannot spend another life.

@@ -1,0 +1,30 @@
+{
+  "success": false,
+  "command": "status",
+  "data": {
+    "count": 1,
+    "instances": [
+      {
+        "project": "H:\\Projects\\Unities\\BattleCity",
+        "projectPath": "H:\\Projects\\Unities\\BattleCity",
+        "pid": 26924,
+        "state": "starting",
+        "blockedBy": {
+          "reason": "dialog",
+          "dialogs": [
+            {
+              "title": "Reloading Domain"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "errors": [
+    {
+      "code": "STATUS_BLOCKED_BY_DIALOG",
+      "message": "有一个对话框正在阻塞 Unity Editor：\"Reloading Domain\"。请在 Editor 中响应或关闭该对话框，然后重试。"
+    }
+  ],
+  "warnings": []
+}

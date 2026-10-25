@@ -1,0 +1,63 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.16,
+      "summary": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_ArmorBatchAndSameTickBulletDeath_ScoreAndExplosionExactlyOnce_NoProjectileTerrainOrBaseDamage",
+          "Status": "Passed",
+          "Duration": 0.0661648,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_DoesNotReplayOnLaterEnemy_ReservationAndPendingAndCadenceConserved",
+          "Status": "Passed",
+          "Duration": 0.005363,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_KillsNewlyCommittedCarrierWithoutDropping_OnceWaveStepOnly",
+          "Status": "Passed",
+          "Duration": 0.0058238,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_LastEnemyWinsSameTick_OneTerminalEventAndCleanup",
+          "Status": "Passed",
+          "Duration": 0.0073693,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_SameTickBaseFailurePreventsCollectionAndKills_FailureWins",
+          "Status": "Passed",
+          "Duration": 0.0029793,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

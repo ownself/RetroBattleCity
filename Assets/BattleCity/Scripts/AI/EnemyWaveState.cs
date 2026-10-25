@@ -115,6 +115,14 @@ namespace BattleCity
             finally { stepping = false; }
         }
 
+        /// <summary>Post-pickup death snapshot only. Never advances spawning, reservations, cadence or RNG.</summary>
+        internal void RefreshAliveCount(int aliveCount)
+        {
+            if (aliveCount < 0 || aliveCount > MaxActiveEnemies - ReservedCount)
+                throw new ArgumentOutOfRangeException(nameof(aliveCount));
+            AliveCount = aliveCount;
+        }
+
         private static uint NextRandom(uint value)
         {
             value ^= value << 13; value ^= value >> 17; value ^= value << 5; return value;

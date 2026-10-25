@@ -1,0 +1,350 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.64,
+      "summary": {
+        "total": 46,
+        "passed": 46,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationAndRefresh_DeferLiveTankAndBirthReservationIndependently_NoPoseMutation",
+          "Status": "Passed",
+          "Duration": 0.0303226,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(1)",
+          "Status": "Passed",
+          "Duration": 0.0022348,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(2)",
+          "Status": "Passed",
+          "Duration": 0.0008215,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(3)",
+          "Status": "Passed",
+          "Duration": 0.0007935,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(4)",
+          "Status": "Passed",
+          "Duration": 0.0007694,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(5)",
+          "Status": "Passed",
+          "Duration": 0.0007679,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(6)",
+          "Status": "Passed",
+          "Duration": 0.0007709,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(7)",
+          "Status": "Passed",
+          "Duration": 0.0007624,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(8)",
+          "Status": "Passed",
+          "Duration": 0.0007549,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(9)",
+          "Status": "Passed",
+          "Duration": 0.0007638,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(10)",
+          "Status": "Passed",
+          "Duration": 0.0007679,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(11)",
+          "Status": "Passed",
+          "Duration": 0.0050957,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(12)",
+          "Status": "Passed",
+          "Duration": 0.0012143,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(13)",
+          "Status": "Passed",
+          "Duration": 0.0009366,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(14)",
+          "Status": "Passed",
+          "Duration": 0.0027875,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(15)",
+          "Status": "Passed",
+          "Duration": 0.0019517,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ArenaMapView_IncrementalRevisionProjectsActivationAndRestoration_NoSceneOrAssetChanges",
+          "Status": "Passed",
+          "Duration": 0.034216,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.CancelFromActiveOrPendingRestore_ForcesExactSnapshotAndClearsAllWork_Idempotent(False)",
+          "Status": "Passed",
+          "Duration": 0.0016716,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.CancelFromActiveOrPendingRestore_ForcesExactSnapshotAndClearsAllWork_Idempotent(True)",
+          "Status": "Passed",
+          "Duration": 0.0008072,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.DurationIs1200FutureCompleteTicks_RefreshNotAddition_ExpiryAtEndOfLastTick",
+          "Status": "Passed",
+          "Duration": 0.0014151,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(8,8,5)",
+          "Status": "Passed",
+          "Duration": 0.0060703,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(200,8,5)",
+          "Status": "Passed",
+          "Duration": 0.0052851,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(8,200,2)",
+          "Status": "Passed",
+          "Duration": 0.0054716,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(200,200,2)",
+          "Status": "Passed",
+          "Duration": 0.0050702,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(104,200,4)",
+          "Status": "Passed",
+          "Duration": 0.0050016,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ExpiredActivationPendingNeverBuildsSteelLater_OnlyOriginalRestorationRetries",
+          "Status": "Passed",
+          "Duration": 0.0010595,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.Expiry_DefersBlockingOriginalsPerCell_IncludingReservation_RestoresEmptyImmediately",
+          "Status": "Passed",
+          "Duration": 0.0015883,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.FortifiedCellsUseExistingSteelBulletRules_DestroyedWallStaysOpenUntilNewActivation(False)",
+          "Status": "Passed",
+          "Duration": 0.0098848,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.FortifiedCellsUseExistingSteelBulletRules_DestroyedWallStaysOpenUntilNewActivation(True)",
+          "Status": "Passed",
+          "Duration": 0.0008027,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(105,8)",
+          "Status": "Passed",
+          "Duration": 0.0035956,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(104,9)",
+          "Status": "Passed",
+          "Duration": 0.0006804,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(0,8)",
+          "Status": "Passed",
+          "Duration": 0.0006223,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(208,8)",
+          "Status": "Passed",
+          "Duration": 0.0006627,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(104,0)",
+          "Status": "Passed",
+          "Duration": 0.0006158,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(104,208)",
+          "Status": "Passed",
+          "Duration": 0.0005845,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.InvalidDurationAndNullDependenciesAreRejected_CancelBeforeActivationIsSafe",
+          "Status": "Passed",
+          "Duration": 0.0014603,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Empty,byte.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0025802,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Brick,9)",
+          "Status": "Passed",
+          "Duration": 0.0026234,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Steel,byte.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0035881,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Water,byte.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0017861,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Grass,byte.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0017113,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Ice,byte.MinValue)",
+          "Status": "Passed",
+          "Duration": 0.0016799,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.ReactivationWhileRestoringKeepsFirstSnapshot_CompletedCycleAllowsNewSnapshot",
+          "Status": "Passed",
+          "Duration": 0.0023447,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.SetTerrainCell_ExactDataAndCellRevision_OnlyChangedCellDirty_InvalidWritesAtomic",
+          "Status": "Passed",
+          "Duration": 0.0042128,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.Stage01Uring_IsEightCells_LeftTopRight_NoBaseOrBottomOrOtherChanges",
+          "Status": "Passed",
+          "Duration": 0.0070206,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.BaseFortificationStateTests.TouchingCellEdgeIsNotOccupation_StrictOverlapDefers",
+          "Status": "Passed",
+          "Duration": 0.0014442,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

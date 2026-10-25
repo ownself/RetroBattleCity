@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "AuthoredEffectDefaultsAreExplicitAndUncalibrated"
+    },
+    "result": {
+      "Summary": {
+        "Total": 1,
+        "Passed": 1,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.AuthoredEffectDefaultsAreExplicitAndUncalibrated",
+          "Status": "Passed",
+          "Duration": 0.0057301,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 0.44,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: AuthoredEffectDefaultsAreExplicitAndUncalibrated",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

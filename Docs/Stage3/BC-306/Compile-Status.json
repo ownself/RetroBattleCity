@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command script recompile_status",
+  "data": null,
+  "errors": [
+    {
+      "code": "REMOTE_COMMAND_NOT_FOUND",
+      "message": "Pipeline server returned 400 Bad Request: Command Not Found. No command named 'script recompile_status' is available. Did you mean 'script recompile_status'?"
+    }
+  ],
+  "warnings": []
+}

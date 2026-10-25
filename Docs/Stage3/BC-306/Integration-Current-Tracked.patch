@@ -1,0 +1,229 @@
+diff --git a/Assets/BattleCity/Data/Pickups.asset b/Assets/BattleCity/Data/Pickups.asset
+index 2571617..c4f4f17 100644
+--- a/Assets/BattleCity/Data/Pickups.asset
++++ b/Assets/BattleCity/Data/Pickups.asset
+@@ -13,6 +13,10 @@ MonoBehaviour:
+   m_Name: Pickups
+   m_EditorClassIdentifier: BattleCity.Runtime::BattleCity.PickupDefinition
+   seed: 303
++  helmetDurationTicks: 600
++  clockDurationTicks: 600
++  shovelDurationTicks: 1200
++  maximumLives: 9
+   carrierSequenceIndices: 030000000a00000011000000i
+   requiresCalibration: 1
+   originalRulesSource: 
+diff --git a/Assets/BattleCity/Scripts/Core/ArenaSession.cs b/Assets/BattleCity/Scripts/Core/ArenaSession.cs
+index 9fca8d3..3e46294 100644
+--- a/Assets/BattleCity/Scripts/Core/ArenaSession.cs
++++ b/Assets/BattleCity/Scripts/Core/ArenaSession.cs
+@@ -44,6 +44,9 @@ namespace BattleCity
+         public PlayerLifeState PlayerLife { get; }
+         public PlayerUpgradeState PlayerUpgrades { get; }
+         public PickupState Pickups { get; }
++        public BaseFortificationState BaseFortification { get; }
++        public bool PlayerIsProtected => PlayerTank.IsAlive &&
++            ((PlayerLife?.IsProtected ?? false) || (Pickups?.HelmetRemainingTicks ?? 0) > 0);
+         public bool PlayerLifeFailureRequested => PlayerLife != null && PlayerLife.IsExhausted;
+         public event Action PlayerLivesExhausted;
+         /// <summary>Latched failure request for BC-206, not a terminal state or a combat freeze.</summary>
+@@ -81,6 +84,8 @@ namespace BattleCity
+                 if (!Map.CanOccupy(level.baseCenterPixels, BaseState.HalfSizePixels))
+                     throw new ArgumentException("Base footprint is obstructed.", nameof(level));
+                 Base = new BaseState(level.baseCenterPixels);
++                if (pickups != null)
++                    BaseFortification = new BaseFortificationState(Map, level.baseCenterPixels, pickups.shovelDurationTicks);
+             }
+             Tanks = tanks.AsReadOnly();
+             PlayerTank = AddTank(tank, CombatTeam.Player, level.playerSpawnPixels);
+@@ -238,7 +243,10 @@ namespace BattleCity
+         {
+             retired = true;
+             Pickups?.ClearActive();
++            Pickups?.ClearPlayerEffects();
++            Pickups?.ClearGlobalEffects();
+             Clock.SetPaused(true);
++            BaseFortification?.Cancel();
+             ClearCommands();
+         }
+ 
+@@ -289,6 +297,30 @@ namespace BattleCity
+             return true;
+         }
+ 
++        private void CollectFortificationOccupants()
++        {
++            CollectBlockers(null);
++            if (EnemyWave?.Reservation is EnemySpawnRequest reservation)
++                blockers.Add(new Rect((Vector2)reservation.PositionPixels - Vector2.one * TankMotor.HalfSizePixels,
++                    Vector2.one * (TankMotor.HalfSizePixels * 2)));
++        }
++
++        private bool IsFrozenEnemy(TankState tank) => tank.Team == CombatTeam.Enemy &&
++            (Pickups?.ClockRemainingTicks ?? 0) > 0;
++
++        // Caller supplies the single alive -> dead transition, regardless of damage source.
++        private void SettleTankDeath(TankState state)
++        {
++            Effects.PlayExplosion(state.Motor.Position);
++            if (state == PlayerTank) PlayerUpgrades?.ResetOnDeath(PlayerWeapon);
++            if (state.Team != CombatTeam.Enemy) return;
++            Score += state.KillScore;
++            DefeatedEnemyCount++;
++        }
++
++        private bool SettleOutcome() => flow != null && flow.Settle(BaseFailureRequested, PlayerLifeFailureRequested,
++            EnemyWave.SequenceExhausted, AliveEnemyCount, EnemyWave.PendingCount, EnemyWave.ReservedCount);
++
+         private void Step()
+         {
+             LastCommand = PlayerTank.IsAlive ? input.ConsumeTick() : new TankCommand(CardinalDirection.None);
+@@ -299,7 +331,7 @@ namespace BattleCity
+             {
+                 var tank = tanks[i];
+                 int mask = 0;
+-                if (tank.IsAlive && enemyBrains.ContainsKey(tank.EntityId))
++                if (tank.IsAlive && !IsFrozenEnemy(tank) && enemyBrains.ContainsKey(tank.EntityId))
+                 {
+                     CollectBlockers(tank);
+                     for (int direction = 0; direction < 4; direction++)
+@@ -309,10 +341,11 @@ namespace BattleCity
+                 decisionMasks.Add(mask);
+             }
+             for (int i = 0; i < tanks.Count; i++)
+-                if (enemyBrains.TryGetValue(tanks[i].EntityId, out var brain))
++                if (!IsFrozenEnemy(tanks[i]) && enemyBrains.TryGetValue(tanks[i].EntityId, out var brain))
+                     tanks[i].Command = brain.Decide(tanks[i].IsAlive, decisionMasks[i]);
+             for (int i = 0; i < tanks.Count; i++)
+             {
++                if (IsFrozenEnemy(tanks[i])) continue;
+                 CollectBlockers(tanks[i]); // Later IDs see earlier movement; no mutual crossing.
+                 tanks[i].Move(Map, blockers);
+             }
+@@ -320,7 +353,7 @@ namespace BattleCity
+             for (int i = 0; i < tanks.Count; i++)
+             {
+                 var state = tanks[i];
+-                state.Fire();
++                if (!IsFrozenEnemy(state)) state.Fire();
+                 if (state.IsAlive) targets.Add(new BulletTarget(state.EntityId, BulletHitKind.Tank, state.Team, state.Bounds));
+             }
+             if (Base != null && Base.IsAlive)
+@@ -339,7 +372,7 @@ namespace BattleCity
+                 }
+                 for (int tank = 0; tank < tanks.Count; tank++)
+                 {
+-                    if (tanks[tank] == PlayerTank && PlayerLife != null && PlayerLife.IsProtected) continue;
++                    if (tanks[tank] == PlayerTank && PlayerIsProtected) continue;
+                     var state = tanks[tank];
+                     int previousHp = state.HitPoints;
+                     bool died = state.ApplyHit(Bullets.Hits[hit]);
+@@ -349,16 +382,11 @@ namespace BattleCity
+                         hitCarriers.Add(state);
+                     }
+                     if (!died) continue;
+-                    Effects.PlayExplosion(state.Motor.Position);
+-                    if (state == PlayerTank) PlayerUpgrades?.ResetOnDeath(PlayerWeapon);
+-                    // ApplyHit returns true only on the alive -> dead transition, even for same-tick overkill.
+-                    if (state.Team == CombatTeam.Enemy)
+-                    {
+-                        Score += state.KillScore;
+-                        DefeatedEnemyCount++;
+-                    }
++                    SettleTankDeath(state);
+                 }
+             }
++            Pickups?.StepPlayerEffects(PlayerTank.IsAlive);
++            Pickups?.StepGlobalEffects();
+             // Birth commits AFTER damage. New tanks cannot enter the earlier decision/move/fire loops this tick.
+             var lifeResult = PlayerLife == null ? default : PlayerLife.Step(PlayerTank.IsAlive, TryRespawnPlayer);
+             if (!PlayerTank.IsAlive || lifeResult.Respawned)
+@@ -368,10 +396,13 @@ namespace BattleCity
+                 PlayerTank.Command = LastCommand;
+             }
+             EnemyWave?.Step(AliveEnemyCount, IsEnemySpawnOccupied, TryCreateWaveEnemy);
+-            bool ended = flow != null && flow.Settle(BaseFailureRequested, PlayerLifeFailureRequested,
+-                EnemyWave.SequenceExhausted, AliveEnemyCount, EnemyWave.PendingCount, EnemyWave.ReservedCount);
+-            if (ended) { Clock.SetPaused(true); ClearCommands(); Pickups?.ClearActive(); }
+-            else if (Pickups != null)
++            bool ended = SettleOutcome();
++            if (!ended && BaseFortification != null)
++            {
++                CollectFortificationOccupants();
++                BaseFortification.Step(blockers); // Complete future tick; births/reservations already settled, receipts not yet applied.
++            }
++            if (!ended && Pickups != null)
+             {
+                 // No terminal-tick drop/collection. Every carrier was consumed only by accepted damage.
+                 // Drop after ALL damage and births: a dead player never supplies a bogus reachability origin.
+@@ -382,8 +413,37 @@ namespace BattleCity
+                         blockers.Add(new Rect((Vector2)reservation.PositionPixels - Vector2.one * 8, Vector2.one * 16));
+                     Pickups.TryDrop(Map, Player.Position, PlayerTank.IsAlive, blockers, Base?.Bounds);
+                 }
+-                // Framework ledger only. Concrete star/shield/life/freeze/grenade/shovel effects are later tasks.
+-                Pickups.TryCollect(PlayerTank.Bounds, PlayerTank.IsAlive, Clock.Tick);
++                if (Pickups.TryCollect(PlayerTank.Bounds, PlayerTank.IsAlive, Clock.Tick))
++                {
++                    // Consume only a newly committed receipt, never replay LastCollected on later ticks/renders.
++                    switch (Pickups.LastCollected.Value.Item.Kind)
++                    {
++                        case PickupKind.Star: TryUpgradePlayer(); break;
++                        case PickupKind.Helmet: Pickups.RefreshHelmet(); break;
++                        case PickupKind.Tank: PlayerLife?.TryAddLife(Pickups.MaximumLives); break;
++                        case PickupKind.Clock: Pickups.RefreshClock(); break;
++                        case PickupKind.Grenade:
++                            for (int tank = 0; tank < tanks.Count; tank++)
++                                if (tanks[tank].Team == CombatTeam.Enemy && tanks[tank].TryKill())
++                                    SettleTankDeath(tanks[tank]);
++                            EnemyWave?.RefreshAliveCount(AliveEnemyCount);
++                            ended = SettleOutcome(); // Deaths only: never advance the wave a second time.
++                            break;
++                        case PickupKind.Shovel:
++                            if (BaseFortification != null)
++                            {
++                                CollectFortificationOccupants();
++                                BaseFortification.Activate(blockers);
++                            }
++                            break;
++                    }
++                }
++            }
++            if (ended)
++            {
++                Clock.SetPaused(true); ClearCommands(); Pickups?.ClearActive();
++                Pickups?.ClearPlayerEffects(); Pickups?.ClearGlobalEffects();
++                BaseFortification?.Cancel();
+             }
+             // All original death notifications survive simultaneous failures. The outcome is already frozen.
+             notifying = true;
+diff --git a/Assets/BattleCity/Scripts/Pickups/PickupDefinition.cs b/Assets/BattleCity/Scripts/Pickups/PickupDefinition.cs
+index 51721ac..88cf801 100644
+--- a/Assets/BattleCity/Scripts/Pickups/PickupDefinition.cs
++++ b/Assets/BattleCity/Scripts/Pickups/PickupDefinition.cs
+@@ -6,11 +6,16 @@ namespace BattleCity
+ {
+     public enum PickupKind { Clock, Grenade, Helmet, Shovel, Star, Tank }
+ 
+-    /// <summary>Project prototype rules, not verified original-game behavior. Effects belong to BC-304..306.</summary>
++    /// <summary>Project prototype rules, not verified original-game behavior.</summary>
+     [CreateAssetMenu(menuName = "Battle City/Pickup rules")]
+     public sealed class PickupDefinition : ScriptableObject
+     {
+         public uint seed = 303;
++        public int helmetDurationTicks = 600;
++        public int clockDurationTicks = 600;
++        public int shovelDurationTicks = BaseFortificationState.DefaultDurationTicks;
++        // Reward ceiling only: never truncates a session's higher initial life count.
++        public int maximumLives = 9;
+         // Zero-based successful natural wave indices: fourth, eleventh, eighteenth enemy.
+         public int[] carrierSequenceIndices = { 3, 10, 17 };
+         public bool requiresCalibration = true;
+@@ -19,6 +24,8 @@ namespace BattleCity
+         public void Validate()
+         {
+             if (seed == 0) throw new InvalidOperationException("Pickup seed must be nonzero.");
++            if (helmetDurationTicks < 1 || clockDurationTicks < 1 || shovelDurationTicks < 1 || maximumLives < 1)
++                throw new InvalidOperationException("Pickup duration and life ceiling must be positive.");
+             if (carrierSequenceIndices == null) throw new InvalidOperationException("Missing pickup carrier indices.");
+             var seen = new HashSet<int>();
+             foreach (int index in carrierSequenceIndices)

@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "command": "command test run",
+  "data": {
+    "command": "test run",
+    "parameters": {
+      "mode": "editor",
+      "filter": "SessionLifecycleIntegrationTests.ActualSharedBullets",
+      "async_tests": "true"
+    },
+    "result": {
+      "Summary": {
+        "Total": 0,
+        "Passed": 0,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [],
+      "Duration": 0,
+      "StatusPath": "Temp/pipeline_test_status.json",
+      "Mode": "EditMode",
+      "FilterApplied": "testname: SessionLifecycleIntegrationTests.ActualSharedBullets",
+      "success": true,
+      "result": "running",
+      "message": "Tests started in async mode. Poll /test-status for results."
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

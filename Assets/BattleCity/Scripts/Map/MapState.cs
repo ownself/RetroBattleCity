@@ -45,6 +45,22 @@ namespace BattleCity
             return cellRevisions[y * PixelGrid.TerrainCellsPerAxis + x];
         }
 
+        /// <summary>Exact 8px cell replacement. Brick requires a nonzero four-bit mask; other terrain requires zero.
+        /// The caller owns occupancy safety and post-sweep ordering. Unchanged data does not dirty the projection.</summary>
+        public bool SetTerrainCell(int x, int y, TerrainKind kind, byte brickMask = 0)
+        {
+            TerrainAt(x, y); // Shared bounds validation.
+            if (!Enum.IsDefined(typeof(TerrainKind), kind)) throw new ArgumentOutOfRangeException(nameof(kind));
+            if (kind == TerrainKind.Brick ? brickMask < 1 || brickMask > 15 : brickMask != 0)
+                throw new ArgumentException("Brick requires mask 1..15; non-brick terrain requires mask 0.", nameof(brickMask));
+            int index = y * PixelGrid.TerrainCellsPerAxis + x;
+            if (terrain[index] == kind && bricks[index] == brickMask) return false;
+            terrain[index] = kind;
+            bricks[index] = brickMask;
+            cellRevisions[index] = ++Revision;
+            return true;
+        }
+
         /// <summary>Damage phase, AFTER all sweeps for this tick. Returns removed 4px cells.</summary>
         public int ApplyBulletHits(IReadOnlyList<BulletHit> hits)
         {

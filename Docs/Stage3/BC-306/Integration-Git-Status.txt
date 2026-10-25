@@ -1,0 +1,33 @@
+ M Assets/BattleCity/Data/Pickups.asset
+ M Assets/BattleCity/Scripts/AI/EnemyWaveState.cs
+ M Assets/BattleCity/Scripts/Core/ArenaController.cs
+ M Assets/BattleCity/Scripts/Core/ArenaSession.cs
+ M Assets/BattleCity/Scripts/Core/PlayerLifeState.cs
+ M Assets/BattleCity/Scripts/Map/MapState.cs
+ M Assets/BattleCity/Scripts/Pickups/PickupDefinition.cs
+ M Assets/BattleCity/Scripts/Pickups/PickupState.cs
+ M Assets/BattleCity/Scripts/Tanks/TankState.cs
+ M Docs/BattleCity-Implementation-Plan.md
+ M Docs/Stage0/Core-Rules.md
+ M Docs/Stage3/Execution-Board.md
+?? .vsconfig
+?? Assets/BattleCity/Scripts/Map/BaseFortificationState.cs
+?? Assets/BattleCity/Scripts/Map/BaseFortificationState.cs.meta
+?? Assets/BattleCity/Tests/EditMode/BaseFortificationStateTests.cs
+?? Assets/BattleCity/Tests/EditMode/BaseFortificationStateTests.cs.meta
+?? Assets/BattleCity/Tests/EditMode/ClockGrenadePickupTests.cs
+?? Assets/BattleCity/Tests/EditMode/ClockGrenadePickupTests.cs.meta
+?? Assets/BattleCity/Tests/EditMode/PlayerPickupTests.cs
+?? Assets/BattleCity/Tests/EditMode/PlayerPickupTests.cs.meta
+?? Assets/BattleCity/Tests/EditMode/ShovelPickupIntegrationTests.cs
+?? Assets/BattleCity/Tests/EditMode/ShovelPickupIntegrationTests.cs.meta
+?? Assets/BattleCity/Tests/PlayMode/ClockGrenadePickupPlayModeTests.cs
+?? Assets/BattleCity/Tests/PlayMode/ClockGrenadePickupPlayModeTests.cs.meta
+?? Assets/BattleCity/Tests/PlayMode/PlayerPickupPlayModeTests.cs
+?? Assets/BattleCity/Tests/PlayMode/PlayerPickupPlayModeTests.cs.meta
+?? Assets/BattleCity/Tests/PlayMode/ShovelPickupIntegrationPlayModeTests.cs
+?? Assets/BattleCity/Tests/PlayMode/ShovelPickupIntegrationPlayModeTests.cs.meta
+?? Docs/Stage3/BC-304/
+?? Docs/Stage3/BC-305-306/
+?? Docs/Stage3/BC-305/
+?? Docs/Stage3/BC-306/

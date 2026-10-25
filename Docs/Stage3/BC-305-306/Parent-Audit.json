@@ -1,0 +1,811 @@
+{
+  "verifier": "parent assistant",
+  "baselineCount": 296,
+  "changedBaselineFiles": {
+    "Assets/BattleCity/Data/Pickups.asset": {
+      "before": "e0ccb52b541462b9a7a783f03e558d2c00651e5c53534aafc635598eff55889f",
+      "after": "40f44ee2a8cb4883f47e215bd6850c444fb3ae060f732c82ec272d19fdbb52fd"
+    },
+    "Assets/BattleCity/Scripts/AI/EnemyWaveState.cs": {
+      "before": "f74981bfa42619ef1a4f88fea3ae9b899a0e58cf25597d4fa67e2fff16f8a64c",
+      "after": "9cb4365e9b7a1b2768bebe54760ac860e9eb0a2a12f3b1df1a4c921d260fd02d"
+    },
+    "Assets/BattleCity/Scripts/Core/ArenaSession.cs": {
+      "before": "55bdeb774e89bb52e0997e84935c2c67bb6812f1941af8e61d1015b9acbc87fc",
+      "after": "69cccad7d760533fb5efb060ebe6f5971fb89203c69b37ce1396949176c8d6c6"
+    },
+    "Assets/BattleCity/Scripts/Map/MapState.cs": {
+      "before": "2c6e350f15b6848260d839ad513b18aee9c448c7b0cd86b95788a66bd14e5dea",
+      "after": "479d16da5b6a582bfcedbb3e1b4a2a542a447102d2303018772800c06572c044"
+    },
+    "Assets/BattleCity/Scripts/Pickups/PickupDefinition.cs": {
+      "before": "21ba41d5a55769acd46f5400bc7db030a98a88db8e37d6885a0fa3bc80432618",
+      "after": "6ee9ccdf193d51fcc73b0559fa99701910ba8ae80aebbfef93aa3e08434cbe6f"
+    },
+    "Assets/BattleCity/Scripts/Pickups/PickupState.cs": {
+      "before": "135983762770660fe9dce89cccbff002f08c2c6f1661b32353ba3c1ec720ccd2",
+      "after": "25d4d88b8989c411e52e3a5a8261e93818848861cb52c036f6b8a595cd21754b"
+    },
+    "Assets/BattleCity/Scripts/Tanks/TankState.cs": {
+      "before": "8f3c8e9f90fefcf4cbd76b44b9cdd7a49d1e67d717c1a46827c0390013f98223",
+      "after": "ee5c1ea558547d13eed025f305379fba3e329735ee39e67df1878ce6a066a34c"
+    }
+  },
+  "unchangedBaselineCount": 289,
+  "currentSourceHashesVerified": 95,
+  "newSourceMetaHashesVerified": 12,
+  "uniqueCount": 95,
+  "modeCounts": {
+    "EditMode": 89,
+    "PlayMode": 6
+  },
+  "summaryOnlyTests": [
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ActivationAndLaterStepUseCurrentWaveReservationAndNewBirth",
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ActivationUsesEveryLiveTank_DeferredSteelRetriesAfterTankLeaves(Player)",
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ActivationUsesEveryLiveTank_DeferredSteelRetriesAfterTankLeaves(Enemy)"
+  ],
+  "tests": {
+    "BattleCity.Tests.ClockGrenadePickupTests.AlreadyTerminalBulletKillPreventsAnyPickupReward": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ClockGrenadePickupTests.AuthoredClockDefaultIsExplicitAndUncalibrated": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ClockGrenadePickupTests.Clock_Default600FutureCompleteTicks_SnapshotsRules_FreezesAIAndExternalWeaponMotorTracks": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ClockGrenadePickupTests.Clock_NewWaveBirthStillOccurs_StaysFrozenAndBlocksPlayer_ButCanBeKilled": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ClockGrenadePickupTests.Clock_PlayerAndEnemyBulletsAndEffectsContinue_PlayerDeathDoesNotCancelGlobalEffect": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ClockGrenadePickupTests.Clock_RepeatRefreshesNotAdds_NoReceiptReplay_PauseReadyAndFocusConsumeNothing": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ClockGrenadePickupTests.Grenade_ArmorBatchAndSameTickBulletDeath_ScoreAndExplosionExactlyOnce_NoProjectileTerrainOrBaseDamage": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ClockGrenadePickupTests.Grenade_DoesNotReplayOnLaterEnemy_ReservationAndPendingAndCadenceConserved": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ClockGrenadePickupTests.Grenade_KillsNewlyCommittedCarrierWithoutDropping_OnceWaveStepOnly": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ClockGrenadePickupTests.Grenade_LastEnemyWinsSameTick_OneTerminalEventAndCleanup": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ClockGrenadePickupTests.Grenade_SameTickBaseFailurePreventsCollectionAndKills_FailureWins": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ClockGrenadePickupTests.InvalidClockDurationRejected(0)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ClockGrenadePickupTests.InvalidClockDurationRejected(-1)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ClockGrenadePickupTests.SimultaneousLastEnemyBulletDeathAndPlayerExhaustion_IsLossNotGrenadeReward": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ClockGrenadePickupPlayModeTests.Stage01_RealKeyboardUpdateClockFreezesArmorAIThenGrenadeKillsOnce_PauseAndProjection": {
+      "mode": "PlayMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ClockGrenadePickupPlayModeTests.Stage01_RestartRetiresClockAndReceipts_StartupSnapshotAndFreshWave": {
+      "mode": "PlayMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.EnemyTypesTests.Armor_SameTickOverkillScoresOnce_AndSnapshotsScoreAtBirth": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(False,False,Won,None)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(True,False,Lost,BaseDestroyed)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(False,True,Lost,PlayerLivesExhausted)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(True,True,Lost,BaseDestroyed, PlayerLivesExhausted)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.TankStateTests.IncomingHit_UsesHealthAndProtectionForPlayerAndEnemy(False)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.TankStateTests.IncomingHit_UsesHealthAndProtectionForPlayerAndEnemy(True)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.TankStateTests.SameTickAllSweepsSeeLivingFrontTarget_DeathOnlyOnceThenNextTickOpensPath": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationAndRefresh_DeferLiveTankAndBirthReservationIndependently_NoPoseMutation": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(1)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(2)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(3)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(4)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(5)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(6)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(7)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(8)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(9)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(10)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(11)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(12)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(13)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(14)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(15)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ArenaMapView_IncrementalRevisionProjectsActivationAndRestoration_NoSceneOrAssetChanges": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.CancelFromActiveOrPendingRestore_ForcesExactSnapshotAndClearsAllWork_Idempotent(False)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.CancelFromActiveOrPendingRestore_ForcesExactSnapshotAndClearsAllWork_Idempotent(True)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.DurationIs1200FutureCompleteTicks_RefreshNotAddition_ExpiryAtEndOfLastTick": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(8,8,5)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(200,8,5)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(8,200,2)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(200,200,2)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(104,200,4)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ExpiredActivationPendingNeverBuildsSteelLater_OnlyOriginalRestorationRetries": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.Expiry_DefersBlockingOriginalsPerCell_IncludingReservation_RestoresEmptyImmediately": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.FortifiedCellsUseExistingSteelBulletRules_DestroyedWallStaysOpenUntilNewActivation(False)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.FortifiedCellsUseExistingSteelBulletRules_DestroyedWallStaysOpenUntilNewActivation(True)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(105,8)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(104,9)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(0,8)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(208,8)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(104,0)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(104,208)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.InvalidDurationAndNullDependenciesAreRejected_CancelBeforeActivationIsSafe": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Empty,byte.MinValue)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Brick,9)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Steel,byte.MinValue)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Water,byte.MinValue)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Grass,byte.MinValue)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Ice,byte.MinValue)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.ReactivationWhileRestoringKeepsFirstSnapshot_CompletedCycleAllowsNewSnapshot": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.SetTerrainCell_ExactDataAndCellRevision_OnlyChangedCellDirty_InvalidWritesAtomic": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.Stage01Uring_IsEightCells_LeftTopRight_NoBaseOrBottomOrOtherChanges": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.TouchingCellEdgeIsNotOccupation_StrictOverlapDefers": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.RealBulletDamagedBrickMaskAndProjectionRevisionSurviveFortifyAndRestore": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.RestoringNonblockingTerrainNeverWaitsForOccupants(Grass)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.BaseFortificationStateTests.RestoringNonblockingTerrainNeverWaitsForOccupants(Ice)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ActivationAndLaterStepUseCurrentWaveReservationAndNewBirth": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "exact-filter-and-console-completion-summary"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ActivationUsesEveryLiveTank_DeferredSteelRetriesAfterTankLeaves(Player)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "exact-filter-and-console-completion-summary"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ActivationUsesEveryLiveTank_DeferredSteelRetriesAfterTankLeaves(Enemy)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "exact-filter-and-console-completion-summary"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_AuthoredDefault1200RequiresCalibration": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ClockHelmetAndGrenadeRemainIndependent": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_Default1200FutureCompleteTicks_SnapshotsConfigurationAndExactDamagedLayout": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ExpiryRestorationUsesReservationUntilBirthMovesAway": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ExpiryRestorationWaitsForLiveTank_PauseKeepsPending_ThenRestoresMask": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_InvalidDurationRejected(0)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_InvalidDurationRejected(-1)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_NoBaseConsumesReceiptWithoutTerrainOrImplicitComponent": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_PlayerDeathAndRespawnDoNotCancelGlobalFortification": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ReadyStartPauseFocusAndResumeDoNotConsumeExtraTime": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_RefreshRebuildsDestroyedSteelWithoutReplacingSnapshot_ReceiptDoesNotReplay": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_TerminalLossOrGrenadeVictoryRestoresAndCancelsPending(False)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_TerminalLossOrGrenadeVictoryRestoresAndCancelsPending(True)": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.PickupTests.LastEnemyTerminalTickClearsSlotAndSkipsNewDropOrCollection": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.PlayerPickupPlayModeTests.Stage01_RealKeyboardUpdateCollectsAllThree_ProjectsUpgradeShieldAndLifeHudOnce": {
+      "mode": "PlayMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.PlayerUpgradePlayModeTests.Stage01_TopLevelRealProjectileRemovesSteelTile_RestartRestoresMapWeaponAndLevel": {
+      "mode": "PlayMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.EnemyWaveIntegrationTests.SpawnCommitsSharedTankAndBrainAfterCombat_NewEnemyOnlyActsNextTick": {
+      "mode": "EditMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationPlayModeTests.Stage01_RealKeyboardUpdateShovel_AdvancesPausesAndRestoresPartialBrickTilemapAtExpiry": {
+      "mode": "PlayMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    },
+    "BattleCity.Tests.ShovelPickupIntegrationPlayModeTests.Stage01_RestartRetiresActiveAndPendingRestoration_OldMapRestoredFreshSessionAndTilemapClean": {
+      "mode": "PlayMode",
+      "status": "Passed",
+      "evidenceType": "individual-result-json"
+    }
+  },
+  "individualResultSources": {
+    "BattleCity.Tests.ClockGrenadePickupTests.AlreadyTerminalBulletKillPreventsAnyPickupReward": [
+      "Docs\\Stage3\\BC-305\\Terminal-Bullet-Final-Result.json"
+    ],
+    "BattleCity.Tests.ClockGrenadePickupTests.AuthoredClockDefaultIsExplicitAndUncalibrated": [
+      "Docs\\Stage3\\BC-305\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.ClockGrenadePickupTests.Clock_Default600FutureCompleteTicks_SnapshotsRules_FreezesAIAndExternalWeaponMotorTracks": [
+      "Docs\\Stage3\\BC-305\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.ClockGrenadePickupTests.Clock_NewWaveBirthStillOccurs_StaysFrozenAndBlocksPlayer_ButCanBeKilled": [
+      "Docs\\Stage3\\BC-305\\Clock-Birth-Death-Final-Result.json"
+    ],
+    "BattleCity.Tests.ClockGrenadePickupTests.Clock_PlayerAndEnemyBulletsAndEffectsContinue_PlayerDeathDoesNotCancelGlobalEffect": [
+      "Docs\\Stage3\\BC-305\\Clock-Player-Death-Final-Result.json"
+    ],
+    "BattleCity.Tests.ClockGrenadePickupTests.Clock_RepeatRefreshesNotAdds_NoReceiptReplay_PauseReadyAndFocusConsumeNothing": [
+      "Docs\\Stage3\\BC-305\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.ClockGrenadePickupTests.Grenade_ArmorBatchAndSameTickBulletDeath_ScoreAndExplosionExactlyOnce_NoProjectileTerrainOrBaseDamage": [
+      "Docs\\Stage3\\BC-305\\Grenade-Death-Final-Result.json"
+    ],
+    "BattleCity.Tests.ClockGrenadePickupTests.Grenade_DoesNotReplayOnLaterEnemy_ReservationAndPendingAndCadenceConserved": [
+      "Docs\\Stage3\\BC-305\\Grenade-Death-Final-Result.json"
+    ],
+    "BattleCity.Tests.ClockGrenadePickupTests.Grenade_KillsNewlyCommittedCarrierWithoutDropping_OnceWaveStepOnly": [
+      "Docs\\Stage3\\BC-305\\Grenade-Death-Final-Result.json"
+    ],
+    "BattleCity.Tests.ClockGrenadePickupTests.Grenade_LastEnemyWinsSameTick_OneTerminalEventAndCleanup": [
+      "Docs\\Stage3\\BC-305\\Grenade-Death-Final-Result.json",
+      "Docs\\Stage3\\BC-306\\Integration-Grenade-Terminal-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.ClockGrenadePickupTests.Grenade_SameTickBaseFailurePreventsCollectionAndKills_FailureWins": [
+      "Docs\\Stage3\\BC-305\\Grenade-Death-Final-Result.json",
+      "Docs\\Stage3\\BC-306\\Integration-Grenade-Base-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.ClockGrenadePickupTests.InvalidClockDurationRejected(0)": [
+      "Docs\\Stage3\\BC-305\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.ClockGrenadePickupTests.InvalidClockDurationRejected(-1)": [
+      "Docs\\Stage3\\BC-305\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.ClockGrenadePickupTests.SimultaneousLastEnemyBulletDeathAndPlayerExhaustion_IsLossNotGrenadeReward": [
+      "Docs\\Stage3\\BC-305\\Simultaneous-Death-Final-Result.json"
+    ],
+    "BattleCity.Tests.ClockGrenadePickupPlayModeTests.Stage01_RealKeyboardUpdateClockFreezesArmorAIThenGrenadeKillsOnce_PauseAndProjection": [
+      "Docs\\Stage3\\BC-305\\Play-Death-Final-Result.json",
+      "Docs\\Stage3\\BC-306\\Integration-Clock-Grenade-Play-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.ClockGrenadePickupPlayModeTests.Stage01_RestartRetiresClockAndReceipts_StartupSnapshotAndFreshWave": [
+      "Docs\\Stage3\\BC-305\\Play-Result.json",
+      "Docs\\Stage3\\BC-306\\Integration-Clock-Grenade-Play-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.EnemyTypesTests.Armor_SameTickOverkillScoresOnce_AndSnapshotsScoreAtBirth": [
+      "Docs\\Stage3\\BC-305\\Enemy-Armor-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(False,False,Won,None)": [
+      "Docs\\Stage3\\BC-305\\Lifecycle-Outcome-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(True,False,Lost,BaseDestroyed)": [
+      "Docs\\Stage3\\BC-305\\Lifecycle-Outcome-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(False,True,Lost,PlayerLivesExhausted)": [
+      "Docs\\Stage3\\BC-305\\Lifecycle-Outcome-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(True,True,Lost,BaseDestroyed, PlayerLivesExhausted)": [
+      "Docs\\Stage3\\BC-305\\Lifecycle-Outcome-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.TankStateTests.IncomingHit_UsesHealthAndProtectionForPlayerAndEnemy(False)": [
+      "Docs\\Stage3\\BC-305\\Tank-Health-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.TankStateTests.IncomingHit_UsesHealthAndProtectionForPlayerAndEnemy(True)": [
+      "Docs\\Stage3\\BC-305\\Tank-Health-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.TankStateTests.SameTickAllSweepsSeeLivingFrontTarget_DeathOnlyOnceThenNextTickOpensPath": [
+      "Docs\\Stage3\\BC-305\\Tank-Overkill-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationAndRefresh_DeferLiveTankAndBirthReservationIndependently_NoPoseMutation": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(1)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(2)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(3)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(4)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(5)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(6)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(7)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(8)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(9)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(10)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(11)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(12)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(13)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(14)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ActivationSnapshotsCurrentPartialBrick_AllMasksRestoreExactly_NotConstructorLayout(15)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ArenaMapView_IncrementalRevisionProjectsActivationAndRestoration_NoSceneOrAssetChanges": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.CancelFromActiveOrPendingRestore_ForcesExactSnapshotAndClearsAllWork_Idempotent(False)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.CancelFromActiveOrPendingRestore_ForcesExactSnapshotAndClearsAllWork_Idempotent(True)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.DurationIs1200FutureCompleteTicks_RefreshNotAddition_ExpiryAtEndOfLastTick": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(8,8,5)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(200,8,5)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(8,200,2)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(200,200,2)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.EdgeAndCornerBases_ClipRingToMapWithoutWrapping(104,200,4)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ExpiredActivationPendingNeverBuildsSteelLater_OnlyOriginalRestorationRetries": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.Expiry_DefersBlockingOriginalsPerCell_IncludingReservation_RestoresEmptyImmediately": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.FortifiedCellsUseExistingSteelBulletRules_DestroyedWallStaysOpenUntilNewActivation(False)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.FortifiedCellsUseExistingSteelBulletRules_DestroyedWallStaysOpenUntilNewActivation(True)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(105,8)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(104,9)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(0,8)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(208,8)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(104,0)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.InvalidBaseCentersAreRejectedWithoutRoundingOrMapMutation(104,208)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.InvalidDurationAndNullDependenciesAreRejected_CancelBeforeActivationIsSafe": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Empty,byte.MinValue)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Brick,9)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Steel,byte.MinValue)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Water,byte.MinValue)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Grass,byte.MinValue)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.MixedOriginalLayouts_IncludeEmptyAndNonWallTerrain_ExactRestore(Ice,byte.MinValue)": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.ReactivationWhileRestoringKeepsFirstSnapshot_CompletedCycleAllowsNewSnapshot": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.SetTerrainCell_ExactDataAndCellRevision_OnlyChangedCellDirty_InvalidWritesAtomic": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.Stage01Uring_IsEightCells_LeftTopRight_NoBaseOrBottomOrOtherChanges": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.TouchingCellEdgeIsNotOccupation_StrictOverlapDefers": [
+      "Docs\\Stage3\\BC-306\\Edit-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.RealBulletDamagedBrickMaskAndProjectionRevisionSurviveFortifyAndRestore": [
+      "Docs\\Stage3\\BC-306\\Bullet-Mask-Final-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.RestoringNonblockingTerrainNeverWaitsForOccupants(Grass)": [
+      "Docs\\Stage3\\BC-306\\Nonblocking-Result.json"
+    ],
+    "BattleCity.Tests.BaseFortificationStateTests.RestoringNonblockingTerrainNeverWaitsForOccupants(Ice)": [
+      "Docs\\Stage3\\BC-306\\Nonblocking-Result.json"
+    ],
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_AuthoredDefault1200RequiresCalibration": [
+      "Docs\\Stage3\\BC-306\\Integration-Edit-Result.json"
+    ],
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ClockHelmetAndGrenadeRemainIndependent": [
+      "Docs\\Stage3\\BC-306\\Integration-Edit-Result.json"
+    ],
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_Default1200FutureCompleteTicks_SnapshotsConfigurationAndExactDamagedLayout": [
+      "Docs\\Stage3\\BC-306\\Integration-Edit-Result.json"
+    ],
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ExpiryRestorationUsesReservationUntilBirthMovesAway": [
+      "Docs\\Stage3\\BC-306\\Integration-Expiry-Fix-Result.json"
+    ],
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ExpiryRestorationWaitsForLiveTank_PauseKeepsPending_ThenRestoresMask": [
+      "Docs\\Stage3\\BC-306\\Integration-Expiry-Fix-Result.json"
+    ],
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_InvalidDurationRejected(0)": [
+      "Docs\\Stage3\\BC-306\\Integration-Edit-Result.json"
+    ],
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_InvalidDurationRejected(-1)": [
+      "Docs\\Stage3\\BC-306\\Integration-Edit-Result.json"
+    ],
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_NoBaseConsumesReceiptWithoutTerrainOrImplicitComponent": [
+      "Docs\\Stage3\\BC-306\\Integration-Edit-Result.json"
+    ],
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_PlayerDeathAndRespawnDoNotCancelGlobalFortification": [
+      "Docs\\Stage3\\BC-306\\Integration-Edit-Result.json"
+    ],
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ReadyStartPauseFocusAndResumeDoNotConsumeExtraTime": [
+      "Docs\\Stage3\\BC-306\\Integration-Edit-Result.json"
+    ],
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_RefreshRebuildsDestroyedSteelWithoutReplacingSnapshot_ReceiptDoesNotReplay": [
+      "Docs\\Stage3\\BC-306\\Integration-Edit-Result.json"
+    ],
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_TerminalLossOrGrenadeVictoryRestoresAndCancelsPending(False)": [
+      "Docs\\Stage3\\BC-306\\Integration-Edit-Result.json"
+    ],
+    "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_TerminalLossOrGrenadeVictoryRestoresAndCancelsPending(True)": [
+      "Docs\\Stage3\\BC-306\\Integration-Edit-Result.json"
+    ],
+    "BattleCity.Tests.PickupTests.LastEnemyTerminalTickClearsSlotAndSkipsNewDropOrCollection": [
+      "Docs\\Stage3\\BC-306\\Integration-Pickup-Terminal-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.PlayerPickupPlayModeTests.Stage01_RealKeyboardUpdateCollectsAllThree_ProjectsUpgradeShieldAndLifeHudOnce": [
+      "Docs\\Stage3\\BC-306\\Integration-Player-Pickup-Play-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.PlayerUpgradePlayModeTests.Stage01_TopLevelRealProjectileRemovesSteelTile_RestartRestoresMapWeaponAndLevel": [
+      "Docs\\Stage3\\BC-306\\Integration-Upgrade-Steel-Play-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.EnemyWaveIntegrationTests.SpawnCommitsSharedTankAndBrainAfterCombat_NewEnemyOnlyActsNextTick": [
+      "Docs\\Stage3\\BC-306\\Integration-Wave-Birth-Adjacent-Result.json"
+    ],
+    "BattleCity.Tests.ShovelPickupIntegrationPlayModeTests.Stage01_RealKeyboardUpdateShovel_AdvancesPausesAndRestoresPartialBrickTilemapAtExpiry": [
+      "Docs\\Stage3\\BC-306\\Integration-Play-Result.json"
+    ],
+    "BattleCity.Tests.ShovelPickupIntegrationPlayModeTests.Stage01_RestartRetiresActiveAndPendingRestoration_OldMapRestoredFreshSessionAndTilemapClean": [
+      "Docs\\Stage3\\BC-306\\Integration-Play-Result.json"
+    ]
+  },
+  "limitations": [
+    "No test rerun by parent; independently parsed saved raw evidence",
+    "3 corrected activation tests supported by exact filter and console completion summary, no individual final JSON",
+    "Directed union across lanes, not one full all-green run"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "command": "command script recompile_status",
+  "data": {
+    "command": "script recompile_status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "failed": false,
+      "errors": [],
+      "compilationFailed": false
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

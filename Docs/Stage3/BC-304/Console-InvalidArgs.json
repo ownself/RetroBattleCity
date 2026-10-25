@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command console",
+  "data": null,
+  "errors": [
+    {
+      "code": "INVALID_COMMAND_ARGS",
+      "message": "console get 的参数无效：\n  console get 没有参数 --after。\n  console get 没有参数 --limit。"
+    }
+  ],
+  "warnings": []
+}

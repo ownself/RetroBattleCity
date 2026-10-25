@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "command": "command script recompile_status",
+  "data": {
+    "command": "script recompile_status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "failed": true,
+      "errors": [
+        "Assets\\BattleCity\\Tests\\EditMode\\PlayerPickupTests.cs(165,26): error CS1061: 'TankState' does not contain a definition for 'ApplyHit' and no accessible extension method 'ApplyHit' accepting a first argument of type 'TankState' could be found (are you missing a using directive or an assembly reference?)",
+        "Assets\\BattleCity\\Tests\\EditMode\\PlayerPickupTests.cs(170,38): error CS1061: 'TankState' does not contain a definition for 'ApplyHit' and no accessible extension method 'ApplyHit' accepting a first argument of type 'TankState' could be found (are you missing a using directive or an assembly reference?)"
+      ],
+      "compilationFailed": true
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

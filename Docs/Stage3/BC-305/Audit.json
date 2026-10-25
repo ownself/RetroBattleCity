@@ -1,0 +1,1837 @@
+{
+  "verifier": "subagent worker",
+  "head": "bdb20b0e509276be1d4818c09638e5f419e463e4",
+  "baseline": "Temp/BC305306-Before/Hashes.json",
+  "changedBaselineFiles": [
+    {
+      "path": "Assets/BattleCity/Data/Pickups.asset",
+      "before": "e0ccb52b541462b9a7a783f03e558d2c00651e5c53534aafc635598eff55889f",
+      "after": "64c9ae42c8ae8298b292f7b5b85a0a98a58dee6fef273f2422ae072d25be507f"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/AI/EnemyWaveState.cs",
+      "before": "f74981bfa42619ef1a4f88fea3ae9b899a0e58cf25597d4fa67e2fff16f8a64c",
+      "after": "9cb4365e9b7a1b2768bebe54760ac860e9eb0a2a12f3b1df1a4c921d260fd02d"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/ArenaSession.cs",
+      "before": "55bdeb774e89bb52e0997e84935c2c67bb6812f1941af8e61d1015b9acbc87fc",
+      "after": "a9fd165e74f38206fe6352417da230b177f1110301bbec6c80b13bcb70e85e99"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Pickups/PickupDefinition.cs",
+      "before": "21ba41d5a55769acd46f5400bc7db030a98a88db8e37d6885a0fa3bc80432618",
+      "after": "3220e865f509c54088ac32b30cdd6f7de340b1fdd13cf30e82f9be59ac096ef0"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Pickups/PickupState.cs",
+      "before": "135983762770660fe9dce89cccbff002f08c2c6f1661b32353ba3c1ec720ccd2",
+      "after": "25d4d88b8989c411e52e3a5a8261e93818848861cb52c036f6b8a595cd21754b"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/TankState.cs",
+      "before": "8f3c8e9f90fefcf4cbd76b44b9cdd7a49d1e67d717c1a46827c0390013f98223",
+      "after": "ee5c1ea558547d13eed025f305379fba3e329735ee39e67df1878ce6a066a34c"
+    }
+  ],
+  "newImplementationFiles": [
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/ClockGrenadePickupTests.cs",
+      "sha256": "a5b403367f619ee80779141cc8d5514bb82e6af9cdbe2b1fce79b1e248ff02fd"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/ClockGrenadePickupTests.cs.meta",
+      "sha256": "7795c8eab987c8a4edea834f655eed2ad3b2117d4af0aeb120e41c4dff4bc50e"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/ClockGrenadePickupPlayModeTests.cs",
+      "sha256": "62408a527052505376c35f3ce8291a446e40bb8f498c8ed1080bdba50e3bb426"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/ClockGrenadePickupPlayModeTests.cs.meta",
+      "sha256": "1f27d3a8e17992341980ac4189b49d796d2841f838d8011a51fe8639a4b85f64"
+    }
+  ],
+  "unchangedBaselineFiles": [
+    {
+      "path": "Assets/BattleCity/Art.meta",
+      "before": "c6a619fd1db3c24f279fad49e6041a452f5310d62d522804db7cb72a04a13734",
+      "after": "c6a619fd1db3c24f279fad49e6041a452f5310d62d522804db7cb72a04a13734"
+    },
+    {
+      "path": "Assets/BattleCity/Data.meta",
+      "before": "b15562ad0f1d4beefd5c091961efdf1c2092007ce64da6e9693ad6f18cd88533",
+      "after": "b15562ad0f1d4beefd5c091961efdf1c2092007ce64da6e9693ad6f18cd88533"
+    },
+    {
+      "path": "Assets/BattleCity/Editor.meta",
+      "before": "b1339fdbe9081050810d95116e10e272dff80d38e0dd0eba1467aeb9a54b91b2",
+      "after": "b1339fdbe9081050810d95116e10e272dff80d38e0dd0eba1467aeb9a54b91b2"
+    },
+    {
+      "path": "Assets/BattleCity/Prefabs.meta",
+      "before": "54dc8f2b2684f19711ff15072fc51d2ad42377bfd9e9453ebddb6e0c006b342b",
+      "after": "54dc8f2b2684f19711ff15072fc51d2ad42377bfd9e9453ebddb6e0c006b342b"
+    },
+    {
+      "path": "Assets/BattleCity/Scenes.meta",
+      "before": "c030afd9473fc130a2fc757debb3aaf64d1ee4e1b0199aee5ecba819906f98c5",
+      "after": "c030afd9473fc130a2fc757debb3aaf64d1ee4e1b0199aee5ecba819906f98c5"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts.meta",
+      "before": "b3a3da27179c1d7c3f0e69713cccb0dae1e87f20d5e2f877f3098d88a9604016",
+      "after": "b3a3da27179c1d7c3f0e69713cccb0dae1e87f20d5e2f877f3098d88a9604016"
+    },
+    {
+      "path": "Assets/BattleCity/Tests.meta",
+      "before": "756289131aacef25bfa2a9fd9accfd55f7f4dd21f62c1e4fd1a62fb522d7c8fc",
+      "after": "756289131aacef25bfa2a9fd9accfd55f7f4dd21f62c1e4fd1a62fb522d7c8fc"
+    },
+    {
+      "path": "Assets/BattleCity/Art/GeneralSprites.png",
+      "before": "2562110378d395a1286f9048ac321147b85470aecc5057ae8c548fce780c80f0",
+      "after": "2562110378d395a1286f9048ac321147b85470aecc5057ae8c548fce780c80f0"
+    },
+    {
+      "path": "Assets/BattleCity/Art/GeneralSprites.png.meta",
+      "before": "5a94b496e489d2285532ef799a983e52c4365e4c1f38455dee3eb744e566f9c9",
+      "after": "5a94b496e489d2285532ef799a983e52c4365e4c1f38455dee3eb744e566f9c9"
+    },
+    {
+      "path": "Assets/BattleCity/Art/MapBackground.asset",
+      "before": "190edc1e12bd86bc88fb1aaf2e2af5429e29f0112a23d9439f558b2bb2b56a79",
+      "after": "190edc1e12bd86bc88fb1aaf2e2af5429e29f0112a23d9439f558b2bb2b56a79"
+    },
+    {
+      "path": "Assets/BattleCity/Art/MapBackground.asset.meta",
+      "before": "f54758dd5f1ed23fe6429c701149e3a841a4f1a3643e98af03f22be9e3446c0f",
+      "after": "f54758dd5f1ed23fe6429c701149e3a841a4f1a3643e98af03f22be9e3446c0f"
+    },
+    {
+      "path": "Assets/BattleCity/Art/SpriteUnlit.mat",
+      "before": "3b1e22f9b7de1925ce02ad5a120ea3f611c3ae34d7bfbbcda538417f3e1c2f8b",
+      "after": "3b1e22f9b7de1925ce02ad5a120ea3f611c3ae34d7bfbbcda538417f3e1c2f8b"
+    },
+    {
+      "path": "Assets/BattleCity/Art/SpriteUnlit.mat.meta",
+      "before": "ee77227c3238adb4c64c03b9d6f791c0898329e3682f2451ab35d65850e33626",
+      "after": "ee77227c3238adb4c64c03b9d6f791c0898329e3682f2451ab35d65850e33626"
+    },
+    {
+      "path": "Assets/BattleCity/Data/CombatArena.asset",
+      "before": "1020912cef2378c0162225ff62a3f935c9e62e9bdfda3d0d8ff5d1f71272321a",
+      "after": "1020912cef2378c0162225ff62a3f935c9e62e9bdfda3d0d8ff5d1f71272321a"
+    },
+    {
+      "path": "Assets/BattleCity/Data/CombatArena.asset.meta",
+      "before": "8e5b9ea739d3db426d261b0885e3e8ea038ea5ca8adf7723d3294ddd17e5d7e8",
+      "after": "8e5b9ea739d3db426d261b0885e3e8ea038ea5ca8adf7723d3294ddd17e5d7e8"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyArmor.asset",
+      "before": "9f8f83db6bb28c04375c90fda9e243598e1b805ac38681f9811428db9694d095",
+      "after": "9f8f83db6bb28c04375c90fda9e243598e1b805ac38681f9811428db9694d095"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyArmor.asset.meta",
+      "before": "071e4c6585c7dd81ec4be9dddd8a9e0cbbb4e7b4462861bac3096ff4dc9703b3",
+      "after": "071e4c6585c7dd81ec4be9dddd8a9e0cbbb4e7b4462861bac3096ff4dc9703b3"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBalance.asset",
+      "before": "afbfe66fb5c8049dd8fce99f2324910c0c3f8209d97228ef9591d5253f7f4614",
+      "after": "afbfe66fb5c8049dd8fce99f2324910c0c3f8209d97228ef9591d5253f7f4614"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBalance.asset.meta",
+      "before": "15398f5c72356b643ac604195280895d39de0209724bf752457cadbf48802e48",
+      "after": "15398f5c72356b643ac604195280895d39de0209724bf752457cadbf48802e48"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBasic.asset",
+      "before": "c8791208bb8d698886abc837c1e5dee41044cabfdc525da88583a145bffbd8da",
+      "after": "c8791208bb8d698886abc837c1e5dee41044cabfdc525da88583a145bffbd8da"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBasic.asset.meta",
+      "before": "c2b97fb3944d555432eb0d76f27f9cf28f6ceb557d83f9a1ef3be1da3dd0569c",
+      "after": "c2b97fb3944d555432eb0d76f27f9cf28f6ceb557d83f9a1ef3be1da3dd0569c"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBasicPrototype.asset",
+      "before": "9eea749f6370d047d4c073218b72ef428f098076aece1f41d6149209442741ef",
+      "after": "9eea749f6370d047d4c073218b72ef428f098076aece1f41d6149209442741ef"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyBasicPrototype.asset.meta",
+      "before": "1768a515e45674f1f50c36fb46109fce83d84c4a1e947ffd05bfa8108916e87b",
+      "after": "1768a515e45674f1f50c36fb46109fce83d84c4a1e947ffd05bfa8108916e87b"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyFast.asset",
+      "before": "a9fa904fa1d52dea4c8dd95c767e209158b62c8c2275f84bb24b62db81a1a82b",
+      "after": "a9fa904fa1d52dea4c8dd95c767e209158b62c8c2275f84bb24b62db81a1a82b"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyFast.asset.meta",
+      "before": "4ee5c86aefd9e6994d4098c776692f70eb9b722449af69da8b1ea4ebe845d1c9",
+      "after": "4ee5c86aefd9e6994d4098c776692f70eb9b722449af69da8b1ea4ebe845d1c9"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyFastBullet.asset",
+      "before": "4d1c6313b921e313d47ab1e455302ca2940d73012c08fd192010b4a9b18d6a1c",
+      "after": "4d1c6313b921e313d47ab1e455302ca2940d73012c08fd192010b4a9b18d6a1c"
+    },
+    {
+      "path": "Assets/BattleCity/Data/EnemyFastBullet.asset.meta",
+      "before": "9903d3750b76582e9e43aa2ae99133d1094dc1a7abcd714ab4662626fdb76cfc",
+      "after": "9903d3750b76582e9e43aa2ae99133d1094dc1a7abcd714ab4662626fdb76cfc"
+    },
+    {
+      "path": "Assets/BattleCity/Data/Pickups.asset.meta",
+      "before": "6bef8db99d769ddcec7303cef738cf5316ac52fec709b9c8ac4515b18d0ffbe3",
+      "after": "6bef8db99d769ddcec7303cef738cf5316ac52fec709b9c8ac4515b18d0ffbe3"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PixelBaselineURP.asset",
+      "before": "4eea2396697939d278ed2caf0cc13c82140cf279260acf38e1a85cb81219681b",
+      "after": "4eea2396697939d278ed2caf0cc13c82140cf279260acf38e1a85cb81219681b"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PixelBaselineURP.asset.meta",
+      "before": "9b71704d2f169f343df20e474b1119a90234a9ff5827783ce5000613fa13bb49",
+      "after": "9b71704d2f169f343df20e474b1119a90234a9ff5827783ce5000613fa13bb49"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerLevel1.asset",
+      "before": "5cc4795ebe34fa14981c20993b29d3ad34d81e26b04f7a25c7771dd902d46d5e",
+      "after": "5cc4795ebe34fa14981c20993b29d3ad34d81e26b04f7a25c7771dd902d46d5e"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerLevel1.asset.meta",
+      "before": "4ae1ae1e7730baaba7e5bac17b0fadeb6122f6b66e8a6831659f258204c85b18",
+      "after": "4ae1ae1e7730baaba7e5bac17b0fadeb6122f6b66e8a6831659f258204c85b18"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerLevel2.asset",
+      "before": "0b225c00f7d87795f55388663f3aab41d93cbc1da53e8040636ddb91a789334e",
+      "after": "0b225c00f7d87795f55388663f3aab41d93cbc1da53e8040636ddb91a789334e"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerLevel2.asset.meta",
+      "before": "0a4221f91695bc4a5b86f0e252056fb5f91a5b4bea196af7f38ad7bb5cc1d2c6",
+      "after": "0a4221f91695bc4a5b86f0e252056fb5f91a5b4bea196af7f38ad7bb5cc1d2c6"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerLevel3.asset",
+      "before": "cc3c642f4fd0ffddfb4540f8debe7b0f58e4a543794627df58727ded3364f0ba",
+      "after": "cc3c642f4fd0ffddfb4540f8debe7b0f58e4a543794627df58727ded3364f0ba"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerLevel3.asset.meta",
+      "before": "55ebcfdd4605943fb05eac0492a797280a61eadd597832f79e84c07e404b1186",
+      "after": "55ebcfdd4605943fb05eac0492a797280a61eadd597832f79e84c07e404b1186"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerPrototype.asset",
+      "before": "4e0a1ab9d84fe7ec16a5866a0a7d53a5f2e18cf615d2b545a4d00382c4683c37",
+      "after": "4e0a1ab9d84fe7ec16a5866a0a7d53a5f2e18cf615d2b545a4d00382c4683c37"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerPrototype.asset.meta",
+      "before": "a772c2c832e3d6b0cff323c935014f6b2635a3462733249e8b31b3bb8d083134",
+      "after": "a772c2c832e3d6b0cff323c935014f6b2635a3462733249e8b31b3bb8d083134"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerUpgrades.asset",
+      "before": "252852439bdb93aa425c22792a69f49541278057048411c1b3f03af36f7321e8",
+      "after": "252852439bdb93aa425c22792a69f49541278057048411c1b3f03af36f7321e8"
+    },
+    {
+      "path": "Assets/BattleCity/Data/PlayerUpgrades.asset.meta",
+      "before": "6c5a8c65f03990960e8f72f8899f7293b0150fa251b03f9d1143fb7384ec7268",
+      "after": "6c5a8c65f03990960e8f72f8899f7293b0150fa251b03f9d1143fb7384ec7268"
+    },
+    {
+      "path": "Assets/BattleCity/Data/SpriteCatalog.asset",
+      "before": "cf24275543633817e568d5ce1de061012fecdad37a015fb49d82a701399905b9",
+      "after": "cf24275543633817e568d5ce1de061012fecdad37a015fb49d82a701399905b9"
+    },
+    {
+      "path": "Assets/BattleCity/Data/SpriteCatalog.asset.meta",
+      "before": "d73766a981adfecc3f297fd0c349a6d140badca4b5b07fe7a8ea0c3d1d9a1bfa",
+      "after": "d73766a981adfecc3f297fd0c349a6d140badca4b5b07fe7a8ea0c3d1d9a1bfa"
+    },
+    {
+      "path": "Assets/BattleCity/Data/Stage01.asset",
+      "before": "d0fe08e536bef7ab95506174c12fc6a7758fd853d619a59e5258fa87b7222445",
+      "after": "d0fe08e536bef7ab95506174c12fc6a7758fd853d619a59e5258fa87b7222445"
+    },
+    {
+      "path": "Assets/BattleCity/Data/Stage01.asset.meta",
+      "before": "a0596a211efd967926e311e8c611bc7e4f0d4dd55040c279305650490ed65710",
+      "after": "a0596a211efd967926e311e8c611bc7e4f0d4dd55040c279305650490ed65710"
+    },
+    {
+      "path": "Assets/BattleCity/Data/Stage01EnemyWave.asset",
+      "before": "14cdf7d07029117c82a77702915a414f71b27041cd741ead9cabfa73aa3c7a69",
+      "after": "14cdf7d07029117c82a77702915a414f71b27041cd741ead9cabfa73aa3c7a69"
+    },
+    {
+      "path": "Assets/BattleCity/Data/Stage01EnemyWave.asset.meta",
+      "before": "4a825a7edc5cfc4606766df86e46e2bf95717648e09ee098f834be2f33c35b62",
+      "after": "4a825a7edc5cfc4606766df86e46e2bf95717648e09ee098f834be2f33c35b62"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.brick8.0.0.asset",
+      "before": "a7fb2d3deb9be48069ad59414833209c1dcefbe8ad414f1158f512e9e20c30e5",
+      "after": "a7fb2d3deb9be48069ad59414833209c1dcefbe8ad414f1158f512e9e20c30e5"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.brick8.0.0.asset.meta",
+      "before": "32ed92b4e626b5cc3a49db5199a16d7222d19dab9a65362f62f0cc5ee92633e6",
+      "after": "32ed92b4e626b5cc3a49db5199a16d7222d19dab9a65362f62f0cc5ee92633e6"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.brick8.0.1.asset",
+      "before": "7c974100b3b2222c20935cbcb71ff43db19a74056e6ee7b04349b556b06b363a",
+      "after": "7c974100b3b2222c20935cbcb71ff43db19a74056e6ee7b04349b556b06b363a"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.brick8.0.1.asset.meta",
+      "before": "34f211bcb2fc2054aa7e3351fac72a69dbf24c379c09e980406ad0a47058fbe5",
+      "after": "34f211bcb2fc2054aa7e3351fac72a69dbf24c379c09e980406ad0a47058fbe5"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.brick8.1.0.asset",
+      "before": "a987c4c37c073470afa30be7dad558d9eec4eabeec4293654cecd8170c74ea04",
+      "after": "a987c4c37c073470afa30be7dad558d9eec4eabeec4293654cecd8170c74ea04"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.brick8.1.0.asset.meta",
+      "before": "9ca1548734a20e282ad33353f132e11c8e30a024038ffedfdfafa1c0ff830af5",
+      "after": "9ca1548734a20e282ad33353f132e11c8e30a024038ffedfdfafa1c0ff830af5"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.brick8.1.1.asset",
+      "before": "870f7335c7425a77f224a05eff27074b28fb096d55b73f23010f2fcf2f185ca2",
+      "after": "870f7335c7425a77f224a05eff27074b28fb096d55b73f23010f2fcf2f185ca2"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.brick8.1.1.asset.meta",
+      "before": "d3c968b8f60f659103d0c4d55e2d73ef00bef70199e98dc8e1328131a8e5448e",
+      "after": "d3c968b8f60f659103d0c4d55e2d73ef00bef70199e98dc8e1328131a8e5448e"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.steel8.0.0.asset",
+      "before": "6cef1fe32c6276af3b75a6ff0f7e8ca82e780d24eb0134ff14ffb3842b5c6c85",
+      "after": "6cef1fe32c6276af3b75a6ff0f7e8ca82e780d24eb0134ff14ffb3842b5c6c85"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.steel8.0.0.asset.meta",
+      "before": "2e965ad5ed204ee69ccc233ac6293a923d1014e3bd74bf226b63e22843509847",
+      "after": "2e965ad5ed204ee69ccc233ac6293a923d1014e3bd74bf226b63e22843509847"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.steel8.0.1.asset",
+      "before": "6136cff1149bc6d345a207f2a9629287fa15cfe94e1be65b8ef6802b4b06d56c",
+      "after": "6136cff1149bc6d345a207f2a9629287fa15cfe94e1be65b8ef6802b4b06d56c"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.steel8.0.1.asset.meta",
+      "before": "4514a5dca0ed888b5fa5263cd6ea2dc5c3e46a83339f1b1c0011cddc71b0ce37",
+      "after": "4514a5dca0ed888b5fa5263cd6ea2dc5c3e46a83339f1b1c0011cddc71b0ce37"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.steel8.1.0.asset",
+      "before": "6e7c917a676032e50988d2c206d97c3c0556ffdd16ee08c78078c6f2767a9bfe",
+      "after": "6e7c917a676032e50988d2c206d97c3c0556ffdd16ee08c78078c6f2767a9bfe"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.steel8.1.0.asset.meta",
+      "before": "9ecf2bd68bcd2622d9f4173ffa2e8429ba5c9e07e6968255d369fcce61f45307",
+      "after": "9ecf2bd68bcd2622d9f4173ffa2e8429ba5c9e07e6968255d369fcce61f45307"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.steel8.1.1.asset",
+      "before": "f593aab12f37e458fe5b622846d42f0687a4fad17cfde314679c92d2b317dc62",
+      "after": "f593aab12f37e458fe5b622846d42f0687a4fad17cfde314679c92d2b317dc62"
+    },
+    {
+      "path": "Assets/BattleCity/Data/terrain.steel8.1.1.asset.meta",
+      "before": "0b5b42488ebd21de110b7e33d6f841fd36918954c7798ebfb68d5594d1fc171d",
+      "after": "0b5b42488ebd21de110b7e33d6f841fd36918954c7798ebfb68d5594d1fc171d"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/BattleCity.Editor.asmdef",
+      "before": "9cd0bd9d6072eb499d1f72a4902f841a439833263772a7504fc097e52ae0a7f3",
+      "after": "9cd0bd9d6072eb499d1f72a4902f841a439833263772a7504fc097e52ae0a7f3"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/BattleCity.Editor.asmdef.meta",
+      "before": "e9a5d8ffb9da07b8bfb2053c65e2bc0bc6b1480afafc5480b4bcd71415343380",
+      "after": "e9a5d8ffb9da07b8bfb2053c65e2bc0bc6b1480afafc5480b4bcd71415343380"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/EnemyBalanceAuthoring.cs",
+      "before": "f2bd1a307276325eb03e152b1f8d343c6b429e2b61132f02c41ba7565f3b9ee8",
+      "after": "f2bd1a307276325eb03e152b1f8d343c6b429e2b61132f02c41ba7565f3b9ee8"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/EnemyBalanceAuthoring.cs.meta",
+      "before": "7dfca4a0f157dd6488d58a38a0b6b406be9cf34a496ff25b0cd3c9fdb5ebacfb",
+      "after": "7dfca4a0f157dd6488d58a38a0b6b406be9cf34a496ff25b0cd3c9fdb5ebacfb"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/EnemyTypesAuthoring.cs",
+      "before": "a3daa306550b1d1d8b639cff460b6e6eb64775ab80d77fe79a37daf99ab57a08",
+      "after": "a3daa306550b1d1d8b639cff460b6e6eb64775ab80d77fe79a37daf99ab57a08"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/EnemyTypesAuthoring.cs.meta",
+      "before": "55a9c24868cc7856e02621212ba694aad1d89978195112f424fefee9596e62e0",
+      "after": "55a9c24868cc7856e02621212ba694aad1d89978195112f424fefee9596e62e0"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Phase0Baseline.cs",
+      "before": "cc3391423b4490258f025f61b734505598a87526e0d594512f7201568160b648",
+      "after": "cc3391423b4490258f025f61b734505598a87526e0d594512f7201568160b648"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Phase0Baseline.cs.meta",
+      "before": "2bc2b4c6cdf132b24100ccb33f7511e5be3166062d5ef994a8633da4a4ff2c2b",
+      "after": "2bc2b4c6cdf132b24100ccb33f7511e5be3166062d5ef994a8633da4a4ff2c2b"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Phase1Arena.cs",
+      "before": "ca2b738e1d3bfb2de375a2efa7b0201418e12dc6cafe20a89cd76babe54437d7",
+      "after": "ca2b738e1d3bfb2de375a2efa7b0201418e12dc6cafe20a89cd76babe54437d7"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Phase1Arena.cs.meta",
+      "before": "3d5d081091fbfc33dab2389fa1e26547d788b580ed3bf748c02beff26039820f",
+      "after": "3d5d081091fbfc33dab2389fa1e26547d788b580ed3bf748c02beff26039820f"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/PickupAuthoring.cs",
+      "before": "b168bb4061ff80c1a51162dee378afb58f8de3e4a7017079f60b6160d63916ff",
+      "after": "b168bb4061ff80c1a51162dee378afb58f8de3e4a7017079f60b6160d63916ff"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/PickupAuthoring.cs.meta",
+      "before": "8f7ec8e25238c6c2bb2c0130d4a7588021c41252d8c241a3d4d766e4ac3cb6e7",
+      "after": "8f7ec8e25238c6c2bb2c0130d4a7588021c41252d8c241a3d4d766e4ac3cb6e7"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/PlayerUpgradeAuthoring.cs",
+      "before": "c05df8c29f19a9712377e31966a53583bde97edc66483d2a5526ef722f566bb9",
+      "after": "c05df8c29f19a9712377e31966a53583bde97edc66483d2a5526ef722f566bb9"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/PlayerUpgradeAuthoring.cs.meta",
+      "before": "c6ee56a4146e904e06d8862fb3ccef334a8b00c9ccbf2a0e2550d552c756e2e5",
+      "after": "c6ee56a4146e904e06d8862fb3ccef334a8b00c9ccbf2a0e2550d552c756e2e5"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Stage01Authoring.cs",
+      "before": "a554f341a61d75186d6756159fd8622e97392c7c02aa9f968f484ca3d39c99db",
+      "after": "a554f341a61d75186d6756159fd8622e97392c7c02aa9f968f484ca3d39c99db"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Stage01Authoring.cs.meta",
+      "before": "ef8efca795e11ed2d2df565551dbfe070b77595641c276f58c50cd05bd97a692",
+      "after": "ef8efca795e11ed2d2df565551dbfe070b77595641c276f58c50cd05bd97a692"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Stage01HudAuthoring.cs",
+      "before": "0e2df14f84f36aded3ced4c234b368fc21234de7c14966c3e1bd70b150a890cf",
+      "after": "0e2df14f84f36aded3ced4c234b368fc21234de7c14966c3e1bd70b150a890cf"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Stage01HudAuthoring.cs.meta",
+      "before": "c7a2e81f2f9ff813696eba5bb8170792ff9e0524e19ae00f2a2d963af9dfb90c",
+      "after": "c7a2e81f2f9ff813696eba5bb8170792ff9e0524e19ae00f2a2d963af9dfb90c"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Stage01Layout.txt",
+      "before": "0a3953c9303367ef0abb06c77ed42405b90bc0baea10db4d001b10f7139da13a",
+      "after": "0a3953c9303367ef0abb06c77ed42405b90bc0baea10db4d001b10f7139da13a"
+    },
+    {
+      "path": "Assets/BattleCity/Editor/Stage01Layout.txt.meta",
+      "before": "dda1df88c62f2c9373fbe1d62b66adebf3f1cf56bae6313712ea463dc75778a7",
+      "after": "dda1df88c62f2c9373fbe1d62b66adebf3f1cf56bae6313712ea463dc75778a7"
+    },
+    {
+      "path": "Assets/BattleCity/Scenes/CombatArena.unity",
+      "before": "0c55e43b775211bb110a3fdba61035dd834ddcb62e6aae2335da25f2095229c2",
+      "after": "0c55e43b775211bb110a3fdba61035dd834ddcb62e6aae2335da25f2095229c2"
+    },
+    {
+      "path": "Assets/BattleCity/Scenes/CombatArena.unity.meta",
+      "before": "01003c5447961cf33a8b465a7c9bf1910821c5f351fdad2fb250256cd24821c9",
+      "after": "01003c5447961cf33a8b465a7c9bf1910821c5f351fdad2fb250256cd24821c9"
+    },
+    {
+      "path": "Assets/BattleCity/Scenes/PixelBaseline.unity",
+      "before": "1292a53868fb9981467ceac391b2fa8a72796b55c485d86317b1b90aa475a906",
+      "after": "1292a53868fb9981467ceac391b2fa8a72796b55c485d86317b1b90aa475a906"
+    },
+    {
+      "path": "Assets/BattleCity/Scenes/PixelBaseline.unity.meta",
+      "before": "38fa7512b8af1532da2ee0389c74ce6b39981d26a7bc58b956e2bf7a909e5fe9",
+      "after": "38fa7512b8af1532da2ee0389c74ce6b39981d26a7bc58b956e2bf7a909e5fe9"
+    },
+    {
+      "path": "Assets/BattleCity/Scenes/Stage01.unity",
+      "before": "8d88c771da99c75a2f33abf5271f47b2cd5ece533bdbd681d0e65b5bdfda3571",
+      "after": "8d88c771da99c75a2f33abf5271f47b2cd5ece533bdbd681d0e65b5bdfda3571"
+    },
+    {
+      "path": "Assets/BattleCity/Scenes/Stage01.unity.meta",
+      "before": "da797173923b3a5958231c75f7f6b68f9e889bfad98ed041d6556ead9aee8798",
+      "after": "da797173923b3a5958231c75f7f6b68f9e889bfad98ed041d6556ead9aee8798"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/AI.meta",
+      "before": "38d12e1d34071068529e26780b8ad0fd0e86400b2196a709043eabd58c066124",
+      "after": "38d12e1d34071068529e26780b8ad0fd0e86400b2196a709043eabd58c066124"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/BattleCity.Runtime.asmdef",
+      "before": "ed553b4070ce44c76c2ebdd2226c7aad2f4121a46f4c378ee6408d43d07b5eec",
+      "after": "ed553b4070ce44c76c2ebdd2226c7aad2f4121a46f4c378ee6408d43d07b5eec"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/BattleCity.Runtime.asmdef.meta",
+      "before": "926532a53ef29a7279dd38670dbbdbfc067f1f83994312a46be651eded35f16f",
+      "after": "926532a53ef29a7279dd38670dbbdbfc067f1f83994312a46be651eded35f16f"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat.meta",
+      "before": "427a0f9a46863f2cd41d4de29e43be9263b50bedcbc2a08ede4595746d95e80d",
+      "after": "427a0f9a46863f2cd41d4de29e43be9263b50bedcbc2a08ede4595746d95e80d"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core.meta",
+      "before": "09c1565139b6104f26b0be8e3627790a237d3968ac1aa39d6b2c500c06da7acc",
+      "after": "09c1565139b6104f26b0be8e3627790a237d3968ac1aa39d6b2c500c06da7acc"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Input.meta",
+      "before": "f8b7a810dc1c95c21815bf0ed6bae2ed9bc42c95a16fb7a63a3a37ebe3d0204b",
+      "after": "f8b7a810dc1c95c21815bf0ed6bae2ed9bc42c95a16fb7a63a3a37ebe3d0204b"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Map.meta",
+      "before": "006a54a7a4303c3718bdd842b0685d467829c5ef7a6530e50876ae062a5dc505",
+      "after": "006a54a7a4303c3718bdd842b0685d467829c5ef7a6530e50876ae062a5dc505"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Pickups.meta",
+      "before": "bf5b19e6a3c3fa92248c0a60ce815c8844cab6ce5fbcd3b1b9544dea35c5719e",
+      "after": "bf5b19e6a3c3fa92248c0a60ce815c8844cab6ce5fbcd3b1b9544dea35c5719e"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks.meta",
+      "before": "1f583f89c622a66ab9ed538022600dd9ac3183631a385af97062683af27896ff",
+      "after": "1f583f89c622a66ab9ed538022600dd9ac3183631a385af97062683af27896ff"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/UI.meta",
+      "before": "61a8995428c36ea88df59e7030c55b97edc043a7dddedeb51aa3055fc0048fca",
+      "after": "61a8995428c36ea88df59e7030c55b97edc043a7dddedeb51aa3055fc0048fca"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode.meta",
+      "before": "5a2fc7bacaa62d04e7ebcb9e7ff64ef3898451b96a3da50eac0c7f8cc4ff3bf8",
+      "after": "5a2fc7bacaa62d04e7ebcb9e7ff64ef3898451b96a3da50eac0c7f8cc4ff3bf8"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode.meta",
+      "before": "2ac266cb7264135dfaae8a592e3217fb22cc88bfd38b642615715aad931c1d50",
+      "after": "2ac266cb7264135dfaae8a592e3217fb22cc88bfd38b642615715aad931c1d50"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/ArenaHudTests.cs",
+      "before": "93ca70f6ad55cc97f2d436a494c6348e6544038a76e4d7736346eee1297b2dad",
+      "after": "93ca70f6ad55cc97f2d436a494c6348e6544038a76e4d7736346eee1297b2dad"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/ArenaHudTests.cs.meta",
+      "before": "b4e4565c0b3fa1f6c08519060b926d53e77147c91e6fab13ee1634dc8d0bb79a",
+      "after": "b4e4565c0b3fa1f6c08519060b926d53e77147c91e6fab13ee1634dc8d0bb79a"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/BaseStateTests.cs",
+      "before": "1b24675a517133ca47680d0063119569ebd96e7fc0d178c82807a1ebd557962f",
+      "after": "1b24675a517133ca47680d0063119569ebd96e7fc0d178c82807a1ebd557962f"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/BaseStateTests.cs.meta",
+      "before": "51a630b4ed4133d0e34fc871d0feaa818b8f2ef66e5a87cf56c1b2f642dd147b",
+      "after": "51a630b4ed4133d0e34fc871d0feaa818b8f2ef66e5a87cf56c1b2f642dd147b"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/BattleCity.EditModeTests.asmdef",
+      "before": "7b2840411bb8ebe73852107f89034c2343ddafb5078e6130f045d3f4d6184608",
+      "after": "7b2840411bb8ebe73852107f89034c2343ddafb5078e6130f045d3f4d6184608"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/BattleCity.EditModeTests.asmdef.meta",
+      "before": "8e4985a7af4c57419a8ba94fe783a2fdbc71b8418e95e31d7a0944cd0ebe1539",
+      "after": "8e4985a7af4c57419a8ba94fe783a2fdbc71b8418e95e31d7a0944cd0ebe1539"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/BrickDestructionTests.cs",
+      "before": "0a52b2416f4d008612cef396bb546aa70485316832391502b725e0222f456134",
+      "after": "0a52b2416f4d008612cef396bb546aa70485316832391502b725e0222f456134"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/BrickDestructionTests.cs.meta",
+      "before": "acf4ab289df032ce9c91b3f95501a51cd90b6e62e53eee6da25b653b35ac5b07",
+      "after": "acf4ab289df032ce9c91b3f95501a51cd90b6e62e53eee6da25b653b35ac5b07"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/BulletCollisionTests.cs",
+      "before": "d6f8f0ab005bf6ba7a828fa4a74b5bfe71cc77eca0edfb7a7746eb2e26f7826b",
+      "after": "d6f8f0ab005bf6ba7a828fa4a74b5bfe71cc77eca0edfb7a7746eb2e26f7826b"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/BulletCollisionTests.cs.meta",
+      "before": "f9b990e75c902d7ecb9277233e045e6459e95edfd05ee72676f7454910f2658d",
+      "after": "f9b990e75c902d7ecb9277233e045e6459e95edfd05ee72676f7454910f2658d"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/CombatEffectsTests.cs",
+      "before": "cfd095392a315501e4c65d0ead4b6aed3cc887c802e09b8aa45e0dfaea045775",
+      "after": "cfd095392a315501e4c65d0ead4b6aed3cc887c802e09b8aa45e0dfaea045775"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/CombatEffectsTests.cs.meta",
+      "before": "7151e4958b4da7d6e9c688e2a19b1f253b92b62ccfdedd02bd4c97583de547a7",
+      "after": "7151e4958b4da7d6e9c688e2a19b1f253b92b62ccfdedd02bd4c97583de547a7"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyBalanceDefinitionTests.cs",
+      "before": "5a6e68bc2c035be721ba3678a56a6ae183c4ae557b591867159fe1b9d1d65594",
+      "after": "5a6e68bc2c035be721ba3678a56a6ae183c4ae557b591867159fe1b9d1d65594"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyBalanceDefinitionTests.cs.meta",
+      "before": "c84b89548ea3f8820fd8ec2ab7daad2d41c6e65f216bda380d60390598e06e01",
+      "after": "c84b89548ea3f8820fd8ec2ab7daad2d41c6e65f216bda380d60390598e06e01"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyBrainTests.cs",
+      "before": "9a3325766b85ee5e8182a29d78b2db0f901bb65644da39ff8dd2745547912c77",
+      "after": "9a3325766b85ee5e8182a29d78b2db0f901bb65644da39ff8dd2745547912c77"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyBrainTests.cs.meta",
+      "before": "9f54a342bba5d4a774788a6604643bd1eae1d3daa4fe95cde3c02349b0faefc9",
+      "after": "9f54a342bba5d4a774788a6604643bd1eae1d3daa4fe95cde3c02349b0faefc9"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyTypesTests.cs",
+      "before": "ac843f55e6a41f0c0908e703ab880cfd9ded2f281e040b1c46ba65581fa18a91",
+      "after": "ac843f55e6a41f0c0908e703ab880cfd9ded2f281e040b1c46ba65581fa18a91"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyTypesTests.cs.meta",
+      "before": "0a49e68ca2f2dea42fcbdc92e6f763a7c17fcc3008809f44f505fcfae743ee19",
+      "after": "0a49e68ca2f2dea42fcbdc92e6f763a7c17fcc3008809f44f505fcfae743ee19"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyWaveIntegrationTests.cs",
+      "before": "bea70afabb35a5da2ef8f4d575e1a9e51795ef1f31fde29f8de659599b24833f",
+      "after": "bea70afabb35a5da2ef8f4d575e1a9e51795ef1f31fde29f8de659599b24833f"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyWaveIntegrationTests.cs.meta",
+      "before": "b8d20c4900c0c91cbd006cdedad3d7ca7802b566cd5d4ba0d3b3fc8becdc18bc",
+      "after": "b8d20c4900c0c91cbd006cdedad3d7ca7802b566cd5d4ba0d3b3fc8becdc18bc"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyWaveStateTests.cs",
+      "before": "2e4fa62f3fdf6c2ba034e5c2da1077d0a0cc2a633a9e45f7eadfb491184264b8",
+      "after": "2e4fa62f3fdf6c2ba034e5c2da1077d0a0cc2a633a9e45f7eadfb491184264b8"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/EnemyWaveStateTests.cs.meta",
+      "before": "b083d8378f2e201cc0a81a33148a67324ee4f4da487942d58d9b92c3a10453b2",
+      "after": "b083d8378f2e201cc0a81a33148a67324ee4f4da487942d58d9b92c3a10453b2"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/Phase0Tests.cs",
+      "before": "203fb5ea2ebbe7a5c2376eb873215eca173aa4b5c03e00043ddc1e18aca382bc",
+      "after": "203fb5ea2ebbe7a5c2376eb873215eca173aa4b5c03e00043ddc1e18aca382bc"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/Phase0Tests.cs.meta",
+      "before": "ff33e882705a5da7b0530f94bccf29fcefa4079af5120d088c892ca6240f73ea",
+      "after": "ff33e882705a5da7b0530f94bccf29fcefa4079af5120d088c892ca6240f73ea"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/Phase1Tests.cs",
+      "before": "e230fb6c5050dc57cd40929d0fe142871036d19d7cf5956edcf4f52aeac92608",
+      "after": "e230fb6c5050dc57cd40929d0fe142871036d19d7cf5956edcf4f52aeac92608"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/Phase1Tests.cs.meta",
+      "before": "e55d64c59e2896c958339b5de64109ddd2b29810d26edd0af418c5551917e780",
+      "after": "e55d64c59e2896c958339b5de64109ddd2b29810d26edd0af418c5551917e780"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PickupTests.cs",
+      "before": "17e9f4bec6f07ebdf1f7f0620806109d7b1ea6107fd32ebd15ec7703aaa73d86",
+      "after": "17e9f4bec6f07ebdf1f7f0620806109d7b1ea6107fd32ebd15ec7703aaa73d86"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PickupTests.cs.meta",
+      "before": "4fda87c9e73932b42d0a1ba409ddbcee8de7e0ffdba18116f8f985cde596d71b",
+      "after": "4fda87c9e73932b42d0a1ba409ddbcee8de7e0ffdba18116f8f985cde596d71b"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PlayerLifeIntegrationTests.cs",
+      "before": "21d6c3fdff816c504ff5bc0296165711b8954690f1d3b4cf19be38fe415c520c",
+      "after": "21d6c3fdff816c504ff5bc0296165711b8954690f1d3b4cf19be38fe415c520c"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PlayerLifeIntegrationTests.cs.meta",
+      "before": "9f062c250db6346c981be1d776573a5d01265e6ca1d7fa0cec9398b710773125",
+      "after": "9f062c250db6346c981be1d776573a5d01265e6ca1d7fa0cec9398b710773125"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PlayerLifeParametersTests.cs",
+      "before": "f520e2b1337ec21dbf482bb7acdaaa3661123f8320c3a51a80af74cd8648e62e",
+      "after": "f520e2b1337ec21dbf482bb7acdaaa3661123f8320c3a51a80af74cd8648e62e"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PlayerLifeParametersTests.cs.meta",
+      "before": "b482ff667befe8a5b4b6425884e2a749e61c7f731dc673b109db00c9c1d143fe",
+      "after": "b482ff667befe8a5b4b6425884e2a749e61c7f731dc673b109db00c9c1d143fe"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PlayerLifeStateTests.cs",
+      "before": "630ef42d6a775b2434453bcb4567d44799faddd19579d05c6138744bc0fc5083",
+      "after": "630ef42d6a775b2434453bcb4567d44799faddd19579d05c6138744bc0fc5083"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PlayerLifeStateTests.cs.meta",
+      "before": "554f46a2ade4de1d34a8c7e916f182ed312f733fe9d38d71cd78a9aee20379ed",
+      "after": "554f46a2ade4de1d34a8c7e916f182ed312f733fe9d38d71cd78a9aee20379ed"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PlayerPickupTests.cs",
+      "before": "b696ccff70b24fd4ba84edcef0ee0faf984a0dd31039094dbadfc75e1ed79869",
+      "after": "b696ccff70b24fd4ba84edcef0ee0faf984a0dd31039094dbadfc75e1ed79869"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PlayerPickupTests.cs.meta",
+      "before": "0e4f1c54d286584adc9b8d52fbca6258c7b7e4fbe2a0b4b8968e98530e54a368",
+      "after": "0e4f1c54d286584adc9b8d52fbca6258c7b7e4fbe2a0b4b8968e98530e54a368"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PlayerUpgradeTests.cs",
+      "before": "86587510f2e1b2e1e57b1d6b5419d20c7e778f6c59f7d2e3140db0d25ad10ee8",
+      "after": "86587510f2e1b2e1e57b1d6b5419d20c7e778f6c59f7d2e3140db0d25ad10ee8"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/PlayerUpgradeTests.cs.meta",
+      "before": "15b824b4718ea6a811609b66fef15f2eab4e973394697dcce79b3d7f53de7734",
+      "after": "15b824b4718ea6a811609b66fef15f2eab4e973394697dcce79b3d7f53de7734"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs",
+      "before": "704fdadddff826f1ae97e6372f2964e9a9878f4158adde285e6300f36701769c",
+      "after": "704fdadddff826f1ae97e6372f2964e9a9878f4158adde285e6300f36701769c"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/RenderDeltaCombatTests.cs.meta",
+      "before": "b1665564f7b3e71c81a4865b18c38675d4534bb112002f766a4092994a5d9b47",
+      "after": "b1665564f7b3e71c81a4865b18c38675d4534bb112002f766a4092994a5d9b47"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/SessionFlowStateTests.cs",
+      "before": "6ff94a869fc95c1818cbb9d819b72feb3426a67bbaf5d7aec792c9d7c5ccaa70",
+      "after": "6ff94a869fc95c1818cbb9d819b72feb3426a67bbaf5d7aec792c9d7c5ccaa70"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/SessionFlowStateTests.cs.meta",
+      "before": "67ca82625da2636529df85a955bcc03337a56f87d179476a0e8d71ff5c97b00e",
+      "after": "67ca82625da2636529df85a955bcc03337a56f87d179476a0e8d71ff5c97b00e"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/SessionLifecycleIntegrationTests.cs",
+      "before": "b23edc4316709df9c13adfb07a429654ddfcb80ef5143ea32523767254244288",
+      "after": "b23edc4316709df9c13adfb07a429654ddfcb80ef5143ea32523767254244288"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/SessionLifecycleIntegrationTests.cs.meta",
+      "before": "c2b13caafa0af2cc0a54d0daf9b7312fb402f2edde1862e8be956168dc72b6db",
+      "after": "c2b13caafa0af2cc0a54d0daf9b7312fb402f2edde1862e8be956168dc72b6db"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/Stage01Tests.cs",
+      "before": "bded563f3fe3922bb1c617af6aedc55e4beb7e1dffed143fe63cf9f1bacada9a",
+      "after": "bded563f3fe3922bb1c617af6aedc55e4beb7e1dffed143fe63cf9f1bacada9a"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/Stage01Tests.cs.meta",
+      "before": "738c370ceb4a05d3377601830c7f4ebea8c8804aa1dba2f5bf37480cf7b07d27",
+      "after": "738c370ceb4a05d3377601830c7f4ebea8c8804aa1dba2f5bf37480cf7b07d27"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/TankStateTests.cs",
+      "before": "cc96c6c98434aa61e67d477b47beb2c65267f34371057062064ed8986d6cadc3",
+      "after": "cc96c6c98434aa61e67d477b47beb2c65267f34371057062064ed8986d6cadc3"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/TankStateTests.cs.meta",
+      "before": "fd61a0dc3f32efc9a00a71352273ba902b9f334214334824da5623f99f2348a1",
+      "after": "fd61a0dc3f32efc9a00a71352273ba902b9f334214334824da5623f99f2348a1"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/TurnAlignmentTests.cs",
+      "before": "2fde3bd0c24ab9ba9d8397e335dbd0e999932b9409f5142e2ff9d659b181d8a4",
+      "after": "2fde3bd0c24ab9ba9d8397e335dbd0e999932b9409f5142e2ff9d659b181d8a4"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/TurnAlignmentTests.cs.meta",
+      "before": "028f763a5f11b6bbb8ab5733192c4d4b7e47482fea78f754ca1d8feaf7872271",
+      "after": "028f763a5f11b6bbb8ab5733192c4d4b7e47482fea78f754ca1d8feaf7872271"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/WeaponTests.cs",
+      "before": "e40715304808252cd703fde7a811bd3ff99f00a8bad06e849aedc3099cc3b0f3",
+      "after": "e40715304808252cd703fde7a811bd3ff99f00a8bad06e849aedc3099cc3b0f3"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/EditMode/WeaponTests.cs.meta",
+      "before": "d70b4928f64d81890050e301aebe7991661dc952c99388ce117e390665da1e76",
+      "after": "d70b4928f64d81890050e301aebe7991661dc952c99388ce117e390665da1e76"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/ArenaHudPlayModeTests.cs",
+      "before": "1fa4ec05b9d4fdc549fd02641fd793b2a724d79fa7a2d4426288191e717ff6e2",
+      "after": "1fa4ec05b9d4fdc549fd02641fd793b2a724d79fa7a2d4426288191e717ff6e2"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/ArenaHudPlayModeTests.cs.meta",
+      "before": "36ef0213d47106d396256008127c661fdab76ef05e5feadca8e6ae6802d8a299",
+      "after": "36ef0213d47106d396256008127c661fdab76ef05e5feadca8e6ae6802d8a299"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/ArenaPlayModeTests.cs",
+      "before": "c3349012c377c75ccaa799afd0c8ee2628b0d2131f9a7a3631f677d1ca9cd724",
+      "after": "c3349012c377c75ccaa799afd0c8ee2628b0d2131f9a7a3631f677d1ca9cd724"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/ArenaPlayModeTests.cs.meta",
+      "before": "ad065a26e9165fa1b50de4be447a9011d93b1183016a3065a76a2c3a656e1ea6",
+      "after": "ad065a26e9165fa1b50de4be447a9011d93b1183016a3065a76a2c3a656e1ea6"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/BaseStatePlayModeTests.cs",
+      "before": "5d5bfd3263459b30d9f7690a17d44df5713e4d5b9df1e8b7ae0d20f2c9767059",
+      "after": "5d5bfd3263459b30d9f7690a17d44df5713e4d5b9df1e8b7ae0d20f2c9767059"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/BaseStatePlayModeTests.cs.meta",
+      "before": "c6344f8ee3afde598178d74b97e603c2af40abc29132aba0826f15b41fe5ad36",
+      "after": "c6344f8ee3afde598178d74b97e603c2af40abc29132aba0826f15b41fe5ad36"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/BattleCity.PlayModeTests.asmdef",
+      "before": "2e219dc5821d5fae56164d198936bfc1c565412e8b76d0fd976d1b90a7c27444",
+      "after": "2e219dc5821d5fae56164d198936bfc1c565412e8b76d0fd976d1b90a7c27444"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/BattleCity.PlayModeTests.asmdef.meta",
+      "before": "38f3071db0553ed0a3c98fa8d46f9c0beffb0aac3c55d5a6712e26454e2cc43a",
+      "after": "38f3071db0553ed0a3c98fa8d46f9c0beffb0aac3c55d5a6712e26454e2cc43a"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/BrickMapViewTests.cs",
+      "before": "db685baf0a24acbd80ffe0913728c56dba616ecc0f137278f7d94e2cc018d541",
+      "after": "db685baf0a24acbd80ffe0913728c56dba616ecc0f137278f7d94e2cc018d541"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/BrickMapViewTests.cs.meta",
+      "before": "2be43ef78bf0f73adc8e491a71b3d90514af0c4c6d5e419f679a8ba1a9084ef9",
+      "after": "2be43ef78bf0f73adc8e491a71b3d90514af0c4c6d5e419f679a8ba1a9084ef9"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/CombatEffectViewTests.cs",
+      "before": "152599ca279780e95bc191ba7b17cd7c5e57f392e4a7873c575dd26ae795bffa",
+      "after": "152599ca279780e95bc191ba7b17cd7c5e57f392e4a7873c575dd26ae795bffa"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/CombatEffectViewTests.cs.meta",
+      "before": "8c1f5f46fc9f503ef415f0c0c2b2b9a4917b25cb4667babac585b469df70eb4f",
+      "after": "8c1f5f46fc9f503ef415f0c0c2b2b9a4917b25cb4667babac585b469df70eb4f"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/EnemyBrainPlayModeTests.cs",
+      "before": "3df49d462b0cf4d67bc6b58f063dc9d12215bcad639fb60602d731c686502c12",
+      "after": "3df49d462b0cf4d67bc6b58f063dc9d12215bcad639fb60602d731c686502c12"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/EnemyBrainPlayModeTests.cs.meta",
+      "before": "78c0d288e7ce506dcacd9ebb102414ee3b39e37470a645a94ca9b43e28c2d188",
+      "after": "78c0d288e7ce506dcacd9ebb102414ee3b39e37470a645a94ca9b43e28c2d188"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/EnemyTankViewTests.cs",
+      "before": "8b1c4ed8b3a1ad6130ee5ac00d71ee96ac32896e766d6395d224879ccb238984",
+      "after": "8b1c4ed8b3a1ad6130ee5ac00d71ee96ac32896e766d6395d224879ccb238984"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/EnemyTankViewTests.cs.meta",
+      "before": "66ab3f3ac19bbe77b0d84d892f0044dcaec589eeb2accf5c7d7e4e3d25a24a87",
+      "after": "66ab3f3ac19bbe77b0d84d892f0044dcaec589eeb2accf5c7d7e4e3d25a24a87"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/EnemyTypesPlayModeTests.cs",
+      "before": "ca34c2f5507dacfde724f8281234a4b18c6c6655db019df7a937a26b783ee754",
+      "after": "ca34c2f5507dacfde724f8281234a4b18c6c6655db019df7a937a26b783ee754"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/EnemyTypesPlayModeTests.cs.meta",
+      "before": "ceafa7a6e8323408fc3787aafb779ed09d9d90262331a13b06d79ca48714b005",
+      "after": "ceafa7a6e8323408fc3787aafb779ed09d9d90262331a13b06d79ca48714b005"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/EnemyWaveIntegrationPlayModeTests.cs",
+      "before": "62eb70c86dafa8a211e01e1ea4fe50d3a644021c2624392aebef369b35fb2900",
+      "after": "62eb70c86dafa8a211e01e1ea4fe50d3a644021c2624392aebef369b35fb2900"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/EnemyWaveIntegrationPlayModeTests.cs.meta",
+      "before": "7d53ff97cf4dfddd43c0e578be7d597ded713c6fbb5a76b70dd6124b2ec7add8",
+      "after": "7d53ff97cf4dfddd43c0e578be7d597ded713c6fbb5a76b70dd6124b2ec7add8"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/PickupPlayModeTests.cs",
+      "before": "6bdb025f8ca9d9b3e68b6521b3b23e90e09b7098e913d005e74d6061af659842",
+      "after": "6bdb025f8ca9d9b3e68b6521b3b23e90e09b7098e913d005e74d6061af659842"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/PickupPlayModeTests.cs.meta",
+      "before": "15084540bceea1912c72ce738f46ebd47dd3ab10e6c203614098ca88c8f7c332",
+      "after": "15084540bceea1912c72ce738f46ebd47dd3ab10e6c203614098ca88c8f7c332"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/PlayerLifeIntegrationPlayModeTests.cs",
+      "before": "b37c68118bdc871d38b41af877a592dd09f42c0bbc1db4d0bdc2517a0cf39902",
+      "after": "b37c68118bdc871d38b41af877a592dd09f42c0bbc1db4d0bdc2517a0cf39902"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/PlayerLifeIntegrationPlayModeTests.cs.meta",
+      "before": "e2147bde65809be221937eec83246f4b41e3eefd90c97a2e97e965fca7f52153",
+      "after": "e2147bde65809be221937eec83246f4b41e3eefd90c97a2e97e965fca7f52153"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/PlayerPickupPlayModeTests.cs",
+      "before": "aa86ae4198b4c9e9bebdd6262d5fd00fbcd0c90577f0929cffab53e334b6b287",
+      "after": "aa86ae4198b4c9e9bebdd6262d5fd00fbcd0c90577f0929cffab53e334b6b287"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/PlayerPickupPlayModeTests.cs.meta",
+      "before": "6ecfcdb540816c89c2698887cd0ebab2cfd722cb331aa85b22e1687f8e83668c",
+      "after": "6ecfcdb540816c89c2698887cd0ebab2cfd722cb331aa85b22e1687f8e83668c"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/PlayerUpgradePlayModeTests.cs",
+      "before": "ee870ec37677db8a0a7c65ebb227be0cb6a3ebf90e8fcb4dc906ed429574369e",
+      "after": "ee870ec37677db8a0a7c65ebb227be0cb6a3ebf90e8fcb4dc906ed429574369e"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/PlayerUpgradePlayModeTests.cs.meta",
+      "before": "2cc4d3ff97eda79b68557224463c2b87a86c9d3e4f35868233dd6b366031f33a",
+      "after": "2cc4d3ff97eda79b68557224463c2b87a86c9d3e4f35868233dd6b366031f33a"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/RenderLoopRegressionTests.cs",
+      "before": "00898cd531e743d879cd9fa537ac2b11876e44dce4d8261abe2a0fe9bfb56415",
+      "after": "00898cd531e743d879cd9fa537ac2b11876e44dce4d8261abe2a0fe9bfb56415"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/RenderLoopRegressionTests.cs.meta",
+      "before": "4fab26f876c9127dcdee8334e3453ecbba8029bf1f4b9a096565a78496623ea9",
+      "after": "4fab26f876c9127dcdee8334e3453ecbba8029bf1f4b9a096565a78496623ea9"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/SessionLifecyclePlayModeTests.cs",
+      "before": "3e14625d17440b9ce51b9b27b9220ff5198243d56f27d1eb9e728eabd8330259",
+      "after": "3e14625d17440b9ce51b9b27b9220ff5198243d56f27d1eb9e728eabd8330259"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/SessionLifecyclePlayModeTests.cs.meta",
+      "before": "4f249f667c31f58065e705cf47e2fdd60fd4b0ed2bfde9f4519dc58a9ffcf37f",
+      "after": "4f249f667c31f58065e705cf47e2fdd60fd4b0ed2bfde9f4519dc58a9ffcf37f"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/Stage01LifeExhaustionPlayModeTests.cs",
+      "before": "cf2cef3435362399be1a5c72616d803bd73b5053a55115eb9ed89cd0711e8cc7",
+      "after": "cf2cef3435362399be1a5c72616d803bd73b5053a55115eb9ed89cd0711e8cc7"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/Stage01LifeExhaustionPlayModeTests.cs.meta",
+      "before": "e8d5a143f80d0277b1041bb13a4d6aaff98490fba373376b9e2a453d541eef6e",
+      "after": "e8d5a143f80d0277b1041bb13a4d6aaff98490fba373376b9e2a453d541eef6e"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/Stage01PlayModeTests.cs",
+      "before": "1a83a342297053fe677e01ad89de3f972e3af7610be138fb03cf2e8f25c53fc8",
+      "after": "1a83a342297053fe677e01ad89de3f972e3af7610be138fb03cf2e8f25c53fc8"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/Stage01PlayModeTests.cs.meta",
+      "before": "8d514dd0ef991244611d81265bf6c5c276f417e9c542ae87f862e6d035b79978",
+      "after": "8d514dd0ef991244611d81265bf6c5c276f417e9c542ae87f862e6d035b79978"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/TankStatePlayModeTests.cs",
+      "before": "7003dbef7e198ff64895bf845393c22bfd98882483200f3a7ecdd255d439fe4f",
+      "after": "7003dbef7e198ff64895bf845393c22bfd98882483200f3a7ecdd255d439fe4f"
+    },
+    {
+      "path": "Assets/BattleCity/Tests/PlayMode/TankStatePlayModeTests.cs.meta",
+      "before": "c13731208100885b5b69f4297eabfc5cf52beeb20671583e16074b01dbda3fb5",
+      "after": "c13731208100885b5b69f4297eabfc5cf52beeb20671583e16074b01dbda3fb5"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/AI/EnemyBalanceDefinition.cs",
+      "before": "dfb614df106b4ebe5342c3e6123cc9eed7b52af07452f8aa59c9fa9abb569377",
+      "after": "dfb614df106b4ebe5342c3e6123cc9eed7b52af07452f8aa59c9fa9abb569377"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/AI/EnemyBalanceDefinition.cs.meta",
+      "before": "ff6d95982521fe0591cb758ab7bddc725fc78138fda2bdfb54cfff79e42060ba",
+      "after": "ff6d95982521fe0591cb758ab7bddc725fc78138fda2bdfb54cfff79e42060ba"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/AI/EnemyBrain.cs",
+      "before": "e9fb97f04f3ad017342b83fd4c44f62b1e4d6b8c6b1ac5e195e331f9df3ca069",
+      "after": "e9fb97f04f3ad017342b83fd4c44f62b1e4d6b8c6b1ac5e195e331f9df3ca069"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/AI/EnemyBrain.cs.meta",
+      "before": "4f508ccb3121da66ccf403551af06191169b00ea32c09364a498664c7b3bffde",
+      "after": "4f508ccb3121da66ccf403551af06191169b00ea32c09364a498664c7b3bffde"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/AI/EnemyBrainParameters.cs",
+      "before": "6875e8420d5b442444ab56bb0fa4743fc43ccc5ceb8e904f0f8e52b8308d99cd",
+      "after": "6875e8420d5b442444ab56bb0fa4743fc43ccc5ceb8e904f0f8e52b8308d99cd"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/AI/EnemyBrainParameters.cs.meta",
+      "before": "54656b2c0074c0303f180ff0da7470b44e9e43e8c7c417d4a929359035aa4fe5",
+      "after": "54656b2c0074c0303f180ff0da7470b44e9e43e8c7c417d4a929359035aa4fe5"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/AI/EnemyWaveDefinition.cs",
+      "before": "f88d69847932b8eb6022f99fcdaf41e5c62702a3bf0b97bd951f219fdf79b1c7",
+      "after": "f88d69847932b8eb6022f99fcdaf41e5c62702a3bf0b97bd951f219fdf79b1c7"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/AI/EnemyWaveDefinition.cs.meta",
+      "before": "69bb26e7c7e4aceaf621479565fd7a2001e4a8e9c9f478975bd023a62ba4561c",
+      "after": "69bb26e7c7e4aceaf621479565fd7a2001e4a8e9c9f478975bd023a62ba4561c"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/AI/EnemyWaveState.cs.meta",
+      "before": "5103efe07dfe78504f85d1b3a69b301cac306157aedbaf11e16b8759ca1ea70d",
+      "after": "5103efe07dfe78504f85d1b3a69b301cac306157aedbaf11e16b8759ca1ea70d"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/BulletHit.cs",
+      "before": "709cb71bc9adbef66b1e3ad18af45c43cbd0b81a43beea156e0c00f7a45e3c4f",
+      "after": "709cb71bc9adbef66b1e3ad18af45c43cbd0b81a43beea156e0c00f7a45e3c4f"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/BulletHit.cs.meta",
+      "before": "5a8aaf245cbe1da34f32ea96d0b7f8be2b09e63dac248be6687d1ec2f7c7d93e",
+      "after": "5a8aaf245cbe1da34f32ea96d0b7f8be2b09e63dac248be6687d1ec2f7c7d93e"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/BulletSweep.cs",
+      "before": "c123af95e243b8c4e7193695fa1fa08a71cb027b030b014f772193e7b63f3fa5",
+      "after": "c123af95e243b8c4e7193695fa1fa08a71cb027b030b014f772193e7b63f3fa5"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/BulletSweep.cs.meta",
+      "before": "a0ac44180e2aafabe0057580ea30005dd74128990ed5fed9cee8821c95d9471a",
+      "after": "a0ac44180e2aafabe0057580ea30005dd74128990ed5fed9cee8821c95d9471a"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/BulletView.cs",
+      "before": "57edd14041246c1d39ea1b6500426f75e6563ca0cebcf272c72dd86a9057351e",
+      "after": "57edd14041246c1d39ea1b6500426f75e6563ca0cebcf272c72dd86a9057351e"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/BulletView.cs.meta",
+      "before": "10c9103622aae685f81d5588a129d15f14e2aba1dbee2a73a86503a381e487c7",
+      "after": "10c9103622aae685f81d5588a129d15f14e2aba1dbee2a73a86503a381e487c7"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/BulletWorld.cs",
+      "before": "2f55eba1f31de2dcad49a8b4125567b37936f3428a9a4ddfe7c75b80c6766acd",
+      "after": "2f55eba1f31de2dcad49a8b4125567b37936f3428a9a4ddfe7c75b80c6766acd"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/BulletWorld.cs.meta",
+      "before": "9f9a311e5d2eb67bf4e2a271fe8e03e419a4c6ba1de81e777a87602b50040be0",
+      "after": "9f9a311e5d2eb67bf4e2a271fe8e03e419a4c6ba1de81e777a87602b50040be0"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/CombatEffects.cs",
+      "before": "b8a91b0e31a15a322c2a0f6bc5285af88d754ab44cb251418504197568710963",
+      "after": "b8a91b0e31a15a322c2a0f6bc5285af88d754ab44cb251418504197568710963"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/CombatEffects.cs.meta",
+      "before": "8660bb49311e55b4ec9b9a9a86b4b674ed1a28338e5752353cc6e76bb399550b",
+      "after": "8660bb49311e55b4ec9b9a9a86b4b674ed1a28338e5752353cc6e76bb399550b"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/CombatEffectView.cs",
+      "before": "3ecd74e093c8e840835b97d745b25baf128f14aee932936e6e1ba2b4c9afaa2b",
+      "after": "3ecd74e093c8e840835b97d745b25baf128f14aee932936e6e1ba2b4c9afaa2b"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/CombatEffectView.cs.meta",
+      "before": "74ce7f728a1cdd6d318c9859ae4d210020446cb378bd1129b34859edad54fab2",
+      "after": "74ce7f728a1cdd6d318c9859ae4d210020446cb378bd1129b34859edad54fab2"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/WeaponState.cs",
+      "before": "5d863268c3a22422dd2be8f011d271c9b159aaa3195a3eb1c652c1a39153753d",
+      "after": "5d863268c3a22422dd2be8f011d271c9b159aaa3195a3eb1c652c1a39153753d"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Combat/WeaponState.cs.meta",
+      "before": "b526dc4c02e053a5964d3af606af085539ce3f68c6483eb88d3b5930d58c30d6",
+      "after": "b526dc4c02e053a5964d3af606af085539ce3f68c6483eb88d3b5930d58c30d6"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/ArenaController.cs",
+      "before": "3592a15085ded6036264b2ec71c1ab8b251e088b2a825ababcee7fcfcc89de86",
+      "after": "3592a15085ded6036264b2ec71c1ab8b251e088b2a825ababcee7fcfcc89de86"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/ArenaController.cs.meta",
+      "before": "82899759df735217d30601d1fb9196bfa9ef15705de8f5ba43324838aaed7cd0",
+      "after": "82899759df735217d30601d1fb9196bfa9ef15705de8f5ba43324838aaed7cd0"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/ArenaSession.cs.meta",
+      "before": "73b29e6691b4df7682fe6658a86da6d08ffbdaf36cd39659efae85daa7670314",
+      "after": "73b29e6691b4df7682fe6658a86da6d08ffbdaf36cd39659efae85daa7670314"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/BaseState.cs",
+      "before": "797b949bccaf6ffe49d03ce7c90f1191f48f059cd2681809bd26b9a8489c0b11",
+      "after": "797b949bccaf6ffe49d03ce7c90f1191f48f059cd2681809bd26b9a8489c0b11"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/BaseState.cs.meta",
+      "before": "1754f457ce5eee075fd5812818e4313e9fa8203412404b98f3b7d845f09049c0",
+      "after": "1754f457ce5eee075fd5812818e4313e9fa8203412404b98f3b7d845f09049c0"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/CardinalDirection.cs",
+      "before": "ffc2060437452340fd4841732af910276b37a1c7283d882b15aee67298d4fc64",
+      "after": "ffc2060437452340fd4841732af910276b37a1c7283d882b15aee67298d4fc64"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/CardinalDirection.cs.meta",
+      "before": "3ec7f9698e6798c02fe6ab77e60c88b0aa6f0a76918df97ebecf1eea7b59800e",
+      "after": "3ec7f9698e6798c02fe6ab77e60c88b0aa6f0a76918df97ebecf1eea7b59800e"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/LogicClock.cs",
+      "before": "dce1585f8c2a1c221479819ac4a0a531136d8717d3607a7757abd1a745f7ce38",
+      "after": "dce1585f8c2a1c221479819ac4a0a531136d8717d3607a7757abd1a745f7ce38"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/LogicClock.cs.meta",
+      "before": "04238b51be068fce1db9bbb8367c51175a7ff54de88f5459cdef6b168d9e6879",
+      "after": "04238b51be068fce1db9bbb8367c51175a7ff54de88f5459cdef6b168d9e6879"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/PixelGrid.cs",
+      "before": "d1e8cd455fb220ad0dcbe1b82c7dd769a16795a5a1788c3129d3b80176ba5495",
+      "after": "d1e8cd455fb220ad0dcbe1b82c7dd769a16795a5a1788c3129d3b80176ba5495"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/PixelGrid.cs.meta",
+      "before": "a5a22c131dab54126a031f6166466ab0c79186d6d2e1f2324e0c330d534dd878",
+      "after": "a5a22c131dab54126a031f6166466ab0c79186d6d2e1f2324e0c330d534dd878"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/PlayerLifeParameters.cs",
+      "before": "823aa0d1674c0ad1744d359a018b3dec6a4452e56cda32b6e5d11cd6af0c9c7d",
+      "after": "823aa0d1674c0ad1744d359a018b3dec6a4452e56cda32b6e5d11cd6af0c9c7d"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/PlayerLifeParameters.cs.meta",
+      "before": "059ca0b327012b76f9122aa507cba7b02e65a3adc738e6224e1f31170f2cd3f1",
+      "after": "059ca0b327012b76f9122aa507cba7b02e65a3adc738e6224e1f31170f2cd3f1"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/PlayerLifeState.cs",
+      "before": "45e0b84ffff75293a81e46375eff825f4c394bbcba48dfb53e3b91cae83d4bc3",
+      "after": "45e0b84ffff75293a81e46375eff825f4c394bbcba48dfb53e3b91cae83d4bc3"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/PlayerLifeState.cs.meta",
+      "before": "c5e57fcdd06a3d5a7d8c73966370401cece568ee75b0fe742214a78e72025562",
+      "after": "c5e57fcdd06a3d5a7d8c73966370401cece568ee75b0fe742214a78e72025562"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/SessionFlowState.cs",
+      "before": "14f542d6462d12767987b36f6de18e37ab17a075e9ccaced1ee3339e93dd5fc2",
+      "after": "14f542d6462d12767987b36f6de18e37ab17a075e9ccaced1ee3339e93dd5fc2"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/SessionFlowState.cs.meta",
+      "before": "09890975d6f89fe3f1acd993ba96674a03a51f523d70ec351fdb3057a71ef53c",
+      "after": "09890975d6f89fe3f1acd993ba96674a03a51f523d70ec351fdb3057a71ef53c"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/SpriteCatalog.cs",
+      "before": "7e054386f371896ee3291cc7e43e066a6d6b255eeecab6bc073b5269134630cd",
+      "after": "7e054386f371896ee3291cc7e43e066a6d6b255eeecab6bc073b5269134630cd"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Core/SpriteCatalog.cs.meta",
+      "before": "4242bb830edc9b1b77fadb6009a45c0122f57b8004abebeddd374c9cb17d1fc5",
+      "after": "4242bb830edc9b1b77fadb6009a45c0122f57b8004abebeddd374c9cb17d1fc5"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Input/KeyboardInputSource.cs",
+      "before": "7b463b4d06f268780265a3c4ee6913abd259970c1fa88bd5061ff04fb4c2abf5",
+      "after": "7b463b4d06f268780265a3c4ee6913abd259970c1fa88bd5061ff04fb4c2abf5"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Input/KeyboardInputSource.cs.meta",
+      "before": "7afa6d0a5b3743f6034adaf66deab076ae62987aaaf856fa7a467b93f97414fc",
+      "after": "7afa6d0a5b3743f6034adaf66deab076ae62987aaaf856fa7a467b93f97414fc"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Input/PlayerInputBuffer.cs",
+      "before": "544693fdf1cc0bc0a5a944a51f23786c2bb5cbfa83338a958ea4153e6fbcaea1",
+      "after": "544693fdf1cc0bc0a5a944a51f23786c2bb5cbfa83338a958ea4153e6fbcaea1"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Input/PlayerInputBuffer.cs.meta",
+      "before": "a10a6c7989175d44b6b5c5da9f2aa071ec6fe4ba91a006664fec3962cf9c0f59",
+      "after": "a10a6c7989175d44b6b5c5da9f2aa071ec6fe4ba91a006664fec3962cf9c0f59"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Map/ArenaMapView.cs",
+      "before": "9bccac5e8d3e5d54d031113009eefd5f43ad12b09c34031c916f51ce1a8fb0d8",
+      "after": "9bccac5e8d3e5d54d031113009eefd5f43ad12b09c34031c916f51ce1a8fb0d8"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Map/ArenaMapView.cs.meta",
+      "before": "a4c771ac58fe3e9e9c6381e4c6f5b33e3beb4365661511b44227605552e645f9",
+      "after": "a4c771ac58fe3e9e9c6381e4c6f5b33e3beb4365661511b44227605552e645f9"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Map/LevelDefinition.cs",
+      "before": "5ba4bde4e1da991149a5b03f9f5fd3ddb68d619aaa6cec3b4540d4f049c4accb",
+      "after": "5ba4bde4e1da991149a5b03f9f5fd3ddb68d619aaa6cec3b4540d4f049c4accb"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Map/LevelDefinition.cs.meta",
+      "before": "c5f3ac1cac2b8f4a8523e3e2b1b5192629312a93d5c847deef4b5ed8f05737af",
+      "after": "c5f3ac1cac2b8f4a8523e3e2b1b5192629312a93d5c847deef4b5ed8f05737af"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Map/MapState.cs",
+      "before": "2c6e350f15b6848260d839ad513b18aee9c448c7b0cd86b95788a66bd14e5dea",
+      "after": "2c6e350f15b6848260d839ad513b18aee9c448c7b0cd86b95788a66bd14e5dea"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Map/MapState.cs.meta",
+      "before": "b0813cb4f3e9688f6d6023c95318a669d5eb7f1a92b1e7b2cc2e6823c739bb99",
+      "after": "b0813cb4f3e9688f6d6023c95318a669d5eb7f1a92b1e7b2cc2e6823c739bb99"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Pickups/PickupDefinition.cs.meta",
+      "before": "f81a2d463ebe338f278bb41c1a109f6d0c5ccd966d956f8edcd30d0f99651cff",
+      "after": "f81a2d463ebe338f278bb41c1a109f6d0c5ccd966d956f8edcd30d0f99651cff"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Pickups/PickupState.cs.meta",
+      "before": "6f3f1cee82da1d543e89e106508c04f36884325199a6fbfaea4fcdcd27eaa92c",
+      "after": "6f3f1cee82da1d543e89e106508c04f36884325199a6fbfaea4fcdcd27eaa92c"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Pickups/PickupView.cs",
+      "before": "7681c7dda8bc949b470bab98f5c105089109951706956a1392c74ff2d36a5861",
+      "after": "7681c7dda8bc949b470bab98f5c105089109951706956a1392c74ff2d36a5861"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Pickups/PickupView.cs.meta",
+      "before": "ff1efa0ec684f6f807ab13ace4fc9827e6d4d29744a76533fc31a97728467269",
+      "after": "ff1efa0ec684f6f807ab13ace4fc9827e6d4d29744a76533fc31a97728467269"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/EnemyTankView.cs",
+      "before": "fe122415857d98cbbdda82c5d27ab06914a810faea06eb680ee41484e9e14519",
+      "after": "fe122415857d98cbbdda82c5d27ab06914a810faea06eb680ee41484e9e14519"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/EnemyTankView.cs.meta",
+      "before": "5857bf232cf959cbbd82f9bbb7544296b9f5a4e266a7122ed354dae816e34348",
+      "after": "5857bf232cf959cbbd82f9bbb7544296b9f5a4e266a7122ed354dae816e34348"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/PlayerUpgradeDefinition.cs",
+      "before": "76cc5c14c60367b48b1eb60cbb2181f24c68a08e684e6cb59531f4a36346fc34",
+      "after": "76cc5c14c60367b48b1eb60cbb2181f24c68a08e684e6cb59531f4a36346fc34"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/PlayerUpgradeDefinition.cs.meta",
+      "before": "efdf18de7c6efa825c47d414c073512276626f17356c40a227b61790c7a17e61",
+      "after": "efdf18de7c6efa825c47d414c073512276626f17356c40a227b61790c7a17e61"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/PlayerUpgradeState.cs",
+      "before": "f872ac837d65537a77cb0dbab5c1f7c7d218181f95a30cfdca0ae06c28656a80",
+      "after": "f872ac837d65537a77cb0dbab5c1f7c7d218181f95a30cfdca0ae06c28656a80"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/PlayerUpgradeState.cs.meta",
+      "before": "5459427fe5b820b41301d9b079fd0dd243c3680396ada3214ecef6957602479d",
+      "after": "5459427fe5b820b41301d9b079fd0dd243c3680396ada3214ecef6957602479d"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/TankDefinition.cs",
+      "before": "259a48edf630d91e9e1ae9008cfef5cb174c5c499f4e9b6466e711a5ee386e81",
+      "after": "259a48edf630d91e9e1ae9008cfef5cb174c5c499f4e9b6466e711a5ee386e81"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/TankDefinition.cs.meta",
+      "before": "70e87adb7a45a4b593dc9414324c82582ac29c5e6d53d70f7d589ebae55c4b1c",
+      "after": "70e87adb7a45a4b593dc9414324c82582ac29c5e6d53d70f7d589ebae55c4b1c"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/TankMotor.cs",
+      "before": "e0eb9b8636ab145d96eba8d2d80814325fdcdd0f3b67fbc5e52ff81ee1e864f8",
+      "after": "e0eb9b8636ab145d96eba8d2d80814325fdcdd0f3b67fbc5e52ff81ee1e864f8"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/TankMotor.cs.meta",
+      "before": "dea90c8d44206d5932168738574a048709a876685d81cc3869f601f65a9bfced",
+      "after": "dea90c8d44206d5932168738574a048709a876685d81cc3869f601f65a9bfced"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/Tanks/TankState.cs.meta",
+      "before": "6468d756194ae6507c5ae08b061637f83b5c53f94decbd326f59bf9f49061f74",
+      "after": "6468d756194ae6507c5ae08b061637f83b5c53f94decbd326f59bf9f49061f74"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/UI/ArenaHud.cs",
+      "before": "97f94a8ed515cfe91e2bee4a94a9ab28bc2f50f307e433f111a3361358b76368",
+      "after": "97f94a8ed515cfe91e2bee4a94a9ab28bc2f50f307e433f111a3361358b76368"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/UI/ArenaHud.cs.meta",
+      "before": "f4bb9414b43e459892ab4f146b0db0eb4fbfe94079fc5dd18d53c77f588b70e0",
+      "after": "f4bb9414b43e459892ab4f146b0db0eb4fbfe94079fc5dd18d53c77f588b70e0"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/UI/PixelHudText.cs",
+      "before": "3804d3423dde4f59f9dc0027ffd73ea00b9c2f307ce376ebb2721529be3184a6",
+      "after": "3804d3423dde4f59f9dc0027ffd73ea00b9c2f307ce376ebb2721529be3184a6"
+    },
+    {
+      "path": "Assets/BattleCity/Scripts/UI/PixelHudText.cs.meta",
+      "before": "f368913dafed585de056545d767552cafcac47f2ddf0defa9520238d0a524430",
+      "after": "f368913dafed585de056545d767552cafcac47f2ddf0defa9520238d0a524430"
+    },
+    {
+      "path": "ProjectSettings/AudioManager.asset",
+      "before": "aeedeb3243f07b61dbbe854aa08b5ef6f0b5274dd9852ad9f6129dde3e105a31",
+      "after": "aeedeb3243f07b61dbbe854aa08b5ef6f0b5274dd9852ad9f6129dde3e105a31"
+    },
+    {
+      "path": "ProjectSettings/ClusterInputManager.asset",
+      "before": "40e65dd214bf254955d2c8829ca8ce2130fd3510485560ce012e9a1ddd93e623",
+      "after": "40e65dd214bf254955d2c8829ca8ce2130fd3510485560ce012e9a1ddd93e623"
+    },
+    {
+      "path": "ProjectSettings/DynamicsManager.asset",
+      "before": "b7c9a9dc08b98990109d4346f68745e15e238de400f96c583e53e1c83c743a78",
+      "after": "b7c9a9dc08b98990109d4346f68745e15e238de400f96c583e53e1c83c743a78"
+    },
+    {
+      "path": "ProjectSettings/EditorBuildSettings.asset",
+      "before": "a9ac9ddca68a9caa6dfa08c1d24144cc2362bba452a7747cca45727b659cb142",
+      "after": "a9ac9ddca68a9caa6dfa08c1d24144cc2362bba452a7747cca45727b659cb142"
+    },
+    {
+      "path": "ProjectSettings/EditorSettings.asset",
+      "before": "f8f13b4ead8154753e42ba1c82cd701d14d4c7eb70e6a9cc615a353b7b041a51",
+      "after": "f8f13b4ead8154753e42ba1c82cd701d14d4c7eb70e6a9cc615a353b7b041a51"
+    },
+    {
+      "path": "ProjectSettings/GraphicsSettings.asset",
+      "before": "aa8c00ab5c92b30a37388e695b413ac2cabf6a19180033e2f46b672183541b9c",
+      "after": "aa8c00ab5c92b30a37388e695b413ac2cabf6a19180033e2f46b672183541b9c"
+    },
+    {
+      "path": "ProjectSettings/InputManager.asset",
+      "before": "7a1bb836a1008d26d0860d143e9d9df7ca41731d30a72901b518063819c62df2",
+      "after": "7a1bb836a1008d26d0860d143e9d9df7ca41731d30a72901b518063819c62df2"
+    },
+    {
+      "path": "ProjectSettings/MemorySettings.asset",
+      "before": "1e8379a461b10ae09f3f696911088c16875d63e87ed5f2d95df9e1892703f9fd",
+      "after": "1e8379a461b10ae09f3f696911088c16875d63e87ed5f2d95df9e1892703f9fd"
+    },
+    {
+      "path": "ProjectSettings/MultiplayerManager.asset",
+      "before": "aba89fd1a1ddad182727ad82727e536d27372e90328a8196da2a4560398983dd",
+      "after": "aba89fd1a1ddad182727ad82727e536d27372e90328a8196da2a4560398983dd"
+    },
+    {
+      "path": "ProjectSettings/NavMeshAreas.asset",
+      "before": "80106cfa7e6181a1928b142c075f3e510d527441e3d79bc83590e4ac91e7cd66",
+      "after": "80106cfa7e6181a1928b142c075f3e510d527441e3d79bc83590e4ac91e7cd66"
+    },
+    {
+      "path": "ProjectSettings/NetworkManager.asset",
+      "before": "46395def99a6b5ae38ebb19b3e18f75215a9d4172c219361521a5a51e051f386",
+      "after": "46395def99a6b5ae38ebb19b3e18f75215a9d4172c219361521a5a51e051f386"
+    },
+    {
+      "path": "ProjectSettings/PackageManagerSettings.asset",
+      "before": "be815f7e993301ffa59a59c06160e969a6b5ec52833dfed83929759660f69dd1",
+      "after": "be815f7e993301ffa59a59c06160e969a6b5ec52833dfed83929759660f69dd1"
+    },
+    {
+      "path": "ProjectSettings/Physics2DSettings.asset",
+      "before": "50e61d70bc38c632cb0e6efe364a9c5bcfd9a8dbcf4e7b5ecfb06a2030c4518f",
+      "after": "50e61d70bc38c632cb0e6efe364a9c5bcfd9a8dbcf4e7b5ecfb06a2030c4518f"
+    },
+    {
+      "path": "ProjectSettings/PhysicsCoreProjectSettings2D.asset",
+      "before": "bedc5339a832c60dc3f11b84abc4f4384dbfa20b0cd9ad6c444b907e751fc35e",
+      "after": "bedc5339a832c60dc3f11b84abc4f4384dbfa20b0cd9ad6c444b907e751fc35e"
+    },
+    {
+      "path": "ProjectSettings/PresetManager.asset",
+      "before": "29c125923fe6e29f90190d4fce1c82d660e7051546e2c9d02908d18c9cf2436c",
+      "after": "29c125923fe6e29f90190d4fce1c82d660e7051546e2c9d02908d18c9cf2436c"
+    },
+    {
+      "path": "ProjectSettings/ProjectAuditorSettings.asset",
+      "before": "9e68444b9bda981e2927a98df9edf69ea88362f0c6b7f3c81b39b9d515d2a416",
+      "after": "9e68444b9bda981e2927a98df9edf69ea88362f0c6b7f3c81b39b9d515d2a416"
+    },
+    {
+      "path": "ProjectSettings/ProjectSettings.asset",
+      "before": "b0ec2beeaa0139891bbd46899d712c1f1be8425a113c702eaf506c3cacdb4300",
+      "after": "b0ec2beeaa0139891bbd46899d712c1f1be8425a113c702eaf506c3cacdb4300"
+    },
+    {
+      "path": "ProjectSettings/ProjectVersion.txt",
+      "before": "2a88e6864b6f54588287bed3bc6e9260e65bd49498910cca4478770ca8a5d674",
+      "after": "2a88e6864b6f54588287bed3bc6e9260e65bd49498910cca4478770ca8a5d674"
+    },
+    {
+      "path": "ProjectSettings/QualitySettings.asset",
+      "before": "5d1fd690623e10cc41102dd682317c90ba8e6d8d1ec0623dc21769f3cae6d8eb",
+      "after": "5d1fd690623e10cc41102dd682317c90ba8e6d8d1ec0623dc21769f3cae6d8eb"
+    },
+    {
+      "path": "ProjectSettings/SceneTemplateSettings.json",
+      "before": "bb9098b3bfcde78d93e264b96f7b77b5430e64e8c57a7aad7f5a5d9c3945e16a",
+      "after": "bb9098b3bfcde78d93e264b96f7b77b5430e64e8c57a7aad7f5a5d9c3945e16a"
+    },
+    {
+      "path": "ProjectSettings/ShaderGraphSettings.asset",
+      "before": "5c432c9c73fdf73fee91c8823ea02ab98e3b7a8edf341b5ae6901d699cce52a7",
+      "after": "5c432c9c73fdf73fee91c8823ea02ab98e3b7a8edf341b5ae6901d699cce52a7"
+    },
+    {
+      "path": "ProjectSettings/TagManager.asset",
+      "before": "de6323b15973ce7c7a1467b57cff1c4887c1b555e30a983554b1571680997e37",
+      "after": "de6323b15973ce7c7a1467b57cff1c4887c1b555e30a983554b1571680997e37"
+    },
+    {
+      "path": "ProjectSettings/TimeManager.asset",
+      "before": "1a83e54adbbda7c9f4851103a0c6ab7f6448a3343d4ea5b7620452fa08416ecd",
+      "after": "1a83e54adbbda7c9f4851103a0c6ab7f6448a3343d4ea5b7620452fa08416ecd"
+    },
+    {
+      "path": "ProjectSettings/UnityConnectSettings.asset",
+      "before": "7f2112b8c6ea0885dcc72b312c9726ffcd909f2e89d1eead61889274a4e5d1c0",
+      "after": "7f2112b8c6ea0885dcc72b312c9726ffcd909f2e89d1eead61889274a4e5d1c0"
+    },
+    {
+      "path": "ProjectSettings/URPProjectSettings.asset",
+      "before": "c317fe22b9488785c0611f0642429922e5d324430d929bffb41648130f30c218",
+      "after": "c317fe22b9488785c0611f0642429922e5d324430d929bffb41648130f30c218"
+    },
+    {
+      "path": "ProjectSettings/VersionControlSettings.asset",
+      "before": "e199cdfa6a8f2bf33cfd47e549198f13e3eb2a5099e908fdb4e0f14d939ccc6b",
+      "after": "e199cdfa6a8f2bf33cfd47e549198f13e3eb2a5099e908fdb4e0f14d939ccc6b"
+    },
+    {
+      "path": "ProjectSettings/VFXManager.asset",
+      "before": "f066c6483919961332415ee64204f74fe52f38c02e82892eb02b7a5b2e381f0e",
+      "after": "f066c6483919961332415ee64204f74fe52f38c02e82892eb02b7a5b2e381f0e"
+    },
+    {
+      "path": "ProjectSettings/XRSettings.asset",
+      "before": "edd2beb4a2e388312b4b7da241aa51070434005d82c59363f1237dd2e567585f",
+      "after": "edd2beb4a2e388312b4b7da241aa51070434005d82c59363f1237dd2e567585f"
+    },
+    {
+      "path": "ProjectSettings/Packages/com.unity.learn.iet-framework/Settings.json",
+      "before": "0c692ce63564b3910af12989e413530658899fb866a20ac3287d4040eb3eb4f8",
+      "after": "0c692ce63564b3910af12989e413530658899fb866a20ac3287d4040eb3eb4f8"
+    }
+  ],
+  "uniqueTests": [
+    {
+      "source": "Terminal-Bullet-Final-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupTests.AlreadyTerminalBulletKillPreventsAnyPickupReward",
+      "Status": "Passed",
+      "Duration": 0.0048423,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Edit-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupTests.AuthoredClockDefaultIsExplicitAndUncalibrated",
+      "Status": "Passed",
+      "Duration": 0.0007855,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Edit-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Clock_Default600FutureCompleteTicks_SnapshotsRules_FreezesAIAndExternalWeaponMotorTracks",
+      "Status": "Passed",
+      "Duration": 0.0299211,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Clock-Birth-Death-Final-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Clock_NewWaveBirthStillOccurs_StaysFrozenAndBlocksPlayer_ButCanBeKilled",
+      "Status": "Passed",
+      "Duration": 0.0092507,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Clock-Player-Death-Final-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Clock_PlayerAndEnemyBulletsAndEffectsContinue_PlayerDeathDoesNotCancelGlobalEffect",
+      "Status": "Passed",
+      "Duration": 0.0082678,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Edit-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Clock_RepeatRefreshesNotAdds_NoReceiptReplay_PauseReadyAndFocusConsumeNothing",
+      "Status": "Passed",
+      "Duration": 0.0080894,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Grenade-Death-Final-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_ArmorBatchAndSameTickBulletDeath_ScoreAndExplosionExactlyOnce_NoProjectileTerrainOrBaseDamage",
+      "Status": "Passed",
+      "Duration": 0.0661648,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Grenade-Death-Final-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_DoesNotReplayOnLaterEnemy_ReservationAndPendingAndCadenceConserved",
+      "Status": "Passed",
+      "Duration": 0.005363,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Grenade-Death-Final-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_KillsNewlyCommittedCarrierWithoutDropping_OnceWaveStepOnly",
+      "Status": "Passed",
+      "Duration": 0.0058238,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Grenade-Death-Final-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_LastEnemyWinsSameTick_OneTerminalEventAndCleanup",
+      "Status": "Passed",
+      "Duration": 0.0073693,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Grenade-Death-Final-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupTests.Grenade_SameTickBaseFailurePreventsCollectionAndKills_FailureWins",
+      "Status": "Passed",
+      "Duration": 0.0029793,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Edit-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupTests.InvalidClockDurationRejected(0)",
+      "Status": "Passed",
+      "Duration": 0.0017144,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Edit-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupTests.InvalidClockDurationRejected(-1)",
+      "Status": "Passed",
+      "Duration": 0.001357,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Simultaneous-Death-Final-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupTests.SimultaneousLastEnemyBulletDeathAndPlayerExhaustion_IsLossNotGrenadeReward",
+      "Status": "Passed",
+      "Duration": 0.0060291,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Play-Death-Final-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupPlayModeTests.Stage01_RealKeyboardUpdateClockFreezesArmorAIThenGrenadeKillsOnce_PauseAndProjection",
+      "Status": "Passed",
+      "Duration": 0.3015918,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Play-Result.json",
+      "FullName": "BattleCity.Tests.ClockGrenadePickupPlayModeTests.Stage01_RestartRetiresClockAndReceipts_StartupSnapshotAndFreshWave",
+      "Status": "Passed",
+      "Duration": 0.063986,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Enemy-Armor-Adjacent-Result.json",
+      "FullName": "BattleCity.Tests.EnemyTypesTests.Armor_SameTickOverkillScoresOnce_AndSnapshotsScoreAtBirth",
+      "Status": "Passed",
+      "Duration": 0.0107339,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Lifecycle-Outcome-Adjacent-Result.json",
+      "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(False,False,Won,None)",
+      "Status": "Passed",
+      "Duration": 0.005739,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Lifecycle-Outcome-Adjacent-Result.json",
+      "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(True,False,Lost,BaseDestroyed)",
+      "Status": "Passed",
+      "Duration": 0.0015355,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Lifecycle-Outcome-Adjacent-Result.json",
+      "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(False,True,Lost,PlayerLivesExhausted)",
+      "Status": "Passed",
+      "Duration": 0.0016082,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Lifecycle-Outcome-Adjacent-Result.json",
+      "FullName": "BattleCity.Tests.SessionLifecycleIntegrationTests.ActualSharedBullets_LastEnemyAndFailures_SettleAllDamageBeforeOneFrozenOutcome(True,True,Lost,BaseDestroyed, PlayerLivesExhausted)",
+      "Status": "Passed",
+      "Duration": 0.0013024,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Tank-Health-Adjacent-Result.json",
+      "FullName": "BattleCity.Tests.TankStateTests.IncomingHit_UsesHealthAndProtectionForPlayerAndEnemy(False)",
+      "Status": "Passed",
+      "Duration": 0.0033936,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Tank-Health-Adjacent-Result.json",
+      "FullName": "BattleCity.Tests.TankStateTests.IncomingHit_UsesHealthAndProtectionForPlayerAndEnemy(True)",
+      "Status": "Passed",
+      "Duration": 0.0007112,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "source": "Tank-Overkill-Adjacent-Result.json",
+      "FullName": "BattleCity.Tests.TankStateTests.SameTickAllSweepsSeeLivingFrontTarget_DeathOnlyOnceThenNextTickOpensPath",
+      "Status": "Passed",
+      "Duration": 0.0043787,
+      "Message": null,
+      "StackTrace": null
+    }
+  ],
+  "testRuns": [
+    {
+      "file": "Edit-Result.json",
+      "status": "completed",
+      "summary": {
+        "total": 14,
+        "passed": 14,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      }
+    },
+    {
+      "file": "Play-Result.json",
+      "status": "completed",
+      "summary": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      }
+    },
+    {
+      "file": "Enemy-Armor-Adjacent-Result.json",
+      "status": "completed",
+      "summary": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      }
+    },
+    {
+      "file": "Lifecycle-Outcome-Adjacent-Result.json",
+      "status": "completed",
+      "summary": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      }
+    },
+    {
+      "file": "Tank-Health-Adjacent-Result.json",
+      "status": "completed",
+      "summary": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      }
+    },
+    {
+      "file": "Tank-Overkill-Adjacent-Result.json",
+      "status": "completed",
+      "summary": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      }
+    },
+    {
+      "file": "Clock-Birth-Death-Final-Result.json",
+      "status": "completed",
+      "summary": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      }
+    },
+    {
+      "file": "Clock-Player-Death-Final-Result.json",
+      "status": "completed",
+      "summary": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      }
+    },
+    {
+      "file": "Grenade-Death-Final-Result.json",
+      "status": "completed",
+      "summary": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      }
+    },
+    {
+      "file": "Play-Death-Final-Result.json",
+      "status": "completed",
+      "summary": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      }
+    },
+    {
+      "file": "Simultaneous-Death-Final-Result.json",
+      "status": "completed",
+      "summary": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      }
+    },
+    {
+      "file": "Terminal-Bullet-Final-Result.json",
+      "status": "completed",
+      "summary": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      }
+    }
+  ],
+  "uniquePassed": 24,
+  "noStagedFiles": true
+}

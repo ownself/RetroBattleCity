@@ -1,0 +1,140 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.45,
+      "summary": {
+        "total": 16,
+        "passed": 11,
+        "failed": 5,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ActivationAndLaterStepUseCurrentWaveReservationAndNewBirth",
+          "Status": "Failed",
+          "Duration": 0.054091,
+          "Message": "  Expected: Empty\r\n  But was:  Steel\r\n",
+          "StackTrace": "at BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ActivationAndLaterStepUseCurrentWaveReservationAndNewBirth () [0x00059] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\ShovelPickupIntegrationTests.cs:94\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ActivationUsesEveryLiveTank_DeferredSteelRetriesAfterTankLeaves(Player)",
+          "Status": "Failed",
+          "Duration": 0.0045664,
+          "Message": "  Expected: Empty\r\n  But was:  Steel\r\n",
+          "StackTrace": "at BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ActivationUsesEveryLiveTank_DeferredSteelRetriesAfterTankLeaves (BattleCity.CombatTeam team) [0x0002d] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\ShovelPickupIntegrationTests.cs:86\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ActivationUsesEveryLiveTank_DeferredSteelRetriesAfterTankLeaves(Enemy)",
+          "Status": "Failed",
+          "Duration": 0.0038402,
+          "Message": "  Expected: Empty\r\n  But was:  Steel\r\n",
+          "StackTrace": "at BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ActivationUsesEveryLiveTank_DeferredSteelRetriesAfterTankLeaves (BattleCity.CombatTeam team) [0x0002d] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\ShovelPickupIntegrationTests.cs:86\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_AuthoredDefault1200RequiresCalibration",
+          "Status": "Passed",
+          "Duration": 0.0031759,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ClockHelmetAndGrenadeRemainIndependent",
+          "Status": "Passed",
+          "Duration": 0.0086478,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_Default1200FutureCompleteTicks_SnapshotsConfigurationAndExactDamagedLayout",
+          "Status": "Passed",
+          "Duration": 0.0126905,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ExpiryRestorationUsesReservationUntilBirthMovesAway",
+          "Status": "Failed",
+          "Duration": 0.0042633,
+          "Message": "  Expected: True\r\n  But was:  False\r\n",
+          "StackTrace": "at BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ExpiryRestorationUsesReservationUntilBirthMovesAway () [0x00076] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\ShovelPickupIntegrationTests.cs:115\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ExpiryRestorationWaitsForLiveTank_PauseKeepsPending_ThenRestoresMask",
+          "Status": "Failed",
+          "Duration": 0.0040132,
+          "Message": "  Expected: True\r\n  But was:  False\r\n",
+          "StackTrace": "at BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ExpiryRestorationWaitsForLiveTank_PauseKeepsPending_ThenRestoresMask () [0x00056] in H:\\Projects\\Unities\\BattleCity\\Assets\\BattleCity\\Tests\\EditMode\\ShovelPickupIntegrationTests.cs:105\r\n"
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_InvalidDurationRejected(0)",
+          "Status": "Passed",
+          "Duration": 0.0053974,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_InvalidDurationRejected(-1)",
+          "Status": "Passed",
+          "Duration": 0.0013958,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_NoBaseConsumesReceiptWithoutTerrainOrImplicitComponent",
+          "Status": "Passed",
+          "Duration": 0.0050062,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_PlayerDeathAndRespawnDoNotCancelGlobalFortification",
+          "Status": "Passed",
+          "Duration": 0.0080551,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_ReadyStartPauseFocusAndResumeDoNotConsumeExtraTime",
+          "Status": "Passed",
+          "Duration": 0.0047719,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_RefreshRebuildsDestroyedSteelWithoutReplacingSnapshot_ReceiptDoesNotReplay",
+          "Status": "Passed",
+          "Duration": 0.0042498,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_TerminalLossOrGrenadeVictoryRestoresAndCancelsPending(False)",
+          "Status": "Passed",
+          "Duration": 0.0073036,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.ShovelPickupIntegrationTests.Shovel_TerminalLossOrGrenadeVictoryRestoresAndCancelsPending(True)",
+          "Status": "Passed",
+          "Duration": 0.0040274,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

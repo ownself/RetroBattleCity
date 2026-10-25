@@ -6,11 +6,16 @@ namespace BattleCity
 {
     public enum PickupKind { Clock, Grenade, Helmet, Shovel, Star, Tank }
 
-    /// <summary>Project prototype rules, not verified original-game behavior. Effects belong to BC-304..306.</summary>
+    /// <summary>Project prototype rules, not verified original-game behavior.</summary>
     [CreateAssetMenu(menuName = "Battle City/Pickup rules")]
     public sealed class PickupDefinition : ScriptableObject
     {
         public uint seed = 303;
+        public int helmetDurationTicks = 600;
+        public int clockDurationTicks = 600;
+        public int shovelDurationTicks = BaseFortificationState.DefaultDurationTicks;
+        // Reward ceiling only: never truncates a session's higher initial life count.
+        public int maximumLives = 9;
         // Zero-based successful natural wave indices: fourth, eleventh, eighteenth enemy.
         public int[] carrierSequenceIndices = { 3, 10, 17 };
         public bool requiresCalibration = true;
@@ -19,6 +24,8 @@ namespace BattleCity
         public void Validate()
         {
             if (seed == 0) throw new InvalidOperationException("Pickup seed must be nonzero.");
+            if (helmetDurationTicks < 1 || clockDurationTicks < 1 || shovelDurationTicks < 1 || maximumLives < 1)
+                throw new InvalidOperationException("Pickup duration and life ceiling must be positive.");
             if (carrierSequenceIndices == null) throw new InvalidOperationException("Missing pickup carrier indices.");
             var seen = new HashSet<int>();
             foreach (int index in carrierSequenceIndices)

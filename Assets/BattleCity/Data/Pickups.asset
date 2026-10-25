@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Pickups
   m_EditorClassIdentifier: BattleCity.Runtime::BattleCity.PickupDefinition
   seed: 303
+  helmetDurationTicks: 600
+  clockDurationTicks: 600
+  shovelDurationTicks: 1200
+  maximumLives: 9
   carrierSequenceIndices: 030000000a00000011000000i
   requiresCalibration: 1
   originalRulesSource: 

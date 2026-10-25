@@ -68,8 +68,15 @@ namespace BattleCity
         {
             if (!IsAlive || IsProtected || hit.Kind != BulletHitKind.Tank || hit.TargetId != EntityId ||
                 !CombatRules.CanHitTank(hit.Team, hit.OwnerId, Team, EntityId)) return false;
-            HitPoints--;
-            if (IsAlive) return false;
+            if (HitPoints > 1) { HitPoints--; return false; }
+            return TryKill();
+        }
+
+        /// <summary>Non-projectile death (grenade), independent of armor/protection; never an accepted bullet hit.</summary>
+        internal bool TryKill()
+        {
+            if (!IsAlive) return false;
+            HitPoints = 0;
             Command = new TankCommand(CardinalDirection.None);
             // Stop animation immediately; outstanding projectiles keep their original owner lease.
             Motor.Stop();

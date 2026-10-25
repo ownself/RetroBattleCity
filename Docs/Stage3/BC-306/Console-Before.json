@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command console get",
+  "data": null,
+  "errors": [
+    {
+      "code": "REMOTE_COMMAND_NOT_FOUND",
+      "message": "Pipeline server returned 400 Bad Request: Command Not Found. No command named 'console get' is available. Did you mean 'console get'?"
+    }
+  ],
+  "warnings": []
+}

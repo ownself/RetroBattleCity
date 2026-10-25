@@ -59,7 +59,7 @@ namespace BattleCity
             {
                 baseAlive = sprites.Get("base.alive"); baseDead = sprites.Get("base.dead");
             }
-            if (enablePlayerLifecycle)
+            if (enablePlayerLifecycle || initialPickups != null)
             {
                 for (int i = 0; i < shieldFrames.Length; i++) shieldFrames[i] = sprites.Get("effect.shield." + i);
                 playerShield = new GameObject("Player shield - display only", typeof(SpriteRenderer)).GetComponent<SpriteRenderer>();
@@ -335,9 +335,11 @@ namespace BattleCity
             playerRenderer.sprite = playerFrames[Session.PlayerUpgrades?.Level ?? 0, (int)Session.Player.Facing, Session.Player.TrackFrame];
             if (playerShield != null)
             {
-                if (Session.PlayerTank.IsAlive && Session.PlayerLife.IsProtected)
+                if (Session.PlayerIsProtected)
                 {
-                    int age = Session.PlayerLife.Parameters.ProtectionTicks - Session.PlayerLife.ProtectionRemainingTicks;
+                    int age = Session.Pickups != null && Session.Pickups.HelmetRemainingTicks > 0
+                        ? Session.Pickups.HelmetDurationTicks - Session.Pickups.HelmetRemainingTicks
+                        : Session.PlayerLife.Parameters.ProtectionTicks - Session.PlayerLife.ProtectionRemainingTicks;
                     playerShield.sprite = shieldFrames[age / TankMotor.TrackFrameTicks % shieldFrames.Length];
                     playerShield.transform.position = playerRenderer.transform.position;
                     playerShield.enabled = true;
@@ -380,7 +382,7 @@ namespace BattleCity
                 if (baseRenderer == playerRenderer) throw new InvalidOperationException("Base and player require distinct renderers.");
                 sprites.Get("base.alive"); sprites.Get("base.dead");
             }
-            if (enablePlayerLifecycle)
+            if (enablePlayerLifecycle || pickupDefinition != null)
             {
                 sprites.Get("effect.shield.0"); sprites.Get("effect.shield.1");
             }

@@ -24,6 +24,13 @@ namespace BattleCity
     public sealed class PickupState
     {
         private readonly HashSet<int> carriers;
+        public int HelmetDurationTicks { get; }
+        public int ClockDurationTicks { get; }
+        /// <summary>Future complete enemy simulation phases frozen, independent of player life.</summary>
+        public int ClockRemainingTicks { get; private set; }
+        public int MaximumLives { get; }
+        /// <summary>Future complete damage phases protected; pickup refreshes, never adds duration.</summary>
+        public int HelmetRemainingTicks { get; private set; }
         public uint InitialSeed { get; }
         public uint RandomState { get; private set; }
         public PickupItem? Active { get; private set; }
@@ -40,6 +47,9 @@ namespace BattleCity
             definition.ValidateFor(level);
             carriers = new HashSet<int>(definition.carrierSequenceIndices);
             InitialSeed = RandomState = definition.seed;
+            HelmetDurationTicks = definition.helmetDurationTicks;
+            ClockDurationTicks = definition.clockDurationTicks;
+            MaximumLives = definition.maximumLives;
         }
 
         public bool IsCarrierIndex(int index) => carriers.Contains(index);
@@ -79,6 +89,21 @@ namespace BattleCity
         }
 
         public void ClearActive() => Active = null;
+
+        // Session owns effect ordering: after damage, before this tick's pickup. No independent time source.
+        internal void StepPlayerEffects(bool playerAlive)
+        {
+            if (!playerAlive) ClearPlayerEffects();
+            else if (HelmetRemainingTicks > 0) HelmetRemainingTicks--;
+        }
+
+        // After enemy simulation, before new receipts: collection tick never consumes its own duration.
+        internal void StepGlobalEffects() { if (ClockRemainingTicks > 0) ClockRemainingTicks--; }
+        internal void RefreshClock() => ClockRemainingTicks = ClockDurationTicks;
+        internal void ClearGlobalEffects() => ClockRemainingTicks = 0;
+
+        internal void RefreshHelmet() => HelmetRemainingTicks = HelmetDurationTicks;
+        internal void ClearPlayerEffects() => HelmetRemainingTicks = 0;
 
         private static bool Overlaps(Rect a, Rect b) => a.xMax > b.xMin + MapState.Epsilon &&
             a.xMin < b.xMax - MapState.Epsilon && a.yMax > b.yMin + MapState.Epsilon && a.yMin < b.yMax - MapState.Epsilon;

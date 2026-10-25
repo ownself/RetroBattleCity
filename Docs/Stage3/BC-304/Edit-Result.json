@@ -1,0 +1,203 @@
+{
+  "success": true,
+  "command": "command test status",
+  "data": {
+    "command": "test status",
+    "parameters": {},
+    "result": {
+      "status": "completed",
+      "duration": 0.6,
+      "summary": {
+        "total": 25,
+        "passed": 25,
+        "failed": 0,
+        "skipped": 0,
+        "inconclusive": 0
+      },
+      "results": [
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.FutureEffectsRemainLedgerOnly(Clock)",
+          "Status": "Passed",
+          "Duration": 0.0844233,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.FutureEffectsRemainLedgerOnly(Grenade)",
+          "Status": "Passed",
+          "Duration": 0.0025641,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.FutureEffectsRemainLedgerOnly(Shovel)",
+          "Status": "Passed",
+          "Duration": 0.0034677,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.Helmet_AndRespawnProtectionTickIndependently_UnionDoesNotShortenLongerProtection",
+          "Status": "Passed",
+          "Duration": 0.0076429,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.Helmet_ProtectsExactlyFullFutureDamagePhases_ConsumesEveryIncomingBullet",
+          "Status": "Passed",
+          "Duration": 0.0040377,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.Helmet_RepeatRefreshesNotAdds_ReceiptDoesNotRefreshOnLaterTicks",
+          "Status": "Passed",
+          "Duration": 0.0056176,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.HelmetLongerThanRespawnProtection_ContinuesAfterRespawnShieldExpires",
+          "Status": "Passed",
+          "Duration": 0.002969,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.InvalidEffectRulesRejected(0,5)",
+          "Status": "Passed",
+          "Duration": 0.00661,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.InvalidEffectRulesRejected(-1,5)",
+          "Status": "Passed",
+          "Duration": 0.0011018,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.InvalidEffectRulesRejected(3,0)",
+          "Status": "Passed",
+          "Duration": 0.0011994,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.InvalidEffectRulesRejected(3,-1)",
+          "Status": "Passed",
+          "Duration": 0.0013617,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.LethalDamageBeforePickup_DeadPlayerCannotReceiveReward(Star)",
+          "Status": "Passed",
+          "Duration": 0.0058437,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.LethalDamageBeforePickup_DeadPlayerCannotReceiveReward(Helmet)",
+          "Status": "Passed",
+          "Duration": 0.0021255,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.LethalDamageBeforePickup_DeadPlayerCannotReceiveReward(Tank)",
+          "Status": "Passed",
+          "Duration": 0.0020702,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.LifeRewardRejectsDeadExhaustedAndOverflow_NeverTruncatesHigherInitialLives",
+          "Status": "Passed",
+          "Duration": 0.0009999,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.OptionalCapabilitiesRemainOptional_HelmetWorksWithoutPlayerLife",
+          "Status": "Passed",
+          "Duration": 0.0052726,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.ReadyPauseFocusFreezeCollectionAndHelmetTime(Star)",
+          "Status": "Passed",
+          "Duration": 0.0066388,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.ReadyPauseFocusFreezeCollectionAndHelmetTime(Helmet)",
+          "Status": "Passed",
+          "Duration": 0.0053055,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.ReadyPauseFocusFreezeCollectionAndHelmetTime(Tank)",
+          "Status": "Passed",
+          "Duration": 0.0022912,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.SnapshotEffectRules_DoNotFollowMutableAsset",
+          "Status": "Passed",
+          "Duration": 0.0051578,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.Star_DeathImmediatelyResetsLevel_RespawnStaysZero",
+          "Status": "Passed",
+          "Duration": 0.0031163,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.Star_OneLevelPerNewReceipt_CapsAtThree_NoReplayOrScore",
+          "Status": "Passed",
+          "Duration": 0.0062293,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.Star_PreservesExistingBulletSnapshotAndWeaponCooldown",
+          "Status": "Passed",
+          "Duration": 0.0041655,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.Tank_IncreasesTotalLivesOnce_CapsAndConsumesFurtherItems_DeathSpendsOne",
+          "Status": "Passed",
+          "Duration": 0.0079646,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "BattleCity.Tests.PlayerPickupTests.TerminalTickClearsHelmetAndSlot_DoesNotApplyTankReward",
+          "Status": "Passed",
+          "Duration": 0.0056758,
+          "Message": null,
+          "StackTrace": null
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

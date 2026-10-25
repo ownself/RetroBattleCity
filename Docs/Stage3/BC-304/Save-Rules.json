@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command script eval",
+  "data": {
+    "command": "script eval",
+    "parameters": {
+      "code": "var rules = UnityEditor.AssetDatabase.LoadAssetAtPath<BattleCity.PickupDefinition>(BattleCity.Editor.PickupAuthoring.DefinitionPath); rules.Validate(); UnityEditor.EditorUtility.SetDirty(rules); UnityEditor.AssetDatabase.SaveAssetIfDirty(rules); return new { rules.helmetDurationTicks, rules.maximumLives };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "helmetDurationTicks": 600,
+        "maximumLives": 9
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "H:\\Projects\\Unities\\BattleCity"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}
